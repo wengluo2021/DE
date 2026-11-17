@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193b32">
+  <title>DERag · 法规知识库</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <!-- Icon symbols use Lucide's open-source icon geometry (ISC license). -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></symbol>
+    <symbol id="i-files" viewBox="0 0 24 24"><path d="M6 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2"/><path d="M8 7h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/><path d="M10 11h8M10 15h8"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M12 3v18M4 7h5M4 12h5M4 17h5M15 7h5M15 12h5M15 17h5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-4M12 16V8M17 16v-7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3"/><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9A7 7 0 0 1 18 6l2 1M4 17l2 1a7 7 0 0 0 12.5-3"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7h.01"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+  </svg>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">DE</div>
+        <div><strong>DERag</strong><span>法规知识库</span></div>
+      </div>
+      <div class="nav-caption">工作区</div>
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item active" type="button" data-route="chat"><svg class="icon"><use href="#i-message"/></svg><span>问答</span></button>
+        <button class="nav-item" type="button" data-route="documents"><svg class="icon"><use href="#i-files"/></svg><span>文档库</span></button>
+        <button class="nav-item" type="button" data-route="compare"><svg class="icon"><use href="#i-split"/></svg><span>分块对照</span></button>
+        <button class="nav-item" type="button" data-route="evaluation"><svg class="icon"><use href="#i-chart"/></svg><span>评估</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="system-line"><span class="live-dot"></span><span>前端预览</span><span class="system-version">v0.1</span></div>
+        <div class="sidebar-meta">真实法规索引与模型接口待接入</div>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuButton" type="button" aria-label="打开导航" title="打开导航"><svg class="icon"><use href="#i-menu"/></svg></button>
+        <div class="page-context"><span class="context-parent">DERag</span><svg class="icon small"><use href="#i-chevron"/></svg><strong id="pageTitle">问答</strong></div>
+        <span class="topbar-spacer"></span>
+        <span class="preview-pill"><span class="live-dot"></span>界面演示</span>
+        <button class="icon-button" id="aboutButton" type="button" aria-label="查看当前状态" title="查看当前状态"><svg class="icon"><use href="#i-info"/></svg></button>
+      </header>
+
+      <main class="main">
+        <section class="view chat-view active" id="view-chat" aria-label="问答">
+          <div class="chat-layout" id="chatLayout">
+            <aside class="conversation-rail" id="conversationRail">
+              <div class="rail-header"><strong>会话记录</strong><button class="icon-button subtle" id="newSessionButton" type="button" aria-label="新建会话" title="新建会话"><svg class="icon"><use href="#i-plus"/></svg></button></div>
+              <div class="session-list" id="sessionList"></div>
+              <div class="rail-footer"><svg class="icon small"><use href="#i-info"/></svg>仅保存在当前浏览器</div>
+            </aside>
+            <div class="chat-panel">
+              <div class="chat-heading">
+                <button class="icon-button session-toggle" id="sessionToggle" type="button" aria-label="打开会话列表" title="打开会话列表"><svg class="icon"><use href="#i-message"/></svg></button>
+                <div class="heading-copy"><h1>法规问答</h1><p>界面预览 · 演示知识库</p></div>
+                <div class="heading-controls"><label for="chatCondition">分块方案</label><select id="chatCondition" class="select compact"><option value="f400">固定窗口 · 400</option><option value="s400" selected>法条结构 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div>
+              </div>
+              <div class="messages" id="messages" aria-live="polite"></div>
+              <div class="suggestions" id="suggestions"><button type="button" data-question="两种分块方法有什么区别？">两种分块方法有什么区别？</button><button type="button" data-question="引用如何追溯到原文？">引用如何追溯到原文？</button></div>
+              <form class="composer" id="askForm">
+                <label class="sr-only" for="questionInput">输入问题</label>
+                <textarea id="questionInput" rows="2" placeholder="输入问题" maxlength="1000"></textarea>
+                <div class="composer-bottom"><button class="send-button" type="submit"><svg class="icon"><use href="#i-send"/></svg><span>发送</span></button></div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="view page-view" id="view-documents" aria-label="文档库" hidden>
+          <div class="page-wrap">
+            <div class="page-heading"><div><div class="eyebrow">SOURCE LIBRARY</div><h1>文档库</h1></div><div class="heading-actions"><button class="button primary" id="importButton" type="button"><svg class="icon"><use href="#i-upload"/></svg>导入本地文档</button><input id="fileInput" type="file" accept=".md,.txt,text/plain,text/markdown" multiple hidden></div></div>
+            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span>当前仅支持浏览器内导入和分块预览。官方来源抓取、持久化入库与向量化将在后端阶段接入。</span></div>
+            <div class="stat-strip" id="documentStats"></div>
+            <div class="section-heading"><h2>文档清单</h2><div class="search-field"><svg class="icon"><use href="#i-search"/></svg><input id="docSearch" type="search" placeholder="搜索标题或来源" aria-label="搜索文档"></div></div>
+            <div class="table-wrap"><table class="data-table document-table"><thead><tr><th>文档</th><th>来源</th><th>字符</th><th>状态</th><th>导入时间</th><th class="action-col">操作</th></tr></thead><tbody id="documentRows"></tbody></table></div>
+            <div class="empty-table" id="documentEmpty" hidden>没有匹配的文档</div>
+          </div>
+        </section>
+
+        <section class="view page-view" id="view-compare" aria-label="分块对照" hidden>
+          <div class="page-wrap">
+            <div class="page-heading"><div><div class="eyebrow">CHUNK STUDY</div><h1>分块对照</h1></div><span class="tag preview-tag">本地预览</span></div>
+            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span>这里比较实际切出的文本块，不代表向量检索效果或课程实验结果。</span></div>
+            <div class="compare-controls"><div class="field grow"><label for="compareDocument">文档</label><select id="compareDocument" class="select"></select></div><div class="field"><label for="leftCondition">左侧方案</label><select id="leftCondition" class="select"><option value="f400">固定窗口 · 400</option><option value="s400">法条结构 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div><div class="field"><label for="rightCondition">右侧方案</label><select id="rightCondition" class="select"><option value="s400">法条结构 · 400</option><option value="f400">固定窗口 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div></div>
+            <div class="compare-summary" id="compareSummary"></div>
+            <div class="compare-grid"><div class="compare-column"><div class="column-heading"><div><span class="column-letter">A</span><h2 id="leftLabel">固定窗口 · 400</h2></div><span id="leftCount" class="count-label"></span></div><div class="chunk-list" id="leftChunks"></div></div><div class="compare-column"><div class="column-heading"><div><span class="column-letter alt">B</span><h2 id="rightLabel">法条结构 · 400</h2></div><span id="rightCount" class="count-label"></span></div><div class="chunk-list" id="rightChunks"></div></div></div>
+          </div>
+        </section>
+
+        <section class="view page-view" id="view-evaluation" aria-label="评估" hidden>
+          <div class="page-wrap">
+            <div class="page-heading"><div><div class="eyebrow">EVALUATION</div><h1>评估</h1></div><div class="heading-actions"><button class="button" id="exportReportButton" type="button"><svg class="icon"><use href="#i-download"/></svg>导出示例 JSON</button></div></div>
+            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span>下方为界面演示报告，不是课程实验结果。真实 30 题评估、人工复核和指标计算尚未接入。</span></div>
+            <div class="report-meta"><div><strong>界面示例报告</strong><span>4 条演示题 · 4 个分块条件</span></div><span class="tag preview-tag">DEMO</span></div>
+            <div class="metric-grid" id="metricGrid"></div>
+            <div class="section-heading evaluation-heading"><h2>逐题记录</h2><div class="segmented" role="group" aria-label="筛选评估题"><button type="button" class="active" data-eval-filter="all">全部</button><button type="button" data-eval-filter="hit">命中</button><button type="button" data-eval-filter="miss">未命中</button><button type="button" data-eval-filter="refuse">拒答</button></div></div>
+            <div class="table-wrap"><table class="data-table"><thead><tr><th>编号</th><th>问题</th><th>类型</th><th>F400</th><th>S400</th><th>状态</th><th class="action-col">详情</th></tr></thead><tbody id="evaluationRows"></tbody></table></div>
+            <div class="report-footer"><span>实际报告将记录每一题的证据区间、模型回答和人工核验结论。</span><button type="button" class="text-button" id="openDesignButton">查看项目设计<svg class="icon small"><use href="#i-external"/></svg></button></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="detail-drawer" id="detailDrawer" aria-label="详情" aria-hidden="true"><div class="drawer-header"><div><span class="drawer-kicker" id="drawerKicker"></span><h2 id="drawerTitle"></h2></div><button class="icon-button" id="drawerClose" type="button" aria-label="关闭详情" title="关闭详情"><svg class="icon"><use href="#i-x"/></svg></button></div><div class="drawer-body" id="drawerBody"></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
