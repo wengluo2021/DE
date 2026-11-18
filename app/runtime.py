@@ -1,4 +1,5 @@
 """Explicit service composition; one database owner and one persistent task worker."""
+from threading import RLock
 from app.db.lease import ProcessLease
 from app.db.store import SQLiteStore
 from app.qa.client import ChatCompletionsClient
@@ -6,10 +7,12 @@ from app.qa.errors import QAError
 from app.qa.persistent import PersistentQA
 from app.qa.service import QAService
 from app.tasks.manager import TaskManager
+from app.evaluation.repository import EvaluationRepository
+from app.evaluation.service import EvaluationService
 
 
 class Runtime:
-    def __init__(self,settings,*,qa_service=None,retrieval_service=None,database_path=None,test_mode=False):
+    def __init__(self,settings,*,qa_service=None,retrieval_service=None,database_path=None,test_mode=False,gold_loader=None):
         self.settings=settings
         path=database_path or settings.experiment.data_dir/"sqlite/derag.sqlite3"
         self.store=SQLiteStore(path,secret=settings.api_key())
@@ -17,6 +20,10 @@ class Runtime:
         self.injected_qa=qa_service
         self.retrieval=retrieval_service
         self.test_mode=test_mode
+        self.gold_loader=gold_loader
+        self.admission=RLock()
+        self.evaluations=EvaluationRepository(self.store)
+        self.evaluation=None
         self.tasks=None
         self.qa=None
         self.started=False
@@ -26,9 +33,13 @@ class Runtime:
         self.lease.acquire()
         try:
             self.store.initialize()
+            self.evaluations.initialize()
             self.store.recover_interrupted()
+            self.evaluations.recover_interrupted()
             self.tasks=TaskManager(self.store)
             self.qa=PersistentQA(self.store,self.get_qa_service,settings=self.settings)
+            self.evaluation=EvaluationService(self.settings,self.evaluations,self.tasks,self.get_qa_service,
+                                              gold_loader=self.gold_loader,test_mode=self.test_mode,admission=self.admission)
             if self.retrieval is None and self.injected_qa is None:
                 self._assemble_retrieval()
             self.started=True
@@ -95,6 +106,10 @@ class Runtime:
                 "experiment_fingerprint":self.settings.experiment_fingerprint(),
                 "configuration":self.settings.public_snapshot()}
 
+    def ensure_no_evaluation(self):
+        if self.evaluations.active():
+            raise QAError("EVALUATION_ACTIVE","Wait for the evaluation to finish before asking or rebuilding indexes",409)
+
     def close(self):
         try:
             if self.tasks:
@@ -117,4 +132,6 @@ class TaskProxy:
     def submit(self,function,background_tasks):
         if self.runtime.tasks is None:
             raise QAError("SERVICE_NOT_READY","Service has not started",503)
-        return self.runtime.tasks.submit(function,background_tasks)
+        with self.runtime.admission:
+            self.runtime.ensure_no_evaluation()
+            return self.runtime.tasks.submit(function,background_tasks)

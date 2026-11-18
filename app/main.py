@@ -9,6 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from app.api import create_retrieval_routers
 from app.api.qa import create_qa_router
 from app.api.system import create_system_router
+from app.api.evaluation import create_evaluation_router
 from app.config import load_settings
 from app.qa.client import redact
 from app.qa.errors import QAError
@@ -16,10 +17,10 @@ from app.runtime import Runtime,RetrievalProxy,TaskProxy
 STATIC_DIR = Path(__file__).parent / "static"
 PROJECT_DESIGN = Path(__file__).parent.parent / "项目设计.md"
 
-def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_path=None,test_mode=False):
+def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_path=None,test_mode=False,gold_loader=None):
     settings=settings or load_settings(env_file=os.environ.get("DERAG_ENV_FILE"))
     runtime=Runtime(settings,qa_service=qa_service,retrieval_service=retrieval_service,
-                    database_path=database_path,test_mode=test_mode)
+                    database_path=database_path,test_mode=test_mode,gold_loader=gold_loader)
     @asynccontextmanager
     async def lifespan(app):
         runtime.open()
@@ -32,6 +33,7 @@ def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_p
     app.mount("/static",StaticFiles(directory=STATIC_DIR),name="static")
     app.include_router(create_qa_router(runtime))
     app.include_router(create_system_router(runtime))
+    app.include_router(create_evaluation_router(runtime))
     app.include_router(create_retrieval_routers(RetrievalProxy(runtime),TaskProxy(runtime)))
 
     @app.exception_handler(QAError)

@@ -14,11 +14,19 @@ class TaskManager:
         if self.closed:
             raise QAError("TASK_MANAGER_CLOSED", "Task service is stopping", 503)
         task = self.store.create_task(kind,dedupe_key,total)
-        if background_tasks is not None:
-            background_tasks.add_task(self._enqueue,task["task_id"],function)
-        else:
-            self._enqueue(task["task_id"],function)
+        self.schedule(task["task_id"],function,background_tasks)
         return task
+
+    def schedule(self,task_id,function,background_tasks=None):
+        """Schedule an already persisted task (e.g. an atomic evaluation plan)."""
+        if self.closed:
+            raise QAError("TASK_MANAGER_CLOSED", "Task service is stopping", 503)
+        if self.store.task(task_id)["state"]!="queued":
+            raise QAError("TASK_NOT_QUEUED", "Task is no longer queued", 409)
+        if background_tasks is not None:
+            background_tasks.add_task(self._enqueue,task_id,function)
+        else:
+            self._enqueue(task_id,function)
 
     def _enqueue(self,task_id,function):
         if not self.closed:

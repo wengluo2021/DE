@@ -176,6 +176,15 @@ class SQLiteStore:
                                       if isinstance(result["result"],dict) and key in result["result"]),None)
             return result
 
+    def has_active_tasks(self,kind=None):
+        with closing(self._connect()) as db:
+            query="SELECT 1 FROM tasks WHERE state IN ('queued','running')"
+            args=()
+            if kind is not None:
+                query+=" AND kind=?"
+                args=(kind,)
+            return db.execute(query+" LIMIT 1",args).fetchone() is not None
+
     def begin_task(self, task_id):
         with closing(self._connect()) as db, db:
             return bool(db.execute("UPDATE tasks SET state='running',updated_at=? WHERE id=? AND state='queued'", (now(),task_id)).rowcount)

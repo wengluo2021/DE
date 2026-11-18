@@ -8,7 +8,9 @@ def create_qa_router(runtime):
 
     @router.post("/ask",response_model=AskResult)
     def ask(body:AskRequest):
-        return runtime.qa.ask(body)
+        with runtime.admission:
+            runtime.ensure_no_evaluation()
+            return runtime.qa.ask(body)
 
     @router.get("/conversations")
     def conversations():

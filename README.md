@@ -2,7 +2,7 @@
 
 ## C 阶段开发入口
 
-C 的 M0（共享契约、统一配置）、M1（证据问答核心）与M2（持久会话、任务及后台API）已落地，交接见 `docs/handoffs/`；日期工作记录见 `docs/worklogs/`。正式入口已有问答/历史/任务API，四个页面仍待M4接入；原B验证入口继续保留。
+C 的 M0（共享契约、统一配置）、M1（证据问答核心）、M2（持久会话、任务及后台API）与M3（四组评估、评分、导出）已落地，交接见 `docs/handoffs/`；日期工作记录见 `docs/worklogs/`。正式入口已有问答/历史/任务/评估API，四个页面仍待M4接入；原B验证入口继续保留。
 
 使用Python3.13.11创建项目`.venv`后，可安装 `requirements-c-dev.txt`，运行 `tests/test_contracts.py tests/test_config.py`。B的模型/向量库依赖继续按下方B说明准备，最终统一依赖在集成阶段完成。
 
@@ -12,9 +12,11 @@ C 的 M0（共享契约、统一配置）、M1（证据问答核心）与M2（�
 
 M2启动仍为 `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`。只使用一个worker，不加自动reload；数据库在data/sqlite。健康检查区分存活与数据/索引/模型就绪：缺正式资料时API明确返回409，页面能打开不表示知识库已完成。默认读取项目.env，可用DERAG_ENV_FILE显式选择本地环境文件；不自动寻找其他课程的密钥。M2新增检查为 `tests/test_persistence.py tests/test_tasks.py tests/test_qa_api.py`。
 
+M3用法见 [评估使用说明](docs/评估使用说明.md)。配置正式数据/题集/索引后，在另一个终端执行 `python -m scripts.run_eval --config config/experiment.json --base-url http://127.0.0.1:8765`；默认导出到新的data/runs/client-随机目录。`--run-id`读取已有实验，不重新生成。M3检查为 `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`；M0–M3组合227项通过，实际合成HTTP流程120项通过，均不代表正式成绩。
+
 ---
 
-CS5481 Topic 5 项目。正式入口目前包含问答、文档库、分块对照和评估的前端预览；B 的真实 embedding、Chroma、两种切分与检索 API 已独立实现，使用下方 B 验证入口。完整 LLM 问答、官方数据和 30 题正式评估仍待 A/C 集成。
+下方“运行方式/当前可操作内容”保留原预览版说明，尤其requirements.txt和DE.tar仅对应旧预览。当前C后台启动需要requirements-c.txt（开发检查用requirements-c-dev.txt）；尚未完成新版Docker集成，不以旧镜像验证新后台。B的真实embedding与Chroma按后续B说明安装。官方数据及30题正式评估仍待A交付后集成。
 
 ## 运行方式
 
@@ -43,7 +45,7 @@ docker build -t de .
 docker run -d --name DE -p 127.0.0.1:8766:8000 de
 ```
 
-Docker 镜像名必须小写，所以镜像标签是 `de:latest`，容器名是 `DE`。打开 http://127.0.0.1:8766 。如端口被占用，请同时更改启动命令与访问地址。首次安装依赖或构建镜像需要联网；Docker 镜像建好后可离线启动。当前版本没有调用外部模型服务，不需要 API Key。
+Docker 镜像名必须小写，所以镜像标签是 `de:latest`，容器名是 `DE`。打开 http://127.0.0.1:8766 。如端口被占用，请同时更改启动命令与访问地址。首次安装依赖或构建镜像需要联网；原预览镜像不调用外部模型。当前C后台真实问答需要配置API Key，密钥仅放在本地env；旧镜像不包含这些新功能。
 
 需要在另一台已安装 Docker Desktop 的电脑上离线运行时，传送项目目录里的 `DE.tar`，然后执行：
 
