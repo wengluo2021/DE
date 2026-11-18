@@ -1,0 +1,194 @@
+{
+  "state": "completed",
+  "synthetic_evidence": true,
+  "mock_llm": false,
+  "result": {
+    "ask_id": "ask-48f97587eb6444e98742304e79d8378c",
+    "conversation_id": "chat-a88ea2e8f84c4957a85d80c1427e5f8e",
+    "status": "insufficient",
+    "answer": "当前知识库没有足够证据回答这个问题。",
+    "claims": [],
+    "citations": [
+      {
+        "rank": 1,
+        "score": 0.9,
+        "chunk_id": "ecc55790d61808b33e0ec4cb33471f7e520a6af4dd26c2ebdd083d2ed80a18ac",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "fixture",
+        "article_ids": [
+          "fixture-a001",
+          "fixture-a002"
+        ],
+        "start": 0,
+        "end": 25,
+        "text": "Article 1 A.\nArticle 2 B.",
+        "title": "Synthetic API Contract Fixture (not official legislation)",
+        "source_url": "https://example.org/fixture",
+        "article_labels": [
+          "Article 1",
+          "Article 2"
+        ],
+        "n": 1
+      }
+    ],
+    "corpus_version": "fixture-en-v2",
+    "index_version": "c-fixture-index-v1",
+    "condition": "s400",
+    "generation": {
+      "provider": "openai-compatible",
+      "model": "CS5351/DeepSeek-V4-Flash",
+      "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+      "temperature": 0.0,
+      "seed": null
+    },
+    "timing_ms": {
+      "retrieve": 0.0,
+      "generate": 2186.508300001151
+    }
+  },
+  "trace": {
+    "ask_id": "ask-48f97587eb6444e98742304e79d8378c",
+    "conversation_id": "chat-a88ea2e8f84c4957a85d80c1427e5f8e",
+    "question": "What exact financial penalty does Article 900 require?",
+    "condition": "s400",
+    "corpus_version": "fixture-en-v2",
+    "started_at": "2026-11-18T16:23:40.257099+00:00",
+    "finished_at": "2026-11-18T16:23:42.444955+00:00",
+    "retrieval": {
+      "condition": "s400",
+      "hits": [
+        {
+          "rank": 1,
+          "score": 0.9,
+          "chunk_id": "ecc55790d61808b33e0ec4cb33471f7e520a6af4dd26c2ebdd083d2ed80a18ac",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 25,
+          "text": "Article 1 A.\nArticle 2 B.",
+          "title": "Synthetic API Contract Fixture (not official legislation)",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        }
+      ],
+      "timing_ms": 0.0,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "c-fixture-index-v1"
+    },
+    "context_chars": 25,
+    "attempts": [
+      {
+        "number": 1,
+        "started_at": "2026-11-18T16:23:40.258334+00:00",
+        "response": {
+          "id": "aa282872-1037-4163-9343-6617f9105584",
+          "created": 1795019019,
+          "model": "CS5351/DeepSeek-V4-Flash",
+          "object": "chat.completion",
+          "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "{\"status\":\"insufficient\",\"claims\":[]}",
+                "role": "assistant",
+                "provider_specific_fields": {
+                  "refusal": null
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 10,
+            "prompt_tokens": 295,
+            "total_tokens": 305,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 295
+          }
+        },
+        "content": "{\"status\":\"insufficient\",\"claims\":[]}",
+        "usage": {
+          "completion_tokens": 10,
+          "prompt_tokens": 295,
+          "total_tokens": 305,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 295
+        },
+        "model": "CS5351/DeepSeek-V4-Flash",
+        "finish_reason": "stop",
+        "state": "completed",
+        "finished_at": "2026-11-18T16:23:42.444830+00:00"
+      }
+    ],
+    "timing_ms": {
+      "retrieve": 0.0,
+      "generate": 2186.508300001151
+    },
+    "error": null
+  },
+  "config": {
+    "schema_version": "1.0",
+    "mode": "development",
+    "corpus_version": "fixture-en-v2",
+    "gold_version": null,
+    "conditions": [
+      "f400",
+      "s400",
+      "f800",
+      "s800"
+    ],
+    "top_k": 5,
+    "data_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\data",
+    "embedding": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "model_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\models\\embedding",
+      "device": "cpu",
+      "dimension": 1024,
+      "normalize": true,
+      "query_prefix": "",
+      "document_prefix": "",
+      "max_input_tokens": 8192,
+      "pooling": "cls",
+      "batch_size": 4,
+      "cpu_threads": 4
+    },
+    "retrieval": {
+      "metric": "cosine",
+      "chunker_version": "structure-offset-v2"
+    },
+    "generation": {
+      "provider": "openai-compatible",
+      "base_url": "https://llm.cs.cityu.edu.hk/v1",
+      "model": "CS5351/DeepSeek-V4-Flash",
+      "temperature": 0,
+      "max_tokens": 1024,
+      "timeout_seconds": 60,
+      "max_attempts": 2,
+      "prompt_path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\app\\qa\\prompts\\answer.txt",
+      "json_mode": true,
+      "transport": "curl",
+      "seed": null,
+      "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+      "api_key_configured": true
+    }
+  },
+  "experiment_fingerprint": "ea73b34f66fb54ab5420bef1cd6a874fb131bea1d300078f0778e94ebb1556de"
+}
