@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "document_id": "fixture",
+  "corpus_version": "fixture-en-v2",
+  "title": "Synthetic API Contract Fixture (not official legislation)",
+  "issuer": "Synthetic test data",
+  "source_url": "https://example.org/fixture",
+  "published_at": null,
+  "effective_at": null,
+  "raw_path": "tests/fixtures/b/raw.txt",
+  "raw_sha256": "b65e8b1fa799c486a1340e674d420e133eab935dd801757d40991be24dee3b09",
+  "text": "Article 1 A.\nArticle 2 B.",
+  "articles": [
+    {
+      "article_id": "fixture-a001",
+      "label": "Article 1",
+      "chapter": null,
+      "section": null,
+      "start": 0,
+      "end": 12
+    },
+    {
+      "article_id": "fixture-a002",
+      "label": "Article 2",
+      "chapter": null,
+      "section": null,
+      "start": 13,
+      "end": 25
+    }
+  ]
+}

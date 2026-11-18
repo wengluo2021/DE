@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "fixture-en-v2",
+  "conditions": ["f400", "s400", "f800", "s800"],
+  "top_k": 5,
+  "data_dir": "data",
+  "embedding": {
+    "model_id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "model_dir": "models/embedding",
+    "device": "cpu",
+    "dimension": 1024,
+    "normalize": true,
+    "query_prefix": "",
+    "document_prefix": "",
+    "max_input_tokens": 8192,
+    "pooling": "cls",
+    "batch_size": 4,
+    "cpu_threads": 4
+  },
+  "retrieval": {"metric": "cosine", "chunker_version": "structure-offset-v2"}
+}

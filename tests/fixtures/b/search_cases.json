@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How can an individual request deletion of personal information?",
+    "expected_document_id": "privacy"
+  },
+  {
+    "question": "Can a reader renew a library book when the loan period expires?",
+    "expected_document_id": "library"
+  },
+  {
+    "question": "What should a bus driver do after noticing an abnormal road condition?",
+    "expected_document_id": "travel"
+  }
+]

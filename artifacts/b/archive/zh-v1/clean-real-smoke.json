@@ -1,0 +1,1849 @@
+{
+  "state": "passed",
+  "scope": "real embedding + synthetic fixtures, NOT formal evaluation",
+  "python": "3.13.11",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "torch": "2.15.0",
+    "sentence-transformers": "6.3.0",
+    "transformers": "5.23.0",
+    "chromadb": "1.5.9"
+  },
+  "device": "cpu",
+  "dimension": 1024,
+  "overflow_check": {
+    "code": "MODEL_INPUT_TOO_LONG",
+    "message": "overflow-query: 9003 tokens exceeds 8192"
+  },
+  "manifest": {
+    "schema_version": "1.0",
+    "corpus_version": "fixture-v1",
+    "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d",
+    "state": "completed",
+    "material": {
+      "corpus_version": "fixture-v1",
+      "chunker_version": "structure-offset-v1",
+      "conditions": [
+        {
+          "condition": "f400",
+          "boundary_method": "fixed",
+          "target_chars": 400
+        },
+        {
+          "condition": "s400",
+          "boundary_method": "structured",
+          "target_chars": 400
+        },
+        {
+          "condition": "f800",
+          "boundary_method": "fixed",
+          "target_chars": 800
+        },
+        {
+          "condition": "s800",
+          "boundary_method": "structured",
+          "target_chars": 800
+        }
+      ],
+      "source_digest": "e145ceb435c73b4db0c0c42b419067757f2af4a946a49be58272b6a2d5d0cba2",
+      "embedding": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "dimension": 1024,
+        "normalize": true,
+        "query_prefix": "",
+        "document_prefix": "",
+        "max_input_tokens": 8192,
+        "pooling": "cls",
+        "files": {
+          "1_Pooling/config.json": "e54c164a07274f2eb45bb724f54a79d1efcc90c41573887cd9a29aeee0597352",
+          "config.json": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+          "config_sentence_transformers.json": "1eef72430e7194a1e59680e635aed81ffa083f05668dbc5bb1c56c04c0999c38",
+          "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+          "pytorch_model.bin": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+          "README.md": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+          "sentence_bert_config.json": "eb9b44b13c0f52a3b3685c3b1cbdea1ba8b04bea123b98f61610048940776eb1",
+          "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+          "special_tokens_map.json": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+          "tokenizer.json": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+          "tokenizer_config.json": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4"
+        },
+        "token_policy": "reject-overflow-v1"
+      },
+      "vector_store": {
+        "engine": "chromadb",
+        "version": "1.5.9",
+        "hnsw": {
+          "space": "cosine",
+          "ef_construction": 100,
+          "ef_search": 100,
+          "max_neighbors": 16,
+          "num_threads": 1,
+          "batch_size": 2,
+          "sync_threshold": 2,
+          "resize_factor": 1.2
+        }
+      }
+    },
+    "conditions": {
+      "f400": {
+        "count": 10,
+        "min_chars": 13,
+        "mean_chars": 271.5,
+        "max_chars": 400,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "c1453474ffec253afea43bcc3669c2495b36d60976fe14868996d1dc84a51b54",
+        "build_ms": 112166.651
+      },
+      "s400": {
+        "count": 13,
+        "min_chars": 13,
+        "mean_chars": 208.84615384615384,
+        "max_chars": 232,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "e3a71d56d2c408d940de80b30a65fbed3d578f3f878c29c7a12bbfbf8434fdc0",
+        "build_ms": 8304.236
+      },
+      "f800": {
+        "count": 7,
+        "min_chars": 13,
+        "mean_chars": 387.85714285714283,
+        "max_chars": 800,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "cf19238c7d5cffbe86d03be0335870e11adb5b9fdb569851f7dde3cfc0c6f4de",
+        "build_ms": 8678.022
+      },
+      "s800": {
+        "count": 7,
+        "min_chars": 13,
+        "mean_chars": 387.85714285714283,
+        "max_chars": 453,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "dbd33c3e2090e17b4b8b00d3a6fcbbd13db6f4055efe486a8eccb5285987f81e",
+        "build_ms": 8116.655
+      }
+    },
+    "runtime": {
+      "device": "cpu",
+      "batch_size": 4
+    },
+    "build_ms": 137366.513
+  },
+  "checks": [
+    {
+      "question": "个人如何申请删除个人信息？",
+      "expected_document_id": "privacy",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "8cbf50801a3e2f4fbcb7b643833aaa6ca9d33ec3682ae3c804af5440b529ad2c",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 1,
+          "score": 0.7566081285476685,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "f38d1e94fd2592e885c16193e4f0487a2ec3c4f990f4838050df878e8734a222",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002",
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可",
+          "rank": 2,
+          "score": 0.7434488534927368,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "a2c31c9d159a8f94c523e63734ccff8e45796ce9a895f874df20e35b98b41325",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人",
+          "rank": 3,
+          "score": 0.7182090282440186,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "d3f14992b86d392a8533ee8677db4bd74f48616694207e7ac36d3a2883c3c359",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登",
+          "rank": 4,
+          "score": 0.4910179376602173,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "fd32ceb33bb426863aef7fc1294270a8f9152530c7131c4f0d9df55683ae3156",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 5,
+          "score": 0.4905059337615967,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 212.776,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "图书借阅到期可以续借吗？",
+      "expected_document_id": "library",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "7712a84d05f7c361cdcf1c2ccf6cbb03819f6c4da4941a39e95dc224027df670",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 800,
+          "end": 890,
+          "text": "日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7715206146240234,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "fd32ceb33bb426863aef7fc1294270a8f9152530c7131c4f0d9df55683ae3156",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 2,
+          "score": 0.7033904194831848,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "d3f14992b86d392a8533ee8677db4bd74f48616694207e7ac36d3a2883c3c359",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登",
+          "rank": 3,
+          "score": 0.6977051496505737,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "c67b22b974a83ce2663e3ce1f6db145185f8b1a6262de03dbc546ab0ace5158a",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 4,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "8cbf50801a3e2f4fbcb7b643833aaa6ca9d33ec3682ae3c804af5440b529ad2c",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 5,
+          "score": 0.439484179019928,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 161.99,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "公共汽车驾驶员发现道路异常怎么办？",
+      "expected_document_id": "travel",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "241232bb5377b9874c793778fc856f73ba0c5c7ca95d90c5df3dde70b3dbfa9d",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 1,
+          "score": 0.6741260290145874,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "1204606b982d9f108c5d538bfce425df22a3d44d9acc3f319bd601b6b72b25af",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001",
+            "travel-a002"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "第一章 合成测试总则\n第一条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第二条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客",
+          "rank": 2,
+          "score": 0.6397372484207153,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "89327976cc5c6a6d39a0d1b815d0635e0232b668f1bc01c8c25563d5467ae3e2",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a002",
+            "travel-a003",
+            "travel-a004"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第二章 合成测试流程\n第三条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第四条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘",
+          "rank": 3,
+          "score": 0.6384661197662354,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "d3f14992b86d392a8533ee8677db4bd74f48616694207e7ac36d3a2883c3c359",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登",
+          "rank": 4,
+          "score": 0.39352476596832275,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "8cbf50801a3e2f4fbcb7b643833aaa6ca9d33ec3682ae3c804af5440b529ad2c",
+          "corpus_version": "fixture-v1",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 5,
+          "score": 0.37598180770874023,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 196.687,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "个人如何申请删除个人信息？",
+      "expected_document_id": "privacy",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "a7e013a9dea40b8d5a79d2d9ec987179a5a3e6341a67747d65a66585485baf3d",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 685,
+          "end": 906,
+          "text": "第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 1,
+          "score": 0.7508940696716309,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "5192f768dddfa3ae4d1ddd923eb34dd9ebbc46c0a2ba3cce49e1f965b1f83524",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002"
+          ],
+          "start": 232,
+          "end": 453,
+          "text": "第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 2,
+          "score": 0.7437804937362671,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "884a895a1741e4962c0df3fe5f9c643440799a8552ab3acd89d2f4ddb6abf227",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001"
+          ],
+          "start": 0,
+          "end": 232,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 3,
+          "score": 0.719250500202179,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条"
+          ]
+        },
+        {
+          "chunk_id": "56d3424f8553f454fc3b65883cf588bf2aec57ca8d4c9370253b9e8749403268",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003"
+          ],
+          "start": 453,
+          "end": 685,
+          "text": "第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.7067750692367554,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第三条"
+          ]
+        },
+        {
+          "chunk_id": "9a8de318f661f23ca0aeccd709262cfc3d456d8c478c2ca83e690bf88f6b74f3",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 673,
+          "end": 890,
+          "text": "第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 5,
+          "score": 0.49256569147109985,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 165.295,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "图书借阅到期可以续借吗？",
+      "expected_document_id": "library",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "00b881d18f734fbbd448f2957078eceaf8b8cd04992c1b472010c9d4a8cd0173",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 228,
+          "end": 445,
+          "text": "第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7190662026405334,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "9a8de318f661f23ca0aeccd709262cfc3d456d8c478c2ca83e690bf88f6b74f3",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 673,
+          "end": 890,
+          "text": "第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 2,
+          "score": 0.7183130979537964,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "4df700dc3035892faee5058570290a27febd81a67af8f6e89abbee7b8f7898cd",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 445,
+          "end": 673,
+          "text": "第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 3,
+          "score": 0.7112562656402588,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第三条"
+          ]
+        },
+        {
+          "chunk_id": "c4d8beb2f28d69184be05990547a7a64c0f3fce14e2924241df36de41794226b",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 228,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 4,
+          "score": 0.700348436832428,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条"
+          ]
+        },
+        {
+          "chunk_id": "5377f046c4c0835be07c79e905ea0bd77e695e28c99a7e04ab5accc90f701881",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 5,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 157.94,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "公共汽车驾驶员发现道路异常怎么办？",
+      "expected_document_id": "travel",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "f876b5b3d9eaf944ff04da44ef7dcc869805b36df0f996c3636a0c5cb2af81d8",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 685,
+          "end": 906,
+          "text": "第四条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 1,
+          "score": 0.665355920791626,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "2f8711e5d4cd2a36c3d9b3100932fbd75344f33cffcb72d51a18e61473a53804",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a002"
+          ],
+          "start": 232,
+          "end": 453,
+          "text": "第二条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 2,
+          "score": 0.6640661358833313,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "b5ca722829f562ac06ab0ed2ba504e96963b31e8595e8eeb4a833e318287f448",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001"
+          ],
+          "start": 0,
+          "end": 232,
+          "text": "第一章 合成测试总则\n第一条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 3,
+          "score": 0.6609455943107605,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第一条"
+          ]
+        },
+        {
+          "chunk_id": "989ff82815a231ddfd58d2b8cba4120915cde491550e13b75b7235f3386497a8",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 453,
+          "end": 685,
+          "text": "第二章 合成测试流程\n第三条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 4,
+          "score": 0.6521472930908203,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第三条"
+          ]
+        },
+        {
+          "chunk_id": "c4d8beb2f28d69184be05990547a7a64c0f3fce14e2924241df36de41794226b",
+          "corpus_version": "fixture-v1",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 228,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 5,
+          "score": 0.3946859836578369,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条"
+          ]
+        }
+      ],
+      "timing_ms": 150.676,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "个人如何申请删除个人信息？",
+      "expected_document_id": "privacy",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "b19135463e677d629ba43279f664da6c5dcef51eebc9eaf5f171e9fe8ed253bb",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 1,
+          "score": 0.7566081285476685,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "2e3a1618c1ad4dd19e24c039ecb745f6e4743a1ae64dc4c20580b193c30239aa",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002",
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可",
+          "rank": 2,
+          "score": 0.7114539742469788,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "32ae1225515dd5852a4b676632934e3ea90b9108f6645452143244051f1ae09a",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 3,
+          "score": 0.4905391335487366,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "83e17094677b4a2ea7990afae2f54f1ac2d7982f66d0c91e6ea685012d3b34c4",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 800,
+          "end": 890,
+          "text": "日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 4,
+          "score": 0.4725137948989868,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "b3281b00b3c62c3cd20ae9bbb34b675e085a4a2bed97f055f2427c65e08f1ec3",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 5,
+          "score": 0.44522935152053833,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 158.646,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "图书借阅到期可以续借吗？",
+      "expected_document_id": "library",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "83e17094677b4a2ea7990afae2f54f1ac2d7982f66d0c91e6ea685012d3b34c4",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 800,
+          "end": 890,
+          "text": "日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7715206146240234,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "32ae1225515dd5852a4b676632934e3ea90b9108f6645452143244051f1ae09a",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 2,
+          "score": 0.6907724738121033,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "b3281b00b3c62c3cd20ae9bbb34b675e085a4a2bed97f055f2427c65e08f1ec3",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 3,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "b19135463e677d629ba43279f664da6c5dcef51eebc9eaf5f171e9fe8ed253bb",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.439484179019928,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "2e3a1618c1ad4dd19e24c039ecb745f6e4743a1ae64dc4c20580b193c30239aa",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002",
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可",
+          "rank": 5,
+          "score": 0.4177967309951782,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 164.986,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "公共汽车驾驶员发现道路异常怎么办？",
+      "expected_document_id": "travel",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "16486b3bd846ba47494c42c1bca7656b399059a8b17a987ac57593374277597c",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 1,
+          "score": 0.6741260290145874,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "4376019677b645331d27ea4a28965f388761f956ab8d77cde3aaa0833bea8495",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001",
+            "travel-a002",
+            "travel-a003",
+            "travel-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第二条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第二章 合成测试流程\n第三条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第四条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘",
+          "rank": 2,
+          "score": 0.6088445782661438,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "32ae1225515dd5852a4b676632934e3ea90b9108f6645452143244051f1ae09a",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 3,
+          "score": 0.38142305612564087,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "b19135463e677d629ba43279f664da6c5dcef51eebc9eaf5f171e9fe8ed253bb",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.37598180770874023,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "b3281b00b3c62c3cd20ae9bbb34b675e085a4a2bed97f055f2427c65e08f1ec3",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 5,
+          "score": 0.3722527027130127,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 149.887,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "个人如何申请删除个人信息？",
+      "expected_document_id": "privacy",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "04ed4c68b2f8fa2fa6f1d0a5cc297dd23e1c21201db7138a6479e7b550be8bb6",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 0,
+          "end": 453,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 1,
+          "score": 0.7198193669319153,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "1f618bb6d3a650dbe4d9f143935abaf3db536ed3f053918a0903ea6a5a4b3302",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 453,
+          "end": 906,
+          "text": "第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 2,
+          "score": 0.7092154622077942,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "fa914570032e19a8a1e835dbab07337a7281899bcc333d5be21de2253718c442",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 445,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 3,
+          "score": 0.4930031895637512,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "93616a65b240c7b0b6746bc7ee24d215bcb8374f9d57933cb6eae8e4bb54dd29",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 445,
+          "end": 890,
+          "text": "第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 4,
+          "score": 0.4923308491706848,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "732a7d00d5fde9f4ad13855a5c97fbb5ac1fa52b38efeea2eebd10e1db2f930a",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 5,
+          "score": 0.44522935152053833,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 155.609,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "图书借阅到期可以续借吗？",
+      "expected_document_id": "library",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "fa914570032e19a8a1e835dbab07337a7281899bcc333d5be21de2253718c442",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 445,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7008069753646851,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "93616a65b240c7b0b6746bc7ee24d215bcb8374f9d57933cb6eae8e4bb54dd29",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 445,
+          "end": 890,
+          "text": "第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 2,
+          "score": 0.6986410021781921,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "732a7d00d5fde9f4ad13855a5c97fbb5ac1fa52b38efeea2eebd10e1db2f930a",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 3,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "1f618bb6d3a650dbe4d9f143935abaf3db536ed3f053918a0903ea6a5a4b3302",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 453,
+          "end": 906,
+          "text": "第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.4225199222564697,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "04ed4c68b2f8fa2fa6f1d0a5cc297dd23e1c21201db7138a6479e7b550be8bb6",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 0,
+          "end": 453,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 5,
+          "score": 0.42136549949645996,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 181.38,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    },
+    {
+      "question": "公共汽车驾驶员发现道路异常怎么办？",
+      "expected_document_id": "travel",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "0501aebd4076e8f3f94c2fe21f8b755ad1e33a2ce4eb566dd545843a71c517b6",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001",
+            "travel-a002"
+          ],
+          "start": 0,
+          "end": 453,
+          "text": "第一章 合成测试总则\n第一条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第二条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 1,
+          "score": 0.6356868743896484,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "65139ad0ab88b75ab57bbd9383a93d7fdbe5c6b2b03dfb784a2def7a65e7ae6e",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003",
+            "travel-a004"
+          ],
+          "start": 453,
+          "end": 906,
+          "text": "第二章 合成测试流程\n第三条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n第四条 乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。乘客乘坐公共汽车应当按站上下车，妥善保管随身行李。驾驶员应当检查车辆状况，遇到道路异常时停车并报告调度人员。\n",
+          "rank": 2,
+          "score": 0.634117603302002,
+          "title": "合成交通规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "fa914570032e19a8a1e835dbab07337a7281899bcc333d5be21de2253718c442",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 445,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 3,
+          "score": 0.39350754022598267,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "93616a65b240c7b0b6746bc7ee24d215bcb8374f9d57933cb6eae8e4bb54dd29",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 445,
+          "end": 890,
+          "text": "第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 4,
+          "score": 0.3746218681335449,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "732a7d00d5fde9f4ad13855a5c97fbb5ac1fa52b38efeea2eebd10e1db2f930a",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 5,
+          "score": 0.3722527027130127,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 159.36,
+      "corpus_version": "fixture-v1",
+      "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+    }
+  ],
+  "api_search": {
+    "condition": "s400",
+    "hits": [
+      {
+        "chunk_id": "a7e013a9dea40b8d5a79d2d9ec987179a5a3e6341a67747d65a66585485baf3d",
+        "corpus_version": "fixture-v1",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a004"
+        ],
+        "start": 685,
+        "end": 906,
+        "text": "第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+        "rank": 1,
+        "score": 0.7508940696716309,
+        "title": "合成数据保护规则（非真实法规）",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "第四条"
+        ]
+      },
+      {
+        "chunk_id": "5192f768dddfa3ae4d1ddd923eb34dd9ebbc46c0a2ba3cce49e1f965b1f83524",
+        "corpus_version": "fixture-v1",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a002"
+        ],
+        "start": 232,
+        "end": 453,
+        "text": "第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+        "rank": 2,
+        "score": 0.7437804937362671,
+        "title": "合成数据保护规则（非真实法规）",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "第二条"
+        ]
+      },
+      {
+        "chunk_id": "884a895a1741e4962c0df3fe5f9c643440799a8552ab3acd89d2f4ddb6abf227",
+        "corpus_version": "fixture-v1",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a001"
+        ],
+        "start": 0,
+        "end": 232,
+        "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+        "rank": 3,
+        "score": 0.719250500202179,
+        "title": "合成数据保护规则（非真实法规）",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "第一条"
+        ]
+      },
+      {
+        "chunk_id": "56d3424f8553f454fc3b65883cf588bf2aec57ca8d4c9370253b9e8749403268",
+        "corpus_version": "fixture-v1",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a003"
+        ],
+        "start": 453,
+        "end": 685,
+        "text": "第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+        "rank": 4,
+        "score": 0.7067750692367554,
+        "title": "合成数据保护规则（非真实法规）",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "第三条"
+        ]
+      },
+      {
+        "chunk_id": "9a8de318f661f23ca0aeccd709262cfc3d456d8c478c2ca83e690bf88f6b74f3",
+        "corpus_version": "fixture-v1",
+        "condition": "s400",
+        "document_id": "library",
+        "article_ids": [
+          "library-a004"
+        ],
+        "start": 673,
+        "end": 890,
+        "text": "第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+        "rank": 5,
+        "score": 0.49256569147109985,
+        "title": "合成图书借阅规则（非真实法规）",
+        "source_url": "https://example.org/synthetic/library",
+        "article_labels": [
+          "第四条"
+        ]
+      }
+    ],
+    "timing_ms": 245.429,
+    "corpus_version": "fixture-v1",
+    "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d"
+  },
+  "api_compare": {
+    "question": "图书借阅到期可以续借吗？",
+    "corpus_version": "fixture-v1",
+    "index_version": "a2ffda5f231210ca25419f998d99e709f18acd5533a843837781f93ba1705e9d",
+    "left": {
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "83e17094677b4a2ea7990afae2f54f1ac2d7982f66d0c91e6ea685012d3b34c4",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 800,
+          "end": 890,
+          "text": "日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7715206146240234,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "32ae1225515dd5852a4b676632934e3ea90b9108f6645452143244051f1ae09a",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002",
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还",
+          "rank": 2,
+          "score": 0.6907724738121033,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "b3281b00b3c62c3cd20ae9bbb34b675e085a4a2bed97f055f2427c65e08f1ec3",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 3,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "b19135463e677d629ba43279f664da6c5dcef51eebc9eaf5f171e9fe8ed253bb",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 800,
+          "end": 906,
+          "text": "以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.439484179019928,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "2e3a1618c1ad4dd19e24c039ecb745f6e4743a1ae64dc4c20580b193c30239aa",
+          "corpus_version": "fixture-v1",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002",
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可",
+          "rank": 5,
+          "score": 0.4177967309951782,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条",
+            "第三条",
+            "第四条"
+          ]
+        }
+      ],
+      "timing_ms": 219.685,
+      "context_chars": 1809
+    },
+    "right": {
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "fa914570032e19a8a1e835dbab07337a7281899bcc333d5be21de2253718c442",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 0,
+          "end": 445,
+          "text": "第一章 合成测试总则\n第一条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第二条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 1,
+          "score": 0.7008069753646851,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "93616a65b240c7b0b6746bc7ee24d215bcb8374f9d57933cb6eae8e4bb54dd29",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 445,
+          "end": 890,
+          "text": "第二章 合成测试流程\n第三条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n第四条 读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。读者借阅图书需要登记借书编号和归还日期。借阅到期可以申请续借，发生图书损坏时应联系图书馆工作人员说明原因。\n",
+          "rank": 2,
+          "score": 0.6986410021781921,
+          "title": "合成图书借阅规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "732a7d00d5fde9f4ad13855a5c97fbb5ac1fa52b38efeea2eebd10e1db2f930a",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "fixture",
+          "article_ids": [
+            "fixture-a001",
+            "fixture-a002"
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "第一条 A。\n第二条 B。",
+          "rank": 3,
+          "score": 0.4425790309906006,
+          "title": "接口测试文档",
+          "source_url": "https://example.org/fixture",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        },
+        {
+          "chunk_id": "1f618bb6d3a650dbe4d9f143935abaf3db536ed3f053918a0903ea6a5a4b3302",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 453,
+          "end": 906,
+          "text": "第二章 合成测试流程\n第三条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第四条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 4,
+          "score": 0.4225199222564697,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第三条",
+            "第四条"
+          ]
+        },
+        {
+          "chunk_id": "04ed4c68b2f8fa2fa6f1d0a5cc297dd23e1c21201db7138a6479e7b550be8bb6",
+          "corpus_version": "fixture-v1",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 0,
+          "end": 453,
+          "text": "第一章 合成测试总则\n第一条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n第二条 个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。个人可以申请删除不再必要的个人信息。管理员收到申请后应核验身份，记录处理过程，并在测试规定期限内回复申请人。\n",
+          "rank": 5,
+          "score": 0.42136549949645996,
+          "title": "合成数据保护规则（非真实法规）",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "第一条",
+            "第二条"
+          ]
+        }
+      ],
+      "timing_ms": 174.012,
+      "context_chars": 1809
+    }
+  },
+  "elapsed_ms": 144910.927
+}

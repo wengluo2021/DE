@@ -1,0 +1,4 @@
+# Install together with requirements-b.txt.
+iniconfig==2.3.1
+pluggy==1.7.0
+pytest==9.2.0
