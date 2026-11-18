@@ -2,13 +2,15 @@
 
 ## C 阶段开发入口
 
-C 的 M0（共享契约、统一配置）与M1（证据问答核心）已落地，交接见 `docs/handoffs/`；日期工作记录见 `docs/worklogs/`。正式入口尚未接通完整问答，原B验证入口继续保留。
+C 的 M0（共享契约、统一配置）、M1（证据问答核心）与M2（持久会话、任务及后台API）已落地，交接见 `docs/handoffs/`；日期工作记录见 `docs/worklogs/`。正式入口已有问答/历史/任务API，四个页面仍待M4接入；原B验证入口继续保留。
 
 使用Python3.13.11创建项目`.venv`后，可安装 `requirements-c-dev.txt`，运行 `tests/test_contracts.py tests/test_config.py`。B的模型/向量库依赖继续按下方B说明准备，最终统一依赖在集成阶段完成。
 
 `config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式数据由A交付。配置从项目根解析路径，读取项目`.env`或显式env_file，不污染全局环境；真实Key不在仓库中。
 
 无网络问答核心检查：`.venv/Scripts/python.exe -m scripts.ask --fixtures --mock-llm --question "What does Article 2 state?"`。M1另有真实生成与拒答记录；这些使用固定合成证据，不是官方法规或正式检索评估。运行C检查可指定 `tests/test_contracts.py tests/test_config.py tests/test_answer.py tests/test_llm_client.py tests/test_ask_cli.py`，无须先装B的模型。
+
+M2启动仍为 `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`。只使用一个worker，不加自动reload；数据库在data/sqlite。健康检查区分存活与数据/索引/模型就绪：缺正式资料时API明确返回409，页面能打开不表示知识库已完成。默认读取项目.env，可用DERAG_ENV_FILE显式选择本地环境文件；不自动寻找其他课程的密钥。M2新增检查为 `tests/test_persistence.py tests/test_tasks.py tests/test_qa_api.py`。
 
 ---
 

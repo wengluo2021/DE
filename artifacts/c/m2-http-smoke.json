@@ -1,0 +1,20 @@
+{
+  "external_model_calls": 0,
+  "state": "passed",
+  "health": {
+    "status": 200,
+    "phase": "qa_backend",
+    "ready": false,
+    "mode": "development"
+  },
+  "ask_without_index": {
+    "status": 409,
+    "error": {
+      "code": "RETRIEVAL_NOT_CONFIGURED",
+      "message": "Official data and retrieval dependencies must be configured"
+    }
+  },
+  "failed_ask_persisted": true,
+  "unknown_task_status": 404,
+  "own_server_stopped": true
+}

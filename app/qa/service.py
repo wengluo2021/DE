@@ -39,9 +39,12 @@ class AskTrace:
     started_at: str = field(default_factory=_now)
     finished_at: str | None = None
     retrieval: dict | None = None
+    sources_verified: bool = False
     context_chars: int = 0
     attempts: list = field(default_factory=list)
     timing_ms: dict = field(default_factory=lambda: {"retrieve": None, "generate": 0.0})
+    configuration: dict = field(default_factory=dict)
+    experiment_fingerprint: str | None = None
     error: dict | None = None
 
     def to_dict(self):
@@ -65,16 +68,18 @@ class QAService:
     def ask(self, question, condition, corpus_version, conversation_id=None):
         return self.ask_with_trace(question, condition, corpus_version, conversation_id)[0]
 
-    def ask_with_trace(self, question, condition, corpus_version, conversation_id=None):
+    def ask_with_trace(self, question, condition, corpus_version, conversation_id=None, *, ask_id=None, on_progress=None):
         try:
             request = AskRequest(question=question, condition=condition,
                                  corpus_version=corpus_version, conversation_id=conversation_id)
         except ValidationError:
             raise QAError("INVALID_REQUEST", "Question, condition, version or conversation ID is invalid", 422) from None
-        trace = AskTrace("ask-" + uuid4().hex, request.conversation_id or "chat-" + uuid4().hex,
+        trace = AskTrace(ask_id or "ask-" + uuid4().hex, request.conversation_id or "chat-" + uuid4().hex,
                          request.question, request.condition, request.corpus_version)
+        trace.configuration = self.settings.public_snapshot()
+        trace.experiment_fingerprint = self.settings.experiment_fingerprint()
         try:
-            return self._run(request, trace), trace
+            return self._run(request, trace, on_progress), trace
         except QAError as exc:
             trace.error = exc.as_dict()
             if trace.attempts:
@@ -84,7 +89,14 @@ class QAService:
             exc.trace = trace.to_dict()
             raise
 
-    def _run(self, request, trace):
+    def _emit_progress(self, trace, observer):
+        if observer is not None:
+            try:
+                observer(trace.to_dict())
+            except Exception:
+                raise QAError("STORAGE_ERROR", "Ask progress could not be saved", 503) from None
+
+    def _run(self, request, trace, on_progress):
         settings = self.settings
         cfg = settings.experiment
         gen = cfg.generation
@@ -123,6 +135,8 @@ class QAService:
             except Exception:
                 raise QAError("SOURCE_UNAVAILABLE", "Frozen source documents could not be loaded", 503) from None
         trace.context_chars = sum(len(hit.text) for hit in retrieved.hits)
+        trace.sources_verified = True
+        self._emit_progress(trace, on_progress)
         citations = [Citation(**hit.model_dump(), n=hit.rank) for hit in retrieved.hits]
         model = gen.model or "not-configured"
         generation_time = 0.0
@@ -138,6 +152,7 @@ class QAService:
             for number in range(1, gen.max_attempts + 1):
                 attempt = {"number": number, "started_at": _now()}
                 trace.attempts.append(attempt)
+                self._emit_progress(trace, on_progress)
                 try:
                     response = self.generator.generate(deepcopy(messages))
                     if not isinstance(response, GenerationResponse):
@@ -166,12 +181,15 @@ class QAService:
                     model = response.model
                     attempt["state"] = "completed"
                     attempt["finished_at"] = _now()
+                    self._emit_progress(trace, on_progress)
                     break
                 except QAError as exc:
                     exc = QAError(exc.code, redact(exc.message, settings.api_key()), exc.status, retryable=exc.retryable)
                     attempt["state"] = "failed"
                     attempt["error"] = exc.as_dict()
                     attempt["finished_at"] = _now()
+                    if exc.code != "STORAGE_ERROR":
+                        self._emit_progress(trace, on_progress)
                     if not exc.retryable or number == gen.max_attempts:
                         raise exc from None
                     if exc.code in {"INVALID_MODEL_OUTPUT", "LLM_OUTPUT_TRUNCATED"}:
