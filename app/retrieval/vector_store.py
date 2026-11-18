@@ -1,6 +1,7 @@
 """Chroma 持久化适配：只接收已编码向量，不使用 Chroma 自带的默认模型。"""
 from pathlib import Path
 import importlib.metadata
+import os
 
 from .errors import RetrievalError
 
@@ -9,6 +10,14 @@ from .errors import RetrievalError
 HNSW = {"space": "cosine", "ef_construction": 100, "ef_search": 100,
         "max_neighbors": 16, "num_threads": 1, "batch_size": 2,
         "sync_threshold": 2, "resize_factor": 1.2}
+
+def validate_store_path(directory):
+    """Budget for native HNSW's UUID directory and file suffix on Windows."""
+    resolved=Path(directory).resolve()
+    if os.name=="nt" and len(str(resolved))>200:
+        raise RetrievalError("INDEX_PATH_TOO_LONG",
+            "Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes",409)
+    return resolved
 
 
 def store_identity():
@@ -19,9 +28,17 @@ def store_identity():
 class ChromaStore:
     """一个目录对应一个索引版本，四个 collection 分别存放四种实验条件。"""
     def __init__(self, directory: Path):
+        directory=validate_store_path(directory)
         import chromadb
         from chromadb.config import Settings
         self.client = chromadb.PersistentClient(path=str(directory), settings=Settings(anonymized_telemetry=False))
+        self._closed = False
+
+    def close(self):
+        """Release this client's shared-System reference exactly once."""
+        if not self._closed:
+            self.client.close()
+            self._closed = True
 
     def collection(self, condition, create=False):
         # 查询时只读取已有 collection；缺失即报未就绪，不临时造一个空库来代替。

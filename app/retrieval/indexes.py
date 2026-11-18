@@ -22,6 +22,20 @@ class IndexManager:
         self.root.mkdir(parents=True, exist_ok=True)
         return FileLock(self.root / ".retrieval.lock", timeout=600)
 
+    def close(self):
+        """Close all version stores after the owning service drains its tasks."""
+        error = None
+        for store in self._stores.values():
+            try:
+                close = getattr(store, "close", None)
+                if close is not None:
+                    close()
+            except Exception as exc:
+                error = error or exc
+        self._stores.clear()
+        if error is not None:
+            raise error
+
     def documents(self, corpus_version):
         """从注入的加载器取文档并统一排序，使构建顺序可以复现。"""
         docs = self.loader(corpus_version)

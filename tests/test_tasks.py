@@ -96,3 +96,16 @@ def test_worker_is_serial_and_progress_is_saved(store):
         assert events==["first-start","first-end","second"]
     finally:
         release.set();manager.close()
+
+
+def test_b_public_error_code_is_preserved_in_background_task(store):
+    pytest.importorskip("filelock")
+    from app.retrieval.errors import RetrievalError
+    manager=TaskManager(store)
+    def work():
+        raise RetrievalError("INDEX_PATH_TOO_LONG","Use a shorter data directory",409)
+    try:
+        task=manager.submit(work)
+        assert wait(manager,task["task_id"])["error"]["code"]=="INDEX_PATH_TOO_LONG"
+    finally:
+        manager.close()

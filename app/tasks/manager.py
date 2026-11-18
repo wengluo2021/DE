@@ -40,8 +40,13 @@ class TaskManager:
             self.store.finish_task(task_id,result=result)
         except QAError as exc:
             self.store.finish_task(task_id,error=exc.as_dict())
-        except Exception:
-            self.store.finish_task(task_id,error={"code":"TASK_FAILED","message":"Task failed; inspect its configured inputs"})
+        except Exception as exc:
+            error={"code":"TASK_FAILED","message":"Task failed; inspect its configured inputs"}
+            if type(exc).__module__=="app.retrieval.errors":
+                candidate=exc.as_dict()
+                if isinstance(candidate,dict) and all(isinstance(candidate.get(k),str) for k in ("code","message")):
+                    error={k:candidate[k] for k in ("code","message")}
+            self.store.finish_task(task_id,error=error)
 
     def get(self,task_id):
         return self.store.task(task_id)

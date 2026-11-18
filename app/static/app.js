@@ -9,6 +9,8 @@
   const errors = {
     OFFICIAL_DATA_NOT_CONFIGURED:"尚未接入A的冻结资料。",RETRIEVAL_NOT_CONFIGURED:"尚未配置正式资料或检索组件。",
     INDEX_NOT_READY:"请先建立当前语料的四组索引。",RETRIEVAL_DEPENDENCIES_NOT_INSTALLED:"检索依赖尚未安装。",
+    INVALID_CORPUS_DATA:"冻结资料校验失败，请核对A的manifest、原始快照与处理后正文。",
+    INDEX_PATH_TOO_LONG:"Windows索引目录过长，请缩短DERAG_DATA_DIR后重新建库。",
     GOLD_NOT_CONFIGURED:"A的冻结标准题尚未配置。",INVALID_GOLD_DATA:"标准题或其证据、版本校验未通过。",
     VERSION_MISMATCH:"请求版本与当前配置不一致，请刷新状态。",LLM_NOT_CONFIGURED:"尚未配置生成API。",
     LLM_AUTH_ERROR:"生成API未通过认证或模型权限检查。",LLM_RATE_LIMITED:"生成服务限流，请稍后查看状态。",

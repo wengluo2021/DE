@@ -11,7 +11,7 @@ from app.qa.service import QAService
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="DERag evidence-grounded question answering")
-    parser.add_argument("--config", default="config/experiment.json")
+    parser.add_argument("--config",help="Explicit configuration overrides DERAG_CONFIG")
     parser.add_argument("--env-file")
     parser.add_argument("--transport", choices=("httpx", "curl"))
     parser.add_argument("--question", required=True)
@@ -48,11 +48,11 @@ def main(argv=None):
             try:
                 from app.retrieval import RetrievalService
                 from app.retrieval.embedding import LocalEmbedder
-                from app.retrieval.types import formal_loader
+                from app.data import corpus_loader
             except ImportError:
                 raise QAError("RETRIEVAL_NOT_CONFIGURED", "Install and verify the retrieval dependencies before using formal evidence", 503) from None
             config = settings.retrieval_config()
-            loader = formal_loader(Path(config["data_dir"]))
+            loader = corpus_loader(Path(config["data_dir"]),formal=settings.experiment.mode=="formal")
             retrieval = RetrievalService(loader, LocalEmbedder(config["embedding"]), config)
             with retrieval.indexes.lock():
                 manifest, _ = retrieval.indexes.completed(settings.experiment.corpus_version)

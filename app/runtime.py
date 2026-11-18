@@ -9,6 +9,7 @@ from app.qa.service import QAService
 from app.tasks.manager import TaskManager
 from app.evaluation.repository import EvaluationRepository
 from app.evaluation.service import EvaluationService
+from app.data import corpus_loader
 
 
 class Runtime:
@@ -19,6 +20,7 @@ class Runtime:
         self.lease=ProcessLease(str(path)+".lock")
         self.injected_qa=qa_service
         self.retrieval=retrieval_service
+        self.owns_retrieval=retrieval_service is None
         self.test_mode=test_mode
         self.gold_loader=gold_loader
         self.admission=RLock()
@@ -54,12 +56,14 @@ class Runtime:
             self.retrieval_issue="OFFICIAL_DATA_NOT_CONFIGURED"
             return
         try:
+            loader=corpus_loader(self.settings.experiment.data_dir,formal=self.settings.experiment.mode=="formal")
+            loader(self.settings.experiment.corpus_version)
             from app.retrieval import RetrievalService
             from app.retrieval.embedding import LocalEmbedder
-            from app.retrieval.types import formal_loader
             config=self.settings.retrieval_config()
-            self.retrieval=RetrievalService(formal_loader(self.settings.experiment.data_dir),
-                                            LocalEmbedder(config["embedding"]),config)
+            self.retrieval=RetrievalService(loader,LocalEmbedder(config["embedding"]),config)
+        except QAError as error:
+            self.retrieval_issue=error.code
         except ImportError:
             self.retrieval_issue="RETRIEVAL_DEPENDENCIES_NOT_INSTALLED"
         except Exception:
@@ -67,6 +71,8 @@ class Runtime:
 
     def get_retrieval(self):
         if self.retrieval is None:
+            if self.retrieval_issue=="INVALID_CORPUS_DATA":
+                raise QAError("INVALID_CORPUS_DATA","Frozen corpus validation failed; inspect A's manifests and snapshots",409)
             raise QAError("RETRIEVAL_NOT_CONFIGURED","Official data and retrieval dependencies must be configured",409)
         return self.retrieval
 
@@ -115,8 +121,16 @@ class Runtime:
             if self.tasks:
                 self.tasks.close()
         finally:
-            self.started=False
-            self.lease.release()
+            try:
+                if self.owns_retrieval and self.retrieval is not None:
+                    try:
+                        close=getattr(self.retrieval,"close",None)
+                        if close is not None:close()
+                    finally:
+                        self.retrieval=None
+            finally:
+                self.started=False
+                self.lease.release()
 
 
 class RetrievalProxy:

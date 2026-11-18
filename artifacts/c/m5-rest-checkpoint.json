@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-19",
+  "milestone": "M5",
+  "state": "in_progress",
+  "checkpoint_kind": "user_requested_rest",
+  "branch": "answer-eval",
+  "base_commit": "c295aa50eaa536e0946ad715bc6e6f2e7a6f94ee",
+  "latest_full_suite": {
+    "file": "m5-verified-tests.xml",
+    "tests": 340,
+    "passed": 339,
+    "failures": 1,
+    "errors": 0
+  },
+  "official_corpus_found": false,
+  "official_gold_found": false,
+  "formal_acceptance": false,
+  "m5_external_generation_calls": 0,
+  "real_qa_e2e_executed": false,
+  "runtime_model_downloaded": true,
+  "remaining": [
+    "Investigate Chroma native read failures before full acceptance",
+    "DERAG_ENV_FILE selector consistency",
+    "Close preflight-owned retrieval clients",
+    "True B plus C plus school API integration",
+    "Official A artifacts and formal integration",
+    "Update README and final integration guide"
+  ],
+  "handoff": "docs/handoffs/M5_02_休息前交接与待修问题.md",
+  "resume_without_reinitialization": true,
+  "public_credential_scan": {
+    "checked_files": 21,
+    "leaks": 0
+  }
+}

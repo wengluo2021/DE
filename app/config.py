@@ -115,6 +115,8 @@ class ExperimentSettings(ConfigModel):
         if self.mode == "formal" and any(not v or not re.fullmatch(r"[a-f0-9]{64}", v)
                                          for v in (self.corpus_version, self.gold_version)):
             raise ValueError("formal mode requires frozen corpus and gold SHA-256 versions")
+        if self.mode=="formal" and self.generation.provider=="mock":
+            raise ValueError("formal mode cannot use mock generation")
         return self
 
 
@@ -180,18 +182,20 @@ def load_settings(config_path=None, *, project_root=ROOT, env_file=None,
     This loader never searches the other course, WSL, or the parent private directory.
     """
     root = Path(project_root).resolve()
-    path = Path(_path(config_path if config_path is not None else "config/experiment.json", root))
+    dot_path = Path(_path(env_file if env_file is not None else ".env", root))
+    env = dict(dotenv_values(dot_path, interpolate=False)) if dot_path.is_file() else {}
+    env.update(dict(os.environ if environ is None else environ))
+    selected_config=config_path if config_path is not None else env.get("DERAG_CONFIG","config/experiment.json")
+    path = Path(_path(selected_config, root))
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise ValueError("experiment configuration must be a JSON object")
     data = deepcopy(data)
-    dot_path = Path(_path(env_file if env_file is not None else ".env", root))
-    env = dict(dotenv_values(dot_path, interpolate=False)) if dot_path.is_file() else {}
-    env.update(dict(os.environ if environ is None else environ))
     for name, section, key in (("DERAG_DATA_DIR", None, "data_dir"),
                                ("DERAG_MODEL_DIR", "embedding", "model_dir"),
                                ("LLM_BASE_URL", "generation", "base_url"),
-                               ("LLM_MODEL", "generation", "model")):
+                               ("LLM_MODEL", "generation", "model"),
+                               ("LLM_TRANSPORT", "generation", "transport")):
         if name in env:
             target = data if section is None else data.setdefault(section, {})
             target[key] = env[name] if env[name] else (None if key in {"base_url", "model"} else "")

@@ -15,6 +15,9 @@ class RetrievalService:
     def build_indexes(self, corpus_version):
         return self.indexes.build_indexes(corpus_version)
 
+    def close(self):
+        self.indexes.close()
+
     def documents(self, corpus_version):
         return self.indexes.documents(corpus_version)
 

@@ -6,6 +6,7 @@ from pydantic import Field,StrictBool,model_validator
 
 from app.contracts import ContractModel,Document,FrozenText,NonBlankStr,Offset
 from app.qa.errors import QAError
+from app.data.corpus import read_frozen_json,_unique
 
 
 class GoldEvidence(ContractModel):
@@ -76,7 +77,7 @@ def load_gold(settings,document_loader):
     if not cfg.gold_version:
         raise QAError("GOLD_NOT_CONFIGURED","Configure A's frozen gold version before evaluation",409)
     try:
-        manifest=json.loads((cfg.data_dir/"eval/manifest.json").read_text(encoding="utf-8"))
+        manifest=read_frozen_json(cfg.data_dir/"eval/manifest.json")
         raw=(cfg.data_dir/"eval/gold.jsonl").read_bytes()
         if raw.startswith(b"\xef\xbb\xbf") or b"\r" in raw or not raw.endswith(b"\n"):
             raise ValueError("Gold must be UTF-8 without BOM, with LF and a final newline")
@@ -84,7 +85,7 @@ def load_gold(settings,document_loader):
         if (manifest.get("schema_version")!="1.0" or manifest.get("corpus_version")!=cfg.corpus_version
                 or manifest.get("gold_version")!=version or cfg.gold_version!=version):
             raise ValueError("Gold manifest or configuration version differs")
-        cases=[GoldCase.model_validate_json(line) for line in raw.decode("utf-8").splitlines()]
+        cases=[GoldCase.model_validate(json.loads(line,object_pairs_hook=_unique)) for line in raw.decode("utf-8").splitlines()]
         documents=[Document.model_validate(d.model_dump() if isinstance(d,Document) else d)
                    for d in document_loader(cfg.corpus_version)]
         if any(d.corpus_version!=cfg.corpus_version for d in documents):

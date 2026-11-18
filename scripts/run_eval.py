@@ -70,7 +70,7 @@ def run_eval(settings,client,output_dir,*,run_id=None,timeout=7200,poll_seconds=
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--config",default="config/experiment.json")
+    parser.add_argument("--config",help="Explicit configuration overrides DERAG_CONFIG")
     parser.add_argument("--env-file")
     parser.add_argument("--base-url",default="http://127.0.0.1:8000")
     parser.add_argument("--output-dir")
