@@ -6,3 +6,12 @@ __pycache__/
 data/*.sqlite3
 data/chroma/
 DE.tar
+models/
+data/b-fixtures/
+data/b-clean-verification/
+data/chunks/
+data/indexes/
+artifacts/b/.pytest/
+.venv-b-verify/
+.venv-b-smoke/
+.idea/

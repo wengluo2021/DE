@@ -1,0 +1,143 @@
+[
+  {
+    "schema_version": "1.0",
+    "document_id": "privacy",
+    "corpus_version": "fixture-en-v2",
+    "title": "Synthetic Personal Information Rules (not official legislation)",
+    "issuer": "Synthetic test data",
+    "source_url": "https://example.org/synthetic/privacy",
+    "published_at": null,
+    "effective_at": null,
+    "raw_path": "tests/fixtures/b/privacy_raw.txt",
+    "raw_sha256": "7c737bb42d8ff3fae11e69702c0f14e59cc11b746d1db887e240d359f357c6d1",
+    "text": "Chapter 1 Synthetic General Provisions\nArticle 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nArticle 2 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nChapter 2 Synthetic Procedures\nArticle 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nArticle 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\n",
+    "articles": [
+      {
+        "article_id": "privacy-a001",
+        "label": "Article 1",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 39,
+        "end": 1100
+      },
+      {
+        "article_id": "privacy-a002",
+        "label": "Article 2",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 1101,
+        "end": 2162
+      },
+      {
+        "article_id": "privacy-a003",
+        "label": "Article 3",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 2194,
+        "end": 3255
+      },
+      {
+        "article_id": "privacy-a004",
+        "label": "Article 4",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 3256,
+        "end": 4317
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "document_id": "travel",
+    "corpus_version": "fixture-en-v2",
+    "title": "Synthetic Public Transport Rules (not official legislation)",
+    "issuer": "Synthetic test data",
+    "source_url": "https://example.org/synthetic/travel",
+    "published_at": null,
+    "effective_at": null,
+    "raw_path": "tests/fixtures/b/travel_raw.txt",
+    "raw_sha256": "d358d05fec69f50ff5e3f4693b38f2c98eac2627d002fa1ac890c3eb03613b0c",
+    "text": "Chapter 1 Synthetic General Provisions\nArticle 1 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nArticle 2 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nChapter 2 Synthetic Procedures\nArticle 3 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nArticle 4 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+    "articles": [
+      {
+        "article_id": "travel-a001",
+        "label": "Article 1",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 39,
+        "end": 1124
+      },
+      {
+        "article_id": "travel-a002",
+        "label": "Article 2",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 1125,
+        "end": 2210
+      },
+      {
+        "article_id": "travel-a003",
+        "label": "Article 3",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 2242,
+        "end": 3327
+      },
+      {
+        "article_id": "travel-a004",
+        "label": "Article 4",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 3328,
+        "end": 4413
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "document_id": "library",
+    "corpus_version": "fixture-en-v2",
+    "title": "Synthetic Library Loan Rules (not official legislation)",
+    "issuer": "Synthetic test data",
+    "source_url": "https://example.org/synthetic/library",
+    "published_at": null,
+    "effective_at": null,
+    "raw_path": "tests/fixtures/b/library_raw.txt",
+    "raw_sha256": "46022975c50fa2f163c7b783c7525039fe22bf0760f02e910b04dee64b727042",
+    "text": "Chapter 1 Synthetic General Provisions\nArticle 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nChapter 2 Synthetic Procedures\nArticle 3 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 4 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+    "articles": [
+      {
+        "article_id": "library-a001",
+        "label": "Article 1",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 39,
+        "end": 984
+      },
+      {
+        "article_id": "library-a002",
+        "label": "Article 2",
+        "chapter": "Chapter 1",
+        "section": null,
+        "start": 985,
+        "end": 1930
+      },
+      {
+        "article_id": "library-a003",
+        "label": "Article 3",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 1962,
+        "end": 2907
+      },
+      {
+        "article_id": "library-a004",
+        "label": "Article 4",
+        "chapter": "Chapter 2",
+        "section": null,
+        "start": 2908,
+        "end": 3853
+      }
+    ]
+  }
+]

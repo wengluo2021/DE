@@ -1,0 +1,24 @@
+{
+  "notice": "Synthetic contract fixture; score 0.9 is a stub, not a semantic ranking target.",
+  "hit": {
+    "rank": 1,
+    "score": 0.9,
+    "chunk_id": "5377f046c4c0835be07c79e905ea0bd77e695e28c99a7e04ab5accc90f701881",
+    "corpus_version": "fixture-v1",
+    "condition": "s400",
+    "document_id": "fixture",
+    "article_ids": [
+      "fixture-a001",
+      "fixture-a002"
+    ],
+    "start": 0,
+    "end": 13,
+    "text": "第一条 A。\n第二条 B。",
+    "title": "接口测试文档",
+    "source_url": "https://example.org/fixture",
+    "article_labels": [
+      "第一条",
+      "第二条"
+    ]
+  }
+}

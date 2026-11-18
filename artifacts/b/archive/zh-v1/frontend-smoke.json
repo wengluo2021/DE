@@ -1,0 +1,10 @@
+{
+  "browser": "Microsoft Edge / Playwright",
+  "mode": "MOCK",
+  "chunks": 4,
+  "left": 5,
+  "right": 5,
+  "errors": [],
+  "cleared": true,
+  "mobileOverflow": false
+}

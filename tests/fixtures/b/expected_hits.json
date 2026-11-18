@@ -1,0 +1,24 @@
+{
+  "notice": "Synthetic contract fixture; score 0.9 is a stub, not a semantic ranking target.",
+  "hit": {
+    "rank": 1,
+    "score": 0.9,
+    "chunk_id": "ecc55790d61808b33e0ec4cb33471f7e520a6af4dd26c2ebdd083d2ed80a18ac",
+    "corpus_version": "fixture-en-v2",
+    "condition": "s400",
+    "document_id": "fixture",
+    "article_ids": [
+      "fixture-a001",
+      "fixture-a002"
+    ],
+    "start": 0,
+    "end": 25,
+    "text": "Article 1 A.\nArticle 2 B.",
+    "title": "Synthetic API Contract Fixture (not official legislation)",
+    "source_url": "https://example.org/fixture",
+    "article_labels": [
+      "Article 1",
+      "Article 2"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "document_id": "fixture",
+  "corpus_version": "fixture-v1",
+  "title": "接口测试文档",
+  "issuer": "测试",
+  "source_url": "https://example.org/fixture",
+  "published_at": null,
+  "effective_at": null,
+  "raw_path": "tests/fixtures/b/legacy_zh_raw.txt",
+  "raw_sha256": "b0869368aaf976c47922b3cc0a88e3eff3b24ebd585a3e94dc991fc3ea28bf63",
+  "text": "第一条 A。\n第二条 B。",
+  "articles": [
+    {
+      "article_id": "fixture-a001",
+      "label": "第一条",
+      "chapter": null,
+      "section": null,
+      "start": 0,
+      "end": 6
+    },
+    {
+      "article_id": "fixture-a002",
+      "label": "第二条",
+      "chapter": null,
+      "section": null,
+      "start": 7,
+      "end": 13
+    }
+  ]
+}
