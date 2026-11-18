@@ -15,3 +15,8 @@ artifacts/b/.pytest/
 .venv-b-verify/
 .venv-b-smoke/
 .idea/
+artifacts/c/.pytest/
+artifacts/c/.pytest_cache/
+artifacts/c/.pytest*/
+data/sqlite/
+data/runs/

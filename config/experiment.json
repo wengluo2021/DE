@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "mode": "development",
+  "corpus_version": "fixture-en-v2",
+  "gold_version": null,
+  "conditions": ["f400", "s400", "f800", "s800"],
+  "top_k": 5,
+  "data_dir": "data",
+  "embedding": {
+    "model_id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "model_dir": "models/embedding",
+    "device": "cpu",
+    "dimension": 1024,
+    "normalize": true,
+    "query_prefix": "",
+    "document_prefix": "",
+    "max_input_tokens": 8192,
+    "pooling": "cls",
+    "batch_size": 4,
+    "cpu_threads": 4
+  },
+  "retrieval": {"metric": "cosine", "chunker_version": "structure-offset-v2"},
+  "generation": {
+    "provider": "openai-compatible",
+    "base_url": "https://llm.cs.cityu.edu.hk/v1",
+    "model": "CS5351/DeepSeek-V4-Flash",
+    "temperature": 0,
+    "max_tokens": 1024,
+    "timeout_seconds": 60,
+    "max_attempts": 2,
+    "prompt_path": "app/qa/prompts/answer.txt",
+    "json_mode": true,
+    "transport": "httpx",
+    "seed": null
+  }
+}

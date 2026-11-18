@@ -1,0 +1,6 @@
+# C foundation runtime. B's heavier retrieval/model lock is integrated at M5.
+-r requirements.txt
+certifi==2026.10.23
+httpcore==1.0.9
+httpx==0.28.1
+python-dotenv==1.2.4

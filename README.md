@@ -1,5 +1,15 @@
 # DERag
 
+## C 阶段开发入口
+
+C 的 M0（共享契约、统一配置与轻量隔离环境）已落地，交接见 `docs/handoffs/M0_准备与契约.md`。此阶段没有把正式入口改成完整问答，原B验证入口继续保留。
+
+使用Python3.13.11创建项目`.venv`后，可安装 `requirements-c-dev.txt`，运行 `tests/test_contracts.py tests/test_config.py`。B的模型/向量库依赖继续按下方B说明准备，最终统一依赖在集成阶段完成。
+
+`config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式数据由A交付。配置从项目根解析路径，读取项目`.env`或显式env_file，不污染全局环境；真实Key不在仓库中。生成传输和真实问答将在M1实现验证。
+
+---
+
 CS5481 Topic 5 项目。正式入口目前包含问答、文档库、分块对照和评估的前端预览；B 的真实 embedding、Chroma、两种切分与检索 API 已独立实现，使用下方 B 验证入口。完整 LLM 问答、官方数据和 30 题正式评估仍待 A/C 集成。
 
 ## 运行方式

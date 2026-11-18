@@ -1,0 +1,6 @@
+*.json text eol=lf
+*.jsonl text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+# Official source snapshots keep their original bytes, including HTML/PDF.
+data/raw/** -text
