@@ -96,7 +96,7 @@ class Runtime:
             except Exception:
                 index_ready=False
         return {"status":"ok","phase":"qa_backend","mode":"test" if self.test_mode else cfg.mode,
-                "frontend_mode":"preview","ready":self.started and self.store.ready() and index_ready
+                "frontend_mode":"api","ready":self.started and self.store.ready() and index_ready
                     and (mock_generation or self.settings.llm_configured),
                 "components":{"sqlite":{"ready":self.store.ready()},
                     "retrieval":{"ready":index_ready,"issue":self.retrieval_issue},

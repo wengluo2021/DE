@@ -1,4 +1,4 @@
-"""Single production entry: persistent QA APIs and existing preview pages."""
+"""Single production entry: persistent QA/evaluation APIs and live pages."""
 from contextlib import asynccontextmanager
 import os
 from pathlib import Path
@@ -28,7 +28,7 @@ def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_p
             yield
         finally:
             runtime.close()
-    app=FastAPI(title="DERag",version="0.2.0",lifespan=lifespan)
+    app=FastAPI(title="DERag",version="0.4.0",lifespan=lifespan)
     app.state.runtime=runtime
     app.mount("/static",StaticFiles(directory=STATIC_DIR),name="static")
     app.include_router(create_qa_router(runtime))

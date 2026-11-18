@@ -32,7 +32,7 @@ def test_ask_history_and_health_are_real_persistent_apis(settings):
     app=create_app(settings,qa_service=service(settings),test_mode=True)
     with TestClient(app) as client:
         health=client.get("/api/health").json()
-        assert health["mode"]=="test" and health["ready"] and health["frontend_mode"]=="preview"
+        assert health["mode"]=="test" and health["ready"] and health["frontend_mode"]=="api"
         assert health["components"]["generation"]["mode"]=="mock"
         first=client.post("/api/ask",json=body())
         assert first.status_code==200 and first.json()["answer"]=="Article 2 states B.[1]"

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-19",
+  "state": "passed",
+  "synthetic": true,
+  "external_model_calls": 0,
+  "scenario": "Start a new evaluation, select an older run, score old synthetic-01/s400 while task is running at 82/120; keep old selection after completion.",
+  "old_run_id": "eval-f2d85087a5af4f98b7dc855f6df2a3b9",
+  "new_run_id": "eval-649210fed3f04feb962830317b92bc56",
+  "old_case_review": {
+    "answer_grade": "wrong",
+    "claim_reviews": [
+      {
+        "claim_index": 0,
+        "supported": true,
+        "reason": "Synthetic snapshot support checked; cross-run binding test only."
+      }
+    ],
+    "refusal_correct": null,
+    "notes": "仅验证评分写入旧run，不是正式题评分。",
+    "reviewer": "synthetic-cross-run-check",
+    "reviewed_at": "2026-11-18T17:52:11.185493+00:00"
+  },
+  "new_case_review": null,
+  "new_run_rows": 120,
+  "old_selection_preserved_after_completion": true,
+  "own_server_stopped": true,
+  "viewport_override_reset": true,
+  "screenshot": "m4-review-isolation.jpg"
+}

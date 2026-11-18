@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-19",
+  "state": "passed",
+  "source_data": "synthetic fixture-en-v2, not official law",
+  "browser": "in-app browser via cua_repl",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "validated": [
+    "answer and refusal",
+    "technical failure without demo fallback",
+    "backend history after reload",
+    "per-ask repeated citation numbers",
+    "keyboard citation and Escape",
+    "frozen source interval",
+    "HTML text escaping",
+    "document list/details",
+    "background index task",
+    "f400/s400 chunks and f800/s800 same-question retrieval",
+    "120 evaluation rows and task reload",
+    "condition-isolated scoring and revision persistence",
+    "review draft survives source navigation",
+    "CSV download and 120 unique pairs",
+    "mobile navigation and no page overflow",
+    "collapsed panels excluded from keyboard/AX",
+    "missing-data states on all four views",
+    "backend disconnect",
+    "one real school-model UI answer with persisted evidence"
+  ],
+  "mock_run_id": "eval-f2d85087a5af4f98b7dc855f6df2a3b9",
+  "mock_review": "synthetic-browser-check; s400 synthetic-00 partial; not a formal human grade",
+  "real_external_requests": 1,
+  "known_real_tokens": 316,
+  "unexpected_browser_console_errors": 0,
+  "all_own_servers_stopped": true,
+  "viewport_override_reset": true,
+  "screenshots": [
+    "m4-evaluation-desktop.jpg",
+    "m4-evaluation-mobile.jpg",
+    "m4-real-qa.jpg"
+  ],
+  "limitations": [
+    "B embedding/Chroma replaced by explicit test adapter for UI acceptance",
+    "no official frozen gold/corpus integrated",
+    "Linux/Docker not validated"
+  ],
+  "persisted_tasks": [
+    {
+      "kind": "indexes",
+      "state": "completed",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "kind": "evaluation",
+      "state": "completed",
+      "completed": 120,
+      "total": 120
+    }
+  ],
+  "persisted_mock_ask_states": {
+    "answered": 3,
+    "failed": 1,
+    "insufficient": 1
+  },
+  "evaluation_runs": 1,
+  "unique_condition_case_pairs": 120,
+  "review_revisions": 1
+}

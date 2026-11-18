@@ -2,7 +2,7 @@
 
 ## C 阶段开发入口
 
-C 的 M0（共享契约、统一配置）、M1（证据问答核心）、M2（持久会话、任务及后台API）与M3（四组评估、评分、导出）已落地，交接见 `docs/handoffs/`；日期工作记录见 `docs/worklogs/`。正式入口已有问答/历史/任务/评估API，四个页面仍待M4接入；原B验证入口继续保留。
+C 的 M0–M4已落地：契约配置、引用问答、服务端保存/任务、四组评估/评分/导出、四页真实API接入。交接见docs/handoffs，日期操作见docs/worklogs。M4通过227项C后台回归与浏览器实测，还完成1次学校模型页面问答；使用合成资料，不代表正式成绩。下一步M5接A冻结资料/题集及B真实索引。
 
 使用Python3.13.11创建项目`.venv`后，可安装 `requirements-c-dev.txt`，运行 `tests/test_contracts.py tests/test_config.py`。B的模型/向量库依赖继续按下方B说明准备，最终统一依赖在集成阶段完成。
 
@@ -14,9 +14,23 @@ M2启动仍为 `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`。�
 
 M3用法见 [评估使用说明](docs/评估使用说明.md)。配置正式数据/题集/索引后，在另一个终端执行 `python -m scripts.run_eval --config config/experiment.json --base-url http://127.0.0.1:8765`；默认导出到新的data/runs/client-随机目录。`--run-id`读取已有实验，不重新生成。M3检查为 `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`；M0–M3组合227项通过，实际合成HTTP流程120项通过，均不代表正式成绩。
 
+当前源码启动（已有.venv不必重建）：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-c-dev.txt
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8765
+```
+
+页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。B模型依赖按下方说明准备，三方统一安装和新版Docker待M5后验证。
+
+页面操作与证据见 [M4交接](docs/handoffs/M4_页面接入与真实问答.md)。Windows学校API验收显式使用generation.transport=curl；默认配置仍为httpx，不能把curl结果等同HTTPX/Linux已验证。正式部署先选定适用传输、配置本地env与冻结数据；参数改变会改变实验指纹，旧run保留。
+
 ---
 
 下方“运行方式/当前可操作内容”保留原预览版说明，尤其requirements.txt和DE.tar仅对应旧预览。当前C后台启动需要requirements-c.txt（开发检查用requirements-c-dev.txt）；尚未完成新版Docker集成，不以旧镜像验证新后台。B的真实embedding与Chroma按后续B说明安装。官方数据及30题正式评估仍待A交付后集成。
+
+<details>
+<summary>旧预览运行及镜像说明（不适用于当前C后台安装）</summary>
 
 ## 运行方式
 
@@ -68,6 +82,8 @@ docker run -d --name DE -p 127.0.0.1:8766:8000 de:latest
 
 浏览器本地存储仅用于前端预览，不是课程项目的最终数据存储。实际数据采集、两组以上独立向量索引和人工评估的要求见 [项目设计.md](./项目设计.md)。
 
+
+</details>
 
 ## B 独立检索模块（已实现）
 
