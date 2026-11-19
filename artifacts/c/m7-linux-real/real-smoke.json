@@ -1,0 +1,1757 @@
+{
+  "state": "passed",
+  "scope": "real embedding + synthetic fixtures, NOT formal evaluation",
+  "python": "3.13.11",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "sentence-transformers": "6.3.0",
+    "transformers": "5.23.0",
+    "chromadb": "1.5.9"
+  },
+  "device": "cpu",
+  "dimension": 1024,
+  "overflow_check": {
+    "code": "MODEL_INPUT_TOO_LONG",
+    "message": "overflow-query: 9002 tokens exceeds 8192"
+  },
+  "source_slice_checks": "passed for every retrieved hit",
+  "manifest": {
+    "schema_version": "1.0",
+    "corpus_version": "fixture-en-v2",
+    "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2",
+    "state": "completed",
+    "material": {
+      "corpus_version": "fixture-en-v2",
+      "chunker_version": "structure-offset-v2",
+      "conditions": [
+        {
+          "condition": "f400",
+          "boundary_method": "fixed",
+          "target_chars": 400
+        },
+        {
+          "condition": "s400",
+          "boundary_method": "structured",
+          "target_chars": 400
+        },
+        {
+          "condition": "f800",
+          "boundary_method": "fixed",
+          "target_chars": 800
+        },
+        {
+          "condition": "s800",
+          "boundary_method": "structured",
+          "target_chars": 800
+        }
+      ],
+      "source_digest": "f44ebdf5f9d4fe7be27f630730ff0646aee95474fa63c4abdb84c4cfb48b7f0a",
+      "embedding": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "dimension": 1024,
+        "normalize": true,
+        "query_prefix": "",
+        "document_prefix": "",
+        "max_input_tokens": 8192,
+        "pooling": "cls",
+        "files": {
+          "1_Pooling/config.json": "e54c164a07274f2eb45bb724f54a79d1efcc90c41573887cd9a29aeee0597352",
+          "config.json": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+          "config_sentence_transformers.json": "1eef72430e7194a1e59680e635aed81ffa083f05668dbc5bb1c56c04c0999c38",
+          "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+          "pytorch_model.bin": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+          "README.md": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+          "sentence_bert_config.json": "eb9b44b13c0f52a3b3685c3b1cbdea1ba8b04bea123b98f61610048940776eb1",
+          "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+          "special_tokens_map.json": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+          "tokenizer.json": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+          "tokenizer_config.json": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4"
+        },
+        "token_policy": "reject-overflow-v1"
+      },
+      "vector_store": {
+        "engine": "chromadb",
+        "version": "1.5.9",
+        "hnsw": {
+          "space": "cosine",
+          "ef_construction": 100,
+          "ef_search": 100,
+          "max_neighbors": 16,
+          "num_threads": 1,
+          "batch_size": 2,
+          "sync_threshold": 2,
+          "resize_factor": 1.2
+        },
+        "persistence_policy": "singleton-checkpoint-v1"
+      }
+    },
+    "conditions": {
+      "f400": {
+        "count": 34,
+        "min_chars": 14,
+        "mean_chars": 370.9117647058824,
+        "max_chars": 400,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "5f9fc62880b9acf5062241c06afbdd3d6f7f02eb1e29d434fbc03cedb0991abe",
+        "build_ms": 24211.749
+      },
+      "s400": {
+        "count": 47,
+        "min_chars": 25,
+        "mean_chars": 268.3191489361702,
+        "max_chars": 394,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "ab7a4382016188b88c39bf8c2341bb0ea4fa3b2d6c0ead1d16085785cefcddb7",
+        "build_ms": 6377.786
+      },
+      "f800": {
+        "count": 18,
+        "min_chars": 25,
+        "mean_chars": 700.6111111111111,
+        "max_chars": 800,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "283bdc9b6738d181bc22405d2f3c094094c3e9d589aa1273245d8665614a59ab",
+        "build_ms": 8947.312
+      },
+      "s800": {
+        "count": 31,
+        "min_chars": 25,
+        "mean_chars": 406.80645161290323,
+        "max_chars": 799,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "64aec48431ae7a8aeee76822d0bcd1498ef5fd2f40c65f5dab1efd25ff6963cf",
+        "build_ms": 7963.368
+      }
+    },
+    "runtime": {
+      "device": "cpu",
+      "batch_size": 4
+    },
+    "build_ms": 47524.132
+  },
+  "checks": [
+    {
+      "question": "How can an individual request deletion of personal information?",
+      "expected_document_id": "privacy",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "9d4561dc940c79b0e71becf7c163d42c51858ec39efed17d685e7c6d4e9add67",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 3200,
+          "end": 3600,
+          "text": "nd reply within the time limit specified for this test.\nArticle 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no l",
+          "rank": 1,
+          "score": 0.7210913896560669,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "f4d548eef75c3615c3e89829aa9d23adf835c9733f4c8ad0b402545f1bca05fe",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 2,
+          "score": 0.7202145457267761,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "6b2543b896a35dfea059c929fef5eab679c3f0eb2c2358eb69bcbcec54861c36",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 800,
+          "end": 1200,
+          "text": "e time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nArticle 2 An individual may request deletion of personal information that is no longer necessary. A",
+          "rank": 3,
+          "score": 0.7123370170593262,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "742f7c2a9b28e63d5cb4db16e0efa5a1cf5156276a1f16f6d8e58fe73840448d",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002",
+            "privacy-a003"
+          ],
+          "start": 2000,
+          "end": 2400,
+          "text": "ing a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nChapter 2 Synthetic Procedures\nArticle 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling",
+          "rank": 4,
+          "score": 0.7118671536445618,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "2ce150f15521ab97296dc2622eabc6238c9f379f899afa217c74bde5c6cff616",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002"
+          ],
+          "start": 1600,
+          "end": 2000,
+          "text": " time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiv",
+          "rank": 5,
+          "score": 0.6902795433998108,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2"
+          ]
+        }
+      ],
+      "timing_ms": 125.584,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "Can a reader renew a library book when the loan period expires?",
+      "expected_document_id": "library",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "248c55a55d4c7393d167c8048fa70772f68e18f3ebd11b927d714d09e7a13f72",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 2800,
+          "end": 3200,
+          "text": " may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 4 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register",
+          "rank": 1,
+          "score": 0.7627283930778503,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "f0d2ae85db2fc584b85c32018299b83a12547f5240a75022b81a051b66f315dd",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "he reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register ",
+          "rank": 2,
+          "score": 0.7606004476547241,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "03e068eebd7b347c8b5cf1a35ebe8af250636dd032434c84aa373c84c6fb406b",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3200,
+          "end": 3600,
+          "text": " the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and",
+          "rank": 3,
+          "score": 0.7503033876419067,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "8b570fdf91927468d14307aba19c7c8ce1143568755c8f3b68c318fa894a0a2b",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2000,
+          "end": 2400,
+          "text": " book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall conta",
+          "rank": 4,
+          "score": 0.7477861642837524,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "04ee310705c9350b83067242b41c95d22a9b5e01d337796deba976882fbe79a3",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, t",
+          "rank": 5,
+          "score": 0.7475794553756714,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        }
+      ],
+      "timing_ms": 136.259,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "What should a bus driver do after noticing an abnormal road condition?",
+      "expected_document_id": "travel",
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "a546fdb8fa3928cf5583557e550a45218a8b8005ded7f44147884867a8fa477c",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a002"
+          ],
+          "start": 1200,
+          "end": 1600,
+          "text": " and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is obse",
+          "rank": 1,
+          "score": 0.7611416578292847,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "dadc13697d7d6a95706e761e91b8985e7a027659e9cef3277279d9e6aea1ca92",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 4000,
+          "end": 4400,
+          "text": "pect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to th",
+          "rank": 2,
+          "score": 0.7583848237991333,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "7288e260806cb8632879dd11ab25639ebb63633d5ac0e1eb1410147f28ffe507",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 2400,
+          "end": 2800,
+          "text": "e vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers",
+          "rank": 3,
+          "score": 0.7514810562133789,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "8f4c2fdfbd267274eef5108365ae80457e816dac2ab5a6cf1e8be29e5640fa3b",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "ersonal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver ",
+          "rank": 4,
+          "score": 0.7483599781990051,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "f3bcd7cb1a618a107be2244269b3d298ee25c0ac6771b07316898158eec94b02",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003",
+            "travel-a004"
+          ],
+          "start": 3200,
+          "end": 3600,
+          "text": "n of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nArticle 4 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispa",
+          "rank": 5,
+          "score": 0.7447556853294373,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        }
+      ],
+      "timing_ms": 148.946,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "How can an individual request deletion of personal information?",
+      "expected_document_id": "privacy",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "93a3d1a03209d3710d4c120c3307f71a575ccedaa923107eb5139a5abc322f07",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001"
+          ],
+          "start": 39,
+          "end": 400,
+          "text": "Article 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 1,
+          "score": 0.7384209036827087,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "9b96fa262738a4f6c64cafab7276e4fc0a5b2660fe7357887b3234538c0aabe9",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 3256,
+          "end": 3617,
+          "text": "Article 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 2,
+          "score": 0.7375065088272095,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "7fd8ea8131fa520b8c55873dba09b870bf8a09c572855fc93d692af39352ddd8",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003"
+          ],
+          "start": 2194,
+          "end": 2555,
+          "text": "Article 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 3,
+          "score": 0.7334276437759399,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "ae1590bb26b8dab6f57f31000543cd5d9b2f388a7144e75aca02fae04945d84b",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002"
+          ],
+          "start": 1101,
+          "end": 1462,
+          "text": "Article 2 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 4,
+          "score": 0.7323920130729675,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "1063a9eb7d8f57567a51613961430b620ea8a6f7f312c382c6262fc7549e446e",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002"
+          ],
+          "start": 1725,
+          "end": 1988,
+          "text": "After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+          "rank": 5,
+          "score": 0.6627656817436218,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2"
+          ]
+        }
+      ],
+      "timing_ms": 121.678,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "Can a reader renew a library book when the loan period expires?",
+      "expected_document_id": "library",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "f2bf9086d01dc63476da800f3eaf6cd4f5ce42f34dcccc4ee0a4a2201557192b",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 39,
+          "end": 433,
+          "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+          "rank": 1,
+          "score": 0.7637378573417664,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "7b11084cb4a820a4ab2754ad8e550a478423d2ac92b99ea631f50053a2dd0c13",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 985,
+          "end": 1379,
+          "text": "Article 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+          "rank": 2,
+          "score": 0.7629959583282471,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "64da7b25295bde266e52a1c588ca76de49ee0e06ffd523fa790ec73b550bf426",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 751,
+          "end": 985,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 3,
+          "score": 0.7628428339958191,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "aabfe1c87602d6f2f43e2095272e6d846fedbfd42ba764d607bde67f07d081ce",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2674,
+          "end": 2908,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 4,
+          "score": 0.7628428339958191,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "cb935dac9e08cc0e17ce9ad3428a9eba644926b260bb4eb5a0e5c65dded34c4a",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3620,
+          "end": 3854,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 5,
+          "score": 0.7628428339958191,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        }
+      ],
+      "timing_ms": 138.386,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "What should a bus driver do after noticing an abnormal road condition?",
+      "expected_document_id": "travel",
+      "condition": "s400",
+      "hits": [
+        {
+          "chunk_id": "229992207f5606b97b3ffc48220399b100dddd6c96875fecf5fb1a65f5319fde",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 2949,
+          "end": 3328,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 1,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "352495228a9e23e21beda1d12990c2513b62fb913c27391fff8422eaaf3ec514",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a002"
+          ],
+          "start": 1832,
+          "end": 2211,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 2,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "6b319ea1d9692a3f4c5052999750a9842919f0aea71b127000f7ddc46e81f155",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001"
+          ],
+          "start": 746,
+          "end": 1125,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 3,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "c9f7003a5b043bc033a7c314d2cd1c14c37599cbec9ef37f42415f9292fa7ecc",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 4035,
+          "end": 4414,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 4,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "ad9a9369762a399dad353b7c184bff3e1af7fed8b8e2f800d65b5b15b65125be",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s400",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 2625,
+          "end": 2949,
+          "text": "The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. ",
+          "rank": 5,
+          "score": 0.760995090007782,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3"
+          ]
+        }
+      ],
+      "timing_ms": 142.189,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "How can an individual request deletion of personal information?",
+      "expected_document_id": "privacy",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "0712d5376c05a2ac1761b0e30afdbb171942f97da52a9f50b7d322cd5c96e265",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003",
+            "privacy-a004"
+          ],
+          "start": 3200,
+          "end": 4000,
+          "text": "nd reply within the time limit specified for this test.\nArticle 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, an",
+          "rank": 1,
+          "score": 0.7290661931037903,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "2f5a291c43e58fa125bf651613344df98f18febe53b48f24632fdab7ed49fa1c",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001",
+            "privacy-a002"
+          ],
+          "start": 800,
+          "end": 1600,
+          "text": "e time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nArticle 2 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the",
+          "rank": 2,
+          "score": 0.7263887524604797,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "a9b11907d15291ee45fb4b4afa8ca2e3eeea0f19deeccaf473857e067cb250ff",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within th",
+          "rank": 3,
+          "score": 0.7254002094268799,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "e42b6a2565c1acaaf3c7e2e1d8b052bc015d92654a6b7648855f0b8391b1bb8a",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002",
+            "privacy-a003"
+          ],
+          "start": 1600,
+          "end": 2400,
+          "text": " time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\nChapter 2 Synthetic Procedures\nArticle 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling",
+          "rank": 4,
+          "score": 0.7033768892288208,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "0f8aec06066b0eb73e2e9a70d8b0fddd7d666204aac317e81340a55b3befe210",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003"
+          ],
+          "start": 2400,
+          "end": 3200,
+          "text": " process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, a",
+          "rank": 5,
+          "score": 0.6954439282417297,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3"
+          ]
+        }
+      ],
+      "timing_ms": 128.505,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "Can a reader renew a library book when the loan period expires?",
+      "expected_document_id": "library",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "970643230ae6c439eb38f997bbdc4abedab6da976f27a8b52a049e17336fcb40",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 800,
+          "end": 1600,
+          "text": "the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply ",
+          "rank": 1,
+          "score": 0.7572931051254272,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "06472066662596086b41b30cbc5a561a94341f677d90631969594aeff5b580a0",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3200,
+          "end": 3854,
+          "text": " the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 2,
+          "score": 0.7543419003486633,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "550d05c656c32fbbda281549bb3ecf6ae6bf1c05b82b8b4274c1fa47baf73505",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register ",
+          "rank": 3,
+          "score": 0.7505954504013062,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "33b2716c24575ce9451799c729effd3ce8b3ef6af9ec9c7da9db20faaab73d5e",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002",
+            "library-a003"
+          ],
+          "start": 1600,
+          "end": 2400,
+          "text": "for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nChapter 2 Synthetic Procedures\nArticle 3 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall conta",
+          "rank": 4,
+          "score": 0.7362853288650513,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "f3e7ae2490b4ee6a3753b0900c04d8674e24920d0523968defe769fe0da95e81",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 2400,
+          "end": 3200,
+          "text": "ct library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 4 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register",
+          "rank": 5,
+          "score": 0.7332316637039185,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        }
+      ],
+      "timing_ms": 144.662,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "What should a bus driver do after noticing an abnormal road condition?",
+      "expected_document_id": "travel",
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "146c4d9eb8dfc647c7e8c7d4c5052389ac98f208b97675781e0afde8a45d98f0",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 4000,
+          "end": 4414,
+          "text": "pect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 1,
+          "score": 0.7597769498825073,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "f896b84d56dd7b361c948efb73ad2a633967a8934ca0a23ad9664fda4129bcb7",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 2400,
+          "end": 3200,
+          "text": "e vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the conditio",
+          "rank": 2,
+          "score": 0.7539311647415161,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "bc0aad73537d41da2693fe2032c3564a5e126023c43c65e4e78516911e2ecc0f",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003",
+            "travel-a004"
+          ],
+          "start": 3200,
+          "end": 4000,
+          "text": "n of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nArticle 4 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall ins",
+          "rank": 3,
+          "score": 0.7348113059997559,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "af6e5d2fcdb2289ff076d970471bb4b4b8081624f000451f964dfcf9bf42dbc5",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver ",
+          "rank": 4,
+          "score": 0.7328878045082092,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "9992ee9a7b6a26c0396399e1f49f790f6324e9c893b1dcaa19dd71a4761066fd",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001",
+            "travel-a002"
+          ],
+          "start": 800,
+          "end": 1600,
+          "text": "shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\nArticle 2 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is obse",
+          "rank": 5,
+          "score": 0.7269788384437561,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        }
+      ],
+      "timing_ms": 133.9,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "How can an individual request deletion of personal information?",
+      "expected_document_id": "privacy",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "40bfb2ba327dfd5a83b1670f27fde57f4f813225648a02dd27a647efbe3d681a",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a004"
+          ],
+          "start": 3256,
+          "end": 4055,
+          "text": "Article 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. ",
+          "rank": 1,
+          "score": 0.7368006706237793,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "ed894572f67d0f26072cf4819125e381220ba0f73c45dba99f1cecae2f630b45",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a001"
+          ],
+          "start": 39,
+          "end": 838,
+          "text": "Article 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. ",
+          "rank": 2,
+          "score": 0.7356364727020264,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "a150f2da4bb51377010a65131cdabd46c7075d14f67ab69a2ef0ab2ad21dc455",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003"
+          ],
+          "start": 2194,
+          "end": 2993,
+          "text": "Article 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. ",
+          "rank": 3,
+          "score": 0.7329834699630737,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "ebd57c22ead54e3bac197c8a5ba9744bd87a8a843b0f0b19df52e43c28019311",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a002"
+          ],
+          "start": 1101,
+          "end": 1900,
+          "text": "Article 2 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. ",
+          "rank": 4,
+          "score": 0.7325761318206787,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "5ca37ae07a1974aeaa6eb7fef00fbdf7bf61a2e7cdb4ed68fb34de10a27a7695",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "privacy",
+          "article_ids": [
+            "privacy-a003"
+          ],
+          "start": 2993,
+          "end": 3256,
+          "text": "An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test.\n",
+          "rank": 5,
+          "score": 0.7251683473587036,
+          "title": "Synthetic Personal Information Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/privacy",
+          "article_labels": [
+            "Article 3"
+          ]
+        }
+      ],
+      "timing_ms": 127.686,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "Can a reader renew a library book when the loan period expires?",
+      "expected_document_id": "library",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "67ff7a7ac9df16bfae83c04af3f29780e4ca1fb59ed900384742a0063b4792a6",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 837,
+          "end": 985,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 1,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "df33969d5a1454e7f1615e0690940e7d6b9ff0baceb1610e492504b3c8cdf0a2",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2760,
+          "end": 2908,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 2,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "e292bfb8fd547f5633639a64f60eb6390eeaac1998f7082f23e27f912e236b84",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 1783,
+          "end": 1931,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 3,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "ecb5495e566ad1fd8accfa2e757554480672c8d573c295ad0abfe5b83c0f3c27",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3706,
+          "end": 3854,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 4,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "415d9c84604274f45679c7722fc5caaad791e0e912308b0e85effe9591f51917",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 39,
+          "end": 837,
+          "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. ",
+          "rank": 5,
+          "score": 0.7620226144790649,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        }
+      ],
+      "timing_ms": 135.745,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    },
+    {
+      "question": "What should a bus driver do after noticing an abnormal road condition?",
+      "expected_document_id": "travel",
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "8feed06613e9f9cb5a76568be6c1b97182eae160001f6cb20eccaf9153614440",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 4035,
+          "end": 4414,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 1,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "964816abd3b5276385b0ce007c97983eb7bd5e5e68100c7a05c5e08e04ff7415",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a002"
+          ],
+          "start": 1832,
+          "end": 2211,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 2,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "9b683894c7d82a8660abcfffeaf13c9e6ab6110d7a507a2260e23ede05ec1ebe",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a001"
+          ],
+          "start": 746,
+          "end": 1125,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 3,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "c151ed90f4711e128f7402c89dd8dfb70212036037caad9f76a2d9de3a0c01b8",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a003"
+          ],
+          "start": 2949,
+          "end": 3328,
+          "text": "If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher.\n",
+          "rank": 4,
+          "score": 0.7711639404296875,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "c4172516de74c868a54a326d3b1e94e8c76ff24386048e25bfcdaf9dd2045e34",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "travel",
+          "article_ids": [
+            "travel-a004"
+          ],
+          "start": 3328,
+          "end": 4035,
+          "text": "Article 4 Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. If an abnormal road condition is observed, the driver shall stop the vehicle and report it to the dispatcher. Passengers shall board and leave a public bus at designated stops and keep their personal luggage safe. The driver shall inspect the condition of the vehicle. ",
+          "rank": 5,
+          "score": 0.7110139727592468,
+          "title": "Synthetic Public Transport Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/travel",
+          "article_labels": [
+            "Article 4"
+          ]
+        }
+      ],
+      "timing_ms": 138.531,
+      "corpus_version": "fixture-en-v2",
+      "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+    }
+  ],
+  "api_search": {
+    "condition": "s400",
+    "hits": [
+      {
+        "chunk_id": "93a3d1a03209d3710d4c120c3307f71a575ccedaa923107eb5139a5abc322f07",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a001"
+        ],
+        "start": 39,
+        "end": 400,
+        "text": "Article 1 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+        "rank": 1,
+        "score": 0.7384209036827087,
+        "title": "Synthetic Personal Information Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "Article 1"
+        ]
+      },
+      {
+        "chunk_id": "9b96fa262738a4f6c64cafab7276e4fc0a5b2660fe7357887b3234538c0aabe9",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a004"
+        ],
+        "start": 3256,
+        "end": 3617,
+        "text": "Article 4 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+        "rank": 2,
+        "score": 0.7375065088272095,
+        "title": "Synthetic Personal Information Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "Article 4"
+        ]
+      },
+      {
+        "chunk_id": "7fd8ea8131fa520b8c55873dba09b870bf8a09c572855fc93d692af39352ddd8",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a003"
+        ],
+        "start": 2194,
+        "end": 2555,
+        "text": "Article 3 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+        "rank": 3,
+        "score": 0.7334276437759399,
+        "title": "Synthetic Personal Information Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "Article 3"
+        ]
+      },
+      {
+        "chunk_id": "ae1590bb26b8dab6f57f31000543cd5d9b2f388a7144e75aca02fae04945d84b",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a002"
+        ],
+        "start": 1101,
+        "end": 1462,
+        "text": "Article 2 An individual may request deletion of personal information that is no longer necessary. After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+        "rank": 4,
+        "score": 0.7323920130729675,
+        "title": "Synthetic Personal Information Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "Article 2"
+        ]
+      },
+      {
+        "chunk_id": "1063a9eb7d8f57567a51613961430b620ea8a6f7f312c382c6262fc7549e446e",
+        "corpus_version": "fixture-en-v2",
+        "condition": "s400",
+        "document_id": "privacy",
+        "article_ids": [
+          "privacy-a002"
+        ],
+        "start": 1725,
+        "end": 1988,
+        "text": "After receiving a request, the administrator shall verify the identity of the applicant, record the handling process, and reply within the time limit specified for this test. An individual may request deletion of personal information that is no longer necessary. ",
+        "rank": 5,
+        "score": 0.6627656817436218,
+        "title": "Synthetic Personal Information Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/privacy",
+        "article_labels": [
+          "Article 2"
+        ]
+      }
+    ],
+    "timing_ms": 124.161,
+    "corpus_version": "fixture-en-v2",
+    "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2"
+  },
+  "api_compare": {
+    "question": "Can a reader renew a library book when the loan period expires?",
+    "corpus_version": "fixture-en-v2",
+    "index_version": "4cf1084fa9a4477af34932d6ad9f29205f11a145f2d62e1f85b9f77a93eae0a2",
+    "left": {
+      "condition": "f800",
+      "hits": [
+        {
+          "chunk_id": "970643230ae6c439eb38f997bbdc4abedab6da976f27a8b52a049e17336fcb40",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001",
+            "library-a002"
+          ],
+          "start": 800,
+          "end": 1600,
+          "text": "the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply ",
+          "rank": 1,
+          "score": 0.7572931051254272,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1",
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "06472066662596086b41b30cbc5a561a94341f677d90631969594aeff5b580a0",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3200,
+          "end": 3854,
+          "text": " the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 2,
+          "score": 0.7543419003486633,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "550d05c656c32fbbda281549bb3ecf6ae6bf1c05b82b8b4274c1fa47baf73505",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 800,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register ",
+          "rank": 3,
+          "score": 0.7505954504013062,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "33b2716c24575ce9451799c729effd3ce8b3ef6af9ec9c7da9db20faaab73d5e",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002",
+            "library-a003"
+          ],
+          "start": 1600,
+          "end": 2400,
+          "text": "for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nChapter 2 Synthetic Procedures\nArticle 3 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall conta",
+          "rank": 4,
+          "score": 0.7362853288650513,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 2",
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "f3e7ae2490b4ee6a3753b0900c04d8674e24920d0523968defe769fe0da95e81",
+          "corpus_version": "fixture-en-v2",
+          "condition": "f800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 2400,
+          "end": 3200,
+          "text": "ct library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 4 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register",
+          "rank": 5,
+          "score": 0.7332316637039185,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        }
+      ],
+      "timing_ms": 126.603,
+      "context_chars": 3854
+    },
+    "right": {
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "67ff7a7ac9df16bfae83c04af3f29780e4ca1fb59ed900384742a0063b4792a6",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 837,
+          "end": 985,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 1,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "df33969d5a1454e7f1615e0690940e7d6b9ff0baceb1610e492504b3c8cdf0a2",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2760,
+          "end": 2908,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 2,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "e292bfb8fd547f5633639a64f60eb6390eeaac1998f7082f23e27f912e236b84",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 1783,
+          "end": 1931,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 3,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "ecb5495e566ad1fd8accfa2e757554480672c8d573c295ad0abfe5b83c0f3c27",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3706,
+          "end": 3854,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 4,
+          "score": 0.7862117290496826,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "415d9c84604274f45679c7722fc5caaad791e0e912308b0e85effe9591f51917",
+          "corpus_version": "fixture-en-v2",
+          "condition": "s800",
+          "document_id": "library",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 39,
+          "end": 837,
+          "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. ",
+          "rank": 5,
+          "score": 0.7620226144790649,
+          "title": "Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/library",
+          "article_labels": [
+            "Article 1"
+          ]
+        }
+      ],
+      "timing_ms": 134.29,
+      "context_chars": 1390
+    }
+  },
+  "elapsed_ms": 67500.965
+}

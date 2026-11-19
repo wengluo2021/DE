@@ -19,6 +19,25 @@ def test_dependency_checker_distinguishes_missing_and_wrong_version(tmp_path):
     assert status["mismatched"][0]["package"]=="pydantic"
 
 
+@pytest.mark.parametrize("installed,ready",[("2.15.0+cpu",True),("2.15.0",True),("2.14.0+cpu",False),("2.15.0+cu129",False)])
+def test_dependency_checker_accepts_only_same_pinned_torch_cpu_build(tmp_path,monkeypatch,installed,ready):
+    from app import integration
+    path=tmp_path/"requirements.txt";path.write_text("torch==2.15.0\n",encoding="utf-8")
+    monkeypatch.setattr(integration.metadata,"version",lambda name:installed)
+    assert check_dependencies(path)["ready"] is ready
+
+
+@pytest.mark.parametrize("platform,uvloop,ready",[("linux","0.23.0",True),("linux","0.22.0",False),("win32","0.22.0",True)])
+def test_default_dependency_lock_checks_linux_additions_only_on_linux(tmp_path,monkeypatch,platform,uvloop,ready):
+    from app import integration
+    (tmp_path/"requirements.txt").write_text("torch==2.15.0\n",encoding="utf-8")
+    (tmp_path/"requirements-linux.txt").write_text("uvloop==0.23.0\n",encoding="utf-8")
+    monkeypatch.setattr(integration,"ROOT",tmp_path)
+    monkeypatch.setattr(integration.sys,"platform",platform)
+    monkeypatch.setattr(integration.metadata,"version",lambda name:{"torch":"2.15.0+cpu","uvloop":uvloop}[name])
+    assert check_dependencies()["ready"] is ready
+
+
 def test_preflight_no_data_is_not_ready_and_never_generates(tmp_path,monkeypatch):
     from app.retrieval.embedding import LocalEmbedder
     from app.qa.client import ChatCompletionsClient

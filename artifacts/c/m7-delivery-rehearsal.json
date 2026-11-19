@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-19",
+  "state": "passed",
+  "kind": "synthetic_rehearsal",
+  "formal_acceptance": false,
+  "container_built": false,
+  "clean_environment": false,
+  "interpreter": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\.venv\\Scripts\\python.exe",
+  "external_model_calls": 0,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7r-f63325ae",
+  "preparation": {
+    "state": "verified",
+    "kind": "synthetic_rehearsal",
+    "file_count": 141,
+    "corpus_version": "778a7635d32f5fe83d8f2740c42b492d789d06e9cf87c925560d8b8ad314c315",
+    "gold_version": "9e1fce2717690dec4e57591a688a52a0955c71c55a380188878dfdca05d5114b",
+    "official_provenance_verified": false,
+    "external_model_calls": 0,
+    "output": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7r-f63325ae\\staged",
+    "experiment_fingerprint": "0b01b76787f9104c27ca425ff162cb4b3d46827400094c1efbe1cb7629d7c53f",
+    "model_weights_included": false,
+    "container_built": false
+  },
+  "relocated_verification": {
+    "state": "verified",
+    "kind": "synthetic_rehearsal",
+    "file_count": 141,
+    "corpus_version": "778a7635d32f5fe83d8f2740c42b492d789d06e9cf87c925560d8b8ad314c315",
+    "gold_version": "9e1fce2717690dec4e57591a688a52a0955c71c55a380188878dfdca05d5114b",
+    "official_provenance_verified": false,
+    "external_model_calls": 0
+  },
+  "relocated_validation": {
+    "schema_version": "1.0",
+    "state": "validated",
+    "mode": "development",
+    "corpus_version": "778a7635d32f5fe83d8f2740c42b492d789d06e9cf87c925560d8b8ad314c315",
+    "gold_version": "9e1fce2717690dec4e57591a688a52a0955c71c55a380188878dfdca05d5114b",
+    "document_count": 5,
+    "article_count": 10,
+    "text_chars": 125,
+    "answerable_count": 24,
+    "unanswerable_count": 6,
+    "corpus_only": false,
+    "experiment_fingerprint": "0b01b76787f9104c27ca425ff162cb4b3d46827400094c1efbe1cb7629d7c53f",
+    "external_model_calls": 0
+  },
+  "standard_library_only_verification": {
+    "state": "verified",
+    "kind": "synthetic_rehearsal",
+    "file_count": 141,
+    "corpus_version": "778a7635d32f5fe83d8f2740c42b492d789d06e9cf87c925560d8b8ad314c315",
+    "gold_version": "9e1fce2717690dec4e57591a688a52a0955c71c55a380188878dfdca05d5114b",
+    "official_provenance_verified": false,
+    "external_model_calls": 0
+  },
+  "relocated_root_and_no_credentials": true
+}

@@ -70,7 +70,10 @@ def test_missing_corpus_and_formal_document_count_are_explicit(tmp_path):
     with pytest.raises(QAError):load_corpus(tmp_path,bundle["corpus_version"],formal=True)
 
 
-def test_prepare_config_validates_then_writes_new_keyless_file(tmp_path):
+def test_prepare_config_validates_then_writes_new_keyless_file(tmp_path,monkeypatch):
+    # This test selects its frozen temporary corpus. Container runtime defaults
+    # must not replace it; production process-env > JSON priority stays intact.
+    monkeypatch.delenv("DERAG_DATA_DIR",raising=False)
     source=tmp_path/"SYNTHETIC";bundle=write_bundle(source)
     target=tmp_path/"formal-contract-test.json"
     base_before=(ROOT/"config/experiment.json").read_bytes()

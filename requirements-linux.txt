@@ -1,0 +1,2 @@
+# Linux-only additions to the unified requirements.txt; install after that lock.
+uvloop==0.23.0

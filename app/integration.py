@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import sys
 
 from app.config import ROOT
 from app.data import corpus_loader
@@ -11,9 +12,12 @@ from app.evaluation.data import load_gold
 from app.qa.errors import QAError
 
 
-def check_dependencies(requirements_path=ROOT/"requirements.txt"):
+def check_dependencies(requirements_path=None):
     missing,mismatched=[],[]
-    for line in Path(requirements_path).read_text(encoding="utf-8").splitlines():
+    paths=[Path(requirements_path)] if requirements_path is not None else [ROOT/"requirements.txt"]
+    if requirements_path is None and sys.platform=="linux":paths.append(ROOT/"requirements-linux.txt")
+    lines=[line for path in paths for line in path.read_text(encoding="utf-8").splitlines()]
+    for line in lines:
         line=line.strip()
         if not line or line.startswith("#"):continue
         match=re.fullmatch(r"([A-Za-z0-9_.-]+)==([A-Za-z0-9_.+!-]+)",line)
@@ -22,7 +26,9 @@ def check_dependencies(requirements_path=ROOT/"requirements.txt"):
         try:actual=metadata.version(name)
         except metadata.PackageNotFoundError:
             missing.append(name);continue
-        if actual!=expected:mismatched.append({"package":name,"expected":expected,"actual":actual})
+        # The official CPU wheel adds a local build suffix to the same pinned torch release.
+        matches=actual==expected or (name.lower()=="torch" and actual==expected+"+cpu")
+        if not matches:mismatched.append({"package":name,"expected":expected,"actual":actual})
     return {"ready":not missing and not mismatched,"missing":missing,"mismatched":mismatched}
 
 

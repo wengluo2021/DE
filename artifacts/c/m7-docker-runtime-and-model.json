@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-19",
+  "state": "passed",
+  "scope": "Linux engineering checks with synthetic fixtures, NOT official acceptance",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ec3c41df9a",
+  "test_image": "derag-c-m7-check:3713835790",
+  "runtime_image": "derag-c-m7-runtime:3713835790",
+  "commands": [
+    {
+      "phase": "runtime-http",
+      "exit_code": 0,
+      "seconds": 5.174,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ec3c41df9a\\runtime-http.log"
+    },
+    {
+      "phase": "real-embedding",
+      "exit_code": 0,
+      "seconds": 69.604,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ec3c41df9a\\real-embedding.log"
+    }
+  ],
+  "test_image_id": "sha256:acdb76ae35bef808c76443aef22f73b4046cce5d64f42eae7b15c3f38403b80f",
+  "runtime_image_id": "sha256:9ad991e4775fbb0a8c8c254c742e421574bda3c2dd6668da8afa5eb4b4c78017",
+  "reused_successful_test_evidence": "m7-docker-verified.json",
+  "tests": {
+    "tests": "369",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "1",
+    "time": "45.558"
+  },
+  "real_embedding": {
+    "state": "passed",
+    "packages": {
+      "torch": "2.15.0+cpu",
+      "sentence-transformers": "6.3.0",
+      "transformers": "5.23.0",
+      "chromadb": "1.5.9"
+    },
+    "checks": 12,
+    "device": "cpu",
+    "dimension": 1024,
+    "elapsed_ms": 67500.965
+  },
+  "owned_containers_cleaned": [
+    {
+      "container": "derag-c-runtime-http-ec3c41df9a",
+      "removed": true
+    },
+    {
+      "container": "derag-c-real-embedding-ec3c41df9a",
+      "removed": true
+    }
+  ],
+  "own_container_count": 2
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-19",
+  "state": "failed",
+  "scope": "Linux engineering checks with synthetic fixtures, NOT official acceptance",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ef6a4f56b6",
+  "test_image": "derag-c-m7-check:ef6a4f56b6",
+  "runtime_image": "derag-c-m7-runtime:ef6a4f56b6",
+  "commands": [
+    {
+      "phase": "build-test",
+      "exit_code": 0,
+      "seconds": 499.222,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ef6a4f56b6\\build-test.log"
+    },
+    {
+      "phase": "tests",
+      "exit_code": 1,
+      "seconds": 51.375,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-ef6a4f56b6\\tests.log"
+    }
+  ],
+  "build_transport": "temporary WSL loopback relay to existing Windows loopback proxy; no TLS interception",
+  "test_image_id": "sha256:6a36cd52960bfd0d89147ac0c5b52ae15148b2329a28bbf1d4646f05430ddefa",
+  "error": {
+    "type": "RuntimeError",
+    "message": "tests failed; inspect local log"
+  },
+  "owned_containers_cleaned": [
+    {
+      "container": "derag-c-tests-ef6a4f56b6",
+      "removed": true
+    }
+  ],
+  "own_container_count": 1
+}

@@ -6,6 +6,8 @@ C 的 M0–M4已落地：契约配置、引用问答、服务端保存/任务、
 
 使用Python3.13.11和项目`.venv`。完整运行安装 `requirements.txt`（103个固定运行包）；开发/全部自动检查安装 `requirements-dev.txt`。原 `requirements-b*.txt`、`requirements-c*.txt`仍保留用于独立模块开发；C轻量入口不包含真实Chroma/embedding。已有环境和模型不必重建或重新下载。
 
+Linux另安装`requirements-linux.txt`中的固定平台补充；CPU构建使用同版`torch2.15.0+cpu`。新版容器、源码/冻结数据交付包与SHA校验步骤见[Docker与交付包复现](docs/Docker与交付包复现.md)。当前是否已实际构建和验证，以最新M7阶段交接与证据为准；正式数据和120项评分仍待A/M6，不能因容器能启动就称最终交付完成。
+
 `config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式数据由A交付。`DERAG_CONFIG`选择实验JSON，`DERAG_ENV_FILE`选择本地私密env，`DERAG_DATA_DIR`和`DERAG_MODEL_DIR`选择路径，`LLM_TRANSPORT`明确选择curl/httpx。路径从项目根解析，配置不污染全局环境；真实Key不在仓库中。`scripts.prepare_config`只在A输入全部校验后生成新的formal配置；`scripts.validate_data`只读校验；`scripts.preflight`不下载、建库或发模型请求。
 
 无网络问答核心检查：`.venv/Scripts/python.exe -m scripts.ask --fixtures --mock-llm --question "What does Article 2 state?"`。M1另有真实生成与拒答记录；这些使用固定合成证据，不是官方法规或正式检索评估。运行C检查可指定 `tests/test_contracts.py tests/test_config.py tests/test_answer.py tests/test_llm_client.py tests/test_ask_cli.py`，无须先装B的模型。
@@ -21,13 +23,13 @@ M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用�
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
 
-页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。三方统一依赖已提供，新版Docker/干净环境验证留M7。
+页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。新版Docker已完成Linux工程检查：368通过/1Windows专用跳过、正常HTTP及12次真实CPU检索通过；正式数据/实验的完整M7验收仍待A/M6，见[M7最新交接](docs/handoffs/M7_02_Linux容器验收与续做.md)。
 
 页面操作与证据见 [M4交接](docs/handoffs/M4_页面接入与真实问答.md)。Windows学校API验收显式使用generation.transport=curl；默认配置仍为httpx，不能把curl结果等同HTTPX/Linux已验证。正式部署先选定适用传输、配置本地env与冻结数据；参数改变会改变实验指纹，旧run保留。
 
 ---
 
-下方“运行方式/当前可操作内容”保留原预览版历史；其中对requirements.txt的描述属于当时状态，当前以顶部统一依赖说明为准。DE.tar仍为旧预览镜像，尚未验证新版Docker。官方数据及30题正式评估仍待A交付后集成。
+下方“运行方式/当前可操作内容”保留原预览版历史；其中对requirements.txt的描述属于当时状态，当前以顶部统一依赖说明为准。DE.tar仍为旧预览镜像；新的Docker工程验证另见M7交接，正式镜像归档未导出。官方数据及30题正式评估仍待A交付后集成。
 
 <details>
 <summary>旧预览运行及镜像说明（不适用于当前C后台安装）</summary>
