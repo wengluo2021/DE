@@ -1,0 +1,22 @@
+{
+  "state": "passed",
+  "batch": 4,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 21,
+  "advisory_support_counts": {
+    "supported": 19,
+    "needs_human_judgment": 2
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-sgd-repair-or-replacement",
+  "next_question_offset": 8,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-04.json": "dcbbaebb44850a5a3633e6d12e792d0e2b100b73c0397d3e86de32c3fc0f8c91",
+    "docs/M6辅助预审04_第7至8题.md": "a9880b869758d02ec89a3429c41b4a1eb426bbc7ea3b5c3f59ed89fa21277f0e"
+  }
+}
