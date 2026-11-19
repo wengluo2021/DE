@@ -1,0 +1,4 @@
+scope=eval
+corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795
+questions=30 answerable=24 refusal=6
+result=ok

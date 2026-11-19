@@ -1,0 +1,1341 @@
+{
+  "document_id": "eu_unfair_terms_93_13",
+  "cleaning_rule_version": "eurlex_html_v1",
+  "character_offsets": {
+    "unit": "python_character",
+    "interval": "[start, end)",
+    "basis": "complete cleaned text",
+    "newline": "LF",
+    "note": "Offsets are Python character indexes into the complete cleaned text. clean_text[start:end] equals the structure text. They are not UTF-8 byte offsets or model token counts. Each position is recorded while the text is assembled, so a repeated paragraph, article number, or footnote keeps the position of that occurrence."
+  },
+  "source": {
+    "document_id": "eu_unfair_terms_93_13",
+    "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+    "institution": "Council of the European Communities",
+    "language": "en",
+    "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+    "eli": "http://data.europa.eu/eli/dir/1993/13/oj",
+    "celex": "31993L0013",
+    "version_type": "original_publication",
+    "source_format": "html",
+    "dates": {
+      "date_of_document": "1993-04-05",
+      "publication_date": "1993-04-21",
+      "entry_into_force_date": "1993-04-16",
+      "transposition_deadline": "1994-12-31",
+      "application_date": null,
+      "revision_date": null,
+      "end_of_validity_date": null
+    },
+    "official_journal": {
+      "citation": "OJ L 95, 21.4.1993, pp. 29–34",
+      "page_header": "L 95/29"
+    },
+    "snapshot_path": "data/raw/Unfair Terms.html",
+    "snapshot_sha256": "6c700ae54d53f3dc3ece8d226d18471ac905eff42a7cb4d4874e2e56acaff707"
+  },
+  "clean_text_path": "data/processed/eu_unfair_terms_93_13.txt",
+  "clean_text_sha256": "bf518901d6a71d5753ec99ed0b5b13025f5bf136782594a0dbaf8263e376a401",
+  "cleaning_rules": {
+    "version": "eurlex_html_v1",
+    "encoding": "utf-8",
+    "newline": "LF",
+    "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+    "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+    "footnotes": "A p.note with an ntr definition anchor starts a footnote. A continuation p.note without a new definition anchor is merged into the previous footnote. The citation relationship and the full text are kept. In this file, 6 p.note elements correspond to 4 footnotes.",
+    "lists": "Two-column layout tables render as 'marker text' lines.",
+    "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+    "main_articles": "A main article starts at a p.ti-art heading and continues through the adjacent content that follows it. It ends at the next main-article heading, the signature, the footnotes, or the annex boundary. Cross-references in the body and annex headings are not main articles.",
+    "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+    "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+  },
+  "statistics": {
+    "chapters": 0,
+    "main_articles": 11,
+    "recitals": 24,
+    "annexes": 1,
+    "footnotes": 4,
+    "tables": 0,
+    "paragraphs": 23,
+    "list_items": 3,
+    "quoted_article_headings": []
+  },
+  "title": {
+    "structure_id": "eu_unfair_terms_93_13:title",
+    "structure_type": "title",
+    "start": 0,
+    "end": 81,
+    "blocks": [
+      {
+        "block_id": "eu_unfair_terms_93_13:title:block:1",
+        "kind": "heading",
+        "start": 0,
+        "end": 27,
+        "text": "COUNCIL DIRECTIVE 93/13/EEC",
+        "html_id": "d1e39-29-1"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:title:block:2",
+        "kind": "heading",
+        "start": 28,
+        "end": 43,
+        "text": "of 5 April 1993"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:title:block:3",
+        "kind": "heading",
+        "start": 44,
+        "end": 81,
+        "text": "on unfair terms in consumer contracts"
+      }
+    ],
+    "text": "COUNCIL DIRECTIVE 93/13/EEC\nof 5 April 1993\non unfair terms in consumer contracts"
+  },
+  "preamble": {
+    "structure_id": "eu_unfair_terms_93_13:preamble",
+    "structure_type": "preamble",
+    "html_id": null,
+    "start": 83,
+    "end": 8825,
+    "blocks": [
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:1",
+        "kind": "paragraph",
+        "start": 83,
+        "end": 123,
+        "text": "THE COUNCIL OF THE EUROPEAN COMMUNITIES,"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:2",
+        "kind": "citation",
+        "start": 124,
+        "end": 238,
+        "text": "Having regard to the Treaty establishing the European Economic Community, and in particular Article 100 A thereof,"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:3",
+        "kind": "citation",
+        "start": 239,
+        "end": 293,
+        "text": "Having regard to the proposal from the Commission (1),",
+        "footnote_refs": [
+          "ntr1-L_1993095EN.01002901-E0001"
+        ]
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:4",
+        "kind": "citation",
+        "start": 294,
+        "end": 342,
+        "text": "In cooperation with the European Parliament (2),",
+        "footnote_refs": [
+          "ntr2-L_1993095EN.01002901-E0002"
+        ]
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:5",
+        "kind": "citation",
+        "start": 343,
+        "end": 413,
+        "text": "Having regard to the opinion of the Economic and Social Committee (3),",
+        "footnote_refs": [
+          "ntr3-L_1993095EN.01002901-E0003"
+        ]
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:6",
+        "kind": "recital",
+        "start": 414,
+        "end": 675,
+        "text": "Whereas it is necessary to adopt measures with the aim of progressively establishing the internal market before 31 December 1992; whereas the internal market comprises an area without internal frontiers in which goods, persons, services and capital move freely;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:7",
+        "kind": "recital",
+        "start": 676,
+        "end": 1133,
+        "text": "Whereas the laws of Member States relating to the terms of contract between the seller of goods or supplier of services, on the one hand, and the consumer of them, on the other hand, show many disparities, with the result that the national markets for the sale of goods and services to consumers differ from each other and that distortions of competition may arise amongst the sellers and suppliers, notably when they sell and supply in other Member States;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:8",
+        "kind": "recital",
+        "start": 1134,
+        "end": 1255,
+        "text": "Whereas, in particular, the laws of Member States relating to unfair terms in consumer contracts show marked divergences;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:9",
+        "kind": "recital",
+        "start": 1256,
+        "end": 1388,
+        "text": "Whereas it is the responsibility of the Member States to ensure that contracts concluded with consumers do not contain unfair terms;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:10",
+        "kind": "recital",
+        "start": 1389,
+        "end": 1688,
+        "text": "Whereas, generally speaking, consumers do not know the rules of law which, in Member States other than their own, govern contracts for the sale of goods or services; whereas this lack of awareness may deter them from direct transactions for the purchase of goods or services in another Member State;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:11",
+        "kind": "recital",
+        "start": 1689,
+        "end": 1993,
+        "text": "Whereas, in order to facilitate the establishment of the internal market and to safeguard the citizen in his role as consumer when acquiring goods and services under contracts which are governed by the laws of Member States other than his own, it is essential to remove unfair terms from those contracts;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:12",
+        "kind": "recital",
+        "start": 1994,
+        "end": 2289,
+        "text": "Whereas sellers of goods and suppliers of services will thereby be helped in their task of selling goods and supplying services, both at home and throughout the internal market; whereas competition will thus be stimulated, so contributing to increased choice for Community citizens as consumers;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:13",
+        "kind": "recital",
+        "start": 2290,
+        "end": 2625,
+        "text": "Whereas the two Community programmes for a consumer protection and information policy (4) underlined the importance of safeguarding consumers in the matter of unfair terms of contract; whereas this protection ought to be provided by laws and regulations which are either harmonized at Community level or adopted directly at that level;",
+        "footnote_refs": [
+          "ntr4-L_1993095EN.01002901-E0004"
+        ]
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:14",
+        "kind": "recital",
+        "start": 2626,
+        "end": 3000,
+        "text": "Whereas in accordance with the principle laid down under the heading ‘Protection of the economic interests of the consumers’, as stated in those programmes: ‘acquirers of goods and services should be protected against the abuse of power by the seller or supplier, in particular against one-sided standard contracts and the unfair exclusion of essential rights in contracts’;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:15",
+        "kind": "recital",
+        "start": 3001,
+        "end": 3524,
+        "text": "Whereas more effective protection of the consumer can be achieved by adopting uniform rules of law in the matter of unfair terms; whereas those rules should apply to all contracts concluded between sellers or suppliers and consumers; whereas as a result inter alia contracts relating to employment, contracts relating to succession rights, contracts relating to rights under family law and contracts relating to the incorporation and organization of companies or partnership agreements must be excluded from this Directive;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:16",
+        "kind": "recital",
+        "start": 3525,
+        "end": 3749,
+        "text": "Whereas the consumer must receive equal protection under contracts concluded by word of mouth and written contracts regardless, in the latter case, of whether the terms of the contract are contained in one or more documents;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:17",
+        "kind": "recital",
+        "start": 3750,
+        "end": 4181,
+        "text": "Whereas, however, as they now stand, national laws allow only partial harmonization to be envisaged; whereas, in particular, only contractual terms which have not been individually negotiated are covered by this Directive; whereas Member States should have the option, with due regard for the Treaty, to afford consumers a higher level of protection through national provisions that are more stringent than those of this Directive;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:18",
+        "kind": "recital",
+        "start": 4182,
+        "end": 4864,
+        "text": "Whereas the statutory or regulatory provisions of the Member States which directly or indirectly determine the terms of consumer contracts are presumed not to contain unfair terms; whereas, therefore, it does not appear to be necessary to subject the terms which reflect mandatory statutory or regulatory provisions and the principles or provisions of international conventions to which the Member States or the Community are party; whereas in that respect the wording ‘mandatory statutory or regulatory provisions’ in Article 1 (2) also covers rules which, according to the law, shall apply between the contracting parties provided that no other arrangements have been established;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:19",
+        "kind": "recital",
+        "start": 4865,
+        "end": 5046,
+        "text": "Whereas Member States must however ensure that unfair terms are not included, particularly because this Directive also applies to trades, business or professions of a public nature;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:20",
+        "kind": "recital",
+        "start": 5047,
+        "end": 5161,
+        "text": "Whereas it is necessary to fix in a general way the criteria for assessing the unfair character of contract terms;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:21",
+        "kind": "recital",
+        "start": 5162,
+        "end": 6043,
+        "text": "Whereas the assessment, according to the general criteria chosen, of the unfair character of terms, in particular in sale or supply activities of a public nature providing collective services which take account of solidarity among users, must be supplemented by a means of making an overall evaluation of the different interests involved; whereas this constitutes the requirement of good faith; whereas, in making an assessment of good faith, particular regard shall be had to the strength of the bargaining positions of the parties, whether the consumer had an inducement to agree to the term and whether the goods or services were sold or supplied to the special order of the consumer; whereas the requirement of good faith may be satisfied by the seller or supplier where he deals fairly and equitably with the other party whose legitimate interests he has to take into account;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:22",
+        "kind": "recital",
+        "start": 6044,
+        "end": 6349,
+        "text": "Whereas, for the purposes of this Directive, the annexed list of terms can be of indicative value only and, because of the cause of the minimal character of the Directive, the scope of these terms may be the subject of amplification or more restrictive editing by the Member States in their national laws;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:23",
+        "kind": "recital",
+        "start": 6350,
+        "end": 6464,
+        "text": "Whereas the nature of goods or services should have an influence on assessing the unfairness of contractual terms;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:24",
+        "kind": "recital",
+        "start": 6465,
+        "end": 7132,
+        "text": "Whereas, for the purposes of this Directive, assessment of unfair character shall not be made of terms which describe the main subject matter of the contract nor the quality/price ratio of the goods or services supplied; whereas the main subject matter of the contract and the price/quality ratio may nevertheless be taken into account in assessing the fairness of other terms; whereas it follows, inter alia, that in insurance contracts, the terms which clearly define or circumscribe the insured risk and the insurer's liability shall not be subject to such assessment since these restrictions are taken into account in calculating the premium paid by the consumer;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:25",
+        "kind": "recital",
+        "start": 7133,
+        "end": 7364,
+        "text": "Whereas contracts should be drafted in plain, intelligible language, the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:26",
+        "kind": "recital",
+        "start": 7365,
+        "end": 7720,
+        "text": "Whereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:27",
+        "kind": "recital",
+        "start": 7721,
+        "end": 8013,
+        "text": "Whereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; whereas provisions should therefore be included in this Directive designed to avert this risk;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:28",
+        "kind": "recital",
+        "start": 8014,
+        "end": 8591,
+        "text": "Whereas persons or organizations, if regarded under the law of a Member State as having a legitimate interest in the matter, must have facilities for initiating proceedings concerning terms of contract drawn up for general use in contracts concluded with consumers, and in particular unfair terms, either before a court or before an administrative authority competent to decide upon complaints or to initiate appropriate legal proceedings; whereas this possibility does not, however, entail prior verification of the general conditions obtaining in individual economic sectors;"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:29",
+        "kind": "recital",
+        "start": 8592,
+        "end": 8797,
+        "text": "Whereas the courts or administrative authorities of the Member States must have at their disposal adequate and effective means of preventing the continued application of unfair terms in consumer contracts,"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:preamble:block:30",
+        "kind": "paragraph",
+        "start": 8798,
+        "end": 8825,
+        "text": "HAS ADOPTED THIS DIRECTIVE:"
+      }
+    ],
+    "recitals": [
+      {
+        "number": null,
+        "ordinal": "1",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas it is necessary to adopt measures with the aim of progressively establishing the internal market before 31 December 1992; whereas the internal market comprises an area without internal frontiers in which goods, persons, services and capital move freely;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:1",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:6"
+        ],
+        "start": 414,
+        "end": 675
+      },
+      {
+        "number": null,
+        "ordinal": "2",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the laws of Member States relating to the terms of contract between the seller of goods or supplier of services, on the one hand, and the consumer of them, on the other hand, show many disparities, with the result that the national markets for the sale of goods and services to consumers differ from each other and that distortions of competition may arise amongst the sellers and suppliers, notably when they sell and supply in other Member States;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:2",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:7"
+        ],
+        "start": 676,
+        "end": 1133
+      },
+      {
+        "number": null,
+        "ordinal": "3",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, in particular, the laws of Member States relating to unfair terms in consumer contracts show marked divergences;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:3",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:8"
+        ],
+        "start": 1134,
+        "end": 1255
+      },
+      {
+        "number": null,
+        "ordinal": "4",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas it is the responsibility of the Member States to ensure that contracts concluded with consumers do not contain unfair terms;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:4",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:9"
+        ],
+        "start": 1256,
+        "end": 1388
+      },
+      {
+        "number": null,
+        "ordinal": "5",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, generally speaking, consumers do not know the rules of law which, in Member States other than their own, govern contracts for the sale of goods or services; whereas this lack of awareness may deter them from direct transactions for the purchase of goods or services in another Member State;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:5",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:10"
+        ],
+        "start": 1389,
+        "end": 1688
+      },
+      {
+        "number": null,
+        "ordinal": "6",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, in order to facilitate the establishment of the internal market and to safeguard the citizen in his role as consumer when acquiring goods and services under contracts which are governed by the laws of Member States other than his own, it is essential to remove unfair terms from those contracts;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:6",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:11"
+        ],
+        "start": 1689,
+        "end": 1993
+      },
+      {
+        "number": null,
+        "ordinal": "7",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas sellers of goods and suppliers of services will thereby be helped in their task of selling goods and supplying services, both at home and throughout the internal market; whereas competition will thus be stimulated, so contributing to increased choice for Community citizens as consumers;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:7",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:12"
+        ],
+        "start": 1994,
+        "end": 2289
+      },
+      {
+        "number": null,
+        "ordinal": "8",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the two Community programmes for a consumer protection and information policy (4) underlined the importance of safeguarding consumers in the matter of unfair terms of contract; whereas this protection ought to be provided by laws and regulations which are either harmonized at Community level or adopted directly at that level;",
+        "footnote_refs": [
+          "ntr4-L_1993095EN.01002901-E0004"
+        ],
+        "structure_id": "eu_unfair_terms_93_13:recital:8",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:13"
+        ],
+        "start": 2290,
+        "end": 2625
+      },
+      {
+        "number": null,
+        "ordinal": "9",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas in accordance with the principle laid down under the heading ‘Protection of the economic interests of the consumers’, as stated in those programmes: ‘acquirers of goods and services should be protected against the abuse of power by the seller or supplier, in particular against one-sided standard contracts and the unfair exclusion of essential rights in contracts’;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:9",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:14"
+        ],
+        "start": 2626,
+        "end": 3000
+      },
+      {
+        "number": null,
+        "ordinal": "10",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas more effective protection of the consumer can be achieved by adopting uniform rules of law in the matter of unfair terms; whereas those rules should apply to all contracts concluded between sellers or suppliers and consumers; whereas as a result inter alia contracts relating to employment, contracts relating to succession rights, contracts relating to rights under family law and contracts relating to the incorporation and organization of companies or partnership agreements must be excluded from this Directive;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:10",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:15"
+        ],
+        "start": 3001,
+        "end": 3524
+      },
+      {
+        "number": null,
+        "ordinal": "11",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the consumer must receive equal protection under contracts concluded by word of mouth and written contracts regardless, in the latter case, of whether the terms of the contract are contained in one or more documents;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:11",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:16"
+        ],
+        "start": 3525,
+        "end": 3749
+      },
+      {
+        "number": null,
+        "ordinal": "12",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, however, as they now stand, national laws allow only partial harmonization to be envisaged; whereas, in particular, only contractual terms which have not been individually negotiated are covered by this Directive; whereas Member States should have the option, with due regard for the Treaty, to afford consumers a higher level of protection through national provisions that are more stringent than those of this Directive;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:12",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:17"
+        ],
+        "start": 3750,
+        "end": 4181
+      },
+      {
+        "number": null,
+        "ordinal": "13",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the statutory or regulatory provisions of the Member States which directly or indirectly determine the terms of consumer contracts are presumed not to contain unfair terms; whereas, therefore, it does not appear to be necessary to subject the terms which reflect mandatory statutory or regulatory provisions and the principles or provisions of international conventions to which the Member States or the Community are party; whereas in that respect the wording ‘mandatory statutory or regulatory provisions’ in Article 1 (2) also covers rules which, according to the law, shall apply between the contracting parties provided that no other arrangements have been established;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:13",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:18"
+        ],
+        "start": 4182,
+        "end": 4864
+      },
+      {
+        "number": null,
+        "ordinal": "14",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas Member States must however ensure that unfair terms are not included, particularly because this Directive also applies to trades, business or professions of a public nature;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:14",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:19"
+        ],
+        "start": 4865,
+        "end": 5046
+      },
+      {
+        "number": null,
+        "ordinal": "15",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas it is necessary to fix in a general way the criteria for assessing the unfair character of contract terms;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:15",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:20"
+        ],
+        "start": 5047,
+        "end": 5161
+      },
+      {
+        "number": null,
+        "ordinal": "16",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the assessment, according to the general criteria chosen, of the unfair character of terms, in particular in sale or supply activities of a public nature providing collective services which take account of solidarity among users, must be supplemented by a means of making an overall evaluation of the different interests involved; whereas this constitutes the requirement of good faith; whereas, in making an assessment of good faith, particular regard shall be had to the strength of the bargaining positions of the parties, whether the consumer had an inducement to agree to the term and whether the goods or services were sold or supplied to the special order of the consumer; whereas the requirement of good faith may be satisfied by the seller or supplier where he deals fairly and equitably with the other party whose legitimate interests he has to take into account;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:16",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:21"
+        ],
+        "start": 5162,
+        "end": 6043
+      },
+      {
+        "number": null,
+        "ordinal": "17",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, for the purposes of this Directive, the annexed list of terms can be of indicative value only and, because of the cause of the minimal character of the Directive, the scope of these terms may be the subject of amplification or more restrictive editing by the Member States in their national laws;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:17",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:22"
+        ],
+        "start": 6044,
+        "end": 6349
+      },
+      {
+        "number": null,
+        "ordinal": "18",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the nature of goods or services should have an influence on assessing the unfairness of contractual terms;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:18",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:23"
+        ],
+        "start": 6350,
+        "end": 6464
+      },
+      {
+        "number": null,
+        "ordinal": "19",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas, for the purposes of this Directive, assessment of unfair character shall not be made of terms which describe the main subject matter of the contract nor the quality/price ratio of the goods or services supplied; whereas the main subject matter of the contract and the price/quality ratio may nevertheless be taken into account in assessing the fairness of other terms; whereas it follows, inter alia, that in insurance contracts, the terms which clearly define or circumscribe the insured risk and the insurer's liability shall not be subject to such assessment since these restrictions are taken into account in calculating the premium paid by the consumer;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:19",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:24"
+        ],
+        "start": 6465,
+        "end": 7132
+      },
+      {
+        "number": null,
+        "ordinal": "20",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas contracts should be drafted in plain, intelligible language, the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:20",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:25"
+        ],
+        "start": 7133,
+        "end": 7364
+      },
+      {
+        "number": null,
+        "ordinal": "21",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:21",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:26"
+        ],
+        "start": 7365,
+        "end": 7720
+      },
+      {
+        "number": null,
+        "ordinal": "22",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; whereas provisions should therefore be included in this Directive designed to avert this risk;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:22",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:27"
+        ],
+        "start": 7721,
+        "end": 8013
+      },
+      {
+        "number": null,
+        "ordinal": "23",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas persons or organizations, if regarded under the law of a Member State as having a legitimate interest in the matter, must have facilities for initiating proceedings concerning terms of contract drawn up for general use in contracts concluded with consumers, and in particular unfair terms, either before a court or before an administrative authority competent to decide upon complaints or to initiate appropriate legal proceedings; whereas this possibility does not, however, entail prior verification of the general conditions obtaining in individual economic sectors;",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:23",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:28"
+        ],
+        "start": 8014,
+        "end": 8591
+      },
+      {
+        "number": null,
+        "ordinal": "24",
+        "official_number": null,
+        "numbering": "unnumbered_whereas_paragraph",
+        "html_id": null,
+        "text": "Whereas the courts or administrative authorities of the Member States must have at their disposal adequate and effective means of preventing the continued application of unfair terms in consumer contracts,",
+        "footnote_refs": [],
+        "structure_id": "eu_unfair_terms_93_13:recital:24",
+        "block_ids": [
+          "eu_unfair_terms_93_13:preamble:block:29"
+        ],
+        "start": 8592,
+        "end": 8797
+      }
+    ],
+    "text": "THE COUNCIL OF THE EUROPEAN COMMUNITIES,\nHaving regard to the Treaty establishing the European Economic Community, and in particular Article 100 A thereof,\nHaving regard to the proposal from the Commission (1),\nIn cooperation with the European Parliament (2),\nHaving regard to the opinion of the Economic and Social Committee (3),\nWhereas it is necessary to adopt measures with the aim of progressively establishing the internal market before 31 December 1992; whereas the internal market comprises an area without internal frontiers in which goods, persons, services and capital move freely;\nWhereas the laws of Member States relating to the terms of contract between the seller of goods or supplier of services, on the one hand, and the consumer of them, on the other hand, show many disparities, with the result that the national markets for the sale of goods and services to consumers differ from each other and that distortions of competition may arise amongst the sellers and suppliers, notably when they sell and supply in other Member States;\nWhereas, in particular, the laws of Member States relating to unfair terms in consumer contracts show marked divergences;\nWhereas it is the responsibility of the Member States to ensure that contracts concluded with consumers do not contain unfair terms;\nWhereas, generally speaking, consumers do not know the rules of law which, in Member States other than their own, govern contracts for the sale of goods or services; whereas this lack of awareness may deter them from direct transactions for the purchase of goods or services in another Member State;\nWhereas, in order to facilitate the establishment of the internal market and to safeguard the citizen in his role as consumer when acquiring goods and services under contracts which are governed by the laws of Member States other than his own, it is essential to remove unfair terms from those contracts;\nWhereas sellers of goods and suppliers of services will thereby be helped in their task of selling goods and supplying services, both at home and throughout the internal market; whereas competition will thus be stimulated, so contributing to increased choice for Community citizens as consumers;\nWhereas the two Community programmes for a consumer protection and information policy (4) underlined the importance of safeguarding consumers in the matter of unfair terms of contract; whereas this protection ought to be provided by laws and regulations which are either harmonized at Community level or adopted directly at that level;\nWhereas in accordance with the principle laid down under the heading ‘Protection of the economic interests of the consumers’, as stated in those programmes: ‘acquirers of goods and services should be protected against the abuse of power by the seller or supplier, in particular against one-sided standard contracts and the unfair exclusion of essential rights in contracts’;\nWhereas more effective protection of the consumer can be achieved by adopting uniform rules of law in the matter of unfair terms; whereas those rules should apply to all contracts concluded between sellers or suppliers and consumers; whereas as a result inter alia contracts relating to employment, contracts relating to succession rights, contracts relating to rights under family law and contracts relating to the incorporation and organization of companies or partnership agreements must be excluded from this Directive;\nWhereas the consumer must receive equal protection under contracts concluded by word of mouth and written contracts regardless, in the latter case, of whether the terms of the contract are contained in one or more documents;\nWhereas, however, as they now stand, national laws allow only partial harmonization to be envisaged; whereas, in particular, only contractual terms which have not been individually negotiated are covered by this Directive; whereas Member States should have the option, with due regard for the Treaty, to afford consumers a higher level of protection through national provisions that are more stringent than those of this Directive;\nWhereas the statutory or regulatory provisions of the Member States which directly or indirectly determine the terms of consumer contracts are presumed not to contain unfair terms; whereas, therefore, it does not appear to be necessary to subject the terms which reflect mandatory statutory or regulatory provisions and the principles or provisions of international conventions to which the Member States or the Community are party; whereas in that respect the wording ‘mandatory statutory or regulatory provisions’ in Article 1 (2) also covers rules which, according to the law, shall apply between the contracting parties provided that no other arrangements have been established;\nWhereas Member States must however ensure that unfair terms are not included, particularly because this Directive also applies to trades, business or professions of a public nature;\nWhereas it is necessary to fix in a general way the criteria for assessing the unfair character of contract terms;\nWhereas the assessment, according to the general criteria chosen, of the unfair character of terms, in particular in sale or supply activities of a public nature providing collective services which take account of solidarity among users, must be supplemented by a means of making an overall evaluation of the different interests involved; whereas this constitutes the requirement of good faith; whereas, in making an assessment of good faith, particular regard shall be had to the strength of the bargaining positions of the parties, whether the consumer had an inducement to agree to the term and whether the goods or services were sold or supplied to the special order of the consumer; whereas the requirement of good faith may be satisfied by the seller or supplier where he deals fairly and equitably with the other party whose legitimate interests he has to take into account;\nWhereas, for the purposes of this Directive, the annexed list of terms can be of indicative value only and, because of the cause of the minimal character of the Directive, the scope of these terms may be the subject of amplification or more restrictive editing by the Member States in their national laws;\nWhereas the nature of goods or services should have an influence on assessing the unfairness of contractual terms;\nWhereas, for the purposes of this Directive, assessment of unfair character shall not be made of terms which describe the main subject matter of the contract nor the quality/price ratio of the goods or services supplied; whereas the main subject matter of the contract and the price/quality ratio may nevertheless be taken into account in assessing the fairness of other terms; whereas it follows, inter alia, that in insurance contracts, the terms which clearly define or circumscribe the insured risk and the insurer's liability shall not be subject to such assessment since these restrictions are taken into account in calculating the premium paid by the consumer;\nWhereas contracts should be drafted in plain, intelligible language, the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;\nWhereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;\nWhereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; whereas provisions should therefore be included in this Directive designed to avert this risk;\nWhereas persons or organizations, if regarded under the law of a Member State as having a legitimate interest in the matter, must have facilities for initiating proceedings concerning terms of contract drawn up for general use in contracts concluded with consumers, and in particular unfair terms, either before a court or before an administrative authority competent to decide upon complaints or to initiate appropriate legal proceedings; whereas this possibility does not, however, entail prior verification of the general conditions obtaining in individual economic sectors;\nWhereas the courts or administrative authorities of the Member States must have at their disposal adequate and effective means of preventing the continued application of unfair terms in consumer contracts,\nHAS ADOPTED THIS DIRECTIVE:"
+  },
+  "chapters": [],
+  "articles": [
+    {
+      "article_id": "eu_unfair_terms_93_13:article:1",
+      "role": "main_article",
+      "number": "1",
+      "heading": null,
+      "html_id": "d1e196-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:1:block:1",
+          "kind": "paragraph",
+          "start": 8837,
+          "end": 9053,
+          "text": "1. The purpose of this Directive is to approximate the laws, regulations and administrative provisions of the Member States relating to unfair terms in contracts concluded between a seller or supplier and a consumer."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:1:block:2",
+          "kind": "paragraph",
+          "start": 9054,
+          "end": 9348,
+          "text": "2. The contractual terms which reflect mandatory statutory or regulatory provisions and the provisions or principles of international conventions to which the Member States or the Community are party, particularly in the transport area, shall not be subject to the provisions of this Directive."
+        }
+      ],
+      "text": "Article 1\n1. The purpose of this Directive is to approximate the laws, regulations and administrative provisions of the Member States relating to unfair terms in contracts concluded between a seller or supplier and a consumer.\n2. The contractual terms which reflect mandatory statutory or regulatory provisions and the provisions or principles of international conventions to which the Member States or the Community are party, particularly in the transport area, shall not be subject to the provisions of this Directive.",
+      "start": 8827,
+      "end": 9348
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:2",
+      "role": "main_article",
+      "number": "2",
+      "heading": null,
+      "html_id": "d1e210-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:2:block:1",
+          "kind": "paragraph",
+          "start": 9360,
+          "end": 9395,
+          "text": "For the purposes of this Directive:"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:2:block:2",
+          "kind": "list_item",
+          "start": 9396,
+          "end": 9464,
+          "text": "(a) ‘unfair terms’ means the contractual terms defined in Article 3;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:2:block:3",
+          "kind": "list_item",
+          "start": 9465,
+          "end": 9625,
+          "text": "(b) ‘consumer’ means any natural person who, in contracts covered by this Directive, is acting for purposes which are outside his trade, business or profession;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:2:block:4",
+          "kind": "list_item",
+          "start": 9626,
+          "end": 9842,
+          "text": "(c) ‘seller or supplier’ means any natural or legal person who, in contracts covered by this Directive, is acting for purposes relating to his trade, business or profession, whether publicly owned or privately owned."
+        }
+      ],
+      "text": "Article 2\nFor the purposes of this Directive:\n(a) ‘unfair terms’ means the contractual terms defined in Article 3;\n(b) ‘consumer’ means any natural person who, in contracts covered by this Directive, is acting for purposes which are outside his trade, business or profession;\n(c) ‘seller or supplier’ means any natural or legal person who, in contracts covered by this Directive, is acting for purposes relating to his trade, business or profession, whether publicly owned or privately owned.",
+      "start": 9350,
+      "end": 9842
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:3",
+      "role": "main_article",
+      "number": "3",
+      "heading": null,
+      "html_id": "d1e245-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:3:block:1",
+          "kind": "paragraph",
+          "start": 9854,
+          "end": 10128,
+          "text": "1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:3:block:2",
+          "kind": "paragraph",
+          "start": 10129,
+          "end": 10383,
+          "text": "2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:3:block:3",
+          "kind": "paragraph",
+          "start": 10384,
+          "end": 10665,
+          "text": "The fact that certain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:3:block:4",
+          "kind": "paragraph",
+          "start": 10666,
+          "end": 10819,
+          "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:3:block:5",
+          "kind": "paragraph",
+          "start": 10820,
+          "end": 10930,
+          "text": "3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair."
+        }
+      ],
+      "text": "Article 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.\nThe fact that certain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.",
+      "start": 9844,
+      "end": 10930
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:4",
+      "role": "main_article",
+      "number": "4",
+      "heading": null,
+      "html_id": "d1e268-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:4:block:1",
+          "kind": "paragraph",
+          "start": 10942,
+          "end": 11344,
+          "text": "1. Without prejudice to Article 7, the unfairness of a contractual term shall be assessed, taking into account the nature of the goods or services for which the contract was concluded and by referring, at the time of conclusion of the contract, to all the circumstances attending the conclusion of the contract and to all the other terms of the contract or of another contract on which it is dependent."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:4:block:2",
+          "kind": "paragraph",
+          "start": 11345,
+          "end": 11672,
+          "text": "2. Assessment of the unfair nature of the terms shall relate neither to the definition of the main subject matter of the contract nor to the adequacy of the price and remuneration, on the one hand, as against the services or goods supplies in exchange, on the other, in so far as these terms are in plain intelligible language."
+        }
+      ],
+      "text": "Article 4\n1. Without prejudice to Article 7, the unfairness of a contractual term shall be assessed, taking into account the nature of the goods or services for which the contract was concluded and by referring, at the time of conclusion of the contract, to all the circumstances attending the conclusion of the contract and to all the other terms of the contract or of another contract on which it is dependent.\n2. Assessment of the unfair nature of the terms shall relate neither to the definition of the main subject matter of the contract nor to the adequacy of the price and remuneration, on the one hand, as against the services or goods supplies in exchange, on the other, in so far as these terms are in plain intelligible language.",
+      "start": 10932,
+      "end": 11672
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:5",
+      "role": "main_article",
+      "number": "5",
+      "heading": null,
+      "html_id": "d1e282-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:5:block:1",
+          "kind": "paragraph",
+          "start": 11684,
+          "end": 12064,
+          "text": "In the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2)."
+        }
+      ],
+      "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).",
+      "start": 11674,
+      "end": 12064
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:6",
+      "role": "main_article",
+      "number": "6",
+      "heading": null,
+      "html_id": "d1e288-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:6:block:1",
+          "kind": "paragraph",
+          "start": 12076,
+          "end": 12418,
+          "text": "1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:6:block:2",
+          "kind": "paragraph",
+          "start": 12419,
+          "end": 12727,
+          "text": "2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States."
+        }
+      ],
+      "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.",
+      "start": 12066,
+      "end": 12727
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:7",
+      "role": "main_article",
+      "number": "7",
+      "heading": null,
+      "html_id": "d1e302-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:7:block:1",
+          "kind": "paragraph",
+          "start": 12739,
+          "end": 12967,
+          "text": "1. Member States shall ensure that, in the interests of consumers and of competitors, adequate and effective means exist to prevent the continued use of unfair terms in contracts concluded with consumers by sellers or suppliers."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:7:block:2",
+          "kind": "paragraph",
+          "start": 12968,
+          "end": 13438,
+          "text": "2. The means referred to in paragraph 1 shall include provisions whereby persons or organizations, having a legitimate interest under national law in protecting consumers, may take action according to the national law concerned before the courts or before competent administrative bodies for a decision as to whether contractual terms drawn up for general use are unfair, so that they can apply appropriate and effective means to prevent the continued use of such terms."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:7:block:3",
+          "kind": "paragraph",
+          "start": 13439,
+          "end": 13740,
+          "text": "3. With due regard for national laws, the legal remedies referred to in paragraph 2 may be directed separately or jointly against a number of sellers or suppliers from the same economic sector or their associations which use or recommend the use of the same general contractual terms or similar terms."
+        }
+      ],
+      "text": "Article 7\n1. Member States shall ensure that, in the interests of consumers and of competitors, adequate and effective means exist to prevent the continued use of unfair terms in contracts concluded with consumers by sellers or suppliers.\n2. The means referred to in paragraph 1 shall include provisions whereby persons or organizations, having a legitimate interest under national law in protecting consumers, may take action according to the national law concerned before the courts or before competent administrative bodies for a decision as to whether contractual terms drawn up for general use are unfair, so that they can apply appropriate and effective means to prevent the continued use of such terms.\n3. With due regard for national laws, the legal remedies referred to in paragraph 2 may be directed separately or jointly against a number of sellers or suppliers from the same economic sector or their associations which use or recommend the use of the same general contractual terms or similar terms.",
+      "start": 12729,
+      "end": 13740
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:8",
+      "role": "main_article",
+      "number": "8",
+      "heading": null,
+      "html_id": "d1e321-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:8:block:1",
+          "kind": "paragraph",
+          "start": 13752,
+          "end": 13940,
+          "text": "Member States may adopt or retain the most stringent provisions compatible with the Treaty in the area covered by this Directive, to ensure a maximum degree of protection for the consumer."
+        }
+      ],
+      "text": "Article 8\nMember States may adopt or retain the most stringent provisions compatible with the Treaty in the area covered by this Directive, to ensure a maximum degree of protection for the consumer.",
+      "start": 13742,
+      "end": 13940
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:9",
+      "role": "main_article",
+      "number": "9",
+      "heading": null,
+      "html_id": "d1e327-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:9:block:1",
+          "kind": "paragraph",
+          "start": 13952,
+          "end": 14139,
+          "text": "The Commission shall present a report to the European Parliament and to the Council concerning the application of this Directive five years at the latest after the date in Article 10 (1)."
+        }
+      ],
+      "text": "Article 9\nThe Commission shall present a report to the European Parliament and to the Council concerning the application of this Directive five years at the latest after the date in Article 10 (1).",
+      "start": 13942,
+      "end": 14139
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:10",
+      "role": "main_article",
+      "number": "10",
+      "heading": null,
+      "html_id": "d1e333-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:10:block:1",
+          "kind": "paragraph",
+          "start": 14152,
+          "end": 14367,
+          "text": "1. Member States shall bring into force the laws, regulations and administrative provisions necessary to comply with this Directive no later than 31 December 1994. They shall forthwith inform the Commission thereof."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:10:block:2",
+          "kind": "paragraph",
+          "start": 14368,
+          "end": 14455,
+          "text": "These provisions shall be applicable to all contracts concluded after 31 December 1994."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:10:block:3",
+          "kind": "paragraph",
+          "start": 14456,
+          "end": 14717,
+          "text": "2. When Member States adopt these measures, they shall contain a reference to this Directive or shall be accompanied by such reference on the occasion of their official publication. The methods of making such a reference shall be laid down by the Member States."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:article:10:block:4",
+          "kind": "paragraph",
+          "start": 14718,
+          "end": 14863,
+          "text": "3. Member States shall communicate the main provisions of national law which they adopt in the field covered by this Directive to the Commission."
+        }
+      ],
+      "text": "Article 10\n1. Member States shall bring into force the laws, regulations and administrative provisions necessary to comply with this Directive no later than 31 December 1994. They shall forthwith inform the Commission thereof.\nThese provisions shall be applicable to all contracts concluded after 31 December 1994.\n2. When Member States adopt these measures, they shall contain a reference to this Directive or shall be accompanied by such reference on the occasion of their official publication. The methods of making such a reference shall be laid down by the Member States.\n3. Member States shall communicate the main provisions of national law which they adopt in the field covered by this Directive to the Commission.",
+      "start": 14141,
+      "end": 14863
+    },
+    {
+      "article_id": "eu_unfair_terms_93_13:article:11",
+      "role": "main_article",
+      "number": "11",
+      "heading": null,
+      "html_id": "d1e360-29-1",
+      "chapter_id": null,
+      "section_id": null,
+      "section_number": null,
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:article:11:block:1",
+          "kind": "paragraph",
+          "start": 14876,
+          "end": 14925,
+          "text": "This Directive is addressed to the Member States."
+        }
+      ],
+      "text": "Article 11\nThis Directive is addressed to the Member States.",
+      "start": 14865,
+      "end": 14925
+    }
+  ],
+  "signature": {
+    "structure_id": "eu_unfair_terms_93_13:signature",
+    "structure_type": "signature",
+    "html_id": null,
+    "start": 14927,
+    "end": 15009,
+    "blocks": [
+      {
+        "block_id": "eu_unfair_terms_93_13:signature:block:1",
+        "kind": "paragraph",
+        "start": 14927,
+        "end": 14960,
+        "text": "Done at Luxembourg, 5 April 1993."
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:signature:block:2",
+        "kind": "signature_line",
+        "start": 14961,
+        "end": 14976,
+        "text": "For the Council"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:signature:block:3",
+        "kind": "signature_line",
+        "start": 14977,
+        "end": 14990,
+        "text": "The President"
+      },
+      {
+        "block_id": "eu_unfair_terms_93_13:signature:block:4",
+        "kind": "signature_line",
+        "start": 14991,
+        "end": 15009,
+        "text": "N. HELVEG PETERSEN"
+      }
+    ],
+    "text": "Done at Luxembourg, 5 April 1993.\nFor the Council\nThe President\nN. HELVEG PETERSEN"
+  },
+  "footnotes": [
+    {
+      "marker": "1",
+      "scope": "act",
+      "html_id": "ntr1-L_1993095EN.01002901-E0001",
+      "text": "(1) OJ No C 73, 24. 3. 1992, p. 7.",
+      "referenced_by": [
+        "eu_unfair_terms_93_13:preamble:block:3"
+      ],
+      "structure_id": "eu_unfair_terms_93_13:footnote:act:1",
+      "start": 15011,
+      "end": 15045
+    },
+    {
+      "marker": "2",
+      "scope": "act",
+      "html_id": "ntr2-L_1993095EN.01002901-E0002",
+      "text": "(2) OJ No C 326, 16. 12. 1991, p. 108 and OJ No C 21, 25. 1. 1993.",
+      "referenced_by": [
+        "eu_unfair_terms_93_13:preamble:block:4"
+      ],
+      "structure_id": "eu_unfair_terms_93_13:footnote:act:2",
+      "start": 15046,
+      "end": 15112
+    },
+    {
+      "marker": "3",
+      "scope": "act",
+      "html_id": "ntr3-L_1993095EN.01002901-E0003",
+      "text": "(3) OJ No C 159, 17. 6. 1991, p. 34.",
+      "referenced_by": [
+        "eu_unfair_terms_93_13:preamble:block:5"
+      ],
+      "structure_id": "eu_unfair_terms_93_13:footnote:act:3",
+      "start": 15113,
+      "end": 15149
+    },
+    {
+      "marker": "4",
+      "scope": "act",
+      "html_id": "ntr4-L_1993095EN.01002901-E0004",
+      "text": "(4) OJ No C 92, 25. 4. 1975, p. 1 and OJ No C 133, 3. 6. 1981, p. 1.",
+      "referenced_by": [
+        "eu_unfair_terms_93_13:preamble:block:13"
+      ],
+      "structure_id": "eu_unfair_terms_93_13:footnote:act:4",
+      "start": 15150,
+      "end": 15218
+    }
+  ],
+  "annexes": [
+    {
+      "structure_id": "eu_unfair_terms_93_13:annex:1",
+      "structure_type": "annex",
+      "html_id": "L_1993095EN.01003301",
+      "label": "ANNEX",
+      "blocks": [
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:1",
+          "kind": "heading",
+          "start": 15220,
+          "end": 15225,
+          "text": "ANNEX",
+          "html_id": "d1e32-33-1"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:2",
+          "kind": "heading",
+          "start": 15226,
+          "end": 15260,
+          "text": "TERMS REFERRED TO IN ARTICLE 3 (3)"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:3",
+          "kind": "heading",
+          "start": 15261,
+          "end": 15305,
+          "text": "1. Terms which have the object or effect of:",
+          "html_id": "d1e41-33-1"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:4",
+          "kind": "list_item",
+          "start": 15306,
+          "end": 15510,
+          "text": "(a) excluding or limiting the legal liability of a seller or supplier in the event of the death of a consumer or personal injury to the latter resulting from an act or omission of that seller or supplier;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:5",
+          "kind": "list_item",
+          "start": 15511,
+          "end": 15907,
+          "text": "(b) inappropriately excluding or limiting the legal rights of the consumer vis-à-vis the seller or supplier or another party in the event of total or partial non-performance or inadequate performance by the seller or supplier of any of the contractual obligations, including the option of offsetting a debt owed to the seller or supplier against any claim which the consumer may have against him;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:6",
+          "kind": "list_item",
+          "start": 15908,
+          "end": 16086,
+          "text": "(c) making an agreement binding on the consumer whereas provision of services by the seller or supplier is subject to a condition whose realization depends on his own will alone;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:7",
+          "kind": "list_item",
+          "start": 16087,
+          "end": 16392,
+          "text": "(d) permitting the seller or supplier to retain sums paid by the consumer where the latter decides not to conclude or perform the contract, without providing for the consumer to receive compensation of an equivalent amount from the seller or supplier where the latter is the party cancelling the contract;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:8",
+          "kind": "list_item",
+          "start": 16393,
+          "end": 16508,
+          "text": "(e) requiring any consumer who fails to fulfil his obligation to pay a disproportionately high sum in compensation;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:9",
+          "kind": "list_item",
+          "start": 16509,
+          "end": 16822,
+          "text": "(f) authorizing the seller or supplier to dissolve the contract on a discretionary basis where the same facility is not granted to the consumer, or permitting the seller or supplier to retain the sums paid for services not yet supplied by him where it is the seller or supplier himself who dissolves the contract;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:10",
+          "kind": "list_item",
+          "start": 16823,
+          "end": 16987,
+          "text": "(g) enabling the seller or supplier to terminate a contract of indeterminate duration without reasonable notice except where there are serious grounds for doing so;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:11",
+          "kind": "list_item",
+          "start": 16988,
+          "end": 17206,
+          "text": "(h) automatically extending a contract of fixed duration where the consumer does not indicate otherwise, when the deadline fixed for the consumer to express this desire not to extend the contract is unreasonably early;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:12",
+          "kind": "list_item",
+          "start": 17207,
+          "end": 17352,
+          "text": "(i) irrevocably binding the consumer to terms with which he had no real opportunity of becoming acquainted before the conclusion of the contract;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:13",
+          "kind": "list_item",
+          "start": 17353,
+          "end": 17495,
+          "text": "(j) enabling the seller or supplier to alter the terms of the contract unilaterally without a valid reason which is specified in the contract;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:14",
+          "kind": "list_item",
+          "start": 17496,
+          "end": 17638,
+          "text": "(k) enabling the seller or supplier to alter unilaterally without a valid reason any characteristics of the product or service to be provided;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:15",
+          "kind": "list_item",
+          "start": 17639,
+          "end": 17979,
+          "text": "(l) providing for the price of goods to be determined at the time of delivery or allowing a seller of goods or supplier of services to increase their price without in both cases giving the consumer the corresponding right to cancel the contract if the final price is too high in relation to the price agreed when the contract was concluded;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:16",
+          "kind": "list_item",
+          "start": 17980,
+          "end": 18185,
+          "text": "(m) giving the seller or supplier the right to determine whether the goods or services supplied are in conformity with the contract, or giving him the exclusive right to interpret any term of the contract;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:17",
+          "kind": "list_item",
+          "start": 18186,
+          "end": 18361,
+          "text": "(n) limiting the seller's or supplier's obligation to respect commitments undertaken by his agents or making his commitments subject to compliance with a particular formality;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:18",
+          "kind": "list_item",
+          "start": 18362,
+          "end": 18468,
+          "text": "(o) obliging the consumer to fulfil all his obligations where the seller or supplier does not perform his;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:19",
+          "kind": "list_item",
+          "start": 18469,
+          "end": 18677,
+          "text": "(p) giving the seller or supplier the possibility of transferring his rights and obligations under the contract, where this may serve to reduce the guarantees for the consumer, without the latter's agreement;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:20",
+          "kind": "list_item",
+          "start": 18678,
+          "end": 19071,
+          "text": "(q) excluding or hindering the consumer's right to take legal action or exercise any other legal remedy, particularly by requiring the consumer to take disputes exclusively to arbitration not covered by legal provisions, unduly restricting the evidence available to him or imposing on him a burden of proof which, according to the applicable law, should lie with another party to the contract."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:21",
+          "kind": "heading",
+          "start": 19072,
+          "end": 19114,
+          "text": "2. Scope of subparagraphs (g), (j) and (1)",
+          "html_id": "d1e158-33-1"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:22",
+          "kind": "list_item",
+          "start": 19115,
+          "end": 19444,
+          "text": "(a) Subparagraph (g) is without hindrance to terms by which a supplier of financial services reserves the right to terminate unilaterally a contract of indeterminate duration without notice where there is a valid reason, provided that the supplier is required to inform the other contracting party or parties thereof immediately."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:23",
+          "kind": "list_item",
+          "start": 19445,
+          "end": 19926,
+          "text": "(b) Subparagraph (j) is without hindrance to terms under which a supplier of financial services reserves the right to alter the rate of interest payable by the consumer or due to the latter, or the amount of other charges for financial services without notice where there is a valid reason, provided that the supplier is required to inform the other contracting party or parties thereof at the earliest opportunity and that the latter are free to dissolve the contract immediately."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:24",
+          "kind": "paragraph",
+          "start": 19927,
+          "end": 20239,
+          "text": "Subparagraph (j) is also without hindrance to terms under which a seller or supplier reserves the right to alter unilaterally the conditions of a contract of indeterminate duration, provided that he is required to inform the consumer with reasonable notice and that the consumer is free to dissolve the contract."
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:25",
+          "kind": "list_item",
+          "start": 20240,
+          "end": 20291,
+          "text": "(c) Subparagraphs (g), (j) and (1) do not apply to:"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:26",
+          "kind": "list_item",
+          "start": 20292,
+          "end": 20541,
+          "text": "— transactions in transferable securities, financial instruments and other products or services where the price is linked to fluctuations in a stock exchange quotation or index or a financial market rate that the seller or supplier does not control;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:27",
+          "kind": "list_item",
+          "start": 20542,
+          "end": 20682,
+          "text": "— contracts for the purchase or sale of foreign currency, traveller's cheques or international money orders denominated in foreign currency;"
+        },
+        {
+          "block_id": "eu_unfair_terms_93_13:annex:1:block:28",
+          "kind": "list_item",
+          "start": 20683,
+          "end": 20838,
+          "text": "(d) Subparagraph (1) is without hindrance to price-indexation clauses, where lawful, provided that the method by which prices vary is explicitly described."
+        }
+      ],
+      "tables": [],
+      "text": "ANNEX\nTERMS REFERRED TO IN ARTICLE 3 (3)\n1. Terms which have the object or effect of:\n(a) excluding or limiting the legal liability of a seller or supplier in the event of the death of a consumer or personal injury to the latter resulting from an act or omission of that seller or supplier;\n(b) inappropriately excluding or limiting the legal rights of the consumer vis-à-vis the seller or supplier or another party in the event of total or partial non-performance or inadequate performance by the seller or supplier of any of the contractual obligations, including the option of offsetting a debt owed to the seller or supplier against any claim which the consumer may have against him;\n(c) making an agreement binding on the consumer whereas provision of services by the seller or supplier is subject to a condition whose realization depends on his own will alone;\n(d) permitting the seller or supplier to retain sums paid by the consumer where the latter decides not to conclude or perform the contract, without providing for the consumer to receive compensation of an equivalent amount from the seller or supplier where the latter is the party cancelling the contract;\n(e) requiring any consumer who fails to fulfil his obligation to pay a disproportionately high sum in compensation;\n(f) authorizing the seller or supplier to dissolve the contract on a discretionary basis where the same facility is not granted to the consumer, or permitting the seller or supplier to retain the sums paid for services not yet supplied by him where it is the seller or supplier himself who dissolves the contract;\n(g) enabling the seller or supplier to terminate a contract of indeterminate duration without reasonable notice except where there are serious grounds for doing so;\n(h) automatically extending a contract of fixed duration where the consumer does not indicate otherwise, when the deadline fixed for the consumer to express this desire not to extend the contract is unreasonably early;\n(i) irrevocably binding the consumer to terms with which he had no real opportunity of becoming acquainted before the conclusion of the contract;\n(j) enabling the seller or supplier to alter the terms of the contract unilaterally without a valid reason which is specified in the contract;\n(k) enabling the seller or supplier to alter unilaterally without a valid reason any characteristics of the product or service to be provided;\n(l) providing for the price of goods to be determined at the time of delivery or allowing a seller of goods or supplier of services to increase their price without in both cases giving the consumer the corresponding right to cancel the contract if the final price is too high in relation to the price agreed when the contract was concluded;\n(m) giving the seller or supplier the right to determine whether the goods or services supplied are in conformity with the contract, or giving him the exclusive right to interpret any term of the contract;\n(n) limiting the seller's or supplier's obligation to respect commitments undertaken by his agents or making his commitments subject to compliance with a particular formality;\n(o) obliging the consumer to fulfil all his obligations where the seller or supplier does not perform his;\n(p) giving the seller or supplier the possibility of transferring his rights and obligations under the contract, where this may serve to reduce the guarantees for the consumer, without the latter's agreement;\n(q) excluding or hindering the consumer's right to take legal action or exercise any other legal remedy, particularly by requiring the consumer to take disputes exclusively to arbitration not covered by legal provisions, unduly restricting the evidence available to him or imposing on him a burden of proof which, according to the applicable law, should lie with another party to the contract.\n2. Scope of subparagraphs (g), (j) and (1)\n(a) Subparagraph (g) is without hindrance to terms by which a supplier of financial services reserves the right to terminate unilaterally a contract of indeterminate duration without notice where there is a valid reason, provided that the supplier is required to inform the other contracting party or parties thereof immediately.\n(b) Subparagraph (j) is without hindrance to terms under which a supplier of financial services reserves the right to alter the rate of interest payable by the consumer or due to the latter, or the amount of other charges for financial services without notice where there is a valid reason, provided that the supplier is required to inform the other contracting party or parties thereof at the earliest opportunity and that the latter are free to dissolve the contract immediately.\nSubparagraph (j) is also without hindrance to terms under which a seller or supplier reserves the right to alter unilaterally the conditions of a contract of indeterminate duration, provided that he is required to inform the consumer with reasonable notice and that the consumer is free to dissolve the contract.\n(c) Subparagraphs (g), (j) and (1) do not apply to:\n— transactions in transferable securities, financial instruments and other products or services where the price is linked to fluctuations in a stock exchange quotation or index or a financial market rate that the seller or supplier does not control;\n— contracts for the purchase or sale of foreign currency, traveller's cheques or international money orders denominated in foreign currency;\n(d) Subparagraph (1) is without hindrance to price-indexation clauses, where lawful, provided that the method by which prices vary is explicitly described.",
+      "start": 15220,
+      "end": 20838
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 *.json text eol=lf
 *.jsonl text eol=lf
 *.py text eol=lf
+*.html text eol=lf
 *.md text eol=lf
-# Official source snapshots keep their original bytes, including HTML/PDF.
-data/raw/** -text
+scripts/** text eol=lf
+# Frozen A source snapshots, exports and gold keep the exact committed bytes.
+data/** -text
+artifacts/a_review/** -text

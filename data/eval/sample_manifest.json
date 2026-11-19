@@ -1,0 +1,17 @@
+{
+  "kind": "integration_sample",
+  "corpus_version": "41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50",
+  "sample_path": "data/eval/sample.jsonl",
+  "sample_sha256": "63f14226611fc7fbda5d2996c37ebe5f97f9ee237e7cbdc476fb14f7dfbc1126",
+  "question_count": 3,
+  "answerable_count": 2,
+  "refusal_count": 1,
+  "document_ids": [
+    "eu_consumer_rights_2011_83"
+  ],
+  "document_scope": "Single accepted original-publication sample, not the frozen five-document corpus.",
+  "handoff_entry": "data/sample_corpus/manifest.json",
+  "loader": "app.retrieval.types.formal_loader",
+  "loader_data_dir": "data/sample_corpus",
+  "provenance": "Sample questions were drafted and checked with AI assistance against the accepted clean text."
+}

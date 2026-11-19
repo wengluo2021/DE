@@ -103,3 +103,6 @@ watchfiles==1.3.0
 websocket-client==1.9.2
 websockets==17.4
 yarl==1.25.1
+# A-part EUR-Lex HTML cleaning (scripts/process_documents.py).
+beautifulsoup4==4.15.0
+soupsieve==4.1.2

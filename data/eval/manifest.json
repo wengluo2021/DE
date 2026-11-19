@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "kind": "gold_set",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "gold_path": "data/eval/gold.jsonl",
+  "gold_sha256": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "question_count": 30,
+  "answerable_count": 24,
+  "refusal_count": 6,
+  "question_types": {
+    "multi_evidence": 11,
+    "single_article": 13,
+    "unanswerable": 6
+  },
+  "coverage": {
+    "eu_consumer_rights_2011_83": {
+      "answerable_questions": 6,
+      "evidence_segments": 11
+    },
+    "eu_digital_content_2019_770": {
+      "answerable_questions": 5,
+      "evidence_segments": 10
+    },
+    "eu_sale_of_goods_2019_771": {
+      "answerable_questions": 5,
+      "evidence_segments": 9
+    },
+    "eu_unfair_practices_2005_29": {
+      "answerable_questions": 4,
+      "evidence_segments": 7
+    },
+    "eu_unfair_terms_93_13": {
+      "answerable_questions": 4,
+      "evidence_segments": 5
+    }
+  },
+  "version_algorithm": {
+    "gold_version": "SHA-256 of the raw UTF-8 bytes of data/eval/gold.jsonl, including its final LF.",
+    "excluded_from_fingerprint": [
+      "gold_version",
+      "gold_sha256",
+      "exported_at"
+    ],
+    "note": "The jsonl does not contain gold_version or a timestamp. Changing any question, answer, or evidence changes the file bytes and therefore gold_version."
+  },
+  "loader": "app.retrieval.types.formal_loader",
+  "loader_data_dir": "data/formal_corpus",
+  "provenance": "Drafted with AI assistance and checked by slicing the frozen clean text. No human review is recorded. Formal retrieval results were not consulted."
+}

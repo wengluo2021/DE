@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "kind": "corpus_manifest",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "parser_version": "eurlex_html_v1",
+  "path_basis": {
+    "corpus_manifest": "Paths in data/corpus_manifest.json are relative to the project root.",
+    "formal_package": "B sets data_dir to data/formal_corpus and reads data/formal_corpus/manifest.json. A path starting with data/ drops that first segment and resolves inside data_dir."
+  },
+  "version_algorithm": {
+    "module": "app.retrieval.types",
+    "canonical": "json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':'))",
+    "digest": "SHA-256 of the canonical JSON encoded as UTF-8",
+    "material": {
+      "parser_version": "eurlex_html_v1",
+      "documents": "sorted by document_id; fields: document_id, title, issuer, source_url, published_at, effective_at, raw_sha256, text_sha256, structure_sha256"
+    },
+    "structure_sha256": "digest of the adapted articles array, including label, chapter, and section",
+    "accepted_structure_json_sha256": "SHA-256 of the accepted data/processed JSON file bytes",
+    "excluded_from_fingerprint": [
+      "corpus_version",
+      "processed_sha256",
+      "registered_at",
+      "exported_at"
+    ]
+  },
+  "package": {
+    "data_dir": "data/formal_corpus",
+    "manifest": "data/formal_corpus/manifest.json",
+    "manifest_sha256": "516d0aa17c2674ee57eadfbb73452140e88667a0e3c9c51d7028dd127f1fdb57"
+  },
+  "documents": [
+    {
+      "document_id": "eu_consumer_rights_2011_83",
+      "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+      "issuer": "European Parliament and Council",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+      "language": "en",
+      "celex": "32011L0083",
+      "eli": "http://data.europa.eu/eli/dir/2011/83/oj",
+      "version_type": "original_publication",
+      "published_at": "2011-11-22",
+      "effective_at": "2011-12-12",
+      "dates": {
+        "date_of_document": "2011-10-25",
+        "publication_date": "2011-11-22",
+        "entry_into_force_date": "2011-12-12",
+        "transposition_deadline": "2013-12-13",
+        "application_date": "2014-06-13",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "accepted": {
+        "raw_path": "data/raw/eu_consumer_rights_2011_83.html",
+        "raw_sha256": "7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e",
+        "clean_text_path": "data/processed/eu_consumer_rights_2011_83.txt",
+        "clean_text_sha256": "75acf22af53bf1878fe2750757b5ecd5c1230236aaab4fc543c1d029b3bf5689",
+        "structure_json_path": "data/processed/eu_consumer_rights_2011_83.json",
+        "structure_json_sha256": "f7ed11c4e7817cc58c23498ef1b87b87e885996f8a075a02365782e44b84829a"
+      },
+      "formal": {
+        "raw_path": "data/formal_corpus/raw/eu_consumer_rights_2011_83.html",
+        "raw_sha256": "7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e",
+        "processed_path": "data/formal_corpus/processed/eu_consumer_rights_2011_83.json",
+        "processed_sha256": "d1db1b2e0e85b5a9a62b40fc23a0974cd85d597167ccb9a0b654aea22b631e24",
+        "text_sha256": "75acf22af53bf1878fe2750757b5ecd5c1230236aaab4fc543c1d029b3bf5689",
+        "structure_sha256": "128d842ba9798cf099b4c65d5401ad0a0324f5d5f1efbfe92f139c3fcb82387a"
+      },
+      "structure_counts": {
+        "chapters": 6,
+        "sections": 0,
+        "main_articles": 35
+      },
+      "cleaning_rules": {
+        "version": "eurlex_html_v1",
+        "encoding": "utf-8",
+        "newline": "LF",
+        "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+        "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+        "footnotes": "In-text note anchors render as (n). The note remains at its position and records the blocks that cite it.",
+        "lists": "Two-column layout tables render as 'marker text' lines.",
+        "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+        "main_articles": "A main article is a div.eli-subdivision whose id is art_<number> and whose parent is not an annex. Quoted article headings and annex correlation cells are not main articles.",
+        "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+        "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+      }
+    },
+    {
+      "document_id": "eu_digital_content_2019_770",
+      "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+      "issuer": "European Parliament and Council",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+      "language": "en",
+      "celex": "32019L0770",
+      "eli": "http://data.europa.eu/eli/dir/2019/770/oj",
+      "version_type": "original_publication",
+      "published_at": "2019-05-22",
+      "effective_at": "2019-06-11",
+      "dates": {
+        "date_of_document": "2019-05-20",
+        "publication_date": "2019-05-22",
+        "entry_into_force_date": "2019-06-11",
+        "transposition_deadline": "2021-07-01",
+        "application_date": "2022-01-01",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "accepted": {
+        "raw_path": "data/raw/Digital Content and Services.html",
+        "raw_sha256": "83b8ec2ad8d5a293c278fcffc5add389425bd7c688f92bf110d4ce2b929826f2",
+        "clean_text_path": "data/processed/eu_digital_content_2019_770.txt",
+        "clean_text_sha256": "6e251e53b94cb4e793d9cd32889a0f70b7e62d7399eacc15197f37bb132ac3bf",
+        "structure_json_path": "data/processed/eu_digital_content_2019_770.json",
+        "structure_json_sha256": "3d7b88ac3b35365986c18970dfc24cdf6b1574f701c13c350efe7466e5e366ab"
+      },
+      "formal": {
+        "raw_path": "data/formal_corpus/raw/Digital Content and Services.html",
+        "raw_sha256": "83b8ec2ad8d5a293c278fcffc5add389425bd7c688f92bf110d4ce2b929826f2",
+        "processed_path": "data/formal_corpus/processed/eu_digital_content_2019_770.json",
+        "processed_sha256": "4af53f1647e1eeed535c65d0abcf7802cd50f313e0fef0b98227ccb7cfbf9f79",
+        "text_sha256": "6e251e53b94cb4e793d9cd32889a0f70b7e62d7399eacc15197f37bb132ac3bf",
+        "structure_sha256": "8371031191de166e16027e6b9685cbf88f9dbae32f8a770f15938d56f62ad105"
+      },
+      "structure_counts": {
+        "chapters": 0,
+        "sections": 0,
+        "main_articles": 27
+      },
+      "cleaning_rules": {
+        "version": "eurlex_html_v1",
+        "encoding": "utf-8",
+        "newline": "LF",
+        "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+        "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+        "footnotes": "In-text note anchors render as (n). The note remains at its position and records the blocks that cite it.",
+        "lists": "Two-column layout tables render as 'marker text' lines.",
+        "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+        "main_articles": "A main article is a div.eli-subdivision whose id is art_<number> and whose parent is not an annex. Quoted article headings and annex correlation cells are not main articles.",
+        "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+        "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+      }
+    },
+    {
+      "document_id": "eu_sale_of_goods_2019_771",
+      "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+      "issuer": "European Parliament and Council",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+      "language": "en",
+      "celex": "32019L0771",
+      "eli": "http://data.europa.eu/eli/dir/2019/771/oj",
+      "version_type": "original_publication",
+      "published_at": "2019-05-22",
+      "effective_at": "2019-06-11",
+      "dates": {
+        "date_of_document": "2019-05-20",
+        "publication_date": "2019-05-22",
+        "entry_into_force_date": "2019-06-11",
+        "transposition_deadline": "2021-07-01",
+        "application_date": "2022-01-01",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "accepted": {
+        "raw_path": "data/raw/Sale of Goods.html",
+        "raw_sha256": "4869ed74958ae7cc50897e502272cc103502bffd1722f4ed07ca1f7188bb16ac",
+        "clean_text_path": "data/processed/eu_sale_of_goods_2019_771.txt",
+        "clean_text_sha256": "d3076ba5236d6e7aad6ba30ae8b8d4b17af14fa148f7abc42cadd96764498ad4",
+        "structure_json_path": "data/processed/eu_sale_of_goods_2019_771.json",
+        "structure_json_sha256": "ec42ea4dbad2a165bfd409f50c21fc10620ef4ca9b17d8028e5c1885570b4d6c"
+      },
+      "formal": {
+        "raw_path": "data/formal_corpus/raw/Sale of Goods.html",
+        "raw_sha256": "4869ed74958ae7cc50897e502272cc103502bffd1722f4ed07ca1f7188bb16ac",
+        "processed_path": "data/formal_corpus/processed/eu_sale_of_goods_2019_771.json",
+        "processed_sha256": "3fcd40957992fa8693ecc91cdcad1ce7c23225a92a8809fc1dac20078febea77",
+        "text_sha256": "d3076ba5236d6e7aad6ba30ae8b8d4b17af14fa148f7abc42cadd96764498ad4",
+        "structure_sha256": "3a6ae97d1c9b6e947baa3238299e9848da83d8e502ea9a1c3d97babfbebb0728"
+      },
+      "structure_counts": {
+        "chapters": 0,
+        "sections": 0,
+        "main_articles": 27
+      },
+      "cleaning_rules": {
+        "version": "eurlex_html_v1",
+        "encoding": "utf-8",
+        "newline": "LF",
+        "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+        "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+        "footnotes": "In-text note anchors render as (n). The note remains at its position and records the blocks that cite it.",
+        "lists": "Two-column layout tables render as 'marker text' lines.",
+        "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+        "main_articles": "A main article is a div.eli-subdivision whose id is art_<number> and whose parent is not an annex. Quoted article headings and annex correlation cells are not main articles.",
+        "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+        "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+      }
+    },
+    {
+      "document_id": "eu_unfair_practices_2005_29",
+      "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+      "issuer": "European Parliament and Council",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+      "language": "en",
+      "celex": "32005L0029",
+      "eli": "http://data.europa.eu/eli/dir/2005/29/oj",
+      "version_type": "original_publication",
+      "published_at": "2005-06-11",
+      "effective_at": "2005-06-12",
+      "dates": {
+        "date_of_document": "2005-05-11",
+        "publication_date": "2005-06-11",
+        "entry_into_force_date": "2005-06-12",
+        "transposition_deadline": "2007-06-12",
+        "application_date": "2007-12-12",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "accepted": {
+        "raw_path": "data/raw/Unfair Commercial Practices.html",
+        "raw_sha256": "0d678d1bbd988c59b40ff6363f3d9b8370c34da7b3744395eb7147364a19c1cc",
+        "clean_text_path": "data/processed/eu_unfair_practices_2005_29.txt",
+        "clean_text_sha256": "7bc191bd5b55af42a179d95d98b1e7c2aa603509941065605b4ba175eb54f10b",
+        "structure_json_path": "data/processed/eu_unfair_practices_2005_29.json",
+        "structure_json_sha256": "1f21061ca7b3f46f8cd2a949c722b86dbcdac0864c95281291cf037fad40c200"
+      },
+      "formal": {
+        "raw_path": "data/formal_corpus/raw/Unfair Commercial Practices.html",
+        "raw_sha256": "0d678d1bbd988c59b40ff6363f3d9b8370c34da7b3744395eb7147364a19c1cc",
+        "processed_path": "data/formal_corpus/processed/eu_unfair_practices_2005_29.json",
+        "processed_sha256": "1af8f015d0fc8a62cfa40f87074fe3432d54d822b9e3c90f053151638c1fb4c3",
+        "text_sha256": "7bc191bd5b55af42a179d95d98b1e7c2aa603509941065605b4ba175eb54f10b",
+        "structure_sha256": "2ddf7b21d7f381fcdd1cb4833d864a676c26ba97ddf7b875e0449629d7178ce9"
+      },
+      "structure_counts": {
+        "chapters": 4,
+        "sections": 2,
+        "main_articles": 21
+      },
+      "cleaning_rules": {
+        "version": "eurlex_html_v1",
+        "encoding": "utf-8",
+        "newline": "LF",
+        "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+        "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+        "footnotes": "In-text note anchors render as (n). The note remains at its position and records the blocks that cite it.",
+        "lists": "Two-column layout tables render as 'marker text' lines.",
+        "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+        "main_articles": "A main article is a div.eli-subdivision whose id is art_<number> and whose parent is not an annex. Quoted article headings and annex correlation cells are not main articles.",
+        "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+        "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+      }
+    },
+    {
+      "document_id": "eu_unfair_terms_93_13",
+      "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+      "issuer": "Council of the European Communities",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+      "language": "en",
+      "celex": "31993L0013",
+      "eli": "http://data.europa.eu/eli/dir/1993/13/oj",
+      "version_type": "original_publication",
+      "published_at": "1993-04-21",
+      "effective_at": "1993-04-16",
+      "dates": {
+        "date_of_document": "1993-04-05",
+        "publication_date": "1993-04-21",
+        "entry_into_force_date": "1993-04-16",
+        "transposition_deadline": "1994-12-31",
+        "application_date": null,
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "accepted": {
+        "raw_path": "data/raw/Unfair Terms.html",
+        "raw_sha256": "6c700ae54d53f3dc3ece8d226d18471ac905eff42a7cb4d4874e2e56acaff707",
+        "clean_text_path": "data/processed/eu_unfair_terms_93_13.txt",
+        "clean_text_sha256": "bf518901d6a71d5753ec99ed0b5b13025f5bf136782594a0dbaf8263e376a401",
+        "structure_json_path": "data/processed/eu_unfair_terms_93_13.json",
+        "structure_json_sha256": "c4d387298a543eb545a91cec522662b77473a6c79c7ee27c450818f17df29893"
+      },
+      "formal": {
+        "raw_path": "data/formal_corpus/raw/Unfair Terms.html",
+        "raw_sha256": "6c700ae54d53f3dc3ece8d226d18471ac905eff42a7cb4d4874e2e56acaff707",
+        "processed_path": "data/formal_corpus/processed/eu_unfair_terms_93_13.json",
+        "processed_sha256": "0eb604ed2dad177ba4d9758607bac8fa691af95c8fac61015f8d925a17011827",
+        "text_sha256": "bf518901d6a71d5753ec99ed0b5b13025f5bf136782594a0dbaf8263e376a401",
+        "structure_sha256": "efb39df04a770128deb0d44a079d3979e912268a8d68dedfbd16c9e9d4ea02ba"
+      },
+      "structure_counts": {
+        "chapters": 0,
+        "sections": 0,
+        "main_articles": 11
+      },
+      "cleaning_rules": {
+        "version": "eurlex_html_v1",
+        "encoding": "utf-8",
+        "newline": "LF",
+        "whitespace": "Each block is one line. Whitespace inside a block, including NBSP, collapses to a single space. Major parts are separated by one blank line. The file ends with one LF.",
+        "sentence_spacing": "A missing space after a lowercase letter or digit and before an uppercase letter is restored. This repairs text nodes split by inline boxes.",
+        "footnotes": "A p.note with an ntr definition anchor starts a footnote. A continuation p.note without a new definition anchor is merged into the previous footnote. The citation relationship and the full text are kept. In this file, 6 p.note elements correspond to 4 footnotes.",
+        "lists": "Two-column layout tables render as 'marker text' lines.",
+        "tables": "oj-table rows render as cells joined by ' | ', and empty cells stay in place.",
+        "main_articles": "A main article starts at a p.ti-art heading and continues through the adjacent content that follows it. It ends at the next main-article heading, the signature, the footnotes, or the annex boundary. Cross-references in the body and annex headings are not main articles.",
+        "excluded": "Navigation, language selection, search, cookies, download controls, the page table of contents, the duplicate EUR-Lex title, and the Official Journal running header.",
+        "character_offsets": "Python character indexes into the complete cleaned text, using [start, end). Not UTF-8 bytes or model tokens. Positions are recorded during assembly."
+      }
+    }
+  ]
+}
