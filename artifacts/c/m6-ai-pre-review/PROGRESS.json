@@ -2,16 +2,16 @@
   "kind": "ai_pre_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "completed_batches": 9,
-  "questions_pre_read": 18,
-  "response_records_pre_read": 72,
-  "claim_checks_pre_read": 125,
+  "completed_batches": 10,
+  "questions_pre_read": 20,
+  "response_records_pre_read": 80,
+  "claim_checks_pre_read": 139,
   "official_review_written": false,
   "official_database_review_rows": 0,
   "human_confirmation_required": true,
-  "next_question_offset": 18,
-  "next_case_id": "gold-ucpd-invitation-price-information",
-  "latest_handoff": "docs/handoffs/M6_11_辅助预审09与续做.md",
+  "next_question_offset": 20,
+  "next_case_id": "gold-utd-unfair-term-test",
+  "latest_handoff": "docs/handoffs/M6_12_辅助预审10与续做.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -85,6 +85,14 @@
         17
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-09.json"
+    },
+    {
+      "batch": 10,
+      "question_offsets": [
+        18,
+        19
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-10.json"
     }
   ]
 }
