@@ -2,18 +2,18 @@
   "kind": "ai_pre_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "completed_batches": 14,
-  "ai_pre_review_complete": false,
-  "next_action": "next_batch",
-  "questions_pre_read": 28,
-  "response_records_pre_read": 112,
+  "completed_batches": 15,
+  "ai_pre_review_complete": true,
+  "next_action": "human_confirmation",
+  "questions_pre_read": 30,
+  "response_records_pre_read": 120,
   "claim_checks_pre_read": 166,
   "official_review_written": false,
   "official_database_review_rows": 0,
   "human_confirmation_required": true,
-  "next_question_offset": 28,
-  "next_case_id": "gold-refuse-lawsuit-deadline",
-  "latest_handoff": "docs/handoffs/M6_16_辅助预审14与续做.md",
+  "next_question_offset": 30,
+  "next_case_id": null,
+  "latest_handoff": "docs/handoffs/M6_17_辅助预审15与续做.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -127,6 +127,14 @@
         27
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-14.json"
+    },
+    {
+      "batch": 15,
+      "question_offsets": [
+        28,
+        29
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-15.json"
     }
   ]
 }
