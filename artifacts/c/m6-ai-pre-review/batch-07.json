@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "kind": "ai_pre_review_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "can_import_as_human_review": false,
+  "official_review_written": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "source_code_commit": "04d830c",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "index_version": "e1d9e93d8abeea648bf64a2e7ac215e39f051a3c715dbe2ffa0664dac8b302bf",
+  "batch": 7,
+  "question_offsets": [
+    12,
+    13
+  ],
+  "gold_cases": [
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-dcd-burden-of-supply",
+      "question": "Under Directive (EU) 2019/770, who must prove that the digital content or digital service was supplied as Article 5 requires?",
+      "topic": "single_article",
+      "answerable": true,
+      "reference_answer": "The burden of proof is on the trader.",
+      "key_facts": [
+        "1. The burden of proof with regard to whether the digital content or digital service was supplied in accordance with Article 5 shall be on the trader."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:12",
+          "structure_id": null,
+          "start": 96415,
+          "end": 96565,
+          "text": "1. The burden of proof with regard to whether the digital content or digital service was supplied in accordance with Article 5 shall be on the trader."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    },
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-dcd-conformity-remedies",
+      "question": "Digital content covered by Directive (EU) 2019/770 and supplied in exchange for a price is not in conformity. What remedies does Article 14 provide, and when is termination unavailable because the defect is minor?",
+      "topic": "multi_evidence",
+      "answerable": true,
+      "reference_answer": "The consumer is entitled to have the digital content or service brought into conformity, to a proportionate price reduction, or to terminate the contract, under the conditions in Article 14. Where a price is paid, the consumer may terminate only if the lack of conformity is not minor, and the trader bears the burden of proving that it is minor.",
+      "key_facts": [
+        "1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.",
+        "6. Where the digital content or digital service is supplied in exchange for the payment of a price, the consumer shall be entitled to terminate the contract only if the lack of conformity is not minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the trader."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:14",
+          "structure_id": null,
+          "start": 99561,
+          "end": 99830,
+          "text": "1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article."
+        },
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:14",
+          "structure_id": null,
+          "start": 102316,
+          "end": 102616,
+          "text": "6. Where the digital content or digital service is supplied in exchange for the payment of a price, the consumer shall be entitled to terminate the contract only if the lack of conformity is not minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the trader."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    }
+  ],
+  "entries": [
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f400",
+      "ask_id": "ask-1e96eff346224c868b4d07dc68335462",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s400",
+      "ask_id": "ask-35bfb1ac338b4c2184506ec3ff27a548",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f800",
+      "ask_id": "ask-630c384a31b34a8489f4e6a373942893",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s800",
+      "ask_id": "ask-59adf1fcca8446d08163c19123ea34f4",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f400",
+      "ask_id": "ask-f49a87d14e0340fc815b239038e8414b",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1
+      ],
+      "reason": "A第14条明确列出恢复符合、比例减价或解除，以及支付价款时非轻微限制和trader举证；本组insufficient未提供任何必要事实，建议wrong（误拒答），不删分母。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s400",
+      "ask_id": "ask-2a2ea6791b744d72aa780c0cc43cfc53",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [
+        1
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Under Article 14, in the case of a lack of conformity the consumer is entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in that Article.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "398a2468e52db888f007351dac65f18c73f14475bcbf556c3003c251243a10dc",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:14"
+              ],
+              "article_labels": [
+                "Article 14"
+              ],
+              "start": 99518,
+              "end": 99834,
+              "text": "Article 14\nRemedies for lack of conformity\n1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "0fc696a105666c6a7aae5962d2eabc5467e09d0cea2b1b2fc118687c3817dacc",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 62446,
+              "end": 62632,
+              "text": "(67) Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f800",
+      "ask_id": "ask-d1af7bcd43204cfa9c064cc53bea8376",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [
+        1
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "In the case of a lack of conformity, the consumer is entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in Article 14.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "e451cc5886b8fc1be38fdb72a945116f18771eb7d444ab0b4b3f0b273789df9c",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:13",
+                "eu_digital_content_2019_770:article:14"
+              ],
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "start": 99200,
+              "end": 100000,
+              "text": "the conclusion of the contract, that a specific time for the supply is essential for the consumer and the trader fails to supply the digital content or digital service by or at that time.\n3. Where the consumer terminates the contract under paragraph 1 or 2 of this Article, Articles 15 to 18 shall apply accordingly.\n\nArticle 14\nRemedies for lack of conformity\n1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. The consumer shall be entitled to have the digital content or digital service brought into conformity, unless this would be impossible or would impose costs on the tr"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "50030931e145bbb17032af52172484a2de78c9588b96833c05343ddd44350202",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 62400,
+              "end": 63200,
+              "text": "tal content or digital service in conformity.\n(67) Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor. However, where the digital content or digital service is not supplied in exchange for a price but personal data are provided by the consumer, the consumer should be entitled to terminate the contract also in cases where the lack of conformity is minor, since the remedy of price reduction is not available to the consumer. In cases where the consumer pays a price and provides personal data, the consumer should be entitled to all available remedies in the event of a lack of conformity. In particular, provided all other conditions are met, the consumer should be ent"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s800",
+      "ask_id": "ask-5a35a16fa8f74c4686c43c0364e22f1d",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [
+        1
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Under Article 14(1), in the case of a lack of conformity the consumer is entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in that Article.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "c9ffc219cd526bc47d8b487ec2144fa253bf21ba0fbaf3b3924b040715b44430",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:14"
+              ],
+              "article_labels": [
+                "Article 14"
+              ],
+              "start": 99518,
+              "end": 100258,
+              "text": "Article 14\nRemedies for lack of conformity\n1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. The consumer shall be entitled to have the digital content or digital service brought into conformity, unless this would be impossible or would impose costs on the trader that would be disproportionate, taking into account all the circumstances of the case including:\n(a) the value the digital content or digital service would have if there were no lack of conformity; and\n(b) the significance of the lack of conformity.\n3. "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Under Article 14(2), the consumer is entitled to have the digital content or digital service brought into conformity unless this would be impossible or would impose costs on the trader that would be disproportionate, taking into account all the circumstances of the case including the value the digital content or digital service would have if there were no lack of conformity and the significance of the lack of conformity.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含Article14(2)恢复符合的权利、不可能/不成比例成本例外及价值和不符重要性两项考虑，支持这段额外主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "c9ffc219cd526bc47d8b487ec2144fa253bf21ba0fbaf3b3924b040715b44430",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:14"
+              ],
+              "article_labels": [
+                "Article 14"
+              ],
+              "start": 99518,
+              "end": 100258,
+              "text": "Article 14\nRemedies for lack of conformity\n1. In the case of a lack of conformity, the consumer shall be entitled to have the digital content or digital service brought into conformity, to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. The consumer shall be entitled to have the digital content or digital service brought into conformity, unless this would be impossible or would impose costs on the trader that would be disproportionate, taking into account all the circumstances of the case including:\n(a) the value the digital content or digital service would have if there were no lack of conformity; and\n(b) the significance of the lack of conformity.\n3. "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "ae0ff61a865320caab255e0972f74eb3d8f25563ce99b1879be9f3e63394adfd",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 62446,
+              "end": 63120,
+              "text": "(67) Where the digital content or digital service is supplied in exchange for a price, the consumer should be able to terminate the contract only if the lack of conformity is not minor. However, where the digital content or digital service is not supplied in exchange for a price but personal data are provided by the consumer, the consumer should be entitled to terminate the contract also in cases where the lack of conformity is minor, since the remedy of price reduction is not available to the consumer. In cases where the consumer pays a price and provides personal data, the consumer should be entitled to all available remedies in the event of a lack of conformity. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    }
+  ],
+  "next_question_offset": 14,
+  "next_case_id": "gold-dcd-reimbursement-time",
+  "school_generation_api_calls": 0
+}
