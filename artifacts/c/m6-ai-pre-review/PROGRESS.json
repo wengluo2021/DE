@@ -2,16 +2,16 @@
   "kind": "ai_pre_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "completed_batches": 4,
-  "questions_pre_read": 8,
-  "response_records_pre_read": 32,
-  "claim_checks_pre_read": 76,
+  "completed_batches": 5,
+  "questions_pre_read": 10,
+  "response_records_pre_read": 40,
+  "claim_checks_pre_read": 93,
   "official_review_written": false,
   "official_database_review_rows": 0,
   "human_confirmation_required": true,
-  "next_question_offset": 8,
-  "next_case_id": "gold-sgd-repair-or-replacement",
-  "latest_handoff": "docs/handoffs/M6_06_辅助预审04与续做.md",
+  "next_question_offset": 10,
+  "next_case_id": "gold-sgd-price-reduction",
+  "latest_handoff": "docs/handoffs/M6_07_辅助预审05与续做.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -45,6 +45,14 @@
         7
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-04.json"
+    },
+    {
+      "batch": 5,
+      "question_offsets": [
+        8,
+        9
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-05.json"
     }
   ]
 }

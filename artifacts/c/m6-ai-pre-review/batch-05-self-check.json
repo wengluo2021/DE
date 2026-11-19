@@ -1,0 +1,21 @@
+{
+  "state": "passed",
+  "batch": 5,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 17,
+  "advisory_support_counts": {
+    "supported": 17
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-sgd-price-reduction",
+  "next_question_offset": 10,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-05.json": "3661e63c37d0e01e63c376d4efcabb8c2da42e15abfda3bc109150a222a77b67",
+    "docs/M6辅助预审05_第9至10题.md": "e3d21d973e01465d307d09542d50f17568b3dd3c92e0e38f4371c22e83050d98"
+  }
+}

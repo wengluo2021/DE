@@ -1,0 +1,664 @@
+{
+  "schema_version": "1.0",
+  "kind": "ai_pre_review_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "can_import_as_human_review": false,
+  "official_review_written": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "source_code_commit": "d6102bb",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "index_version": "e1d9e93d8abeea648bf64a2e7ac215e39f051a3c715dbe2ffa0664dac8b302bf",
+  "batch": 5,
+  "question_offsets": [
+    8,
+    9
+  ],
+  "gold_cases": [
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-sgd-repair-or-replacement",
+      "question": "Goods sold under Directive (EU) 2019/771 are not in conformity. May the consumer choose between repair and replacement, and must that remedy be free of charge?",
+      "topic": "multi_evidence",
+      "answerable": true,
+      "reference_answer": "The consumer may choose repair or replacement in order to have the goods brought into conformity, unless the chosen remedy is impossible or would impose disproportionate costs on the seller in the circumstances listed in Article 13(2). Where repair or replacement is used, it must be carried out free of charge, within a reasonable time after the seller is informed, and without significant inconvenience to the consumer.",
+      "key_facts": [
+        "2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:",
+        "1. Repairs or replacements shall be carried out:\n(a) free of charge;",
+        "(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_sale_of_goods_2019_771",
+          "article_id": "eu_sale_of_goods_2019_771:article:13",
+          "structure_id": null,
+          "start": 73709,
+          "end": 74013,
+          "text": "2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:"
+        },
+        {
+          "document_id": "eu_sale_of_goods_2019_771",
+          "article_id": "eu_sale_of_goods_2019_771:article:14",
+          "structure_id": null,
+          "start": 76165,
+          "end": 76233,
+          "text": "1. Repairs or replacements shall be carried out:\n(a) free of charge;"
+        },
+        {
+          "document_id": "eu_sale_of_goods_2019_771",
+          "article_id": "eu_sale_of_goods_2019_771:article:14",
+          "structure_id": null,
+          "start": 76234,
+          "end": 76529,
+          "text": "(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    },
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "question": "Under Directive (EU) 2019/771, may a consumer terminate the sales contract when the lack of conformity is only minor?",
+      "topic": "single_article",
+      "answerable": true,
+      "reference_answer": "No. The consumer is not entitled to terminate if the lack of conformity is only minor, and the seller bears the burden of proving that it is minor.",
+      "key_facts": [
+        "5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_sale_of_goods_2019_771",
+          "article_id": "eu_sale_of_goods_2019_771:article:13",
+          "structure_id": null,
+          "start": 75446,
+          "end": 75649,
+          "text": "5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    }
+  ],
+  "entries": [
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f400",
+      "ask_id": "ask-ca088805de274b788fe27051fceec7de",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        2
+      ],
+      "reason": "只明确回答免费，另说一般救济；没有明确维修/更换之间的选择权及不可能/不成比例成本例外，也漏合理时间和无重大不便，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Repairs or replacements shall be carried out free of charge.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含Article14(1)(a)免费维修或更换。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "bcffa0100e62dbaa268b7ccf06d0d14d2905e3f60fc86589fa180b6686ef63f5",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "start": 76000,
+              "end": 76400,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inco"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "In the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "30b12998956af55f0a6b4ff8bb774672fcaa26377cbbacadff0494ff5436ccc3",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 42000,
+              "end": 42400,
+              "text": "internal market, this Directive should fully harmonise the remedies available to consumers for lack of conformity of goods, and the conditions under which such remedies can be exercised. In particular, in the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.\n(48) As "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s400",
+      "ask_id": "ask-a58febdba6904c1caa7e39982fae947e",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        2
+      ],
+      "reason": "仅回答免费，没有回答选择权及例外，也未给合理时间和无重大不便条件，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Repairs or replacements shall be carried out free of charge.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "3018f9e80de095bd5d42883c698eba418338d31ccfb7fbcda291b640fa5343d1",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 14"
+              ],
+              "start": 76119,
+              "end": 76368,
+              "text": "Article 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f800",
+      "ask_id": "ask-ac13afe75f844a07b6d9538974968aba",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1,
+        2
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "免费、合理时间与无重大不便说明完整，但没有回答消费者能否选择维修/更换以及不可能或不成比例成本例外，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Repairs or replacements shall be carried out free of charge.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1直接包含第14(1)(a)免费要求。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Repairs or replacements shall be carried out within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含从卖方获知不符起的合理时间要求。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha"
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Repairs or replacements shall be carried out without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s800",
+      "ask_id": "ask-7e375c5e5c20444b865a05b29c974ff2",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0,
+        1
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        2
+      ],
+      "reason": "明确选择权/例外与免费，覆盖题干主要问点，但按A完整必要事实口径仍漏合理时间和不得重大不便，建议partial。实际评审人应确认是否要求题干未单独追问的这两个条件，并对所有组统一。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "2de22c6bd1e7a0abe7fc2c76be7a44515d65717f8b34793d5f5127db10a8452c",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 73422,
+              "end": 74138,
+              "text": "Article 13\nRemedies for lack of conformity\n1. In the event of a lack of conformity, the consumer shall be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:\n(a) the value the goods would have if there were no lack of conformity;\n(b) the significance of the lack of conformity; and\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Consumers should enjoy a choice between repair or replacement as regards bringing goods into conformity.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "f96007a68b2a84e8232043d2b1deea2849868fb09c91eb3deda950d4ba087515",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 41899,
+              "end": 42637,
+              "text": "(47) In order to increase legal certainty and to eliminate one of the major obstacles inhibiting the internal market, this Directive should fully harmonise the remedies available to consumers for lack of conformity of goods, and the conditions under which such remedies can be exercised. In particular, in the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.\n(48) As regards bringing goods into conformity, consumers should enjoy a choice between repair or replacement. Enabling consumers to require repair should encourage sustainable consumption and could contribute to greater durability of products. "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Repairs or replacements shall be carried out free of charge.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1直接包含免费维修/更换。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "86b9661756ef005a01c648dc32f1f8ce00de66ba0c76566f5df36f2718da1230",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "article_labels": [
+                "Article 14"
+              ],
+              "start": 76119,
+              "end": 76752,
+              "text": "Article 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f400",
+      "ask_id": "ask-371befde88f34dbbbd97e2bcf7f3d0f3",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [
+        0
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "回答了轻微不符不能解除，但未写由卖方举证其轻微，A要点仅部分覆盖，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "481d5e770c0ff429eac782e25b76c1257a3fecf7455402454b5e2fd9a23beff5",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 46000,
+              "end": 46400,
+              "text": " affects the ability of the consumer to make normal use of the goods and the consumer cannot be expected to trust that repair or replacement by the seller would remedy the problem.\n(53) In order to maintain a balance between the rights and obligations of the contracting parties, the consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.\n("
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s400",
+      "ask_id": "ask-98c601b161534d868a15a611c93491bd",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Under Directive (EU) 2019/771, the consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "c838e0288864376f128cdd4608b0d986b5903f81346ac39982f8c0b6ce8665ab",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75449,
+              "end": 75840,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "c838e0288864376f128cdd4608b0d986b5903f81346ac39982f8c0b6ce8665ab",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75449,
+              "end": 75840,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f800",
+      "ask_id": "ask-514b9d40855d409586132115e913c026",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "2a0ece9d4ff14d87e0caa69a0da8f4315773277564b1cedc64d412db401b3914",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75200,
+              "end": 76000,
+              "text": "r termination of the sales contract; or\n(d) the seller has declared, or it is clear from the circumstances, that the seller will not bring the goods into conformity within a reasonable time, or without significant inconvenience for the consumer.\n5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "2a0ece9d4ff14d87e0caa69a0da8f4315773277564b1cedc64d412db401b3914",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75200,
+              "end": 76000,
+              "text": "r termination of the sales contract; or\n(d) the seller has declared, or it is clear from the circumstances, that the seller will not bring the goods into conformity within a reasonable time, or without significant inconvenience for the consumer.\n5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "The consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "b79ea7b6ee29c3e0a92f89e95adf2b6e13e706d558aed418cc811a432213ca0d",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 45600,
+              "end": 46400,
+              "text": "ted to maintain confidence in the ability of the seller to bring the goods into conformity or not, for instance, due to the same problem appearing twice. Similarly, in certain situations, the lack of conformity could be of such a serious nature that the consumer cannot maintain confidence in the ability of the seller to bring the goods into conformity, such as where the lack of conformity severely affects the ability of the consumer to make normal use of the goods and the consumer cannot be expected to trust that repair or replacement by the seller would remedy the problem.\n(53) In order to maintain a balance between the rights and obligations of the contracting parties, the consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.\n("
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s800",
+      "ask_id": "ask-a0f3664d5b044b7bb4d419253cdcacfb",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "ab97538e8ffbf7503c3f6e906c8a2ea0eba64b529ec450c800e972a7eb2e7b0d",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75449,
+              "end": 76119,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "ab97538e8ffbf7503c3f6e906c8a2ea0eba64b529ec450c800e972a7eb2e7b0d",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "article_labels": [
+                "Article 13"
+              ],
+              "start": 75449,
+              "end": 76119,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    }
+  ],
+  "next_question_offset": 10,
+  "next_case_id": "gold-sgd-price-reduction",
+  "school_generation_api_calls": 0
+}
