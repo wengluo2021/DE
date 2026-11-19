@@ -1,0 +1,19 @@
+{
+  "state": "passed",
+  "batch": 14,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 0,
+  "advisory_support_counts": {},
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-refuse-lawsuit-deadline",
+  "next_question_offset": 28,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-14.json": "daee6efd9b66dc4e634e5fa76dc5bbd703490aa42db77d4cd5a59f86535bb23f",
+    "docs/M6辅助预审14_第27至28题.md": "99543fb8e01b659cda5a42e23ee97bab1fc6e628df03fb382e30d8454992385a"
+  }
+}

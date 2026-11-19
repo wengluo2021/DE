@@ -2,18 +2,18 @@
   "kind": "ai_pre_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "completed_batches": 13,
+  "completed_batches": 14,
   "ai_pre_review_complete": false,
   "next_action": "next_batch",
-  "questions_pre_read": 26,
-  "response_records_pre_read": 104,
+  "questions_pre_read": 28,
+  "response_records_pre_read": 112,
   "claim_checks_pre_read": 166,
   "official_review_written": false,
   "official_database_review_rows": 0,
   "human_confirmation_required": true,
-  "next_question_offset": 26,
-  "next_case_id": "gold-refuse-refund-interest-rate",
-  "latest_handoff": "docs/handoffs/M6_15_辅助预审13与续做.md",
+  "next_question_offset": 28,
+  "next_case_id": "gold-refuse-lawsuit-deadline",
+  "latest_handoff": "docs/handoffs/M6_16_辅助预审14与续做.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -119,6 +119,14 @@
         25
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-13.json"
+    },
+    {
+      "batch": 14,
+      "question_offsets": [
+        26,
+        27
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-14.json"
     }
   ]
 }
