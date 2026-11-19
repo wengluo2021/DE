@@ -13,7 +13,7 @@
   "human_confirmation_required": true,
   "next_question_offset": 30,
   "next_case_id": null,
-  "latest_handoff": "docs/handoffs/M6_17_辅助预审15与续做.md",
+  "latest_handoff": "docs/handoffs/M6_18_全部辅助预审完成与人工确认交接.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -136,5 +136,6 @@
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-15.json"
     }
-  ]
+  ],
+  "overview": "docs/M6全部辅助预审完成与人工确认清单.md"
 }
