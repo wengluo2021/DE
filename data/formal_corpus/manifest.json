@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "kind": "formal_corpus",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "parser_version": "eurlex_html_v1",
+  "documents": [
+    {
+      "document_id": "eu_consumer_rights_2011_83",
+      "raw_path": "data/raw/eu_consumer_rights_2011_83.html",
+      "raw_sha256": "7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e",
+      "processed_path": "data/processed/eu_consumer_rights_2011_83.json",
+      "processed_sha256": "d1db1b2e0e85b5a9a62b40fc23a0974cd85d597167ccb9a0b654aea22b631e24",
+      "text_sha256": "75acf22af53bf1878fe2750757b5ecd5c1230236aaab4fc543c1d029b3bf5689",
+      "structure_sha256": "128d842ba9798cf099b4c65d5401ad0a0324f5d5f1efbfe92f139c3fcb82387a"
+    },
+    {
+      "document_id": "eu_digital_content_2019_770",
+      "raw_path": "data/raw/Digital Content and Services.html",
+      "raw_sha256": "83b8ec2ad8d5a293c278fcffc5add389425bd7c688f92bf110d4ce2b929826f2",
+      "processed_path": "data/processed/eu_digital_content_2019_770.json",
+      "processed_sha256": "4af53f1647e1eeed535c65d0abcf7802cd50f313e0fef0b98227ccb7cfbf9f79",
+      "text_sha256": "6e251e53b94cb4e793d9cd32889a0f70b7e62d7399eacc15197f37bb132ac3bf",
+      "structure_sha256": "8371031191de166e16027e6b9685cbf88f9dbae32f8a770f15938d56f62ad105"
+    },
+    {
+      "document_id": "eu_sale_of_goods_2019_771",
+      "raw_path": "data/raw/Sale of Goods.html",
+      "raw_sha256": "4869ed74958ae7cc50897e502272cc103502bffd1722f4ed07ca1f7188bb16ac",
+      "processed_path": "data/processed/eu_sale_of_goods_2019_771.json",
+      "processed_sha256": "3fcd40957992fa8693ecc91cdcad1ce7c23225a92a8809fc1dac20078febea77",
+      "text_sha256": "d3076ba5236d6e7aad6ba30ae8b8d4b17af14fa148f7abc42cadd96764498ad4",
+      "structure_sha256": "3a6ae97d1c9b6e947baa3238299e9848da83d8e502ea9a1c3d97babfbebb0728"
+    },
+    {
+      "document_id": "eu_unfair_practices_2005_29",
+      "raw_path": "data/raw/Unfair Commercial Practices.html",
+      "raw_sha256": "0d678d1bbd988c59b40ff6363f3d9b8370c34da7b3744395eb7147364a19c1cc",
+      "processed_path": "data/processed/eu_unfair_practices_2005_29.json",
+      "processed_sha256": "1af8f015d0fc8a62cfa40f87074fe3432d54d822b9e3c90f053151638c1fb4c3",
+      "text_sha256": "7bc191bd5b55af42a179d95d98b1e7c2aa603509941065605b4ba175eb54f10b",
+      "structure_sha256": "2ddf7b21d7f381fcdd1cb4833d864a676c26ba97ddf7b875e0449629d7178ce9"
+    },
+    {
+      "document_id": "eu_unfair_terms_93_13",
+      "raw_path": "data/raw/Unfair Terms.html",
+      "raw_sha256": "6c700ae54d53f3dc3ece8d226d18471ac905eff42a7cb4d4874e2e56acaff707",
+      "processed_path": "data/processed/eu_unfair_terms_93_13.json",
+      "processed_sha256": "0eb604ed2dad177ba4d9758607bac8fa691af95c8fac61015f8d925a17011827",
+      "text_sha256": "bf518901d6a71d5753ec99ed0b5b13025f5bf136782594a0dbaf8263e376a401",
+      "structure_sha256": "efb39df04a770128deb0d44a079d3979e912268a8d68dedfbd16c9e9d4ea02ba"
+    }
+  ]
+}

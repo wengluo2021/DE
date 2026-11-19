@@ -1,0 +1,573 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "document_id": "eu_consumer_rights_2011_83",
+      "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+      "institution": "European Parliament and Council",
+      "language": "en",
+      "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+      "eli": "http://data.europa.eu/eli/dir/2011/83/oj",
+      "celex": "32011L0083",
+      "version_type": "original_publication",
+      "source_format": "html",
+      "dates": {
+        "date_of_document": "2011-10-25",
+        "publication_date": "2011-11-22",
+        "entry_into_force_date": "2011-12-12",
+        "transposition_deadline": "2013-12-13",
+        "application_date": "2014-06-13",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "official_journal": {
+        "citation": "OJ L 304, 22.11.2011, pp. 64–88",
+        "page_header": "L 304/64"
+      },
+      "partial_end_of_validity": {
+        "date": "2021-12-31",
+        "scope": "Article 33 only",
+        "related_celex": "32019L0771",
+        "whole_act_remains_in_force": true
+      },
+      "consolidated_versions_linked_but_not_saved": [
+        {
+          "date": "2026-09-27",
+          "celex": "02011L0083-20260927",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02011L0083-20260927",
+          "marked_current_on_snapshot": true,
+          "is_saved_text": false
+        },
+        {
+          "date": "2022-05-28",
+          "celex": "02011L0083-20220528",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02011L0083-20220528",
+          "marked_current_on_snapshot": false,
+          "is_saved_text": false
+        },
+        {
+          "date": "2018-07-01",
+          "celex": "02011L0083-20180701",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02011L0083-20180701",
+          "marked_current_on_snapshot": false,
+          "is_saved_text": false
+        },
+        {
+          "date": "2011-11-22",
+          "celex": "02011L0083-20111122",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02011L0083-20111122",
+          "marked_current_on_snapshot": false,
+          "snapshot_note": "Snapshot marks this consolidated link as not concerning the English interface language.",
+          "is_saved_text": false
+        }
+      ],
+      "snapshot": {
+        "save_method": "browser_save_webpage",
+        "saved_from_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0083",
+        "saved_at": null,
+        "http_status": null,
+        "response_time": null,
+        "path": "data/raw/eu_consumer_rights_2011_83.html",
+        "sha256": "7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e",
+        "byte_size": 606472,
+        "companion_files_directory": "data/raw/eu_consumer_rights_2011_83_files"
+      },
+      "null_field_reasons": {
+        "dates.revision_date": "本快照是原始公布版 CELEX 32011L0083，不是合并修订版，没有本版本自身的修订日期。页面列出的合并修订日期单独记录，且那些文本并未保存到本文件。",
+        "dates.end_of_validity_date": "本地页面状态为 In force。官方 Cellar 对整部指令给出仍有效日期 9999-12-31，另有 2021-12-31，但其注释为第 33 条的部分失效，关联 CELEX 32019L0771。因此不把 2021-12-31 记成整部指令的失效日期。",
+        "snapshot.saved_at": "浏览器保存注释只有 URL，没有保存时间。未使用文件修改时间充当下载或保存时间。",
+        "snapshot.http_status": "页面由浏览器手动保存，快照中没有 HTTP 响应状态。",
+        "snapshot.response_time": "页面由浏览器手动保存，快照中没有服务器响应时间。"
+      },
+      "verification": {
+        "registered_at": "2026-11-19T15:16:55+08:00",
+        "registration_time_is_not_snapshot_time": true,
+        "local_snapshot": {
+          "saved_from_url": "HTML 第 2 行注释 saved from url=(0070)https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0083。0070 是该 URL 的字符长度。",
+          "title": "英文 eli:title（lang=en）以及正文标题 id=title、id=englishTitle。HTML 实体 &nbsp; 已转成普通空格。",
+          "institution": "正文标题为 European Parliament and of the Council；eli:passed_by 指向 EP 与 CONSIL；落款为 Strasbourg, 25 October 2011，分别由 European Parliament 与 Council 签署。",
+          "language": "html lang=en，公报页眉为 EN，英文表达的 eli:language 为 ENG。",
+          "celex": "eli:id_local 与 WT.z_docID 均为 32011L0083。保存 URL 的 CELEX 参数相同。",
+          "version_type": "ELI 为 http://data.europa.eu/eli/dir/2011/83/oj，/oj 表示官方公报原始文本。侧栏当前选中 Legal act，CELEX 32011L0083；合并修订版使用 02011L0083-日期，只是页面链接。",
+          "publication_date": "正文公报页眉 22.11.2011，引用 OJ L 304, 22.11.2011, pp. 64–88，eli:date_publication 为 2011-11-22。",
+          "date_of_document": "正文标题 of 25 October 2011，落款 Done at Strasbourg, 25 October 2011，eli:date_document 为 2011-10-25。",
+          "entry_into_force_date": "第 34 条规定公布后第 20 日生效。同一 HTML 的 eli:first_date_entry_in_force 为 2011-12-12，与 2011-11-22 加 20 日一致。",
+          "transposition_and_application": "第 28 条写明 2013-12-13 前完成转化，措施自 2014-06-13 起适用，并适用于该日之后订立的合同。",
+          "sha256": "按本地 HTML 文件原始字节计算，不包含同名 _files 资源目录。"
+        },
+        "official_web": {
+          "retrieved_at": "2026-11-19T15:16:55+08:00",
+          "source": "Publications Office Cellar RDF",
+          "url": "https://publications.europa.eu/resource/celex/32011L0083",
+          "cellar_work": "http://publications.europa.eu/resource/cellar/6c8e7593-7a75-4b58-b709-542f06ee7a28",
+          "agrees_with_snapshot": [
+            "CELEX 32011L0083",
+            "ELI http://data.europa.eu/eli/dir/2011/83/oj",
+            "date of document 2011-10-25",
+            "publication legacy date 2011-11-22",
+            "entry into force 2011-12-12, annotated as publication date plus 20 days under Article 34",
+            "transposition 2013-12-13, annotated as at the latest under Article 28",
+            "authors EP and CONSIL",
+            "resource_legal_in-force true",
+            "consolidated CELEX points 02011L0083-20111122, 02011L0083-20180701, 02011L0083-20220528 and 02011L0083-20260927"
+          ],
+          "partial_end_of_validity_comment": "{FIN/VAL/PART} Article 33, related act 32019L0771, date 2021-12-31",
+          "not_used_as_this_versions_date": {
+            "2021-11-28": "Cellar 将其标为后续期限，注释指向 Article 24.5 与 Article 29.1。原始公布文本的第 28 条期限是 2013-12-13，本字段不记入该原始版本的日期。",
+            "2015-01-13": "Cellar 记录创建日期，不是法规公布日期，也不是本地快照保存时间。"
+          },
+          "eurlex_html_refetch": "直接请求 EUR-Lex HTML 返回 403，未用实时网页改写本地快照中的页面文字。"
+        }
+      }
+    },
+    {
+      "document_id": "eu_sale_of_goods_2019_771",
+      "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+      "institution": "European Parliament and Council",
+      "language": "en",
+      "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+      "eli": "http://data.europa.eu/eli/dir/2019/771/oj",
+      "celex": "32019L0771",
+      "version_type": "original_publication",
+      "source_format": "html",
+      "dates": {
+        "date_of_document": "2019-05-20",
+        "publication_date": "2019-05-22",
+        "entry_into_force_date": "2019-06-11",
+        "transposition_deadline": "2021-07-01",
+        "application_date": "2022-01-01",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "official_journal": {
+        "citation": "OJ L 136, 22.5.2019, pp. 28–50",
+        "page_header": "L 136/28"
+      },
+      "later_amendment_not_saved": {
+        "eli": "http://data.europa.eu/eli/dir/2024/1799/oj",
+        "is_saved_text": false
+      },
+      "consolidated_versions_linked_but_not_saved": [
+        {
+          "date": "2026-07-31",
+          "celex": "02019L0771-20260731",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02019L0771-20260731",
+          "marked_current_on_snapshot": true,
+          "is_saved_text": false
+        },
+        {
+          "date": "2019-05-22",
+          "celex": "02019L0771-20190522",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02019L0771-20190522",
+          "marked_current_on_snapshot": false,
+          "is_saved_text": false
+        }
+      ],
+      "snapshot": {
+        "save_method": "browser_save_webpage",
+        "saved_from_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0771",
+        "saved_at": null,
+        "http_status": null,
+        "response_time": null,
+        "path": "data/raw/Sale of Goods.html",
+        "sha256": "4869ed74958ae7cc50897e502272cc103502bffd1722f4ed07ca1f7188bb16ac",
+        "byte_size": 489604,
+        "companion_files_directory": "data/raw/Sale of Goods_files"
+      },
+      "null_field_reasons": {
+        "dates.revision_date": "本快照是原始公布版 CELEX 32019L0771，不是合并修订版，没有本版本自身的修订日期。页面 eli:changed_by 指向 2024/1799，那是另一部后续法令，文本没有保存在本文件。Cellar 的 lastModificationDate 2024-01-20 是记录修改时间，不是本版本修订日期。",
+        "dates.end_of_validity_date": "本地页面状态为 In force: This act has been changed。官方 Cellar 对整部指令给出仍有效日期 9999-12-31，resource_legal_in-force 为 true。9999-12-31 是开放式有效标记，不记成实际失效日。页面所说的 changed 指后续修订，不是本原始文本已经失效。",
+        "snapshot.saved_at": "浏览器保存注释只有 URL，没有保存时间。未使用文件修改时间充当下载或保存时间。",
+        "snapshot.http_status": "页面由浏览器手动保存，快照中没有 HTTP 响应状态。",
+        "snapshot.response_time": "页面由浏览器手动保存，快照中没有服务器响应时间。"
+      },
+      "verification": {
+        "registered_at": "2026-11-19T17:50:14+08:00",
+        "registration_time_is_not_snapshot_time": true,
+        "local_snapshot": {
+          "saved_from_url": "HTML 第 2 行注释 saved from url=(0070)https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0771。0070 是该 URL 的字符长度。",
+          "title": "英文 eli:title（lang=en）以及页面 id=englishTitle、id=title。标题末尾括号内保留原文的句点。",
+          "institution": "正文标题为 European Parliament and of the Council；eli:passed_by 指向 EP 与 CONSIL；落款 Done at Brussels, 20 May 2019，分别由 European Parliament 与 Council 签署。",
+          "language": "html lang=en，英文表达的 eli:language 路径为 /eng。",
+          "celex": "eli:id_local 与 WT.z_docID 均为 32019L0771。保存 URL 的 CELEX 参数相同。",
+          "version_type": "ELI 为 http://data.europa.eu/eli/dir/2019/771/oj，/oj 表示官方公报原始文本。CELEX 32019L0771。合并文本使用 02019L0771-日期，只是页面链接。",
+          "publication_date": "eli:date_publication 为 2019-05-22。EUR-Lex 文件信息写明 OJ L 136, 22.5.2019, pp. 28–50，正文页眉为 L 136/28。正文内部引用只写起始页 p. 28。",
+          "date_of_document": "正文标题 of 20 May 2019，落款 Done at Brussels, 20 May 2019，eli:date_document 为 2019-05-20。",
+          "entry_into_force_date": "第 26 条规定公布后第 20 日生效。同一 HTML 的 eli:first_date_entry_in_force 同时列出 2019-06-11 和 2022-01-01。2019-05-22 加 20 日为 2019-06-11，记为生效日。2022-01-01 由第 26 条后一句限定为第 22 条的适用日，并与第 24 条措施适用日相同，不记成第二次生效。",
+          "transposition_and_application": "第 24 条第 1 款规定 2021-07-01 前完成转化，措施自 2022-01-01 起适用。第 24 条第 2 款规定本指令不适用于该日前订立的合同。第 23 条规定 1999/44/EC 自 2022-01-01 废止。",
+          "sha256": "按本地 HTML 文件原始字节计算，不包含同名 _files 资源目录。"
+        },
+        "official_web": {
+          "retrieved_at": "2026-11-19T17:50:14+08:00",
+          "source": "Publications Office Cellar RDF",
+          "url": "https://publications.europa.eu/resource/celex/32019L0771",
+          "http_status": 200,
+          "cellar_work": "http://publications.europa.eu/resource/cellar/28907e25-7c65-11e9-9f05-01aa75ed71a1",
+          "agrees_with_snapshot": [
+            "CELEX 32019L0771",
+            "ELI http://data.europa.eu/eli/dir/2019/771/oj",
+            "sameAs OJ JOL_2019_136_R_0002",
+            "date of document 2019-05-20",
+            "date_creation_legacy 2019-05-22",
+            "entry into force 2019-06-11, annotated DATPUB +20 days under Article 26, type EV",
+            "2022-01-01 annotated MA/PART under Article 26, type MA, not a second entry into force",
+            "national transposition deadline transmitted 2021-07-01",
+            "authors include EP and CONSIL",
+            "resource_legal_in-force true",
+            "end of validity marker 9999-12-31",
+            "consolidated CELEX points 02019L0771-20190522 and 02019L0771-20260731"
+          ],
+          "not_used_as_this_versions_date": {
+            "2022-01-01": "Cellar 把它标成第 26 条下的部分适用，不是整部指令的生效日。",
+            "2019-05-22T09:42:21+02:00": "Cellar creationDate，是记录创建时间，不是法规公布日，也不是本地快照保存时间。",
+            "2024-01-20T20:46:06+01:00": "Cellar lastModificationDate，是记录修改时间，不是本原始公布版的修订日期。"
+          },
+          "eurlex_html_refetch": "本轮没有用实时 EUR-Lex HTML 改写本地快照。日期和身份核对使用本地页面与 Publications Office Cellar RDF。"
+        }
+      }
+    },
+    {
+      "document_id": "eu_digital_content_2019_770",
+      "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+      "institution": "European Parliament and Council",
+      "language": "en",
+      "official_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+      "eli": "http://data.europa.eu/eli/dir/2019/770/oj",
+      "celex": "32019L0770",
+      "version_type": "original_publication",
+      "source_format": "html",
+      "dates": {
+        "date_of_document": "2019-05-20",
+        "publication_date": "2019-05-22",
+        "entry_into_force_date": "2019-06-11",
+        "transposition_deadline": "2021-07-01",
+        "application_date": "2022-01-01",
+        "revision_date": null,
+        "end_of_validity_date": null
+      },
+      "official_journal": {
+        "citation": "OJ L 136, 22.5.2019, pp. 1–27",
+        "page_header": "L 136/1"
+      },
+      "consolidated_versions_linked_but_not_saved": [
+        {
+          "date": "2019-05-22",
+          "celex": "02019L0770-20190522",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02019L0770-20190522",
+          "marked_current_on_snapshot": false,
+          "is_saved_text": false
+        }
+      ],
+      "snapshot": {
+        "save_method": "browser_save_webpage",
+        "saved_from_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+        "saved_at": null,
+        "http_status": null,
+        "response_time": null,
+        "path": "data/raw/Digital Content and Services.html",
+        "sha256": "83b8ec2ad8d5a293c278fcffc5add389425bd7c688f92bf110d4ce2b929826f2",
+        "byte_size": 520093,
+        "companion_files_directory": "data/raw/Digital Content and Services_files"
+      },
+      "null_field_reasons": {
+        "dates.revision_date": "本快照是原始公布版 CELEX 32019L0770，不是合并修订版，没有本版本自身的修订日期。本地页面没有 eli:changed_by。Cellar 的 lastModificationDate 2024-01-21 是记录修改时间，不是本版本修订日期。",
+        "dates.end_of_validity_date": "本地页面状态为 In force。官方 Cellar 在同一条记录中给出生效日 2019-06-11 和仍有效日期 9999-12-31，resource_legal_in-force 为 true。9999-12-31 是开放式有效标记，不记成实际失效日。",
+        "snapshot.saved_at": "浏览器保存注释只有 URL，没有保存时间。未使用文件修改时间充当下载或保存时间。",
+        "snapshot.http_status": "页面由浏览器手动保存，快照中没有 HTTP 响应状态。",
+        "snapshot.response_time": "页面由浏览器手动保存，快照中没有服务器响应时间。"
+      },
+      "verification": {
+        "registered_at": "2026-11-19T18:55:00+08:00",
+        "registration_time_is_not_snapshot_time": true,
+        "local_snapshot": {
+          "saved_from_url": "HTML 第 2 行注释 saved from url=(0045)https://eur-lex.europa.eu/eli/dir/2019/770/oj。0045 是该 URL 的字符长度。",
+          "title": "英文 eli:title（lang=en，about 以 /eng 结尾）。标题末尾括号内保留原文的句点。",
+          "institution": "正文标题为 European Parliament and of the Council；eli:passed_by 指向 EP 与 CONSIL；落款 Done at Brussels, 20 May 2019，分别由 European Parliament 与 Council 签署。",
+          "language": "html lang=en，英文表达的 eli:language 路径为 /eng。",
+          "celex": "eli:id_local 为 32019L0770。保存 URL 的 ELI 年份和编号与之对应。",
+          "version_type": "ELI 为 http://data.europa.eu/eli/dir/2019/770/oj，/oj 表示官方公报原始文本。CELEX 32019L0770。页面另有合并链接 02019L0770-20190522，不是本文件保存的正文。",
+          "publication_date": "eli:date_publication 为 2019-05-22。EUR-Lex 文件信息写明 OJ L 136, 22.5.2019, pp. 1–27，正文页眉为 L 136/1。正文内部引用写起始页 p. 1。",
+          "date_of_document": "正文标题 of 20 May 2019，落款 Done at Brussels, 20 May 2019，eli:date_document 为 2019-05-20。",
+          "entry_into_force_date": "第 26 条规定公布后第 20 日生效。eli:first_date_entry_in_force 只有 2019-06-11，与 2019-05-22 加 20 日一致。本文件没有把 2022-01-01 标成第二次生效。",
+          "transposition_and_application": "第 24 条第 1 款规定 2021-07-01 前完成转化，措施自 2022-01-01 起适用。第 24 条第 2 款规定本指令适用于 2022-01-01 起发生的数字内容或数字服务供给，但第 19 条和第 20 条只适用于该日起订立的合同。",
+          "sha256": "按本地 HTML 文件原始字节计算，不包含同名 _files 资源目录。"
+        },
+        "official_web": {
+          "retrieved_at": "2026-11-19T18:55:00+08:00",
+          "source": "Publications Office Cellar RDF",
+          "url": "https://publications.europa.eu/resource/celex/32019L0770",
+          "http_status": 200,
+          "cellar_work": "http://publications.europa.eu/resource/cellar/c426ed23-7c64-11e9-9f05-01aa75ed71a1",
+          "agrees_with_snapshot": [
+            "CELEX 32019L0770",
+            "ELI http://data.europa.eu/eli/dir/2019/770/oj",
+            "sameAs OJ JOL_2019_136_R_0001",
+            "date of document 2019-05-20",
+            "date_creation_legacy 2019-05-22",
+            "entry into force 2019-06-11, annotated DATPUB +20 days under Article 26, type EV",
+            "end of validity marker 9999-12-31 beside that entry-into-force date",
+            "resource_legal_in-force true",
+            "national transposition deadline transmitted 2021-07-01",
+            "authors include EP",
+            "consolidated CELEX point 02019L0770-20190522"
+          ],
+          "not_used_as_this_versions_date": {
+            "2022-01-01": "这是第 24 条的措施适用日和供给适用日，不是第 26 条的生效日。本地 eli:first_date_entry_in_force 没有这个日期。",
+            "2019-05-22T09:39:21+02:00": "Cellar creationDate，是记录创建时间，不是法规公布日，也不是本地快照保存时间。",
+            "2024-01-21T07:26:18+01:00": "Cellar lastModificationDate，是记录修改时间，不是本原始公布版的修订日期。"
+          },
+          "eurlex_html_refetch": "本轮没有用实时 EUR-Lex HTML 改写本地快照。日期和身份核对使用本地页面与 Publications Office Cellar RDF。"
+        }
+      }
+    },
+  {
+    "document_id": "eu_unfair_practices_2005_29",
+    "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+    "institution": "European Parliament and Council",
+    "language": "en",
+    "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+    "eli": "http://data.europa.eu/eli/dir/2005/29/oj",
+    "celex": "32005L0029",
+    "version_type": "original_publication",
+    "source_format": "html",
+    "dates": {
+      "date_of_document": "2005-05-11",
+      "publication_date": "2005-06-11",
+      "entry_into_force_date": "2005-06-12",
+      "transposition_deadline": "2007-06-12",
+      "application_date": "2007-12-12",
+      "revision_date": null,
+      "end_of_validity_date": null
+    },
+    "official_journal": {
+      "citation": "OJ L 149, 11.6.2005, pp. 22–39",
+      "page_header": "L 149/22"
+    },
+    "later_amendments_not_saved": [
+      {
+        "eli": "http://data.europa.eu/eli/dir/2006/114/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2009/22/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2011/83/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/reg/2017/2394/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2019/2161/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2023/2673/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2024/825/oj",
+        "is_saved_text": false
+      }
+    ],
+    "consolidated_versions_linked_but_not_saved": [
+      {
+        "date": "2026-09-27",
+        "celex": "02005L0029-20260927",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02005L0029-20260927",
+        "marked_current_on_snapshot": true,
+        "is_saved_text": false
+      },
+      {
+        "date": "2022-05-28",
+        "celex": "02005L0029-20220528",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02005L0029-20220528",
+        "marked_current_on_snapshot": false,
+        "is_saved_text": false
+      },
+      {
+        "date": "2005-06-12",
+        "celex": "02005L0029-20050612",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:02005L0029-20050612",
+        "marked_current_on_snapshot": false,
+        "is_saved_text": false
+      }
+    ],
+    "snapshot": {
+      "save_method": "browser_save_webpage",
+      "saved_from_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32005L0029",
+      "saved_at": null,
+      "http_status": null,
+      "response_time": null,
+      "path": "data/raw/Unfair Commercial Practices.html",
+      "sha256": "0d678d1bbd988c59b40ff6363f3d9b8370c34da7b3744395eb7147364a19c1cc",
+      "byte_size": 490851,
+      "companion_files_directory": "data/raw/Unfair Commercial Practices_files"
+    },
+    "null_field_reasons": {
+      "dates.revision_date": "本快照是原始公布版 CELEX 32005L0029，不是合并修订版，没有本版本自身的修订日期。页面 eli:changed_by 指向 2006/114、2009/22、2011/83、2017/2394、2019/2161、2023/2673 和 2024/825，那些是后续法令，文本没有保存在本文件。Cellar 的 lastModificationDate 2026-07-17 是记录修改时间，不是本版本修订日期。",
+      "dates.end_of_validity_date": "本地页面状态为 In force: This act has been changed。官方 Cellar 对 OJ 文本 JOL_2005_149_R_0022_01 给出仍有效日期 9999-12-31。9999-12-31 是开放式有效标记，不记成实际失效日。页面所说的 changed 指后续修订，不是本原始文本已经失效。",
+      "snapshot.saved_at": "浏览器保存注释只有 URL，没有保存时间。未使用文件修改时间充当下载或保存时间。",
+      "snapshot.http_status": "页面由浏览器手动保存，快照中没有 HTTP 响应状态。",
+      "snapshot.response_time": "页面由浏览器手动保存，快照中没有服务器响应时间。"
+    },
+    "verification": {
+      "registered_at": "2026-11-19T19:15:38+08:00",
+      "registration_time_is_not_snapshot_time": true,
+      "local_snapshot": {
+        "saved_from_url": "HTML 第 2 行注释 saved from url=(0070)https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32005L0029。0070 是该 URL 的字符长度。",
+        "title": "英文 eli:title（lang=en）。可见标题在 (Text with EEA relevance) 前有三个空格，本字段保留这三个空格和弯引号。",
+        "institution": "正文标题为 European Parliament and of the Council。落款 Done at Strasbourg, 11 May 2005，分别由 European Parliament 与 Council 签署。",
+        "language": "html lang=en，英文表达的 eli:language 路径为 /eng。",
+        "celex": "eli:id_local 为 32005L0029。保存 URL 中的 CELEX 与之相同。",
+        "version_type": "ELI 为 http://data.europa.eu/eli/dir/2005/29/oj，/oj 表示官方公报原始文本。CELEX 32005L0029。页面另有合并链接 02005L0029-20260927、02005L0029-20220528 和 02005L0029-20050612，都不是本文件保存的正文。",
+        "publication_date": "eli:date_publication 为 2005-06-11。EUR-Lex 文件信息写明 OJ L 149, 11.6.2005, pp. 22–39，正文页眉为 L 149/22。",
+        "date_of_document": "正文标题 of 11 May 2005，落款 Done at Strasbourg, 11 May 2005，eli:date_document 为 2005-05-11。",
+        "entry_into_force_date": "第 20 条规定公布后次日生效。eli:first_date_entry_in_force 同时有 2005-06-12 和 2007-12-12。本字段只记录 2005-06-12。",
+        "transposition_and_application": "第 19 条规定 2007-06-12 前完成转化，措施自 2007-12-12 起适用。2007-12-12 是措施适用日，不是第 20 条的生效日。",
+        "sha256": "按本地 HTML 文件原始字节计算，不包含同名 _files 资源目录。"
+      },
+      "official_web": {
+        "retrieved_at": "2026-11-19T19:15:38+08:00",
+        "source": "Publications Office Cellar RDF",
+        "url": "https://publications.europa.eu/resource/celex/32005L0029",
+        "http_status": 200,
+        "cellar_work": "http://publications.europa.eu/resource/cellar/7fecf696-5eda-47b3-b838-0202aca4f2dd",
+        "agrees_with_snapshot": [
+          "CELEX 32005L0029",
+          "ELI http://data.europa.eu/eli/dir/2005/29/oj",
+          "sameAs OJ JOL_2005_149_R_0022_01",
+          "date of document 2005-05-11",
+          "entry into force 2005-06-12, annotated DATPUB +1 day under Article 20, type EV",
+          "transposition 2007-06-12, annotated at the latest under Article 19",
+          "application 2007-12-12, annotated under Article 19, type MA",
+          "OJ expression end-of-validity marker 9999-12-31",
+          "authors include EP and CONSIL",
+          "consolidated CELEX points 02005L0029-20050612, 02005L0029-20220528 and 02005L0029-20260927"
+        ],
+        "not_used_as_this_versions_date": {
+          "2007-12-12": "Cellar 把它放在 resource_legal_date_entry-into-force 上，但类型是 MA，注释指向第 19 条。本地第 19 条写的是措施适用日，不是第 20 条的生效日。",
+          "2005-06-16": "Cellar work_date_creation_legacy，是记录或公报生产遗留日期，不是 OJ 公布日 2005-06-11，也不是本地快照保存时间。",
+          "2026-07-17T10:54:28+02:00": "Cellar lastModificationDate，是记录修改时间，不是本原始公布版的修订日期。"
+        },
+        "eurlex_html_refetch": "本轮没有用实时 EUR-Lex HTML 改写本地快照。日期和身份核对使用本地页面与 Publications Office Cellar RDF。"
+      }
+    }
+  },
+  {
+    "document_id": "eu_unfair_terms_93_13",
+    "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+    "institution": "Council of the European Communities",
+    "language": "en",
+    "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+    "eli": "http://data.europa.eu/eli/dir/1993/13/oj",
+    "celex": "31993L0013",
+    "version_type": "original_publication",
+    "source_format": "html",
+    "dates": {
+      "date_of_document": "1993-04-05",
+      "publication_date": "1993-04-21",
+      "entry_into_force_date": "1993-04-16",
+      "transposition_deadline": "1994-12-31",
+      "application_date": null,
+      "revision_date": null,
+      "end_of_validity_date": null
+    },
+    "official_journal": {
+      "citation": "OJ L 95, 21.4.1993, pp. 29–34",
+      "page_header": "L 95/29"
+    },
+    "later_amendments_not_saved": [
+      {
+        "eli": "http://data.europa.eu/eli/dir/2011/83/oj",
+        "is_saved_text": false
+      },
+      {
+        "eli": "http://data.europa.eu/eli/dir/2019/2161/oj",
+        "is_saved_text": false
+      }
+    ],
+    "consolidated_versions_linked_but_not_saved": [
+      {
+        "date": "2022-05-28",
+        "celex": "01993L0013-20220528",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:01993L0013-20220528",
+        "marked_current_on_snapshot": true,
+        "is_saved_text": false
+      },
+      {
+        "date": "2011-12-12",
+        "celex": "01993L0013-20111212",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:01993L0013-20111212",
+        "marked_current_on_snapshot": false,
+        "is_saved_text": false
+      }
+    ],
+    "snapshot": {
+      "save_method": "browser_save_webpage",
+      "saved_from_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A31993L0013",
+      "saved_at": null,
+      "http_status": null,
+      "response_time": null,
+      "path": "data/raw/Unfair Terms.html",
+      "sha256": "6c700ae54d53f3dc3ece8d226d18471ac905eff42a7cb4d4874e2e56acaff707",
+      "byte_size": 312379,
+      "companion_files_directory": "data/raw/Unfair Terms_files"
+    },
+    "null_field_reasons": {
+      "dates.application_date": "第 10 条只规定成员国措施适用于 1994 年 12 月 31 日之后订立的合同，没有给出指令本身的单一适用日。不把“after 31 December 1994”改写成 1995-01-01。",
+      "dates.revision_date": "本快照是原始公布版 CELEX 31993L0013，不是合并修订版，没有本版本自身的修订日期。页面 eli:changed_by 指向 2011/83 和 2019/2161，那些是后续法令，文本没有保存在本文件。Cellar lastModificationDate 2024-11-27 是记录修改时间，不是本版本修订日期。",
+      "dates.end_of_validity_date": "本地页面状态为 In force: This act has been changed。官方 Cellar 对 OJ 文本 JOL_1993_095_R_0029_030 给出仍有效日期 9999-12-31，resource_legal_in-force 为 true。9999-12-31 是开放式有效标记，不记成实际失效日。页面所说的 changed 指后续修订，不是本原始文本已经失效。",
+      "snapshot.saved_at": "浏览器保存注释只有 URL，没有保存时间。未使用文件修改时间充当下载或保存时间。",
+      "snapshot.http_status": "页面由浏览器手动保存，快照中没有 HTTP 响应状态。",
+      "snapshot.response_time": "页面由浏览器手动保存，快照中没有服务器响应时间。"
+    },
+    "verification": {
+      "registered_at": "2026-11-19T19:39:18+08:00",
+      "registration_time_is_not_snapshot_time": true,
+      "local_snapshot": {
+        "saved_from_url": "HTML 第 2 行注释 saved from url=(0070)https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A31993L0013。0070 是该 URL 的字符长度。",
+        "title": "英文 eli:title（lang=en）与页面英文标题一致：Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts。正文标题分三行，没有 EEA 附注。",
+        "institution": "eli:passed_by 只有 CONSIL。正文标题是 COUNCIL DIRECTIVE，序言起句是 THE COUNCIL OF THE EUROPEAN COMMUNITIES，落款是 For the Council。欧洲议会只出现在 In cooperation with the European Parliament，不是共同制定机构。",
+        "language": "html lang=en，英文表达的 eli:language 路径为 /eng。",
+        "celex": "eli:id_local 为 31993L0013。保存 URL 中的 CELEX 与之相同。",
+        "version_type": "ELI 为 http://data.europa.eu/eli/dir/1993/13/oj，/oj 表示官方公报原始文本。页面另有合并链接 01993L0013-20220528 和 01993L0013-20111212，都不是本文件保存的正文。",
+        "publication_date": "eli:date_publication 为 1993-04-21。文件信息写明 OJ L 95, 21.4.1993, pp. 29–34。正文页眉为 L 95/29，清洗时会去掉页眉。",
+        "date_of_document": "正文标题 of 5 April 1993，落款 Done at Luxembourg, 5 April 1993，eli:date_document 为 1993-04-05。",
+        "entry_into_force_date": "正文第 1 至第 11 条没有“本指令自某日生效”的句子。eli:first_date_entry_in_force 只有 1993-04-16，早于公布日 1993-04-21。Cellar 对同一天的注释是 DATNOT，并同时写入 date_notification。本字段记录这项通知日所对应的生效日，不套用后来指令的公布后第 N 日规则。",
+        "transposition_and_application": "第 10 条第 1 款规定不迟于 1994 年 12 月 31 日转化。Cellar 注释为 AU+TARD、第 10 条，transposition_deadline_transmitted 为 1994-12-31。同一条第 2 句只规定措施适用于该日之后订立的合同，因此 application_date 保持 null。",
+        "sha256": "按本地 HTML 文件原始字节计算，不包含同名 _files 资源目录。"
+      },
+      "official_web": {
+        "retrieved_at": "2026-11-19T19:39:18+08:00",
+        "source": "Publications Office Cellar RDF",
+        "url": "https://publications.europa.eu/resource/celex/31993L0013",
+        "http_status": 200,
+        "cellar_work": "http://publications.europa.eu/resource/cellar/954c3cd9-b2fa-47ae-a1f6-b6e62a488ad3",
+        "agrees_with_snapshot": [
+          "CELEX 31993L0013",
+          "ELI http://data.europa.eu/eli/dir/1993/13/oj",
+          "sameAs OJ JOL_1993_095_R_0029_030",
+          "date of document 1993-04-05",
+          "publication embargo and date_creation_legacy 1993-04-21",
+          "entry into force and notification 1993-04-16, annotated DATNOT",
+          "transposition 1994-12-31, annotated at the latest under Article 10",
+          "OJ expression end-of-validity marker 9999-12-31",
+          "resource_legal_in-force true",
+          "author CONSIL only",
+          "consolidated CELEX points 01993L0013-20111212 and 01993L0013-20220528"
+        ],
+        "not_used_as_this_versions_date": {
+          "1993-04-16": "它早于公报公布日。Cellar 注释是 DATNOT，同时是 date_notification。正文没有对应的生效句子。这里只把它作为官方记录的通知生效日，不把它解释成公布日或适用日。",
+          "1993-04-21": "work_date_creation_legacy 与公布日相同，是公报生产遗留日期，不是本地快照保存时间。",
+          "2024-11-27T13:56:57.035+01:00": "Cellar lastModificationDate，是记录修改时间，不是本原始公布版的修订日期。"
+        },
+        "eurlex_html_refetch": "本轮没有用实时 EUR-Lex HTML 改写本地快照。日期和身份核对使用本地页面与 Publications Office Cellar RDF。"
+      }
+    }
+  }
+  ]
+}

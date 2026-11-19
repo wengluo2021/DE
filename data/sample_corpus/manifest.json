@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "kind": "integration_sample",
+  "corpus_version": "41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50",
+  "parser_version": "eurlex_html_v1",
+  "documents": [
+    {
+      "document_id": "eu_consumer_rights_2011_83",
+      "raw_path": "data/raw/eu_consumer_rights_2011_83.html",
+      "raw_sha256": "7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e",
+      "processed_path": "data/processed/eu_consumer_rights_2011_83.json",
+      "processed_sha256": "1c5c2ae09d58423bc63d084390b25030051495b7b4fb3aeb056e6335f506290f",
+      "text_sha256": "75acf22af53bf1878fe2750757b5ecd5c1230236aaab4fc543c1d029b3bf5689",
+      "structure_sha256": "128d842ba9798cf099b4c65d5401ad0a0324f5d5f1efbfe92f139c3fcb82387a"
+    }
+  ]
+}
