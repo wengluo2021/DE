@@ -1,0 +1,23 @@
+{
+  "state": "passed",
+  "batch": 2,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 16,
+  "advisory_support_counts": {
+    "supported": 13,
+    "needs_human_judgment": 1,
+    "not_supported": 2
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-crd-withdrawal-digital-content",
+  "next_question_offset": 4,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-02.json": "3d56239ac5944fdaf078bcb62032c8fdb82e311d65f55a1f1b70ea52f5a1b3de",
+    "docs/M6辅助预审02_第3至4题.md": "602b16b30bc2328db54f8d7ae9706d65cb5a704fd442f3e3a537642198fac083"
+  }
+}
