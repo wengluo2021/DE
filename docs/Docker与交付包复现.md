@@ -44,7 +44,7 @@ Dockerfile 固定 Python3.13.11，先从 PyTorch 官方 CPU 索引安装 `torch=
 
 实际Linux解析还发现uvicorn[standard]需要Linux专用uvloop，因此补充 `requirements-linux.txt` 锁定uvloop0.23.0。Docker先安装统一锁、再安装该补充锁；预检在Linux同时核对两份锁，Windows不安装uvloop。最终软件版本以实际安装记录和镜像ID为准，不能把Windows的依赖数量直接视作Linux全部依赖。
 
-`.dockerignore` 使用白名单，允许程序/配置、测试及冻结的 raw/processed/eval/manifest；继续排除模型、凭据文件、数据库、索引、结果和缓存。`data/.gitkeep` 只让没有正式输入时目录存在，不是法规或题集。Docker 的上下文规则见[官方说明](https://docs.docker.com/build/concepts/context/)。
+`.dockerignore` 在目录例外后显式排除 root/formal_corpus 的运行目录与所有 *.lock，防止读取正在使用的锁、数据库或原生索引。它使用白名单，允许程序/配置、测试及冻结的 raw/processed/eval/manifest；继续排除模型、凭据文件、数据库、索引、结果和缓存。`data/.gitkeep` 只让没有正式输入时目录存在，不是法规或题集。Docker 的上下文规则见[官方说明](https://docs.docker.com/build/concepts/context/)。
 
 当前电脑 Windows PATH 没有 Docker，已发现并启动现有 WSL `ubuntu20` 的 Docker24.0.6 引擎。本机可用 `wsl.exe -d ubuntu20 -u root -- docker ...`，挂载的 Windows 路径先通过同一 WSL 的 `wslpath -a` 转换。不要因为 Windows 命令未找到就重复安装 Docker。独立验收镜像使用随机后缀，不覆盖旧 `de`；不要停止不属于本任务的容器。
 
@@ -64,11 +64,11 @@ docker run --name DE -d -p 127.0.0.1:8766:8000 \
   -e DERAG_ENV_FILE=/run/secrets/llm.env \
   --mount type=bind,source=/ABS/PATH/private.env,target=/run/secrets/llm.env,readonly \
   --mount type=bind,source=/ABS/PATH/models/embedding,target=/app/models/embedding,readonly \
-  --mount type=volume,source=derag-sqlite,target=/app/data/sqlite \
-  --mount type=volume,source=derag-chroma,target=/app/data/chroma \
-  --mount type=volume,source=derag-chunks,target=/app/data/chunks \
-  --mount type=volume,source=derag-indexes,target=/app/data/indexes \
-  --mount type=volume,source=derag-runs,target=/app/data/runs \
+  --mount type=volume,source=derag-sqlite,target=/app/data/formal_corpus/sqlite \
+  --mount type=volume,source=derag-chroma,target=/app/data/formal_corpus/chroma \
+  --mount type=volume,source=derag-chunks,target=/app/data/formal_corpus/chunks \
+  --mount type=volume,source=derag-indexes,target=/app/data/formal_corpus/indexes \
+  --mount type=volume,source=derag-runs,target=/app/data/formal_corpus/runs \
   de
 ```
 
@@ -77,7 +77,7 @@ docker run --name DE -d -p 127.0.0.1:8766:8000 \
 ## 5. 正式容器验收顺序
 
 ```bash
-docker exec DE python -m scripts.validate_data
+docker exec DE python -m scripts.validate_data --config config/experiment.delivery.json
 docker exec DE python -m scripts.build_indexes
 docker exec DE python -m scripts.preflight
 ```

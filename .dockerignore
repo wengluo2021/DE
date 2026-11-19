@@ -51,4 +51,19 @@
 **/*.env.*
 **/*.sqlite3
 **/*.sqlite3-*
+**/*.lock
+# Directory exceptions above permit traversal; explicitly deny runtime trees
+# afterward so repository builds never read a live database or native index.
+data/chroma/
+data/chunks/
+data/indexes/
+data/sqlite/
+data/runs/
+data/b-fixtures/
+data/b-clean-verification/
+data/formal_corpus/chroma/
+data/formal_corpus/chunks/
+data/formal_corpus/indexes/
+data/formal_corpus/sqlite/
+data/formal_corpus/runs/
 !.env.example

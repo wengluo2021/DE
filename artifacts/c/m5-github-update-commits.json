@@ -1,0 +1,30 @@
+{
+  "remote": "https://github.com/wengluo2021/DE",
+  "main": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "changes": [
+    {
+      "commit": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+      "change": "assignment introduction"
+    },
+    {
+      "commit": "6ea6a1dc4cf33b38cdce7ecafcec664ddf61a70c",
+      "change": "A delivery and development notes"
+    },
+    {
+      "commit": "16ab74f464ab297a21fd4aadfb469dfce322f433",
+      "change": "A corpus processing and frozen gold"
+    },
+    {
+      "commit": "fd41ae03101dd2b4de06ea2f88bdcbe7e26bf9bb",
+      "change": "frozen byte attributes"
+    },
+    {
+      "commit": "8ecb9b77a6bb5924f8ff195cfb3c94ab976d0515",
+      "change": "A HTML-cleaning dependencies"
+    },
+    {
+      "commit": "a1bc1efa12149ef0392fa43aec4aa31dd3e89c97",
+      "change": "line-ending rules"
+    }
+  ]
+}

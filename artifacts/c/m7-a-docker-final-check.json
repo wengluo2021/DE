@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "scope": "Linux A frozen-data adapter regression, runtime and synthetic CPU smoke; no live generation",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032",
+  "test_image": "derag-c-m7-check:90f59e7032",
+  "runtime_image": "derag-c-m7-runtime:90f59e7032",
+  "commands": [
+    {
+      "phase": "build-test",
+      "exit_code": 0,
+      "seconds": 283.321,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032\\build-test.log"
+    },
+    {
+      "phase": "tests",
+      "exit_code": 0,
+      "seconds": 69.761,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032\\tests.log"
+    },
+    {
+      "phase": "build-runtime",
+      "exit_code": 0,
+      "seconds": 3.305,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032\\build-runtime.log"
+    },
+    {
+      "phase": "runtime-http",
+      "exit_code": 0,
+      "seconds": 5.102,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032\\runtime-http.log"
+    },
+    {
+      "phase": "real-embedding",
+      "exit_code": 0,
+      "seconds": 95.307,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-90f59e7032\\real-embedding.log"
+    }
+  ],
+  "build_transport": "temporary WSL loopback relay to existing Windows loopback proxy; no TLS interception",
+  "test_image_id": "sha256:d6615d52edc0f8fcae6b02f66154a19e3b072154d5131a2616a23e3e022c2234",
+  "tests": {
+    "tests": "401",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "1",
+    "time": "66.856"
+  },
+  "runtime_image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+  "real_embedding": {
+    "state": "passed",
+    "packages": {
+      "torch": "2.15.0+cpu",
+      "sentence-transformers": "6.3.0",
+      "transformers": "5.23.0",
+      "chromadb": "1.5.9"
+    },
+    "checks": 12,
+    "device": "cpu",
+    "dimension": 1024,
+    "elapsed_ms": 91838.751
+  },
+  "temporary_loopback_relay_stopped": true,
+  "owned_containers_cleaned": [
+    {
+      "container": "derag-c-tests-90f59e7032",
+      "removed": true
+    },
+    {
+      "container": "derag-c-runtime-http-90f59e7032",
+      "removed": true
+    },
+    {
+      "container": "derag-c-real-embedding-90f59e7032",
+      "removed": true
+    }
+  ],
+  "own_container_count": 3
+}
