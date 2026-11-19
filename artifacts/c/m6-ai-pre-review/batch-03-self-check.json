@@ -1,0 +1,23 @@
+{
+  "state": "passed",
+  "batch": 3,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 19,
+  "advisory_support_counts": {
+    "needs_human_judgment": 4,
+    "supported": 13,
+    "not_supported": 2
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-sgd-two-year-liability",
+  "next_question_offset": 6,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-03.json": "4d1a61fee026221d12a49b27fac5c26f44d96955fb73a942542dbb2a39cd305c",
+    "docs/M6辅助预审03_第5至6题.md": "655567b3be28faa8f0963d177fa11e10ce7d592984dbb9f3ef9367ee209197dc"
+  }
+}
