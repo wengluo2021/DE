@@ -7,3 +7,6 @@ scripts/** text eol=lf
 # Frozen A source snapshots, exports and gold keep the exact committed bytes.
 data/** -text
 artifacts/a_review/** -text
+
+# Upstream review/provenance snapshots retain their original byte-level SHA.
+docs/provenance/** -text

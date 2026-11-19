@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "source_commit": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "upstream_snapshot_count": 13,
+  "staged_git_bytes_match_upstream_and_manifest": true,
+  "gitattributes_preserves_snapshot_bytes": true,
+  "original_frozen_A_files_changed": false,
+  "model_calls": 0
+}
