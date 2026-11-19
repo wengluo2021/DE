@@ -24,6 +24,14 @@
 !data/
 !data/.gitkeep
 !data/manifest.json
+!data/corpus_manifest.json
+!data/sources.json
+!data/formal_corpus/
+!data/formal_corpus/manifest.json
+!data/formal_corpus/raw/
+!data/formal_corpus/raw/**
+!data/formal_corpus/processed/
+!data/formal_corpus/processed/**
 !data/raw/
 !data/raw/**
 !data/processed/

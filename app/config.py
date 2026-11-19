@@ -92,6 +92,9 @@ class ExperimentSettings(ConfigModel):
     conditions: tuple[str, ...]
     top_k: Literal[5] = 5
     data_dir: Path
+    gold_dir: Path | None = None
+    structure_dir: Path | None = None
+    input_adapter: Literal["canonical-v1", "eurlex-a-v1"] = "canonical-v1"
     embedding: EmbeddingSettings
     retrieval: RetrievalSettings
     generation: GenerationSettings
@@ -119,6 +122,10 @@ class ExperimentSettings(ConfigModel):
             raise ValueError("formal mode cannot use mock generation")
         return self
 
+    @property
+    def gold_root(self):
+        return self.gold_dir if self.gold_dir is not None else self.data_dir / "eval"
+
 
 @dataclass(frozen=True)
 class Settings:
@@ -144,6 +151,11 @@ class Settings:
     def experiment_fingerprint(self):
         result = self.public_snapshot()
         result.pop("data_dir")
+        result.pop("gold_dir")
+        result.pop("structure_dir")
+        # Preserve fingerprints of the already validated canonical experiments.
+        if result["input_adapter"] == "canonical-v1":
+            result.pop("input_adapter")
         result["embedding"].pop("model_dir")
         result["generation"].pop("prompt_path")
         result["generation"].pop("api_key_configured")
@@ -205,6 +217,9 @@ def load_settings(config_path=None, *, project_root=ROOT, env_file=None,
         _merge(data, overrides)
     # Resolve paths before model validation and keep errors free of input values.
     data["data_dir"] = _path(data.get("data_dir", "data"), root)
+    for key in ("gold_dir", "structure_dir"):
+        if data.get(key) is not None:
+            data[key] = _path(data[key], root)
     data.setdefault("embedding", {})["model_dir"] = _path(data.get("embedding", {}).get("model_dir", "models/embedding"), root)
     data.setdefault("generation", {})["prompt_path"] = _path(data.get("generation", {}).get("prompt_path", "app/qa/prompts/answer.txt"), root)
     try:

@@ -190,7 +190,7 @@
     if (returnFocus && returnFocus.isConnected) returnFocus.focus();
   }
   function evidenceHtml(citation,cv) {
-    return '<section class="evidence-card"><h3>'+esc(citation.title || citation.document_id)+'</h3><p>'+esc((citation.article_labels || [citation.article_id]).filter(Boolean).join("、"))+
+    return '<section class="evidence-card"><h3>'+esc(citation.title || citation.document_id)+'</h3><p>'+esc((citation.article_labels || [citation.article_id || citation.structure_id]).filter(Boolean).join("、"))+
       ' · ['+esc(citation.start)+', '+esc(citation.end)+')</p>'+block(citation.text)+
       '<p>'+sourceLink(citation.source_url)+'</p><button class="button" type="button" data-source="'+esc(citation.document_id)+'" data-corpus="'+esc(cv)+'" data-start="'+esc(citation.start)+'" data-end="'+esc(citation.end)+'">查看冻结原文</button></section>';
   }
@@ -329,7 +329,7 @@
     const score=draftScore(row);
     let html='<p>实验 '+esc(state.run.run_id)+'</p><p>'+esc(row.gold.question)+'</p><p>'+esc(row.condition)+' · '+esc(statuses[row.state])+'</p><h3>系统答案</h3>'+
       (row.result ? answerHtml(row.result) : block(errorText(row.error || {message:"尚未处理"})))+
-      '<h3>参考答案与必要事实（不发送给模型）</h3>'+block(row.gold.reference_answer || row.gold.unanswerable_reason)+
+      '<h3>参考答案与必要事实（不发送给模型）</h3>'+block(row.gold.reference_answer || row.gold.refusal_reference || row.gold.unanswerable_reason)+
       block(row.gold.key_facts.join("\n"))+'<h3>标准证据</h3>'+row.gold.evidence.map(e=>evidenceHtml(e,state.run.corpus_version)).join("")+
       '<h3>本轮检索证据</h3>'+((row.trace && row.trace.retrieval && row.trace.retrieval.hits) || []).map(h=>'<p>['+h.rank+']</p>'+evidenceHtml(h,state.run.corpus_version)).join("");
     if (row.result && row.state==="completed") {

@@ -2,7 +2,6 @@ FROM python:3.13.11-slim-bookworm AS runtime
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    DERAG_DATA_DIR=/app/data \
     DERAG_MODEL_DIR=/app/models/embedding \
     HF_HUB_OFFLINE=1 \
     TRANSFORMERS_OFFLINE=1 \

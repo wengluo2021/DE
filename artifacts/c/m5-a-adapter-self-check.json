@@ -1,0 +1,8 @@
+{
+  "state": "passed",
+  "frozen_file_count": 45,
+  "unchanged": true,
+  "source_commit": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "external_model_calls": 0,
+  "full_tests": 401
+}

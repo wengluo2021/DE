@@ -10,6 +10,7 @@ from uuid import uuid4
 from pydantic import ValidationError
 
 from app.config import Settings
+from app.data.document_view import document_view
 from app.contracts import (AskRequest, AskResult, Citation, Document, GenerationInfo,
                            INSUFFICIENT_ANSWER, ModelOutput, SearchResult, TimingInfo, render_answer)
 from .client import GenerationResponse, redact
@@ -123,7 +124,7 @@ class QAService:
             raise QAError("VERSION_MISMATCH", "Retrieved evidence belongs to another condition or index version", 409)
         if retrieved.hits:
             try:
-                docs = [Document.model_validate(d.model_dump() if isinstance(d, Document) else d)
+                docs = [document_view(d)
                         for d in self.document_loader(request.corpus_version)]
                 if len({d.document_id for d in docs}) != len(docs):
                     raise ValueError("duplicate document")

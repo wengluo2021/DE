@@ -4,7 +4,7 @@ import json
 from pathlib import Path,PurePosixPath,PureWindowsPath
 import re
 
-from app.contracts import Document
+from .document_view import document_view
 from app.qa.errors import QAError
 
 
@@ -78,7 +78,7 @@ def load_corpus(data_dir,corpus_version,*,formal=False):
                     raise ValueError("Frozen file hash differs")
                 files[key]=path
             data=read_frozen_json(files["processed"])
-            doc=Document.model_validate(data)
+            doc=document_view(data)
             if (doc.document_id!=entry["document_id"] or doc.corpus_version!=corpus_version
                     or doc.raw_path!=entry["raw_path"] or doc.raw_sha256!=entry["raw_sha256"]
                     or hashlib.sha256(doc.text.encode("utf-8")).hexdigest()!=_sha(entry["text_sha256"])

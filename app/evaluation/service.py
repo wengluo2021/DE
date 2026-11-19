@@ -6,7 +6,8 @@ from app.contracts import AskRequest,Document
 from app.qa.client import ChatCompletionsClient
 from app.qa.errors import QAError
 from app.qa.persistent import PersistentQA
-from .data import load_gold,validate_cases
+from .data import load_gold,validate_cases,source_structures
+from app.data.document_view import document_view
 from .repository import EvaluationAskStore
 
 
@@ -39,9 +40,9 @@ class EvaluationService:
             if dataset.synthetic and (not self.test_mode or cfg.mode=="formal"):
                 raise QAError("TEST_DATA_FORBIDDEN","Synthetic cases cannot enter formal evaluation",409)
             try:
-                docs=[Document.model_validate(d.model_dump() if isinstance(d,Document) else d)
-                      for d in service.document_loader(dataset.corpus_version)]
-                validate_cases(dataset.cases,docs)
+                originals=list(service.document_loader(dataset.corpus_version))
+                docs=[document_view(d) for d in originals]
+                validate_cases(dataset.cases,docs,source_structures(self.settings,originals))
                 if sum(c.answerable for c in dataset.cases)!=24 or len(dataset.cases)!=30:
                     raise ValueError("Expected 24/6 frozen cases")
                 if any(d.corpus_version!=dataset.corpus_version for d in docs):

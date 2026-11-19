@@ -59,20 +59,36 @@ def prepare_delivery(output,*,config_path=None,synthetic=False,project_root=ROOT
         if marked:
             raise QAError("SYNTHETIC_DELIVERY_FORBIDDEN","Marked synthetic input cannot become a formal delivery",409)
     sources=dict(_source_files(root))
-    inputs={"manifest.json":cfg.data_dir/"manifest.json","eval/manifest.json":cfg.data_dir/"eval/manifest.json",
-            "eval/gold.jsonl":cfg.data_dir/"eval/gold.jsonl"}
+    a_export=cfg.input_adapter=="eurlex-a-v1"
+    corpus_prefix="data/formal_corpus" if a_export else "data"
+    inputs={corpus_prefix+"/manifest.json":cfg.data_dir/"manifest.json",
+            "data/eval/manifest.json":cfg.gold_root/"manifest.json",
+            "data/eval/gold.jsonl":cfg.gold_root/"gold.jsonl"}
     for entry in manifest["documents"]:
         for key in ("raw_path","processed_path"):
             path=frozen_path(cfg.data_dir,entry[key])
             relative=path.relative_to(cfg.data_dir.resolve()).as_posix()
             if not relative.startswith(("raw/","processed/")):
                 raise QAError("INVALID_DELIVERY_LAYOUT","Snapshots must use raw/ and processed/ for portable delivery",409)
-            inputs[relative]=path
-    for relative,path in inputs.items():sources["data/"+relative]=path
+            inputs[corpus_prefix+"/"+relative]=path
+            if a_export and key=="raw_path":inputs["data/"+relative]=path
+        if a_export:
+            identifier=entry["document_id"]
+            inputs["data/processed/"+identifier+".json"]=frozen_path(cfg.structure_dir,identifier+".json")
+            text_path=frozen_path(cfg.structure_dir,identifier+".txt")
+            if hashlib.sha256(text_path.read_bytes()).hexdigest()!=entry["text_sha256"]:
+                raise QAError("INVALID_DELIVERY_LAYOUT","Accepted text SHA differs from the frozen corpus",409)
+            inputs["data/processed/"+identifier+".txt"]=text_path
+    if a_export:
+        for name in ("sources.json","corpus_manifest.json"):
+            inputs["data/"+name]=frozen_path(cfg.structure_dir.parent,name)
+    sources.update(inputs)
     # Frozen input bytes are copied exactly; only the new portable configuration is serialized.
     payload={relative:path.read_bytes() for relative,path in sources.items()}
     portable=cfg.model_dump(mode="json")
-    portable["data_dir"]="data"
+    portable["data_dir"]=corpus_prefix
+    portable["gold_dir"]="data/eval"
+    portable["structure_dir"]="data/processed" if a_export else None
     portable["embedding"]["model_dir"]="models/embedding"
     portable["generation"]["prompt_path"]="config/prompt.delivery.txt"
     payload["config/prompt.delivery.txt"]=cfg.generation.prompt_path.read_bytes()

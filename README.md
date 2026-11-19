@@ -2,19 +2,19 @@
 
 ## C 阶段开发入口
 
-C 的 M0–M4已落地：契约配置、引用问答、服务端保存/任务、四组评估/评分/导出、四页真实API接入。M5已接入B生产检索入口、统一依赖、A冻结数据校验、配置生成和预检；当前验收状态见[阶段交接](docs/handoffs)，日期操作见docs/worklogs。正式资料与30题仍待A交付，合成联调不代表课程成绩。按[三方对接与正式资料接入](docs/三方对接与正式资料接入.md)继续。
+C 的 M0–M4已落地：契约配置、引用问答、服务端保存/任务、四组评估/评分/导出、四页真实API接入。M5已接入B生产检索入口、统一依赖、A冻结数据校验、配置生成和预检；当前验收状态见[阶段交接](docs/handoffs)，日期操作见docs/worklogs。2026-11-20已合入A正式5法规/121主条文和24+6题，新配置为config/experiment.formal-a.json；A丰富字段和附件证据已适配，完整401项检查通过。正式建库/问答进度见最新交接，合成联调不代表课程成绩。按[三方对接与正式资料接入](docs/三方对接与正式资料接入.md)继续。
 
 使用Python3.13.11和项目`.venv`。完整运行安装 `requirements.txt`（103个固定运行包）；开发/全部自动检查安装 `requirements-dev.txt`。原 `requirements-b*.txt`、`requirements-c*.txt`仍保留用于独立模块开发；C轻量入口不包含真实Chroma/embedding。已有环境和模型不必重建或重新下载。
 
-Linux另安装`requirements-linux.txt`中的固定平台补充；CPU构建使用同版`torch2.15.0+cpu`。新版容器、源码/冻结数据交付包与SHA校验步骤见[Docker与交付包复现](docs/Docker与交付包复现.md)。当前是否已实际构建和验证，以最新M7阶段交接与证据为准；正式数据和120项评分仍待A/M6，不能因容器能启动就称最终交付完成。
+Linux另安装`requirements-linux.txt`中的固定平台补充；CPU构建使用同版`torch2.15.0+cpu`。新版容器、源码/冻结数据交付包与SHA校验步骤见[Docker与交付包复现](docs/Docker与交付包复现.md)。当前是否已实际构建和验证，以最新M7阶段交接与证据为准；最新A适配的镜像重验与120项正式评分仍待后续阶段，不能因容器能启动就称最终交付完成。
 
-`config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式数据由A交付。`DERAG_CONFIG`选择实验JSON，`DERAG_ENV_FILE`选择本地私密env，`DERAG_DATA_DIR`和`DERAG_MODEL_DIR`选择路径，`LLM_TRANSPORT`明确选择curl/httpx。路径从项目根解析，配置不污染全局环境；真实Key不在仓库中。`scripts.prepare_config`只在A输入全部校验后生成新的formal配置；`scripts.validate_data`只读校验；`scripts.preflight`不下载、建库或发模型请求。
+`config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式运行需显式选config/experiment.formal-a.json。`DERAG_CONFIG`选择实验JSON，`DERAG_ENV_FILE`选择本地私密env，`DERAG_DATA_DIR`和`DERAG_MODEL_DIR`选择路径，`LLM_TRANSPORT`明确选择curl/httpx。路径从项目根解析，配置不污染全局环境；真实Key不在仓库中。`scripts.prepare_config`只在A输入全部校验后生成新的formal配置；`scripts.validate_data --config config/experiment.formal-a.json`只读C集成校验，A的`--scope corpus/eval`保留；`scripts.preflight`不下载、建库或发模型请求。
 
 无网络问答核心检查：`.venv/Scripts/python.exe -m scripts.ask --fixtures --mock-llm --question "What does Article 2 state?"`。M1另有真实生成与拒答记录；这些使用固定合成证据，不是官方法规或正式检索评估。运行C检查可指定 `tests/test_contracts.py tests/test_config.py tests/test_answer.py tests/test_llm_client.py tests/test_ask_cli.py`，无须先装B的模型。
 
 M2启动仍为 `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`。只使用一个worker，不加自动reload；数据库在data/sqlite。健康检查区分存活与数据/索引/模型就绪：缺正式资料时API明确返回409，页面能打开不表示知识库已完成。默认读取项目.env，可用DERAG_ENV_FILE显式选择本地环境文件；不自动寻找其他课程的密钥。M2新增检查为 `tests/test_persistence.py tests/test_tasks.py tests/test_qa_api.py`。
 
-M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用正式配置、资料和索引后，在另一个终端执行 `python -m scripts.run_eval --config config/experiment.formal.json --base-url http://127.0.0.1:8765`；必须与服务端使用同一正式配置，默认导出到新的data/runs/client-随机目录。`--run-id`读取已有实验，不重新生成。M3检查为 `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`；M0–M3组合227项通过，实际合成HTTP流程120项通过，均不代表正式成绩。
+M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用正式配置、资料和索引后，在另一个终端执行 `python -m scripts.run_eval --config config/experiment.formal-a.json --base-url http://127.0.0.1:8765`；必须与服务端使用同一正式配置，默认导出到新的data/runs/client-随机目录。`--run-id`读取已有实验，不重新生成。M3检查为 `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`；M0–M3组合227项通过，实际合成HTTP流程120项通过，均不代表正式成绩。
 
 当前源码启动（已有.venv不必重建）：
 
@@ -23,13 +23,13 @@ M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用�
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
 
-页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。新版Docker已完成Linux工程检查：368通过/1Windows专用跳过、正常HTTP及12次真实CPU检索通过；正式数据/实验的完整M7验收仍待A/M6，见[M7最新交接](docs/handoffs/M7_02_Linux容器验收与续做.md)。
+页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。新版Docker已完成Linux工程检查：368通过/1Windows专用跳过、正常HTTP及12次真实CPU检索通过；该旧镜像不包含11月20日新A适配，当前源码的完整M7验收仍待后续阶段，见[M7最新交接](docs/handoffs/M7_02_Linux容器验收与续做.md)。
 
 页面操作与证据见 [M4交接](docs/handoffs/M4_页面接入与真实问答.md)。Windows学校API验收显式使用generation.transport=curl；默认配置仍为httpx，不能把curl结果等同HTTPX/Linux已验证。正式部署先选定适用传输、配置本地env与冻结数据；参数改变会改变实验指纹，旧run保留。
 
 ---
 
-下方“运行方式/当前可操作内容”保留原预览版历史；其中对requirements.txt的描述属于当时状态，当前以顶部统一依赖说明为准。DE.tar仍为旧预览镜像；新的Docker工程验证另见M7交接，正式镜像归档未导出。官方数据及30题正式评估仍待A交付后集成。
+下方“运行方式/当前可操作内容”保留原预览版历史；其中对requirements.txt的描述属于当时状态，当前以顶部统一依赖说明为准。DE.tar仍为旧预览镜像；新的Docker工程验证另见M7交接，正式镜像归档未导出。官方数据已交付并适配，正式30×4实验另见最新M5/M6交接。
 
 <details>
 <summary>旧预览运行及镜像说明（不适用于当前C后台安装）</summary>

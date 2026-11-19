@@ -1,16 +1,16 @@
 # Docker 与交付包复现
 
-这是 C 的交付准备说明。正式 M5 验收与 M6 仍需 A 的官方资料和冻结 24+6 题；本说明、合成演练或一个能打开的页面均不代表正式成绩。最新实测状态与限制见 `docs/handoffs/`，不要把准备完成写成整个 M7 完成。
+这是 C 的交付准备说明。A 的正式五法规与冻结 24+6 题已于 2026-11-20 接入校验，正式 M5/M6 进度见最新交接；本说明、合成演练或一个能打开的页面均不代表正式成绩。最新实测状态与限制见 `docs/handoffs/`，不要把准备完成写成整个 M7 完成。
 
 ## 1. 先准备可校验的源码与数据包
 
 在已有依赖的 DERag 环境中，先按《三方对接与正式资料接入》生成新的正式配置并验证 A 数据，然后执行：
 
 ```powershell
-.venv/Scripts/python.exe -m scripts.prepare_delivery --config config/experiment.formal.json --output ../delivery-NEW
+.venv/Scripts/python.exe -m scripts.prepare_delivery --config config/experiment.formal-a.json --output ../delivery-NEW
 ```
 
-输出目录必须不存在。工具只读取选定 JSON，忽略进程凭据和本地 dotenv；校验语料与题集后复制原始字节，不重新清洗、不改题。它生成 `config/experiment.delivery.json`、提示词快照及 `DELIVERY-MANIFEST.json`，把数据/模型/提示词改成包内可移植路径，确认实验指纹没有改变。模型权重、已有 Chroma、SQLite、历史实验与私密 env 不装入此源码包。正式保存的逐题结果与模型权重作为另行校验的交付材料保留，不能在打包时混用不同版本。
+输出目录必须不存在。工具只读取选定 JSON，忽略进程凭据和本地 dotenv；校验语料与题集后复制原始字节，不重新清洗、不改题。它生成 `config/experiment.delivery.json`、提示词快照及 `DELIVERY-MANIFEST.json`，把数据/模型/提示词改成包内可移植路径，确认实验指纹没有改变。A 布局下保留 data/formal_corpus、data/eval、data/processed 及来源清单；附件完整结构也按原字节打包。模型权重、已有 Chroma、SQLite、历史实验与私密 env 不装入此源码包。正式保存的逐题结果与模型权重作为另行校验的交付材料保留，不能在打包时混用不同版本。
 
 原始快照、处理文档、两个 manifest 与 gold.jsonl 都逐文件记录 SHA-256；缺资料、哈希不符、输出已存在时明确失败。失败后已经产生的不完整目录会保留，先检查并使用新目标目录，不覆盖或自动递归删除。
 
@@ -25,6 +25,8 @@ python -B -S scripts/verify_delivery.py .
 ```
 
 此命令无需先装 Pydantic 或模型库。它检查清单格式、相对路径、文件齐全和 SHA；修改、漏文件、额外文件或路径逃逸都会失败。请对未运行的新解包目录做此检查；运行后新增的数据库/缓存属于工作目录，不能把它当成原始交付目录继续声称字节未变。校验清单保证与保存的清单一致，来源真实性仍需团队的交付记录与版本核验。
+
+2026-11-19 的旧候选镜像已通过当时的 Linux 工程测试；2026-11-20 新 A 依赖/适配尚需重新构建验收，不把旧镜像当当前最终产物。Docker 不再强设 DERAG_DATA_DIR，采用选定配置的数据路径；A 正式运行目录为 /app/data/formal_corpus，相应 SQLite/Chroma/chunks/indexes/runs 卷也应挂载到该目录下，不能以 /app/data 覆盖它。
 
 ## 3. 构建 Linux CPU 镜像
 
