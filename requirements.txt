@@ -12,3 +12,6 @@ starlette==1.10.0
 typing-inspection==0.4.5
 typing_extensions==4.16.0
 uvicorn==0.51.0
+# A-part EUR-Lex HTML cleaning (scripts/process_documents.py).
+beautifulsoup4==4.15.0
+soupsieve==4.1.2
