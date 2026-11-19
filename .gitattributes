@@ -4,3 +4,5 @@ scripts/** text eol=lf
 *.json text eol=lf
 *.html text eol=lf
 *.md text eol=lf
+data/** -text
+artifacts/a_review/** -text
