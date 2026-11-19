@@ -1,0 +1,707 @@
+{
+  "schema_version": "1.0",
+  "kind": "ai_pre_review_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "can_import_as_human_review": false,
+  "official_review_written": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "source_code_commit": "f0a04de",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "index_version": "e1d9e93d8abeea648bf64a2e7ac215e39f051a3c715dbe2ffa0664dac8b302bf",
+  "batch": 8,
+  "question_offsets": [
+    14,
+    15
+  ],
+  "gold_cases": [
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-dcd-reimbursement-time",
+      "question": "A consumer covered by Directive (EU) 2019/770 tells the trader that the consumer is terminating the contract because the digital service is not in conformity. How quickly must the trader make a reimbursement owed under Article 14 or Article 16?",
+      "topic": "single_article",
+      "answerable": true,
+      "reference_answer": "The trader must reimburse the consumer without undue delay and, in any event, within 14 days of being informed of the consumer's decision to invoke the price reduction or to terminate.",
+      "key_facts": [
+        "1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:18",
+          "structure_id": null,
+          "start": 106220,
+          "end": 106613,
+          "text": "1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    },
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-dcd-modification-conditions",
+      "question": "A contract under Directive (EU) 2019/770 supplies a digital service over a period of time. The trader wants to modify it beyond what is necessary to keep it in conformity with Articles 7 and 8. Which conditions in Article 19(1) must be met?",
+      "topic": "multi_evidence",
+      "answerable": true,
+      "reference_answer": "The contract must allow the modification and provide a valid reason for it. The modification must be made without additional cost to the consumer. The consumer must be informed of the modification in a clear and comprehensible manner. Where paragraph 2 applies, the consumer must also be informed reasonably in advance, on a durable medium, of the features and timing of the modification and of the right to terminate or of the possibility to keep the service without the modification.",
+      "key_facts": [
+        "1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:",
+        "(a) the contract allows, and provides a valid reason for, such a modification;",
+        "(b) such a modification is made without additional cost to the consumer;",
+        "(c) the consumer is informed in a clear and comprehensible manner of the modification; and",
+        "(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a modification in accordance with paragraph 4."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:19",
+          "structure_id": null,
+          "start": 107059,
+          "end": 107434,
+          "text": "1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:"
+        },
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:19",
+          "structure_id": null,
+          "start": 107435,
+          "end": 107513,
+          "text": "(a) the contract allows, and provides a valid reason for, such a modification;"
+        },
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:19",
+          "structure_id": null,
+          "start": 107514,
+          "end": 107586,
+          "text": "(b) such a modification is made without additional cost to the consumer;"
+        },
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:19",
+          "structure_id": null,
+          "start": 107587,
+          "end": 107677,
+          "text": "(c) the consumer is informed in a clear and comprehensible manner of the modification; and"
+        },
+        {
+          "document_id": "eu_digital_content_2019_770",
+          "article_id": "eu_digital_content_2019_770:article:19",
+          "structure_id": null,
+          "start": 107678,
+          "end": 108042,
+          "text": "(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a modification in accordance with paragraph 4."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    }
+  ],
+  "entries": [
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f400",
+      "ask_id": "ask-a9984618d5f644a191d5f8cf458581b6",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract, shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.",
+          "citation_numbers": [
+            1,
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "a3760369051fb8751c3c17265726e1d47de8aba4fb9fd0bc8a52c54d6b5aae7c",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:17",
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "article_labels": [
+                "Article 17",
+                "Article 18"
+              ],
+              "start": 106000,
+              "end": 106400,
+              "text": "or digital service in the period, prior to the termination of the contract, during which the digital content or the digital service was not in conformity.\n\nArticle 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carrie"
+            },
+            {
+              "n": 4,
+              "chunk_id": "da4d95d36efaeeecd668f42b811e9406ffcb0bcdbe52c6857cf6f3b2bab11143",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "article_labels": [
+                "Article 18"
+              ],
+              "start": 106400,
+              "end": 106800,
+              "text": "d out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agre"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s400",
+      "ask_id": "ask-fad03de157904177bca8a436963d34a2",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1) due to a price reduction or termination of the contract must be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the right for a price reduction or to terminate the contract.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "6afc4763d15a709dc60c430d9ab4b9572dc33a6ebae1d1e1d81030416c51ada4",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "article_labels": [
+                "Article 18"
+              ],
+              "start": 106223,
+              "end": 106617,
+              "text": "Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f800",
+      "ask_id": "ask-899dbaaceae749c6ba634097c561e904",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract, shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.",
+          "citation_numbers": [
+            1,
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "fb884c68b2c52a96aedfc579ee0d6973651011839b804181c2480524c9bd65b7",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:17",
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "article_labels": [
+                "Article 17",
+                "Article 18"
+              ],
+              "start": 105600,
+              "end": 106400,
+              "text": "t the request and at the expense of the trader, return the tangible medium to the trader without undue delay. If the trader decides to request the return of the tangible medium, that request shall be made within 14 days of the day on which the trader is informed of the consumer's decision to terminate the contract.\n3. The consumer shall not be liable to pay for any use made of the digital content or digital service in the period, prior to the termination of the contract, during which the digital content or the digital service was not in conformity.\n\nArticle 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carrie"
+            },
+            {
+              "n": 2,
+              "chunk_id": "1746b521a04b03a94bf68c27a692f3f2cd64a6b15f124c3d2dc2077f310f3edf",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18",
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 18",
+                "Article 19"
+              ],
+              "start": 106400,
+              "end": 107200,
+              "text": "d out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agrees otherwise, and provided that the consumer does not incur any fees as a result of such reimbursement.\n3. The trader shall not impose any fee on the consumer in respect of the reimbursement.\n\nArticle 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s800",
+      "ask_id": "ask-44d4cd0d054c4271a9b885f43704c015",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1) due to a price reduction or termination of the contract must be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the right for a price reduction or to terminate the contract.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "e41a083b2fa2378789cdaec47c61b559cb25b00e0e1eb936d2f20aae3f728039",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "article_labels": [
+                "Article 18"
+              ],
+              "start": 106156,
+              "end": 106907,
+              "text": "Article 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agrees otherwise, and provided that the consumer does not incur any fees as a result of such reimbursement.\n3. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f400",
+      "ask_id": "ask-c1930e1ff0e246208cc2692bff46d82c",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0,
+        1,
+        2
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        3,
+        4
+      ],
+      "reason": "回答条件框架与(a)(b)，漏清楚易懂通知及(d)额外通知/权利选项，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The trader may modify the digital content or digital service beyond what is necessary to maintain conformity in accordance with Articles 7 and 8 if the conditions in Article 19(1) are met.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "e3a41a348fac9a633fd89bbd96b57b73759440ac7481b6f7d15f0f9ef607494e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 107600,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consu"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "One condition is that the contract allows, and provides a valid reason for, such a modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "e3a41a348fac9a633fd89bbd96b57b73759440ac7481b6f7d15f0f9ef607494e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 107600,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consu"
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Another condition is that such a modification is made without additional cost to the consumer.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "e3a41a348fac9a633fd89bbd96b57b73759440ac7481b6f7d15f0f9ef607494e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 107600,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consu"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s400",
+      "ask_id": "ask-b9b1f5df752b48bba0435bbbb9744d92",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason": "A第19(1)条对持续供给场景已有完整条件，本组insufficient，按可答题端到端评分建议wrong；不删记录、不重跑模型。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f800",
+      "ask_id": "ask-311f3d2669704bd6b98e6db6be12c2c2",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "给定长期供应前提下，回答列出有效理由、无额外成本、清楚通知及第2款情形的提前耐久媒介通知和终止/保留选项，A主要条件齐全，建议correct。最后交叉引用及词尾截断的实际支持性另留人工判断，不能用全原文替代已引用片段。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The trader may modify the digital content or digital service beyond what is necessary to maintain conformity in accordance with Articles 7 and 8 if the following conditions are met.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "9537081ab41fdb1a9162e9e530f4333f21f95e392d18175b87dc8ce2d3ec915a",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 108000,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a mo"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract must allow, and provide a valid reason for, such a modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "9537081ab41fdb1a9162e9e530f4333f21f95e392d18175b87dc8ce2d3ec915a",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 108000,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a mo"
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Such a modification must be made without additional cost to the consumer.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "9537081ab41fdb1a9162e9e530f4333f21f95e392d18175b87dc8ce2d3ec915a",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 108000,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a mo"
+            }
+          ]
+        },
+        {
+          "claim_index": 3,
+          "claim_text": "The consumer must be informed in a clear and comprehensible manner of the modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(c)清楚易懂地通知修改。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "9537081ab41fdb1a9162e9e530f4333f21f95e392d18175b87dc8ce2d3ec915a",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 108000,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a mo"
+            }
+          ]
+        },
+        {
+          "claim_index": 4,
+          "claim_text": "In the cases referred to in paragraph 2, the consumer must be informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": null,
+          "reason": "引用1保存(d)适用第2款时提前、耐久媒介、内容/时间与终止或保留选择的大部分文字，但停在such a mo，未完整保留最后替代选项及第4款交叉引用。主张补全了该结尾，支持性需人工核对，不自动判true。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "9537081ab41fdb1a9162e9e530f4333f21f95e392d18175b87dc8ce2d3ec915a",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 107200,
+              "end": 108000,
+              "text": " of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n(d) in the cases referred to in paragraph 2, the consumer is informed reasonably in advance on a durable medium of the features and time of the modification and of the right to terminate the contract in accordance with paragraph 2, or of the possibility to maintain the digital content or digital service without such a mo"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s800",
+      "ask_id": "ask-fde0877a83d848ca9a9e6d37e1b63d08",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        4
+      ],
+      "reason": "回答条件框架与(a)(b)(c)，但完全没写第2款适用时的提前耐久媒介通知、特征/时间及终止或保留选项，建议partial。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "The trader may modify the digital content or digital service beyond what is necessary to maintain conformity in accordance with Articles 7 and 8 if the conditions in Article 19(1) are met.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "f6a7ca2201cc9649d341d1cde41784f3bec2a35d71099c5ef042c743b7a3370e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 106993,
+              "end": 107678,
+              "text": "Article 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract must allow, and provide a valid reason for, such a modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "f6a7ca2201cc9649d341d1cde41784f3bec2a35d71099c5ef042c743b7a3370e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 106993,
+              "end": 107678,
+              "text": "Article 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Such a modification must be made without additional cost to the consumer.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "f6a7ca2201cc9649d341d1cde41784f3bec2a35d71099c5ef042c743b7a3370e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 106993,
+              "end": 107678,
+              "text": "Article 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 3,
+          "claim_text": "The consumer must be informed in a clear and comprehensible manner of the modification.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含(c)清楚易懂地通知修改。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "f6a7ca2201cc9649d341d1cde41784f3bec2a35d71099c5ef042c743b7a3370e",
+              "document_id": "eu_digital_content_2019_770",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "article_labels": [
+                "Article 19"
+              ],
+              "start": 106993,
+              "end": 107678,
+              "text": "Article 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period of time, the trader may modify the digital content or digital service beyond what is necessary to maintain the digital content or digital service in conformity in accordance with Articles 7 and 8, if the following conditions are met:\n(a) the contract allows, and provides a valid reason for, such a modification;\n(b) such a modification is made without additional cost to the consumer;\n(c) the consumer is informed in a clear and comprehensible manner of the modification; and\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    }
+  ],
+  "next_question_offset": 16,
+  "next_case_id": "gold-ucpd-two-part-unfairness-test",
+  "school_generation_api_calls": 0
+}
