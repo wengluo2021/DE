@@ -1,0 +1,6 @@
+data/** text eol=lf
+scripts/** text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.md text eol=lf
