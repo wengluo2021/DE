@@ -26,7 +26,7 @@ python -B -S scripts/verify_delivery.py .
 
 此命令无需先装 Pydantic 或模型库。它检查清单格式、相对路径、文件齐全和 SHA；修改、漏文件、额外文件或路径逃逸都会失败。请对未运行的新解包目录做此检查；运行后新增的数据库/缓存属于工作目录，不能把它当成原始交付目录继续声称字节未变。校验清单保证与保存的清单一致，来源真实性仍需团队的交付记录与版本核验。
 
-2026-11-19 的旧候选镜像已通过当时的 Linux 工程测试；2026-11-20 新 A 依赖/适配尚需重新构建验收，不把旧镜像当当前最终产物。Docker 不再强设 DERAG_DATA_DIR，采用选定配置的数据路径；A 正式运行目录为 /app/data/formal_corpus，相应 SQLite/Chroma/chunks/indexes/runs 卷也应挂载到该目录下，不能以 /app/data 覆盖它。
+2026-11-19 的旧候选镜像已通过当时的 Linux 工程测试；2026-11-20 新 A 依赖/适配已重建并通过Windows401项、Linux400项/1专用跳过、正式Linux问答/重启和120项历史结果迁移，见M7_04，不把旧镜像当当前最终产物。Docker 不再强设 DERAG_DATA_DIR，采用选定配置的数据路径；A 正式运行目录为 /app/data/formal_corpus，相应 SQLite/Chroma/chunks/indexes/runs 卷也应挂载到该目录下，不能以 /app/data 覆盖它。
 
 ## 3. 构建 Linux CPU 镜像
 

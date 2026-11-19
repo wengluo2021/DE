@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "source_preparation": {
+    "state": "verified",
+    "kind": "formal_candidate",
+    "file_count": 205,
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "official_provenance_verified": false,
+    "external_model_calls": 0,
+    "output": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-source-candidate",
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "model_weights_included": false,
+    "container_built": false
+  },
+  "source_archive": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\C-source-data-20261120-candidate.zip",
+    "bytes": 1689135,
+    "sha256": "642adca3670d1e21f2411f48b0af3e0da5ec15ba35a080d2d8eabad3fe8d0f1c",
+    "members": 206
+  },
+  "unreviewed_result_archive": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\C-M6-results-20261120-unreviewed.zip",
+    "bytes": 1174164,
+    "sha256": "df646f326bd6dcbf7e1e04235bc973100c0f7858993232c2549cdabdc9a481ef",
+    "members": 16
+  },
+  "credential_leaks": 0,
+  "weights_included": false,
+  "runtime_indexes_included": false,
+  "consistent_sqlite_backup_in_results": true,
+  "human_review_complete": false,
+  "image_archive_exported": true,
+  "separate_image_archive": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\C-runtime-20261120-candidate.tar",
+    "bytes": 1870832128,
+    "sha256": "03a3be92bc9346aa79bb79ba4b5398e766ca46b7b45976962ae11617b734c003",
+    "config_and_all_layer_diff_ids_verified": true,
+    "layers": 17
+  },
+  "separate_weights_archive": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\BGE-M3-5617a9f6-weights.tar",
+    "bytes": 2293350400,
+    "sha256": "bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "weight_files_verified": 11
+  },
+  "final_reviewed_release_complete": false,
+  "external_model_calls": 0
+}

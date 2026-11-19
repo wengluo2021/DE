@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "formal_containers_removed": [
+    {
+      "container": "derag-c-formal-305d974a6a",
+      "removed": true,
+      "was_stopped": true
+    },
+    {
+      "container": "derag-c-formal-5961513ef7",
+      "removed": true,
+      "was_stopped": true
+    }
+  ],
+  "restore_containers_removed_by_own_helpers": true,
+  "own_application_servers_stopped": true,
+  "temporary_loopback_relays_stopped": true,
+  "index_and_sqlite_volumes_preserved": true,
+  "global_prune_or_other_container_stop": false
+}

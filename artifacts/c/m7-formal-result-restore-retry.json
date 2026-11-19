@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "container": "derag-c-restore-55e705a5ae",
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7restore-55e705a5ae",
+  "image": "derag-c-m7-runtime:90f59e7032",
+  "sqlite_volume": "derag-c-restore-55e705a5ae-sqlite",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "result": {
+    "state": "passed",
+    "platform": "Linux Docker CPU",
+    "source": "SQLite backup of completed Windows formal run",
+    "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+    "external_model_calls": 0,
+    "api_key_configured": false,
+    "index_volumes_reused": true,
+    "expected_cases": 120,
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "restored_cases": 120,
+    "restart_and_exports_identical": true,
+    "export_sha256": {
+      "evaluation.csv": "582e14e9a08dd0282f0139c675510ec344a5b6b691a64844845843a3f6ef867f",
+      "evaluation.json": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160"
+    },
+    "evaluation_runs_after": 1,
+    "review_rows_after": 0,
+    "own_servers_stopped": true
+  },
+  "windows_database_unchanged": true,
+  "own_container_removed": true
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "branch": "answer-eval",
+  "upstream_main": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "a_frozen_files_unchanged_and_match_git": 45,
+  "tests": {
+    "m5-a-full-tests.xml": {
+      "tests": 401,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "m7-a-linux-tests.xml": {
+      "tests": 401,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    }
+  },
+  "formal_cases_completed": 120,
+  "formal_case_errors": 0,
+  "human_review_complete": false,
+  "human_review_rows": 0,
+  "citation_claims_pending": 166,
+  "cross_platform_index_identity_equal": true,
+  "windows_and_linux_restore_exports_exact": true,
+  "public_files_scanned": 363,
+  "credential_leaks": 0,
+  "archive_integrity_verified": true,
+  "generation_attempts_this_turn": 123,
+  "known_tokens_this_turn": 189587,
+  "unknown_usage_attempts_this_turn": 1,
+  "cumulative_known_tokens": 191672,
+  "price_known": false,
+  "pushed": false,
+  "runtime_candidate_image_archive_exported": true,
+  "model_weights_archive_exported": true,
+  "final_reviewed_release_complete": false
+}

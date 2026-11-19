@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "checks": [
+    {
+      "arguments": [
+        "--config",
+        "config/experiment.delivery.json"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "{\"schema_version\": \"1.0\", \"state\": \"validated\", \"mode\": \"formal\", \"corpus_version\": \"794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795\", \"gold_version\": \"9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d\", \"document_count\": 5, \"article_count\": 121, \"text_chars\": 391777, \"answerable_count\": 24, \"unanswerable_count\": 6, \"corpus_only\": false, \"experiment_fingerprint\": \"cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a\", \"external_model_calls\": 0}"
+      ]
+    },
+    {
+      "arguments": [
+        "--scope",
+        "corpus"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "scope=corpus",
+        "offset_checks annex=1 article=11 block=91 footnote=4 preamble=1 recital=24 signature=1 title=1",
+        "documents=5",
+        "main_articles=121",
+        "result=ok"
+      ]
+    },
+    {
+      "arguments": [
+        "--scope",
+        "eval"
+      ],
+      "exit_code": 0,
+      "last_lines": [
+        "scope=eval",
+        "corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+        "questions=30 answerable=24 refusal=6",
+        "result=ok"
+      ]
+    }
+  ],
+  "verification_after_processes": {
+    "state": "verified",
+    "kind": "formal_candidate",
+    "file_count": 205,
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "official_provenance_verified": false,
+    "external_model_calls": 0
+  },
+  "key_configured": false,
+  "generation_calls": 0,
+  "personal_venv_reused_for_windows_portability_check": true
+}

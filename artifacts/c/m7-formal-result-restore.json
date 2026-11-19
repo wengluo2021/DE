@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-20",
+  "state": "failed",
+  "container": "derag-c-restore-98e5b0e23a",
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7restore-98e5b0e23a",
+  "image": "derag-c-m7-runtime:90f59e7032",
+  "sqlite_volume": "derag-c-restore-98e5b0e23a-sqlite",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "error": {
+    "type": "AssertionError",
+    "message": ""
+  },
+  "own_container_removed": true
+}
