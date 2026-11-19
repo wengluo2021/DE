@@ -26,3 +26,19 @@ def test_invalid_transport_and_mock_formal_generation_are_rejected():
     with pytest.raises(ValueError):
         load_settings(environ={},overrides={"mode":"formal","corpus_version":"a"*64,"gold_version":"b"*64,
                                             "generation":{"provider":"mock"}})
+
+
+def test_process_env_file_is_shared_by_cli_and_app_and_explicit_path_wins(tmp_path):
+    process_file=tmp_path/"process.env"
+    process_file.write_text('LLM_MODEL=synthetic-process-file\nLLM_API_KEY=synthetic-process-key\nLLM_TRANSPORT=curl\n',encoding="utf-8")
+    explicit_file=tmp_path/"explicit.env"
+    explicit_file.write_text('LLM_MODEL=synthetic-explicit-file\nLLM_API_KEY=synthetic-explicit-key\n',encoding="utf-8")
+    env={"DERAG_ENV_FILE":str(process_file)}
+    settings=load_settings(environ=env)
+    assert settings.experiment.generation.model=="synthetic-process-file"
+    assert settings.api_key()=="synthetic-process-key" and settings.experiment.generation.transport=="curl"
+    explicit=load_settings(env_file=explicit_file,environ=env)
+    assert explicit.experiment.generation.model=="synthetic-explicit-file"
+    assert explicit.api_key()=="synthetic-explicit-key"
+    overridden=load_settings(environ=dict(env,LLM_MODEL="synthetic-process-override"))
+    assert overridden.experiment.generation.model=="synthetic-process-override"

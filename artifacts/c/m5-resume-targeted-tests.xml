@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="23" time="7.466" timestamp="2026-11-19T12:29:27.147919+08:00" hostname="LAPTOP-DT6MNFR6"><testcase classname="tests.test_retrieval" name="test_chroma_build_search_compare_and_idempotency" time="0.089"><failure message="app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_chroma_build_search_compa0')
+
+    def test_chroma_build_search_compare_and_idempotency(tmp_path):
+        service = service_at(tmp_path)
+&gt;       manifest = service.build_indexes(FIXTURE_CORPUS_VERSION)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_retrieval.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\retrieval\service.py:16: in build_indexes
+    return self.indexes.build_indexes(corpus_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:135: in build_indexes
+    store = self.store(version)
+            ^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:58: in store
+    self._stores[version] = self.store_factory(self.root / "chroma" / version)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\conftest.py:16: in tracked
+    original(self,*args,**kwargs)
+app\retrieval\vector_store.py:32: in __init__
+    directory=validate_store_path(directory)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_chroma_build_search_compa0/chroma/13b7cf9ff81b4671822dc002bc731667265b90cdb297afc0af1ee2364584eff2')
+
+    def validate_store_path(directory):
+        """Budget for native HNSW's UUID directory and file suffix on Windows."""
+        resolved=Path(directory).resolve()
+        if os.name=="nt" and len(str(resolved))&gt;200:
+&gt;           raise RetrievalError("INDEX_PATH_TOO_LONG",
+                "Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes",409)
+E           app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes
+
+app\retrieval\vector_store.py:19: RetrievalError</failure></testcase><testcase classname="tests.test_retrieval" name="test_exact_hit_contract_cosine_score_and_less_than_five" time="0.030"><failure message="app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_exact_hit_contract_cosine0')
+
+    def test_exact_hit_contract_cosine_score_and_less_than_five(tmp_path):
+        s = service_at(tmp_path, loader=lambda v: fixture_loader(v)[:1], embedder=FixedEmbedder())
+&gt;       s.build_indexes(FIXTURE_CORPUS_VERSION)
+
+tests\test_retrieval.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\retrieval\service.py:16: in build_indexes
+    return self.indexes.build_indexes(corpus_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:135: in build_indexes
+    store = self.store(version)
+            ^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:58: in store
+    self._stores[version] = self.store_factory(self.root / "chroma" / version)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\conftest.py:16: in tracked
+    original(self,*args,**kwargs)
+app\retrieval\vector_store.py:32: in __init__
+    directory=validate_store_path(directory)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_exact_hit_contract_cosine0/chroma/3df3cfb882f271cd1b9d6da8b8a1432ab855df92e851562f26137e79eccd46f2')
+
+    def validate_store_path(directory):
+        """Budget for native HNSW's UUID directory and file suffix on Windows."""
+        resolved=Path(directory).resolve()
+        if os.name=="nt" and len(str(resolved))&gt;200:
+&gt;           raise RetrievalError("INDEX_PATH_TOO_LONG",
+                "Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes",409)
+E           app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes
+
+app\retrieval\vector_store.py:19: RetrievalError</failure></testcase><testcase classname="tests.test_retrieval" name="test_versions_reject_source_mutation_and_incomplete_indexes" time="0.057"><failure message="app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_versions_reject_source_mu0')
+
+    def test_versions_reject_source_mutation_and_incomplete_indexes(tmp_path):
+        docs = fixture_loader(FIXTURE_CORPUS_VERSION)
+        service = service_at(tmp_path, loader=lambda v: copy.deepcopy(docs))
+        with pytest.raises(RetrievalError, match="Build all"):
+            service.search("test", "s400", FIXTURE_CORPUS_VERSION)
+&gt;       manifest = service.build_indexes(FIXTURE_CORPUS_VERSION)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_retrieval.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\retrieval\service.py:16: in build_indexes
+    return self.indexes.build_indexes(corpus_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:135: in build_indexes
+    store = self.store(version)
+            ^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:58: in store
+    self._stores[version] = self.store_factory(self.root / "chroma" / version)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\conftest.py:16: in tracked
+    original(self,*args,**kwargs)
+app\retrieval\vector_store.py:32: in __init__
+    directory=validate_store_path(directory)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_versions_reject_source_mu0/chroma/13b7cf9ff81b4671822dc002bc731667265b90cdb297afc0af1ee2364584eff2')
+
+    def validate_store_path(directory):
+        """Budget for native HNSW's UUID directory and file suffix on Windows."""
+        resolved=Path(directory).resolve()
+        if os.name=="nt" and len(str(resolved))&gt;200:
+&gt;           raise RetrievalError("INDEX_PATH_TOO_LONG",
+                "Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes",409)
+E           app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes
+
+app\retrieval\vector_store.py:19: RetrievalError</failure></testcase><testcase classname="tests.test_retrieval" name="test_failed_partial_build_cannot_query_and_retry_has_no_duplicates" time="0.058"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'injected'&#10;  Actual message: 'Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes'">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_failed_partial_build_cann0')
+
+    def test_failed_partial_build_cannot_query_and_retry_has_no_duplicates(tmp_path):
+        class Failing(MockEmbedder):
+            fail = True
+            calls = 0
+            def encode(self, texts, **kwargs):
+                self.calls += 1
+                if self.fail and self.calls == 2:
+                    raise RetrievalError("EMBEDDING_UNAVAILABLE", "injected failure", 503)
+                return super().encode(texts, **kwargs)
+        model = Failing()
+        service = service_at(tmp_path, embedder=model)
+&gt;       with pytest.raises(RetrievalError, match="injected"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'injected'
+E         Actual message: 'Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes'
+
+tests\test_retrieval.py:97: AssertionError</failure></testcase><testcase classname="tests.test_retrieval" name="test_chunk_export_tampering_is_detected" time="0.056"><failure message="app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_chunk_export_tampering_is0')
+
+    def test_chunk_export_tampering_is_detected(tmp_path):
+        s = service_at(tmp_path)
+&gt;       m = s.build_indexes(FIXTURE_CORPUS_VERSION)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_retrieval.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+app\retrieval\service.py:16: in build_indexes
+    return self.indexes.build_indexes(corpus_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:135: in build_indexes
+    store = self.store(version)
+            ^^^^^^^^^^^^^^^^^^^
+app\retrieval\indexes.py:58: in store
+    self._stores[version] = self.store_factory(self.root / "chroma" / version)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\conftest.py:16: in tracked
+    original(self,*args,**kwargs)
+app\retrieval\vector_store.py:32: in __init__
+    directory=validate_store_path(directory)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_chunk_export_tampering_is0/chroma/13b7cf9ff81b4671822dc002bc731667265b90cdb297afc0af1ee2364584eff2')
+
+    def validate_store_path(directory):
+        """Budget for native HNSW's UUID directory and file suffix on Windows."""
+        resolved=Path(directory).resolve()
+        if os.name=="nt" and len(str(resolved))&gt;200:
+&gt;           raise RetrievalError("INDEX_PATH_TOO_LONG",
+                "Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes",409)
+E           app.retrieval.errors.RetrievalError: Windows native Chroma requires a shorter data directory; shorten DERAG_DATA_DIR before building indexes
+
+app\retrieval\vector_store.py:19: RetrievalError</failure></testcase><testcase classname="tests.test_retrieval" name="test_token_overflow_before_sentence_transformer_can_truncate" time="0.004" /><testcase classname="tests.test_retrieval" name="test_missing_model_and_formal_data_do_not_fallback" time="0.004" /><testcase classname="tests.test_retrieval" name="test_formal_manifest_hash_validation" time="0.042" /><testcase classname="tests.test_retrieval" name="test_index_version_ignores_machine_paths_but_covers_model_settings" time="0.010" /><testcase classname="tests.test_runtime_integration" name="test_production_runtime_build_search_ask_and_restart_share_b" time="0.413"><failure message="AssertionError: assert ('failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed)">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/.bootstrap/m5-resume-targeted/test_production_runtime_build_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002450385D8D0&gt;
+
+    def test_production_runtime_build_search_ask_and_restart_share_b(tmp_path,monkeypatch):
+        from app.retrieval import embedding
+        monkeypatch.setattr(embedding,"LocalEmbedder",OfflineEncoder)
+        generator=FixtureGenerator();calls=[]
+        def generate(self,messages):
+            calls.append(messages);return generator.generate(messages)
+        monkeypatch.setattr(ChatCompletionsClient,"generate",generate)
+        data=tmp_path/"SYNTHETIC";bundle=write_bundle(data)
+        settings=load_settings(environ={},api_key="synthetic-integration-key",overrides={
+            "data_dir":str(data),"corpus_version":bundle["corpus_version"],"gold_version":bundle["gold_version"],
+            "generation":{"model":"fixture-model"}})
+        app=create_app(settings,test_mode=True)  # No QA or retrieval service injection.
+        with TestClient(app) as client:
+            assert app.state.runtime.retrieval is not None
+            assert not client.get("/api/health").json()["ready"]
+            body={"question":"What does Article 2 state?","condition":"s400","corpus_version":bundle["corpus_version"]}
+            assert client.post("/api/ask",json=body).json()["code"]=="INDEX_NOT_READY"
+            planned=client.post("/api/indexes/build",json={"corpus_version":bundle["corpus_version"]})
+            assert planned.status_code==202
+            task=_wait(client,planned.json()["task_id"])
+&gt;           assert task["state"]=="completed" and task["kind"]=="indexes"
+E           AssertionError: assert ('failed' == 'completed'
+E             
+E             - completed
+E             + failed)
+
+tests\test_runtime_integration.py:52: AssertionError</failure></testcase><testcase classname="tests.test_runtime_integration" name="test_invalid_a_inputs_are_rejected_before_b_assembly_and_model_call" time="0.146" /><testcase classname="tests.test_retrieval_lifecycle" name="test_close_once_does_not_release_another_clients_shared_store" time="1.159" /><testcase classname="tests.test_retrieval_lifecycle" name="test_runtime_leaves_caller_owned_retrieval_open" time="0.072" /><testcase classname="tests.test_retrieval_lifecycle" name="test_deep_native_index_path_fails_before_creating_store" time="0.004" /><testcase classname="tests.test_retrieval_lifecycle" name="test_single_vector_survives_native_shutdown_and_fresh_process" time="2.383" /><testcase classname="tests.test_integration_config" name="test_config_selection_transport_and_priority" time="0.029" /><testcase classname="tests.test_integration_config" name="test_invalid_transport_and_mock_formal_generation_are_rejected" time="0.009" /><testcase classname="tests.test_integration_config" name="test_process_env_file_is_shared_by_cli_and_app_and_explicit_path_wins" time="0.027" /><testcase classname="tests.test_preflight" name="test_unified_runtime_matches_installed_versions" time="1.271" /><testcase classname="tests.test_preflight" name="test_dependency_checker_distinguishes_missing_and_wrong_version" time="0.015" /><testcase classname="tests.test_preflight" name="test_preflight_no_data_is_not_ready_and_never_generates" time="0.125" /><testcase classname="tests.test_preflight" name="test_preflight_preserves_existing_report" time="0.011" /><testcase classname="tests.test_preflight" name="test_foreign_exception_method_code_is_not_serialized" time="0.001" /></testsuite></testsuites>

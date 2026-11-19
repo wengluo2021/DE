@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-19",
+  "milestone": "M5",
+  "engineering_integration": "passed",
+  "formal_acceptance": "pending_A_delivery",
+  "branch": "answer-eval",
+  "main_modified": false,
+  "push_performed": false,
+  "checks": [
+    {
+      "item": "complete B/C regression",
+      "state": "passed",
+      "evidence": "m5-integrated-final-tests.xml",
+      "tests": 344
+    },
+    {
+      "item": "native singleton close/reopen and fresh Python process",
+      "state": "passed",
+      "evidence": "m5-checkpoint-targeted-tests.xml"
+    },
+    {
+      "item": "unchanged legal HNSW parameters, new policy version",
+      "state": "passed",
+      "evidence": "m5-e2e.json"
+    },
+    {
+      "item": "real BGE/Chroma and school model via normal app.main",
+      "state": "passed",
+      "evidence": "m5-e2e.json"
+    },
+    {
+      "item": "verified source offsets, answer support and exact saved history after restart",
+      "state": "passed",
+      "evidence": "m5-e2e.json",
+      "formal_human_grading": false
+    },
+    {
+      "item": "preflight closes clients on success and failure, never generates",
+      "state": "passed",
+      "evidence": "m5-integrated-final-tests.xml"
+    },
+    {
+      "item": "pip check and JavaScript syntax",
+      "state": "passed"
+    },
+    {
+      "item": "public M5 artifacts and documentation credential/encoding checks",
+      "state": "passed",
+      "files_checked": 49,
+      "leaks": 0
+    },
+    {
+      "item": "official corpus and frozen 24/6 gold received",
+      "state": "pending_external_input",
+      "evidence": "m5-official-input-status.json"
+    },
+    {
+      "item": "official data end-to-end acceptance (remaining M5)",
+      "state": "pending_external_input"
+    },
+    {
+      "item": "formal 120 cases and actual human grades (M6)",
+      "state": "not_started"
+    },
+    {
+      "item": "Linux, clean environment and Docker acceptance (M7)",
+      "state": "not_started"
+    }
+  ],
+  "this_resume_generation": {
+    "asks": 1,
+    "model_attempts": 1,
+    "prompt_tokens": 938,
+    "completion_tokens": 39,
+    "total_tokens": 977,
+    "evaluation_runs": 0
+  },
+  "all_known_successful_generation": {
+    "responses": 6,
+    "total_tokens": 2085,
+    "price_verified": false
+  },
+  "own_servers_stopped": true,
+  "browser_opened_this_resume": false,
+  "handoff": "docs/handoffs/M5_04_工程联调通过与正式交付待办.md"
+}

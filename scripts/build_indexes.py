@@ -6,7 +6,7 @@ import sys
 
 from app.retrieval import RetrievalService
 from app.retrieval.embedding import LocalEmbedder, MockEmbedder
-from app.retrieval.types import load_config, fixture_loader, formal_loader, canonical
+from app.retrieval.types import fixture_loader, canonical
 from app.config import load_settings
 from app.data import corpus_loader
 
@@ -39,7 +39,10 @@ def main():
         loader, version = fixture_loader, FIXTURE_CORPUS_VERSION
         config["data_dir"] = str(Path(config["data_dir"]) / "b-fixtures" / ("mock" if args.mock else "real"))
     service = RetrievalService(loader, MockEmbedder() if args.mock else LocalEmbedder(config["embedding"]), config)
-    print(canonical(service.build_indexes(version)))
+    try:
+        print(canonical(service.build_indexes(version)))
+    finally:
+        service.close()
 
 
 if __name__ == "__main__":

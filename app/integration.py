@@ -62,17 +62,30 @@ def integration_status(settings):
                                    "dimension":identity["dimension"],"file_count":len(identity["files"]),"encoder_loaded":False}
     except Exception as error:
         components["model_files"]=_issue(error,"MODEL_CHECK_FAILED")
+    service=None
     try:
         if not components["corpus"]["ready"] or not components["model_files"]["ready"]:
             raise QAError("INDEX_PREREQUISITES_MISSING","Validate corpus and model files before checking indexes",409)
         from app.retrieval import RetrievalService
+        from app.retrieval.vector_store import validate_store_path
         service=RetrievalService(loader,embedder,settings.retrieval_config())
+        # Check the actual derived path before opening a native client, even if no index exists yet.
+        docs=service.indexes.documents(cfg.corpus_version)
+        from app.retrieval.types import digest
+        version=digest(service.indexes.material(cfg.corpus_version,docs))
+        validate_store_path(service.indexes.root/"chroma"/version)
         with service.indexes.lock():
             manifest,_=service.indexes.completed(cfg.corpus_version)
         components["indexes"]={"ready":True,"index_version":manifest["index_version"],"conditions":list(cfg.conditions),
                                "chunk_counts":{c:manifest["conditions"][c]["count"] for c in cfg.conditions}}
     except Exception as error:
         components["indexes"]=_issue(error,"INDEX_CHECK_FAILED")
+    finally:
+        if service is not None:
+            try:
+                service.close()
+            except Exception as error:
+                components["indexes"]=_issue(error,"INDEX_CLOSE_FAILED")
     transport_ready=cfg.generation.transport=="httpx" or shutil.which("curl.exe" if os.name=="nt" else "curl") is not None
     components["generation"]={"ready":settings.llm_configured and transport_ready,
                                "configured":settings.llm_configured,"transport":cfg.generation.transport,

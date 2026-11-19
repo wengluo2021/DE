@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-19",
+  "state": "not_found_in_checked_locations",
+  "official_acceptance": false,
+  "remote_repository": "https://github.com/wengluo2021/DE",
+  "remote_branches": [
+    {
+      "name": "Lo",
+      "sha": "eb83ff3df7d826cd3dc2f6bf93db2286183347a3"
+    },
+    {
+      "name": "answer-eval",
+      "sha": "48f8e4caafbf40a844df61eb13c3433ed60949df"
+    },
+    {
+      "name": "main",
+      "sha": "48f8e4caafbf40a844df61eb13c3433ed60949df"
+    },
+    {
+      "name": "wsk",
+      "sha": "1df5f3177af02e64620c2865ee019afdbcc1e781"
+    }
+  ],
+  "pull_requests": [
+    {
+      "number": 1,
+      "title": "Implement B retrieval module and testing guide",
+      "state": "closed",
+      "merged_at": "2026-11-18T10:05:17Z"
+    }
+  ],
+  "releases_count": 0,
+  "default_missing_files": [
+    "data/manifest.json",
+    "data/eval/manifest.json",
+    "data/eval/gold.jsonl"
+  ],
+  "prior_local_scope": "Project workspace and authorized adjacent course project locations; no unrelated coursework used",
+  "required_from_A": [
+    "5-8 official raw snapshots and processed Documents with source URLs/article offsets",
+    "corpus manifest with frozen hashes/version",
+    "24 answerable and 6 unanswerable frozen gold cases plus gold manifest",
+    "Delivery path/repository branch, versions, independent validation"
+  ],
+  "limitations": "Does not establish whether A has unpublished work elsewhere",
+  "external_model_calls": 0
+}

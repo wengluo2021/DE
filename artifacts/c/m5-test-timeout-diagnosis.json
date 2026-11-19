@@ -1,0 +1,15 @@
+{
+  "source": "Read-only inspection of the exact temporary SQLite database from m5-integrated-tests.xml",
+  "test": "tests.test_evaluation_api.test_full_120_same_qa_chain_scoring_and_read_only_exports",
+  "task_state": "completed",
+  "completed": 120,
+  "total": 120,
+  "errors": 0,
+  "created_at": "2026-11-19T04:33:24.479412+00:00",
+  "updated_at": "2026-11-19T04:33:56.006365+00:00",
+  "duration_seconds": 31.526953,
+  "old_test_wait_seconds": 30,
+  "new_test_wait_seconds": 90,
+  "production_timeout_changed": false,
+  "external_model_calls": 0
+}

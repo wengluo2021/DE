@@ -6,10 +6,11 @@ import os
 from .errors import RetrievalError
 
 # HNSW 是近似向量检索索引；四组固定同一参数，避免把向量库差异混入分块实验。
-# 小同步阈值用于确保少量测试数据也能及时落盘；正式改参数后须统一重建四组。
+# 小同步阈值用于及时落盘；单条写入还需下方幂等checkpoint（上游阈值最小为2）。
 HNSW = {"space": "cosine", "ef_construction": 100, "ef_search": 100,
         "max_neighbors": 16, "num_threads": 1, "batch_size": 2,
         "sync_threshold": 2, "resize_factor": 1.2}
+PERSISTENCE_POLICY = "singleton-checkpoint-v1"
 
 def validate_store_path(directory):
     """Budget for native HNSW's UUID directory and file suffix on Windows."""
@@ -22,7 +23,8 @@ def validate_store_path(directory):
 
 def store_identity():
     """将实际引擎版本与配置纳入索引版本材料，便于复现和发现配置变更。"""
-    return {"engine": "chromadb", "version": importlib.metadata.version("chromadb"), "hnsw": HNSW}
+    return {"engine": "chromadb", "version": importlib.metadata.version("chromadb"),
+            "hnsw": HNSW, "persistence_policy": PERSISTENCE_POLICY}
 
 
 class ChromaStore:
@@ -55,8 +57,17 @@ class ChromaStore:
         c = self.collection(condition, create=True)
         if not chunks:
             return
-        c.upsert(ids=[x["chunk_id"] for x in chunks], embeddings=vectors,
-                 metadatas=[{"document_id": x["document_id"], "start": x["start"], "end": x["end"]} for x in chunks])
+        payload={"ids":[x["chunk_id"] for x in chunks], "embeddings":vectors,
+                 "metadatas":[{"document_id": x["document_id"], "start": x["start"], "end": x["end"]} for x in chunks]}
+        c.upsert(**payload)
+        if len(chunks)==1:
+            # 1.5.9: one operation is below sync_threshold=2. A cold reader can then
+            # miss the in-memory index and have no metadata checkpoint to reload.
+            # Public get applies the first log record; repeating the same upsert
+            # reaches the valid threshold without adding a second logical chunk.
+            c.get(ids=payload["ids"],include=[])
+            c.upsert(**payload)
+            c.get(ids=payload["ids"],include=[])
 
     def ids(self, condition):
         return set(self.collection(condition).get(include=[])["ids"])

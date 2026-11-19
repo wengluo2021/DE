@@ -47,3 +47,35 @@ def test_foreign_exception_method_code_is_not_serialized():
     issue=_issue(NativeError(),"MODEL_CHECK_FAILED")
     assert issue["code"]=="MODEL_CHECK_FAILED"
     json.dumps(issue)
+
+
+@pytest.mark.parametrize("broken",[False,True])
+def test_preflight_releases_native_clients_on_success_and_failed_verification(tmp_path,monkeypatch,broken):
+    from app.data import corpus_loader
+    from app.retrieval import RetrievalService,embedding
+    from app.retrieval.embedding import MockEmbedder
+    from app.retrieval.types import write_json
+    from app.qa.client import ChatCompletionsClient
+    from tests.support.integration_fixtures import write_bundle
+    bundle=write_bundle(tmp_path)
+    settings=load_settings(environ={},api_key="synthetic-key",overrides={
+        "data_dir":str(tmp_path),"corpus_version":bundle["corpus_version"],"gold_version":bundle["gold_version"]})
+    service=RetrievalService(corpus_loader(tmp_path),MockEmbedder(),settings.retrieval_config())
+    manifest=service.build_indexes(bundle["corpus_version"])
+    if broken:
+        manifest["state"]="failed"
+        write_json(service.indexes.manifest_path(manifest["index_version"]),manifest)
+    service.close()
+    monkeypatch.setattr(embedding,"LocalEmbedder",lambda config:MockEmbedder())
+    def forbidden(*args,**kwargs):pytest.fail("Preflight must never generate or encode")
+    monkeypatch.setattr(MockEmbedder,"encode",forbidden)
+    monkeypatch.setattr(ChatCompletionsClient,"generate",forbidden)
+    closed=[]
+    original=RetrievalService.close
+    def tracked(self):
+        original(self);closed.append(self)
+    monkeypatch.setattr(RetrievalService,"close",tracked)
+    status=integration_status(settings)
+    assert status["components"]["indexes"]["ready"] is not broken
+    assert len(closed)==1 and not closed[0].indexes._stores
+    assert status["external_model_calls"]==status["index_builds"]==0

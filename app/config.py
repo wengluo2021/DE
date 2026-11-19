@@ -182,9 +182,11 @@ def load_settings(config_path=None, *, project_root=ROOT, env_file=None,
     This loader never searches the other course, WSL, or the parent private directory.
     """
     root = Path(project_root).resolve()
-    dot_path = Path(_path(env_file if env_file is not None else ".env", root))
+    process_env = dict(os.environ if environ is None else environ)
+    selected_env_file = env_file if env_file is not None else process_env.get("DERAG_ENV_FILE", ".env")
+    dot_path = Path(_path(selected_env_file, root))
     env = dict(dotenv_values(dot_path, interpolate=False)) if dot_path.is_file() else {}
-    env.update(dict(os.environ if environ is None else environ))
+    env.update(process_env)
     selected_config=config_path if config_path is not None else env.get("DERAG_CONFIG","config/experiment.json")
     path = Path(_path(selected_config, root))
     data = json.loads(path.read_text(encoding="utf-8"))
