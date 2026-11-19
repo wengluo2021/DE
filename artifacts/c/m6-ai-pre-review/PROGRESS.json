@@ -2,16 +2,18 @@
   "kind": "ai_pre_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "completed_batches": 12,
-  "questions_pre_read": 24,
-  "response_records_pre_read": 96,
+  "completed_batches": 13,
+  "ai_pre_review_complete": false,
+  "next_action": "next_batch",
+  "questions_pre_read": 26,
+  "response_records_pre_read": 104,
   "claim_checks_pre_read": 166,
   "official_review_written": false,
   "official_database_review_rows": 0,
   "human_confirmation_required": true,
-  "next_question_offset": 24,
-  "next_case_id": "gold-refuse-air-cancellation-amount",
-  "latest_handoff": "docs/handoffs/M6_14_辅助预审12与续做.md",
+  "next_question_offset": 26,
+  "next_case_id": "gold-refuse-refund-interest-rate",
+  "latest_handoff": "docs/handoffs/M6_15_辅助预审13与续做.md",
   "school_generation_api_calls_this_review_work": 0,
   "batches": [
     {
@@ -109,6 +111,14 @@
         23
       ],
       "file": "artifacts/c/m6-ai-pre-review/batch-12.json"
+    },
+    {
+      "batch": 13,
+      "question_offsets": [
+        24,
+        25
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-13.json"
     }
   ]
 }
