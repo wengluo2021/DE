@@ -1,0 +1,19 @@
+{
+  "state": "passed",
+  "batch": 1,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 20,
+  "claim_support_needing_human_judgment": 1,
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-crd-payment-fee-cap",
+  "next_question_offset": 2,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-01.json": "f54ffec592c006e32044a34692e5c8098ebc541b45bb08ac662e882df06db7ba",
+    "docs/M6辅助预审01_前两题.md": "817996e5d46fb4b0ace185109fd7f44d68e92a4b285f98b576e5bff07b8dab2f"
+  }
+}
