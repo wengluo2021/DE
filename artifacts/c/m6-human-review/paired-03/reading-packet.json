@@ -1,0 +1,369 @@
+{
+  "kind": "reading_materials_with_actual_review_status",
+  "question_number": 3,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-payment-fee-cap",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-crd-payment-fee-cap",
+    "question": "Under Directive 2011/83/EU, may a trader charge the consumer a fee for using a particular means of payment that is higher than the trader's own cost of accepting that means?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "No. Member States must prohibit traders from charging consumers, for the use of a given means of payment, fees that exceed the cost borne by the trader for the use of that means.",
+    "key_facts": [
+      "Member States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:19",
+        "structure_id": null,
+        "start": 83631,
+        "end": 83816,
+        "text": "Member States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第3题支付手续费_中英逐句与评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-135948a4085748adb07c4650d75cd644",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答明确写出超过商家成本的支付手续费应被禁止，必要事实完整。第二主张是同一限制的序言重述；引用支持性另列，不能只用Hit=true判定。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6999515891075134,
+              "chunk_id": "b2ad5d5aead1b5b10329b84b93beace3a43dea2abfab892099a79c6f07b2efaa",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:19",
+                "eu_consumer_rights_2011_83:article:20"
+              ],
+              "start": 83600,
+              "end": 84000,
+              "text": "or the use of means of payment\nMember States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.\n\nArticle 20\nPassing of risk\nIn contracts where the trader dispatches the goods to the consumer, the risk of loss of or damage to the goods shall pass to the consumer when he or a thir",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 19",
+                "Article 20"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。",
+          "Chinese_explanation": "成员国应禁止商家对某种支付方式向消费者收取超过商家自身使用成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6825000047683716,
+              "chunk_id": "7382e6da142878064abdfb9a4f2a0926ddbc62d201e248580a4c59d7cbf1f10a",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 39600,
+              "end": 40000,
+              "text": "be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.\n(55) Where the goods are dispatched by the trader to the consumer, disputes may arise, in the event of loss or damage, as to the moment at which the transfer of risk takes place. Therefore this Directive should provide that the consumer be protected against any risk of los",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": null,
+          "AI_reason": "实际引用从be prohibited开始，主语traders和情态should被截断；成本上限及禁止收费的主要词句在内。题目只给主体、没有给出规范性答案，留实际人明确选择支持或不支持，不借主张0的引用补证据。",
+          "Chinese_explanation": "商家应被禁止收取超过其自身支付方式成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际评审人明确选择支持：题目给出商家主体，所引片段保留的禁止超成本收费含义已足够。按此实际判断保存，未借主张0的其他引用补证据；原AI待判意见保留。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-4578759c31b548bbafca9789a5cba91e",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答明确写出超过商家成本的支付手续费应被禁止，必要事实完整。第二主张是同一限制的序言重述；引用支持性另列，不能只用Hit=true判定。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7138777375221252,
+              "chunk_id": "4b1b3ca7a56f7c43c68491cf4d6e0d26021aeeb2893a12cdab25127617840bbd",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:19"
+              ],
+              "start": 83583,
+              "end": 83818,
+              "text": "Article 19\nFees for the use of means of payment\nMember States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.\n\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 19"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。",
+          "Chinese_explanation": "成员国应禁止商家对某种支付方式向消费者收取超过商家自身使用成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6811991930007935,
+              "chunk_id": "2cb717efc9024abaff93172fc2dff4601f1509120800ed64d9990da8e7f461ae",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 39571,
+              "end": 39906,
+              "text": "In any event, traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.\n(55) Where the goods are dispatched by the trader to the consumer, disputes may arise, in the event of loss or damage, as to the moment at which the transfer of risk takes place. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。",
+          "Chinese_explanation": "商家应被禁止收取超过其自身支付方式成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-a544700a3afe40cbbff9d0ba2aeef9d6",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答明确写出超过商家成本的支付手续费应被禁止，必要事实完整。第二主张是同一限制的序言重述；引用支持性另列，不能只用Hit=true判定。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.",
+            "citation_numbers": [
+              5
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 5,
+              "score": 0.6393210887908936,
+              "chunk_id": "145e9e3a9e02b46c16f3172a361c063d597213b50ec0471dc7f6b72fc98dda2c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:18",
+                "eu_consumer_rights_2011_83:article:19",
+                "eu_consumer_rights_2011_83:article:20"
+              ],
+              "start": 83200,
+              "end": 84000,
+              "text": " limit set out in paragraph 1, the consumer shall be entitled to terminate the contract immediately.\n3. Upon termination of the contract, the trader shall, without undue delay, reimburse all sums paid under the contract.\n4. In addition to the termination of the contract in accordance with paragraph 2, the consumer may have recourse to other remedies provided for by national law.\n\nArticle 19\nFees for the use of means of payment\nMember States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.\n\nArticle 20\nPassing of risk\nIn contracts where the trader dispatches the goods to the consumer, the risk of loss of or damage to the goods shall pass to the consumer when he or a thir",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 18",
+                "Article 19",
+                "Article 20"
+              ],
+              "n": 5
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。",
+          "Chinese_explanation": "成员国应禁止商家对某种支付方式向消费者收取超过商家自身使用成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7200079560279846,
+              "chunk_id": "68573ff0b2b7da7a937d13d69993459cc9cc2e985e475dce691676fcf1354dbf",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 39200,
+              "end": 40000,
+              "text": "dance with Article 52(3) of Directive 2007/64/EC of the European Parliament and of the Council of 13 November 2007 on payment services in the internal market (12), Member States should be able to prohibit or limit traders’ right to request charges from consumers taking into account the need to encourage competition and promote the use of efficient payment instruments. In any event, traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.\n(55) Where the goods are dispatched by the trader to the consumer, disputes may arise, in the event of loss or damage, as to the moment at which the transfer of risk takes place. Therefore this Directive should provide that the consumer be protected against any risk of los",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。",
+          "Chinese_explanation": "商家应被禁止收取超过其自身支付方式成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-be02ead52906497bad7fec0e8931fab9",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答明确写出超过商家成本的支付手续费应被禁止，必要事实完整。第二主张是同一限制的序言重述；引用支持性另列，不能只用Hit=true判定。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 19 of Directive 2011/83/EU requires Member States to prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6867418885231018,
+              "chunk_id": "cccab4317fd2cd755952bef88512ef2910dbbbffbba990354395e67130d5d6aa",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:19",
+                "eu_consumer_rights_2011_83:article:20"
+              ],
+              "start": 83583,
+              "end": 84370,
+              "text": "Article 19\nFees for the use of means of payment\nMember States shall prohibit traders from charging consumers, in respect of the use of a given means of payment, fees that exceed the cost borne by the trader for the use of such means.\n\nArticle 20\nPassing of risk\nIn contracts where the trader dispatches the goods to the consumer, the risk of loss of or damage to the goods shall pass to the consumer when he or a third party indicated by the consumer and other than the carrier has acquired the physical possession of the goods. However, the risk shall pass to the consumer upon delivery to the carrier if the carrier was commissioned by the consumer to carry the goods and that choice was not offered by the trader, without prejudice to the rights of the consumer against the carrier.\n\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 19",
+                "Article 20"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。",
+          "Chinese_explanation": "成员国应禁止商家对某种支付方式向消费者收取超过商家自身使用成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Recital 54 states that traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7288408279418945,
+              "chunk_id": "a510c38b678379096f8f26f494eab5ed645586d1360b505fdb033892ba02a068",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 39187,
+              "end": 39906,
+              "text": "(54) In accordance with Article 52(3) of Directive 2007/64/EC of the European Parliament and of the Council of 13 November 2007 on payment services in the internal market (12), Member States should be able to prohibit or limit traders’ right to request charges from consumers taking into account the need to encourage competition and promote the use of efficient payment instruments. In any event, traders should be prohibited from charging consumers fees that exceed the cost borne by the trader for the use of a certain means of payment.\n(55) Where the goods are dispatched by the trader to the consumer, disputes may arise, in the event of loss or damage, as to the moment at which the transfer of risk takes place. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。",
+          "Chinese_explanation": "商家应被禁止收取超过其自身支付方式成本的费用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
