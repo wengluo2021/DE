@@ -2,7 +2,7 @@
   "kind": "mixed_provenance_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M7_08_GitHub交付整理与提交.md",
+  "latest_handoff": "docs/handoffs/M7_09_GitHub分支提交成功与附件上传.md",
   "latest_reading_guide": "docs/C任务完成说明与阅读路线.md",
   "official_review_history_rows": 124,
   "official_cases_with_any_review": 120,
@@ -79,8 +79,11 @@
   "final_delivery_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-C-final-mixed-review",
   "final_delivery_manifest_sha256": "f9875660fcb5657d76a28e66ff7bd490df954b25d1e7617e909be848d17fddb7",
   "source_package_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
-  "github_delivery_status": "prepared_not_uploaded_authentication_TLS_failure",
+  "github_delivery_status": "branch_pushed_release_uploading",
   "github_delivery_entry": "delivery/c-20261120/README.md",
   "github_release_asset_plan": "delivery/c-20261120/GITHUB-ASSETS.json",
-  "github_last_push_attempt": "artifacts/c/github-delivery/push-attempt.json"
+  "github_last_push_attempt": "artifacts/c/github-delivery/push-attempt.json",
+  "github_branch_commit": "c9595b556325b373c634077b2b7c2e57fe206c8f",
+  "github_pull_request": "https://github.com/wengluo2021/DE/pull/2",
+  "github_release_id": 452404260
 }
