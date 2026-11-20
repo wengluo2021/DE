@@ -1,0 +1,109 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-22/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f400",
+      "ask_id": "ask-394b51192a954f8dbbf299ebe070781c",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s400",
+      "ask_id": "ask-b49f9f755cce4c41a143281bf69e694c",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f800",
+      "ask_id": "ask-8b77ef055f7b4b7fa064a488a16c6d6e",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s800",
+      "ask_id": "ask-623a340a1b8540a09d096b989ce06dfb",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 96,
+    "official_cases_with_review": 92,
+    "answer_grades_pending": 4,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 3
+  }
+}
