@@ -1,0 +1,74 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 28,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-refuse-german-fine",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-refuse-german-fine",
+    "question": "What maximum fine in euro must Germany impose on a trader for using one unfair term in a consumer contract?",
+    "topic": "unanswerable",
+    "answerable": false,
+    "reference_answer": null,
+    "key_facts": [],
+    "evidence": [],
+    "unanswerable_reason": "The penalty provisions in the frozen directives require Member States to provide effective, proportionate and dissuasive penalties or enforcement measures. They do not name Germany, and they do not set a maximum fine in euro for using an unfair term.",
+    "refusal_reference": "The frozen five-document corpus does not contain sufficient information to answer this question."
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第28题_德国具体最高罚额未载明_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-270580514ec74fbb8c54bf682edf0239",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-c54d22df7ba0448d9009918880a268ea",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-e407d821d33c4575beb7200dc86e3586",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-4d730a08553d45ad8805c553172b76c9",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
