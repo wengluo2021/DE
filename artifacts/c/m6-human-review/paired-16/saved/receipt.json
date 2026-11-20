@@ -1,0 +1,143 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-16/confirmed-requests.json",
+  "confirmation_sha256": "253aac4beace4882706160cea29bd5d3aea7e4e594e024c51c5e23a27eeac5c8",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "5f8c6adaea2e5a002fb10a6894411c38c38ca5652d9cc4f1788afc1d2abf4e9b",
+  "applied": [
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答条件框架与(a)(b)，漏清楚易懂通知及(d)额外通知/权利选项，建议partial。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:16.079798+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第19(1)条对持续供给场景已有完整条件，本组insufficient，按可答题端到端评分建议wrong；不删记录、不重跑模型。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:16.092402+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "实际引用完整包含(c)清楚易懂地通知修改。"
+          },
+          {
+            "claim_index": 4,
+            "supported": true,
+            "reason": "实际引用完整给出提前通知、耐久媒介、修改特征/时间、终止权及保持不修改服务的替代项，末尾仅把such a modification截成such a mo；modification在同一引用反复出现，按已确认的词尾截断口径支持。本条主张没有声称第4款交叉引用，不为未提出的内容扣分。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：给定长期供应前提下，回答列出有效理由、无额外成本、清楚通知及第2款情形的提前耐久媒介通知和终止/保留选项，A主要条件齐全，建议correct。最后交叉引用及词尾截断的实际支持性另留人工判断，不能用全原文替代已引用片段。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:16.105030+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "实际引用完整包含(c)清楚易懂地通知修改。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答条件框架与(a)(b)(c)，但完全没写第2款适用时的提前耐久媒介通知、特征/时间及终止或保留选项，建议partial。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:16.117889+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 68,
+  "official_cases_with_review": 64,
+  "answer_grades_pending": 32,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 49,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "7798961f9abcdc3d5f3decdfbd8994eab669882d11fc7125faa749b346fb16da",
+    "evaluation.partial-review.json": "2466b3a3fa0b2fa5b5e3c40be4c12e683274ea771dd5e8f62d041718a4ecc605"
+  }
+}
