@@ -1,0 +1,21 @@
+{
+  "state": "passed",
+  "branch": "answer-eval",
+  "starting_commit": "140cad2",
+  "all_10_server_SHA256_and_sizes_verified": true,
+  "release_published": true,
+  "PR_draft_not_merged": true,
+  "main_written_by_us": false,
+  "credentials_leaked": 0,
+  "external_model_calls": 0,
+  "files": {
+    "artifacts/c/github-delivery/published-receipt.json": "419ed43d4310ab55aa37f6bd8b641be74f7e84dcc314b484d104c7eb707b1f63",
+    "delivery/c-20261120/GITHUB-RECEIPT.json": "419ed43d4310ab55aa37f6bd8b641be74f7e84dcc314b484d104c7eb707b1f63",
+    "docs/handoffs/M7_10_GitHub交付完成与组长阅读入口.md": "2a553fdb8347a975206d8d24c7760e43bd0deff4fb8eae06a0290a755fa83fb8",
+    "docs/worklogs/2026-11-20_M7_GitHub全部附件发布与收尾.md": "41ccb418f3a9c22d9c6cd892ed056d65cd652a4cd711ceed6267b59b9a55541d",
+    "delivery/c-20261120/README.md": "b92d27cea764eac089dc3f68446509fc0768ef25cc0de0031a6c983c1fb48f06",
+    "README.md": "fda7dd04b656abf17ce1c2b570698fb3f13d3a0a744e2a4d00f7d4ccaabb2221",
+    "artifacts/c/m6-human-review/CURRENT.json": "7a4462a254560a8a5a8a3222020ce612f73cd66019d3c5455b721aaf8c202bab",
+    "docs/C任务完成说明与阅读路线.md": "e5ab26ce6b59fb1eba02a07d83e3ed9c9251116ea3c14988a4d3cfb0a8341007"
+  }
+}
