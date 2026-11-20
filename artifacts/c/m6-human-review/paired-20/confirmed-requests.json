@@ -1,0 +1,139 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-19/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f400",
+      "ask_id": "ask-7313bb53ef17438facbfb9c9a5626e0f",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：核心“是否需要逐案评估”被第二主张反向表述，且与本答案其他两句冲突；也未说明具体金字塔计划条件，建议wrong，不因有其他正确句就只计为遗漏。",
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1包含AnnexI所列做法在所有情况下不公平的完整主句。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "实际引用2开头是截断的an be deemed，并未出现cannot；完整冻结序言是can be deemed unfair without逐案判断，生成cannot将本题核心方向反转，既无引用支持也与A标准相反。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用4直接包含AnnexI标题COMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s400",
+      "ask_id": "ask-41eb292bfd7949f98c26ce6ae067f699",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f800",
+      "ask_id": "ask-de70864d001142599e6daf2e5c2ff867",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s800",
+      "ask_id": "ask-bf11f8c731e24b769b75347e7478904a",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 84,
+    "official_cases_with_review": 80,
+    "answer_grades_pending": 16,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 27
+  }
+}
