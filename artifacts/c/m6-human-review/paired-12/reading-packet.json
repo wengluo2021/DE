@@ -1,0 +1,85 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 12,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-dcd-supply-without-delay",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-dcd-supply-without-delay",
+    "question": "A contract covered by the original text of Directive (EU) 2019/770 does not say when the trader will supply a digital service. When must the trader supply it?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "Unless the parties have agreed otherwise, the trader must supply the digital content or digital service without undue delay after the conclusion of the contract.",
+    "key_facts": [
+      "1. The trader shall supply the digital content or digital service to the consumer. Unless the parties have agreed otherwise, the trader shall supply the digital content or digital service without undue delay after the conclusion of the contract."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_digital_content_2019_770",
+        "article_id": "eu_digital_content_2019_770:article:5",
+        "structure_id": null,
+        "start": 87988,
+        "end": 88233,
+        "text": "1. The trader shall supply the digital content or digital service to the consumer. Unless the parties have agreed otherwise, the trader shall supply the digital content or digital service without undue delay after the conclusion of the contract."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第12题_未约定数字服务供给时间_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-f31717aee90a4e3bb74f9009d0cfdb32",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-fa0ecdb89b134006895d7094447712a7",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-30e261be687547cfb7dbb3ce4c7ff5a8",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-1ea531d9b7734280afdca58d76eb8cc7",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
