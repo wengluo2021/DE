@@ -1,0 +1,21 @@
+{
+  "state": "passed",
+  "batch": 7,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 7,
+  "advisory_support_counts": {
+    "supported": 7
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-dcd-reimbursement-time",
+  "next_question_offset": 14,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-07.json": "f40dca0ccd3b33dbe0326c15391a9fed8ceb86bb756a36a45a8eba7da03ea237",
+    "docs/M6辅助预审07_第13至14题.md": "3280fa6352bd07f6a10aa26656ee63826969775f47eb0006241abbc727cf6e17"
+  }
+}

@@ -1,0 +1,546 @@
+{
+  "schema_version": "1.0",
+  "kind": "ai_pre_review_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "can_import_as_human_review": false,
+  "official_review_written": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "source_code_commit": "62cbe25",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "index_version": "e1d9e93d8abeea648bf64a2e7ac215e39f051a3c715dbe2ffa0664dac8b302bf",
+  "batch": 10,
+  "question_offsets": [
+    18,
+    19
+  ],
+  "gold_cases": [
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-ucpd-invitation-price-information",
+      "question": "A trader makes an invitation to purchase covered by Directive 2005/29/EC, and the price information is not already apparent. What price information does Article 7 treat as material?",
+      "topic": "multi_evidence",
+      "answerable": true,
+      "reference_answer": "The price inclusive of taxes is material. If the price cannot reasonably be calculated in advance, the manner of calculating it is material, together with additional freight, delivery or postal charges where appropriate, or the fact that such charges may be payable where those charges also cannot reasonably be calculated in advance.",
+      "key_facts": [
+        "4. In the case of an invitation to purchase, the following information shall be regarded as material, if not already apparent from the context:",
+        "(c) the price inclusive of taxes, or where the nature of the product means that the price cannot reasonably be calculated in advance, the manner in which the price is calculated, as well as, where appropriate, all additional freight, delivery or postal charges or, where these charges cannot reasonably be calculated in advance, the fact that such additional charges may be payable;"
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_unfair_practices_2005_29",
+          "article_id": "eu_unfair_practices_2005_29:article:7",
+          "structure_id": null,
+          "start": 31679,
+          "end": 31822,
+          "text": "4. In the case of an invitation to purchase, the following information shall be regarded as material, if not already apparent from the context:"
+        },
+        {
+          "document_id": "eu_unfair_practices_2005_29",
+          "article_id": "eu_unfair_practices_2005_29:article:7",
+          "structure_id": null,
+          "start": 32119,
+          "end": 32501,
+          "text": "(c) the price inclusive of taxes, or where the nature of the product means that the price cannot reasonably be calculated in advance, the manner in which the price is calculated, as well as, where appropriate, all additional freight, delivery or postal charges or, where these charges cannot reasonably be calculated in advance, the fact that such additional charges may be payable;"
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    },
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "question": "Under Directive 2005/29/EC, is a pyramid promotional scheme described in Annex I unfair only after a case-by-case assessment, or in all circumstances?",
+      "topic": "multi_evidence",
+      "answerable": true,
+      "reference_answer": "Annex I, point 14, covers establishing, operating or promoting a pyramid scheme in which a consumer gives consideration for the opportunity to receive compensation derived primarily from introducing other consumers rather than from the sale or consumption of products. Article 5(5) says the Annex I practices are unfair in all circumstances. The same list applies in every Member State and may be changed only by revision of the Directive.",
+      "key_facts": [
+        "5. Annex I contains the list of those commercial practices which shall in all circumstances be regarded as unfair. The same single list shall apply in all Member States and may only be modified by revision of this Directive.",
+        "14. Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation that is derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_unfair_practices_2005_29",
+          "article_id": "eu_unfair_practices_2005_29:article:5",
+          "structure_id": null,
+          "start": 27416,
+          "end": 27640,
+          "text": "5. Annex I contains the list of those commercial practices which shall in all circumstances be regarded as unfair. The same single list shall apply in all Member States and may only be modified by revision of this Directive."
+        },
+        {
+          "document_id": "eu_unfair_practices_2005_29",
+          "article_id": null,
+          "structure_id": "eu_unfair_practices_2005_29:annex:I",
+          "start": 51682,
+          "end": 51969,
+          "text": "14. Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation that is derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    }
+  ],
+  "entries": [
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f400",
+      "ask_id": "ask-9ed69449f46c42d195aa96ae129850a7",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1
+      ],
+      "reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s400",
+      "ask_id": "ask-9305a1eceb944606a2d40da19156b5d1",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1
+      ],
+      "reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f800",
+      "ask_id": "ask-c725700fad544660b58b3ac3aecc0d46",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1
+      ],
+      "reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s800",
+      "ask_id": "ask-9f82bdccd6444cbd8076178021e0887e",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0,
+        1
+      ],
+      "reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f400",
+      "ask_id": "ask-7313bb53ef17438facbfb9c9a5626e0f",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [
+        0
+      ],
+      "missing_key_fact_indexes": [
+        1
+      ],
+      "reason": "核心“是否需要逐案评估”被第二主张反向表述，且与本答案其他两句冲突；也未说明具体金字塔计划条件，建议wrong，不因有其他正确句就只计为遗漏。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Annex I contains the list of commercial practices which shall in all circumstances be regarded as unfair.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1包含AnnexI所列做法在所有情况下不公平的完整主句。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "4649f89f97a3efcadb4098bc256a383b22ee9626e54e5c47b9e53fa02406ddcd",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "article_labels": [
+                "Article 5"
+              ],
+              "start": 27200,
+              "end": 27600,
+              "text": "ments which are not meant to be taken literally.\n4. In particular, commercial practices shall be unfair which:\n(a) are misleading as set out in Articles 6 and 7,\nor\n(b) are aggressive as set out in Articles 8 and 9.\n5. Annex I contains the list of those commercial practices which shall in all circumstances be regarded as unfair. The same single list shall apply in all Member States and may only be"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Practices on the Annex I list cannot be deemed unfair without a case-by-case assessment against the provisions of Articles 5 to 9.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": false,
+          "reason": "实际引用2开头是截断的an be deemed，并未出现cannot；完整冻结序言是can be deemed unfair without逐案判断，生成cannot将本题核心方向反转，既无引用支持也与A标准相反。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "e0d3a1f9e48f454a5bebe4379835beeb101ab738b4b2faaa9f40cb15cf143bf7",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 14800,
+              "end": 15200,
+              "text": "an be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9. The list may only be modified by revision of the Directive.\n(18) It is appropriate to protect all consumers from unfair commercial practices; however the Court of Justice has found it necessary in adjudicating on advertising cases since the enactment of Directive 84/450/EEC to examine the effect "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Annex I is titled commercial practices which are in all circumstances considered unfair.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "引用4直接包含AnnexI标题COMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "e1420b2b921a999b410e380497e12ea44fcb70789dd566ba8debc4ac4f0407c9",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 48400,
+              "end": 48800,
+              "text": "nded by Directive 2002/65/EC (OJ L 271, 9.10.2002, p. 16).\n(5) OJ L 166, 11.6.1998, p. 51. Directive as last amended by Directive 2002/65/EC.\n(6) OJ L 271, 9.10.2002, p. 16.\n(7) OJ L 201, 31.7.2002, p. 37.\n(8) OJ L 171, 7.7.1999, p. 12.\n(9) OJ L 364, 9.12.2004, p. 1.\n\nANNEX I\nCOMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR\nMisleading commercial practices\n1. Claiming to be a s"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s400",
+      "ask_id": "ask-41eb292bfd7949f98c26ce6ae067f699",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1
+      ],
+      "partially_covered_key_fact_indexes": [
+        0
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Annex I contains the list of commercial practices which shall in all circumstances be regarded as unfair.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "8efcfa478a26e61e7c7300992042b0ac7e8077185df3520931f928ced1c3b220",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "article_labels": [
+                "Article 5"
+              ],
+              "start": 27419,
+              "end": 27642,
+              "text": "Annex I contains the list of those commercial practices which shall in all circumstances be regarded as unfair. The same single list shall apply in all Member States and may only be modified by revision of this Directive.\n\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "These are the only commercial practices which can be deemed unfair without a case-by-case assessment against Articles 5 to 9.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "272099ae8913ae9a19d8702db0d8785f876dbddc9815a261b98bda7fdbc3602a",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 14689,
+              "end": 15045,
+              "text": "Annex I therefore contains the full list of all such practices. These are the only commercial practices which can be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9. The list may only be modified by revision of the Directive.\n(18) It is appropriate to protect all consumers from unfair commercial practices; "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Annex I lists establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "9797349d0ba017c1612b6c7230fbb16db4c183e62ec721b0b5b298ce47987a1a",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 51686,
+              "end": 52062,
+              "text": "Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation that is derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products.\n15. Claiming that the trader is about to cease trading or move premises when he is not.\n16. "
+            }
+          ]
+        },
+        {
+          "claim_index": 3,
+          "claim_text": "Annex I is titled commercial practices which are in all circumstances considered unfair.",
+          "citation_numbers": [
+            5
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。",
+          "actually_cited_evidence": [
+            {
+              "n": 5,
+              "chunk_id": "6f3ca1384a011eb0d9b7f3c02392178e29b58993e672105d38e8c353172bea86",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 48380,
+              "end": 48779,
+              "text": "19. Directive as amended by Directive 2002/65/EC (OJ L 271, 9.10.2002, p. 16).\n(5) OJ L 166, 11.6.1998, p. 51. Directive as last amended by Directive 2002/65/EC.\n(6) OJ L 271, 9.10.2002, p. 16.\n(7) OJ L 201, 31.7.2002, p. 37.\n(8) OJ L 171, 7.7.1999, p. 12.\n(9) OJ L 364, 9.12.2004, p. 1.\n\nANNEX I\nCOMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR\nMisleading commercial practices\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f800",
+      "ask_id": "ask-de70864d001142599e6daf2e5c2ff867",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1
+      ],
+      "partially_covered_key_fact_indexes": [
+        0
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Annex I contains the full list of commercial practices which are in all circumstances unfair.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "0510cf2344aab35fca403c72662b6c9ab05f2afc2d695eb2e8cba0e8727b13f7",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 14400,
+              "end": 15200,
+              "text": " impair the consumer's freedom of choice. Those are practices using harassment, coercion, including the use of physical force, and undue influence.\n(17) It is desirable that those commercial practices which are in all circumstances unfair be identified to provide greater legal certainty. Annex I therefore contains the full list of all such practices. These are the only commercial practices which can be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9. The list may only be modified by revision of the Directive.\n(18) It is appropriate to protect all consumers from unfair commercial practices; however the Court of Justice has found it necessary in adjudicating on advertising cases since the enactment of Directive 84/450/EEC to examine the effect "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "These are the only commercial practices which can be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "0510cf2344aab35fca403c72662b6c9ab05f2afc2d695eb2e8cba0e8727b13f7",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 14400,
+              "end": 15200,
+              "text": " impair the consumer's freedom of choice. Those are practices using harassment, coercion, including the use of physical force, and undue influence.\n(17) It is desirable that those commercial practices which are in all circumstances unfair be identified to provide greater legal certainty. Annex I therefore contains the full list of all such practices. These are the only commercial practices which can be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9. The list may only be modified by revision of the Directive.\n(18) It is appropriate to protect all consumers from unfair commercial practices; however the Court of Justice has found it necessary in adjudicating on advertising cases since the enactment of Directive 84/450/EEC to examine the effect "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "Annex I lists establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "ee1ec5146bc2946fbd7e8516337cddabebeacd05d9f867b5b2baeaedd5e0ef53",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 51200,
+              "end": 52000,
+              "text": "dvertorial). This is without prejudice to Council Directive 89/552/EEC (1).\n12. Making a materially inaccurate claim concerning the nature and extent of the risk to the personal security of the consumer or his family if the consumer does not purchase the product.\n13. Promoting a product similar to a product made by a particular manufacturer in such a manner as deliberately to mislead the consumer into believing that the product is made by that same manufacturer when it is not.\n14. Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation that is derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products.\n15. Claiming that the trader i"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s800",
+      "ask_id": "ask-bf11f8c731e24b769b75347e7478904a",
+      "suggested_answer_grade": "partial",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        1
+      ],
+      "partially_covered_key_fact_indexes": [
+        0
+      ],
+      "missing_key_fact_indexes": [],
+      "reason": "回答了本题核心：所述金字塔计划属于AnnexI且无需逐案判断，描述条件也完整；但未生成A参考中的同一清单适用所有成员国/仅修订指令可改变这一附带要点。按完整A要点暂建议partial；若只按题干核心问点评分，应由实际评审人统一确认，不能按组临时放宽。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Annex I contains the list of commercial practices which shall in all circumstances be regarded as unfair.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "de10ceefa4fcdd6d1c54af621635b6ef8b54fd29c618e50e258165c4534c1ebb",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "article_labels": [
+                "Article 5"
+              ],
+              "start": 27419,
+              "end": 27642,
+              "text": "Annex I contains the list of those commercial practices which shall in all circumstances be regarded as unfair. The same single list shall apply in all Member States and may only be modified by revision of this Directive.\n\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products is listed in Annex I.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "8a8e19b929a742aeee2d5254ac8ba717f8030f3d2d9f1b40893a618deece11c8",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 51213,
+              "end": 51974,
+              "text": "This is without prejudice to Council Directive 89/552/EEC (1).\n12. Making a materially inaccurate claim concerning the nature and extent of the risk to the personal security of the consumer or his family if the consumer does not purchase the product.\n13. Promoting a product similar to a product made by a particular manufacturer in such a manner as deliberately to mislead the consumer into believing that the product is made by that same manufacturer when it is not.\n14. Establishing, operating or promoting a pyramid promotional scheme where a consumer gives consideration for the opportunity to receive compensation that is derived primarily from the introduction of other consumers into the scheme rather than from the sale or consumption of products.\n15. "
+            }
+          ]
+        },
+        {
+          "claim_index": 2,
+          "claim_text": "These are the only commercial practices which can be deemed unfair without a case-by-case assessment against the provisions of Articles 5 to 9.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "6becde8a10cdede1ef86f14261160befb78072043c572491d40a2cb3f8353569",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 14753,
+              "end": 15233,
+              "text": "These are the only commercial practices which can be deemed to be unfair without a case-by-case assessment against the provisions of Articles 5 to 9. The list may only be modified by revision of the Directive.\n(18) It is appropriate to protect all consumers from unfair commercial practices; however the Court of Justice has found it necessary in adjudicating on advertising cases since the enactment of Directive 84/450/EEC to examine the effect on a notional, typical consumer. "
+            }
+          ]
+        },
+        {
+          "claim_index": 3,
+          "claim_text": "Annex I is titled commercial practices which are in all circumstances considered unfair.",
+          "citation_numbers": [
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。",
+          "actually_cited_evidence": [
+            {
+              "n": 4,
+              "chunk_id": "be8171d14d9c391eef404a0934c78b09875e95eec4a36a5c98d02520e99e9ef7",
+              "document_id": "eu_unfair_practices_2005_29",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 48454,
+              "end": 49071,
+              "text": "16).\n(5) OJ L 166, 11.6.1998, p. 51. Directive as last amended by Directive 2002/65/EC.\n(6) OJ L 271, 9.10.2002, p. 16.\n(7) OJ L 201, 31.7.2002, p. 37.\n(8) OJ L 171, 7.7.1999, p. 12.\n(9) OJ L 364, 9.12.2004, p. 1.\n\nANNEX I\nCOMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR\nMisleading commercial practices\n1. Claiming to be a signatory to a code of conduct when the trader is not.\n2. Displaying a trust mark, quality mark or equivalent without having obtained the necessary authorisation.\n3. Claiming that a code of conduct has an endorsement from a public or other body which it does not have.\n4. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    }
+  ],
+  "next_question_offset": 20,
+  "next_case_id": "gold-utd-unfair-term-test",
+  "school_generation_api_calls": 0
+}

@@ -1,0 +1,19 @@
+{
+  "state": "passed",
+  "batch": 13,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 0,
+  "advisory_support_counts": {},
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-refuse-refund-interest-rate",
+  "next_question_offset": 26,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-13.json": "0feab1d9d8f3708f3658055a462988a003b842115aec74f63b103706aec9fc4f",
+    "docs/M6辅助预审13_第25至26题.md": "38e63fd784b2bd2d6d33c7c53bd931cbe70ace26a4ca4bcb31e0de201a568683"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "kind": "ai_pre_review_only",
+  "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\C-M6-AI-pre-review-20261120.zip",
+  "bytes": 243077,
+  "sha256": "795675d9d78dec2b7e3ea24d209db1d44e558257b5e784d10e90459418cecbd0",
+  "members": 86,
+  "all_member_bytes_and_CRC_verified": true,
+  "credential_leaks": 0,
+  "official_review_written": false,
+  "school_generation_api_calls": 0,
+  "old_archives_unchanged": true
+}

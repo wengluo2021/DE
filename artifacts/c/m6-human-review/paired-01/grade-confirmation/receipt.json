@@ -1,0 +1,98 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "answer_grades_to_save": 3,
+  "claim_support_fields_written": 0,
+  "applied": [
+    {
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用4完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:35:29.912943+00:00"
+      }
+    },
+    {
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:35:29.927206+00:00"
+      }
+    },
+    {
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1以未约定具体交付日的完整规则开头，包含尽快交付、合同成立后最迟30日，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:35:29.940416+00:00"
+      }
+    }
+  ],
+  "source_question_call_id": "call_5810cea64a594432bfd92b79916aaebf",
+  "school_generation_api_calls": 0,
+  "official_review_history_rows": 8,
+  "official_cases_with_any_review": 4,
+  "answer_grades_saved": 4,
+  "answer_grades_pending": 92,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_saved": 8,
+  "claim_support_decisions_pending": 158,
+  "prior_eight_support_decisions_preserved": true,
+  "original_other_117_records_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "sqlite_reopened_and_reviews_preserved": true,
+  "complete_paired_questions": 1,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "2bc7be025aedd82a34cc6f3fa55a4c78ab37f3a740e10ac9cf36a9c4337ebf99",
+    "evaluation.partial-review.json": "81894cf89614df1b4f806bdd4d514b328343ebab4c02633169dab7e9adda6aad",
+    "requests.json": "40351f001274af8882840ee54519a1ecf3fcc09e1d1e81f5705f306b7b1e7f08",
+    "user-feedback.json": "872c39734d615bf5d7d214d9f5da5c26ef304a3bbe142e2fc4259d3c90845cf8"
+  }
+}

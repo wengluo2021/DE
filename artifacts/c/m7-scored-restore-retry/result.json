@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "kind": "offline_scored_SQLite_restore",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "image": "derag-c-m7-runtime:90f59e7032",
+  "image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+  "source_human_cases": 21,
+  "source_authorized_AI_cases": 99,
+  "all_items_individually_human_verified": false,
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "network": "none",
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7scored-13778aa996",
+  "container": "derag-c-scored-13778aa996",
+  "sqlite_volume": "derag-c-scored-13778aa996-sqlite",
+  "chroma_copy_volume": "derag-c-scored-13778aa996-chroma",
+  "source_index_volumes": {
+    "sqlite": "derag-c-formal-5961513ef7-sqlite",
+    "chroma": "derag-c-formal-5961513ef7-chroma",
+    "chunks": "derag-c-formal-5961513ef7-chunks",
+    "indexes": "derag-c-formal-5961513ef7-indexes",
+    "runs": "derag-c-formal-5961513ef7-runs"
+  },
+  "current_runtime_source_files_equal_image": 68,
+  "result": {
+    "state": "passed",
+    "platform": "Linux Docker CPU",
+    "source": "SQLite backup of completed Windows formal run",
+    "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+    "external_model_calls": 0,
+    "api_key_configured": false,
+    "index_volumes_reused": true,
+    "expected_cases": 120,
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "restored_cases": 120,
+    "restart_and_exports_identical": true,
+    "export_sha256": {
+      "evaluation.csv": "023535dd447614600459d0dc2ca5b0f55c0840508b809bddcefbaa459590ddad",
+      "evaluation.json": "cd92fe5ae306639661f7b6b9d91d07a6f5bd637cec9d134dbe40c02763267498"
+    },
+    "evaluation_runs_after": 1,
+    "review_rows_after": 124,
+    "own_servers_stopped": true
+  },
+  "latest_scored_export_restored": true,
+  "windows_database_logically_unchanged": true,
+  "no_index_rebuild": true,
+  "existing_source_volumes_not_modified": true,
+  "human_and_AI_reviewer_labels_preserved": true,
+  "backup_sha256": "bcc7905770b04fc02f2992619f6a623831837789cb41c52bdf2d190b6d6e0b0a",
+  "own_container_removed": true,
+  "preserved_owned_volumes": [
+    "derag-c-scored-13778aa996-sqlite",
+    "derag-c-scored-13778aa996-chroma"
+  ],
+  "windows_database_lease_available": true
+}

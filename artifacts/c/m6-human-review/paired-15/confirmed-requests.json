@@ -1,0 +1,89 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-14/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f400",
+      "ask_id": "ask-a9984618d5f644a191d5f8cf458581b6",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s400",
+      "ask_id": "ask-fad03de157904177bca8a436963d34a2",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f800",
+      "ask_id": "ask-899dbaaceae749c6ba634097c561e904",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s800",
+      "ask_id": "ask-44d4cd0d054c4271a9b885f43704c015",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 64,
+    "official_cases_with_review": 60,
+    "answer_grades_pending": 36,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 61
+  }
+}

@@ -8,6 +8,7 @@ import sys
 from app.retrieval.types import load_config, file_hash, write_json
 from app.retrieval.embedding import LocalEmbedder
 from app.retrieval.errors import RetrievalError
+from app.config import load_settings
 
 
 def main():
@@ -15,7 +16,8 @@ def main():
     parser.add_argument("--config")
     parser.add_argument("--model-dir")
     args = parser.parse_args()
-    config = load_config(args.config, model_dir=args.model_dir)["embedding"]
+    overrides={"embedding":{"model_dir":args.model_dir}} if args.model_dir else {}
+    config=load_settings(args.config,overrides=overrides).retrieval_config()["embedding"]
     # 必须固定到 40 位 commit；main/latest 后续可能变动，无法保证老师拿到同一模型。
     if not re.fullmatch(r"[0-9a-f]{40}", config["revision"]):
         raise RetrievalError("INVALID_REQUEST", "Use an immutable 40-character revision", 422)

@@ -1,0 +1,57 @@
+{
+  "source_commit": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "copies": {
+    "A部分交付说明.md": {
+      "original_path": "A部分交付说明.md",
+      "sha256": "12138cf168e8215e3b6dd78a612c83058d791d7bb10fa87f0beec4bfeb9d26f5"
+    },
+    "A开发文档.md": {
+      "original_path": "A开发文档.md",
+      "sha256": "762535bdd317eb83fac274143d6ee72c53670e208ea017fc340154f94e009104"
+    },
+    "ASSIGNMENT_ZH.md": {
+      "original_path": "ASSIGNMENT_ZH.md",
+      "sha256": "ad6c31ffaca41e6f16578fedaeac8bd060852b1526130884522774bb24bc03ca"
+    },
+    "a_review/a_final_validation.md": {
+      "original_path": "artifacts/a_review/a_final_validation.md",
+      "sha256": "63e6c7932d732db58b2feda64afe2e1b25b336a30e071cd2b40dcf53ddfa2c13"
+    },
+    "a_review/corpus_batch_review.md": {
+      "original_path": "artifacts/a_review/corpus_batch_review.md",
+      "sha256": "ef76a2ca40e444beeec0c1bc7c3a42ed3763408d0d24cafddf0f458d20c6b571"
+    },
+    "a_review/corpus_freeze_review.md": {
+      "original_path": "artifacts/a_review/corpus_freeze_review.md",
+      "sha256": "24b1adf12a48423a6ff04e83544fb2856d12ad7ef60399b3ea599e98b71b16af"
+    },
+    "a_review/eu_consumer_rights_2011_83_review.md": {
+      "original_path": "artifacts/a_review/eu_consumer_rights_2011_83_review.md",
+      "sha256": "0af5fe7c011fb7ddffe21f910cd702c362c4497a890f7a759c70b3604544391f"
+    },
+    "a_review/eu_digital_content_2019_770_review.md": {
+      "original_path": "artifacts/a_review/eu_digital_content_2019_770_review.md",
+      "sha256": "c89ce047f2e62c5ca9dcef46380536c049b4dad9c647d7f510afa9812e8f23c4"
+    },
+    "a_review/eu_sale_of_goods_2019_771_review.md": {
+      "original_path": "artifacts/a_review/eu_sale_of_goods_2019_771_review.md",
+      "sha256": "a58c9974e3c205a3aa823a534f2b7e337299d045331b53c4632acd12a1e5c8f0"
+    },
+    "a_review/eu_unfair_practices_2005_29_review.md": {
+      "original_path": "artifacts/a_review/eu_unfair_practices_2005_29_review.md",
+      "sha256": "f2fa06baa56e403c804188db38cc27cc9bea5bb6beb42d33492b2fa76f10f18e"
+    },
+    "a_review/eu_unfair_terms_93_13_review.md": {
+      "original_path": "artifacts/a_review/eu_unfair_terms_93_13_review.md",
+      "sha256": "b2e320339da6c28a4b3b2ca06ae4458a11a230f5e2c8e0d447a61dde29064e59"
+    },
+    "a_review/gold_review.md": {
+      "original_path": "artifacts/a_review/gold_review.md",
+      "sha256": "d30d13fba966fcb3f6e429f251e0955e718bb947d634dfce701a5b36904ecab1"
+    },
+    "a_review/sample_handoff.md": {
+      "original_path": "artifacts/a_review/sample_handoff.md",
+      "sha256": "b4adf827e6226e4ca480bfac3457b00ac9e3d95652e197467015b52532994684"
+    }
+  }
+}

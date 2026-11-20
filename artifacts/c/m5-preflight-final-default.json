@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "state": "not_ready",
+  "mode": "development",
+  "ready_for_qa": false,
+  "ready_for_evaluation": false,
+  "formal_ready": false,
+  "components": {
+    "dependencies": {
+      "ready": true,
+      "missing": [],
+      "mismatched": []
+    },
+    "corpus": {
+      "ready": false,
+      "code": "CORPUS_NOT_CONFIGURED",
+      "message": "A's frozen corpus manifest is missing"
+    },
+    "gold": {
+      "ready": false,
+      "code": "CORPUS_REQUIRED",
+      "message": "Validate A's corpus before checking gold"
+    },
+    "model_files": {
+      "ready": true,
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dimension": 1024,
+      "file_count": 11,
+      "encoder_loaded": false
+    },
+    "indexes": {
+      "ready": false,
+      "code": "INDEX_PREREQUISITES_MISSING",
+      "message": "Validate corpus and model files before checking indexes"
+    },
+    "generation": {
+      "ready": false,
+      "configured": false,
+      "transport": "httpx",
+      "transport_available": true,
+      "connectivity_verified": false
+    }
+  },
+  "configuration": {
+    "schema_version": "1.0",
+    "mode": "development",
+    "corpus_version": "fixture-en-v2",
+    "gold_version": null,
+    "conditions": [
+      "f400",
+      "s400",
+      "f800",
+      "s800"
+    ],
+    "top_k": 5,
+    "data_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\data",
+    "embedding": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "model_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\models\\embedding",
+      "device": "cpu",
+      "dimension": 1024,
+      "normalize": true,
+      "query_prefix": "",
+      "document_prefix": "",
+      "max_input_tokens": 8192,
+      "pooling": "cls",
+      "batch_size": 4,
+      "cpu_threads": 4
+    },
+    "retrieval": {
+      "metric": "cosine",
+      "chunker_version": "structure-offset-v2"
+    },
+    "generation": {
+      "provider": "openai-compatible",
+      "base_url": "https://llm.cs.cityu.edu.hk/v1",
+      "model": "CS5351/DeepSeek-V4-Flash",
+      "temperature": 0,
+      "max_tokens": 1024,
+      "timeout_seconds": 60,
+      "max_attempts": 2,
+      "prompt_path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\app\\qa\\prompts\\answer.txt",
+      "json_mode": true,
+      "transport": "httpx",
+      "seed": null,
+      "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+      "api_key_configured": false
+    }
+  },
+  "experiment_fingerprint": "2a8760701b2f317a6bfd35c59edce4c368efb7c16ffc440326cd67577a55d348",
+  "external_model_calls": 0,
+  "index_builds": 0
+}

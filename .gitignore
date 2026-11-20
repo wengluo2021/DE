@@ -15,3 +15,15 @@ artifacts/b/.pytest/
 .venv-b-verify/
 .venv-b-smoke/
 .idea/
+artifacts/c/.pytest/
+artifacts/c/.pytest_cache/
+artifacts/c/.pytest*/
+data/sqlite/
+data/runs/
+# Runtime outputs for A's formal corpus; frozen inputs remain tracked.
+data/formal_corpus/chroma/
+data/formal_corpus/chunks/
+data/formal_corpus/indexes/
+data/formal_corpus/sqlite/
+data/formal_corpus/runs/
+data/formal_corpus/.retrieval.lock

@@ -1,0 +1,22 @@
+{
+  "external_model_calls": 0,
+  "synthetic": true,
+  "state": "passed",
+  "run_id": "eval-917c3957ba7044c383f6b23b0c4cedd1",
+  "case_rows": 120,
+  "conditions": [
+    "f400",
+    "s400",
+    "f800",
+    "s800"
+  ],
+  "corpus_version": "fixture-en-v2",
+  "gold_version": "fixture-gold-v1",
+  "index_version": "c-fixture-index-v1",
+  "review_pending_correctly": true,
+  "resume_created_no_new_run": true,
+  "condition_scoring_isolated": true,
+  "export_json_csv_rows_match": true,
+  "model": "fixture-model",
+  "own_server_stopped": true
+}

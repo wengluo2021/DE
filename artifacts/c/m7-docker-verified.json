@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-19",
+  "state": "failed",
+  "scope": "Linux engineering checks with synthetic fixtures, NOT official acceptance",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-3713835790",
+  "test_image": "derag-c-m7-check:3713835790",
+  "runtime_image": "derag-c-m7-runtime:3713835790",
+  "commands": [
+    {
+      "phase": "build-test",
+      "exit_code": 0,
+      "seconds": 1.851,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-3713835790\\build-test.log"
+    },
+    {
+      "phase": "tests",
+      "exit_code": 0,
+      "seconds": 46.987,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-3713835790\\tests.log"
+    },
+    {
+      "phase": "build-runtime",
+      "exit_code": 0,
+      "seconds": 1.47,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-3713835790\\build-runtime.log"
+    },
+    {
+      "phase": "runtime-http",
+      "exit_code": 1,
+      "seconds": 0.489,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-3713835790\\runtime-http.log"
+    }
+  ],
+  "build_transport": "temporary WSL loopback relay to existing Windows loopback proxy; no TLS interception",
+  "test_image_id": "sha256:acdb76ae35bef808c76443aef22f73b4046cce5d64f42eae7b15c3f38403b80f",
+  "tests": {
+    "tests": "369",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "1",
+    "time": "45.558"
+  },
+  "runtime_image_id": "sha256:9ad991e4775fbb0a8c8c254c742e421574bda3c2dd6668da8afa5eb4b4c78017",
+  "error": {
+    "type": "RuntimeError",
+    "message": "runtime-http failed; inspect local log"
+  },
+  "owned_containers_cleaned": [
+    {
+      "container": "derag-c-tests-3713835790",
+      "removed": true
+    },
+    {
+      "container": "derag-c-runtime-http-3713835790",
+      "removed": true
+    }
+  ],
+  "own_container_count": 2
+}

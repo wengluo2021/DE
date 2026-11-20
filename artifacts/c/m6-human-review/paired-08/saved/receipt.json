@@ -1,0 +1,134 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-08/confirmed-requests.json",
+  "confirmation_sha256": "ca56fe3449336bb1106ee2195d00e6c19cbd3aa8f2d1cad703d01c38f538807f",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "b444a4cb7c017a0a99f9b43a08a29a56f7512b70ffe865bc4391291a45db2a6e",
+  "applied": [
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "实际引用在with the nature of the处结束，第二种性质例外的对象尚未出现。与只少同一词词尾不同，此处缺失有法律意义的例外对象，题目也未给该对象，不能补成lack of conformity。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:41.202098+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:41.219181+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:41.231221+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:41.245455+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 36,
+  "official_cases_with_review": 32,
+  "answer_grades_pending": 64,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 90,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "63960b9dd8810c436c0afca3160304e08adaca844802170f2269ade962678f4e",
+    "evaluation.partial-review.json": "f62fb034e543a2bc0ef27abbebf84699611ad846475b6f17a0d6ec4c2aa253bc"
+  }
+}

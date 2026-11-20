@@ -1,0 +1,142 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_aa723e5766fa4748891b2c6427b793be",
+  "confirmation_file": "artifacts/c/m6-human-review/paired-02/confirmed-requests.json",
+  "confirmation_sha256": "1572a7291479e96ad32e19fd434d1838751335a3a9c6d57f61e08b4001f289fe",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "81894cf89614df1b4f806bdd4d514b328343ebab4c02633169dab7e9adda6aad",
+  "applied": [
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1明确要求退还消费者支付的全部款项，包括适用时的交付费用。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1与2在同一文档[73600,74000)、[74000,74400)连续，合起来完整保留通知撤回决定起14日及不得无故拖延；须合看本主张实际绑定的两个引用。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用2完整写出同一支付方式、消费者明确同意例外及不得收费的条件；这是有支持的额外信息，不能补上遗漏的A必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "实际评审人明确确认第2题四组整体均partial、12条引用均支持。来源call_aa723e5766fa4748891b2c6427b793be第0/1项。按A必要事实口径，本组遗漏退款暂缓条件；另遗漏较贵配送差价例外。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:54:23.548902+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含第13(1)条首段，明确全部款项及适用的交付费用。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一引用1完整保留无故拖延限制、14日及从收到消费者撤回通知起算，支持该主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "实际评审人明确确认第2题四组整体均partial、12条引用均支持。来源call_aa723e5766fa4748891b2c6427b793be第0/1项。按A必要事实口径，本组遗漏退款暂缓条件；另遗漏较贵配送差价例外。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:54:23.562392+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1明确全部款项及适用的交付费用。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含收到撤回通知起14日的期限与不得无故拖延。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1包含使用同一支付方式、明确同意例外和消费者不承担费用的完整句子。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "引用4虽以“standing paragraph 1”开头，但本主张所述额外交付费、明确另选配送及最低标准配送比较条件完整保留。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "实际评审人明确确认第2题四组整体均partial、12条引用均支持。来源call_aa723e5766fa4748891b2c6427b793be第0/1项。按A必要事实口径，本组遗漏退款暂缓条件；本组已说明较贵配送差价例外，但仍缺第13(3)条条件。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:54:23.576531+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含全部支付款项及适用的交付费用。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含不得无故拖延、14日、通知撤回决定的起算条件。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1完整包含同一支付方式及明确同意、无费用的限定；这些额外信息有来源，但并未覆盖遗漏的第13(2)/(3)条。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "实际评审人明确确认第2题四组整体均partial、12条引用均支持。来源call_aa723e5766fa4748891b2c6427b793be第0/1项。按A必要事实口径，本组遗漏退款暂缓条件；另遗漏较贵配送差价例外。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:54:23.591210+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 12,
+  "official_cases_with_review": 8,
+  "answer_grades_pending": 88,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 146,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "bed734203941279291cb4ccea8143a8f9eb2c6690b1035022ed9bc50e882c551",
+    "evaluation.partial-review.json": "9756333f162142a8ed19b162f83748b9e45d3bd59fd0868cdcf7ca7dc731f14d"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "state": "passed",
+  "batch": 9,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 8,
+  "advisory_support_counts": {
+    "not_supported": 4,
+    "supported": 4
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-ucpd-invitation-price-information",
+  "next_question_offset": 18,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-09.json": "74c0761c2bec28b4657592b0900953c92e71bcc9ec3acd6af6b10d46a17f258b",
+    "docs/M6辅助预审09_第17至18题.md": "f4d466c2f3625a8e8974f1a9cf0193639d06fa8dcaf3968771ce56d2482de291"
+  }
+}

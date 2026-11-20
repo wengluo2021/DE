@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-26/confirmed-requests.json",
+  "confirmation_sha256": "13b77cee12a99b43c3ca5aa9ebb8152990a0f842506615f57f3199099e4081a8",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "a421fd7fbeda32b2a21d120e1d499ed96297e02e47c2ba0d8d90511782aefd64",
+  "applied": [
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "f400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:59.775870+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:59.790178+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:59.806126+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:59.820295+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 108,
+  "official_cases_with_review": 104,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 16,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "b0993b40fea0f4639b0a1f29b3db2fba0b8a817ebccf417b1369ca2c5a2735a8",
+    "evaluation.partial-review.json": "cfba03126624b69ad2d9a49763baad98a6bfdbdd0a99f2e49287bb756980a8be"
+  }
+}

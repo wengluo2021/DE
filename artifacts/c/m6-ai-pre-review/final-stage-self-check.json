@@ -1,0 +1,21 @@
+{
+  "state": "passed",
+  "branch": "answer-eval",
+  "ai_review_complete": true,
+  "questions": 30,
+  "response_records": 120,
+  "claim_checks": 166,
+  "all_batch_checks_passed": true,
+  "business_code_changed_since_f59f754": false,
+  "official_review_rows": 0,
+  "formal_results": false,
+  "school_generation_api_calls_this_continuation": 0,
+  "cumulative_known_school_tokens": 191672,
+  "historical_unknown_usage_preserved": true,
+  "archive_crc_and_member_bytes_verified": true,
+  "public_files_and_archive_members_scanned": 86,
+  "credential_leaks": 0,
+  "next_action": "actual_human_confirmation",
+  "source_or_official_database_overwritten": false,
+  "pushed": false
+}

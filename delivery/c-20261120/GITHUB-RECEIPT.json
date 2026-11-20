@@ -1,0 +1,88 @@
+{
+  "state": "published_and_server_verified",
+  "release_url": "https://github.com/wengluo2021/DE/releases/tag/c-delivery-20261120",
+  "tag": "c-delivery-20261120",
+  "release_id": 452404260,
+  "pr_url": "https://github.com/wengluo2021/DE/pull/2",
+  "pr_draft": true,
+  "main_ref_observed": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "main_written_by_us": false,
+  "assets": [
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part01",
+      "size": 1073741824,
+      "digest": "sha256:c2d5132cbb3fdebdfecd989531d8aa1f92bd9116b62a56bdabdc7c96d6b66978",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/BGE-M3-5617a9f6-weights.tar.part01",
+      "state": "uploaded"
+    },
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part02",
+      "size": 1073741824,
+      "digest": "sha256:61c07a7bf84505352e85ca66cf251b55e7b5255db38728e8bd3cf81679d1c68f",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/BGE-M3-5617a9f6-weights.tar.part02",
+      "state": "uploaded"
+    },
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part03",
+      "size": 145866752,
+      "digest": "sha256:1aac7b3fec08286c77e183804cbae9367d115608a3abb62fce14e2a48c0a0946",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/BGE-M3-5617a9f6-weights.tar.part03",
+      "state": "uploaded"
+    },
+    {
+      "name": "C-delivery-guide-20261120.zip",
+      "size": 25003,
+      "digest": "sha256:4e89b645a34f666cd607564cbe0475648f5da80e168e5ecf972e81aec676a6f5",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/C-delivery-guide-20261120.zip",
+      "state": "uploaded"
+    },
+    {
+      "name": "C-scored-results-20261120.zip",
+      "size": 33513874,
+      "digest": "sha256:e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/C-scored-results-20261120.zip",
+      "state": "uploaded"
+    },
+    {
+      "name": "C-source-data-scored-20261120.zip",
+      "size": 2073716,
+      "digest": "sha256:105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/C-source-data-scored-20261120.zip",
+      "state": "uploaded"
+    },
+    {
+      "name": "DE.tar",
+      "size": 1870832128,
+      "digest": "sha256:0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/DE.tar",
+      "state": "uploaded"
+    },
+    {
+      "name": "GITHUB-ASSETS-SHA256SUMS.txt",
+      "size": 668,
+      "digest": "sha256:68b95e9c5a7601f46a5ab9c1d160d9f58ef3cdcbe57528f640891fa7c6d0f89d",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/GITHUB-ASSETS-SHA256SUMS.txt",
+      "state": "uploaded"
+    },
+    {
+      "name": "GITHUB-ASSETS.json",
+      "size": 2431,
+      "digest": "sha256:283feb73377f1b6715c5e792f03e346ce8f435409c3c3bad23103979bd38d679",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/GITHUB-ASSETS.json",
+      "state": "uploaded"
+    },
+    {
+      "name": "reassemble_weights.py",
+      "size": 2208,
+      "digest": "sha256:3391a363dedafb0dccfa515e640c739842f54cc3690ea3b8de6ccf5161c4e0cf",
+      "browser_download_url": "https://github.com/wengluo2021/DE/releases/download/c-delivery-20261120/reassemble_weights.py",
+      "state": "uploaded"
+    }
+  ],
+  "server_size_and_sha256_verified": true,
+  "all_10_assets_verified": true,
+  "actual_credentials_in_public_delivery": false,
+  "individually_human_confirmed_cases": 21,
+  "authorized_AI_cases": 99,
+  "external_model_calls": 0
+}

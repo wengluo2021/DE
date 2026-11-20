@@ -1,0 +1,28 @@
+{
+  "question_number": 19,
+  "case_id": "gold-ucpd-invitation-price-information",
+  "title": "购买邀请的含税价格与附加费用",
+  "reading_md": "docs/M6第19题_购买邀请的含税价格与附加费用_评分记录.md",
+  "handoff_number": 40,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    10
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "整答按A必要事实完整性判断，引用支持按每条主张实际绑定的证据判断；缺少必要事实、错误拒答和引用不充分分别保留，不能删题或改变分母。",
+    "F400核验理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+    "S400核验理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+    "F800核验理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+    "S800核验理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [],
+    "s400": [],
+    "f800": [],
+    "s800": []
+  },
+  "support_overrides": {}
+}

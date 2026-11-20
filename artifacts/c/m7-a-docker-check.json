@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-20",
+  "state": "failed",
+  "scope": "Linux A frozen-data adapter regression, runtime and synthetic CPU smoke; no live generation",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-52094f8678",
+  "test_image": "derag-c-m7-check:52094f8678",
+  "runtime_image": "derag-c-m7-runtime:52094f8678",
+  "commands": [
+    {
+      "phase": "build-test",
+      "exit_code": 1,
+      "seconds": 5.899,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-52094f8678\\build-test.log"
+    }
+  ],
+  "build_transport": "temporary WSL loopback relay to existing Windows loopback proxy; no TLS interception",
+  "error": {
+    "type": "RuntimeError",
+    "message": "build-test failed; inspect local log"
+  },
+  "temporary_loopback_relay_stopped": true,
+  "owned_containers_cleaned": [],
+  "own_container_count": 0
+}

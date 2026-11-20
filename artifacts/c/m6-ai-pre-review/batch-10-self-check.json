@@ -1,0 +1,22 @@
+{
+  "state": "passed",
+  "batch": 10,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 14,
+  "advisory_support_counts": {
+    "supported": 13,
+    "not_supported": 1
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-utd-unfair-term-test",
+  "next_question_offset": 20,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-10.json": "efb24c1181ee65613eab6dbb2fb56d36c4c3fd4eadee1015530be90f7cdacf67",
+    "docs/M6辅助预审10_第19至20题.md": "21417b920328d79375a18ff0bdb38359769c99bdb3b3e5424a192b0affde4e44"
+  }
+}

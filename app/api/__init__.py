@@ -4,11 +4,10 @@ from fastapi import APIRouter, FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
-from app.retrieval.errors import RetrievalError
-
-
 def install_retrieval_error_handlers(app: FastAPI):
     """把业务错误和参数错误都转换成 {code, message}，供前端统一展示。"""
+    # Keep C's independent API imports lightweight. B is loaded only when its installer is used.
+    from app.retrieval.errors import RetrievalError
     @app.exception_handler(RetrievalError)
     async def business_error(request: Request, exc: RetrievalError):
         return JSONResponse(exc.as_dict(), status_code=exc.status)

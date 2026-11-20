@@ -1,0 +1,16 @@
+{
+  "state": "not_uploaded",
+  "user_authorized_login": true,
+  "local_branch": "answer-eval",
+  "attempted_local_commit": "959dfed7741347d446b8212d1c89d22b1802208d",
+  "command_target": "HEAD:refs/heads/answer-eval",
+  "returncode": 128,
+  "observed_error": "Git Credential Manager TLS connection closed during authentication; Git could not obtain username noninteractively",
+  "credentials_obtained": false,
+  "force_used": false,
+  "main_targeted": false,
+  "release_created": false,
+  "PR_created": false,
+  "remote_refs_observed_after_attempt": {},
+  "external_model_calls": 0
+}

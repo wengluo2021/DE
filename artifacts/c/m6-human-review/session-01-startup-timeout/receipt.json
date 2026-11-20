@@ -1,0 +1,21 @@
+{
+  "state": "startup_timeout_before_any_http_request",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "case_id": "gold-crd-delivery-time",
+  "condition": "f400",
+  "source_feedback": "artifacts/c/m6-human-review/session-01-user-feedback.json",
+  "source_question_call_id": "call_1ed2eaad6f7f4f559e751f1aea6afeb7",
+  "entrypoint": "app.main:app",
+  "test_mode": false,
+  "injected_services": false,
+  "identity_basis": "Team 开发文档.md PATCH example uses reviewer C; actual user declared C role. Role label, not an invented real name.",
+  "reviewer": "C（本聊天用户）",
+  "real_name_provided": false,
+  "api_key_configured": false,
+  "school_generation_api_calls": 0,
+  "patch_applied": false,
+  "requests": [],
+  "own_review_server_stopped": true,
+  "termination": "own exec session interrupted and exited; database ownership lease subsequently acquired and released",
+  "official_review_rows_after": 0
+}

@@ -1,0 +1,34 @@
+{
+  "question_number": 24,
+  "case_id": "gold-utd-negotiation-burden",
+  "title": "谁证明条款已经个别协商",
+  "reading_md": "docs/M6第24题_谁证明条款已经个别协商_评分记录.md",
+  "handoff_number": 45,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    12
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "整答按A必要事实完整性判断，引用支持按每条主张实际绑定的证据判断；缺少必要事实、错误拒答和引用不充分分别保留，不能删题或改变分母。",
+    "F400核验理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+    "S400核验理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+    "F800核验理由：A第3条明确由主张已个别协商的卖方/供应方举证，本组insufficient，建议wrong（误拒答）。",
+    "S800核验理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [
+      "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。"
+    ],
+    "s400": [
+      "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+    ],
+    "f800": [],
+    "s800": [
+      "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+    ]
+  },
+  "support_overrides": {}
+}

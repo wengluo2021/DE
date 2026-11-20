@@ -1,0 +1,123 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 11,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-sgd-price-reduction",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-sgd-price-reduction",
+    "question": "How does Directive (EU) 2019/771 measure a price reduction for goods that are not in conformity?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "The reduction must be proportionate to the decrease in the value of the goods received by the consumer compared with the value the goods would have had if they had been in conformity.",
+    "key_facts": [
+      "The reduction of price shall be proportionate to the decrease in the value of the goods which were received by the consumer compared to the value the goods would have if they were in conformity."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:15",
+        "structure_id": null,
+        "start": 77337,
+        "end": 77531,
+        "text": "The reduction of price shall be proportionate to the decrease in the value of the goods which were received by the consumer compared to the value the goods would have if they were in conformity."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第11题_按价值减损比例降价_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-a2c923c5b3a5484292fd7f9d30b98c0c",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-c836a7b5226c4197bb6fb1d12fb8706d",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-29e4ad5473bc4ad69441adf533f4cbe7",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-513d006895ac489ebb722d9dac78a02c",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "完整回答比例减价的衡量规则，且实际引用4包含完整原文，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The reduction of price shall be proportionate to the decrease in the value of the goods which were received by the consumer compared to the value the goods would have if they were in conformity.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.5886450409889221,
+              "chunk_id": "25b636b44708797be318c98937e825dbda37cbc512ee38c7f7543ce8fb317f91",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:15"
+              ],
+              "start": 77310,
+              "end": 77533,
+              "text": "Article 15\nPrice reduction\nThe reduction of price shall be proportionate to the decrease in the value of the goods which were received by the consumer compared to the value the goods would have if they were in conformity.\n\n",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 15"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。",
+          "Chinese_explanation": "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

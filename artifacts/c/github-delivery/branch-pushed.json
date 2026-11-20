@@ -1,0 +1,22 @@
+{
+  "state": "branch_pushed_release_uploading",
+  "pushed_commit": "c9595b556325b373c634077b2b7c2e57fe206c8f",
+  "remote_answer_eval": "c9595b556325b373c634077b2b7c2e57fe206c8f",
+  "main_unchanged_at": "66dbada9ed7c2339216d80bcc456ee5b00342fac",
+  "pr": {
+    "number": 2,
+    "url": "https://github.com/wengluo2021/DE/pull/2",
+    "draft": true,
+    "head": "c9595b556325b373c634077b2b7c2e57fe206c8f",
+    "base": "main",
+    "merged": false
+  },
+  "release_id": 452404260,
+  "verified_completed_asset_names": [
+    "C-source-data-scored-20261120.zip",
+    "C-scored-results-20261120.zip"
+  ],
+  "authentication_succeeded": true,
+  "credential_values_recorded": false,
+  "external_model_calls": 0
+}

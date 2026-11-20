@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-20",
+  "state": "failed",
+  "entrypoint": "app.main:app",
+  "platform": "Linux Docker CPU",
+  "injected_services": false,
+  "source_kind": "A frozen EUR-Lex original publications",
+  "formal_acceptance": false,
+  "configuration": {
+    "schema_version": "1.0",
+    "mode": "formal",
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "conditions": [
+      "f400",
+      "s400",
+      "f800",
+      "s800"
+    ],
+    "top_k": 5,
+    "data_dir": "/app/data/formal_corpus",
+    "gold_dir": "/app/data/eval",
+    "structure_dir": "/app/data/processed",
+    "input_adapter": "eurlex-a-v1",
+    "embedding": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "model_dir": "/app/models/embedding",
+      "device": "cpu",
+      "dimension": 1024,
+      "normalize": true,
+      "query_prefix": "",
+      "document_prefix": "",
+      "max_input_tokens": 8192,
+      "pooling": "cls",
+      "batch_size": 4,
+      "cpu_threads": 4
+    },
+    "retrieval": {
+      "metric": "cosine",
+      "chunker_version": "structure-offset-v2"
+    },
+    "generation": {
+      "provider": "openai-compatible",
+      "base_url": "https://llm.cs.cityu.edu.hk/v1",
+      "model": "CS5351/DeepSeek-V4-Flash",
+      "temperature": 0,
+      "max_tokens": 1024,
+      "timeout_seconds": 60,
+      "max_attempts": 2,
+      "prompt_path": "/app/app/qa/prompts/answer.txt",
+      "json_mode": true,
+      "transport": "curl",
+      "seed": null,
+      "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+      "api_key_configured": true
+    }
+  },
+  "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+  "validation": {
+    "schema_version": "1.0",
+    "state": "validated",
+    "mode": "formal",
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "document_count": 5,
+    "article_count": 121,
+    "text_chars": 391777,
+    "answerable_count": 24,
+    "unanswerable_count": 6,
+    "corpus_only": false,
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "external_model_calls": 0
+  },
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "generation_ask_limit": 1,
+  "model_attempt_budget": 2,
+  "model_attempts": 0,
+  "error": {
+    "type": "FileNotFoundError",
+    "code": "FORMAL_INTEGRATION_CHECK_FAILED"
+  },
+  "own_servers_stopped": true
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-19",
+  "stage": "M7 independent engineering preparation",
+  "engineering_status": "passed",
+  "formal_acceptance": "pending_A_and_M6",
+  "linux_suite": {
+    "tests": 369,
+    "passed": 368,
+    "skipped_windows_only": 1,
+    "failures": 0,
+    "seconds": 45.558
+  },
+  "windows_relevant_tests": {
+    "passed": 57,
+    "failures": 0,
+    "seconds": 7.545
+  },
+  "fresh_linux_dependency_install": true,
+  "runtime_source_files_match": 58,
+  "portable_delivery_relocation": "passed",
+  "standard_library_only_verification": "passed",
+  "runtime_http_routes": 5,
+  "real_cpu_retrieval_checks": 12,
+  "model_weights_read_only": true,
+  "school_credentials_injected": false,
+  "school_generation_calls": 0,
+  "all_known_successful_generation_responses": 6,
+  "all_known_successful_generation_tokens": 2085,
+  "public_text_files_checked": 222,
+  "credential_leaks": 0,
+  "documentation_utf8_and_fences": "passed",
+  "cleanup": "own_containers_removed_and_no_loopback_relays",
+  "docker_engine_left_available": true,
+  "branch": "answer-eval",
+  "main_modified": false,
+  "push_performed": false,
+  "final_DE_tar_exported": false,
+  "official_input_status": "not_found_in_checked_GitHub_branches_or_default_data_paths; user assesses not ready",
+  "unverified": [
+    "official data M5 acceptance",
+    "formal 120 cases and actual human grades",
+    "Linux school-generation network",
+    "first Linux online embedding download",
+    "final complete reproducibility and image/data/model/result archive"
+  ],
+  "handoff": "docs/handoffs/M7_02_Linux容器验收与续做.md"
+}

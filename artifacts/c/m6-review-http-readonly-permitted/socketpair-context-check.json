@@ -1,0 +1,31 @@
+{
+  "kind": "observed_local_network_context_comparison",
+  "python": "DERag/.venv/Scripts/python.exe",
+  "operation": "socket.setdefaulttimeout(3); a,b=socket.socketpair(); a.close(); b.close()",
+  "default_restricted_exec": {
+    "state": "failed",
+    "exception": "TimeoutError",
+    "timeout_seconds": 3,
+    "location": "socket._fallback_socketpair -> listener.accept"
+  },
+  "permitted_local_networking_exec": {
+    "state": "passed",
+    "reported_seconds": 0.002
+  },
+  "same_interpreter_and_operation": true,
+  "external_network_calls": 0,
+  "school_generation_api_calls": 0,
+  "project_data_touched_by_minimal_check": false,
+  "post_stop_connection_probe": {
+    "port": 50124,
+    "connect_ex_result": 10035,
+    "connection_established": false,
+    "note": "A connection was not established; this probe alone is not treated as proof of process exit."
+  },
+  "post_stop_process_check": {
+    "owned_launcher_and_server_pids": [41224, 73216],
+    "remaining_owned_pids": [],
+    "both_observed_processes_exited": true
+  },
+  "conclusion": "The observed startup block is in restricted-exec local networking, before loading the project application; the same interpreter initializes and serves the normal app in the permitted context."
+}

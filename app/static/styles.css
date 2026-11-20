@@ -320,3 +320,41 @@ a:hover { text-decoration: underline; }
   .select.compact { min-width: 124px; }
   .page-heading { flex-wrap: wrap; }
 }
+
+/* C live API views reuse the original layout and typography. */
+.service-banner { flex: none; padding: 9px 26px; font-size: 12px; border-bottom: 1px solid var(--line); background: var(--green-soft); overflow-wrap: anywhere; }
+.service-banner.not-ready { background: var(--amber-soft); color: var(--amber); }
+.task-status { margin: 12px 0; padding: 12px; border: 1px solid var(--line); border-radius: 5px; background: var(--green-soft); overflow-wrap: anywhere; }
+.empty-state { padding: 24px 12px; color: var(--muted); font-size: 13px; }
+.source-text { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.8; background: var(--canvas); padding: 14px; border: 1px solid var(--line); border-radius: 5px; }
+.source-text mark { background: #fbe5a8; color: var(--ink); }
+.evidence-card { margin: 18px 0; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.citation-button { border: 0; padding: 0 4px; border-radius: 3px; font: inherit; font-weight: 700; background: var(--green-soft); color: var(--green); }
+.message-content { min-width: 0; flex: 1; }
+.message-label, .message-meta { margin: 6px 0; color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+.message-text p { margin: 0 0 8px; }
+.suggestions { color: var(--muted); font-size: 11px; }
+.compare-question, .evaluation-controls { display: flex; gap: 10px; align-items: center; margin: 18px 0; flex-wrap: wrap; }
+.compare-question input { flex: 1; min-width: 180px; }
+.evaluation-controls .select { flex: 1; min-width: 180px; }
+.compare-question input, .review-form input, .review-form textarea { width: 100%; border: 1px solid var(--line-strong); border-radius: 5px; padding: 9px 11px; background: var(--surface); color: var(--ink); }
+.compare-question input { width: auto; }
+.review-form { display: grid; gap: 15px; margin: 24px 0; }
+.review-form label { display: grid; gap: 7px; font-size: 13px; }
+.review-form fieldset { border: 1px solid var(--line); border-radius: 5px; min-width: 0; display: grid; gap: 12px; padding: 14px; }
+.review-form textarea { min-height: 85px; resize: vertical; }
+.report-meta { align-items: flex-start; gap: 16px; flex-wrap: wrap; overflow-wrap: anywhere; }
+.report-meta details { max-width: 100%; }
+.metric h3 { font-size: 13px; margin: 0 0 12px; }
+.metric p { font-size: 12px; overflow-wrap: anywhere; }
+details summary { cursor: pointer; color: var(--green); font-size: 12px; }
+.detail-drawer { overflow-wrap: anywhere; }
+.chunk-item small { display: block; color: var(--muted); }
+@media (max-width: 640px) {
+  .service-banner { padding: 8px 13px; font-size: 11px; }
+  .heading-actions { flex-wrap: wrap; gap: 6px; }
+  .page-heading { flex-wrap: wrap; gap: 12px; }
+  .compare-question label { flex-basis: 100%; }
+  .compare-question input { flex-basis: 100%; min-width: 0; }
+  .evaluation-controls .select { width: 100%; min-width: 0; }
+}

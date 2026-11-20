@@ -1,0 +1,157 @@
+{
+  "state": "passed",
+  "stages": [
+    {
+      "question": 1,
+      "path": "artifacts/c/m6-human-review/paired-01/final-self-check.json",
+      "sha256": "fb8ca5ad62dc84fd3a1bfdfd57cb39d2089699c1fad1e41525b4ee92557ba36e"
+    },
+    {
+      "question": 2,
+      "path": "artifacts/c/m6-human-review/paired-02/final-self-check.json",
+      "sha256": "845afbbc9dc79720eb6b99b23e07a780ae89e4a2e606e4ca772eaa358f7260c4"
+    },
+    {
+      "question": 3,
+      "path": "artifacts/c/m6-human-review/paired-03/final-self-check.json",
+      "sha256": "ba2642a6cd975a0ac9b3ad563f36a49e3d629f77d1122037e20f2b0a48a5dbf9"
+    },
+    {
+      "question": 4,
+      "path": "artifacts/c/m6-human-review/paired-04/final-self-check.json",
+      "sha256": "8dbe0418e0b5fdbdc0992e1d563b166eb6312e8711ebfcf432bd67101594f42e"
+    },
+    {
+      "question": 5,
+      "path": "artifacts/c/m6-human-review/paired-05/final-self-check.json",
+      "sha256": "8297c9ccc9618ebc2b7f4af5087aae7f7a761be4aaa3992a8ee76cca522ec64b"
+    },
+    {
+      "question": 6,
+      "path": "artifacts/c/m6-human-review/paired-06/final-self-check.json",
+      "sha256": "a6a31568b46a675d7c9d64d7211cccd7c6aa7f069e2037b622e54f696acd20a8"
+    },
+    {
+      "question": 7,
+      "path": "artifacts/c/m6-human-review/paired-07/final-self-check.json",
+      "sha256": "e181882bdc4db37a2546206f860a890954110e27083f1a6e52faf0d37314bbd5"
+    },
+    {
+      "question": 8,
+      "path": "artifacts/c/m6-human-review/paired-08/final-self-check.json",
+      "sha256": "a8684b45fc88477550dcc5722e16626f57fcb6c37e800ffb6020cdf962d509a2"
+    },
+    {
+      "question": 9,
+      "path": "artifacts/c/m6-human-review/paired-09/final-self-check.json",
+      "sha256": "502d3bfb46d562cea191639b84ee96971778928349741fd5d7338efc72e3d2e0"
+    },
+    {
+      "question": 10,
+      "path": "artifacts/c/m6-human-review/paired-10/final-self-check.json",
+      "sha256": "ca16ca361a5262e6d667ee146d5f8acd42c462713f04525f13deee9483517941"
+    },
+    {
+      "question": 11,
+      "path": "artifacts/c/m6-human-review/paired-11/final-self-check.json",
+      "sha256": "dbe2e9267d05bdf1a1564937a47dc98e7e4a81f23e72d2037a1e2740cd7e3165"
+    },
+    {
+      "question": 12,
+      "path": "artifacts/c/m6-human-review/paired-12/final-self-check.json",
+      "sha256": "226e86be161b68d81d429ad6774e10383b52106e9191ed0c0c9666ecae00916c"
+    },
+    {
+      "question": 13,
+      "path": "artifacts/c/m6-human-review/paired-13/final-self-check.json",
+      "sha256": "1112fdaa7b5c49fdfc12bc70940cc390d0980e967241c5d06eae30311984ec01"
+    },
+    {
+      "question": 14,
+      "path": "artifacts/c/m6-human-review/paired-14/final-self-check.json",
+      "sha256": "58f4b5b8116452455c95c4d0021f35c748f1f60521149088735bdd804df73bfe"
+    },
+    {
+      "question": 15,
+      "path": "artifacts/c/m6-human-review/paired-15/final-self-check.json",
+      "sha256": "b8d6f236c3d110ca42e240608da9c2fd60989a0be4c0784c98e9a7000d7780da"
+    },
+    {
+      "question": 16,
+      "path": "artifacts/c/m6-human-review/paired-16/final-self-check.json",
+      "sha256": "08919aa1b181ceb92d797dd5c455ab6679073bfd9d7a36496f598754795d1220"
+    },
+    {
+      "question": 17,
+      "path": "artifacts/c/m6-human-review/paired-17/final-self-check.json",
+      "sha256": "9e0caa9c7a697dabc156230afcb1d1bd367d24202ea198f87eaf5a75d8ca7e64"
+    },
+    {
+      "question": 18,
+      "path": "artifacts/c/m6-human-review/paired-18/final-self-check.json",
+      "sha256": "b60ffdc0fc7cd7e301450b9a83d862b7c58caed2f5936e0c35d2df5997bfc7b9"
+    },
+    {
+      "question": 19,
+      "path": "artifacts/c/m6-human-review/paired-19/final-self-check.json",
+      "sha256": "743ba80ebaa3b2b8b82696f04505a55b985048a053e8e53c87469f51d34ed98d"
+    },
+    {
+      "question": 20,
+      "path": "artifacts/c/m6-human-review/paired-20/final-self-check.json",
+      "sha256": "c213120a52d6d357ac3cd0f2cf1cd4fb55ac1c2e0cd0cc29ab29da073f1d5f2c"
+    },
+    {
+      "question": 21,
+      "path": "artifacts/c/m6-human-review/paired-21/final-self-check.json",
+      "sha256": "5809726628ac24980cb39408d305cee015e299816b0115ab5479177bf50fdd99"
+    },
+    {
+      "question": 22,
+      "path": "artifacts/c/m6-human-review/paired-22/final-self-check.json",
+      "sha256": "f7abb8c424fd9f27939bdfd5eafc24d30b858c9e071a4c2bf39ec25d836b2d66"
+    },
+    {
+      "question": 23,
+      "path": "artifacts/c/m6-human-review/paired-23/final-self-check.json",
+      "sha256": "a1aca568a79e8f4aeb9beeba04a6714dafc82002e23a3c6f8136afe88d4449bb"
+    },
+    {
+      "question": 24,
+      "path": "artifacts/c/m6-human-review/paired-24/final-self-check.json",
+      "sha256": "eb9368acf71ee0500844774d2d49769f92155b5532c3d075da139255d62ffaf6"
+    },
+    {
+      "question": 25,
+      "path": "artifacts/c/m6-human-review/paired-25/final-self-check.json",
+      "sha256": "3b364bf34680765f79a4485a629c739acfa38dec4f29fd4633fa98e3b5261bcb"
+    },
+    {
+      "question": 26,
+      "path": "artifacts/c/m6-human-review/paired-26/final-self-check.json",
+      "sha256": "d97068a88168d312bcb96ceeb111039e9e792759fc40d463655f2b534c845e6f"
+    },
+    {
+      "question": 27,
+      "path": "artifacts/c/m6-human-review/paired-27/final-self-check.json",
+      "sha256": "78d6d879e64d9da2d6a13a6bc22369160435b58c1af8b81adaf8dba798122eb5"
+    },
+    {
+      "question": 28,
+      "path": "artifacts/c/m6-human-review/paired-28/final-self-check.json",
+      "sha256": "7e7beba8e85ec2aebf866af0320604229cf8662d64b982079259f0ce0ae135b9"
+    },
+    {
+      "question": 29,
+      "path": "artifacts/c/m6-human-review/paired-29/final-self-check.json",
+      "sha256": "55f6bcc897de3a78ae336c65acf76c946276fa7a7823ebe9e1635ba57e6b5147"
+    },
+    {
+      "question": 30,
+      "path": "artifacts/c/m6-human-review/paired-30/final-self-check.json",
+      "sha256": "10e7abfe44e0a53e0577c73ec987ed3118113feff2a33830c6b46892cebf5724"
+    }
+  ],
+  "all_30_stage_checks_passed": true,
+  "school_generation_api_calls": 0
+}

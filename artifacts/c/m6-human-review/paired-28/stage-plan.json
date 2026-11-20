@@ -1,0 +1,28 @@
+{
+  "question_number": 28,
+  "case_id": "gold-refuse-german-fine",
+  "title": "德国具体最高罚额未载明",
+  "reading_md": "docs/M6第28题_德国具体最高罚额未载明_评分记录.md",
+  "handoff_number": 49,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    14
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "本题只针对五份冻结原始公布版的范围。A给出拒答理由，四组都输出insufficient且无事实主张；不使用库外常识补数值，也不把关键词无命中当作语义缺失的单独证明。拒答正确性另按6题固定分母统计。",
+    "F400核验理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+    "S400核验理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+    "F800核验理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+    "S800核验理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [],
+    "s400": [],
+    "f800": [],
+    "s800": []
+  },
+  "support_overrides": {}
+}

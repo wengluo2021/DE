@@ -1,0 +1,32 @@
+{
+  "kind": "explicit_user_feedback",
+  "source_question_call_id": "call_4d3d03db42e4475caefbc71895fee043",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "case_id": "gold-crd-delivery-time",
+  "reviewer": "C（本聊天用户）",
+  "answer_grade_request": {
+    "conditions": [
+      "s400",
+      "f800",
+      "s800"
+    ],
+    "user_response": "暂不确认，请继续解释",
+    "confirmed": false
+  },
+  "claim_support_request": {
+    "conditions": [
+      "f400",
+      "s400",
+      "f800",
+      "s800"
+    ],
+    "claim_indices": [
+      0,
+      1
+    ],
+    "user_response": "认可：8条均支持，接受上述题目前提口径",
+    "confirmed": true
+  },
+  "accepted_context_policy": "允许使用题目明确给定的事实前提；不能拿未引用的法律规则补证据。",
+  "school_generation_api_calls": 0
+}

@@ -1578,7 +1578,7 @@ def validate_eval(root: Path) -> int:
     return 0
 
 
-def main(argv: list[str] | None = None) -> int:
+def _main_a(argv: list[str] | None = None) -> int:
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8", errors="replace")
@@ -1607,6 +1607,18 @@ def main(argv: list[str] | None = None) -> int:
     print(f"offset_checks {rendered}")
     print("result=ok")
     return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Preserve A's --scope CLI and C's --config/--corpus-only CLI."""
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if not arguments or any(arg == "--scope" or arg.startswith("--scope=") for arg in arguments):
+        return _main_a(arguments)
+    project_root = str(Path(__file__).resolve().parents[1])
+    if project_root not in sys.path:
+        sys.path.insert(0, project_root)
+    from scripts.validate_integration import main as validate_integration
+    return validate_integration(arguments)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,98 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-24/confirmed-requests.json",
+  "confirmation_sha256": "712509f13452cf9ce41336d9912fe990eb1de97718ec14042588ca937a7d9023",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "d40b4c9a6833e3af292e5e1555c509538d61a0e34496a676bdbe128e997c4eb9",
+  "applied": [
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:51.043462+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:51.064233+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第3条明确由主张已个别协商的卖方/供应方举证，本组insufficient，建议wrong（误拒答）。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:51.078502+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:51.092356+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 100,
+  "official_cases_with_review": 96,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "641df18b245dff803b730daa8e65323cd5be252797069982c3d545936d242c9f",
+    "evaluation.partial-review.json": "c804cbb1ba130f1dd07aca95d9f93a02826b5c3390b36787a5a9fb9f4717bdde"
+  }
+}

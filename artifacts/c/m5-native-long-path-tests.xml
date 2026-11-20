@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.383" timestamp="2026-11-19T02:32:10.701519+08:00" hostname="LAPTOP-DT6MNFR6"><testcase classname="tests.test_runtime_integration" name="test_production_runtime_build_search_ask_and_restart_share_b" time="0.295"><failure message="AssertionError: assert ('failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed)">tmp_path = WindowsPath('C:/Users/Lenovo/Desktop/cityu study/sem A/5481 data engineering/CS5481_teamwork/DERag/artifacts/c/.pytest-m5-native-long-path-verification/test_production_runtime_build_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001B297344C30&gt;
+
+    def test_production_runtime_build_search_ask_and_restart_share_b(tmp_path,monkeypatch):
+        from app.retrieval import embedding
+        monkeypatch.setattr(embedding,"LocalEmbedder",OfflineEncoder)
+        generator=FixtureGenerator();calls=[]
+        def generate(self,messages):
+            calls.append(messages);return generator.generate(messages)
+        monkeypatch.setattr(ChatCompletionsClient,"generate",generate)
+        data=tmp_path/"SYNTHETIC";bundle=write_bundle(data)
+        settings=load_settings(environ={},api_key="synthetic-integration-key",overrides={
+            "data_dir":str(data),"corpus_version":bundle["corpus_version"],"gold_version":bundle["gold_version"],
+            "generation":{"model":"fixture-model"}})
+        app=create_app(settings,test_mode=True)  # No QA or retrieval service injection.
+        with TestClient(app) as client:
+            assert app.state.runtime.retrieval is not None
+            assert not client.get("/api/health").json()["ready"]
+            body={"question":"What does Article 2 state?","condition":"s400","corpus_version":bundle["corpus_version"]}
+            assert client.post("/api/ask",json=body).json()["code"]=="INDEX_NOT_READY"
+            planned=client.post("/api/indexes/build",json={"corpus_version":bundle["corpus_version"]})
+            assert planned.status_code==202
+            task=_wait(client,planned.json()["task_id"])
+&gt;           assert task["state"]=="completed" and task["kind"]=="indexes"
+E           AssertionError: assert ('failed' == 'completed'
+E             
+E             - completed
+E             + failed)
+
+tests\test_runtime_integration.py:52: AssertionError</failure></testcase></testsuite></testsuites>

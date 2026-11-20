@@ -1,0 +1,65 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-11/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "f400",
+      "ask_id": "ask-f31717aee90a4e3bb74f9009d0cfdb32",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+        "answer_grade": "wrong",
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "s400",
+      "ask_id": "ask-fa0ecdb89b134006895d7094447712a7",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+        "answer_grade": "wrong",
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "f800",
+      "ask_id": "ask-30e261be687547cfb7dbb3ce4c7ff5a8",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+        "answer_grade": "wrong",
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "s800",
+      "ask_id": "ask-1ea531d9b7734280afdca58d76eb8cc7",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料2019/770第5(1)条明确未另约定时应在合同成立后无故拖延地供给，题目可答；本组返回insufficient，按端到端标准建议wrong。不得改题为应拒答或从分母删除；模型在其本轮检索上下文中拒答是否合理是另一层分析。",
+        "answer_grade": "wrong",
+        "claim_reviews": []
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 52,
+    "official_cases_with_review": 48,
+    "answer_grades_pending": 48,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 72
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-27/confirmed-requests.json",
+  "confirmation_sha256": "112e0bbd6024de5c5fe45c92a8baf138e608d4ce42e16d334cd680cf9a130edf",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "cfba03126624b69ad2d9a49763baad98a6bfdbdd0a99f2e49287bb756980a8be",
+  "applied": [
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "f400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:04.240963+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:04.253158+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:04.266150+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:04.278541+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 112,
+  "official_cases_with_review": 108,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 12,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "40605c526441a183e883ea3b1e921a5cc8584d5b9e67a77438aa51701c022ba7",
+    "evaluation.partial-review.json": "f6bccab85f43dac78672cf8b6a8c4715a85ff99fc6cee30dedb6d02c92b5f09e"
+  }
+}

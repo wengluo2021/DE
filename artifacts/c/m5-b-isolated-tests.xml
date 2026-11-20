@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.158" timestamp="2026-11-19T02:24:09.274608+08:00" hostname="LAPTOP-DT6MNFR6"><testcase classname="tests.test_retrieval" name="test_chroma_build_search_compare_and_idempotency" time="3.096" /></testsuite></testsuites>

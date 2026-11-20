@@ -1,0 +1,58 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_38bfb1bfd2c14edd80b12b92b1536439",
+  "confirmation_file": "artifacts/c/m6-human-review/paired-06/human-special/confirmed-requests.json",
+  "confirmation_sha256": "125e94111652e0035b327c8f4e79d641fc5f23bc885a87601a97b7d3a3f51b20",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "b2d1b873ee0150bb6d12864e457f563e7059c882a6adf9defd940210f1f78bc5",
+  "applied": [
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "实际引文缺失迟延交货条件的前半句；题干虽给默认期限届满，但没有给出主张额外覆盖的约定交期法律分支，不能用题干补该规范范围。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含额外合理期限仍未交付即可解除合同的条件句。"
+          },
+          {
+            "claim_index": 2,
+            "supported": false,
+            "reason": "实际评审人明确采用较严格读法：This rule紧接解除权句，容易被理解为商家拒绝交货时没有解除权；实际原文只排除再给额外期限的要求，仍可直接解除，不能支持这种解除权限制。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "第6题F400特殊争议，经call_38bfb1bfd2c14edd80b12b92b1536439第0项明确采用严格读法：整答wrong；主张0不支持、1支持、2不支持。本次全部字段经具体确认，未把常规AI授权冒充本条确认。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:26:02.958633+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 25,
+  "official_cases_with_review": 21,
+  "answer_grades_pending": 75,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 121,
+  "changed_case_count": 1,
+  "other_case_records_unchanged": 119,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "fa5edd265b0db53bafa68d9ea209358415151a2ea06185e47f14e94c70b9067b",
+    "evaluation.partial-review.json": "635c33ea3a50c4683f9ac1f289d19a2a635fa0f9c61206a48ad2c0b9349ae23a"
+  }
+}

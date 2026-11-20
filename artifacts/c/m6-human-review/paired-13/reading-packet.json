@@ -1,0 +1,85 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 13,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-dcd-burden-of-supply",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-dcd-burden-of-supply",
+    "question": "Under Directive (EU) 2019/770, who must prove that the digital content or digital service was supplied as Article 5 requires?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "The burden of proof is on the trader.",
+    "key_facts": [
+      "1. The burden of proof with regard to whether the digital content or digital service was supplied in accordance with Article 5 shall be on the trader."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_digital_content_2019_770",
+        "article_id": "eu_digital_content_2019_770:article:12",
+        "structure_id": null,
+        "start": 96415,
+        "end": 96565,
+        "text": "1. The burden of proof with regard to whether the digital content or digital service was supplied in accordance with Article 5 shall be on the trader."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第13题_谁证明已供给数字服务_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-1e96eff346224c868b4d07dc68335462",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-35bfb1ac338b4c2184506ec3ff27a548",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-630c384a31b34a8489f4e6a373942893",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-59adf1fcca8446d08163c19123ea34f4",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

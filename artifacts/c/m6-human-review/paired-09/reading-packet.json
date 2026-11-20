@@ -1,0 +1,440 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 9,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-sgd-repair-or-replacement",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-sgd-repair-or-replacement",
+    "question": "Goods sold under Directive (EU) 2019/771 are not in conformity. May the consumer choose between repair and replacement, and must that remedy be free of charge?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "The consumer may choose repair or replacement in order to have the goods brought into conformity, unless the chosen remedy is impossible or would impose disproportionate costs on the seller in the circumstances listed in Article 13(2). Where repair or replacement is used, it must be carried out free of charge, within a reasonable time after the seller is informed, and without significant inconvenience to the consumer.",
+    "key_facts": [
+      "2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:",
+      "1. Repairs or replacements shall be carried out:\n(a) free of charge;",
+      "(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:13",
+        "structure_id": null,
+        "start": 73709,
+        "end": 74013,
+        "text": "2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:"
+      },
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:14",
+        "structure_id": null,
+        "start": 76165,
+        "end": 76233,
+        "text": "1. Repairs or replacements shall be carried out:\n(a) free of charge;"
+      },
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:14",
+        "structure_id": null,
+        "start": 76234,
+        "end": 76529,
+        "text": "(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第9题_维修更换选择与免费救济条件_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-ca088805de274b788fe27051fceec7de",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "只明确回答免费，另说一般救济；没有明确维修/更换之间的选择权及不可能/不成比例成本例外，也漏合理时间和无重大不便，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out free of charge.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7225804328918457,
+              "chunk_id": "bcffa0100e62dbaa268b7ccf06d0d14d2905e3f60fc86589fa180b6686ef63f5",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76000,
+              "end": 76400,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inco",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含Article14(1)(a)免费维修或更换。",
+          "Chinese_explanation": "引用1完整包含Article14(1)(a)免费维修或更换。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含Article14(1)(a)免费维修或更换。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "In the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6658396124839783,
+              "chunk_id": "30b12998956af55f0a6b4ff8bb774672fcaa26377cbbacadff0494ff5436ccc3",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [],
+              "start": 42000,
+              "end": 42400,
+              "text": "internal market, this Directive should fully harmonise the remedies available to consumers for lack of conformity of goods, and the conditions under which such remedies can be exercised. In particular, in the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.\n(48) As ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。",
+          "Chinese_explanation": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-a58febdba6904c1caa7e39982fae947e",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "仅回答免费，没有回答选择权及例外，也未给合理时间和无重大不便条件，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out free of charge.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6790047883987427,
+              "chunk_id": "3018f9e80de095bd5d42883c698eba418338d31ccfb7fbcda291b640fa5343d1",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76119,
+              "end": 76368,
+              "text": "Article 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 14"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。",
+          "Chinese_explanation": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-ac13afe75f844a07b6d9538974968aba",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "免费、合理时间与无重大不便说明完整，但没有回答消费者能否选择维修/更换以及不可能或不成比例成本例外，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out free of charge.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7372832298278809,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1直接包含第14(1)(a)免费要求。",
+          "Chinese_explanation": "引用1直接包含第14(1)(a)免费要求。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1直接包含第14(1)(a)免费要求。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7372832298278809,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含从卖方获知不符起的合理时间要求。",
+          "Chinese_explanation": "引用1完整包含从卖方获知不符起的合理时间要求。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含从卖方获知不符起的合理时间要求。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7372832298278809,
+              "chunk_id": "2ab719cddac0fb3820767eecd8b81ac68539f95aa68ba67fca95eef005534406",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13",
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76000,
+              "end": 76800,
+              "text": "and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\nArticle 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. Where a repair requires the removal of goods tha",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。",
+          "Chinese_explanation": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-7e375c5e5c20444b865a05b29c974ff2",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "明确选择权/例外与免费，覆盖题干主要问点，但按A完整必要事实口径仍漏合理时间和不得重大不便，建议partial。实际评审人应确认是否要求题干未单独追问的这两个条件，并对所有组统一。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6732718348503113,
+              "chunk_id": "2de22c6bd1e7a0abe7fc2c76be7a44515d65717f8b34793d5f5127db10a8452c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 73422,
+              "end": 74138,
+              "text": "Article 13\nRemedies for lack of conformity\n1. In the event of a lack of conformity, the consumer shall be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price, or to terminate the contract, under the conditions set out in this Article.\n2. In order to have the goods brought into conformity, the consumer may choose between repair and replacement, unless the remedy chosen would be impossible or, compared to the other remedy, would impose costs on the seller that would be disproportionate, taking into account all circumstances, including:\n(a) the value the goods would have if there were no lack of conformity;\n(b) the significance of the lack of conformity; and\n",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。",
+          "Chinese_explanation": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Consumers should enjoy a choice between repair or replacement as regards bringing goods into conformity.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6963781118392944,
+              "chunk_id": "f96007a68b2a84e8232043d2b1deea2849868fb09c91eb3deda950d4ba087515",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [],
+              "start": 41899,
+              "end": 42637,
+              "text": "(47) In order to increase legal certainty and to eliminate one of the major obstacles inhibiting the internal market, this Directive should fully harmonise the remedies available to consumers for lack of conformity of goods, and the conditions under which such remedies can be exercised. In particular, in the event of lack of conformity, consumers should be entitled to have the goods brought into conformity or to receive a proportionate reduction in the price or to terminate the contract.\n(48) As regards bringing goods into conformity, consumers should enjoy a choice between repair or replacement. Enabling consumers to require repair should encourage sustainable consumption and could contribute to greater durability of products. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。",
+          "Chinese_explanation": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Repairs or replacements shall be carried out free of charge.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.697189211845398,
+              "chunk_id": "86b9661756ef005a01c648dc32f1f8ce00de66ba0c76566f5df36f2718da1230",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:14"
+              ],
+              "start": 76119,
+              "end": 76752,
+              "text": "Article 14\nRepair or replacement of the goods\n1. Repairs or replacements shall be carried out:\n(a) free of charge;\n(b) within a reasonable period of time from the moment the seller has been informed by the consumer about the lack of conformity; and\n(c) without any significant inconvenience to the consumer, taking into account the nature of the goods and the purpose for which the consumer required the goods.\n2. Where the lack of conformity is to be remedied by repair or replacement of the goods, the consumer shall make the goods available to the seller. The seller shall take back the replaced goods at the seller's expense.\n3. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 14"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1直接包含免费维修/更换。",
+          "Chinese_explanation": "引用1直接包含免费维修/更换。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1直接包含免费维修/更换。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

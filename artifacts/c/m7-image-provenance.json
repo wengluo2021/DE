@@ -1,0 +1,15 @@
+{
+  "runtime_image": "derag-c-m7-runtime:3713835790",
+  "runtime_image_id": "sha256:9ad991e4775fbb0a8c8c254c742e421574bda3c2dd6668da8afa5eb4b4c78017",
+  "test_image": "derag-c-m7-check:3713835790",
+  "test_image_id": "sha256:acdb76ae35bef808c76443aef22f73b4046cce5d64f42eae7b15c3f38403b80f",
+  "base_manifest_digest": "sha256:ac76900038d8606cc99b413d4ede77bc7152f1e42b94cf5d50d4b80a999652fe",
+  "debian_packages": [
+    "ca-certificates\t20250419~deb12u2",
+    "curl\t7.88.1-10+deb12u15",
+    "libgomp1:amd64\t12.2.0-14+deb12u1"
+  ],
+  "local_candidates_only": true,
+  "final_image_archive_exported": false,
+  "external_model_calls": 0
+}

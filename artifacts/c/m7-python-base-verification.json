@@ -1,0 +1,37 @@
+{
+  "source": "https://registry-1.docker.io/v2/library/python",
+  "tag": "3.13.11-slim-bookworm",
+  "platform": "linux/amd64",
+  "tls_verification": true,
+  "school_credentials_used": false,
+  "index_digest": "sha256:20080e807bfc404f8450b185cf0fc95d553462673598549613735f70a5b4d5d0",
+  "manifest_digest": "sha256:ac76900038d8606cc99b413d4ede77bc7152f1e42b94cf5d50d4b80a999652fe",
+  "config_digest": "sha256:61be0e302c652e7640c09e63a1879e72642e795ca86147dd703874d873f1113a",
+  "layers": [
+    {
+      "digest": "sha256:4831516dd0cb86845f5f902cb9b9d25b5c853152c337eb57e4737a9b7e2a2eb9",
+      "diff_id": "sha256:e48af84b2108a5d73effd9e16685b42ac33e7994e606398c46690918f5f3604a",
+      "compressed_bytes": 28228487
+    },
+    {
+      "digest": "sha256:fbc0dcc63d771f80eaa9166cd1c40c8d8732d0a36520463a116cf3d700f8f612",
+      "diff_id": "sha256:7716c346ed29fe1a805bca1a2ab6174bd3354cffa0e84a5e989a93f8ce5e1e44",
+      "compressed_bytes": 3517382
+    },
+    {
+      "digest": "sha256:2da24cd4b4cdc45eb7acfe991f6e3545565d4c924199f412cea311a76322a4cf",
+      "diff_id": "sha256:a2ac78ea6115362b78b98fb826f1d2f56a6fb53b14b6fd828b01ebb166e3c3d6",
+      "compressed_bytes": 12470298
+    },
+    {
+      "digest": "sha256:ec1a19ed825f35cd5ed0fdb5d11d71c6cf86342cbdac1c54bfb0d3446d5c5dd9",
+      "diff_id": "sha256:bccbed27246a15486d39933a2a0ff8530d97da760aa254a82de8c488aac88d2e",
+      "compressed_bytes": 252
+    }
+  ],
+  "archive_sha256": "6674a6e5d37e92a342212c9df7fa20c4ea271391e137585f34e48f1e64da8660",
+  "archive": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7-python-base\\python-3.13.11-slim-bookworm.tar",
+  "loaded_image_id": "sha256:61be0e302c652e7640c09e63a1879e72642e795ca86147dd703874d873f1113a",
+  "date": "2026-11-19",
+  "state": "verified_and_loaded"
+}

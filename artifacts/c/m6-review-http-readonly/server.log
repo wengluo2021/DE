@@ -1,0 +1,26 @@
+Timeout (0:00:20)!
+Thread 0x0000a034 (most recent call first):
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\socket.py", line 295 in accept
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\socket.py", line 627 in _fallback_socketpair
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\proactor_events.py", line 786 in _make_self_pipe
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\proactor_events.py", line 639 in __init__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\windows_events.py", line 316 in __init__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 144 in _lazy_init
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 58 in __enter__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\DERag\.venv\Lib\site-packages\uvicorn\server.py", line 74 in run
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\DERag\.venv\Lib\site-packages\uvicorn\main.py", line 621 in run
+  File "<string>", line 1 in <module>
+Timeout (0:00:20)!
+Thread 0x0000a034 (most recent call first):
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\socket.py", line 295 in accept
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\socket.py", line 627 in _fallback_socketpair
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\proactor_events.py", line 786 in _make_self_pipe
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\proactor_events.py", line 639 in __init__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\windows_events.py", line 316 in __init__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 144 in _lazy_init
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 58 in __enter__
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\.tools\python313\tools\Lib\asyncio\runners.py", line 194 in run
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\DERag\.venv\Lib\site-packages\uvicorn\server.py", line 74 in run
+  File "C:\Users\Lenovo\Desktop\cityu study\sem A\5481 data engineering\CS5481_teamwork\DERag\.venv\Lib\site-packages\uvicorn\main.py", line 621 in run
+  File "<string>", line 1 in <module>

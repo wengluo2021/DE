@@ -1,0 +1,122 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_d4e155eeea2040e98b073d0990b65257",
+  "confirmation_file": "artifacts/c/m6-human-review/paired-03/confirmed-requests.json",
+  "confirmation_sha256": "c1a586b308c420d087facc39c3cd67a2b713208b67d965339cb0ddaf6bf71ab6",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "9756333f162142a8ed19b162f83748b9e45d3bd59fd0868cdcf7ca7dc731f14d",
+  "applied": [
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际评审人明确选择支持：题目给出商家主体，所引片段保留的禁止超成本收费含义已足够。按此实际判断保存，未借主张0的其他引用补证据；原AI待判意见保留。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:06:13.837396+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:06:13.851483+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:06:13.863621+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:06:13.876534+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 16,
+  "official_cases_with_review": 12,
+  "answer_grades_pending": 84,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 138,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "9bd6e55e30e3420452a47c42c68b94bd5f265ce8fb80ad11a898b15d03e62b74",
+    "evaluation.partial-review.json": "898518ff9608282194d0e09dadc4df88219b7c2377fcae40c2d066fe142e90d8"
+  }
+}

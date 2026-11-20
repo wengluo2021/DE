@@ -1,0 +1,454 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 23,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-utd-unfair-term-not-binding",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-utd-unfair-term-not-binding",
+    "question": "Under Directive 93/13/EEC, what effect must national law give to an unfair term in a consumer contract, and what happens to the rest of the contract?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "Member States must provide that an unfair term used in a contract with a consumer is, as provided for under their national law, not binding on the consumer. The contract continues to bind the parties on the remaining terms if it is capable of continuing in existence without the unfair terms.",
+    "key_facts": [
+      "1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "article_id": "eu_unfair_terms_93_13:article:6",
+        "structure_id": null,
+        "start": 12076,
+        "end": 12418,
+        "text": "1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第23题_不公平条款及其余合同的效力_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-394b51192a954f8dbbf299ebe070781c",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Article 6(1), Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6671856641769409,
+              "chunk_id": "997c1e7188f3e87e737d1ba51f02936c518debf5f0099b3606f8814bee790883",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12000,
+              "end": 12400,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5",
+                "Article 6"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "Chinese_explanation": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+            "citation_numbers": [
+              3,
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6671856641769409,
+              "chunk_id": "997c1e7188f3e87e737d1ba51f02936c518debf5f0099b3606f8814bee790883",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12000,
+              "end": 12400,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5",
+                "Article 6"
+              ],
+              "n": 3
+            },
+            {
+              "rank": 4,
+              "score": 0.6501890420913696,
+              "chunk_id": "e34e8ae50185299f7cb05f8acbb53af7804d79f6b5fb14886e59fc39904f377b",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "start": 12400,
+              "end": 12800,
+              "text": " the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 6",
+                "Article 7"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。",
+          "Chinese_explanation": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-b49f9f755cce4c41a143281bf69e694c",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.682439923286438,
+              "chunk_id": "9fc99847a61420e9932265765a35e54703d3bf8ecc461639d2f05c63533cfba1",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12066,
+              "end": 12422,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. ",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 6"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "Chinese_explanation": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.682439923286438,
+              "chunk_id": "9fc99847a61420e9932265765a35e54703d3bf8ecc461639d2f05c63533cfba1",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12066,
+              "end": 12422,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. ",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 6"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "Chinese_explanation": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-8b77ef055f7b4b7fa064a488a16c6d6e",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6936862468719482,
+              "chunk_id": "e8afc86ad867132d32af5ffaa43bbe5ff68d63336a87495279cc6b396f579283",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "start": 12000,
+              "end": 12800,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5",
+                "Article 6",
+                "Article 7"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "Chinese_explanation": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+            "citation_numbers": [
+              2,
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6936862468719482,
+              "chunk_id": "e8afc86ad867132d32af5ffaa43bbe5ff68d63336a87495279cc6b396f579283",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "start": 12000,
+              "end": 12800,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5",
+                "Article 6",
+                "Article 7"
+              ],
+              "n": 2
+            },
+            {
+              "rank": 1,
+              "score": 0.693877637386322,
+              "chunk_id": "d8d5a57e89e5fe0ba999ce8689a2259f027c32f4b34ed8f8a37cfeacf226050e",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [],
+              "start": 7200,
+              "end": 8000,
+              "text": ", the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;\nWhereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;\nWhereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; whereas provisions should therefore be included in this Directive designed to ave",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "Chinese_explanation": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-623a340a1b8540a09d096b989ce06dfb",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Member States must lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7016121745109558,
+              "chunk_id": "6ed31550d37e8400df9adf3d363ad23d4d70b3d0bcc163d64dd27f74c02f33b7",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12066,
+              "end": 12729,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 6"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "Chinese_explanation": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+            "citation_numbers": [
+              1,
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7016121745109558,
+              "chunk_id": "6ed31550d37e8400df9adf3d363ad23d4d70b3d0bcc163d64dd27f74c02f33b7",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "start": 12066,
+              "end": 12729,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 6"
+              ],
+              "n": 1
+            },
+            {
+              "rank": 2,
+              "score": 0.6793512105941772,
+              "chunk_id": "1c438358a59c781a1012cd010a70d891904697d3318625a91eaa90d62db915aa",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [],
+              "start": 7133,
+              "end": 7919,
+              "text": "Whereas contracts should be drafted in plain, intelligible language, the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;\nWhereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;\nWhereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; ",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "Chinese_explanation": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

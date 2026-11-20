@@ -1,0 +1,22 @@
+{
+  "state": "passed",
+  "batch": 11,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 16,
+  "advisory_support_counts": {
+    "not_supported": 1,
+    "supported": 15
+  },
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": "gold-utd-unfair-term-not-binding",
+  "next_question_offset": 22,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-11.json": "c53be56e39985969d85ae1872f9c0c79d34ee11c2e34efd07fb001068a038f4a",
+    "docs/M6辅助预审11_第21至22题.md": "97e49d3b3d4e94d41198a685d68a8ed035d0f5115d662cf8c6853809b3e5d8ae"
+  }
+}

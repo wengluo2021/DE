@@ -1,0 +1,141 @@
+{
+  "kind": "ai_pre_review_progress",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "completed_batches": 15,
+  "ai_pre_review_complete": true,
+  "next_action": "human_confirmation",
+  "questions_pre_read": 30,
+  "response_records_pre_read": 120,
+  "claim_checks_pre_read": 166,
+  "official_review_written": false,
+  "official_database_review_rows": 0,
+  "human_confirmation_required": true,
+  "next_question_offset": 30,
+  "next_case_id": null,
+  "latest_handoff": "docs/handoffs/M6_18_全部辅助预审完成与人工确认交接.md",
+  "school_generation_api_calls_this_review_work": 0,
+  "batches": [
+    {
+      "batch": 1,
+      "question_offsets": [
+        0,
+        1
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-01.json"
+    },
+    {
+      "batch": 2,
+      "question_offsets": [
+        2,
+        3
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-02.json"
+    },
+    {
+      "batch": 3,
+      "question_offsets": [
+        4,
+        5
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-03.json"
+    },
+    {
+      "batch": 4,
+      "question_offsets": [
+        6,
+        7
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-04.json"
+    },
+    {
+      "batch": 5,
+      "question_offsets": [
+        8,
+        9
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-05.json"
+    },
+    {
+      "batch": 6,
+      "question_offsets": [
+        10,
+        11
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-06.json"
+    },
+    {
+      "batch": 7,
+      "question_offsets": [
+        12,
+        13
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-07.json"
+    },
+    {
+      "batch": 8,
+      "question_offsets": [
+        14,
+        15
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-08.json"
+    },
+    {
+      "batch": 9,
+      "question_offsets": [
+        16,
+        17
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-09.json"
+    },
+    {
+      "batch": 10,
+      "question_offsets": [
+        18,
+        19
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-10.json"
+    },
+    {
+      "batch": 11,
+      "question_offsets": [
+        20,
+        21
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-11.json"
+    },
+    {
+      "batch": 12,
+      "question_offsets": [
+        22,
+        23
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-12.json"
+    },
+    {
+      "batch": 13,
+      "question_offsets": [
+        24,
+        25
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-13.json"
+    },
+    {
+      "batch": 14,
+      "question_offsets": [
+        26,
+        27
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-14.json"
+    },
+    {
+      "batch": 15,
+      "question_offsets": [
+        28,
+        29
+      ],
+      "file": "artifacts/c/m6-ai-pre-review/batch-15.json"
+    }
+  ],
+  "overview": "docs/M6全部辅助预审完成与人工确认清单.md"
+}

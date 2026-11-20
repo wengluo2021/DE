@@ -1,0 +1,28 @@
+{
+  "state": "passed",
+  "batches": 15,
+  "question_count": 30,
+  "unique_response_records": 120,
+  "unique_claim_checks": 166,
+  "all_source_and_citation_snapshots_match": true,
+  "advisory_support_counts": {
+    "needs_human_judgment": 9,
+    "supported": 146,
+    "not_supported": 11
+  },
+  "priority_claims": 20,
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_review_rows": 0,
+  "official_case_review_rows": 0,
+  "formal_results": false,
+  "school_generation_api_calls": 0,
+  "next_action": "human_confirmation",
+  "next_question_offset": 30,
+  "next_case_id": null,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+    "docs/M6全部辅助预审完成与人工确认清单.md": "89fec5cccfa2174a240de002062cba714701a0eb616973e53bfe633a7427d9d4",
+    "artifacts/c/m6-ai-pre-review/refusal-scope-reading-aid.json": "ffb1f1a2a7704868e42ebf3899a2d02233a7eee6291edb4fe488c06146dd8911"
+  }
+}

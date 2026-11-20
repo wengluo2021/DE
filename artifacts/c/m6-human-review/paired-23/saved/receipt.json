@@ -1,0 +1,124 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-23/confirmed-requests.json",
+  "confirmation_sha256": "3a098622997ac09c32517ddaa0e6b6a5193622b1f4610c2e971f25c2907baddb",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "d7197b76dfba0949a30ce0751e75147f0502a7d25c0ad17f1be1f4eab807c387",
+  "applied": [
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:46.761834+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:46.774921+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:46.787741+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:46.800609+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 96,
+  "official_cases_with_review": 92,
+  "answer_grades_pending": 4,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 3,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "5acc277495a88446db4505cbe35fd8a7fcb0e10c84049620fc71d23fd6750944",
+    "evaluation.partial-review.json": "d40b4c9a6833e3af292e5e1555c509538d61a0e34496a676bdbe128e997c4eb9"
+  }
+}

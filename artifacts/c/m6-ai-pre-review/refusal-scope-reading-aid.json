@@ -1,0 +1,251 @@
+{
+  "kind": "local_scope_reading_aid",
+  "not_a_proof_of_semantic_absence": true,
+  "documents": [
+    {
+      "id": "eu_consumer_rights_2011_83",
+      "version_type": "original_publication"
+    },
+    {
+      "id": "eu_digital_content_2019_770",
+      "version_type": "original_publication"
+    },
+    {
+      "id": "eu_sale_of_goods_2019_771",
+      "version_type": "original_publication"
+    },
+    {
+      "id": "eu_unfair_practices_2005_29",
+      "version_type": "original_publication"
+    },
+    {
+      "id": "eu_unfair_terms_93_13",
+      "version_type": "original_publication"
+    }
+  ],
+  "topics": {
+    "air": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "matches": 5,
+        "contexts": [
+          {
+            "start": 18657,
+            "end": 18976,
+            "text": " related to the rental of accommodation for non-residential purposes.\n(27) Transport services cover passenger transport and transport of goods. Passenger transport should be excluded from the scope of this Directive as it is already subject to other Union legislation or, in the case of public transport and taxis, to r"
+          },
+          {
+            "start": 18701,
+            "end": 19020,
+            "text": "non-residential purposes.\n(27) Transport services cover passenger transport and transport of goods. Passenger transport should be excluded from the scope of this Directive as it is already subject to other Union legislation or, in the case of public transport and taxis, to regulation at national level. However, the pr"
+          },
+          {
+            "start": 19068,
+            "end": 19387,
+            "text": "against excessive fees for the use of means of payment or against hidden costs should apply also to passenger transport contracts. In relation to transport of goods and car rental which are services, consumers should benefit from the protection afforded by this Directive, with the exception of the right of withdrawal."
+          }
+        ]
+      }
+    ],
+    "tax": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "matches": 2,
+        "contexts": [
+          {
+            "start": 54281,
+            "end": 54599,
+            "text": "s at which he is established and his telephone number;\n(c) the total price of the goods or services inclusive of taxes, or where the nature of the goods or services is such that the price cannot reasonably be calculated in advance, the manner in which the price is to be calculated, as well as, where applicable, all a"
+          },
+          {
+            "start": 57315,
+            "end": 57633,
+            "text": "acting, where the consumer can address any complaints;\n(e) the total price of the goods or services inclusive of taxes, or where the nature of the goods or services is such that the price cannot reasonably be calculated in advance, the manner in which the price is to be calculated, as well as, where applicable, all a"
+          }
+        ]
+      },
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "matches": 1,
+        "contexts": [
+          {
+            "start": 32033,
+            "end": 32351,
+            "text": "the geographical address and the identity of the trader on whose behalf he is acting;\n(c) the price inclusive of taxes, or where the nature of the product means that the price cannot reasonably be calculated in advance, the manner in which the price is calculated, as well as, where appropriate, all additional freight"
+          }
+        ]
+      }
+    ],
+    "fine": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "matches": 8,
+        "contexts": [
+          {
+            "start": 32994,
+            "end": 33303,
+            "text": "r the consumer does not fulfil the obligations relating to the exercise of the right of withdrawal, penalties provided for by national legislation in accordance with this Directive should apply as well as contract law provisions.\n(49) Certain exceptions from the right of withdrawal should exist, both for dis"
+          },
+          {
+            "start": 40911,
+            "end": 41220,
+            "text": "ints or to initiate appropriate legal proceedings.\n(57) It is necessary that Member States lay down penalties for infringements of this Directive and ensure that they are enforced. The penalties should be effective, proportionate and dissuasive.\n(58) The consumer should not be deprived of the protection gran"
+          },
+          {
+            "start": 40996,
+            "end": 41305,
+            "text": "tates lay down penalties for infringements of this Directive and ensure that they are enforced. The penalties should be effective, proportionate and dissuasive.\n(58) The consumer should not be deprived of the protection granted by this Directive. Where the law applicable to the contract is that of a third co"
+          }
+        ]
+      },
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "matches": 7,
+        "contexts": [
+          {
+            "start": 18240,
+            "end": 18549,
+            "text": " to the accuracy of factual claims they have made.\n(22) It is necessary that Member States lay down penalties for infringements of the provisions of this Directive and they must ensure that these are enforced. The penalties must be effective, proportionate and dissuasive.\n(23) Since the objectives of this Di"
+          },
+          {
+            "start": 18354,
+            "end": 18663,
+            "text": "infringements of the provisions of this Directive and they must ensure that these are enforced. The penalties must be effective, proportionate and dissuasive.\n(23) Since the objectives of this Directive, namely to eliminate the barriers to the functioning of the internal market represented by national laws o"
+          },
+          {
+            "start": 18401,
+            "end": 18711,
+            "text": "ve and they must ensure that these are enforced. The penalties must be effective, proportionate and dissuasive.\n(23) Since the objectives of this Directive, namely to eliminate the barriers to the functioning of the internal market represented by national laws on unfair commercial practices and to provide a h"
+          }
+        ]
+      }
+    ],
+    "deadline": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "matches": 1,
+        "contexts": [
+          {
+            "start": 29801,
+            "end": 30118,
+            "text": "ever, in order to ensure legal certainty as regards the length of the withdrawal period, a 12-month limitation period should be introduced.\n(44) Differences in the ways in which the right of withdrawal is exercised in the Member States have caused costs for traders selling cross-border. The introduction of a harmoni"
+          }
+        ]
+      },
+      {
+        "document_id": "eu_digital_content_2019_770",
+        "matches": 7,
+        "contexts": [
+          {
+            "start": 53685,
+            "end": 54002,
+            "text": " as the indefinite contract is in force.\n(58) Member States should remain free to regulate national limitation periods. However, such limitation periods should not prevent consumers from exercising their rights throughout the period of time during which the trader is liable for a lack of conformity. While this Direc"
+          },
+          {
+            "start": 53719,
+            "end": 54036,
+            "text": "force.\n(58) Member States should remain free to regulate national limitation periods. However, such limitation periods should not prevent consumers from exercising their rights throughout the period of time during which the trader is liable for a lack of conformity. While this Directive should therefore not harmonis"
+          },
+          {
+            "start": 53969,
+            "end": 54286,
+            "text": "k of conformity. While this Directive should therefore not harmonise the starting point of national limitation periods, it should nevertheless ensure that such periods still allow consumers to exercise their remedies for any lack of conformity that becomes apparent at least during the period during which the trader "
+          }
+        ]
+      },
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "matches": 17,
+        "contexts": [
+          {
+            "start": 37446,
+            "end": 37763,
+            "text": " lack of conformity that becomes apparent within a specific period of time, possibly coupled with a limitation period, or that consumers' remedies are only subject to a limitation period. In the former case, Member States should ensure that the period for the seller's liability is not circumvented by the limitation "
+          },
+          {
+            "start": 37515,
+            "end": 37832,
+            "text": " time, possibly coupled with a limitation period, or that consumers' remedies are only subject to a limitation period. In the former case, Member States should ensure that the period for the seller's liability is not circumvented by the limitation period for the consumer's remedies. While this Directive should, ther"
+          },
+          {
+            "start": 37652,
+            "end": 37969,
+            "text": ", Member States should ensure that the period for the seller's liability is not circumvented by the limitation period for the consumer's remedies. While this Directive should, therefore, not harmonise the starting point of national limitation periods, it should ensure that such limitation periods do not curtail the "
+          }
+        ]
+      }
+    ],
+    "package": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "matches": 4,
+        "contexts": [
+          {
+            "start": 22934,
+            "end": 23248,
+            "text": "tivities.\n(32) The existing Union legislation, inter alia, relating to consumer financial services, package travel and timeshare contains numerous rules on consumer protection. For this reason, this Directive should not apply to contracts in those areas. With regard to financial services, Member States should be "
+          },
+          {
+            "start": 48581,
+            "end": 48890,
+            "text": "uced and supplied in digital form;\n(12) ‘financial service’ means any service of a banking, credit, insurance, personal pension, investment or payment nature;\n(13) ‘public auction’ means a method of sale where goods or services are offered by the trader to consumers, who attend or are given the possibility t"
+          },
+          {
+            "start": 51233,
+            "end": 51547,
+            "text": "ential purposes;\n(g) which fall within the scope of Council Directive 90/314/EEC of 13 June 1990 on package travel, package holidays and package tours (18);\n(h) which fall within the scope of Directive 2008/122/EC of the European Parliament and of the Council of 14 January 2009 on the protection of consumers in r"
+          }
+        ]
+      },
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "matches": 5,
+        "contexts": [
+          {
+            "start": 54012,
+            "end": 54321,
+            "text": "7/EC and Directives 95/46/EC (2) and 2002/58/EC.\n27. Requiring a consumer who wishes to claim on an insurance policy to produce documents which could not reasonably be considered relevant as to whether the claim was valid, or failing systematically to respond to pertinent correspondence, in order to dissuade"
+          },
+          {
+            "start": 56216,
+            "end": 56530,
+            "text": "\nArticles 4 and 5 of Directive 97/7/EC\nArticle 3 of Council Directive 90/314/EEC of 13 June 1990 on package travel, package holidays and package tours (1)\nArticle 3(3) of Directive 94/47/EC of the European Parliament and of the Council of 26 October 1994 on the protection of purchasers in respect of certain aspec"
+          },
+          {
+            "start": 57959,
+            "end": 58268,
+            "text": " and 13 of Directive 2002/92/EC of the European Parliament and of the Council of 9 December 2002 on insurance mediation (8)\nArticle 36 of Directive 2002/83/EC of the European Parliament and of the Council of 5 November 2002 concerning life assurance (9)\nArticle 19 of Directive 2004/39/EC of the European Parl"
+          }
+        ]
+      },
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "matches": 1,
+        "contexts": [
+          {
+            "start": 6783,
+            "end": 7092,
+            "text": "aken into account in assessing the fairness of other terms; whereas it follows, inter alia, that in insurance contracts, the terms which clearly define or circumscribe the insured risk and the insurer's liability shall not be subject to such assessment since these restrictions are taken into account in calcu"
+          }
+        ]
+      }
+    ],
+    "interest": [
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "matches": 1,
+        "contexts": [
+          {
+            "start": 19443,
+            "end": 19839,
+            "text": ".\n(b) Subparagraph (j) is without hindrance to terms under which a supplier of financial services reserves the right to alter the rate of interest payable by the consumer or due to the latter, or the amount of other charges for financial services without notice where there is a valid reason, provided that the supplier is required to inform the other contracting party or parties thereof at the "
+          }
+        ]
+      }
+    ]
+  },
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "contexts_are_sampled": true,
+  "explanation": "仅为阅读A拒答理由时的本地主题/范围辅助检查，零命中不等于语义不存在的证明；不使用外部法律补冻结库。"
+}

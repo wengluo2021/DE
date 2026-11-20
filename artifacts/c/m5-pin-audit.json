@@ -1,0 +1,671 @@
+{
+  "python": "3.13.11",
+  "input_files": [
+    "requirements-b.txt",
+    "requirements-c-dev.txt",
+    "requirements-b-dev.txt"
+  ],
+  "distinct_packages": 106,
+  "conflicting_pins": [],
+  "packages": {
+    "aiohappyeyeballs": {
+      "pin": "==2.7.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "aiohttp": {
+      "pin": "==3.14.5",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "aiohttp-retry": {
+      "pin": "==2.9.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "aiosignal": {
+      "pin": "==1.4.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "annotated-doc": {
+      "pin": "==0.0.6",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "annotated-types": {
+      "pin": "==0.8.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "anyio": {
+      "pin": "==4.16.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "attrs": {
+      "pin": "==26.1.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "bcrypt": {
+      "pin": "==5.0.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "build": {
+      "pin": "==1.6.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "certifi": {
+      "pin": "==2026.10.23",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c.txt"
+      ]
+    },
+    "charset-normalizer": {
+      "pin": "==3.5.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "chromadb": {
+      "pin": "==1.5.9",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "click": {
+      "pin": "==8.5.1",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "cloudpickle": {
+      "pin": "==3.1.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "colorama": {
+      "pin": "==0.4.6",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c-dev.txt"
+      ]
+    },
+    "durationpy": {
+      "pin": "==0.11",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "fastapi": {
+      "pin": "==0.139.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "filelock": {
+      "pin": "==4.2.10",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "flatbuffers": {
+      "pin": "==25.12.19",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "frozenlist": {
+      "pin": "==1.8.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "fsspec": {
+      "pin": "==2026.9.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "googleapis-common-protos": {
+      "pin": "==1.76.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "grpcio": {
+      "pin": "==1.85.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "h11": {
+      "pin": "==0.16.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "hf-xet": {
+      "pin": "==1.8.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "httpcore": {
+      "pin": "==1.0.9",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c.txt"
+      ]
+    },
+    "httpcore2": {
+      "pin": "==2.16.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "httptools": {
+      "pin": "==0.9.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "httpx": {
+      "pin": "==0.28.1",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c.txt"
+      ]
+    },
+    "httpx2": {
+      "pin": "==2.16.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "huggingface-hub": {
+      "pin": "==2.4.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "idna": {
+      "pin": "==3.20",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "importlib-resources": {
+      "pin": "==7.1.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "jinja2": {
+      "pin": "==3.1.6",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "joblib": {
+      "pin": "==1.6.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "jsonschema": {
+      "pin": "==4.26.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "jsonschema-specifications": {
+      "pin": "==2025.9.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "kubernetes": {
+      "pin": "==37.0.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "markdown-it-py": {
+      "pin": "==4.3.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "markupsafe": {
+      "pin": "==3.0.4",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "mdurl": {
+      "pin": "==0.1.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "mmh3": {
+      "pin": "==5.3.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "mpmath": {
+      "pin": "==1.3.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "multidict": {
+      "pin": "==7.2.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "narwhals": {
+      "pin": "==2.28.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "networkx": {
+      "pin": "==3.7",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "numpy": {
+      "pin": "==2.5.5",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "oauthlib": {
+      "pin": "==4.0.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "onnxruntime": {
+      "pin": "==1.32.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-api": {
+      "pin": "==1.45.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-exporter-otlp-common": {
+      "pin": "==0.66b2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-exporter-otlp-proto-common": {
+      "pin": "==1.45.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-exporter-otlp-proto-grpc": {
+      "pin": "==1.45.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-proto": {
+      "pin": "==1.45.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-sdk": {
+      "pin": "==1.45.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "opentelemetry-semantic-conventions": {
+      "pin": "==0.66b2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "orjson": {
+      "pin": "==3.13.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "overrides": {
+      "pin": "==7.7.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "packaging": {
+      "pin": "==26.3",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c-dev.txt"
+      ]
+    },
+    "propcache": {
+      "pin": "==0.5.4",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "protobuf": {
+      "pin": "==7.36.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "pybase64": {
+      "pin": "==1.5.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "pydantic": {
+      "pin": "==2.14.3",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "pydantic-settings": {
+      "pin": "==2.16.3",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "pydantic-core": {
+      "pin": "==2.50.4",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "pygments": {
+      "pin": "==2.21.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c-dev.txt"
+      ]
+    },
+    "pypika": {
+      "pin": "==0.51.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "pyproject-hooks": {
+      "pin": "==1.3.3",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "python-dateutil": {
+      "pin": "==4.0.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "python-dotenv": {
+      "pin": "==1.2.4",
+      "files": [
+        "requirements-b.txt",
+        "requirements-c.txt"
+      ]
+    },
+    "pyyaml": {
+      "pin": "==6.0.3",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "referencing": {
+      "pin": "==0.37.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "regex": {
+      "pin": "==2026.11.15",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "requests": {
+      "pin": "==2.34.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "requests-oauthlib": {
+      "pin": "==2.0.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "rich": {
+      "pin": "==15.0.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "rpds-py": {
+      "pin": "==2026.9.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "safetensors": {
+      "pin": "==0.8.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "scikit-learn": {
+      "pin": "==1.9.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "scipy": {
+      "pin": "==1.18.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "sentence-transformers": {
+      "pin": "==6.3.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "setuptools": {
+      "pin": "==84.2.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "shellingham": {
+      "pin": "==1.5.4",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "starlette": {
+      "pin": "==1.10.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "sympy": {
+      "pin": "==1.14.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "tenacity": {
+      "pin": "==9.2.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "threadpoolctl": {
+      "pin": "==3.8.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "tokenizers": {
+      "pin": "==0.23.3",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "torch": {
+      "pin": "==2.15.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "tqdm": {
+      "pin": "==4.70.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "transformers": {
+      "pin": "==5.23.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "truststore": {
+      "pin": "==0.10.5",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "typer": {
+      "pin": "==0.29.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "typing-inspection": {
+      "pin": "==0.4.5",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "typing-extensions": {
+      "pin": "==4.16.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "tzdata": {
+      "pin": "==2026.6",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "urllib3": {
+      "pin": "==2.8.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "uvicorn": {
+      "pin": "==0.51.0",
+      "files": [
+        "requirements-b.txt",
+        "requirements.txt"
+      ]
+    },
+    "watchfiles": {
+      "pin": "==1.3.0",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "websocket-client": {
+      "pin": "==1.9.2",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "websockets": {
+      "pin": "==17.4",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "yarl": {
+      "pin": "==1.25.1",
+      "files": [
+        "requirements-b.txt"
+      ]
+    },
+    "iniconfig": {
+      "pin": "==2.3.1",
+      "files": [
+        "requirements-c-dev.txt",
+        "requirements-b-dev.txt"
+      ]
+    },
+    "pluggy": {
+      "pin": "==1.7.0",
+      "files": [
+        "requirements-c-dev.txt",
+        "requirements-b-dev.txt"
+      ]
+    },
+    "pytest": {
+      "pin": "==9.2.0",
+      "files": [
+        "requirements-c-dev.txt",
+        "requirements-b-dev.txt"
+      ]
+    }
+  }
+}

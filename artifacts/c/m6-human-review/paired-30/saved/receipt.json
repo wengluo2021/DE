@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-30/confirmed-requests.json",
+  "confirmation_sha256": "66cdd34821a80a91e6222363b27322ea5184f1ab9df83900dd15dbe7de970c02",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "773060380540aebcf6da552841742c6b5907dd65e0e40e5b3cd369a3b71a5ce1",
+  "applied": [
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "f400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:17.436866+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:17.449714+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:17.461464+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:17.473022+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 124,
+  "official_cases_with_review": 120,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 0,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": true,
+  "formal_results": true,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "023535dd447614600459d0dc2ca5b0f55c0840508b809bddcefbaa459590ddad",
+    "evaluation.partial-review.json": "cd92fe5ae306639661f7b6b9d91d07a6f5bd637cec9d134dbe40c02763267498"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "kind": "GitHub_release_asset_preparation",
+  "upload_status": "not_uploaded",
+  "intended_release_tag": "c-delivery-20261120",
+  "source_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
+  "assets": [
+    {
+      "name": "C-source-data-scored-20261120.zip",
+      "size": 2073716,
+      "sha256": "105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7",
+      "local_relative_to_final_directory": "C-source-data-scored-20261120.zip"
+    },
+    {
+      "name": "C-scored-results-20261120.zip",
+      "size": 33513874,
+      "sha256": "e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9",
+      "local_relative_to_final_directory": "C-scored-results-20261120.zip"
+    },
+    {
+      "name": "DE.tar",
+      "size": 1870832128,
+      "sha256": "0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05",
+      "local_relative_to_final_directory": "DE.tar"
+    },
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part01",
+      "size": 1073741824,
+      "sha256": "c2d5132cbb3fdebdfecd989531d8aa1f92bd9116b62a56bdabdc7c96d6b66978",
+      "local_relative_to_final_directory": "github-assets/BGE-M3-5617a9f6-weights.tar.part01"
+    },
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part02",
+      "size": 1073741824,
+      "sha256": "61c07a7bf84505352e85ca66cf251b55e7b5255db38728e8bd3cf81679d1c68f",
+      "local_relative_to_final_directory": "github-assets/BGE-M3-5617a9f6-weights.tar.part02"
+    },
+    {
+      "name": "BGE-M3-5617a9f6-weights.tar.part03",
+      "size": 145866752,
+      "sha256": "1aac7b3fec08286c77e183804cbae9367d115608a3abb62fce14e2a48c0a0946",
+      "local_relative_to_final_directory": "github-assets/BGE-M3-5617a9f6-weights.tar.part03"
+    },
+    {
+      "name": "C-delivery-guide-20261120.zip",
+      "size": 25003,
+      "sha256": "4e89b645a34f666cd607564cbe0475648f5da80e168e5ecf972e81aec676a6f5",
+      "local_relative_to_final_directory": "github-assets/C-delivery-guide-20261120.zip"
+    }
+  ],
+  "reassembly": {
+    "target": "BGE-M3-5617a9f6-weights.tar",
+    "size": 2293350400,
+    "sha256": "bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958",
+    "parts": [
+      "BGE-M3-5617a9f6-weights.tar.part01",
+      "BGE-M3-5617a9f6-weights.tar.part02",
+      "BGE-M3-5617a9f6-weights.tar.part03"
+    ]
+  },
+  "guide_zip": "C-delivery-guide-20261120.zip",
+  "main_modified": false,
+  "external_model_calls": 0
+}

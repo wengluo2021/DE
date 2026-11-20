@@ -1,0 +1,290 @@
+{
+  "kind": "paired_human_review_reading_materials",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-delivery-time",
+  "source_user_feedback": "user-feedback.json",
+  "claim_support_human_confirmed": true,
+  "other_three_overall_grades_human_confirmed": true,
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-a2578badf16844d9a4a75df7d42987a1",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Where the parties have not agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7185728549957275,
+              "chunk_id": "78f6a950c8cff6c96be36d79ab4743550002c97481e87de84c7252da93bfc8c3",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:18"
+              ],
+              "start": 82000,
+              "end": 82400,
+              "text": "ties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.\n2. Where the trader has failed to fulfil his obligation to deliver the goods at the time agreed upon with the consumer or within the time limit set ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 2
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用2虽截断条件句开头，题目已明确双方未约定交期；交付占有或控制、不得无故拖延、合同成立后30日的结论完整。实际评审人明确接受使用题目给定事实前提的口径。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.7014373540878296,
+              "chunk_id": "991045fb6ef590008c9d01146a36761b2285619531b026a4bd650595402f3446",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 36800,
+              "end": 37200,
+              "text": "(52) In the context of sales contracts, the delivery of goods can take place in various ways, either immediately or at a later date. If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract. The rules regarding late delivery should also take into accoun",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 3
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用3完整写出未约定具体交付日时应尽快交付，且最迟合同成立后30日，直接覆盖主张。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct"
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-0c68d787b8764cb0a6f04a90bc69eccc",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6923848986625671,
+              "chunk_id": "59f6560d6b16211d31c0e1c21884632e9ac99f348e96842682aee2472cd65bf4",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:18"
+              ],
+              "start": 81963,
+              "end": 82255,
+              "text": "Article 18\nDelivery\n1. Unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 4
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用4完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6980495452880859,
+              "chunk_id": "10360c3f4c916e607928761b1df59da4732625acb751fe17f09fb8dade7e752b",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 36800,
+              "end": 37138,
+              "text": "(52) In the context of sales contracts, the delivery of goods can take place in various ways, either immediately or at a later date. If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 3
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用3完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct"
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-bee539a16a7d4493ab9033f759d874cc",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under the original text of Directive 2011/83/EU, unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.",
+            "citation_numbers": [
+              5
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 5,
+              "score": 0.6618391275405884,
+              "chunk_id": "55a6c9c7f4a778b900bab6c2bad63e21a826c2792ed7e9e70c1584cee8d09c35",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:17",
+                "eu_consumer_rights_2011_83:article:18"
+              ],
+              "start": 81600,
+              "end": 82400,
+              "text": "water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, of district heating or the supply of digital content which is not supplied on a tangible medium.\n2. Articles 19, 21 and 22 shall apply to sales and service contracts and to contracts for the supply of water, gas, electricity, district heating or digital content.\n\nArticle 18\nDelivery\n1. Unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.\n2. Where the trader has failed to fulfil his obligation to deliver the goods at the time agreed upon with the consumer or within the time limit set ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 17",
+                "Article 18"
+              ],
+              "n": 5
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用5完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7452577352523804,
+              "chunk_id": "6d1c26e6c8514342ceec5a75351feeee7944b69a9c212ee8fa603f3f887e7b4a",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 36800,
+              "end": 37600,
+              "text": "(52) In the context of sales contracts, the delivery of goods can take place in various ways, either immediately or at a later date. If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract. The rules regarding late delivery should also take into account goods to be manufactured or acquired specially for the consumer which cannot be reused by the trader without considerable loss. Therefore, a rule which grants an additional reasonable period of time to the trader in certain circumstances should be provided for in this Directive. When the trader has failed to deliver the goods within the period of time agreed with the consumer, before the consume",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用1完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct"
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-e54bd104a29640548b335c2ab4ce21c8",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Directive 2011/83/EU, unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.7265205383300781,
+              "chunk_id": "d14f7642081a9dd1b0954f0e6b72d97fff9ffc9f0f9916638f4428deccdf0af4",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:18"
+              ],
+              "start": 81963,
+              "end": 82682,
+              "text": "Article 18\nDelivery\n1. Unless the parties have agreed otherwise on the time of delivery, the trader shall deliver the goods by transferring the physical possession or control of the goods to the consumer without undue delay, but not later than 30 days from the conclusion of the contract.\n2. Where the trader has failed to fulfil his obligation to deliver the goods at the time agreed upon with the consumer or within the time limit set out in paragraph 1, the consumer shall call upon him to make the delivery within an additional period of time appropriate to the circumstances. If the trader fails to deliver the goods within that additional period of time, the consumer shall be entitled to terminate the contract.\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 3
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用3完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7341593503952026,
+              "chunk_id": "dd0dbd5acdabcfd447933de7ba4fcd321dd7547443ac8088642bba2b2884dad6",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 36933,
+              "end": 37482,
+              "text": "If the parties have not agreed on a specific delivery date, the trader should deliver the goods as soon as possible, but in any event not later than 30 days from the day of the conclusion of the contract. The rules regarding late delivery should also take into account goods to be manufactured or acquired specially for the consumer which cannot be reused by the trader without considerable loss. Therefore, a rule which grants an additional reasonable period of time to the trader in certain circumstances should be provided for in this Directive. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "human_confirmed_supported": true,
+          "reason": "引用1以未约定具体交付日的完整规则开头，包含尽快交付、合同成立后最迟30日，覆盖主张。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct"
+    }
+  ],
+  "followup_grade_confirmation": "grade-confirmation/user-feedback.json"
+}

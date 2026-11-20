@@ -1,0 +1,118 @@
+{
+  "kind": "explicit_user_confirmed_review_requests",
+  "human_confirmed": true,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_d4e155eeea2040e98b073d0990b65257",
+  "user_responses": [
+    {
+      "question_index": 0,
+      "answer": "确认：第3题四组整体均correct"
+    },
+    {
+      "question_index": 1,
+      "answer": "认可：这7条引用均支持"
+    },
+    {
+      "question_index": 2,
+      "answer": "支持：题目给主体，保留的禁止超成本收费含义已足够"
+    }
+  ],
+  "previous_export": "artifacts/c/m6-human-review/paired-02/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f400",
+      "ask_id": "ask-135948a4085748adb07c4650d75cd644",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际评审人明确选择支持：题目给出商家主体，所引片段保留的禁止超成本收费含义已足够。按此实际判断保存，未借主张0的其他引用补证据；原AI待判意见保留。"
+          }
+        ],
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s400",
+      "ask_id": "ask-4578759c31b548bbafca9789a5cba91e",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f800",
+      "ask_id": "ask-a544700a3afe40cbbff9d0ba2aeef9d6",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s800",
+      "ask_id": "ask-be02ead52906497bad7fec0e8931fab9",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+          }
+        ],
+        "notes": "第3题四组整答correct和7条引用支持，经call_d4e155eeea2040e98b073d0990b65257第0/1项明确确认；F400主张1经第2项单独选择支持：题目给主体，保留的禁止超成本收费含义已足够。只覆盖本题具体字段，不顺延其他题。"
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 16,
+    "official_cases_with_review": 12,
+    "answer_grades_pending": 84,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 138
+  }
+}

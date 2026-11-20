@@ -1,0 +1,20 @@
+{
+  "state": "passed",
+  "platform": "Linux Docker CPU",
+  "source": "SQLite backup of completed Windows formal run",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "external_model_calls": 0,
+  "api_key_configured": false,
+  "index_volumes_reused": true,
+  "expected_cases": 120,
+  "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+  "restored_cases": 120,
+  "restart_and_exports_identical": true,
+  "export_sha256": {
+    "evaluation.csv": "023535dd447614600459d0dc2ca5b0f55c0840508b809bddcefbaa459590ddad",
+    "evaluation.json": "cd92fe5ae306639661f7b6b9d91d07a6f5bd637cec9d134dbe40c02763267498"
+  },
+  "evaluation_runs_after": 1,
+  "review_rows_after": 124,
+  "own_servers_stopped": true
+}

@@ -1,0 +1,926 @@
+{
+  "date": "2026-11-19",
+  "state": "passed",
+  "entrypoint": "app.main:app",
+  "injected_services": false,
+  "source_kind": "B's existing synthetic fixtures, frozen through the actual corpus contract",
+  "formal_acceptance": false,
+  "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+  "gold_version": null,
+  "generation_ask_limit": 1,
+  "model_attempt_budget": 2,
+  "isolated_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m5e-80d705324ea4",
+  "model_attempts": 1,
+  "index_manifest": {
+    "schema_version": "1.0",
+    "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+    "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a",
+    "state": "completed",
+    "material": {
+      "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+      "chunker_version": "structure-offset-v2",
+      "conditions": [
+        {
+          "condition": "f400",
+          "boundary_method": "fixed",
+          "target_chars": 400
+        },
+        {
+          "condition": "s400",
+          "boundary_method": "structured",
+          "target_chars": 400
+        },
+        {
+          "condition": "f800",
+          "boundary_method": "fixed",
+          "target_chars": 800
+        },
+        {
+          "condition": "s800",
+          "boundary_method": "structured",
+          "target_chars": 800
+        }
+      ],
+      "source_digest": "635f368476f94702dc47fa3650eceef2526d61df5a9c28a753273a7ec77e94c9",
+      "embedding": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "dimension": 1024,
+        "normalize": true,
+        "query_prefix": "",
+        "document_prefix": "",
+        "max_input_tokens": 8192,
+        "pooling": "cls",
+        "files": {
+          "1_Pooling/config.json": "e54c164a07274f2eb45bb724f54a79d1efcc90c41573887cd9a29aeee0597352",
+          "config.json": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+          "config_sentence_transformers.json": "1eef72430e7194a1e59680e635aed81ffa083f05668dbc5bb1c56c04c0999c38",
+          "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+          "pytorch_model.bin": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+          "README.md": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+          "sentence_bert_config.json": "eb9b44b13c0f52a3b3685c3b1cbdea1ba8b04bea123b98f61610048940776eb1",
+          "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+          "special_tokens_map.json": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+          "tokenizer.json": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+          "tokenizer_config.json": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4"
+        },
+        "token_policy": "reject-overflow-v1"
+      },
+      "vector_store": {
+        "engine": "chromadb",
+        "version": "1.5.9",
+        "hnsw": {
+          "space": "cosine",
+          "ef_construction": 100,
+          "ef_search": 100,
+          "max_neighbors": 16,
+          "num_threads": 1,
+          "batch_size": 2,
+          "sync_threshold": 2,
+          "resize_factor": 1.2
+        },
+        "persistence_policy": "singleton-checkpoint-v1"
+      }
+    },
+    "conditions": {
+      "f400": {
+        "count": 34,
+        "min_chars": 14,
+        "mean_chars": 370.9117647058824,
+        "max_chars": 400,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "ef4a418923207ef32cfe5ea3a0a9c096d7bde15e9343d852d0ad423d2b387e4e",
+        "build_ms": 47502.235
+      },
+      "s400": {
+        "count": 47,
+        "min_chars": 25,
+        "mean_chars": 268.3191489361702,
+        "max_chars": 394,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "263dc7b6231986726881ff7210cd795cc1d04dad21d991852ed067f48a75348a",
+        "build_ms": 5987.173
+      },
+      "f800": {
+        "count": 18,
+        "min_chars": 25,
+        "mean_chars": 700.6111111111111,
+        "max_chars": 800,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "c9c91d324a28d3525aaac7b797b878cd35de1a1f3833d8e7fb5704f9ab336d1f",
+        "build_ms": 9163.643
+      },
+      "s800": {
+        "count": 31,
+        "min_chars": 25,
+        "mean_chars": 406.80645161290323,
+        "max_chars": 799,
+        "fallbacks": {
+          "long_sentence_fallback": 0,
+          "no_article_fallback": 0,
+          "empty_documents": 0
+        },
+        "chunks_sha256": "3cd5d298846463ebdb5f5fd4ff9f9445d01ce1ba2495f7ece3781283bb6b3cc3",
+        "build_ms": 7374.541
+      }
+    },
+    "runtime": {
+      "device": "cpu",
+      "batch_size": 4
+    },
+    "build_ms": 70120.289
+  },
+  "question": "Can a reader renew a library book when the loan period expires?",
+  "search": {
+    "condition": "s400",
+    "hits": [
+      {
+        "chunk_id": "738055ce8098710de662105589b7ec01420a2912ff966d61740c4fb88b23db78",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a001"
+        ],
+        "start": 39,
+        "end": 433,
+        "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+        "rank": 1,
+        "score": 0.7637379169464111,
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 1"
+        ]
+      },
+      {
+        "chunk_id": "bc230be1f726a128c198d496c68ea7fdeef99c9961720d45769375c46c634b7f",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a002"
+        ],
+        "start": 985,
+        "end": 1379,
+        "text": "Article 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+        "rank": 2,
+        "score": 0.7629959583282471,
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 2"
+        ]
+      },
+      {
+        "chunk_id": "04bbe49d2f98cf4e4338c159ed9b5b2ca7d5b29b24a7732b1339473cc10a05b0",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a002"
+        ],
+        "start": 1697,
+        "end": 1931,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "rank": 3,
+        "score": 0.7628428936004639,
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 2"
+        ]
+      },
+      {
+        "chunk_id": "d2c0d71ea27b8fefe114c0345b3c4882e794ff43f7258a7164b3855d21ed8a2d",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a001"
+        ],
+        "start": 751,
+        "end": 985,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "rank": 4,
+        "score": 0.7628428936004639,
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 1"
+        ]
+      },
+      {
+        "chunk_id": "d41f4a5e2f60eaa679f1f50c16cf12590cd76539cf60fc3f026756d807060c5d",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a003"
+        ],
+        "start": 2674,
+        "end": 2908,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "rank": 5,
+        "score": 0.7628428936004639,
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 3"
+        ]
+      }
+    ],
+    "timing_ms": 144.068,
+    "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+    "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a"
+  },
+  "compare": {
+    "question": "Can a reader renew a library book when the loan period expires?",
+    "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+    "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a",
+    "left": {
+      "condition": "f400",
+      "hits": [
+        {
+          "chunk_id": "c0def9cb2aded1857c8372345eb9f577127b383c601f43a7854934dde308097e",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "f400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a003",
+            "library-a004"
+          ],
+          "start": 2800,
+          "end": 3200,
+          "text": " may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\nArticle 4 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register",
+          "rank": 1,
+          "score": 0.7627282738685608,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 3",
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "06420ba22ff814d8187087322de3684cd218ae6f617c36cfcf77838607187753",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "f400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 400,
+          "end": 800,
+          "text": "he reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register ",
+          "rank": 2,
+          "score": 0.7606003284454346,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "f385d3b875aa6b0ae0ab9fbf357333678bb47558bf03d4f97c0b4192ebc00438",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "f400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3200,
+          "end": 3600,
+          "text": " the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and",
+          "rank": 3,
+          "score": 0.7503032088279724,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "4d315c1d14883d5da8f965e3a8447576c37e48f99780c4533040785aebcd4c0c",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "f400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2000,
+          "end": 2400,
+          "text": " book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall conta",
+          "rank": 4,
+          "score": 0.7477862238883972,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "8677841a4250a95ab85be98c4006fa9d048f6871f5c95fdb6be62b5e47fb0544",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "f400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 0,
+          "end": 400,
+          "text": "Chapter 1 Synthetic General Provisions\nArticle 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, t",
+          "rank": 5,
+          "score": 0.7475793361663818,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        }
+      ],
+      "timing_ms": 136.952,
+      "context_chars": 2000
+    },
+    "right": {
+      "condition": "s800",
+      "hits": [
+        {
+          "chunk_id": "6973a308f95d5561d2afe6fe6335a0bd861fe1634e89783e85cca8bb4f3bf9d9",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s800",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2760,
+          "end": 2908,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 1,
+          "score": 0.7862116694450378,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 3"
+          ]
+        },
+        {
+          "chunk_id": "6ee0091d6a750ea30609d62be203b448ff5308ccaf77dcc8df5eb319ebe3b57f",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s800",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a004"
+          ],
+          "start": 3706,
+          "end": 3854,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 2,
+          "score": 0.7862116694450378,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 4"
+          ]
+        },
+        {
+          "chunk_id": "8b17fe73f5046d0811c7492c8afcb19243c78a0c32093aa31daca5e28ec8e32f",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s800",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 1783,
+          "end": 1931,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 3,
+          "score": 0.7862116694450378,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "chunk_id": "f85bae6186243e4bde05e1805978560885b6a355f54657af126c7e8d640ae9b4",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s800",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 837,
+          "end": 985,
+          "text": "When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "rank": 4,
+          "score": 0.7862116694450378,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "chunk_id": "29246151b41d41d9acc6ef104a87b33c20c98ca9d7a60528c7fc146f45de0339",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s800",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 39,
+          "end": 837,
+          "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. ",
+          "rank": 5,
+          "score": 0.7620225548744202,
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        }
+      ],
+      "timing_ms": 138.863,
+      "context_chars": 1390
+    }
+  },
+  "result": {
+    "ask_id": "ask-45b9bf81bfea46cc928e4361d7c8b8f5",
+    "conversation_id": "chat-0bc49ae4431142818a7df2fb14353219",
+    "status": "answered",
+    "answer": "When the loan period expires, the reader may apply for renewal.[1][2][3][4][5]",
+    "claims": [
+      {
+        "text": "When the loan period expires, the reader may apply for renewal.",
+        "citation_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "rank": 1,
+        "score": 0.7637379169464111,
+        "chunk_id": "738055ce8098710de662105589b7ec01420a2912ff966d61740c4fb88b23db78",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a001"
+        ],
+        "start": 39,
+        "end": 433,
+        "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 1"
+        ],
+        "n": 1
+      },
+      {
+        "rank": 2,
+        "score": 0.7629959583282471,
+        "chunk_id": "bc230be1f726a128c198d496c68ea7fdeef99c9961720d45769375c46c634b7f",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a002"
+        ],
+        "start": 985,
+        "end": 1379,
+        "text": "Article 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 2"
+        ],
+        "n": 2
+      },
+      {
+        "rank": 3,
+        "score": 0.7628428936004639,
+        "chunk_id": "04bbe49d2f98cf4e4338c159ed9b5b2ca7d5b29b24a7732b1339473cc10a05b0",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a002"
+        ],
+        "start": 1697,
+        "end": 1931,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 2"
+        ],
+        "n": 3
+      },
+      {
+        "rank": 4,
+        "score": 0.7628428936004639,
+        "chunk_id": "d2c0d71ea27b8fefe114c0345b3c4882e794ff43f7258a7164b3855d21ed8a2d",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a001"
+        ],
+        "start": 751,
+        "end": 985,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 1"
+        ],
+        "n": 4
+      },
+      {
+        "rank": 5,
+        "score": 0.7628428936004639,
+        "chunk_id": "d41f4a5e2f60eaa679f1f50c16cf12590cd76539cf60fc3f026756d807060c5d",
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+        "condition": "s400",
+        "document_id": "synthetic-doc-3",
+        "article_ids": [
+          "library-a003"
+        ],
+        "start": 2674,
+        "end": 2908,
+        "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+        "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+        "source_url": "https://example.org/synthetic/3",
+        "article_labels": [
+          "Article 3"
+        ],
+        "n": 5
+      }
+    ],
+    "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+    "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a",
+    "condition": "s400",
+    "generation": {
+      "provider": "openai-compatible",
+      "model": "CS5351/DeepSeek-V4-Flash",
+      "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+      "temperature": 0.0,
+      "seed": null
+    },
+    "timing_ms": {
+      "retrieve": 130.752,
+      "generate": 1406.598200002918
+    }
+  },
+  "readiness_before_build": false,
+  "readiness_after_build": true,
+  "restart_preserved_exact_answer_and_evidence": true,
+  "preflight": {
+    "schema_version": "1.0",
+    "state": "not_ready",
+    "mode": "development",
+    "ready_for_qa": true,
+    "ready_for_evaluation": false,
+    "formal_ready": false,
+    "components": {
+      "dependencies": {
+        "ready": true,
+        "missing": [],
+        "mismatched": []
+      },
+      "corpus": {
+        "ready": true,
+        "document_count": 4,
+        "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca"
+      },
+      "gold": {
+        "ready": false,
+        "code": "GOLD_NOT_CONFIGURED",
+        "message": "Configure A's frozen gold version before evaluation"
+      },
+      "model_files": {
+        "ready": true,
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "dimension": 1024,
+        "file_count": 11,
+        "encoder_loaded": false
+      },
+      "indexes": {
+        "ready": true,
+        "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a",
+        "conditions": [
+          "f400",
+          "s400",
+          "f800",
+          "s800"
+        ],
+        "chunk_counts": {
+          "f400": 34,
+          "s400": 47,
+          "f800": 18,
+          "s800": 31
+        }
+      },
+      "generation": {
+        "ready": true,
+        "configured": true,
+        "transport": "curl",
+        "transport_available": true,
+        "connectivity_verified": false
+      }
+    },
+    "configuration": {
+      "schema_version": "1.0",
+      "mode": "development",
+      "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+      "gold_version": null,
+      "conditions": [
+        "f400",
+        "s400",
+        "f800",
+        "s800"
+      ],
+      "top_k": 5,
+      "data_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m5e-80d705324ea4\\data",
+      "embedding": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "model_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\models\\embedding",
+        "device": "cpu",
+        "dimension": 1024,
+        "normalize": true,
+        "query_prefix": "",
+        "document_prefix": "",
+        "max_input_tokens": 8192,
+        "pooling": "cls",
+        "batch_size": 4,
+        "cpu_threads": 4
+      },
+      "retrieval": {
+        "metric": "cosine",
+        "chunker_version": "structure-offset-v2"
+      },
+      "generation": {
+        "provider": "openai-compatible",
+        "base_url": "https://llm.cs.cityu.edu.hk/v1",
+        "model": "CS5351/DeepSeek-V4-Flash",
+        "temperature": 0,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "max_attempts": 2,
+        "prompt_path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\app\\qa\\prompts\\answer.txt",
+        "json_mode": true,
+        "transport": "curl",
+        "seed": null,
+        "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+        "api_key_configured": true
+      }
+    },
+    "experiment_fingerprint": "e8fb2c7dd0fbff8f28ca7c5c7178c30b8ded363ea21a101f0966bc733668a974",
+    "external_model_calls": 0,
+    "index_builds": 0
+  },
+  "persisted_ask_count": 1,
+  "evaluation_runs": 0,
+  "trace": {
+    "ask_id": "ask-45b9bf81bfea46cc928e4361d7c8b8f5",
+    "conversation_id": "chat-0bc49ae4431142818a7df2fb14353219",
+    "question": "Can a reader renew a library book when the loan period expires?",
+    "condition": "s400",
+    "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+    "started_at": "2026-11-19T04:40:57.914537+00:00",
+    "finished_at": "2026-11-19T04:40:59.506954+00:00",
+    "retrieval": {
+      "condition": "s400",
+      "hits": [
+        {
+          "rank": 1,
+          "score": 0.7637379169464111,
+          "chunk_id": "738055ce8098710de662105589b7ec01420a2912ff966d61740c4fb88b23db78",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 39,
+          "end": 433,
+          "text": "Article 1 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7629959583282471,
+          "chunk_id": "bc230be1f726a128c198d496c68ea7fdeef99c9961720d45769375c46c634b7f",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 985,
+          "end": 1379,
+          "text": "Article 2 A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause. A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. ",
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7628428936004639,
+          "chunk_id": "04bbe49d2f98cf4e4338c159ed9b5b2ca7d5b29b24a7732b1339473cc10a05b0",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a002"
+          ],
+          "start": 1697,
+          "end": 1931,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 2"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7628428936004639,
+          "chunk_id": "d2c0d71ea27b8fefe114c0345b3c4882e794ff43f7258a7164b3855d21ed8a2d",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a001"
+          ],
+          "start": 751,
+          "end": 985,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 1"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7628428936004639,
+          "chunk_id": "d41f4a5e2f60eaa679f1f50c16cf12590cd76539cf60fc3f026756d807060c5d",
+          "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+          "condition": "s400",
+          "document_id": "synthetic-doc-3",
+          "article_ids": [
+            "library-a003"
+          ],
+          "start": 2674,
+          "end": 2908,
+          "text": "A reader borrowing a library book shall register the loan number and the return date. When the loan period expires, the reader may apply for renewal. If a book is damaged, the reader shall contact library staff and explain the cause.\n",
+          "title": "SYNTHETIC integration document 3: Synthetic Library Loan Rules (not official legislation)",
+          "source_url": "https://example.org/synthetic/3",
+          "article_labels": [
+            "Article 3"
+          ]
+        }
+      ],
+      "timing_ms": 130.752,
+      "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+      "index_version": "87210c569474a18de941279266d039c6230a009705e04c4b79f096c6ae09e91a"
+    },
+    "sources_verified": true,
+    "context_chars": 1490,
+    "attempts": [
+      {
+        "number": 1,
+        "started_at": "2026-11-19T04:40:58.100143+00:00",
+        "response": {
+          "id": "9d797639-a7c4-47f7-b393-8e400fce1d28",
+          "created": 1795063257,
+          "model": "CS5351/DeepSeek-V4-Flash",
+          "object": "chat.completion",
+          "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "{\"status\":\"answered\",\"claims\":[{\"text\":\"When the loan period expires, the reader may apply for renewal.\",\"citation_numbers\":[1,2,3,4,5]}]}",
+                "role": "assistant",
+                "provider_specific_fields": {
+                  "refusal": null
+                }
+              },
+              "provider_specific_fields": {}
+            }
+          ],
+          "usage": {
+            "completion_tokens": 39,
+            "prompt_tokens": 938,
+            "total_tokens": 977,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 938
+          }
+        },
+        "content": "{\"status\":\"answered\",\"claims\":[{\"text\":\"When the loan period expires, the reader may apply for renewal.\",\"citation_numbers\":[1,2,3,4,5]}]}",
+        "usage": {
+          "completion_tokens": 39,
+          "prompt_tokens": 938,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 938
+        },
+        "model": "CS5351/DeepSeek-V4-Flash",
+        "finish_reason": "stop",
+        "state": "completed",
+        "finished_at": "2026-11-19T04:40:59.495673+00:00"
+      }
+    ],
+    "timing_ms": {
+      "retrieve": 130.752,
+      "generate": 1406.598200002918
+    },
+    "configuration": {
+      "schema_version": "1.0",
+      "mode": "development",
+      "corpus_version": "b837c5ba9b963b2fd4037edaef7857c726f9cef67a1459b24e1b6892593d60ca",
+      "gold_version": null,
+      "conditions": [
+        "f400",
+        "s400",
+        "f800",
+        "s800"
+      ],
+      "top_k": 5,
+      "data_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m5e-80d705324ea4\\data",
+      "embedding": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "model_dir": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\models\\embedding",
+        "device": "cpu",
+        "dimension": 1024,
+        "normalize": true,
+        "query_prefix": "",
+        "document_prefix": "",
+        "max_input_tokens": 8192,
+        "pooling": "cls",
+        "batch_size": 4,
+        "cpu_threads": 4
+      },
+      "retrieval": {
+        "metric": "cosine",
+        "chunker_version": "structure-offset-v2"
+      },
+      "generation": {
+        "provider": "openai-compatible",
+        "base_url": "https://llm.cs.cityu.edu.hk/v1",
+        "model": "CS5351/DeepSeek-V4-Flash",
+        "temperature": 0,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "max_attempts": 2,
+        "prompt_path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\DERag\\app\\qa\\prompts\\answer.txt",
+        "json_mode": true,
+        "transport": "curl",
+        "seed": null,
+        "prompt_sha256": "c5153cf81c9da4b3b619066249d01665f704d4d96065c338a28893312dec8702",
+        "api_key_configured": true
+      }
+    },
+    "experiment_fingerprint": "e8fb2c7dd0fbff8f28ca7c5c7178c30b8ded363ea21a101f0966bc733668a974",
+    "error": null
+  },
+  "known_total_tokens": 977,
+  "own_servers_stopped": true
+}

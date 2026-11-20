@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "files": {
+    "evaluation.csv": "582e14e9a08dd0282f0139c675510ec344a5b6b691a64844845843a3f6ef867f",
+    "evaluation.json": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+    "逐题阅读与评分材料.md": "d35c656ae5824b93d67a9870d7e4fd1876586deed1e4f7d19eaea268ddbd528d"
+  },
+  "record_count": 120,
+  "model_calls_for_reading_packet": 0,
+  "human_grades_assigned": 0,
+  "review_complete": false
+}

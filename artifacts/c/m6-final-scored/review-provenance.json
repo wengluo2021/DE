@@ -1,0 +1,2005 @@
+{
+  "kind": "mixed_provenance_AI_assisted_evaluation",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "standing_authorization": "artifacts/c/m6-human-review/standing-authorization.json",
+  "individually_human_confirmed_cases": 21,
+  "authorized_AI_cases": 99,
+  "individually_human_answer_grades": 21,
+  "authorized_AI_answer_grades": 75,
+  "individually_human_refusal_decisions": 0,
+  "authorized_AI_refusal_decisions": 24,
+  "individually_human_claim_decisions": 45,
+  "authorized_AI_claim_decisions": 121,
+  "all_items_individually_human_verified": false,
+  "backend_review_complete": true,
+  "backend_formal_results": true,
+  "backend_flags_are_not_proof_of_all_human_verification": true,
+  "cases": [
+    {
+      "case_id": "gold-crd-delivery-time",
+      "condition": "f400",
+      "ask_id": "ask-a2578badf16844d9a4a75df7d42987a1",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用2虽截断条件句开头，题目已明确双方未约定交期；交付占有或控制、不得无故拖延、合同成立后30日的结论完整。实际评审人明确接受使用题目给定事实前提的口径。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用3完整写出未约定具体交付日时应尽快交付，且最迟合同成立后30日，直接覆盖主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "f400",
+      "ask_id": "ask-51861825e0644016b74b3925cc3a19c0",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1明确要求退还消费者支付的全部款项，包括适用时的交付费用。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1与2在同一文档[73600,74000)、[74000,74400)连续，合起来完整保留通知撤回决定起14日及不得无故拖延；须合看本主张实际绑定的两个引用。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用2完整写出同一支付方式、消费者明确同意例外及不得收费的条件；这是有支持的额外信息，不能补上遗漏的A必要事实。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f400",
+      "ask_id": "ask-135948a4085748adb07c4650d75cd644",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际评审人明确选择支持：题目给出商家主体，所引片段保留的禁止超成本收费含义已足够。按此实际判断保存，未借主张0的其他引用补证据；原AI待判意见保留。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "f400",
+      "ask_id": "ask-670b9e5f74424e0196af650c2c326f6d",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "主张0实际绑定引用1和2；两块按原文位置[71200,71600)、[71600,72000)相接，联合保留完整未提供信息条件和12个月起算点，虽然引用编号顺序与区间先后相反。"
+        },
+        {
+          "claim_index": 1,
+          "supported": false,
+          "reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f400",
+      "ask_id": "ask-f0e9d8ad1d8b44da9b4086eb9465e1da",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际评审人明确选择支持：题目已限定远程合同，所引片段保留14日与Article16例外，off-premis词尾截断不影响本题规则的支持。未借未绑定原文补证据。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "f400",
+      "ask_id": "ask-d2f59403407e428796961f28b7609d75",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "实际引文缺失迟延交货条件的前半句；题干虽给默认期限届满，但没有给出主张额外覆盖的约定交期法律分支，不能用题干补该规范范围。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含额外合理期限仍未交付即可解除合同的条件句。"
+        },
+        {
+          "claim_index": 2,
+          "supported": false,
+          "reason": "实际评审人明确采用较严格读法：This rule紧接解除权句，容易被理解为商家拒绝交货时没有解除权；实际原文只排除再给额外期限的要求，仍可直接解除，不能支持这种解除权限制。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "f400",
+      "ask_id": "ask-fcf1efe9e14d4cee9aa6aca8bb9513d8",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用2完整包含交付时已有且两年内显现的不符责任这一主张；后续数字要素句虽被截断，但本主张没有把它写出。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定的引用3保留Member States may maintain or introduce longer t，引用1保留longer time limits for liability of seller than those laid down in this Directive。两条已引用片段联合给出主体、允许延长及对象/比较范围；按已采用的语义组合和词尾截断口径支持，未借未引用块。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用4和5分别给出二手商品可约定较短期间的条文与序言大意，支持这一有限主张；主张没有说明一年最低限度，影响答案完整性，不能据其字面支持就判整答correct。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f400",
+      "ask_id": "ask-514f306bb7514891b33c4efddcdd1a4e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "supported": false,
+          "reason": "实际引用在with the nature of the处结束，第二种性质例外的对象尚未出现。与只少同一词词尾不同，此处缺失有法律意义的例外对象，题目也未给该对象，不能补成lack of conformity。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f400",
+      "ask_id": "ask-ca088805de274b788fe27051fceec7de",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含Article14(1)(a)免费维修或更换。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f400",
+      "ask_id": "ask-371befde88f34dbbbd97e2bcf7f3d0f3",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "f400",
+      "ask_id": "ask-a2c923c5b3a5484292fd7f9d30b98c0c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "f400",
+      "ask_id": "ask-f31717aee90a4e3bb74f9009d0cfdb32",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f400",
+      "ask_id": "ask-1e96eff346224c868b4d07dc68335462",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f400",
+      "ask_id": "ask-f49a87d14e0340fc815b239038e8414b",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f400",
+      "ask_id": "ask-a9984618d5f644a191d5f8cf458581b6",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f400",
+      "ask_id": "ask-c1930e1ff0e246208cc2692bff46d82c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "condition": "f400",
+      "ask_id": "ask-9de8b5f9a4aa4ef195c71194ec3ebdc1",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "f400",
+      "ask_id": "ask-e352cf9a29c6407690f2f1da3c5506d1",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "引用1在features and c处结束，连显著损害选择自由的部分都未包含，更不能支持整条主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f400",
+      "ask_id": "ask-9ed69449f46c42d195aa96ae129850a7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f400",
+      "ask_id": "ask-7313bb53ef17438facbfb9c9a5626e0f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1包含AnnexI所列做法在所有情况下不公平的完整主句。"
+        },
+        {
+          "claim_index": 1,
+          "supported": false,
+          "reason": "实际引用2开头是截断的an be deemed，并未出现cannot；完整冻结序言是can be deemed unfair without逐案判断，生成cannot将本题核心方向反转，既无引用支持也与A标准相反。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用4直接包含AnnexI标题COMMERCIAL PRACTICES WHICH ARE IN ALL CIRCUMSTANCES CONSIDERED UNFAIR。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "f400",
+      "ask_id": "ask-d13aaf81ef1440b0b8ba10ac77a2871e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "引用1只到if ... it cau，缺少significant imbalance及消费者受损等关键定义，不能支持主张补出的整个测试。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f400",
+      "ask_id": "ask-8db6b21d8a7048deab7f3d3894e75fbd",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f400",
+      "ask_id": "ask-394b51192a954f8dbbf299ebe070781c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f400",
+      "ask_id": "ask-7666f68b5c5e43b1bdb3dd57bbec55fc",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "f400",
+      "ask_id": "ask-24515cf6d7114ee08eec330fc96435f7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "f400",
+      "ask_id": "ask-0ef31418c100493786c1d286d88dbe9c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "f400",
+      "ask_id": "ask-4af5583545e941f88d54504fdc77c350",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "f400",
+      "ask_id": "ask-270580514ec74fbb8c54bf682edf0239",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "f400",
+      "ask_id": "ask-1c9c1e0a982e4683a8eaf6d454d92a5d",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "f400",
+      "ask_id": "ask-bf1ca0f8466c4569b588f3ca6ff9059e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-crd-delivery-time",
+      "condition": "s400",
+      "ask_id": "ask-0c68d787b8764cb0a6f04a90bc69eccc",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用4完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用3完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "s400",
+      "ask_id": "ask-e7bc2be8d7a74ec1a07f1dfd1dde2257",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含第13(1)条首段，明确全部款项及适用的交付费用。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一引用1完整保留无故拖延限制、14日及从收到消费者撤回通知起算，支持该主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s400",
+      "ask_id": "ask-4578759c31b548bbafca9789a5cba91e",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "s400",
+      "ask_id": "ask-1d0c8a11e4dd4a6388c06e34dfa16936",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s400",
+      "ask_id": "ask-68e5a7bec19641b194ca319e610c6d48",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用5完整包含Article9(1)的14日及Article16例外限定。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用3有非有形载体数字内容文字，原始citation元数据article_labels=Article14也能与冻结条文区间核对，支持“Article14涉及该主题”的有限主张。但这不是题目所需的Article16(m)例外条件。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "s400",
+      "ask_id": "ask-b81124a3bcb04f1aaaf19438b95b6347",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保留Article18额外合理期限的要求和迟延前提。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用3直接且完整给出额外期限内仍未交付即可解除合同。"
+        },
+        {
+          "claim_index": 2,
+          "supported": false,
+          "reason": "已另读完整5个输入块，确实没有Article18(3)退款规则；但本主张绑定的引用5仅谈其他救济，不能独立支持对全部证据集合的“未说明”断言，更不支持实际退款结论。按逐主张实际引用口径建议不支持；实际评审人可确认对这种元说明的统一处理。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "s400",
+      "ask_id": "ask-fbc9efd8f3e144ad9c439b378fe84665",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用2完整保存第10(1)条，包括交付时存在且两年内显现；本主张只重述这部分，来源直接支持。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用3完整保存二手商品可约定较短期间及不得少于一年的全部条件。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s400",
+      "ask_id": "ask-d17314c9abae4cb8b08ff732563c44a6",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s400",
+      "ask_id": "ask-a58febdba6904c1caa7e39982fae947e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s400",
+      "ask_id": "ask-98c601b161534d868a15a611c93491bd",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "s400",
+      "ask_id": "ask-c836a7b5226c4197bb6fb1d12fb8706d",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "s400",
+      "ask_id": "ask-fa0ecdb89b134006895d7094447712a7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s400",
+      "ask_id": "ask-35bfb1ac338b4c2184506ec3ff27a548",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s400",
+      "ask_id": "ask-2a2ea6791b744d72aa780c0cc43cfc53",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s400",
+      "ask_id": "ask-fad03de157904177bca8a436963d34a2",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s400",
+      "ask_id": "ask-b9b1f5df752b48bba0435bbbb9744d92",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "condition": "s400",
+      "ask_id": "ask-441eba7e5bad4f77a0af8c3215fa177b",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "s400",
+      "ask_id": "ask-40141c5198ea44fe80a50756d3cf6558",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "引用1虽保留大部分定义，却在likely to ca处结束，缺少交易决定及would not otherwise have taken的关键因果/反事实尾部；整条主张仅绑定此块，不能视为完整支持。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s400",
+      "ask_id": "ask-9305a1eceb944606a2d40da19156b5d1",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s400",
+      "ask_id": "ask-41eb292bfd7949f98c26ce6ae067f699",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+        },
+        {
+          "claim_index": 3,
+          "supported": true,
+          "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "s400",
+      "ask_id": "ask-40461232008b40bb96cf06ba3d2aa0d7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s400",
+      "ask_id": "ask-f3bf9964333c45ba8485892e444095f8",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s400",
+      "ask_id": "ask-b49f9f755cce4c41a143281bf69e694c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s400",
+      "ask_id": "ask-603bafa78a2d45ea85492c4b2c6d43e7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "s400",
+      "ask_id": "ask-b032f7cba7074168a0da688fd793c346",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "s400",
+      "ask_id": "ask-5d6c55be717848fba113c5688f167a77",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "s400",
+      "ask_id": "ask-b2d6a10ba28c477ca4acd34f1c136463",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "s400",
+      "ask_id": "ask-c54d22df7ba0448d9009918880a268ea",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "s400",
+      "ask_id": "ask-f8c2313bb3d642c1846454b69a0a3285",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "s400",
+      "ask_id": "ask-cc4c27450119465aa5367be5b8b78071",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-crd-delivery-time",
+      "condition": "f800",
+      "ask_id": "ask-bee539a16a7d4493ab9033f759d874cc",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用5完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "f800",
+      "ask_id": "ask-2236824cc2874d25a0f7b6f62afe2408",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1明确全部款项及适用的交付费用。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含收到撤回通知起14日的期限与不得无故拖延。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1包含使用同一支付方式、明确同意例外和消费者不承担费用的完整句子。"
+        },
+        {
+          "claim_index": 3,
+          "supported": true,
+          "reason": "引用4虽以“standing paragraph 1”开头，但本主张所述额外交付费、明确另选配送及最低标准配送比较条件完整保留。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "f800",
+      "ask_id": "ask-a544700a3afe40cbbff9d0ba2aeef9d6",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "f800",
+      "ask_id": "ask-f2fa0ba8f28b49f4b6a251cad8f2c1ce",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "supported": false,
+          "reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f800",
+      "ask_id": "ask-ad0c4951bfbe4ab2b9a4fb6a4b97ef94",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3的序言完整包含数字内容合同、同意开始履行并确认失去权利的这段重述，字面有支持。但该段与A要求的Article16(m)完整法定条件不能等同：生成未明确performance has begun及prior express consent，也没有14日一般规则。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "f800",
+      "ask_id": "ask-26b35c7edce5419192135745588e7104",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用4完整保留序言中未约定日期时尽快交付、合同成立后最迟30日。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "本题已明确默认交货期限届满，补足该句事实前提；实际引用完整保留应给予适当额外期限的规范结论。未借其他引文补法律规则。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1直接给出额外期限仍不交付可解除。"
+        },
+        {
+          "claim_index": 3,
+          "supported": false,
+          "reason": "引用5虽字面包含14日退款，但它是Article13的撤回制度，题目是Article18迟延交货解除。不能支持将撤回通知起14日规则用作本题退款结论，适用场景混用，建议不支持，须人确认。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "f800",
+      "ask_id": "ask-d3a262b3aba14058830ad24f78052212",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3完整包含第10(1)条的两年责任主句。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用2完整包含第10(3)条Member States可维持/引入更长期限，且元数据和原文结构归属于Article10，支持第1/2款的归属。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1的序言(43)直接支持允许二手商品双方约定较短期间这一概括；没有给出一年下限，不能补成完整必要事实。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f800",
+      "ask_id": "ask-4ed7c26a195a4f99921370c24e55789b",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f800",
+      "ask_id": "ask-ac13afe75f844a07b6d9538974968aba",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1直接包含第14(1)(a)免费要求。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含从卖方获知不符起的合理时间要求。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f800",
+      "ask_id": "ask-514b9d40855d409586132115e913c026",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "f800",
+      "ask_id": "ask-29e4ad5473bc4ad69441adf533f4cbe7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "f800",
+      "ask_id": "ask-30e261be687547cfb7dbb3ce4c7ff5a8",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f800",
+      "ask_id": "ask-630c384a31b34a8489f4e6a373942893",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f800",
+      "ask_id": "ask-d1af7bcd43204cfa9c064cc53bea8376",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "f800",
+      "ask_id": "ask-899dbaaceae749c6ba634097c561e904",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "f800",
+      "ask_id": "ask-311f3d2669704bd6b98e6db6be12c2c2",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+        },
+        {
+          "claim_index": 3,
+          "supported": true,
+          "reason": "实际引用完整包含(c)清楚易懂地通知修改。"
+        },
+        {
+          "claim_index": 4,
+          "supported": true,
+          "reason": "实际引用完整给出提前通知、耐久媒介、修改特征/时间、终止权及保持不修改服务的替代项，末尾仅把such a modification截成such a mo；modification在同一引用反复出现，按已确认的词尾截断口径支持。本条主张没有声称第4款交叉引用，不为未提出的内容扣分。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "condition": "f800",
+      "ask_id": "ask-43b5c7ed9d52424c9e8d288ea73b1813",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": false,
+          "reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "f800",
+      "ask_id": "ask-2681769dbccb4c6cae100f3e7d5b4ae8",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保留Article8整句，手段、损害、因果及原不会作出决定四部分均在所引片段。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f800",
+      "ask_id": "ask-c725700fad544660b58b3ac3aecc0d46",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "f800",
+      "ask_id": "ask-de70864d001142599e6daf2e5c2ff867",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "f800",
+      "ask_id": "ask-07cef5d4572f4a77acecf8131efb3e60",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f800",
+      "ask_id": "ask-4be9f9a283a54c3c847523145def4c8b",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f800",
+      "ask_id": "ask-8b77ef055f7b4b7fa064a488a16c6d6e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f800",
+      "ask_id": "ask-3edd649c38df41ffb5fb00b160d3ffeb",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "f800",
+      "ask_id": "ask-29025c29df564678b9b175313a39105f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "f800",
+      "ask_id": "ask-bdeeeedf829a4e1ea2d8f7be6d20fc42",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "f800",
+      "ask_id": "ask-49e4fe49c0c748c2a7412fcc27522c31",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "f800",
+      "ask_id": "ask-e407d821d33c4575beb7200dc86e3586",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "f800",
+      "ask_id": "ask-2b441d6ad5264da193359a35c91d879f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "f800",
+      "ask_id": "ask-bc52d5b6ae034325ae1d261425e20c4f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-crd-delivery-time",
+      "condition": "s800",
+      "ask_id": "ask-e54bd104a29640548b335c2ab4ce21c8",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1以未约定具体交付日的完整规则开头，包含尽快交付、合同成立后最迟30日，覆盖主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-refund",
+      "condition": "s800",
+      "ask_id": "ask-5e586d7b1e304e429d9937069a1bf8cc",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含全部支付款项及适用的交付费用。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含不得无故拖延、14日、通知撤回决定的起算条件。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1完整包含同一支付方式及明确同意、无费用的限定；这些额外信息有来源，但并未覆盖遗漏的第13(2)/(3)条。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-payment-fee-cap",
+      "condition": "s800",
+      "ask_id": "ask-be02ead52906497bad7fec0e8931fab9",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含第19条完整禁止性规则：支付方式收费不得超过商家使用该方式承担的成本；覆盖A的唯一必要事实。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "该主张绑定的序言引用完整写出traders should be prohibited以及收费不得超过商家成本。S800引用还保留(54)编号，支持对Recital54的明确归属。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "s800",
+      "ask_id": "ask-efa9944f669340c3aad8e91a8f09bde1",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s800",
+      "ask_id": "ask-3bfcffd09491470ba1de9b7776d41951",
+      "reviewer": "C（本聊天用户）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用5包含Article9标题与完整第1款，支持14日以及Article16例外。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整序言段支持“已同意开始履行并确认失去撤回权”的重述；它仍没有把A必要事实中的“履行已经开始、事先明确同意”完整说出，故主张文字有来源不代表答案已完整。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "s800",
+      "ask_id": "ask-279e2a010a054812864b0366cbfd7127",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含Article18(1)在未另约定时不得无故拖延、合同成立后30日上限。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含第18(2)条的额外合理交付期要求。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1末句完整给出额外期限届满仍未交付的解除权。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "s800",
+      "ask_id": "ask-4d74142f2ae048f69445fe9caffa5ef9",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3直接包含第10(3)条较长期限规则，条文元数据可核对Article10。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用2完整包含第10(6)条二手商品双方可约定较短期间及一年下限。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用4完整包含成员国可提供更长期限的序言句，支持重复说明。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s800",
+      "ask_id": "ask-2ace4f79875941eb8f9dc57be43fa5e5",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s800",
+      "ask_id": "ask-7e375c5e5c20444b865a05b29c974ff2",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "引用1直接包含免费维修/更换。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s800",
+      "ask_id": "ask-a0f3664d5b044b7bb4d419253cdcacfb",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "s800",
+      "ask_id": "ask-513d006895ac489ebb722d9dac78a02c",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-supply-without-delay",
+      "condition": "s800",
+      "ask_id": "ask-1ea531d9b7734280afdca58d76eb8cc7",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s800",
+      "ask_id": "ask-59adf1fcca8446d08163c19123ea34f4",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s800",
+      "ask_id": "ask-5a35a16fa8f74c4686c43c0364e22f1d",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1完整包含Article14(2)恢复符合的权利、不可能/不成比例成本例外及价值和不符重要性两项考虑，支持这段额外主张。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-reimbursement-time",
+      "condition": "s800",
+      "ask_id": "ask-44d4cd0d054c4271a9b885f43704c015",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-dcd-modification-conditions",
+      "condition": "s800",
+      "ask_id": "ask-fde0877a83d848ca9a9e6d37e1b63d08",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用包含超出维持符合Articles7/8必要范围的修改须满足条件这一主句；长期供给前提由题干明确给定，没有擅自外推至其他合同。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用完整包含(a)合同允许且提供有效理由。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际引用完整包含(b)不得给消费者增加成本。"
+        },
+        {
+          "claim_index": 3,
+          "supported": true,
+          "reason": "实际引用完整包含(c)清楚易懂地通知修改。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "condition": "s800",
+      "ask_id": "ask-25494fe9f8c4437d87737c506a3d47f3",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用3完整包含Article5(2)(a)、and及(b)全部受众/群体限定，直接支持整个合取测试。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "s800",
+      "ask_id": "ask-c283f11f84854bd9bc212480ff02a6a4",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含Article8手段和对产品选择/行为的显著损害限定。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一引用1后半完整写出由此导致或可能导致原不会作出的交易决定，支持第二主张。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s800",
+      "ask_id": "ask-9f82bdccd6444cbd8076178021e0887e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "wrong",
+      "refusal_correct": null,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "condition": "s800",
+      "ask_id": "ask-bf11f8c731e24b769b75347e7478904a",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "partial",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际绑定引用明示AnnexI中做法在所有情况下不公平，或序言完整表达同一规则。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用完整给出消费者付出对价、回报主要来自引入其他消费者而非产品销售/消费的金字塔计划描述；原文位置可核对AnnexI，不伪造成主条文。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际绑定序言完整写出can be deemed unfair without逐案评估，未发生否定方向颠倒。"
+        },
+        {
+          "claim_index": 3,
+          "supported": true,
+          "reason": "实际绑定引用直接保留AnnexI所有情况下不公平的标题。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "s800",
+      "ask_id": "ask-55eb6a54acd64b8da5b79167c15bc730",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s800",
+      "ask_id": "ask-d3ffcef623634df0a29f5aa5cb8cae0e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        },
+        {
+          "claim_index": 2,
+          "supported": true,
+          "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s800",
+      "ask_id": "ask-623a340a1b8540a09d096b989ce06dfb",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。"
+        },
+        {
+          "claim_index": 1,
+          "supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s800",
+      "ask_id": "ask-78f148d61b704a16b9efd0b627d82b50",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": "correct",
+      "refusal_correct": null,
+      "claim_decisions": [
+        {
+          "claim_index": 0,
+          "supported": true,
+          "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+        }
+      ]
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "s800",
+      "ask_id": "ask-662f5ddbdba24c488322efc2d07be15f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-standard-vat-rate",
+      "condition": "s800",
+      "ask_id": "ask-02130776daca4e7fbb2d0b91fad91e3e",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-refund-interest-rate",
+      "condition": "s800",
+      "ask_id": "ask-51d31cd37bca40679e338d4291ce652f",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "s800",
+      "ask_id": "ask-4d730a08553d45ad8805c553172b76c9",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "s800",
+      "ask_id": "ask-62dfdcb20e864ad590dbf741c52e84a0",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    },
+    {
+      "case_id": "gold-refuse-package-insurance",
+      "condition": "s800",
+      "ask_id": "ask-5d55daeb24b148d4bc0897506e17c606",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "answer_grade": null,
+      "refusal_correct": true,
+      "claim_decisions": []
+    }
+  ]
+}

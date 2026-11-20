@@ -1,0 +1,124 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-21/confirmed-requests.json",
+  "confirmation_sha256": "8e21bac7a1690aef97f15805584e4f8538da69656c4e1e2ce21657ff8b0a8a3b",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "3600b640de1a33b5ea3b26dfd9adda36383664fa93ab981e8f59e46dacbfef15",
+  "applied": [
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用1只到if ... it cau，缺少significant imbalance及消费者受损等关键定义，不能支持主张补出的整个测试。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：说明了不公平测试，但未回答题目第二问的未个别协商判断，建议partial；引用支持性另列。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:38.049310+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：说明了不公平测试，但未回答题目第二问的未个别协商判断，建议partial；引用支持性另列。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:38.061676+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：完整回答不公平测试与未个别协商的判断，额外举证说明也有支持，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:38.073334+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-unfair-term-test",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：完整回答不公平测试与未个别协商的判断，额外举证说明也有支持，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:38.085750+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 88,
+  "official_cases_with_review": 84,
+  "answer_grades_pending": 12,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 19,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "56e44058d1ea9e4c035830005e232538c77a65aceabd04f017e3d74d47a9021a",
+    "evaluation.partial-review.json": "45b784d2c31f608f027a71b3e09a1df9822cb421f75e1e662b66014caccd0654"
+  }
+}

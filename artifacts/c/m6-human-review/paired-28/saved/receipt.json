@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-28/confirmed-requests.json",
+  "confirmation_sha256": "62360378ec581727f780bbc0d9b2fbbab7922a8769c9ac6d605d5e22dde64a99",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "f6bccab85f43dac78672cf8b6a8c4715a85ff99fc6cee30dedb6d02c92b5f09e",
+  "applied": [
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "f400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:08.569622+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:08.583973+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:08.597956+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-german-fine",
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结指令给的是有效、相称且有威慑力的处罚或执法要求，不能据此推出德国对单个不公平条款的最高欧元罚款。题目所需国家/金额不在库中，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:08.612005+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 116,
+  "official_cases_with_review": 112,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 8,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "f1cc24eef318cd9f1f79dcb94517d41aeee91f96885726795cce61aee7c1b7b1",
+    "evaluation.partial-review.json": "3c078af981c36ae7cf0df372b3843748f8db56fe0627d64a66d240e66f80f407"
+  }
+}

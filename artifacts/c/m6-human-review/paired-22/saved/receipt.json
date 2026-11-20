@@ -1,0 +1,123 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-22/confirmed-requests.json",
+  "confirmation_sha256": "67dcda79c7ec36e6591224bed6c041e97c09e4d1b3ebda0da100d8e2b5b26de0",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "45b784d2c31f608f027a71b3e09a1df9822cb421f75e1e662b66014caccd0654",
+  "applied": [
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言和疑义解释说明正确，但遗漏A明确列出的Article7(2)程序例外，按完整要点口径建议partial；不把截断引用中未生成的例外当已回答。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:42.369434+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:42.381696+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第5条有明确书面语言要求、有疑义时有利消费者解释及程序例外，本组insufficient，按可答题标准建议wrong。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:42.394617+00:00"
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:42.406691+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 92,
+  "official_cases_with_review": 88,
+  "answer_grades_pending": 8,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 11,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "78e306c9ca7ab902f6646e7b9b90566f90fb597d23ff2b6b7351d97de8690ac8",
+    "evaluation.partial-review.json": "d7197b76dfba0949a30ce0751e75147f0502a7d25c0ad17f1be1f4eab807c387"
+  }
+}

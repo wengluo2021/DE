@@ -1,0 +1,19 @@
+{
+  "state": "passed",
+  "batch": 15,
+  "questions": 2,
+  "response_records": 8,
+  "claim_checks": 0,
+  "advisory_support_counts": {},
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "official_database_review_rows_before": 0,
+  "official_database_review_rows_after": 0,
+  "school_generation_api_calls": 0,
+  "next_case_id": null,
+  "next_question_offset": 30,
+  "files": {
+    "artifacts/c/m6-ai-pre-review/batch-15.json": "df07af95d37d320a58b52734d083c41428c74b749883a2e893eab528e889102e",
+    "docs/M6辅助预审15_第29至30题.md": "37eedbf04a81002167d137b8c5724360c8a7d9661b0b01992d37843b8179673b"
+  }
+}

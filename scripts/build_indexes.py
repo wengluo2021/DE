@@ -6,7 +6,9 @@ import sys
 
 from app.retrieval import RetrievalService
 from app.retrieval.embedding import LocalEmbedder, MockEmbedder
-from app.retrieval.types import load_config, fixture_loader, formal_loader, canonical
+from app.retrieval.types import fixture_loader, canonical
+from app.config import load_settings
+from app.data import corpus_loader
 
 
 def main():
@@ -21,16 +23,26 @@ def main():
     # 模拟向量只允许配合合成数据，避免误把它用于正式法规实验。
     if args.mock and not args.fixtures:
         parser.error("--mock requires --fixtures")
-    config = load_config(args.config, data_dir=args.data_dir, model_dir=args.model_dir)
+    overrides={}
+    if args.data_dir:overrides["data_dir"]=args.data_dir
+    if args.model_dir:overrides["embedding"]={"model_dir":args.model_dir}
+    if args.corpus_version:overrides["corpus_version"]=args.corpus_version
+    settings=load_settings(args.config,overrides=overrides)
+    if args.fixtures and settings.experiment.mode=="formal":
+        parser.error("Formal mode cannot build synthetic fixture indexes")
+    config=settings.retrieval_config()
     # 默认读取 A 的正式 manifest；缺失时明确失败，不自动回退到样例。
-    loader = formal_loader(Path(config["data_dir"]))
+    loader = corpus_loader(Path(config["data_dir"]),formal=settings.experiment.mode=="formal")
     version = args.corpus_version or config["corpus_version"]
     if args.fixtures:
         # 合成数据按 mock/real 分目录保存，与正式数据及另一种模式的索引隔离。
         loader, version = fixture_loader, FIXTURE_CORPUS_VERSION
         config["data_dir"] = str(Path(config["data_dir"]) / "b-fixtures" / ("mock" if args.mock else "real"))
     service = RetrievalService(loader, MockEmbedder() if args.mock else LocalEmbedder(config["embedding"]), config)
-    print(canonical(service.build_indexes(version)))
+    try:
+        print(canonical(service.build_indexes(version)))
+    finally:
+        service.close()
 
 
 if __name__ == "__main__":

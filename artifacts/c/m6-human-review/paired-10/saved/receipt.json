@@ -1,0 +1,124 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-10/confirmed-requests.json",
+  "confirmation_sha256": "8110274b82256f032e7da23f2d8bc57be84203217d6824cc1e7fdbd10c81c818",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "cbe237672d1ab43ea3cd8470acdf100c432c38543135e2c2af63f63d0c5ee3e0",
+  "applied": [
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答了轻微不符不能解除，但未写由卖方举证其轻微，A要点仅部分覆盖，建议partial。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:49.887805+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:49.901229+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:49.914243+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:49.927584+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 44,
+  "official_cases_with_review": 40,
+  "answer_grades_pending": 56,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 73,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "fab3de9b56e307099f5c32615f3ff20e9b8d6be9bbaa5ce832fb7b2128673e66",
+    "evaluation.partial-review.json": "24202b2b56112dddebbf8357ff730a58adb38c22eab97ca2c9a98e421cc20d72"
+  }
+}

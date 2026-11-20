@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-19/confirmed-requests.json",
+  "confirmation_sha256": "73a1ceaf547cc6fed51b73b8eecdbaab8b4bd76b2735e6b5f5c0ebe8f9dacb1f",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "769f98eebeeb3f0719422039598f12850c4720fc2e7d6c38582010597fd65348",
+  "applied": [
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:29.317905+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:29.330792+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:29.343335+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-invitation-price-information",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:29.355399+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 80,
+  "official_cases_with_review": 76,
+  "answer_grades_pending": 20,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 41,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "639ee8843dd220dc3f1c897ded65d9520e4e115fc1d849dfaa0cd713f81463e2",
+    "evaluation.partial-review.json": "490df5370f3eb493fd6008bed8f1fe151f760c0df551d51df1ceef28b0664d02"
+  }
+}

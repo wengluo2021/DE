@@ -1,0 +1,94 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 19,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-ucpd-invitation-price-information",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-ucpd-invitation-price-information",
+    "question": "A trader makes an invitation to purchase covered by Directive 2005/29/EC, and the price information is not already apparent. What price information does Article 7 treat as material?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "The price inclusive of taxes is material. If the price cannot reasonably be calculated in advance, the manner of calculating it is material, together with additional freight, delivery or postal charges where appropriate, or the fact that such charges may be payable where those charges also cannot reasonably be calculated in advance.",
+    "key_facts": [
+      "4. In the case of an invitation to purchase, the following information shall be regarded as material, if not already apparent from the context:",
+      "(c) the price inclusive of taxes, or where the nature of the product means that the price cannot reasonably be calculated in advance, the manner in which the price is calculated, as well as, where appropriate, all additional freight, delivery or postal charges or, where these charges cannot reasonably be calculated in advance, the fact that such additional charges may be payable;"
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "article_id": "eu_unfair_practices_2005_29:article:7",
+        "structure_id": null,
+        "start": 31679,
+        "end": 31822,
+        "text": "4. In the case of an invitation to purchase, the following information shall be regarded as material, if not already apparent from the context:"
+      },
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "article_id": "eu_unfair_practices_2005_29:article:7",
+        "structure_id": null,
+        "start": 32119,
+        "end": 32501,
+        "text": "(c) the price inclusive of taxes, or where the nature of the product means that the price cannot reasonably be calculated in advance, the manner in which the price is calculated, as well as, where appropriate, all additional freight, delivery or postal charges or, where these charges cannot reasonably be calculated in advance, the fact that such additional charges may be payable;"
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第19题_购买邀请的含税价格与附加费用_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-9ed69449f46c42d195aa96ae129850a7",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-9305a1eceb944606a2d40da19156b5d1",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-c725700fad544660b58b3ac3aecc0d46",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-9f82bdccd6444cbd8076178021e0887e",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第7(4)(c)条明确含税价、不能预先合理算价时的算法及运输/邮递附加费等信息，本题可答；本组返回insufficient，按端到端标准建议wrong。Hit any为true也不等于已生成正确答案，原始拒答保留不重跑。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

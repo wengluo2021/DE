@@ -1,0 +1,539 @@
+{
+  "schema_version": "1.0",
+  "kind": "ai_pre_review_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "can_import_as_human_review": false,
+  "official_review_written": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "source_code_commit": "7279b6b",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "index_version": "e1d9e93d8abeea648bf64a2e7ac215e39f051a3c715dbe2ffa0664dac8b302bf",
+  "batch": 12,
+  "question_offsets": [
+    22,
+    23
+  ],
+  "gold_cases": [
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "question": "Under Directive 93/13/EEC, what effect must national law give to an unfair term in a consumer contract, and what happens to the rest of the contract?",
+      "topic": "single_article",
+      "answerable": true,
+      "reference_answer": "Member States must provide that an unfair term used in a contract with a consumer is, as provided for under their national law, not binding on the consumer. The contract continues to bind the parties on the remaining terms if it is capable of continuing in existence without the unfair terms.",
+      "key_facts": [
+        "1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_unfair_terms_93_13",
+          "article_id": "eu_unfair_terms_93_13:article:6",
+          "structure_id": null,
+          "start": 12076,
+          "end": 12418,
+          "text": "1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    },
+    {
+      "schema_version": "1.0",
+      "case_id": "gold-utd-negotiation-burden",
+      "question": "A seller claims that a standard term in a consumer contract covered by Directive 93/13/EEC was individually negotiated. Who must prove that claim?",
+      "topic": "single_article",
+      "answerable": true,
+      "reference_answer": "The seller or supplier who makes that claim bears the burden of proof.",
+      "key_facts": [
+        "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him."
+      ],
+      "evidence": [
+        {
+          "document_id": "eu_unfair_terms_93_13",
+          "article_id": "eu_unfair_terms_93_13:article:3",
+          "structure_id": null,
+          "start": 10666,
+          "end": 10819,
+          "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him."
+        }
+      ],
+      "unanswerable_reason": null,
+      "refusal_reference": null
+    }
+  ],
+  "entries": [
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f400",
+      "ask_id": "ask-394b51192a954f8dbbf299ebe070781c",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Under Article 6(1), Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "997c1e7188f3e87e737d1ba51f02936c518debf5f0099b3606f8814bee790883",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 5",
+                "Article 6"
+              ],
+              "start": 12000,
+              "end": 12400,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+          "citation_numbers": [
+            3,
+            4
+          ],
+          "suggested_supported": true,
+          "reason": "实际绑定引用3、4在12400处连续，联合包含可在无不公平条款下继续存在这一条件；没有用未绑定块补结尾。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "997c1e7188f3e87e737d1ba51f02936c518debf5f0099b3606f8814bee790883",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 5",
+                "Article 6"
+              ],
+              "start": 12000,
+              "end": 12400,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without"
+            },
+            {
+              "n": 4,
+              "chunk_id": "e34e8ae50185299f7cb05f8acbb53af7804d79f6b5fb14886e59fc39904f377b",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "article_labels": [
+                "Article 6",
+                "Article 7"
+              ],
+              "start": 12400,
+              "end": 12800,
+              "text": " the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s400",
+      "ask_id": "ask-b49f9f755cce4c41a143281bf69e694c",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "9fc99847a61420e9932265765a35e54703d3bf8ecc461639d2f05c63533cfba1",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 6"
+              ],
+              "start": 12066,
+              "end": 12422,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. "
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+          "citation_numbers": [
+            3
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 3,
+              "chunk_id": "9fc99847a61420e9932265765a35e54703d3bf8ecc461639d2f05c63533cfba1",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 6"
+              ],
+              "start": 12066,
+              "end": 12422,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "f800",
+      "ask_id": "ask-8b77ef055f7b4b7fa064a488a16c6d6e",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+          "citation_numbers": [
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "e8afc86ad867132d32af5ffaa43bbe5ff68d63336a87495279cc6b396f579283",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "article_labels": [
+                "Article 5",
+                "Article 6",
+                "Article 7"
+              ],
+              "start": 12000,
+              "end": 12800,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+          "citation_numbers": [
+            2,
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 2,
+              "chunk_id": "e8afc86ad867132d32af5ffaa43bbe5ff68d63336a87495279cc6b396f579283",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5",
+                "eu_unfair_terms_93_13:article:6",
+                "eu_unfair_terms_93_13:article:7"
+              ],
+              "article_labels": [
+                "Article 5",
+                "Article 6",
+                "Article 7"
+              ],
+              "start": 12000,
+              "end": 12800,
+              "text": "ply in the context of the procedures laid down in Article 7 (2).\n\nArticle 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\nArticle 7\n1. Member States shall ensure that, in the interests of consu"
+            },
+            {
+              "n": 1,
+              "chunk_id": "d8d5a57e89e5fe0ba999ce8689a2259f027c32f4b34ed8f8a37cfeacf226050e",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 7200,
+              "end": 8000,
+              "text": ", the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;\nWhereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;\nWhereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; whereas provisions should therefore be included in this Directive designed to ave"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "condition": "s800",
+      "ask_id": "ask-623a340a1b8540a09d096b989ce06dfb",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "不公平条款不约束消费者、其余合同在能够独立继续存在时继续约束两个部分均完整，且条件保留，建议correct。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Member States must lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用完整包含Article6(1)成员国须使不公平条款按国内法对消费者无约束力，支持该主张。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "6ed31550d37e8400df9adf3d363ad23d4d70b3d0bcc163d64dd27f74c02f33b7",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 6"
+              ],
+              "start": 12066,
+              "end": 12729,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\n"
+            }
+          ]
+        },
+        {
+          "claim_index": 1,
+          "claim_text": "The contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.",
+          "citation_numbers": [
+            1,
+            2
+          ],
+          "suggested_supported": true,
+          "reason": "实际引用中的第6(1)条或同义序言完整保留其余合同继续约束、以去除不公平条款后仍可存在为前提，不是无条件维持整个合同。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "6ed31550d37e8400df9adf3d363ad23d4d70b3d0bcc163d64dd27f74c02f33b7",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:6"
+              ],
+              "article_labels": [
+                "Article 6"
+              ],
+              "start": 12066,
+              "end": 12729,
+              "text": "Article 6\n1. Member States shall lay down that unfair terms used in a contract concluded with a consumer by a seller or supplier shall, as provided for under their national law, not be binding on the consumer and that the contract shall continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair terms.\n2. Member States shall take the necessary measures to ensure that the consumer does not lose the protection granted by this Directive by virtue of the choice of the law of a non-Member country as the law applicable to the contract if the latter has a close connection with the territory of the Member States.\n\n"
+            },
+            {
+              "n": 2,
+              "chunk_id": "1c438358a59c781a1012cd010a70d891904697d3318625a91eaa90d62db915aa",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [],
+              "article_labels": [],
+              "start": 7133,
+              "end": 7919,
+              "text": "Whereas contracts should be drafted in plain, intelligible language, the consumer should actually be given an opportunity to examine all the terms and, if in doubt, the interpretation most favourable to the consumer should prevail;\nWhereas Member States should ensure that unfair terms are not used in contracts concluded with consumers by a seller or supplier and that if, nevertheless, such terms are so used, they will not bind the consumer, and the contract will continue to bind the parties upon those terms if it is capable of continuing in existence without the unfair provisions;\nWhereas there is a risk that, in certain cases, the consumer may be deprived of protection under this Directive by designating the law of a non-Member country as the law applicable to the contract; "
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f400",
+      "ask_id": "ask-7666f68b5c5e43b1bdb3dd57bbec55fc",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be on the seller or supplier.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": false,
+          "reason": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "60363ae5ec8e2ca6fb587cc28cff06ca4026b3203e590622b19f16d849f76420",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "article_labels": [
+                "Article 3"
+              ],
+              "start": 10400,
+              "end": 10800,
+              "text": "rtain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall b"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s400",
+      "ask_id": "ask-603bafa78a2d45ea85492c4b2c6d43e7",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "317a0dc3f6903c21b3f188b8ab4db3061693b72e24951349da97079a624cc6dd",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "article_labels": [
+                "Article 3"
+              ],
+              "start": 10666,
+              "end": 10932,
+              "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "f800",
+      "ask_id": "ask-3edd649c38df41ffb5fb00b160d3ffeb",
+      "suggested_answer_grade": "wrong",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [
+        0
+      ],
+      "reason": "A第3条明确由主张已个别协商的卖方/供应方举证，本组insufficient，建议wrong（误拒答）。",
+      "claim_checks": [],
+      "official_review_written": false
+    },
+    {
+      "case_id": "gold-utd-negotiation-burden",
+      "condition": "s800",
+      "ask_id": "ask-78f148d61b704a16b9efd0b627d82b50",
+      "suggested_answer_grade": "correct",
+      "suggested_refusal_correct": null,
+      "covered_key_fact_indexes": [
+        0
+      ],
+      "partially_covered_key_fact_indexes": [],
+      "missing_key_fact_indexes": [],
+      "reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claim_checks": [
+        {
+          "claim_index": 0,
+          "claim_text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+          "citation_numbers": [
+            1
+          ],
+          "suggested_supported": true,
+          "reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "actually_cited_evidence": [
+            {
+              "n": 1,
+              "chunk_id": "49c995bfc7233783a3626737b3e92e0dd01f066ec1e4a3c530a73e443b85bc2e",
+              "document_id": "eu_unfair_terms_93_13",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "article_labels": [
+                "Article 3"
+              ],
+              "start": 10384,
+              "end": 10932,
+              "text": "The fact that certain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\n"
+            }
+          ]
+        }
+      ],
+      "official_review_written": false
+    }
+  ],
+  "next_question_offset": 24,
+  "next_case_id": "gold-refuse-air-cancellation-amount",
+  "school_generation_api_calls": 0
+}

@@ -1,0 +1,469 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 8,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-sgd-one-year-presumption",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-sgd-one-year-presumption",
+    "question": "A lack of conformity in goods covered by Directive (EU) 2019/771 becomes apparent eight months after delivery. What does Article 11(1) presume, and when does that presumption not apply?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "It presumes that the lack of conformity existed at delivery, including for goods with digital elements, unless the contrary is proved or the presumption is incompatible with the nature of the goods or the nature of the lack of conformity.",
+    "key_facts": [
+      "1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:11",
+        "structure_id": null,
+        "start": 72095,
+        "end": 72484,
+        "text": "1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第8题_一年内瑕疵的交付时存在推定_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-514f306bb7514891b33c4efddcdd1a4e",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 11(1) provides that any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7036374807357788,
+              "chunk_id": "4646c848a622bd97fe95e5c525c27b15b07d2e2a43cf6fd7c5bd206f920dc8d0",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:10",
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72000,
+              "end": 72400,
+              "text": "rovided that such shorter periods shall not be less than one year.\n\nArticle 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "Chinese_explanation": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "That presumption applies unless proved otherwise or unless it is incompatible with the nature of the goods or with the nature of the lack of conformity.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7036374807357788,
+              "chunk_id": "4646c848a622bd97fe95e5c525c27b15b07d2e2a43cf6fd7c5bd206f920dc8d0",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:10",
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72000,
+              "end": 72400,
+              "text": "rovided that such shorter periods shall not be less than one year.\n\nArticle 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "实际引用在with the nature of the处结束，第二种性质例外的对象尚未出现。与只少同一词词尾不同，此处缺失有法律意义的例外对象，题目也未给该对象，不能补成lack of conformity。",
+          "Chinese_explanation": "引用2在with the nature of the处截断，第二种性质例外的对象未完整保存。反证与商品性质例外已显示，但lack of conformity这一补全是否充分受实际片段支持需人判断。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用在with the nature of the处结束，第二种性质例外的对象尚未出现。与只少同一词词尾不同，此处缺失有法律意义的例外对象，题目也未给该对象，不能补成lack of conformity。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-d17314c9abae4cb8b08ff732563c44a6",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 11(1) presumes that any lack of conformity which becomes apparent within one year of the time when the goods were delivered existed at the time when the goods were delivered, unless proved otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7179767489433289,
+              "chunk_id": "5981c68e81468de318690faf16af50ea0234281d06b40e24d3e930d99f10337c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72068,
+              "end": 72421,
+              "text": "Article 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "Chinese_explanation": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The presumption does not apply where it is incompatible with the nature of the goods or with the nature of the lack of conformity.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7179767489433289,
+              "chunk_id": "5981c68e81468de318690faf16af50ea0234281d06b40e24d3e930d99f10337c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72068,
+              "end": 72421,
+              "text": "Article 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "Chinese_explanation": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-4ed7c26a195a4f99921370c24e55789b",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 11(1) presumes that any lack of conformity which becomes apparent within one year of the time when the goods were delivered existed at the time when the goods were delivered, unless proved otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6980796456336975,
+              "chunk_id": "0750eca62a77ea681df2f016b0398e372c7247907f8b2cdb8ab19137b31ed487",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:10",
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72000,
+              "end": 72800,
+              "text": "rovided that such shorter periods shall not be less than one year.\n\nArticle 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. In the case of goods with digital elements where the sales contract provides for the continuous supply of the digital content or digital service ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "Chinese_explanation": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The presumption does not apply where it is incompatible with the nature of the goods or with the nature of the lack of conformity.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6980796456336975,
+              "chunk_id": "0750eca62a77ea681df2f016b0398e372c7247907f8b2cdb8ab19137b31ed487",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:10",
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72000,
+              "end": 72800,
+              "text": "rovided that such shorter periods shall not be less than one year.\n\nArticle 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. In the case of goods with digital elements where the sales contract provides for the continuous supply of the digital content or digital service ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "Chinese_explanation": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Article 11(1) also applies to goods with digital elements.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6980796456336975,
+              "chunk_id": "0750eca62a77ea681df2f016b0398e372c7247907f8b2cdb8ab19137b31ed487",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:10",
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72000,
+              "end": 72800,
+              "text": "rovided that such shorter periods shall not be less than one year.\n\nArticle 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. In the case of goods with digital elements where the sales contract provides for the continuous supply of the digital content or digital service ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。",
+          "Chinese_explanation": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-2ace4f79875941eb8f9dc57be43fa5e5",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 11(1) presumes that any lack of conformity which becomes apparent within one year of the time when the goods were delivered existed at the time when the goods were delivered, unless proved otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7294334769248962,
+              "chunk_id": "0da8b1e9957ad40a6585e8e7809945b91ba5c35a2c8da5e996b0d327783fbb87",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72068,
+              "end": 72655,
+              "text": "Article 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "Chinese_explanation": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The presumption does not apply where it is incompatible with the nature of the goods or with the nature of the lack of conformity.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7294334769248962,
+              "chunk_id": "0da8b1e9957ad40a6585e8e7809945b91ba5c35a2c8da5e996b0d327783fbb87",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72068,
+              "end": 72655,
+              "text": "Article 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "Chinese_explanation": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Article 11(1) also applies to goods with digital elements.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7294334769248962,
+              "chunk_id": "0da8b1e9957ad40a6585e8e7809945b91ba5c35a2c8da5e996b0d327783fbb87",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:11"
+              ],
+              "start": 72068,
+              "end": 72655,
+              "text": "Article 11\nBurden of proof\n1. Any lack of conformity which becomes apparent within one year of the time when the goods were delivered shall be presumed to have existed at the time when the goods were delivered, unless proved otherwise or unless this presumption is incompatible with the nature of the goods or with the nature of the lack of conformity. This paragraph shall also apply to goods with digital elements.\n2. Instead of the one-year period laid down in paragraph 1, Member States may maintain or introduce a period of two years from the time when the goods were delivered.\n3. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 11"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。",
+          "Chinese_explanation": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

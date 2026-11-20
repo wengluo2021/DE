@@ -1,0 +1,20 @@
+{
+  "state": "passed",
+  "priority_claims": 20,
+  "response_records": 18,
+  "actual_citations_exact": true,
+  "inspection_context_separate_from_citations": true,
+  "human_decisions_confirmed": 0,
+  "official_review_rows_before": 0,
+  "official_review_rows_after": 0,
+  "original_A_files_unchanged": 45,
+  "original_M6_exports_and_packet_unchanged": true,
+  "school_generation_api_calls": 0,
+  "files": {
+    "artifacts/c/m6-human-review/priority-20-packet.json": "a7cfb271665979458f9619144381fbbeac8d1909c071ba6d389f13a63429ead3",
+    "artifacts/c/m6-human-review/session-01-draft.json": "b3a3904ddd9509a8e9011f6ed1c45d78dd270e48e116e00fe7f56b742900abc1",
+    "docs/M6人工确认第一步_20条逐字对照.md": "9a9f79ed4b0080b3aa451b7c9e8103c0cfdc25b6d9954454376f0f3e8133c287",
+    "docs/M6人工确认示例01_交货期限F400.md": "6ffcebe22e5a1eca01b4d68a8690b486c415139057818dc4e020bc59097fe5e9"
+  },
+  "scope": "blank_reading_packet_and_template; subsequent_user_feedback_is_separate"
+}

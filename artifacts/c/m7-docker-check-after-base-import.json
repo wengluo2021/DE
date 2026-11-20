@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-19",
+  "state": "failed",
+  "scope": "Linux engineering checks with synthetic fixtures, NOT official acceptance",
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "formal_acceptance": false,
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-a936ae6402",
+  "test_image": "derag-c-m7-check:a936ae6402",
+  "runtime_image": "derag-c-m7-runtime:a936ae6402",
+  "commands": [
+    {
+      "phase": "build-test",
+      "exit_code": 2,
+      "seconds": 681.494,
+      "log": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7docker-a936ae6402\\build-test.log"
+    }
+  ],
+  "error": {
+    "type": "RuntimeError",
+    "message": "build-test failed; inspect local log"
+  },
+  "owned_containers_cleaned": [],
+  "own_container_count": 0
+}

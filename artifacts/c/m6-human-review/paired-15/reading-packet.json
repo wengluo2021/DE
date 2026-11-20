@@ -1,0 +1,285 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 15,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-dcd-reimbursement-time",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-dcd-reimbursement-time",
+    "question": "A consumer covered by Directive (EU) 2019/770 tells the trader that the consumer is terminating the contract because the digital service is not in conformity. How quickly must the trader make a reimbursement owed under Article 14 or Article 16?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "The trader must reimburse the consumer without undue delay and, in any event, within 14 days of being informed of the consumer's decision to invoke the price reduction or to terminate.",
+    "key_facts": [
+      "1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_digital_content_2019_770",
+        "article_id": "eu_digital_content_2019_770:article:18",
+        "structure_id": null,
+        "start": 106220,
+        "end": 106613,
+        "text": "1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第15题_数字服务退款的十四日期限_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-a9984618d5f644a191d5f8cf458581b6",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract, shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.",
+            "citation_numbers": [
+              1,
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7488698959350586,
+              "chunk_id": "a3760369051fb8751c3c17265726e1d47de8aba4fb9fd0bc8a52c54d6b5aae7c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:17",
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "start": 106000,
+              "end": 106400,
+              "text": "or digital service in the period, prior to the termination of the contract, during which the digital content or the digital service was not in conformity.\n\nArticle 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carrie",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 17",
+                "Article 18"
+              ],
+              "n": 1
+            },
+            {
+              "rank": 4,
+              "score": 0.7090222239494324,
+              "chunk_id": "da4d95d36efaeeecd668f42b811e9406ffcb0bcdbe52c6857cf6f3b2bab11143",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "start": 106400,
+              "end": 106800,
+              "text": "d out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agre",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "Chinese_explanation": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-fad03de157904177bca8a436963d34a2",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1) due to a price reduction or termination of the contract must be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the right for a price reduction or to terminate the contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7225658893585205,
+              "chunk_id": "6afc4763d15a709dc60c430d9ab4b9572dc33a6ebae1d1e1d81030416c51ada4",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "start": 106223,
+              "end": 106617,
+              "text": "Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. ",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "Chinese_explanation": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-899dbaaceae749c6ba634097c561e904",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract, shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.",
+            "citation_numbers": [
+              1,
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7645367383956909,
+              "chunk_id": "fb884c68b2c52a96aedfc579ee0d6973651011839b804181c2480524c9bd65b7",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:17",
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "start": 105600,
+              "end": 106400,
+              "text": "t the request and at the expense of the trader, return the tangible medium to the trader without undue delay. If the trader decides to request the return of the tangible medium, that request shall be made within 14 days of the day on which the trader is informed of the consumer's decision to terminate the contract.\n3. The consumer shall not be liable to pay for any use made of the digital content or digital service in the period, prior to the termination of the contract, during which the digital content or the digital service was not in conformity.\n\nArticle 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carrie",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 17",
+                "Article 18"
+              ],
+              "n": 1
+            },
+            {
+              "rank": 2,
+              "score": 0.7393617630004883,
+              "chunk_id": "1746b521a04b03a94bf68c27a692f3f2cd64a6b15f124c3d2dc2077f310f3edf",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18",
+                "eu_digital_content_2019_770:article:19"
+              ],
+              "start": 106400,
+              "end": 107200,
+              "text": "d out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agrees otherwise, and provided that the consumer does not incur any fees as a result of such reimbursement.\n3. The trader shall not impose any fee on the consumer in respect of the reimbursement.\n\nArticle 19\nModification of the digital content or digital service\n1. Where the contract provides that the digital content or digital service is to be supplied or made accessible to the consumer over a period",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 18",
+                "Article 19"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "Chinese_explanation": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "该主张实际绑定的两块在106400处连续，联合保留Article18(1)退款范围、无故拖延限制、14日及获知减价/终止决定的起算点；未借用未引用块。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-44d4cd0d054c4271a9b885f43704c015",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "退款期限及起算事件、适用的减价/终止范围与A一致，必要事实齐全，建议correct；这是2019/770本题框架，不混同之前2011/83迟延交货题。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Any reimbursement owed to the consumer by the trader pursuant to Article 14(4) and (5) or 16(1) due to a price reduction or termination of the contract must be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the right for a price reduction or to terminate the contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7482911348342896,
+              "chunk_id": "e41a083b2fa2378789cdaec47c61b559cb25b00e0e1eb936d2f20aae3f728039",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_digital_content_2019_770",
+              "article_ids": [
+                "eu_digital_content_2019_770:article:18"
+              ],
+              "start": 106156,
+              "end": 106907,
+              "text": "Article 18\nTime limits and means of reimbursement by the trader\n1. Any reimbursement that is owed to the consumer by the trader, pursuant to Article 14(4) and (5) or 16(1), due to a price reduction or termination of the contract shall be carried out without undue delay and, in any event, within 14 days of the date on which the trader is informed of the consumer's decision to invoke the consumer's right for a price reduction or to terminate the contract.\n2. The trader shall carry out the reimbursement using the same means of payment as the consumer used to pay for the digital content or digital service, unless the consumer expressly agrees otherwise, and provided that the consumer does not incur any fees as a result of such reimbursement.\n3. ",
+              "title": "Directive (EU) 2019/770 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the supply of digital content and digital services (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/eli/dir/2019/770/oj",
+              "article_labels": [
+                "Article 18"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "Chinese_explanation": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含Article18(1)退款范围、不得无故拖延、获知决定起14日；S400缺的是编号前缀，不影响主张语义支持。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

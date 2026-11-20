@@ -1,0 +1,542 @@
+{
+  "kind": "human_confirmed_reading_materials",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-withdrawal-refund",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-crd-withdrawal-refund",
+    "question": "A consumer withdraws from a distance contract under Directive 2011/83/EU and tells the trader in accordance with Article 11. What payments must the trader reimburse, and by when?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "The trader must reimburse all payments received from the consumer, including delivery costs where applicable, without undue delay and not later than 14 days after being informed of the withdrawal. The trader need not reimburse supplementary delivery costs if the consumer expressly chose a delivery type other than the least expensive standard delivery offered by the trader. For a sales contract, unless the trader has offered to collect the goods, the trader may withhold that reimbursement until the goods are received back or the consumer supplies evidence of having sent them back, whichever is earliest.",
+    "key_facts": [
+      "1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.",
+      "2. Notwithstanding paragraph 1, the trader shall not be required to reimburse the supplementary costs, if the consumer has expressly opted for a type of delivery other than the least expensive type of standard delivery offered by the trader.",
+      "3. Unless the trader has offered to collect the goods himself, with regard to sales contracts, the trader may withhold the reimbursement until he has received the goods back, or until the consumer has supplied evidence of having sent back the goods, whichever is the earliest."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:13",
+        "structure_id": null,
+        "start": 73780,
+        "end": 74083,
+        "text": "1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11."
+      },
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:13",
+        "structure_id": null,
+        "start": 74390,
+        "end": 74631,
+        "text": "2. Notwithstanding paragraph 1, the trader shall not be required to reimburse the supplementary costs, if the consumer has expressly opted for a type of delivery other than the least expensive type of standard delivery offered by the trader."
+      },
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:13",
+        "structure_id": null,
+        "start": 74632,
+        "end": 74908,
+        "text": "3. Unless the trader has offered to collect the goods himself, with regard to sales contracts, the trader may withhold the reimbursement until he has received the goods back, or until the consumer has supplied evidence of having sent back the goods, whichever is the earliest."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "official_review_written": true,
+  "human_confirmed": true,
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-51861825e0644016b74b3925cc3a19c0",
+      "AI_suggested_answer_grade": "partial",
+      "AI_reason": "回答没有写出第13(3)条：销售合同下，除商家提出自行收货外，可暂缓退款至收回货物或消费者提供已寄回证据，两者取较早者。按A列出的必要事实不能建议correct。 同时未写第13(2)条关于另选更贵配送的额外费用例外。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7875202894210815,
+              "chunk_id": "0858a446e23fe89b332231ab80cab18d819e6e0abd4be2e213590f513c1ec260",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:12",
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73600,
+              "end": 74000,
+              "text": "tract; or\n(b) to conclude the distance or off-premises contract, in cases where an offer was made by the consumer.\n\nArticle 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of t",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 12",
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1明确要求退还消费者支付的全部款项，包括适用时的交付费用。",
+          "Chinese_explanation": "商家应退还收到的全部款项，包括适用时的配送费。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The reimbursement must be made without undue delay and in any event not later than 14 days from the day on which the trader is informed of the consumer's decision to withdraw from the contract in accordance with Article 11.",
+            "citation_numbers": [
+              1,
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7875202894210815,
+              "chunk_id": "0858a446e23fe89b332231ab80cab18d819e6e0abd4be2e213590f513c1ec260",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:12",
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73600,
+              "end": 74000,
+              "text": "tract; or\n(b) to conclude the distance or off-premises contract, in cases where an offer was made by the consumer.\n\nArticle 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of t",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 12",
+                "Article 13"
+              ],
+              "n": 1
+            },
+            {
+              "rank": 2,
+              "score": 0.7593733072280884,
+              "chunk_id": "588135abcec9f8a7860d0c0e2a2f1ed5bf7d36225be53eb8ef28fa8b94fe8f21",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 74000,
+              "end": 74400,
+              "text": "he consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. Notwith",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1与2在同一文档[73600,74000)、[74000,74400)连续，合起来完整保留通知撤回决定起14日及不得无故拖延；须合看本主张实际绑定的两个引用。",
+          "Chinese_explanation": "退款不得无故拖延，最迟在商家收到消费者撤回合同通知之日起14日内。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "The trader shall carry out the reimbursement using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7593733072280884,
+              "chunk_id": "588135abcec9f8a7860d0c0e2a2f1ed5bf7d36225be53eb8ef28fa8b94fe8f21",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 74000,
+              "end": 74400,
+              "text": "he consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. Notwith",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用2完整写出同一支付方式、消费者明确同意例外及不得收费的条件；这是有支持的额外信息，不能补上遗漏的A必要事实。",
+          "Chinese_explanation": "通常用原支付方式退款；消费者明确同意改用其他方式且不承担退款费用时，可以例外。",
+          "human_confirmed_supported": true
+        }
+      ],
+      "human_confirmed_answer_grade": "partial"
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-e7bc2be8d7a74ec1a07f1dfd1dde2257",
+      "AI_suggested_answer_grade": "partial",
+      "AI_reason": "回答没有写出第13(3)条：销售合同下，除商家提出自行收货外，可暂缓退款至收回货物或消费者提供已寄回证据，两者取较早者。按A列出的必要事实不能建议correct。 同时未写第13(2)条关于另选更贵配送的额外费用例外。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7962819337844849,
+              "chunk_id": "e7fc32d6d987d78b184a6bdc0696d7798436bb99ddc549b533730bff85fafa02",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73716,
+              "end": 74084,
+              "text": "Article 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含第13(1)条首段，明确全部款项及适用的交付费用。",
+          "Chinese_explanation": "商家应退还收到的全部款项，包括适用时的配送费。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Reimbursement must be made without undue delay and in any event not later than 14 days from the day on which the trader is informed of the consumer's decision to withdraw from the contract in accordance with Article 11.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7962819337844849,
+              "chunk_id": "e7fc32d6d987d78b184a6bdc0696d7798436bb99ddc549b533730bff85fafa02",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73716,
+              "end": 74084,
+              "text": "Article 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一引用1完整保留无故拖延限制、14日及从收到消费者撤回通知起算，支持该主张。",
+          "Chinese_explanation": "退款不得无故拖延，最迟在商家收到消费者撤回合同通知之日起14日内。",
+          "human_confirmed_supported": true
+        }
+      ],
+      "human_confirmed_answer_grade": "partial"
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-2236824cc2874d25a0f7b6f62afe2408",
+      "AI_suggested_answer_grade": "partial",
+      "AI_reason": "回答没有写出第13(3)条：销售合同下，除商家提出自行收货外，可暂缓退款至收回货物或消费者提供已寄回证据，两者取较早者。按A列出的必要事实不能建议correct。 引用4已含此条件，但生成答案漏写，属于生成完整性问题；Hit@5 all=true不能代替答案完整性判断。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.817488431930542,
+              "chunk_id": "b90c1158a7f878fbee9d73b025a5ae2ca9e333e3dd49a851f4fc659152c6ca23",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:12",
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73600,
+              "end": 74400,
+              "text": "tract; or\n(b) to conclude the distance or off-premises contract, in cases where an offer was made by the consumer.\n\nArticle 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. Notwith",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 12",
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1明确全部款项及适用的交付费用。",
+          "Chinese_explanation": "商家应退还收到的全部款项，包括适用时的配送费。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The reimbursement must be made without undue delay and in any event not later than 14 days from the day on which the trader is informed of the consumer's decision to withdraw from the contract in accordance with Article 11.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.817488431930542,
+              "chunk_id": "b90c1158a7f878fbee9d73b025a5ae2ca9e333e3dd49a851f4fc659152c6ca23",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:12",
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73600,
+              "end": 74400,
+              "text": "tract; or\n(b) to conclude the distance or off-premises contract, in cases where an offer was made by the consumer.\n\nArticle 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. Notwith",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 12",
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含收到撤回通知起14日的期限与不得无故拖延。",
+          "Chinese_explanation": "退款不得无故拖延，最迟在商家收到消费者撤回合同通知之日起14日内。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "The trader shall carry out the reimbursement using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.817488431930542,
+              "chunk_id": "b90c1158a7f878fbee9d73b025a5ae2ca9e333e3dd49a851f4fc659152c6ca23",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:12",
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73600,
+              "end": 74400,
+              "text": "tract; or\n(b) to conclude the distance or off-premises contract, in cases where an offer was made by the consumer.\n\nArticle 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. Notwith",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 12",
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1包含使用同一支付方式、明确同意例外和消费者不承担费用的完整句子。",
+          "Chinese_explanation": "通常用原支付方式退款；消费者明确同意改用其他方式且不承担退款费用时，可以例外。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 3,
+          "claim": {
+            "text": "The trader shall not be required to reimburse the supplementary costs if the consumer has expressly opted for a type of delivery other than the least expensive type of standard delivery offered by the trader.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.720504879951477,
+              "chunk_id": "45fccfd53561cb1c35f5b7331237e9fef1cc72ac2cfb110db357f3da7c6b9774",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13",
+                "eu_consumer_rights_2011_83:article:14"
+              ],
+              "start": 74400,
+              "end": 75200,
+              "text": "standing paragraph 1, the trader shall not be required to reimburse the supplementary costs, if the consumer has expressly opted for a type of delivery other than the least expensive type of standard delivery offered by the trader.\n3. Unless the trader has offered to collect the goods himself, with regard to sales contracts, the trader may withhold the reimbursement until he has received the goods back, or until the consumer has supplied evidence of having sent back the goods, whichever is the earliest.\n\nArticle 14\nObligations of the consumer in the event of withdrawal\n1. Unless the trader has offered to collect the goods himself, the consumer shall send back the goods or hand them over to the trader or to a person authorised by the trader to receive the goods, without undue delay and in a",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13",
+                "Article 14"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用4虽以“standing paragraph 1”开头，但本主张所述额外交付费、明确另选配送及最低标准配送比较条件完整保留。",
+          "Chinese_explanation": "消费者明确另选比商家最便宜标准配送更贵的方式时，商家无需退还额外配送差价。",
+          "human_confirmed_supported": true
+        }
+      ],
+      "human_confirmed_answer_grade": "partial"
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-5e586d7b1e304e429d9937069a1bf8cc",
+      "AI_suggested_answer_grade": "partial",
+      "AI_reason": "回答没有写出第13(3)条：销售合同下，除商家提出自行收货外，可暂缓退款至收回货物或消费者提供已寄回证据，两者取较早者。按A列出的必要事实不能建议correct。 同时未写第13(2)条关于另选更贵配送的额外费用例外。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.8002300262451172,
+              "chunk_id": "794c332c42937c6575eb589a1a81adcfab5180914302a0f6399431b55febe236",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73716,
+              "end": 74393,
+              "text": "Article 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含全部支付款项及适用的交付费用。",
+          "Chinese_explanation": "商家应退还收到的全部款项，包括适用时的配送费。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The reimbursement must be made without undue delay and in any event not later than 14 days from the day on which the trader is informed of the consumer's decision to withdraw from the contract in accordance with Article 11.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.8002300262451172,
+              "chunk_id": "794c332c42937c6575eb589a1a81adcfab5180914302a0f6399431b55febe236",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73716,
+              "end": 74393,
+              "text": "Article 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含不得无故拖延、14日、通知撤回决定的起算条件。",
+          "Chinese_explanation": "退款不得无故拖延，最迟在商家收到消费者撤回合同通知之日起14日内。",
+          "human_confirmed_supported": true
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "The trader shall carry out the reimbursement using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.8002300262451172,
+              "chunk_id": "794c332c42937c6575eb589a1a81adcfab5180914302a0f6399431b55febe236",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:13"
+              ],
+              "start": 73716,
+              "end": 74393,
+              "text": "Article 13\nObligations of the trader in the event of withdrawal\n1. The trader shall reimburse all payments received from the consumer, including, if applicable, the costs of delivery without undue delay and in any event not later than 14 days from the day on which he is informed of the consumer’s decision to withdraw from the contract in accordance with Article 11.\nThe trader shall carry out the reimbursement referred to in the first subparagraph using the same means of payment as the consumer used for the initial transaction, unless the consumer has expressly agreed otherwise and provided that the consumer does not incur any fees as a result of such reimbursement.\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含同一支付方式及明确同意、无费用的限定；这些额外信息有来源，但并未覆盖遗漏的第13(2)/(3)条。",
+          "Chinese_explanation": "通常用原支付方式退款；消费者明确同意改用其他方式且不承担退款费用时，可以例外。",
+          "human_confirmed_supported": true
+        }
+      ],
+      "human_confirmed_answer_grade": "partial"
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "latest_export": "saved/evaluation.partial-review.json"
+}

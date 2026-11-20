@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-20",
+  "state": "failed",
+  "kind": "offline_scored_SQLite_restore",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "image": "derag-c-m7-runtime:90f59e7032",
+  "image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+  "source_human_cases": 21,
+  "source_authorized_AI_cases": 99,
+  "all_items_individually_human_verified": false,
+  "external_model_calls": 0,
+  "credentials_injected": false,
+  "network": "none",
+  "base_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m7scored-1cda70821a",
+  "container_not_started": true,
+  "cleanup_error": {
+    "type": "FileNotFoundError",
+    "detail": "Cleanup attempted to copy runtime-source-sha.json before the startup checks had created it; the initial exception was not preserved."
+  },
+  "subsequent_diagnostic": "Explicit WSL docker image inspect reported Cannot connect to the Docker daemon; existing daemon was not running.",
+  "retry_uses_new_directory": true,
+  "original_records_preserved": true
+}
