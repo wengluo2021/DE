@@ -1,11 +1,28 @@
 # DERag
 
-## 2026-11-20 正式接入更新
+## 2026-11-20 当前完成状态
 
-A正式五法规/121主条文与冻结24+6题已合入，C只读适配、M5真实索引/学校问答/重启通过。一次正式120项全部完成、0技术失败；人工评分待办，未发布最终准确率。先读[正式实验阅读指南](docs/M6正式实验进度与阅读指南.md)和[M6最新交接](docs/handoffs/M6_02_120项完成与人工评分待办.md)。实际结果在artifacts/c/m6-formal-01，恢复读取已有run_id，不重新提交。
+正式五法规、冻结30题、四组120项及全部评分字段已完成，0技术错误。评分来源为21份具体人工确认、99份C授权AI辅助，不称全部纯人工复核。完整正确数F400/S400/F800/S800分别6/24、9/24、10/24、13/24；方法、分母和失败分析见[C部分报告](docs/C部分报告草稿.md)与[评分方式](docs/M6评分方式与授权记录.md)。原模型输出及未评分基线保留。
 
-正式配置为config/experiment.formal-a.json；默认开发配置保留。Windows401项通过，Linux新镜像400项通过/1专用跳过；正式Linux建库/学校单题/重启与同一120项历史导出迁移均已通过，详见[M7正式交接](docs/handoffs/M7_04_正式Linux复现与历史恢复.md)；人工评分及最终带评分交付仍待完成。阶段工作只在answer-eval本地保存，无push。
+Windows401项、Linux400项通过/1平台专用跳过，真实CPU检索/学校问答/重启及四组正式索引均有证据。最新带评分SQLite已在禁网、无Key的新Linux卷恢复，124条历史及重启前后JSON/CSV逐字节一致；运行镜像内68个代码/配置文件与当前源码相同。只读取已有结果，不为评分再次生成120题。
 
+正式配置`config/experiment.formal-a.json`；默认配置仍是development样例。最新导出在`artifacts/c/m6-final-scored/`。当前电脑继续使用已有正常数据库，不从旧备份覆盖。交付和恢复见[本轮交付清单](docs/本轮交付清单与恢复.md)，所有阶段报告与日期日志保留。源码仅answer-eval本地保存，没有push或改main。
+
+## 当前电脑查看已有结果
+
+已有venv/模型无需重装。普通PowerShell在项目根运行以下无Key方式，随后打开`http://127.0.0.1:8765/evaluation`并选已有run；不会为恢复而开始新实验：
+
+```powershell
+$env:DERAG_CONFIG='config/experiment.formal-a.json'
+$env:DERAG_ENV_FILE='NUL'
+$env:LLM_API_KEY=''
+& '.venv/Scripts/python.exe' -m uvicorn app.main:app --host 127.0.0.1 --port 8765
+```
+
+新生成问答需按本地API对接文档配置私密Key，Key不在交付包；查看/评分/导出现有结果不需要模型调用。Codex默认受限执行环境若卡在Python本机socketpair，使用已允许本机通信的执行上下文，见[启动排查](docs/M6评分服务启动排查与正常读取验证.md)。
+
+<details>
+<summary>较早C开发阶段记录（当前状态以上方为准）</summary>
 
 ## C 阶段开发入口
 
@@ -33,6 +50,8 @@ M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用�
 页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。新版Docker已完成Linux工程检查：368通过/1Windows专用跳过、正常HTTP及12次真实CPU检索通过；该旧镜像不包含11月20日新A适配，当前源码的完整M7验收仍待后续阶段，见[M7最新交接](docs/handoffs/M7_02_Linux容器验收与续做.md)。
 
 页面操作与证据见 [M4交接](docs/handoffs/M4_页面接入与真实问答.md)。Windows学校API验收显式使用generation.transport=curl；默认配置仍为httpx，不能把curl结果等同HTTPX/Linux已验证。正式部署先选定适用传输、配置本地env与冻结数据；参数改变会改变实验指纹，旧run保留。
+
+</details>
 
 ---
 

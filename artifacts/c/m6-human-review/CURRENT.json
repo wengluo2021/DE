@@ -2,7 +2,7 @@
   "kind": "mixed_provenance_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M6_52_完整评分汇总与转入最终交付.md",
+  "latest_handoff": "docs/handoffs/M7_06_带评分Linux恢复与最终打包入口.md",
   "latest_reading_guide": "docs/M6完整评分结果与对照.md",
   "official_review_history_rows": 124,
   "official_cases_with_any_review": 120,
@@ -30,7 +30,7 @@
   "own_service_processes_stopped": true,
   "school_generation_api_calls_this_continuation": 0,
   "cumulative_known_school_tokens": 191672,
-  "next_action": "scored_SQLite_Linux_restore_and_final_package",
+  "next_action": "final_source_result_runtime_model_packaging",
   "do_not_repeat": [
     "the_saved_first_answer_grade_PATCH",
     "formal_120_generation",
@@ -73,5 +73,7 @@
   "all_items_individually_human_verified": false,
   "standing_authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
   "latest_scored_export": "artifacts/c/m6-final-scored/evaluation.json",
-  "C_local_delivery_complete": false
+  "C_local_delivery_complete": false,
+  "scored_Linux_restore_passed": true,
+  "scored_Linux_restore_report": "artifacts/c/m7-scored-restore-retry/result.json"
 }

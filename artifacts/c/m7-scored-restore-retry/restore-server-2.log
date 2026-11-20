@@ -1,0 +1,11 @@
+INFO:     Started server process [48]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:44207 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50770 - "GET /api/evaluations/eval-20ac108503c44829a96ecca386d4b9de HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50770 - "GET /api/evaluations/eval-20ac108503c44829a96ecca386d4b9de/export?format=json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50770 - "GET /api/evaluations/eval-20ac108503c44829a96ecca386d4b9de/export?format=csv HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48]
