@@ -1,0 +1,205 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 17,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-ucpd-two-part-unfairness-test",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-ucpd-two-part-unfairness-test",
+    "question": "Under the original text of Directive 2005/29/EC, when is a commercial practice unfair under the general test in Article 5(2)?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "It is unfair when both connected parts are met: it is contrary to the requirements of professional diligence, and it materially distorts, or is likely to materially distort, the economic behaviour of the average consumer it reaches or to whom it is addressed, or of the average member of the group when it is directed to a particular group.",
+    "key_facts": [
+      "(a) it is contrary to the requirements of professional diligence,\nand\n(b) it materially distorts or is likely to materially distort the economic behaviour with regard to the product of the average consumer whom it reaches or to whom it is addressed, or of the average member of the group when a commercial practice is directed to a particular group of consumers."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "article_id": "eu_unfair_practices_2005_29:article:5",
+        "structure_id": null,
+        "start": 26303,
+        "end": 26665,
+        "text": "(a) it is contrary to the requirements of professional diligence,\nand\n(b) it materially distorts or is likely to materially distort the economic behaviour with regard to the product of the average consumer whom it reaches or to whom it is addressed, or of the average member of the group when a commercial practice is directed to a particular group of consumers."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第17题_不公平商业行为的两部分测试_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-9de8b5f9a4aa4ef195c71194ec3ebdc1",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "给出职业勤勉与经济行为扭曲两个主要部分，但省略触达/针对受众及特定群体平均成员的限定，A要点仅部分覆盖，建议partial；实际引用也存在更严重不完整。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Article 5(2), a commercial practice is unfair if it is contrary to the requirements of professional diligence and it materially distorts or is likely to materially distort the economic behaviour of the average consumer with regard to the product.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6853448748588562,
+              "chunk_id": "c7657760fdc163ffa4720c658222859fd45c7a288a02caa48fe3cc0a422abdde",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:4",
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "start": 26000,
+              "end": 26400,
+              "text": "ces nor restrict the free movement of goods for reasons falling within the field approximated by this Directive.\n\nCHAPTER 2\nUNFAIR COMMERCIAL PRACTICES\n\nArticle 5\nProhibition of unfair commercial practices\n1. Unfair commercial practices shall be prohibited.\n2. A commercial practice shall be unfair if:\n(a) it is contrary to the requirements of professional diligence,\nand\n(b) it materially distorts ",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 4",
+                "Article 5"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。",
+          "Chinese_explanation": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-441eba7e5bad4f77a0af8c3215fa177b",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第5(2)条完整的一般测试可答，本组却insufficient，建议wrong（误拒答）。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-43b5c7ed9d52424c9e8d288ea73b1813",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "给出职业勤勉与经济行为扭曲两个主要部分，但省略触达/针对受众及特定群体平均成员的限定，A要点仅部分覆盖，建议partial；实际引用也存在更严重不完整。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Article 5(2), a commercial practice is unfair if it is contrary to the requirements of professional diligence and it materially distorts or is likely to materially distort the economic behaviour of the average consumer.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6450479626655579,
+              "chunk_id": "01a3761c819e372dd1f586725f8d8edf921b1bf2c2e8d2a031a19b061702d77e",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:3",
+                "eu_unfair_practices_2005_29:article:4",
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "start": 25600,
+              "end": 26400,
+              "text": "ctive or prescriptive than this Directive in the field which it approximates.\n10. This Directive shall not apply to the application of the laws, regulations and administrative provisions of Member States relating to the certification and indication of the standard of fineness of articles of precious metal.\n\nArticle 4\nInternal market\nMember States shall neither restrict the freedom to provide services nor restrict the free movement of goods for reasons falling within the field approximated by this Directive.\n\nCHAPTER 2\nUNFAIR COMMERCIAL PRACTICES\n\nArticle 5\nProhibition of unfair commercial practices\n1. Unfair commercial practices shall be prohibited.\n2. A commercial practice shall be unfair if:\n(a) it is contrary to the requirements of professional diligence,\nand\n(b) it materially distorts ",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 3",
+                "Article 4",
+                "Article 5"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。",
+          "Chinese_explanation": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "唯一绑定的引用3只到(b) it materially distorts，尚未出现economic behaviour、average consumer或可能扭曲等关键内容，不能支持主张补出的第二测试；不是仅漏编号或无关词尾。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-25494fe9f8c4437d87737c506a3d47f3",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "同时给出违反职业勤勉、实质扭曲或可能扭曲经济行为，并覆盖触达/针对的平均消费者或特定群体平均成员，A要点完整，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Article 5(2), a commercial practice is unfair if it is contrary to the requirements of professional diligence and it materially distorts or is likely to materially distort the economic behaviour with regard to the product of the average consumer whom it reaches or to whom it is addressed, or of the average member of the group when a commercial practice is directed to a particular group of consumers.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6641538143157959,
+              "chunk_id": "7b9bab807e76a1fb5ad4d6cb8151ccbfdd9224e62246f08880443ea7b5bcb742",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:5"
+              ],
+              "start": 26124,
+              "end": 26669,
+              "text": "UNFAIR COMMERCIAL PRACTICES\n\nArticle 5\nProhibition of unfair commercial practices\n1. Unfair commercial practices shall be prohibited.\n2. A commercial practice shall be unfair if:\n(a) it is contrary to the requirements of professional diligence,\nand\n(b) it materially distorts or is likely to materially distort the economic behaviour with regard to the product of the average consumer whom it reaches or to whom it is addressed, or of the average member of the group when a commercial practice is directed to a particular group of consumers.\n3. ",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用3完整包含Article5(2)(a)、and及(b)全部受众/群体限定，直接支持整个合取测试。",
+          "Chinese_explanation": "引用3完整包含Article5(2)(a)、and及(b)全部受众/群体限定，直接支持整个合取测试。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用3完整包含Article5(2)(a)、and及(b)全部受众/群体限定，直接支持整个合取测试。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
