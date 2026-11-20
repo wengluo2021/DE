@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "kind": "final_C_mixed_provenance_offline_delivery",
+  "state": "passed",
+  "source_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "cases": 120,
+  "review_history_rows": 124,
+  "human_confirmed_cases": 21,
+  "authorized_AI_cases": 99,
+  "all_items_individually_human_verified": false,
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+  "image_tag": "de:latest",
+  "scored_Linux_restore_passed": true,
+  "source_relocated_verification_passed": true,
+  "ZIP_CRC_and_members_verified": true,
+  "runtime_config_and_layers_verified": true,
+  "offline_weights_revision_verified": true,
+  "external_model_calls": 0,
+  "credential_leaks": 0,
+  "old_archives_preserved": true,
+  "files": {
+    "C-source-data-scored-20261120.zip": {
+      "bytes": 2073716,
+      "sha256": "105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7"
+    },
+    "C-scored-results-20261120.zip": {
+      "bytes": 33513874,
+      "sha256": "e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9"
+    },
+    "DE.tar": {
+      "bytes": 1870832128,
+      "sha256": "0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05"
+    },
+    "BGE-M3-5617a9f6-weights.tar": {
+      "bytes": 2293350400,
+      "sha256": "bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958"
+    },
+    "README_先读我.md": {
+      "bytes": 5232,
+      "sha256": "9d676715a2db1736fd664eea54ab7a725e6b018705c455eb94f2299ade77bce7"
+    },
+    "source-data/DELIVERY-MANIFEST.json": {
+      "bytes": 43697,
+      "sha256": "b662d10320ccdd0bfafcf2c11e424d01e43557d5f4e62fc9ccb659346103b697"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "kind": "mixed_provenance_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M7_07_最终离线交付完成与恢复入口.md",
+  "latest_handoff": "docs/handoffs/M7_08_GitHub交付整理与提交.md",
   "latest_reading_guide": "docs/C任务完成说明与阅读路线.md",
   "official_review_history_rows": 124,
   "official_cases_with_any_review": 120,
@@ -78,5 +78,7 @@
   "scored_Linux_restore_report": "artifacts/c/m7-scored-restore-retry/result.json",
   "final_delivery_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-C-final-mixed-review",
   "final_delivery_manifest_sha256": "f9875660fcb5657d76a28e66ff7bd490df954b25d1e7617e909be848d17fddb7",
-  "source_package_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07"
+  "source_package_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
+  "github_delivery_status": "prepared_pending_local_authentication",
+  "github_delivery_entry": "delivery/c-20261120/README.md"
 }

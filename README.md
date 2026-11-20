@@ -1,12 +1,14 @@
 # DERag
 
+GitHub交付阅读入口：[C部分交付导航与下载说明](delivery/c-20261120/README.md)。
+
 ## 2026-11-20 当前完成状态
 
 正式五法规、冻结30题、四组120项及全部评分字段已完成，0技术错误。评分来源为21份具体人工确认、99份C授权AI辅助，不称全部纯人工复核。完整正确数F400/S400/F800/S800分别6/24、9/24、10/24、13/24；方法、分母和失败分析见[C部分报告](docs/C部分报告草稿.md)与[评分方式](docs/M6评分方式与授权记录.md)。原模型输出及未评分基线保留。
 
 Windows401项、Linux400项通过/1平台专用跳过，真实CPU检索/学校问答/重启及四组正式索引均有证据。最新带评分SQLite已在禁网、无Key的新Linux卷恢复，124条历史及重启前后JSON/CSV逐字节一致；运行镜像内68个代码/配置文件与当前源码相同。只读取已有结果，不为评分再次生成120题。
 
-正式配置`config/experiment.formal-a.json`；默认配置仍是development样例。最新导出在`artifacts/c/m6-final-scored/`。当前电脑继续使用已有正常数据库，不从旧备份覆盖。交付和恢复见[本轮交付清单](docs/本轮交付清单与恢复.md)，所有阶段报告与日期日志保留。源码仅answer-eval本地保存，没有push或改main。
+正式配置`config/experiment.formal-a.json`；默认配置仍是development样例。最新导出在`artifacts/c/m6-final-scored/`。当前电脑继续使用已有正常数据库，不从旧备份覆盖。交付和恢复见[本轮交付清单](docs/本轮交付清单与恢复.md)，所有阶段报告与日期日志保留。源码在answer-eval分支；GitHub提交与附件状态见交付导航和最新M7_08记录，main由组长审阅后合并。
 
 最终离线包已完成：[C任务完成说明与阅读路线](docs/C任务完成说明与阅读路线.md)。最终目录为工作区deliveries/20261120-C-final-mixed-review，先读其中README_先读我.md。
 
