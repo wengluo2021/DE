@@ -1,0 +1,38 @@
+{
+  "question_number": 14,
+  "case_id": "gold-dcd-conformity-remedies",
+  "title": "数字内容瑕疵救济与轻微缺陷",
+  "reading_md": "docs/M6第14题_数字内容瑕疵救济与轻微缺陷_评分记录.md",
+  "handoff_number": 35,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    7
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "整答按A必要事实完整性判断，引用支持按每条主张实际绑定的证据判断；缺少必要事实、错误拒答和引用不充分分别保留，不能删题或改变分母。",
+    "F400核验理由：A第14条明确列出恢复符合、比例减价或解除，以及支付价款时非轻微限制和trader举证；本组insufficient未提供任何必要事实，建议wrong（误拒答），不删分母。",
+    "S400核验理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+    "F800核验理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+    "S800核验理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [],
+    "s400": [
+      "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+      "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+    ],
+    "f800": [
+      "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+      "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+    ],
+    "s800": [
+      "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。",
+      "引用1完整包含Article14(2)恢复符合的权利、不可能/不成比例成本例外及价值和不符重要性两项考虑，支持这段额外主张。",
+      "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+    ]
+  },
+  "support_overrides": {}
+}

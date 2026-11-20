@@ -1,0 +1,118 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-14/confirmed-requests.json",
+  "confirmation_sha256": "6abfa7372432ce91512cc2978eff0bc3a8790ce2393d1f135521c97850fba68f",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "531c11e586ef1d2f93e1f83824615f6674fe9497e93a5e9ee07eb6a36b55bc6a",
+  "applied": [
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第14条明确列出恢复符合、比例减价或解除，以及支付价款时非轻微限制和trader举证；本组insufficient未提供任何必要事实，建议wrong（误拒答），不删分母。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:07.046917+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:07.059970+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:07.074092+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-conformity-remedies",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含2019/770 Article14(1)三类救济及under the conditions of this Article限定，原文结构/元数据均可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含Article14(2)恢复符合的权利、不可能/不成比例成本例外及价值和不符重要性两项考虑，支持这段额外主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "实际绑定的序言(67)明确在支付价款情形下，仅非轻微不符才可解除，支持该有限主张；不包含trader举证责任，不能补成A完整第二要点。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：三类救济与支付价款时轻微不符不可解除已说出，但漏了由trader承担证明轻微与否的举证责任，第二必要事实仅部分覆盖，建议partial。S800多写恢复符合的成本例外仍不能代替缺少的举证要点。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:07.087942+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 60,
+  "official_cases_with_review": 56,
+  "answer_grades_pending": 40,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 65,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "8b601e1062a4676cdf9596c7f341fe288f9a7934240fd08e2ab821c74b2d61be",
+    "evaluation.partial-review.json": "a308125d5e84c03db458ccc66e01eda09bd38983b110dd6256a46d5c987a3361"
+  }
+}
