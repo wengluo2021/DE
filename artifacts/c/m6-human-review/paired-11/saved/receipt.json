@@ -1,0 +1,86 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-11/confirmed-requests.json",
+  "confirmation_sha256": "56d584e0597b06817134e92a8ccb5fe84ba9fdec1a21cc7e53902b6556c8761c",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "24202b2b56112dddebbf8357ff730a58adb38c22eab97ca2c9a98e421cc20d72",
+  "applied": [
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:54.164895+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:54.177529+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:54.190004+00:00"
+      }
+    },
+    {
+      "case_id": "gold-sgd-price-reduction",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：完整回答比例减价的衡量规则，且实际引用4包含完整原文，建议correct。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:37:54.202284+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 48,
+  "official_cases_with_review": 44,
+  "answer_grades_pending": 52,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 72,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "caa7d6f5db8a11736ec7837ddca87c2fb6981bf5b95197e7af13dbec5adf0ac2",
+    "evaluation.partial-review.json": "a0f2f08562d4dd8d376bab816f35d0e964368a49c3e62f03606e0a3b64f97124"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "question_number": 11,
+  "case_id": "gold-sgd-price-reduction",
+  "title": "按价值减损比例降价",
+  "reading_md": "docs/M6第11题_按价值减损比例降价_评分记录.md",
+  "handoff_number": 32,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    6
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "整答按A必要事实完整性判断，引用支持按每条主张实际绑定的证据判断；缺少必要事实、错误拒答和引用不充分分别保留，不能删题或改变分母。",
+    "F400核验理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+    "S400核验理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+    "F800核验理由：A冻结语料第15条已有明确比例减价规则，本组却返回insufficient，没有提供必要事实；按可答题端到端评分建议wrong，属于误拒答，不是技术失败。",
+    "S800核验理由：完整回答比例减价的衡量规则，且实际引用4包含完整原文，建议correct。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [],
+    "s400": [],
+    "f800": [],
+    "s800": [
+      "引用4完整包含第15条价格减免与实际价值相对于符合时价值的下降成比例，逐句覆盖A唯一必要事实。"
+    ]
+  },
+  "support_overrides": {}
+}
