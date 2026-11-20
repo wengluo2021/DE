@@ -1,0 +1,23 @@
+{
+  "state": "failed",
+  "entrypoint": "app.main:app",
+  "launch_kind": "independent_process_main_thread",
+  "test_mode": false,
+  "injected_services": false,
+  "api_key_configured": false,
+  "school_generation_api_calls": 0,
+  "allowed_methods": [
+    "GET"
+  ],
+  "requests": [],
+  "official_review_history_rows_before": 8,
+  "own_child_pid": 64704,
+  "error_type": "TimeoutError",
+  "own_child_process_stopped": true,
+  "official_review_history_rows_after": 8,
+  "database_records_and_reviews_unchanged": true,
+  "database_lease_available": true,
+  "no_generation_or_review_or_experiment_requests_sent": true,
+  "server_log_sha256": "5aefaecc3bd1110f9bb54e180587df933b64fd5958ca66ca6d8e2c0448debdad",
+  "cumulative_known_school_tokens": 191672
+}

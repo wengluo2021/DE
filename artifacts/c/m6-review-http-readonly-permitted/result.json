@@ -1,0 +1,60 @@
+{
+  "state": "passed",
+  "entrypoint": "app.main:app",
+  "launch_kind": "independent_process_main_thread",
+  "execution_context": "permitted_local_networking",
+  "test_mode": false,
+  "injected_services": false,
+  "api_key_configured": false,
+  "school_generation_api_calls": 0,
+  "allowed_methods": [
+    "GET"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/evaluation"
+    },
+    {
+      "method": "GET",
+      "path": "/api/evaluations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/evaluations/eval-20ac108503c44829a96ecca386d4b9de"
+    },
+    {
+      "method": "GET",
+      "path": "/api/evaluations/eval-20ac108503c44829a96ecca386d4b9de/export"
+    },
+    {
+      "method": "GET",
+      "path": "/api/evaluations/eval-20ac108503c44829a96ecca386d4b9de/export"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    }
+  ],
+  "official_review_history_rows_before": 8,
+  "own_child_pid": 41224,
+  "startup_seconds": 1.533,
+  "evaluation_page_HTTP_200": true,
+  "complete_run_and_JSON_CSV_match_current_SQLite": true,
+  "health": {
+    "status": "ok",
+    "ready": false,
+    "sqlite_ready": true,
+    "retrieval_ready": true,
+    "generation_configured": false
+  },
+  "school_connectivity_tested": false,
+  "review_PATCH_tested": false,
+  "own_child_process_stopped": true,
+  "official_review_history_rows_after": 8,
+  "database_records_and_reviews_unchanged": true,
+  "database_lease_available": true,
+  "no_generation_or_review_or_experiment_requests_sent": true,
+  "server_log_sha256": "edc885a9ae5d1120cd1c19ea1ed220c72c0875ce3d353453ebe84ac7a28b0603",
+  "cumulative_known_school_tokens": 191672
+}

@@ -2,7 +2,7 @@
   "kind": "partial_actual_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M6_21_第1题四组评分完成与续做.md",
+  "latest_handoff": "docs/handoffs/M6_22_评分服务启动定位与只读HTTP恢复.md",
   "latest_reading_guide": "docs/M6第1题四组逐句解释与已确认引用.md",
   "official_review_history_rows": 8,
   "official_cases_with_any_review": 4,
@@ -50,5 +50,15 @@
   "latest_user_confirmations": [
     "artifacts/c/m6-human-review/paired-01/user-feedback.json",
     "artifacts/c/m6-human-review/paired-01/grade-confirmation/user-feedback.json"
-  ]
+  ],
+  "review_http_readonly_check": {
+    "state": "passed",
+    "report": "artifacts/c/m6-review-http-readonly-permitted/result.json",
+    "reading_guide": "docs/M6评分服务启动排查与正常读取验证.md",
+    "default_restricted_failure_report": "artifacts/c/m6-review-http-readonly/result.json",
+    "requires_permitted_local_networking_in_Codex_exec": true,
+    "review_PATCH_tested_in_this_check": false,
+    "school_generation_api_calls": 0,
+    "own_processes_stopped": true
+  }
 }
