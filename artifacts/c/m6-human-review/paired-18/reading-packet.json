@@ -1,0 +1,289 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 18,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-ucpd-aggressive-practice",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-ucpd-aggressive-practice",
+    "question": "What must be shown before Directive 2005/29/EC treats a commercial practice as aggressive?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "In its factual context, and taking account of all its features and circumstances, the practice must use harassment, coercion, including physical force, or undue influence. It must significantly impair, or be likely to significantly impair, the average consumer's freedom of choice or conduct with regard to the product, and thereby cause or be likely to cause a transactional decision that the consumer would not otherwise have taken.",
+    "key_facts": [
+      "A commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence,",
+      "it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "article_id": "eu_unfair_practices_2005_29:article:8",
+        "structure_id": null,
+        "start": 33078,
+        "end": 33295,
+        "text": "A commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence,"
+      },
+      {
+        "document_id": "eu_unfair_practices_2005_29",
+        "article_id": "eu_unfair_practices_2005_29:article:8",
+        "structure_id": null,
+        "start": 33296,
+        "end": 33558,
+        "text": "it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第18题_侵略性商业行为的选择自由与交易因果_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-e352cf9a29c6407690f2f1da3c5506d1",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "只给事实语境及选择自由受损的大意，没写骚扰/胁迫/不当影响手段及由此导致原不会作出的交易决定，两个必要事实都不完整。暂建议partial；若该简化被理解为完整充分条件，实际评审人需考虑wrong并统一口径。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6644671559333801,
+              "chunk_id": "fddb9f07fde9d5313d406f05bb4e9ad736c502ce5ff95a0331c10c4e646bfefb",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:7",
+                "eu_unfair_practices_2005_29:article:8"
+              ],
+              "start": 32800,
+              "end": 33200,
+              "text": "stablished by Community law in relation to commercial communication including advertising or marketing, a non-exhaustive list of which is contained in Annex II, shall be regarded as material.\n\nSection 2\nAggressive commercial practices\n\nArticle 8\nAggressive commercial practices\nA commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and c",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 7",
+                "Article 8"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "引用1在features and c处结束，连显著损害选择自由的部分都未包含，更不能支持整条主张。",
+          "Chinese_explanation": "引用1在features and c处结束，连显著损害选择自由的部分都未包含，更不能支持整条主张。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1在features and c处结束，连显著损害选择自由的部分都未包含，更不能支持整条主张。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-40141c5198ea44fe80a50756d3cf6558",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A commercial practice is regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6695724129676819,
+              "chunk_id": "61e6c3b86d2013b3c4a52dc340e06d42fd0f9abdde5f4f2188ebc631b88b5033",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:8"
+              ],
+              "start": 33078,
+              "end": 33478,
+              "text": "A commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to ca",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 8"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "引用1虽保留大部分定义，却在likely to ca处结束，缺少交易决定及would not otherwise have taken的关键因果/反事实尾部；整条主张仅绑定此块，不能视为完整支持。",
+          "Chinese_explanation": "引用1虽保留大部分定义，却在likely to ca处结束，缺少交易决定及would not otherwise have taken的关键因果/反事实尾部；整条主张仅绑定此块，不能视为完整支持。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1虽保留大部分定义，却在likely to ca处结束，缺少交易决定及would not otherwise have taken的关键因果/反事实尾部；整条主张仅绑定此块，不能视为完整支持。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-2681769dbccb4c6cae100f3e7d5b4ae8",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6626505851745605,
+              "chunk_id": "d86e8bc4309021c7c5927cf3985d53ded0134ff922fa320ff30e85c011a0ce0b",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:7",
+                "eu_unfair_practices_2005_29:article:8",
+                "eu_unfair_practices_2005_29:article:9"
+              ],
+              "start": 32800,
+              "end": 33600,
+              "text": "stablished by Community law in relation to commercial communication including advertising or marketing, a non-exhaustive list of which is contained in Annex II, shall be regarded as material.\n\nSection 2\nAggressive commercial practices\n\nArticle 8\nAggressive commercial practices\nA commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise.\n\nArticle 9\nUse of harassment, coercion an",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 7",
+                "Article 8",
+                "Article 9"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留Article8整句，手段、损害、因果及原不会作出决定四部分均在所引片段。",
+          "Chinese_explanation": "引用1完整保留Article8整句，手段、损害、因果及原不会作出决定四部分均在所引片段。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保留Article8整句，手段、损害、因果及原不会作出决定四部分均在所引片段。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-c283f11f84854bd9bc212480ff02a6a4",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A commercial practice is regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.679671049118042,
+              "chunk_id": "b2133b4dcf6625b8d03e7e8319c4ec014383414c8e1cce2ebc46c01c9eaccf9a",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:8"
+              ],
+              "start": 32993,
+              "end": 33560,
+              "text": "Section 2\nAggressive commercial practices\n\nArticle 8\nAggressive commercial practices\nA commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise.\n\n",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 8"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含Article8手段和对产品选择/行为的显著损害限定。",
+          "Chinese_explanation": "引用1完整包含Article8手段和对产品选择/行为的显著损害限定。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含Article8手段和对产品选择/行为的显著损害限定。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "It must thereby cause the consumer, or be likely to cause him, to take a transactional decision that he would not have taken otherwise.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.679671049118042,
+              "chunk_id": "b2133b4dcf6625b8d03e7e8319c4ec014383414c8e1cce2ebc46c01c9eaccf9a",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_practices_2005_29",
+              "article_ids": [
+                "eu_unfair_practices_2005_29:article:8"
+              ],
+              "start": 32993,
+              "end": 33560,
+              "text": "Section 2\nAggressive commercial practices\n\nArticle 8\nAggressive commercial practices\nA commercial practice shall be regarded as aggressive if, in its factual context, taking account of all its features and circumstances, by harassment, coercion, including the use of physical force, or undue influence, it significantly impairs or is likely to significantly impair the average consumer's freedom of choice or conduct with regard to the product and thereby causes him or is likely to cause him to take a transactional decision that he would not have taken otherwise.\n\n",
+              "title": "Directive 2005/29/EC of the European Parliament and of the Council of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market and amending Council Directive 84/450/EEC, Directives 97/7/EC, 98/27/EC and 2002/65/EC of the European Parliament and of the Council and Regulation (EC) No 2006/2004 of the European Parliament and of the Council (‘Unfair Commercial Practices Directive’)   (Text with EEA relevance)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029",
+              "article_labels": [
+                "Article 8"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一引用1后半完整写出由此导致或可能导致原不会作出的交易决定，支持第二主张。",
+          "Chinese_explanation": "同一引用1后半完整写出由此导致或可能导致原不会作出的交易决定，支持第二主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一引用1后半完整写出由此导致或可能导致原不会作出的交易决定，支持第二主张。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

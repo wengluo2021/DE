@@ -1,0 +1,109 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-18/confirmed-requests.json",
+  "confirmation_sha256": "08d0b1ddd73f4af57a55dd7763789bbe830676e30ad287416a08102633a0cd22",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "00ce5502743544851471fc8449f4e48ef4389cd00b61daf1ce4f6f2093a6b54e",
+  "applied": [
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用1在features and c处结束，连显著损害选择自由的部分都未包含，更不能支持整条主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：只给事实语境及选择自由受损的大意，没写骚扰/胁迫/不当影响手段及由此导致原不会作出的交易决定，两个必要事实都不完整。暂建议partial；若该简化被理解为完整充分条件，实际评审人需考虑wrong并统一口径。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:24.844521+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用1虽保留大部分定义，却在likely to ca处结束，缺少交易决定及would not otherwise have taken的关键因果/反事实尾部；整条主张仅绑定此块，不能视为完整支持。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:24.857637+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保留Article8整句，手段、损害、因果及原不会作出决定四部分均在所引片段。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:24.869911+00:00"
+      }
+    },
+    {
+      "case_id": "gold-ucpd-aggressive-practice",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含Article8手段和对产品选择/行为的显著损害限定。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一引用1后半完整写出由此导致或可能导致原不会作出的交易决定，支持第二主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：答案包含具体手段、显著损害或可能损害选择/行为，以及由此导致或可能导致原不会作出的交易决定，A两要点完整，建议correct；引用充分性另列。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:24.882508+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 76,
+  "official_cases_with_review": 72,
+  "answer_grades_pending": 24,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 41,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "a266ee0d80dde91708a3edef99fbd64872232c901917aba67edaeefc670439d3",
+    "evaluation.partial-review.json": "769f98eebeeb3f0719422039598f12850c4720fc2e7d6c38582010597fd65348"
+  }
+}
