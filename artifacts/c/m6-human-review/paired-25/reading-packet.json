@@ -1,0 +1,74 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 25,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-refuse-air-cancellation-amount",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-refuse-air-cancellation-amount",
+    "question": "What fixed amount in euro must an air carrier pay a passenger when it cancels a flight?",
+    "topic": "unanswerable",
+    "answerable": false,
+    "reference_answer": null,
+    "key_facts": [],
+    "evidence": [],
+    "unanswerable_reason": "None of the five frozen directives states a fixed euro amount payable by an air carrier for cancellation of a flight. Directive 2011/83/EU excludes passenger transport services from its scope except Article 8(2) and Articles 19 and 22, and those provisions concern information, payment fees and additional payments rather than a cancellation tariff. A recital mentions a compensation regime for service aspects of mixed contracts but states no airline amount. The goods, digital-content, unfair-term and unfair-practice directives do not set one either.",
+    "refusal_reference": "The frozen five-document corpus does not contain sufficient information to answer this question."
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第25题_航班取消固定赔偿超出冻结范围_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-24515cf6d7114ee08eec330fc96435f7",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-b032f7cba7074168a0da688fd793c346",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-29025c29df564678b9b175313a39105f",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-662f5ddbdba24c488322efc2d07be15f",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

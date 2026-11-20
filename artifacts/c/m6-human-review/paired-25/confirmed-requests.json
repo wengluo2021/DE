@@ -1,0 +1,65 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-24/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "f400",
+      "ask_id": "ask-24515cf6d7114ee08eec330fc96435f7",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "refusal_correct": true,
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "s400",
+      "ask_id": "ask-b032f7cba7074168a0da688fd793c346",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "refusal_correct": true,
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "f800",
+      "ask_id": "ask-29025c29df564678b9b175313a39105f",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "refusal_correct": true,
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "condition": "s800",
+      "ask_id": "ask-662f5ddbdba24c488322efc2d07be15f",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：冻结资料的乘客运输相关内容是范围排除或支付费用保护，并未给航空承运人取消航班的固定欧元赔偿。不能借用库外航空法规或常识补数值；按A范围拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "refusal_correct": true,
+        "claim_reviews": []
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 104,
+    "official_cases_with_review": 100,
+    "answer_grades_pending": 0,
+    "refusal_grades_pending": 20,
+    "claim_support_decisions_pending": 0
+  }
+}
