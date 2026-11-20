@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-29/confirmed-requests.json",
+  "confirmation_sha256": "c24dc3306507e42969a4025f8b0d4c9ec611aa43af226b6ed46a22d8590b7b87",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "3c078af981c36ae7cf0df372b3843748f8db56fe0627d64a66d240e66f80f407",
+  "applied": [
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "f400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：2019/771的责任显现期间及成员国时效规则，不等于拒修后必须多少天起诉的期限；未提供法院或这一日数，不能将两年/一年责任期间替换成诉讼倒计时，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:13.038239+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：2019/771的责任显现期间及成员国时效规则，不等于拒修后必须多少天起诉的期限；未提供法院或这一日数，不能将两年/一年责任期间替换成诉讼倒计时，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:13.054835+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：2019/771的责任显现期间及成员国时效规则，不等于拒修后必须多少天起诉的期限；未提供法院或这一日数，不能将两年/一年责任期间替换成诉讼倒计时，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:13.066976+00:00"
+      }
+    },
+    {
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：2019/771的责任显现期间及成员国时效规则，不等于拒修后必须多少天起诉的期限；未提供法院或这一日数，不能将两年/一年责任期间替换成诉讼倒计时，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:39:13.078976+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 120,
+  "official_cases_with_review": 116,
+  "answer_grades_pending": 0,
+  "refusal_grades_pending": 4,
+  "claim_support_decisions_pending": 0,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "d95c4602586f122b6d27139053430314cfe47fe24371622be0d0b5777391bb61",
+    "evaluation.partial-review.json": "773060380540aebcf6da552841742c6b5907dd65e0e40e5b3cd369a3b71a5ce1"
+  }
+}
