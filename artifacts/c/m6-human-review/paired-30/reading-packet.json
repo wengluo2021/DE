@@ -1,0 +1,74 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 30,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-refuse-package-insurance",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-refuse-package-insurance",
+    "question": "What minimum insurance cover must a package-travel organiser hold for a consumer's trip?",
+    "topic": "unanswerable",
+    "answerable": false,
+    "reference_answer": null,
+    "key_facts": [],
+    "evidence": [],
+    "unanswerable_reason": "Directive 2011/83/EU places contracts within the package-travel directive outside its scope, and Directive 2005/29/EC lists package-travel legislation among sectoral information rules in Annex II. Neither provision, nor the goods, digital-content or unfair-term directives, states a minimum insurance amount or cover for a package-travel organiser.",
+    "refusal_reference": "The frozen five-document corpus does not contain sufficient information to answer this question."
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第30题_包价旅游最低保险额未载明_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-bf1ca0f8466c4569b588f3ca6ff9059e",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-cc4c27450119465aa5367be5b8b78071",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-bc52d5b6ae034325ae1d261425e20c4f",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-5d55daeb24b148d4bc0897506e17c606",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照包价旅行范围排除、其他行业信息规则引用及保险相关段落，它们没有旅行组织者最低保险覆盖额度。本库仅五份原始公布版指令，不含被引用行业法规全文，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
