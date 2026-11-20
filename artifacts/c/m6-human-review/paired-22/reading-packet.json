@@ -1,0 +1,388 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 22,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-utd-plain-language",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-utd-plain-language",
+    "question": "A seller offers a consumer a written standard contract covered by Directive 93/13/EEC. What does Article 5 require for the wording, and how is doubt about a term resolved?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "The written terms must always be drafted in plain, intelligible language. If there is doubt about the meaning of a term, the interpretation most favourable to the consumer prevails. That interpretation rule does not apply in the procedures laid down in Article 7(2).",
+    "key_facts": [
+      "In the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2)."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "article_id": "eu_unfair_terms_93_13:article:5",
+        "structure_id": null,
+        "start": 11684,
+        "end": 12064,
+        "text": "In the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2)."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第22题_清晰语言与有利消费者解释_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-8db6b21d8a7048deab7f3d3894e75fbd",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "语言和疑义解释说明正确，但遗漏A明确列出的Article7(2)程序例外，按完整要点口径建议partial；不把截断引用中未生成的例外当已回答。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Where all or certain terms offered to the consumer are in writing, those terms must always be drafted in plain, intelligible language.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6656416654586792,
+              "chunk_id": "5602acf5a23a470e31e067ce9d8ab0581187cc40b74ca9575e81396283a24cb0",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:4",
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11600,
+              "end": 12000,
+              "text": " the other, in so far as these terms are in plain intelligible language.\n\nArticle 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not ap",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 4",
+                "Article 5"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "Chinese_explanation": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.6656416654586792,
+              "chunk_id": "5602acf5a23a470e31e067ce9d8ab0581187cc40b74ca9575e81396283a24cb0",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:4",
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11600,
+              "end": 12000,
+              "text": " the other, in so far as these terms are in plain intelligible language.\n\nArticle 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not ap",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 4",
+                "Article 5"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "Chinese_explanation": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-f3bf9964333c45ba8485892e444095f8",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 5 requires that, where all or certain terms offered to the consumer are in writing, those terms must always be drafted in plain, intelligible language.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "d9c2a43d2f37bd35b4a8a4c4b2ad88d6797ce7b4a9312d0183733fda5fac9e01",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "Chinese_explanation": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "d9c2a43d2f37bd35b4a8a4c4b2ad88d6797ce7b4a9312d0183733fda5fac9e01",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "Chinese_explanation": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "This rule on interpretation does not apply in the context of the procedures laid down in Article 7(2).",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "d9c2a43d2f37bd35b4a8a4c4b2ad88d6797ce7b4a9312d0183733fda5fac9e01",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。",
+          "Chinese_explanation": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-4be9f9a283a54c3c847523145def4c8b",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第5条有明确书面语言要求、有疑义时有利消费者解释及程序例外，本组insufficient，按可答题标准建议wrong。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-d3ffcef623634df0a29f5aa5cb8cae0e",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 5 requires that, where all or certain terms offered to the consumer are in writing, those terms must always be drafted in plain, intelligible language.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "c9f168b4cfbad6c5996146be767b9c4cc305b8798aeeb3e560ce48b1bee2e09f",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "Chinese_explanation": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "c9f168b4cfbad6c5996146be767b9c4cc305b8798aeeb3e560ce48b1bee2e09f",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "Chinese_explanation": "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "This rule on interpretation does not apply in the context of the procedures laid down in Article 7(2).",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6832297444343567,
+              "chunk_id": "c9f168b4cfbad6c5996146be767b9c4cc305b8798aeeb3e560ce48b1bee2e09f",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:5"
+              ],
+              "start": 11674,
+              "end": 12066,
+              "text": "Article 5\nIn the case of contracts where all or certain terms offered to the consumer are in writing, these terms must always be drafted in plain, intelligible language. Where there is doubt about the meaning of a term, the interpretation most favourable to the consumer shall prevail. This rule on interpretation shall not apply in the context of the procedures laid down in Article 7 (2).\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 5"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。",
+          "Chinese_explanation": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

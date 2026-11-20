@@ -1,0 +1,108 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-21/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f400",
+      "ask_id": "ask-8db6b21d8a7048deab7f3d3894e75fbd",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言和疑义解释说明正确，但遗漏A明确列出的Article7(2)程序例外，按完整要点口径建议partial；不把截断引用中未生成的例外当已回答。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s400",
+      "ask_id": "ask-f3bf9964333c45ba8485892e444095f8",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "f800",
+      "ask_id": "ask-4be9f9a283a54c3c847523145def4c8b",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A第5条有明确书面语言要求、有疑义时有利消费者解释及程序例外，本组insufficient，按可答题标准建议wrong。",
+        "answer_grade": "wrong",
+        "claim_reviews": []
+      }
+    },
+    {
+      "case_id": "gold-utd-plain-language",
+      "condition": "s800",
+      "ask_id": "ask-d3ffcef623634df0a29f5aa5cb8cae0e",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 92,
+    "official_cases_with_review": 88,
+    "answer_grades_pending": 8,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 11
+  }
+}

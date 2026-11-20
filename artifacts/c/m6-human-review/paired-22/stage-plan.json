@@ -1,0 +1,39 @@
+{
+  "question_number": 22,
+  "case_id": "gold-utd-plain-language",
+  "title": "清晰语言与有利消费者解释",
+  "reading_md": "docs/M6第22题_清晰语言与有利消费者解释_评分记录.md",
+  "handoff_number": 43,
+  "actually_read_against_bound_citations": true,
+  "reuse_completed_prior_AI_pre_review": true,
+  "prior_AI_batches": [
+    11
+  ],
+  "explanation_Chinese": [
+    "本题沿用此前已完成的AI辅助预审，在C的新授权下记为AI辅助评分，不标为逐项人工复核。固定A语料/题集、模型输出与实际绑定引用保持。",
+    "整答按A必要事实完整性判断，引用支持按每条主张实际绑定的证据判断；缺少必要事实、错误拒答和引用不充分分别保留，不能删题或改变分母。",
+    "F400核验理由：语言和疑义解释说明正确，但遗漏A明确列出的Article7(2)程序例外，按完整要点口径建议partial；不把截断引用中未生成的例外当已回答。",
+    "S400核验理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。",
+    "F800核验理由：A第5条有明确书面语言要求、有疑义时有利消费者解释及程序例外，本组insufficient，按可答题标准建议wrong。",
+    "S800核验理由：语言、疑义解释与Article7(2)程序例外都明确，覆盖A完整要点，建议correct。"
+  ],
+  "Chinese_explanation_label": "中文核验说明",
+  "Chinese_claims_by_condition": {
+    "f400": [
+      "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+      "同一实际引用完整包含疑义时最有利消费者的解释优先。"
+    ],
+    "s400": [
+      "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+      "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+      "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+    ],
+    "f800": [],
+    "s800": [
+      "实际引用完整包含书面合同条款始终须plain/intelligible的语言要求，Article5标题/元数据可核对。",
+      "同一实际引用完整包含疑义时最有利消费者的解释优先。",
+      "同一引用还完整包含Article7(2)程序中的解释规则例外，支持其限定。"
+    ]
+  },
+  "support_overrides": {}
+}
