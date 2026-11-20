@@ -1,0 +1,30 @@
+{
+  "state": "passed",
+  "branch": "answer-eval",
+  "starting_commit": "8797c81",
+  "C_local_delivery_complete": true,
+  "github_uploaded": false,
+  "github_authentication_available": false,
+  "github_connection": "TLS_failure_on_login",
+  "pending_commits_before_this_checkpoint": 74,
+  "weight_parts": 3,
+  "part_stream_matches_original_weight_sha256": true,
+  "guide_zip_CRC_and_member_bytes_verified": true,
+  "original_archives_preserved": true,
+  "main_modified": false,
+  "external_model_calls": 0,
+  "files": {
+    "delivery/c-20261120/README.md": "a07f1b17f13c07a9c29e34a2cdce4e04e8c1a0e3f0b28f8681734fca936dccb4",
+    "delivery/c-20261120/GITHUB-ASSETS.json": "283feb73377f1b6715c5e792f03e346ce8f435409c3c3bad23103979bd38d679",
+    "delivery/c-20261120/GITHUB-ASSETS-SHA256SUMS.txt": "68b95e9c5a7601f46a5ab9c1d160d9f58ef3cdcbe57528f640891fa7c6d0f89d",
+    "delivery/c-20261120/reassemble_weights.py": "3391a363dedafb0dccfa515e640c739842f54cc3690ea3b8de6ccf5161c4e0cf",
+    "docs/worklogs/2026-11-20_M7_GitHub交付整理与提交.md": "bb8df6b41fed9c9386129fb443e0c7431748ee81da6d821e345d735724e08f32",
+    "docs/handoffs/M7_08_GitHub交付整理与提交.md": "f5fe2b5c644aacf4d7527e247791a044d176e305322b8cb5821e60c7c3277e27",
+    "artifacts/c/m6-human-review/CURRENT.json": "e0c7221962f34ccfd6a9d293c0b4f57d177f9d771e23240714f4f46ad02a6bf5"
+  },
+  "actual_weight_reassembly_checked": true,
+  "existing_matching_target_preserved_on_second_run": true,
+  "user_subsequently_authorized_GitHub_login": true,
+  "browser_session_read_attempts": 2,
+  "browser_control_state": "connection_timed_out_without_reading_session_or_credentials"
+}

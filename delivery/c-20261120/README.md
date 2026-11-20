@@ -22,6 +22,8 @@ Windows401项与Linux400项通过/1平台跳过；最新评分库在禁网无Key
 
 原离线源码快照为`16a8e82b62cbe5a76e48bb5715fb7a15a2338a07`；之后提交补充交付说明和GitHub入口，业务代码不变。GitHub自动生成的Source code ZIP对应发布标签，并非上述已冻结源码ZIP，其SHA不同属于正常情况。
 
+附件准备清单：[GITHUB-ASSETS.json](GITHUB-ASSETS.json)，传输文件校验：[GITHUB-ASSETS-SHA256SUMS.txt](GITHUB-ASSETS-SHA256SUMS.txt)。当前只完成本地准备，尚未上传GitHub。下载到新目录后，使用[合并脚本](reassemble_weights.py)处理权重分片，再解压C-delivery-guide-20261120.zip得到完整原包校验/恢复说明。
+
 ## 验收边界
 
 不需要重新下载模型、重跑120题或覆盖当前本机数据库。公开内容无实际API Key；新问答需接收方自行在本地私密env配置凭据。组长合并、全组报告/展示与课程最终提交由团队后续处理。
