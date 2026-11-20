@@ -1,0 +1,49 @@
+{
+  "kind": "explicit_user_confirmed_review_requests",
+  "human_confirmed": true,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_38bfb1bfd2c14edd80b12b92b1536439",
+  "user_responses": [
+    {
+      "question_index": 0,
+      "answer": "按较严格读法：整答wrong；主张0不支持、1支持、2不支持"
+    }
+  ],
+  "previous_export": "artifacts/c/m6-human-review/paired-05/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-crd-late-delivery-termination",
+      "condition": "f400",
+      "ask_id": "ask-d2f59403407e428796961f28b7609d75",
+      "patch": {
+        "answer_grade": "wrong",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "实际引文缺失迟延交货条件的前半句；题干虽给默认期限届满，但没有给出主张额外覆盖的约定交期法律分支，不能用题干补该规范范围。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含额外合理期限仍未交付即可解除合同的条件句。"
+          },
+          {
+            "claim_index": 2,
+            "supported": false,
+            "reason": "实际评审人明确采用较严格读法：This rule紧接解除权句，容易被理解为商家拒绝交货时没有解除权；实际原文只排除再给额外期限的要求，仍可直接解除，不能支持这种解除权限制。"
+          }
+        ],
+        "notes": "第6题F400特殊争议，经call_38bfb1bfd2c14edd80b12b92b1536439第0项明确采用严格读法：整答wrong；主张0不支持、1支持、2不支持。本次全部字段经具体确认，未把常规AI授权冒充本条确认。"
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 25,
+    "official_cases_with_review": 21,
+    "answer_grades_pending": 75,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 121
+  }
+}

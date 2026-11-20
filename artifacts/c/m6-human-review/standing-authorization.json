@@ -1,0 +1,14 @@
+{
+  "kind": "standing_authorization_for_ai_assisted_review",
+  "authorization_id": "standing-instruction-20261120-after-question-05",
+  "source_kind": "conversation_user_instruction",
+  "client_date": "2026-11-20",
+  "exact_user_instruction": "之后的题目都这样无特别的不需要确认",
+  "scope": "Remaining routine evaluation judgments under the already explained frozen-A rubric, with special substantive disputes clarified separately.",
+  "routine_item_confirmation_required": false,
+  "special_substantive_disputes_require_clarification": true,
+  "authorized_AI_reviewer_label": "Codex AI（C授权辅助评分）",
+  "authorization_is_not_individual_human_verification": true,
+  "preserve_prior_explicit_human_reviews": true,
+  "school_generation_calls_authorized_by_this_instruction": 0
+}

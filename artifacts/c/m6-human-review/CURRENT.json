@@ -1,17 +1,17 @@
 {
-  "kind": "partial_actual_review_progress",
+  "kind": "mixed_provenance_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M6_26_第5题评分与续做.md",
-  "latest_reading_guide": "docs/M6第5题数字内容撤回权_中英逐句与评分记录.md",
-  "official_review_history_rows": 24,
-  "official_cases_with_any_review": 20,
-  "answer_grades_saved": 20,
+  "latest_handoff": "docs/handoffs/M6_27_第6题评分与续做.md",
+  "latest_reading_guide": "docs/M6第6题迟延交货解除_中英逐句与评分记录.md",
+  "official_review_history_rows": 28,
+  "official_cases_with_any_review": 24,
+  "answer_grades_saved": 24,
   "answer_grades_total": 96,
-  "answer_grades_pending": 76,
+  "answer_grades_pending": 72,
   "refusal_grades_saved": 0,
   "refusal_grades_total": 24,
-  "claim_support_decisions_saved": 42,
+  "claim_support_decisions_saved": 55,
   "claim_support_decisions_total": 166,
   "first_saved_record": {
     "case_id": "gold-crd-delivery-time",
@@ -37,18 +37,19 @@
     "model_download_or_index_rebuild",
     "restore_unreviewed_SQLite_backup_over_current_database"
   ],
-  "complete_paired_questions": 5,
+  "complete_paired_questions": 6,
   "paired_questions_total": 30,
-  "next_question_number": 6,
-  "next_case_id": "gold-crd-late-delivery-termination",
-  "latest_partial_export": "artifacts/c/m6-human-review/paired-05/saved/evaluation.partial-review.json",
+  "next_question_number": 7,
+  "next_case_id": "gold-sgd-two-year-liability",
+  "latest_partial_export": "artifacts/c/m6-human-review/paired-06/saved/evaluation.partial-review.json",
   "context_policy": {
     "human_confirmed": true,
     "source_question_call_id": "call_4d3d03db42e4475caefbc71895fee043",
     "rule": "允许题目明确给定的事实前提作为上下文；不能用未引用的法律规则补证据。"
   },
   "latest_user_confirmations": [
-    "artifacts/c/m6-human-review/paired-05/confirmed-requests.json"
+    "artifacts/c/m6-human-review/paired-05/confirmed-requests.json",
+    "artifacts/c/m6-human-review/paired-06/human-special/confirmed-requests.json"
   ],
   "review_http_readonly_check": {
     "state": "passed",
@@ -60,6 +61,15 @@
     "school_generation_api_calls": 0,
     "own_processes_stopped": true
   },
-  "last_completed_case_id": "gold-crd-withdrawal-digital-content",
-  "last_completed_case_number": 5
+  "last_completed_case_id": "gold-crd-late-delivery-termination",
+  "last_completed_case_number": 6,
+  "latest_review_sources": [
+    "artifacts/c/m6-human-review/paired-06/confirmed-requests.json"
+  ],
+  "individually_human_reviewed_cases": 21,
+  "authorized_AI_reviewed_cases": 3,
+  "individually_human_confirmed_answer_grades": 21,
+  "individually_human_confirmed_claim_decisions": 45,
+  "all_items_individually_human_verified": false,
+  "standing_authorization_file": "artifacts/c/m6-human-review/standing-authorization.json"
 }
