@@ -1,0 +1,74 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 26,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-refuse-standard-vat-rate",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-refuse-standard-vat-rate",
+    "question": "What standard percentage of value added tax must a trader add to the price of consumer goods?",
+    "topic": "unanswerable",
+    "answerable": false,
+    "reference_answer": null,
+    "key_facts": [],
+    "evidence": [],
+    "unanswerable_reason": "The frozen corpus contains no value-added-tax rate and no rule stating the percentage a trader must add. Price provisions, such as the requirement that an invitation to purchase show the price inclusive of taxes, do not state a tax percentage.",
+    "refusal_reference": "The frozen five-document corpus does not contain sufficient information to answer this question."
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第26题_增值税税率未载于冻结范围_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-0ef31418c100493786c1d286d88dbe9c",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-5d6c55be717848fba113c5688f167a77",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-bdeeeedf829a4e1ea2d8f7be6d20fc42",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-02130776daca4e7fbb2d0b91fad91e3e",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "资料要求价格含税，但没有标准VAT百分比；本地含税价条文与A拒答理由一致。含税展示义务不能推出具体税率，也不能猜一个成员国税率，故拒答建议正确。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
