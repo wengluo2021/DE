@@ -1,0 +1,114 @@
+{
+  "kind": "explicit_user_confirmed_review_requests",
+  "human_confirmed": true,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_02c771ace8a74408bdab6bb80799fb8a",
+  "user_responses": [
+    {
+      "question_index": 0,
+      "answer": "确认：第4题四组整体均correct"
+    },
+    {
+      "question_index": 1,
+      "answer": "认可：6条支持，F400/F800的主张1不支持"
+    }
+  ],
+  "previous_export": "artifacts/c/m6-human-review/paired-03/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "f400",
+      "ask_id": "ask-670b9e5f74424e0196af650c2c326f6d",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张0实际绑定引用1和2；两块按原文位置[71200,71600)、[71600,72000)相接，联合保留完整未提供信息条件和12个月起算点，虽然引用编号顺序与区间先后相反。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+          }
+        ],
+        "notes": "实际评审人于call_02c771ace8a74408bdab6bb80799fb8a明确确认第4题四组correct；引用6条支持，F400/F800主张1不支持，原因是实际绑定片段漏补给信息的前置条件。仅本题，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "s400",
+      "ask_id": "ask-1d0c8a11e4dd4a6388c06e34dfa16936",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+          }
+        ],
+        "notes": "实际评审人于call_02c771ace8a74408bdab6bb80799fb8a明确确认第4题四组correct；引用6条支持，F400/F800主张1不支持，原因是实际绑定片段漏补给信息的前置条件。仅本题，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "f800",
+      "ask_id": "ask-f2fa0ba8f28b49f4b6a251cad8f2c1ce",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+          }
+        ],
+        "notes": "实际评审人于call_02c771ace8a74408bdab6bb80799fb8a明确确认第4题四组correct；引用6条支持，F400/F800主张1不支持，原因是实际绑定片段漏补给信息的前置条件。仅本题，不顺延其他题。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "condition": "s800",
+      "ask_id": "ask-efa9944f669340c3aad8e91a8f09bde1",
+      "patch": {
+        "answer_grade": "correct",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+          }
+        ],
+        "notes": "实际评审人于call_02c771ace8a74408bdab6bb80799fb8a明确确认第4题四组correct；引用6条支持，F400/F800主张1不支持，原因是实际绑定片段漏补给信息的前置条件。仅本题，不顺延其他题。"
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 20,
+    "official_cases_with_review": 16,
+    "answer_grades_pending": 80,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 130
+  }
+}

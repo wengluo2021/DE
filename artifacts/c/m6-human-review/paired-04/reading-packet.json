@@ -1,0 +1,406 @@
+{
+  "kind": "reading_materials_with_actual_review_status",
+  "question_number": 4,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-withdrawal-information-omission",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-crd-withdrawal-information-omission",
+    "question": "A trader concludes a distance contract covered by Directive 2011/83/EU but never gives the consumer the withdrawal information required by Article 6(1)(h). When does the withdrawal period expire?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "It expires 12 months from the end of the initial withdrawal period determined under Article 9(2).",
+    "key_facts": [
+      "1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2)."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:10",
+        "structure_id": null,
+        "start": 71568,
+        "end": 71843,
+        "text": "1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2)."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第4题撤回信息遗漏_中英逐句与评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-670b9e5f74424e0196af650c2c326f6d",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "主要答案准确区分起算点：初始撤回期结束后12个月，而不是合同成立后12个月；覆盖A唯一必要事实。另列的14日情形有明确if条件且在完整原文存在，但其实际引用是否包含前提须单独检查，F400/F800对此存在缺失。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period expires 12 months from the end of the initial withdrawal period as determined in accordance with Article 9(2).",
+            "citation_numbers": [
+              1,
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7735369205474854,
+              "chunk_id": "a447e8e5fa41ca6a7472d0b939966d805783218ecf1be318303042b93d06c3cc",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71600,
+              "end": 72000,
+              "text": "d the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).\n2. If the trader has provided the consumer with the information provided for in paragraph 1 of this Article within 12 months from the day referred to in Art",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10"
+              ],
+              "n": 1
+            },
+            {
+              "rank": 2,
+              "score": 0.7465635538101196,
+              "chunk_id": "77790d562b51dc69f90defb60afdf98e97aa4b34d2a62a28c4526c3c820cfe4e",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:9",
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71200,
+              "end": 71600,
+              "text": "ing their contractual obligations during the withdrawal period. Nevertheless, in the case of off-premises contracts, Member States may maintain existing national legislation prohibiting the trader from collecting the payment from the consumer during the given period after the conclusion of the contract.\n\nArticle 10\nOmission of information on the right of withdrawal\n1. If the trader has not provide",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 9",
+                "Article 10"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "主张0实际绑定引用1和2；两块按原文位置[71200,71600)、[71600,72000)相接，联合保留完整未提供信息条件和12个月起算点，虽然引用编号顺序与区间先后相反。",
+          "Chinese_explanation": "商家未按要求告知撤回权时，从初始撤回期结束起再算12个月到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "主张0实际绑定引用1和2；两块按原文位置[71200,71600)、[71600,72000)相接，联合保留完整未提供信息条件和12个月起算点，虽然引用编号顺序与区间先后相反。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the trader provides the information on the right of withdrawal within 12 months from the day referred to in Article 9(2), the withdrawal period expires 14 days after the day upon which the consumer receives that information.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.7310349941253662,
+              "chunk_id": "ecf194c34d09500dec34c71fef91921f79ae001131d3cb4233cc1f83c51d58f1",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10",
+                "eu_consumer_rights_2011_83:article:11"
+              ],
+              "start": 72000,
+              "end": 72400,
+              "text": "icle 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.\n\nArticle 11\nExercise of the right of withdrawal\n1. Before the expiry of the withdrawal period, the consumer shall inform the trader of his decision to withdraw from the contract. For this purpose, the consumer may either:\n(a) use the model withdrawal form as set out in Annex I(B);",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。",
+          "Chinese_explanation": "如果在规定的12个月内补给撤回权信息，消费者收到信息后14日到期。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-1d0c8a11e4dd4a6388c06e34dfa16936",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "主要答案准确区分起算点：初始撤回期结束后12个月，而不是合同成立后12个月；覆盖A唯一必要事实。另列的14日情形有明确if条件且在完整原文存在，但其实际引用是否包含前提须单独检查，F400/F800对此存在缺失。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period expires 12 months from the end of the initial withdrawal period as determined in accordance with Article 9(2).",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7789396047592163,
+              "chunk_id": "1cf1c3ca46c01b6b0cd81543319c866bd73869757aa369cdfcc4167fd0a55b01",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71506,
+              "end": 71847,
+              "text": "Article 10\nOmission of information on the right of withdrawal\n1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。",
+          "Chinese_explanation": "商家未按要求告知撤回权时，从初始撤回期结束起再算12个月到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the trader provides that information within 12 months from the day referred to in Article 9(2), the withdrawal period expires 14 days after the day upon which the consumer receives that information.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7576874494552612,
+              "chunk_id": "42e172cbc2293e38a4fb26b7521c51eab21658153e928378c1f278f04a04dc7d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71847,
+              "end": 72120,
+              "text": "If the trader has provided the consumer with the information provided for in paragraph 1 of this Article within 12 months from the day referred to in Article 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.\n\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。",
+          "Chinese_explanation": "如果在规定的12个月内补给撤回权信息，消费者收到信息后14日到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-f2fa0ba8f28b49f4b6a251cad8f2c1ce",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "主要答案准确区分起算点：初始撤回期结束后12个月，而不是合同成立后12个月；覆盖A唯一必要事实。另列的14日情形有明确if条件且在完整原文存在，但其实际引用是否包含前提须单独检查，F400/F800对此存在缺失。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7884972095489502,
+              "chunk_id": "80be0e78fd47bc66108de11f66bea3d512ffb12e7f62239653277b63c95cabb8",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:9",
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71200,
+              "end": 72000,
+              "text": "ing their contractual obligations during the withdrawal period. Nevertheless, in the case of off-premises contracts, Member States may maintain existing national legislation prohibiting the trader from collecting the payment from the consumer during the given period after the conclusion of the contract.\n\nArticle 10\nOmission of information on the right of withdrawal\n1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).\n2. If the trader has provided the consumer with the information provided for in paragraph 1 of this Article within 12 months from the day referred to in Art",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 9",
+                "Article 10"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。",
+          "Chinese_explanation": "商家未按要求告知撤回权时，从初始撤回期结束起再算12个月到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the trader has provided the consumer with the information provided for in paragraph 1 of Article 10 within 12 months from the day referred to in Article 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.7204199433326721,
+              "chunk_id": "9f56e10a3c9174adc7ba5c4aeacd7816641a64aa3ac27a929863884128cd40ac",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10",
+                "eu_consumer_rights_2011_83:article:11"
+              ],
+              "start": 72000,
+              "end": 72800,
+              "text": "icle 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.\n\nArticle 11\nExercise of the right of withdrawal\n1. Before the expiry of the withdrawal period, the consumer shall inform the trader of his decision to withdraw from the contract. For this purpose, the consumer may either:\n(a) use the model withdrawal form as set out in Annex I(B); or\n(b) make any other unequivocal statement setting out his decision to withdraw from the contract.\nMember States shall not provide for any formal requirements applicable to the model withdrawal form other than those set out in Annex I(B).\n2. The consumer shall have exercised his right of withdrawal within the withdrawal period referred to in Article 9(2) and Article 10 if the communication conce",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10",
+                "Article 11"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。",
+          "Chinese_explanation": "如果在规定的12个月内补给撤回权信息，消费者收到信息后14日到期。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张只绑定从“icle 9(2)”开头的引用，片段包含14日后到期结果，却缺失12个月内补给信息的前置条件。前置条件在本回答其他未绑定给该主张的块里，不能据此当作该主张已引用支持，故建议不支持；规则在完整原文中存在与本轮引用充分性是两回事。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-efa9944f669340c3aad8e91a8f09bde1",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "主要答案准确区分起算点：初始撤回期结束后12个月，而不是合同成立后12个月；覆盖A唯一必要事实。另列的14日情形有明确if条件且在完整原文存在，但其实际引用是否包含前提须单独检查，F400/F800对此存在缺失。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period expires 12 months from the end of the initial withdrawal period as determined in accordance with Article 9(2).",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7748633623123169,
+              "chunk_id": "8d466189d5f0f25ec82914aa12926b64177ff5bd5e870e2a32e92ada8f408ba4",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71506,
+              "end": 72120,
+              "text": "Article 10\nOmission of information on the right of withdrawal\n1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).\n2. If the trader has provided the consumer with the information provided for in paragraph 1 of this Article within 12 months from the day referred to in Article 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.\n\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。",
+          "Chinese_explanation": "商家未按要求告知撤回权时，从初始撤回期结束起再算12个月到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用1完整保留未提供第6(1)(h)条信息时，自第9(2)条初始撤回期届满起12个月到期的条件和起算点。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "If the trader provides that information within 12 months from the day referred to in Article 9(2), the withdrawal period expires 14 days after the day upon which the consumer receives that information.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7748633623123169,
+              "chunk_id": "8d466189d5f0f25ec82914aa12926b64177ff5bd5e870e2a32e92ada8f408ba4",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:10"
+              ],
+              "start": 71506,
+              "end": 72120,
+              "text": "Article 10\nOmission of information on the right of withdrawal\n1. If the trader has not provided the consumer with the information on the right of withdrawal as required by point (h) of Article 6(1), the withdrawal period shall expire 12 months from the end of the initial withdrawal period, as determined in accordance with Article 9(2).\n2. If the trader has provided the consumer with the information provided for in paragraph 1 of this Article within 12 months from the day referred to in Article 9(2), the withdrawal period shall expire 14 days after the day upon which the consumer receives that information.\n\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 10"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。",
+          "Chinese_explanation": "如果在规定的12个月内补给撤回权信息，消费者收到信息后14日到期。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "该主张实际绑定的引用完整包含12个月内补给信息这一前提，以及收到该信息后14日到期的结果；这是明确写了条件的补充情形，不推翻本题never gives前提下的主要答案。"
+        }
+      ],
+      "human_confirmed_answer_grade": "correct",
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
