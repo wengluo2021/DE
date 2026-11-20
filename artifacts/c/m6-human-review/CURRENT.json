@@ -79,7 +79,8 @@
   "final_delivery_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-C-final-mixed-review",
   "final_delivery_manifest_sha256": "f9875660fcb5657d76a28e66ff7bd490df954b25d1e7617e909be848d17fddb7",
   "source_package_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
-  "github_delivery_status": "prepared_not_uploaded_local_authentication_and_TLS_connection_required",
+  "github_delivery_status": "prepared_not_uploaded_authentication_TLS_failure",
   "github_delivery_entry": "delivery/c-20261120/README.md",
-  "github_release_asset_plan": "delivery/c-20261120/GITHUB-ASSETS.json"
+  "github_release_asset_plan": "delivery/c-20261120/GITHUB-ASSETS.json",
+  "github_last_push_attempt": "artifacts/c/github-delivery/push-attempt.json"
 }

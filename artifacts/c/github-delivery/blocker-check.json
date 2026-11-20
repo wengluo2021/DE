@@ -1,0 +1,17 @@
+{
+  "state": "passed",
+  "branch": "answer-eval",
+  "starting_commit": "959dfed",
+  "handoff_records_failed_push_truthfully": true,
+  "C_local_delivery_complete": true,
+  "github_uploaded": false,
+  "github_login_permission_already_granted": true,
+  "main_modified": false,
+  "external_model_calls": 0,
+  "files": {
+    "artifacts/c/github-delivery/push-attempt.json": "39758964a1e4e94eefc813c4f899b714fbe0714532b72e09c6de2ee3c116b21e",
+    "docs/handoffs/M7_08_GitHub交付整理与提交.md": "eb962377d47b315c9a73c4d7ca514d442c464b3e48cb9f222d0ac9705160cc1b",
+    "docs/worklogs/2026-11-20_M7_GitHub交付整理与提交.md": "1f09e46701ffeebda221794a3dc726513fcefed9cd428f4215bf497e59b0c672",
+    "artifacts/c/m6-human-review/CURRENT.json": "2b95e74d3336ed2e757c075ca8c84026e3ce6513b6fb2cda08c8de7bf4b5e840"
+  }
+}

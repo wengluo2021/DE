@@ -23,3 +23,5 @@ GitHub插件不能直接上传本地Git打包历史及多GB二进制附件，使
 需要用户在可正常访问GitHub的网络中完成本机Git认证，之后继续快进推送并上传附件，核对远程SHA再更改not_uploaded状态。不要重新做实验或重复生成已存在分片。电脑操作技能引用的guidance.md要求“Do not automate user authentication dialogs.”，登录/验证码/最终授权应由本人操作，不向聊天发送密码或Token。
 
 用户已补充授权我完成登录，权限不再是阻塞；当前阻塞是实际Git认证及本机登录连接故障。两次现有浏览器连接超时，没有读取成功的登录页面。已针对真实权重分片验收合并工具，并验证再次运行不会覆盖既有相同目标。
+
+最后实际执行只针对answer-eval的非强制push，退出128：GCM登录TLS连接关闭，Git未获得认证。无凭据泄露、未创建PR/Release，main不作为写入目标。具体结果见artifacts/c/github-delivery/push-attempt.json。用户已授权登录，后续需要恢复可用的本机认证通道，无需再次申请提交权限。
