@@ -1,0 +1,124 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-06/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "f400",
+      "ask_id": "ask-fcf1efe9e14d4cee9aa6aca8bb9513d8",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答了两年基本期间和可延长，但未写数字要素商品适用及Article7(3)保留，也未写二手商品较短期间不得少于一年。两个要点仅部分覆盖，建议partial；引用截断另待人判。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用2完整包含交付时已有且两年内显现的不符责任这一主张；后续数字要素句虽被截断，但本主张没有把它写出。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "实际绑定的引用3保留Member States may maintain or introduce longer t，引用1保留longer time limits for liability of seller than those laid down in this Directive。两条已引用片段联合给出主体、允许延长及对象/比较范围；按已采用的语义组合和词尾截断口径支持，未借未引用块。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用4和5分别给出二手商品可约定较短期间的条文与序言大意，支持这一有限主张；主张没有说明一年最低限度，影响答案完整性，不能据其字面支持就判整答correct。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "s400",
+      "ask_id": "ask-fbc9efd8f3e144ad9c439b378fe84665",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：两年基本期间说对，二手商品的一年下限也完整，但漏了成员国可维持/引入更长期限，且未说明数字要素适用的保留，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用2完整保存第10(1)条，包括交付时存在且两年内显现；本主张只重述这部分，来源直接支持。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3完整保存二手商品可约定较短期间及不得少于一年的全部条件。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "f800",
+      "ask_id": "ask-d3a262b3aba14058830ad24f78052212",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：给出了两年、可延长、二手商品可缩短的大意，但未写一年最低限度及数字要素适用/Article7(3)保留，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3完整包含第10(1)条的两年责任主句。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用2完整包含第10(3)条Member States可维持/引入更长期限，且元数据和原文结构归属于Article10，支持第1/2款的归属。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1的序言(43)直接支持允许二手商品双方约定较短期间这一概括；没有给出一年下限，不能补成完整必要事实。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-two-year-liability",
+      "condition": "s800",
+      "ask_id": "ask-4d74142f2ae048f69445fe9caffa5ef9",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：延长及二手商品缩短/一年下限都说明，但整答没有给出本题首先问的两年基本责任期，也没有数字要素适用，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3直接包含第10(3)条较长期限规则，条文元数据可核对Article10。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用2完整包含第10(6)条二手商品双方可约定较短期间及一年下限。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用4完整包含成员国可提供更长期限的序言句，支持重复说明。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 32,
+    "official_cases_with_review": 28,
+    "answer_grades_pending": 68,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 100
+  }
+}
