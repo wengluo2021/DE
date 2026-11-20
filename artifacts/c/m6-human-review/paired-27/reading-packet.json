@@ -1,0 +1,74 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 27,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-refuse-refund-interest-rate",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-refuse-refund-interest-rate",
+    "question": "What annual statutory interest rate must a trader add when reimbursing a consumer under Article 13 of Directive 2011/83/EU?",
+    "topic": "unanswerable",
+    "answerable": false,
+    "reference_answer": null,
+    "key_facts": [],
+    "evidence": [],
+    "unanswerable_reason": "Article 13 of Directive 2011/83/EU requires reimbursement of the payments it identifies and, in a later paragraph, use of the same means of payment without fees, but it states no interest rate. The other directives state reimbursement periods or prohibit fees on reimbursement, and the Annex to Directive 93/13/EEC discusses contract terms about interest charged for financial services. None of those provisions sets a statutory annual rate on an Article 13 reimbursement.",
+    "refusal_reference": "The frozen five-document corpus does not contain sufficient information to answer this question."
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第27题_退款法定年利率未载明_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-4af5583545e941f88d54504fdc77c350",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-b2d6a10ba28c477ca4acd34f1c136463",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-49e4fe49c0c748c2a7412fcc27522c31",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-51d31cd37bca40679e338d4291ce652f",
+      "AI_suggested_answer_grade": null,
+      "AI_suggested_refusal_correct": true,
+      "AI_reason": "已对照Article13退款范围/期限及本地利率段落；93/13附件的金融服务利率调整条款不是退款法定年利率，不能移用。本库不提供该数值，拒答合理。 本组实际为completed/insufficient且claims为空，未虚构数字或事实，辅助建议refusal_correct=true；仍待实际人确认，未写官方评分。",
+      "claims": [],
+      "recorded_answer_grade": null,
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
