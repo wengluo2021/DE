@@ -1,0 +1,199 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 24,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-utd-negotiation-burden",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-utd-negotiation-burden",
+    "question": "A seller claims that a standard term in a consumer contract covered by Directive 93/13/EEC was individually negotiated. Who must prove that claim?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "The seller or supplier who makes that claim bears the burden of proof.",
+    "key_facts": [
+      "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "article_id": "eu_unfair_terms_93_13:article:3",
+        "structure_id": null,
+        "start": 10666,
+        "end": 10819,
+        "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第24题_谁证明条款已经个别协商_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-7666f68b5c5e43b1bdb3dd57bbec55fc",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be on the seller or supplier.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6754145622253418,
+              "chunk_id": "60363ae5ec8e2ca6fb587cc28cff06ca4026b3203e590622b19f16d849f76420",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 10400,
+              "end": 10800,
+              "text": "rtain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall b",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。",
+          "Chinese_explanation": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1只到the burden of proof ... shall b，未出现incumbent on him等承担者结尾。题目本来就在问谁举证，不能从题干或句首有seller就补出承担者，因此对完整答案主张建议不支持；完整A虽支持答案，但不是本条实际引用。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-603bafa78a2d45ea85492c4b2c6d43e7",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.661454975605011,
+              "chunk_id": "317a0dc3f6903c21b3f188b8ab4db3061693b72e24951349da97079a624cc6dd",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 10666,
+              "end": 10932,
+              "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "Chinese_explanation": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-3edd649c38df41ffb5fb00b160d3ffeb",
+      "AI_suggested_answer_grade": "wrong",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "A第3条明确由主张已个别协商的卖方/供应方举证，本组insufficient，建议wrong（误拒答）。",
+      "claims": [],
+      "recorded_answer_grade": "wrong",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-78f148d61b704a16b9efd0b627d82b50",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "明确由声称已协商的卖方/供应方承担举证，A唯一必要事实齐全，建议correct；实际引用支持性须另看。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6555256247520447,
+              "chunk_id": "49c995bfc7233783a3626737b3e92e0dd01f066ec1e4a3c530a73e443b85bc2e",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 10384,
+              "end": 10932,
+              "text": "The fact that certain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "Chinese_explanation": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整包含卖方/供应方主张标准条款经个别协商时burden incumbent on him，him的先行词在同句清楚。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
