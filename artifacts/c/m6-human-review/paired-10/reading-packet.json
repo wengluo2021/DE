@@ -1,0 +1,377 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 10,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-sgd-minor-lack-no-termination",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-sgd-minor-lack-no-termination",
+    "question": "Under Directive (EU) 2019/771, may a consumer terminate the sales contract when the lack of conformity is only minor?",
+    "topic": "single_article",
+    "answerable": true,
+    "reference_answer": "No. The consumer is not entitled to terminate if the lack of conformity is only minor, and the seller bears the burden of proving that it is minor.",
+    "key_facts": [
+      "5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_sale_of_goods_2019_771",
+        "article_id": "eu_sale_of_goods_2019_771:article:13",
+        "structure_id": null,
+        "start": 75446,
+        "end": 75649,
+        "text": "5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第10题_轻微瑕疵不能解除及其证明责任_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-371befde88f34dbbbd97e2bcf7f3d0f3",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "回答了轻微不符不能解除，但未写由卖方举证其轻微，A要点仅部分覆盖，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6749388575553894,
+              "chunk_id": "481d5e770c0ff429eac782e25b76c1257a3fecf7455402454b5e2fd9a23beff5",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [],
+              "start": 46000,
+              "end": 46400,
+              "text": " affects the ability of the consumer to make normal use of the goods and the consumer cannot be expected to trust that repair or replacement by the seller would remedy the problem.\n(53) In order to maintain a balance between the rights and obligations of the contracting parties, the consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.\n(",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。",
+          "Chinese_explanation": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用4的序言(53)完整说解除仅在不符非轻微时可享有；是必要条件的重述，没有声称所有非轻微瑕疵都自动可解除。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-98c601b161534d868a15a611c93491bd",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Under Directive (EU) 2019/771, the consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6952385902404785,
+              "chunk_id": "c838e0288864376f128cdd4608b0d986b5903f81346ac39982f8c0b6ce8665ab",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75449,
+              "end": 75840,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "Chinese_explanation": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6952385902404785,
+              "chunk_id": "c838e0288864376f128cdd4608b0d986b5903f81346ac39982f8c0b6ce8665ab",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75449,
+              "end": 75840,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "Chinese_explanation": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-514b9d40855d409586132115e913c026",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.695054292678833,
+              "chunk_id": "2a0ece9d4ff14d87e0caa69a0da8f4315773277564b1cedc64d412db401b3914",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75200,
+              "end": 76000,
+              "text": "r termination of the sales contract; or\n(d) the seller has declared, or it is clear from the circumstances, that the seller will not bring the goods into conformity within a reasonable time, or without significant inconvenience for the consumer.\n5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "Chinese_explanation": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+            "citation_numbers": [
+              2
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 2,
+              "score": 0.695054292678833,
+              "chunk_id": "2a0ece9d4ff14d87e0caa69a0da8f4315773277564b1cedc64d412db401b3914",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75200,
+              "end": 76000,
+              "text": "r termination of the sales contract; or\n(d) the seller has declared, or it is clear from the circumstances, that the seller will not bring the goods into conformity within a reasonable time, or without significant inconvenience for the consumer.\n5. The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether ",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 2
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "Chinese_explanation": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "The consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6805618405342102,
+              "chunk_id": "b79ea7b6ee29c3e0a92f89e95adf2b6e13e706d558aed418cc811a432213ca0d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [],
+              "start": 45600,
+              "end": 46400,
+              "text": "ted to maintain confidence in the ability of the seller to bring the goods into conformity or not, for instance, due to the same problem appearing twice. Similarly, in certain situations, the lack of conformity could be of such a serious nature that the consumer cannot maintain confidence in the ability of the seller to bring the goods into conformity, such as where the lack of conformity severely affects the ability of the consumer to make normal use of the goods and the consumer cannot be expected to trust that repair or replacement by the seller would remedy the problem.\n(53) In order to maintain a balance between the rights and obligations of the contracting parties, the consumer should enjoy the right to terminate the contract only in cases where the lack of conformity is not minor.\n(",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。",
+          "Chinese_explanation": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用4的序言(53)支持只有非轻微才享有解除权的必要条件重述；不等于宣称非轻微就是充分条件。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-a0f3664d5b044b7bb4d419253cdcacfb",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "包含轻微不符不得解除及卖方举证两部分，A必要事实齐全，建议correct。S400/S800虽缺标准证据前缀5.导致严格区间Hit=false，但这不否定其完整语义回答，不能按Hit机械打答案分。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6980169415473938,
+              "chunk_id": "ab97538e8ffbf7503c3f6e906c8a2ea0eba64b529ec450c800e972a7eb2e7b0d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75449,
+              "end": 76119,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\n",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "Chinese_explanation": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际引用完整保存第13(5)条轻微不符不得解除的句子，尽管部分结构块不含前缀编号5.。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6980169415473938,
+              "chunk_id": "ab97538e8ffbf7503c3f6e906c8a2ea0eba64b529ec450c800e972a7eb2e7b0d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_sale_of_goods_2019_771",
+              "article_ids": [
+                "eu_sale_of_goods_2019_771:article:13"
+              ],
+              "start": 75449,
+              "end": 76119,
+              "text": "The consumer shall not be entitled to terminate the contract if the lack of conformity is only minor. The burden of proof with regard to whether the lack of conformity is minor shall be on the seller.\n6. The consumer shall have the right to withhold payment of any outstanding part of the price or a part thereof until the seller has fulfilled the seller's obligations under this Directive. Member States may determine the conditions and modalities for the consumer to exercise the right to withhold the payment.\n7. Member States may regulate whether and to what extent a contribution of the consumer to the lack of conformity affects the consumer's right to remedies.\n\n",
+              "title": "Directive (EU) 2019/771 of the European Parliament and of the Council of 20 May 2019 on certain aspects concerning contracts for the sale of goods, amending Regulation (EU) 2017/2394 and Directive 2009/22/EC, and repealing Directive 1999/44/EC (Text with EEA relevance.)",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0771",
+              "article_labels": [
+                "Article 13"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "Chinese_explanation": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "同一实际引用完整保存轻微与否的举证责任在卖方，支持该主张。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
