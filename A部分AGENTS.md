@@ -1,64 +1,64 @@
-# DERag 项目开发约定
+# DERag Project Development Conventions
 
-## 项目与任务
+## Project and Tasks
 
-- 项目位于 `D:\gitcode\Edit\DE`，目标是带可核验引用的知识库问答与分块对照实验。
-- 当前语料采用 EUR-Lex 官方英文消费者权益文档，问题、参考答案和证据摘录使用英文。
-- 执行 A 部分任务时，读取 [A 部分需求与开发顺序](./A部分需求与开发顺序.md) 中与当前步骤相关的内容。执行 B 部分任务时，读取 [B 部分需求与开发顺序](./B部分需求与开发顺序.md)，并使用 A 交付的数据格式。
-- 项目早期设计和 B 文档仍有中文语料示例，处理当前这批资料时使用英文模型与 `Chapter`、`Article` 结构约定。
-- 按用户指定的任务范围完成实现与验证，阶段交付包含实际产物、运行命令和检查结果。
+- The project is located at `D:\gitcode\Edit\DE`; its goal is knowledge-base question answering with verifiable citations and chunk comparison experiments.
+- The current corpus uses official EUR-Lex English consumer rights documents; questions, reference answers, and evidence excerpts are in English.
+- When performing Part A tasks, read the content relevant to the current step in [Part A Requirements and Development Order ](./A部分需求与开发顺序.md). When performing Part B tasks, read [Part B Requirements and Development Order ](./B部分需求与开发顺序.md), and use the data format delivered by A.
+- The project's early design and the B document still contain Chinese corpus examples; when processing the current batch of materials, use English models and the `Chapter` and `Article` structural conventions.
+- Complete implementation and validation within the task scope specified by the user; stage deliverables include actual artifacts, run commands, and check results.
 
-## 作业原文的验收要求
+## Acceptance Requirements from the Assignment Text
 
-以下依据用户提供的完整选题说明整理，作为课程功能验收基准。实现重点是准备和服务检索知识的后端数据管线，以及回答忠于来源的机制。
+The following is organized from the complete topic description provided by the user and serves as the baseline for course functionality acceptance. The implementation focus is the backend data pipeline that prepares and serves knowledge for retrieval, and the mechanism for answering faithfully to sources.
 
-| 项目 | 必须完成的内容 |
+| Item | Required Content |
 | --- | --- |
-| 数据准备 | 收集一组自定义文档，编写脚本完成加载、分块和向量化，使用开源 embedding 模型或 embedding API。比较至少两种切分策略，报告它们对检索质量的影响。 |
-| 知识库存储 | 在向量数据库中保存文档块及其对应 embedding，保留块与来源文档的对应关系。 |
-| 语义检索 | 将用户问题转换为 embedding，根据语义相似度从向量数据库检索最相关的文档块。 |
-| 基于证据生成 | 将原始问题和检索到的块传给 LLM API，提示模型仅依据提供的上下文回答，每项主张明确引用来源文档和块。知识库缺少足够信息时明确说明无法回答。 |
-| 评估 | 构建至少 20 组问答测试集，实际运行系统，报告检索命中率和答案正确性，同时报告切分策略对检索质量的影响。 |
+| Data preparation | Collect a set of custom documents, write scripts to complete loading, chunking, and vectorization, using an open-source embedding model or embedding API. Compare at least two chunking strategies and report their impact on retrieval quality. |
+| Knowledge base storage | Store document chunks and their corresponding embeddings in a vector database, preserving the mapping between chunks and source documents. |
+| Semantic retrieval | Convert user questions into embeddings and retrieve the most relevant document chunks from the vector database based on semantic similarity. |
+| Evidence-based generation | Pass the original question and retrieved chunks to the LLM API, instructing the model to answer only based on the provided context and to explicitly cite the source document and chunk for each claim. When the knowledge base lacks sufficient information, clearly state that it cannot answer. |
+| Evaluation | Build a test set of at least 20 question-answer pairs, actually run the system, report retrieval hit rate and answer correctness, and also report the impact of chunking strategy on retrieval quality. |
 
-作业允许通过不同块大小、重叠与无重叠等方式构成切分策略对比。结合当前语料，本组选择固定窗口与法条结构感知两种方法。执行时按本节区分课程最低要求与下节的组内实验设计。
+The assignment permits comparing chunking strategies via different chunk sizes, overlap, and no overlap. Given the current corpus, this group chose two methods: fixed window and article-structure-aware. In execution, this section distinguishes the course minimum requirements from the group's experimental design in the next section.
 
-## 本组现有实验方案
+## Current experimental plan of this group
 
-- 使用当前已保存的五份英文欧盟消费者权益文档，保存其来源、快照、清洗全文和可核验位置。
-- 切分采用固定窗口 / 法条结构感知 × 400 / 800 字符，得到 F400、S400、F800、S800 四个条件。向量库选 Chroma，检索采用 Top-5。
-- 四组共享冻结语料、embedding 模型、问题集及检索配置。生成阶段固定 LLM、提示词及生成参数，记录每次运行配置，支持配对比较。
-- 测试集采用 24 道可答题和 6 道应拒答题，共 30 道题；四个条件完整运行时产生 120 条逐题记录。
-- 额外检查引用准确性与拒答表现。以上文档数、四组条件、题数和技术选型属于本组方案，课程最低验收按上一节执行。
+- Use the five currently saved English EU consumer rights documents, preserving their sources, snapshots, cleaned full text, and verifiable locations.
+- Chunking uses fixed window / article-structure-aware × 400 / 800 characters, yielding four conditions: F400, S400, F800, S800. The vector store is Chroma, and retrieval uses Top-5.
+- All four groups share the frozen corpus, embedding model, question set, and retrieval configuration. In the generation stage, the LLM, prompts, and generation parameters are fixed; each run's configuration is recorded to support paired comparison.
+- The test set uses 24 answerable questions and 6 questions that should be refused, 30 questions in total; a full run of the four conditions produces 120 per-question records.
+- Additionally check citation accuracy and refusal behavior. The above document count, four conditions, question count, and technology choices belong to this group's plan; the course minimum acceptance is executed per the previous section.
 
-## Python 环境
+## Python environment
 
-- 使用项目 `.venv`，Python 版本与 `.python-version` 对齐，当前为 `3.13.11`。
-- 在项目根目录执行 Python 命令时，使用 `.\.venv\Scripts\python.exe`。安装依赖使用同一解释器的 `-m pip`。
-- 实际新增的运行依赖同步登记到项目依赖文件，保证组员能够复现。
+- Use project `.venv`; the Python version aligns with `.python-version`, currently `3.13.11`.
+- When running Python commands in the project root directory, use `.\.venv\Scripts\python.exe`. Install dependencies using `-m pip` of the same interpreter.
+- Newly added runtime dependencies are registered in the project dependency file so group members can reproduce.
 
-## A 部分的数据处理
+## Part A data processing
 
-- `data/raw/` 保存官方 HTML 快照及浏览器生成的配套资源。清洗脚本按 `data/sources.json` 中登记的 HTML 路径读取。
-- 清洗后的 UTF-8 全文和结构 JSON 写入 `data/processed/`，保留法规标题、章节、条文、段落，以及有实质内容的序言、附件和脚注。
-- 来源记录包含官方 URL、实际保存版本、语言、文件路径和实际计算的 SHA-256。无法核实的字段使用 `null` 并注明原因，登记时间单独记录。
-- 通过 HTML 结构识别主条文，正文交叉引用和附件对照表中的 `Article` 编号归属各自的段落或表格。
-- 先统一全文的换行和空白规则，再生成位置。字符区间采用 Python `[start, end)`，保证 `clean_text[start:end]` 与保存的条文或证据文本一致。
-- 文档和条文使用稳定 ID。重复登记或处理同一输入时，按 ID 更新，并验证结果可复现。
-- 冻结语料和题集时记录内容哈希、处理规则及版本。修订内容后更新版本并重新核对受影响的证据位置。
-- 正式题集共 30 道英文题，其中 24 道可答、6 道应拒答，保存为 `data/eval/gold.jsonl`。每道可答题的证据来自对应冻结正文，拒答条件以整套冻结语料为准。
+- `data/raw/` stores the official HTML snapshots and browser-generated companion resources. The cleaning script reads the HTML paths registered in `data/sources.json`.
+- The cleaned UTF-8 full text and structure JSON are written to `data/processed/`, preserving regulation titles, chapters, articles, paragraphs, and preambles, annexes, and footnotes with substantive content.
+- Source records include the official URL, the actually saved version, language, file path, and the actually computed SHA-256. Fields that cannot be verified use `null` with the reason noted; registration time is recorded separately.
+- Main articles are identified via HTML structure; `Article` numbers in body cross-references and annex comparison tables are attributed to their respective paragraphs or tables.
+- First unify newline and whitespace rules across the full text, then generate positions. Character intervals use Python `[start, end)`, ensuring `clean_text[start:end]` matches the saved article or evidence text.
+- Documents and articles use stable IDs. When the same input is registered or processed repeatedly, update by ID and verify the results are reproducible.
+- When freezing the corpus and question set, record content hashes, processing rules, and versions. After revising content, update the version and re-verify affected evidence locations.
+- The formal question set has 30 English questions in total, of which 24 are answerable and 6 should be refused, saved as `data/eval/gold.jsonl`. Each answerable question's evidence comes from the corresponding frozen body text; refusal conditions are based on the entire frozen corpus.
 
-## 检索、引用与评估的实现约定
+## Implementation conventions for retrieval, citation, and evaluation
 
-- 正式问答使用真实语义 embedding、向量数据库和 LLM API。参考 `rag.py` 的流程时，将示例 MD5 向量化、内存检索和抽取回答替换为对应的正式组件。
-- 文档块与问题使用匹配的 embedding 模型与配置。检索结果包含 `document_id`、`chunk_id`、块文本、语料版本和原文位置，供引用与评估复用。
-- 每条事实主张绑定本轮检索结果中的来源文档和块。后端校验引用能定位到对应快照，并保存当时的证据文本，支持核对历史回答。
-- 缺少足够证据时明确返回信息不足。校验失败或模型、索引调用失败时返回对应错误状态，运行记录保存失败原因。
-- 正式评估基于冻结题集，保存逐题问题、参考答案、标准证据、检索结果、最终回答、引用和评分。区间覆盖法的命中率口径沿用 A、B 需求文档，多块可以共同覆盖一段标准证据。
-- 报告各策略的检索命中率和答案正确性，写清分子、分母、Top-k 和评分规则。本组可答题指标以 24 道可答题为分母，6 道应拒答题单独统计，并记录调用失败和误拒答。
-- 对照参考答案和原文逐题判断答案正确性，逐项核查引用是否支持主张。演示页面中的样本记录独立标注，正式报告读取实际运行与复核结果。
+- Formal Q&A uses real semantic embeddings, a vector database, and an LLM API. When referencing the `rag.py` workflow, replace the example MD5 vectorization, in-memory retrieval, and extractive answering with the corresponding formal components.
+- Document chunks and questions use matching embedding models and configurations. Retrieval results include `document_id`, `chunk_id`, chunk text, corpus version, and original-text location, for reuse in citation and evaluation.
+- Each factual claim is bound to the source document and chunk in the current round's retrieval results. The backend verifies that the citation can be located in the corresponding snapshot and saves the evidence text at that time, supporting verification of historical answers.
+- When sufficient evidence is lacking, explicitly return insufficient information. When validation fails or model or index calls fail, return the corresponding error status, and the run record saves the failure reason.
+- Formal evaluation is based on the frozen question set, saving per-question question, reference answer, standard evidence, retrieval results, final answer, citations, and scores. The hit-rate definition of the interval-coverage method follows the A and B requirements documents; multiple chunks may jointly cover one piece of standard evidence.
+- Report each strategy's retrieval hit rate and answer correctness, clearly stating numerator, denominator, Top-k, and scoring rules. This group's answerable-question metrics use the 24 answerable questions as the denominator; the 6 questions that should be refused are counted separately, and call failures and false refusals are recorded.
+- Judge answer correctness question by question against reference answers and source text, and check item by item whether citations support the claims. Sample records on the demo page are labeled independently; the formal report reads actual run and review results.
 
-## 验证与交付
+## Validation and delivery
 
-- 修改涉及来源、清洗、条文定位或题集时，运行对应的校验，检查文件路径、ID 唯一性、哈希、字符区间和证据摘录。
-- 脚本提供可复现的入口，错误输出包含具体文件、文档 ID、条文或题号，便于定位和重试。
-- 交付时说明实际修改、执行命令、验证结果及仍待确认的信息。实验数字和完成状态以实际运行产物为依据。
+- When changes involve sources, cleaning, article location, or the question set, run the corresponding validation to check file paths, ID uniqueness, hashes, character intervals, and evidence excerpts.
+- Scripts provide reproducible entry points; error output includes the specific file, document ID, article, or question number, facilitating location and retry.
+- At delivery, state the actual changes, executed commands, validation results, and information still pending confirmation. Experimental numbers and completion status are based on actual run artifacts.

@@ -1,41 +1,41 @@
-# C任务完成说明与阅读路线
+# C Task Completion Notes and Reading Path
 
-2026-11-20。**按本次授权，C的本地实现、正式实验、混合来源评分、跨平台恢复和离线交付已完成。**源码仍在answer-eval；本地交付完成后，用户另行授权整理提交GitHub，最新上传状态见[M7_10](handoffs/M7_10_GitHub交付完成与组长阅读入口.md)。未直接改main或代团队提交课程作业。
+2026-11-20. **Under this authorization, C's local implementation, formal experiments, mixed-source scoring, cross-platform recovery, and offline delivery are complete.** The source remains in answer-eval; after local delivery was completed, the user separately authorized organizing and committing to GitHub, and the latest upload status is in [M7_10 ](handoffs/M7_10_GitHub交付完成与组长阅读入口.md). I did not directly modify main or submit the course assignment on the team's behalf.
 
-## 项目与你的任务
+## Project and your task
 
-项目研究法规先怎样切块，会不会影响检索和回答。系统先找到给定法规片段，再让现成大模型据片段回答并附引用；没有重新训练大模型。A做法规/标准题，B做分块/向量检索，你的C负责把回答、引用核验、保存、页面、实验/评分和最终运行包接成一个完整系统。
+The project studies how chunking regulations first affects retrieval and answering. The system first finds the given regulation snippets, then has an off-the-shelf LLM answer based on the snippets with citations; no LLM was retrained. A handles regulation/standard questions, B handles chunking/vector retrieval, and your C is responsible for connecting answering, citation verification, persistence, pages, experiments/scoring, and the final run package into one complete system.
 
-现在C模块能完成带引用回答/拒答、逐字来源校验、问答与任务持久化、四组批量实验、评分历史、JSON/CSV导出和四页API接入。已接A正式五法规与B真实BGE-M3/Chroma，正式实验不是模拟数据。
+The C module can now perform cited answering/refusal, verbatim source verification, Q&A and task persistence, four-group batch experiments, scoring history, JSON/CSV export, and four-page API integration. It is connected to A's formal five regulations and B's real BGE-M3/Chroma; the formal experiments are not simulated data.
 
-## 已经交出什么
+## What has been delivered
 
-1. 正式30题×4组共120条结果，0技术错误；原模型答案、检索证据和全部失败/重试记录保留。
-2. 96整答等级、24拒答判断、166条引用判断全部齐备；来源21份具体人工确认、99份C授权AI辅助，不称全部纯人工复核。
-3. Windows401项和Linux400项通过/1平台跳过；最新评分库又在禁网/无Key的新Linux卷恢复，124条评分历史、启动及重启后的导出字节均一致。
-4. 最终离线包、SHA清单、逐成员/层校验和无Key检查已通过。旧DE.tar与全部旧candidate/unreviewed归档保留。
+1. Formal 30 questions × 4 groups, 120 results in total, 0 technical errors; original model answers, retrieval evidence, and all failure/retry records are retained.
+2. 96 overall-answer grades, 24 refusal judgments, and 166 citation judgments are all complete; sources are 21 specific human confirmations and 99 C-authorized AI-assisted, and are not described as all purely human-reviewed.
+3. Windows 401 items and Linux 400 items passed/1 platform skips; the latest scoring database was also restored on a new Linux volume with network disabled/no key, and 124 scoring-history records, startup, and post-restart export bytes were all identical.
+4. The final offline package, SHA manifest, per-member/layer verification, and no-key check have passed. The old DE.tar and all old candidate/unreviewed archives are retained.
 
-完整正确数为F400 6/24、S400 9/24、F800 10/24、S800 13/24；引用支持27/36、33/35、42/45、50/50。S800在本批最好，但仍非全对，20次可答题误拒答没有隐藏。具体方法、分母、案例与局限读[C部分报告](C部分报告草稿.md)。
+Complete correct counts are F400 6/24, S400 9/24, F800 10/24, S800 13/24; citation support 27/36, 33/35, 42/45, 50/50. S800 is best in this batch but still not fully correct, and the 20 incorrect refusals of answerable questions are not hidden. For specific methods, denominators, cases, and limitations, read the [C section report ](C部分报告草稿.md).
 
-## 阅读顺序与文件位置
+## Reading order and file locations
 
-先读[评分方式与授权记录](M6评分方式与授权记录.md)，再读[C部分报告](C部分报告草稿.md)，需要复现时读[交付与恢复](本轮交付清单与恢复.md)。原逐题中英说明、阶段交接和日期日志全部保留。
+First read [Scoring method and authorization record ](M6评分方式与授权记录.md), then the [C section report ](C部分报告草稿.md), and for reproduction read [Delivery and recovery ](本轮交付清单与恢复.md). The original per-question Chinese/English notes, stage handovers, and date logs are all retained.
 
-最终文件在工作区`deliveries/20261120-C-final-mixed-review/`，先打开其中README_先读我.md。它包含源码/冻结数据ZIP、完整评分/证据/SQLite备份ZIP、DE.tar、固定模型权重TAR及FINAL-MANIFEST/SHA256SUMS。
+The final files are in workspace `deliveries/20261120-C-final-mixed-review/`; first open README_先读我.md in it. It contains the source/frozen-data ZIP, full scoring/evidence/SQLite-backup ZIP, DE.tar, fixed model weights TAR, and FINAL-MANIFEST/SHA256SUMS.
 
-| 文件 | 字节数 | SHA-256 |
+| File | Bytes | SHA-256 |
 | --- | --- | --- |
 | C-source-data-scored-20261120.zip | 2073716 | `105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7` |
 | C-scored-results-20261120.zip | 33513874 | `e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9` |
 | DE.tar | 1870832128 | `0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05` |
 | BGE-M3-5617a9f6-weights.tar | 2293350400 | `bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958` |
 
-离线源码快照为`16a8e82b62cbe5a76e48bb5715fb7a15a2338a07`；此后的本地提交只补交付清单、来源说明和收尾记录，业务代码未变。包内README已有独立完整恢复步骤，原Key不随包分发。
+The offline source snapshot is `16a8e82b62cbe5a76e48bb5715fb7a15a2338a07`; subsequent local commits only add the delivery manifest, source notes, and wrap-up records, with no change to business code. The README in the package already has independent complete recovery steps; the original key is not distributed with the package.
 
-GitHub阅读与下载请从[仓库交付导航](../delivery/c-20261120/README.md)进入。
+For GitHub reading and downloads, start from the [repository delivery navigation ](../delivery/c-20261120/README.md).
 
-## 你接下来交给组长什么
+## What you hand to the team lead next
 
-提供最终目录、C报告和评分方式说明，让组长审阅整合。Git仍保留独立分支，组长合并、全组课程报告/展示和最终提交由团队处理；已按用户后续授权发布C交付附件，没有代发团队消息。完整材料已准备好，不必为交接再运行120题或重复下载模型。
+Provide the final directory, C report, and scoring method notes for the team lead to review and integrate. Git still keeps a separate branch; team lead merging, whole-team course report/presentation, and final submission are handled by the team; C delivery attachments were published under subsequent user authorization, and no team messages were sent on the team's behalf. The complete materials are ready; there is no need to run the 120 questions again or re-download models for handover.
 
-当前工作数据库已经有全部结果。再次打开电脑只需看根续做入口和最新M7_07，不恢复旧备份覆盖当前库。若未来需要新功能或新实验，应另记新版本并保留本次基线。
+The current working database already has all results. On reopening the computer, just look at the root continuation entry and the latest M7_07; do not restore an old backup over the current database. If new features or new experiments are needed in the future, record a new version and keep this baseline.

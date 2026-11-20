@@ -27,3 +27,7 @@ data/formal_corpus/indexes/
 data/formal_corpus/sqlite/
 data/formal_corpus/runs/
 data/formal_corpus/.retrieval.lock
+
+# SQLite backup sidecars are transient; publish the standalone snapshot only.
+exports/**/sqlite-backup/*-wal
+exports/**/sqlite-backup/*-shm

@@ -1,31 +1,31 @@
-# M6第22次交接：启动问题定位与只读HTTP恢复
+# M6 handoff 22: startup issue diagnosis and read-only HTTP recovery
 
-2026-11-20，answer-eval，承接ddf299d。本阶段没有写新评分；M6_21的第1题四组完整评分仍是当前进度。
+2026-11-20, answer-eval, following ddf299d. No new scores were written in this stage; M6_21's complete scoring of question 1's four groups remains the current progress.
 
-## 排查结论与实际证据
+## Diagnosis conclusions and actual evidence
 
-1. 正常独立进程在默认受限exec环境中45秒未启动；faulthandler于20/40秒记录到相同栈：标准库`socket._fallback_socketpair`在accept等待，调用链来自asyncio事件循环自通信初始化。尚未导入项目应用，requests=[]。
-2. 仅创建socketpair并设置3秒超时，默认执行同样失败；允许本机通信的执行上下文中，同一个Python、同一个最小操作在0.002秒成功。证据表明本轮启动阻塞来自执行环境的本机通信限制，无需业务代码变更。此前线程式超时没有当时栈，继续作为旧失败保留，不假称重新取得其栈。
-3. 使用允许本机通信的执行上下文，空Key、离线模型环境启动正常app.main独立进程，1.533秒完成；只发6个GET，评分页面HTTP 200、列表/完整run/JSON/CSV与当前SQLite一致。
-4. health中SQLite/retrieval ready=true、generation configured=false。整体ready=false是空Key检查的预期状态，不将此说成模型生成可用性新验收。
-5. 自己的失败/成功进程均停止；数据库lease再次获取/释放成功，检查前后完整run相同，没有新评分、问答、实验或索引操作。
+1. A normal standalone process did not start within 45 seconds in the default restricted exec environment; faulthandler recorded the same stack at 20/40 seconds: standard library `socket._fallback_socketpair` waiting in accept, with the call chain coming from asyncio event loop self-communication initialization. The project application had not yet been imported; requests=[].
+2. Merely creating a socketpair and setting a 3 second timeout also fails under default execution; in an execution context that permits local communication, the same Python and the same minimal operation succeed within 0.002 seconds. The evidence indicates this round's startup blocking comes from the execution environment's local communication restriction, with no business code change needed. The earlier threaded timeout has no stack from that time; it remains retained as an old failure, and we do not falsely claim to have re-obtained its stack.
+3. Using an execution context that permits local communication, with an empty key and offline model environment, a normal app.main standalone process started successfully and completed within 1.533 seconds; only 6 GETs were sent; the scoring page HTTP 200, list/complete run/JSON/CSV match the current SQLite.
+4. In health, SQLite/retrieval ready=true, generation configured=false. Overall ready=false is the expected state of the empty-key check; this is not described as a new acceptance of model generation availability.
+5. Both our own failed and successful processes were stopped; the database lease was acquired/released successfully again; the complete run was identical before and after the check; no new scoring, Q&A, experiments, or index operations.
 
-成功报告`artifacts/c/m6-review-http-readonly-permitted/result.json`，失败报告`artifacts/c/m6-review-http-readonly/result.json`，各自server.log与SHA保留。最小对照在socketpair-context-check.json，最终自检在成功目录final-self-check.json。阅读说明：[评分服务排查与正常读取验证](../M6评分服务启动排查与正常读取验证.md)。
+Success report `artifacts/c/m6-review-http-readonly-permitted/result.json`, failure report `artifacts/c/m6-review-http-readonly/result.json`, each with server.log and SHA retained. The minimal control is in socketpair-context-check.json, and the final self-check is in the success directory's final-self-check.json. Reading notes: [Scoring service diagnosis and normal read verification ](../M6评分服务启动排查与正常读取验证.md).
 
-## 当前评分与保护项
+## Current scoring and protected items
 
-原run_id=`eval-20ac108503c44829a96ecca386d4b9de`。完整配对题1/30；人工整答4/96，剩92；拒答0/24；支持8/166，剩158。review历史8、含评分回答4，review_complete=false、formal_results=false。
+Original run_id=`eval-20ac108503c44829a96ecca386d4b9de`. Complete paired questions 1/30; human full answers 4/96, 92 remaining; refusals 0/24; supports 8/166, 158 remaining. Review history 8, answers with scores 4, review_complete=false, formal_results=false.
 
-第1题四组回答和8条支持均是用户明确确认，已在M6_21保存。最新部分评分导出仍为`artifacts/c/m6-human-review/paired-01/grade-confirmation/evaluation.partial-review.json`及CSV。当前SQLite不被旧备份覆盖；A原45文件、原3份M6材料、全部模型生成和此前评分未改动。
+Question 1's four groups' answers and 8 supports are all explicitly confirmed by the user and were saved in M6_21. The latest partial scoring export remains `artifacts/c/m6-human-review/paired-01/grade-confirmation/evaluation.partial-review.json` and CSV. The current SQLite is not overwritten by old backups; A's original 45 file, the original 3 M6 materials, all model generations, and prior scores are unchanged.
 
-本阶段仅本机只读检查及文档/进度记录；没有源码变更，不重复工程回归。学校API0，累计已知191672 token保持，历史未知usage保留；没有下载、重建、容器或新实验。只在answer-eval本地提交，不push、不写main、不发团队消息。
+This stage involved only local read-only checks and documentation/progress records; no source code changes, and the engineering regression was not repeated. School API 0; cumulative known 191672 tokens unchanged; historical unknown usage retained; no downloads, rebuilds, containers, or new experiments. Committed only locally in answer-eval; no push, no writing to main, no team messages.
 
-## 下次继续
+## Continue next time
 
-1. 读根续做入口、CURRENT与本报告，核对分支/HEAD/工作树；原AI辅助预审全部完成，不创建batch-16。
-2. 第1题已全评，下一题第2题gold-crd-withdrawal-refund；原用户确认不顺延其他题。继续解释参考要点、四组实际答案/引用，再保存明确决定。
-3. 如需本机HTTP读取或后续评分页操作，在具备本机通信权限的执行上下文启动正常进程。不要改业务代码来绕过本次环境限制，不重新下载模型或调用学校API。
-4. 本轮未发送PATCH，后续有实际确认时仍用原评分校验/合并/审计逻辑保存，并单独记录字段来源。最新CURRENT保持人工已确认与AI建议分离。
-5. 下次不重复这个诊断脚本：两次输出都已存在并受保护；除非出现新问题，直接复用结论。所有自己的检查服务当前已停止，可以关机休息。
+1. Read the root continuation entry, CURRENT, and this report; verify branch/HEAD/worktree; the original AI-assisted pre-review is fully complete; do not create batch-16.
+2. Question 1 is fully scored; the next question is 2 gold-crd-withdrawal-refund; the original user confirmation does not extend to other questions. Continue explaining reference points and the four groups' actual answers/citations, then save an explicit decision.
+3. If local HTTP reading or subsequent scoring page operations are needed, start a normal process in an execution context with local communication permission. Do not change business code to bypass this environment restriction, and do not re-download models or call the school API.
+4. No PATCH was sent this round; when actual confirmation occurs later, still save using the original scoring validation/merge/audit logic, and record field sources separately. The latest CURRENT keeps human-confirmed and AI-suggested items separate.
+5. Do not repeat this diagnostic script next time: both outputs already exist and are protected; unless a new issue arises, reuse the conclusions directly. All our own check services are currently stopped; you can shut down and rest.
 
-本阶段最新提交与干净状态记录在根`C任务交接总览.md`。
+The latest commit and clean state for this stage are recorded in the root `C任务交接总览.md`.

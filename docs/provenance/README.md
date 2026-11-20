@@ -1,7 +1,7 @@
-# A交付与课程要求的来源快照
+# A delivery and source snapshot for course requirements
 
-这些文件按原始字节复制自main的66dbada9ed7c2339216d80bcc456ee5b00342fac，原始路径与SHA见来源说明与SHA.json。保留它们便于可移植源码包核对A的来源、冻结和复核记录；原文件未改写。
+These files were copied byte-for-byte from main's 66dbada9ed7c2339216d80bcc456ee5b00342fac; original paths and SHAs are in the source notes and SHA.json. They are retained to let the portable source package verify A's provenance, freezing, and review records; the original files were not rewritten.
 
-A最新交付说明记录负责人2026-11-19确认通过语料/题集人工与视觉复核；冻结manifest中仍有此前未复核的历史provenance文字，未为同步文字而改变冻结版本。以上是A资料复核，不是C正式120项的人工评分。
+A's latest delivery notes record that the owner 2026-11-19 confirmed passing the manual and visual review of the corpus/question set; the frozen manifest still contains earlier unreviewed historical provenance text, and the frozen version was not changed just to synchronize the text. The above is an A materials review, not human scoring of the formal C 120 items.
 
-文内D盘路径是原作者电脑的历史运行位置，本机按最新C交接与formal-a配置运行。课程说明中至少20组问答的要求已由冻结30题覆盖，答案正确率仍待C实际人工评分后补齐。
+The D-drive paths in the text are the original author's historical run locations on their computer; this machine runs according to the latest C handoff and the formal-a configuration. The course requirement of at least 20 groups of Q&A is covered by the frozen 30 questions; answer accuracy still awaits completion after actual C human scoring.

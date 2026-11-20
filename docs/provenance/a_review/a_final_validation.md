@@ -1,14 +1,14 @@
-# A 部分最终校验
+# Part A Final Verification
 
-记录日期：2026-11-19。解释器是 `D:\gitcode\Edit\DE\.venv\Scripts\python.exe`，版本 Python 3.13.11。
+Record date: 2026-11-19. The interpreter is `D:\gitcode\Edit\DE\.venv\Scripts\python.exe`, version Python 3.13.11.
 
-本轮没有改写正文、结构、题目、答案或证据，没有重新编题，也没有用新结果覆盖冻结版本。没有建立向量索引，没有下载 embedding 模型，没有运行语义检索、LLM 回答或四组评分，没有执行 Git 写入或推送。
+This round did not rewrite the body text, structure, questions, answers, or evidence, did not re-author questions, and did not overwrite the frozen version with new results. No vector index was built, no embedding model was downloaded, no semantic retrieval, LLM answers, or four-group scoring were run, and no Git writes or pushes were performed.
 
-## 第 6 步程序校验时的运行前基线
+## Pre-run Baseline for Step 6 Program Verification
 
-写入任何生成产物之前，记录了 44 个受保护文件的 SHA-256，并另存字节副本。44 个文件都存在，`missing=0`。复跑清洗、正式导出和题集生成之后再次逐字节对照，`compared=44 changed=0`。因此下面的哈希同时是当时运行前和运行后的值。后续人工复核状态更新涉及的 Markdown 哈希变化单列于文末，来源、语料与题集文件均未改变。
+Before writing any generated artifacts, the SHA-256 of 44 protected files was recorded, and byte copies were saved separately. All 44 files exist, `missing=0`. After re-running cleaning, formal export, and question set generation, a byte-by-byte comparison was performed again, `compared=44 changed=0`. Therefore the hashes below are both the pre-run and post-run values at that time. Markdown hash changes involved in subsequent manual review status updates are listed separately at the end of the document; source, corpus, and question set files were unchanged.
 
-| 文件 | SHA-256 |
+| File | SHA-256 |
 | --- | --- |
 | data/sources.json | `6a7a20ff4c9ea87bb940a066e8fdf08b285458fc9208b6b231dcf8e99fa5bad9` |
 | data/raw/eu_consumer_rights_2011_83.html | `7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e` |
@@ -28,7 +28,7 @@
 | data/processed/eu_unfair_terms_93_13.json | `c4d387298a543eb545a91cec522662b77473a6c79c7ee27c450818f17df29893` |
 | data/corpus_manifest.json | `3ecdec520cc259b876e65fc2fea492b956deaef941c9a46ba4c08b368b87bd4f` |
 | data/formal_corpus/manifest.json | `516d0aa17c2674ee57eadfbb73452140e88667a0e3c9c51d7028dd127f1fdb57` |
-| data/formal_corpus/raw 五份 HTML | 与上表 `data/raw` 中同名文件哈希相同 |
+| Five HTML files in data/formal_corpus/raw | Same hashes as the files of the same names in `data/raw` above |
 | data/formal_corpus/processed/eu_consumer_rights_2011_83.json | `d1db1b2e0e85b5a9a62b40fc23a0974cd85d597167ccb9a0b654aea22b631e24` |
 | data/formal_corpus/processed/eu_digital_content_2019_770.json | `4af53f1647e1eeed535c65d0abcf7802cd50f313e0fef0b98227ccb7cfbf9f79` |
 | data/formal_corpus/processed/eu_sale_of_goods_2019_771.json | `3fcd40957992fa8693ecc91cdcad1ce7c23225a92a8809fc1dac20078febea77` |
@@ -51,26 +51,26 @@
 | artifacts/a_review/gold_review.md | `f25b102165730cce9c3496d4df8634b86bde0812e10e3e13ae5ffc302737ac0f` |
 | artifacts/a_review/sample_handoff.md | `b4adf827e6226e4ca480bfac3457b00ac9e3d95652e197467015b52532994684` |
 
-正式包 raw 的五个哈希已逐项计入 44 个文件，并与 `data/raw` 同名快照相同。上表把它们合并成一行，避免把同一哈希写两遍。
+The five hashes of the formal package raw have been counted item by item among the 44 files and are identical to the snapshots of the same names in `data/raw`. The table above merges them into one row to avoid writing the same hash twice.
 
-## 命令和退出码
+## Commands and Exit Codes
 
-工作目录均为 `D:\gitcode\Edit\DE`。
+The working directory is `D:\gitcode\Edit\DE` in all cases.
 
-| 命令 | 作用 | 退出码 | 结果 |
+| Command | Purpose | Exit code | Result |
 | --- | --- | ---: | --- |
-| `scripts\validate_data.py --scope corpus` | 只校验 | 0 | `documents=5`，`main_articles=121`，`result=ok` |
-| `scripts\validate_data.py --scope eval` | 只校验 | 0 | `questions=30 answerable=24 refusal=6`，`result=ok` |
-| `python -m unittest tests.test_corpus_batch tests.test_corpus_freeze tests.test_gold_eval` | 只测试临时副本和内存对象 | 0 | `Ran 19 tests`，`OK` |
-| `scripts\process_documents.py --all` | 重新生成已验收 txt 和 JSON | 0 | `batch_documents=5`，`succeeded=5`，`failed=0`，`result=ok` |
-| `scripts\export_corpus.py` | 重新生成正式包和两份清单 | 0 | `corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795`，`documents=5`，`main_articles=121`，`result=ok` |
-| `scripts\build_gold.py` | 重新生成题集和题集 manifest | 0 | `gold_version=9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d`，`result=ok` |
+| `scripts\validate_data.py --scope corpus` | Validate only | 0 | `documents=5`, `main_articles=121`, `result=ok` |
+| `scripts\validate_data.py --scope eval` | Validate only | 0 | `questions=30 answerable=24 refusal=6`, `result=ok` |
+| `python -m unittest tests.test_corpus_batch tests.test_corpus_freeze tests.test_gold_eval` | Test temporary copies and in-memory objects only | 0 | `Ran 19 tests`, `OK` |
+| `scripts\process_documents.py --all` | Regenerate the accepted txt and JSON | 0 | `batch_documents=5`, `succeeded=5`, `failed=0`, `result=ok` |
+| `scripts\export_corpus.py` | Regenerate the formal package and two manifests | 0 | `corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795`, `documents=5`, `main_articles=121`, `result=ok` |
+| `scripts\build_gold.py` | Regenerate the question set and question set manifest | 0 | `gold_version=9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d`, `result=ok` |
 
-单元测试输出里出现过 `result=failed` 和参数错误文本。那是异常用例预期捕获的失败信息，测试断言这些失败发生，整组结果是 `OK`。三项分布是 `tests.test_corpus_batch` 8 项、`tests.test_corpus_freeze` 6 项、`tests.test_gold_eval` 5 项。
+The unit test output contained `result=failed` and parameter error text. Those are failure messages expected to be caught by exception test cases; the tests assert that these failures occur, and the overall result is `OK`. The three-way distribution is `tests.test_corpus_batch` 8 items, `tests.test_corpus_freeze` 6 items, and `tests.test_gold_eval` 5 items.
 
-全语料校验打印的结构计数：
+Structure counts printed by the full-corpus validation:
 
-| 文档 | offset_checks |
+| Document | offset_checks |
 | --- | --- |
 | eu_consumer_rights_2011_83 | annex=2 article=35 block=418 chapter=6 footnote=23 preamble=1 recital=67 signature=1 table=2 table_row=80 title=1 |
 | eu_digital_content_2019_770 | article=27 block=261 footnote=23 preamble=1 recital=87 signature=1 title=1 |
@@ -78,56 +78,56 @@
 | eu_unfair_practices_2005_29 | annex=2 article=21 block=277 chapter=4 footnote=26 preamble=1 recital=25 section=2 signature=1 title=1 |
 | eu_unfair_terms_93_13 | annex=1 article=11 block=91 footnote=4 preamble=1 recital=24 signature=1 title=1 |
 
-主条文 35 + 27 + 27 + 21 + 11 = 121。
+Main articles 35 + 27 + 27 + 21 + 11 = 121.
 
-## 正常加载
+## Normal loading
 
-通过 `import app.retrieval.types` 使用 `formal_loader`，没有绕过包初始化。
+Uses `formal_loader` via `import app.retrieval.types`, without bypassing package initialization.
 
-- `formal_loader(data/formal_corpus)(794e3d19...)` 与 `data/corpus_manifest.json` 的版本一致。五份加载全文等于已验收 txt。每条 `article_id`、`start`、`end`、`label`、`chapter`、`section` 与已验收 JSON 一致，`text[start:end]` 等于条文文本。问题数 0。
-- `formal_loader(data/sample_corpus)(41404e6e...)` 仍能加载唯一样本文档，并与已验收的第一份 txt 和结构一致。问题数 0。
-- 正式包 `data_dir` 记录为 `data/formal_corpus`。
+- The versions of `formal_loader(data/formal_corpus)(794e3d19...)` and `data/corpus_manifest.json` match. The full text loaded for all five documents equals the accepted txt. Each `article_id`, `start`, `end`, `label`, `chapter`, and `section` matches the accepted JSON, and `text[start:end]` equals the article text. Issue count: 0.
+- `formal_loader(data/sample_corpus)(41404e6e...)` can still load the single-sample document and matches the accepted first txt and structure. Issue count: 0.
+- The official package `data_dir` is recorded as `data/formal_corpus`.
 
-## 题集复查
+## Question set review
 
-30 个 `case_id` 唯一。题型为 `single_article` 13、`multi_evidence` 11、`unanswerable` 6。五份文档都有可答题。42 段 quote 长度为 68–393，且由校验器确认 `text[start:end] == quote`。
+30 `case_id` are unique. Question types are `single_article` 13, `multi_evidence` 11, and `unanswerable` 6. All five documents have answerable questions. The quote lengths of the 42 segments are 68–393, and `text[start:end] == quote` is confirmed by the validator.
 
-`gold-crd-withdrawal-refund` 仍有 3 段证据。第 2 段以 “2. Notwithstanding paragraph 1” 开头，第 3 段以 “3. Unless the trader has offered to collect” 开头。参考答案保留附加配送费用可以不退，以及买卖合同中可以暂扣退款。
+`gold-crd-withdrawal-refund` still has 3 segments of evidence. Segment 2 begins with “2. Notwithstanding paragraph 1”, and segment 3 begins with “3. Unless the trader has offered to collect”. The reference answers retain that additional delivery costs may be non-refundable, and that refunds may be withheld in sales contracts.
 
-`gold-sgd-two-year-liability` 仍有 3 段证据。第 3 段以 “6. Member States may provide that, in the case of second-hand goods” 开头。参考答案保留二手商品可以约定更短期间，但不得短于一年。
+`gold-sgd-two-year-liability` still has 3 segments of evidence. Segment 3 begins with “6. Member States may provide that, in the case of second-hand goods”. The reference answer retains that a shorter period may be agreed for second-hand goods, but it must not be shorter than one year.
 
-`gold-ucpd-pyramid-scheme` 的两段归属分别是第 5 条和 `eu_unfair_practices_2005_29:annex:I`。附件中的重复条号没有被记到主条文。六道拒答题的空证据和拒答理由由 `--scope eval` 检查。
+The two segments of `gold-ucpd-pyramid-scheme` are attributed to Article 5 and Article `eu_unfair_practices_2005_29:annex:I` respectively. The duplicate article numbers in the annex were not recorded under the main articles. The empty evidence and refusal reasons for the six refusal questions are checked by `--scope eval`.
 
-`gold.jsonl` 的文件哈希等于 manifest 里的 `gold_version` 和 `gold_sha256`，绑定的 `corpus_version` 与正式包一致。
+The file hash of `gold.jsonl` equals `gold_version` and `gold_sha256` in the manifest, and the bound `corpus_version` matches the official package.
 
-## 正式导出缺文档问题
+## Missing-document issue in the official export
 
-修复前，`scripts/export_corpus.py` 的命令行直接调用通用导出。来源清单只有四份官方文档时，仍会写出交付包并打印 `documents=4`、`result=ok`。
+Before the fix, the command line of `scripts/export_corpus.py` directly invoked the generic export. When the source list contained only four official documents, it would still write the delivery package and print `documents=4` and `result=ok`.
 
-本轮在正式命令写入交付包之前增加集合核对。五份官方 ID 必须正好是：
+This round adds a set check before the official command writes the delivery package. The five official IDs must be exactly:
 
 `eu_consumer_rights_2011_83`、`eu_digital_content_2019_770`、`eu_sale_of_goods_2019_771`、`eu_unfair_practices_2005_29`、`eu_unfair_terms_93_13`。
 
-少一份时错误含 `missing:`，多一份时含 `extra:`，退出码为 1，且临时目录中不会出现 `data/formal_corpus` 或 `data/corpus_manifest.json`。通用 `export_corpus` 继续供现有小语料测试使用，原有 4 项冻结测试仍然通过。新增 2 项测试只作用在临时目录。当前完整清单重新导出后，正式包哈希没有变化。
+When one is missing, the error contains `missing:`; when there is one extra, it contains `extra:`; the exit code is 1; and neither `data/formal_corpus` nor `data/corpus_manifest.json` appears in the temporary directory. The generic `export_corpus` remains in use for the existing small-corpus tests, and the original 4 frozen tests still pass. The 2 newly added tests operate only in temporary directories. After re-exporting with the current full manifest, the official package hash is unchanged.
 
-## 复核状态
+## Review status
 
-| 范围 | 程序检查 | AI 辅助原文复核 | 人工复核（A 负责人确认） | 浏览器视觉检查 |
+| Scope | Programmatic check | AI-assisted source review | Human review (confirmed by owner A) | Browser visual check |
 | --- | --- | --- | --- | --- |
-| 五份来源、快照、清洗和区间 | 本轮 `--scope corpus` 通过 | 五份文档各有一份复核报告，对照 HTML DOM 和正文切片 | 2026-11-19 由 A 负责人确认通过，未发现问题 | 同次确认已在浏览器查看五份本地 HTML，通过 |
-| 正式包和版本 | `formal_loader`、重复导出和冻结测试通过 | `corpus_freeze_review.md` 记录哈希和加载核对，不是逐条阅读正文 | 2026-11-19 由 A 负责人确认通过，未发现问题 | 同次确认覆盖五份快照页面 |
-| 30 道标准题 | `--scope eval` 和题集测试通过 | `gold_review.md` 对照冻结片段起草答案和拒答理由 | 2026-11-19 由 A 负责人确认通过，未发现问题 | 同次确认对照页面复查标准题 |
+| Five sources, snapshots, cleaning, and ranges | This round `--scope corpus` passed | One review report per document, checked against the HTML DOM and body slices | 2026-11-19 confirmed passed by owner A, no issues found | The same confirmation included viewing the five local HTML files in a browser, passed |
+| Official package and version | `formal_loader`, repeated export, and frozen tests passed | `corpus_freeze_review.md` records hashes and loading checks, not a line-by-line reading of the body text | 2026-11-19 confirmed passed by owner A, no issues found | The same confirmation covered the five snapshot pages |
+| 30 standard questions | `--scope eval` and question set tests passed | `gold_review.md` drafted answers and refusal reasons against the frozen snippets | 2026-11-19 confirmed passed by owner A, no issues found | The same confirmation rechecked the standard questions against the pages |
 
-程序切片匹配只说明 quote 与冻结正文一致。它不是答案正确率，也不能写成 100% 正确。答案、拒答理由和五份本地 HTML 的浏览器视觉检查，已由 A 负责人于 2026-11-19 确认通过，未发现问题。该状态依据负责人确认更新，不改变既有程序检查和 AI 复核的执行记录。
+Programmatic slice matching only shows that the quote matches the frozen body text. It is not an answer accuracy rate, and it must not be written as 100% correct. The answers, refusal reasons, and browser visual check of the five local HTML files were confirmed passed by owner A on 2026-11-19, with no issues found. This status is updated based on the owner's confirmation and does not change the execution records of the existing programmatic checks and AI review.
 
-## 人工复核状态更新与当前报告哈希
+## Human review status update and current report hashes
 
-A 负责人于 2026-11-19 确认五份文档、30 道标准题和五份本地 HTML 的浏览器视觉检查通过，未发现问题。本次只同步 Markdown 中的复核状态，未修改冻结数据、题目、答案、证据或两个内容版本。
+On 2026-11-19, owner A confirmed that the five documents, 30 standard questions, and the browser visual check of the five local HTML files passed, with no issues found. This update only synchronizes the review status in the Markdown; it does not modify frozen data, questions, answers, evidence, or the two content versions.
 
-第 6 步历史基线表保留程序校验时的原值。其中 `gold_review.md` 因本次人工复核状态更新而改变文件字节，当前对照值如下；同一路径以本节的最新值为准。此更新仅适用于文档状态，不替代来源或语料内容变更时应做的版本更新。
+The historical baseline table in step 6 retains the original values from the programmatic validation. Among them, `gold_review.md` changed file bytes due to this human review status update; the current comparison values are as follows; for the same path, the latest value in this section prevails. This update applies only to document status and does not replace the version update that should be made when sources or corpus content change.
 
-| 文件 | SHA-256 |
+| File | SHA-256 |
 | --- | --- |
 | artifacts/a_review/gold_review.md | `d30d13fba966fcb3f6e429f251e0955e718bb947d634dfce701a5b36904ecab1` |
 
-`A测试.md` 的 44 文件复现脚本读取本报告的表格，同一路径使用最后登记的值，因此可以继续核对当前交付文件；其余原有受保护文件哈希保持不变。
+The 44 file reproduction script for `A测试.md` reads the tables in this report and uses the last registered value for the same path, so it can continue to verify the current delivery files; the hashes of the other existing protected files remain unchanged.

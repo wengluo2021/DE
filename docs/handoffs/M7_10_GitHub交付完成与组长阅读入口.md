@@ -1,15 +1,15 @@
-# M7第10次交接：GitHub交付已完成
+# M7 handoff 10: GitHub delivery completed
 
-2026-11-20。用户已授权提交及登录，登录成功后完成本阶段；无需再次登录、下载模型或跑实验。
+2026-11-20. The user has authorized the commit and login; this stage is complete after a successful login; no further login, model download, or experiment run is needed.
 
-源码/报告/全部评分证据已快进推送answer-eval。草稿PR：https://github.com/wengluo2021/DE/pull/2，供组长审阅，未合并main。
+Source code/reports/all scoring evidence have been fast-forward pushed to answer-eval. Draft PR: https://github.com/wengluo2021/DE/pull/2，供组长审阅，未合并main。
 
-独立C交付页：https://github.com/wengluo2021/DE/releases/tag/c-delivery-20261120。全部10个附件uploaded，官方API的size及sha256逐项对应本地准备清单，已发布为C部分prerelease，不替代全组正式版本或设为仓库latest。具体附件下载链接和实际服务端摘要见delivery/c-20261120/GITHUB-RECEIPT.json。
+Standalone C delivery page: https://github.com/wengluo2021/DE/releases/tag/c-delivery-20261120。全部10个附件uploaded，官方API的size及sha256逐项对应本地准备清单，已发布为C部分prerelease，不替代全组正式版本或设为仓库latest。具体附件下载链接和实际服务端摘要见delivery/c-20261120/GITHUB-RECEIPT.json。
 
-包含源码冻结资料ZIP、完整评分/SQLite备份ZIP、DE.tar、3权重分片、指南ZIP、附件JSON、SHA清单及合并脚本。先下载并解压指南，权重分片合并后校验原TAR SHA。准备时GITHUB-ASSETS.json的not_uploaded是历史准备快照，当前以上传回执为准。
+Includes the source frozen materials ZIP, the full scoring/SQLite backup ZIP, DE.tar, 3 weight shards, the guide ZIP, the attachment JSON, the SHA manifest, and the merge script. First download and extract the guide; after merging the weight shards, verify against the original TAR SHA. At preparation time, not_uploaded in GITHUB-ASSETS.json was a historical preparation snapshot; the upload receipts are now authoritative.
 
-旧DE.tar、所有旧candidate/unreviewed和正式120项原输出保留。原四包与固定16a8e82源码快照不变，随后提交仅补入口/上传回执。21具体人工确认+99授权AI来源保持，不能称全部人工金标准。Windows/Linux验收及异机未实测的边界不变。
+The old DE.tar, all old candidate/unreviewed outputs, and the original outputs for the formal 120 items are retained. The original four packages and the pinned 16a8e82 source snapshot are unchanged; subsequent commits only add entry points/upload receipts. The specific 21 human confirmation + 99 authorized AI sources are retained and cannot be called a fully human gold standard. The Windows/Linux acceptance and the boundary that cross-machine testing has not been performed remain unchanged.
 
-登录凭据仅由标准Git管理器在进程内存使用，公开文件无真实Key/Token。阶段新增学校API0，无新生成、下载模型或索引重建。代理下TLS曾失败，当前成功Git命令采用临时http.proxy为空、HTTP/1.1；未改系统代理/证书验证。
+Login credentials are used only by the standard Git manager in process memory; public files contain no real keys/tokens. This stage adds 0 school APIs, with no new generation, model downloads, or index rebuilds. TLS previously failed under the proxy; the currently successful Git commands use a temporary empty http.proxy and HTTP/1.1; system proxy/certificate verification was not changed.
 
-所有阶段均有日期日志和自检。后续由组长审阅PR、整合全组报告和最终提交；本次不合并main、不代发团队消息。实际最终HEAD、远程一致和工作树状态以根交接总览为准。
+All stages have dated logs and self-checks. Going forward, the team lead will review the PR, consolidate the whole team's report, and make the final submission; this round does not merge into main or send team messages on anyone's behalf. The actual final HEAD, remote consistency, and working tree status are governed by the root handoff overview.

@@ -1,27 +1,27 @@
-# M7第8次交接：GitHub交付整理与提交
+# M7 handover 8: GitHub delivery organization and commit
 
-2026-11-20。用户明确授权“把交付内容整理好提交github”。此前不push限制已由本次授权更新；继续保留answer-eval，不直接写main、不强推、不代发团队消息。
+2026-11-20. The user explicitly authorized "organize the delivery content and commit to GitHub." The previous no-push restriction has been updated by this authorization; continue to keep answer-eval, do not write directly to main, do not force-push, and do not send team messages on others' behalf.
 
-本地C任务及四个离线包已完成并验收，本阶段只整理公开交付与上传。新增delivery/c-20261120导航、恢复说明及原包清单，README提供入口；不修改运行代码、原始实验、评分或冻结数据。
+The local C task and the four offline packages are complete and accepted; this stage only organizes and uploads the public delivery. Added delivery/c-20261120 navigation, recovery instructions, and the original package manifest; the README provides the entry point; runtime code, original experiments, scoring, and frozen data are not modified.
 
-已读取远程：answer-eval与本地有73个待上传提交且远程无新分叉，main仍为66dbada9ed7c2339216d80bcc456ee5b00342fac。GitHub连接器显示仓库有push权限，无answer-eval开放PR。普通Git直连超时；使用电脑已有127.0.0.1:7890代理fetch通过，不写全局代理配置。
+Remote read: answer-eval has 73 commits pending upload locally and the remote has no new divergence; main remains 66dbada9ed7c2339216d80bcc456ee5b00342fac. The GitHub connector shows the repository has push permission, and there is no open PR for answer-eval. Direct ordinary Git connection timed out; fetch succeeded using the computer's existing 127.0.0.1:7890 proxy, without writing global proxy configuration.
 
-GitHub插件不能直接上传本地Git打包历史及多GB二进制附件，使用Git/标准GitHub REST接口完成这些部分。当前本机Git没有保存的GitHub登录；连接器账号有权限不代表本机Git具备认证。上传状态暂为准备完成、等待本机认证，不能声称已push或附件已上线。
+The GitHub plugin cannot directly upload local Git packed history and multi-GB binary attachments, so Git/standard GitHub REST interfaces are used for these parts. The local Git currently has no saved GitHub login; the connector account having permission does not mean local Git is authenticated. Upload status is currently preparation complete, awaiting local authentication; do not claim it has been pushed or that attachments are online.
 
-预上传检查覆盖待推送历史中的全部blob，真实学校API Key和私钥标记未发现，没有超过100MiB的Git文件。Key仍保留在工作区私密文件中，不进入GitHub。
+The pre-upload check covered all blobs in the history to be pushed; no actual school API Key or private key markers were found, and no Git files exceed 100MiB. Keys remain in private workspace files and do not enter GitHub.
 
-下一步：完成本机GitHub登录；快进推送answer-eval并核对远程SHA；将实际完整离线包与必要分片作为独立C交付附件上传并核验服务端SHA/大小，补实际链接和状态。若建立PR，仅供组长审阅，不合并main。
+Next: complete local GitHub login; fast-forward push answer-eval and verify the remote SHA; upload the actual complete offline packages and necessary shards as independent C delivery attachments and verify server-side SHA/size, then add actual links and status. If a PR is created, it is for the team lead's review only and does not merge main.
 
-评分方式仍为21份具体人工确认、99份授权AI辅助。学校API新增0，未重跑实验、重建索引或下载模型。旧交接中的“未push”是各历史阶段当时状态，不改写历史。
+Scoring remains 21 specific human confirmations and 99 authorized AI-assisted. School API added 0; no experiment reruns, index rebuilds, or model downloads. The "not pushed" in old handovers is the state at each historical stage and does not rewrite history.
 
-## 本次上传尝试结论
+## Conclusion of this upload attempt
 
-本机GCM登录连接失败，Python/curl再次访问GitHub公开页也出现TLS连接关闭；没有取得或保存GitHub令牌，没有绕过证书校验。登录流程未完成，无待处理设备码或后台登录进程。当前最新代码尚未push，Release/PR尚未建立。
+Local GCM login connection failed, and Python/curl access to GitHub public pages again showed TLS connection closed; no GitHub token was obtained or saved, and certificate verification was not bypassed. The login flow was not completed, and there is no pending device code or background login process. The latest code has not yet been pushed, and no Release/PR has been created.
 
-离线四包可直接交给组长；GitHub附件也已准备：github-assets下3个权重分片与指南ZIP，其他三原包直接上传。分片整流SHA=原权重SHA；原包与旧包不改。附件清单及合并工具已放入delivery/c-20261120，恢复不依赖本机绝对路径。
+The four offline packages can be handed directly to the team lead; GitHub attachments are also prepared: 3 weight shards and the guide ZIP under github-assets, with the other three original packages uploaded directly. The whole-shard SHA = original weights SHA; original packages and old packages are unchanged. The attachment manifest and merge tool are in delivery/c-20261120, and recovery does not depend on local absolute paths.
 
-需要用户在可正常访问GitHub的网络中完成本机Git认证，之后继续快进推送并上传附件，核对远程SHA再更改not_uploaded状态。不要重新做实验或重复生成已存在分片。电脑操作技能引用的guidance.md要求“Do not automate user authentication dialogs.”，登录/验证码/最终授权应由本人操作，不向聊天发送密码或Token。
+The user needs to complete local Git authentication on a network with normal GitHub access, then continue the fast-forward push and upload attachments, verify remote SHAs, and then change the not_uploaded status. Do not redo experiments or regenerate existing shards. The guidance.md referenced by the computer operation skill requires "Do not automate user authentication dialogs."; login/captcha/final authorization should be performed by the user personally, and passwords or Tokens should not be sent to chat.
 
-用户已补充授权我完成登录，权限不再是阻塞；当前阻塞是实际Git认证及本机登录连接故障。两次现有浏览器连接超时，没有读取成功的登录页面。已针对真实权重分片验收合并工具，并验证再次运行不会覆盖既有相同目标。
+The user has additionally authorized me to complete login, so permission is no longer a blocker; the current blocker is actual Git authentication and local login connection failure. Two existing browser connections timed out, and no login page was successfully read. The merge tool has been accepted against real weight shards, and it was verified that rerunning does not overwrite existing identical targets.
 
-最后实际执行只针对answer-eval的非强制push，退出128：GCM登录TLS连接关闭，Git未获得认证。无凭据泄露、未创建PR/Release，main不作为写入目标。具体结果见artifacts/c/github-delivery/push-attempt.json。用户已授权登录，后续需要恢复可用的本机认证通道，无需再次申请提交权限。
+The final actual execution was only a non-forced push to answer-eval, exit 128: GCM login TLS connection closed, and Git did not obtain authentication. No credentials leaked, no PR/Release created, and main was not a write target. For specific results see artifacts/c/github-delivery/push-attempt.json. The user has authorized login; next, a working local authentication channel needs to be restored, with no need to request submission permission again.

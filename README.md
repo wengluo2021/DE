@@ -1,22 +1,22 @@
 # DERag
 
-GitHub交付已完成（独立answer-eval分支，未合并main）。[草稿PR #2](https://github.com/wengluo2021/DE/pull/2) · [全部离线附件](https://github.com/wengluo2021/DE/releases/tag/c-delivery-20261120)。
+GitHub delivery is complete (separate answer-eval branch, not merged into main). [Draft PR #2](https://github.com/wengluo2021/DE/pull/2) · [all offline attachments](https://github.com/wengluo2021/DE/releases/tag/c-delivery-20261120).
 
-GitHub交付阅读入口：[C部分交付导航与下载说明](delivery/c-20261120/README.md)。
+GitHub delivery reading entry point: [Part C delivery navigation and download instructions](delivery/c-20261120/README.md).
 
-## 2026-11-20 当前完成状态
+## 2026-11-20 Current completion status
 
-正式五法规、冻结30题、四组120项及全部评分字段已完成，0技术错误。评分来源为21份具体人工确认、99份C授权AI辅助，不称全部纯人工复核。完整正确数F400/S400/F800/S800分别6/24、9/24、10/24、13/24；方法、分母和失败分析见[C部分报告](docs/C部分报告草稿.md)与[评分方式](docs/M6评分方式与授权记录.md)。原模型输出及未评分基线保留。
+The formal five regulations, the frozen 30 questions, the four groups of 120 items, and all scoring fields are complete, with 0 technical errors. Scoring sources are 21 specific manual confirmations and 99 C-authorized AI-assisted ones; this is not described as entirely manual human review. The complete correct counts for F400/S400/F800/S800 are 6/24, 9/24, 10/24, and 13/24 respectively; for the method, denominators, and failure analysis, see the [Part C report](docs/C部分报告草稿.md) and [scoring method](docs/M6评分方式与授权记录.md). The original model outputs and unscored baselines are retained.
 
-Windows401项、Linux400项通过/1平台专用跳过，真实CPU检索/学校问答/重启及四组正式索引均有证据。最新带评分SQLite已在禁网、无Key的新Linux卷恢复，124条历史及重启前后JSON/CSV逐字节一致；运行镜像内68个代码/配置文件与当前源码相同。只读取已有结果，不为评分再次生成120题。
+Windows passed 401 items and Linux passed 400 items, with 1 platform-specific skips; there is evidence for real CPU retrieval, school Q&A, restart, and the four formal index groups. The latest scored SQLite has been restored on a new Linux volume with networking disabled and no key, and 124 records plus the JSON/CSV before and after restart are byte-for-byte identical; the 68 code/config files inside the runtime image match the current source. Only existing results are read; the 120 questions are not regenerated for scoring.
 
-正式配置`config/experiment.formal-a.json`；默认配置仍是development样例。最新导出在`artifacts/c/m6-final-scored/`。当前电脑继续使用已有正常数据库，不从旧备份覆盖。交付和恢复见[本轮交付清单](docs/本轮交付清单与恢复.md)，所有阶段报告与日期日志保留。源码在answer-eval分支；GitHub提交与附件状态见交付导航和最新M7_10记录，main由组长审阅后合并。
+Formal configuration `config/experiment.formal-a.json`; the default configuration is still the development sample. The latest export is in `artifacts/c/m6-final-scored/`. The current computer continues to use the existing working database and does not overwrite it from an old backup. For delivery and restoration, see [this round's delivery checklist](docs/本轮交付清单与恢复.md); all stage reports and dated logs are retained. The source is on the answer-eval branch; for GitHub commit and attachment status, see the delivery navigation and the latest M7_10 record; main will be merged after the team lead reviews it.
 
-最终离线包已完成：[C任务完成说明与阅读路线](docs/C任务完成说明与阅读路线.md)。最终目录为工作区deliveries/20261120-C-final-mixed-review，先读其中README_先读我.md。
+The final offline package is complete: [Part C task completion notes and reading path](docs/C任务完成说明与阅读路线.md). The final directory is the workspace deliveries/20261120-C-final-mixed-review; read README_先读我.md in it first.
 
-## 当前电脑查看已有结果
+## Viewing existing results on the current computer
 
-已有venv/模型无需重装。普通PowerShell在项目根运行以下无Key方式，随后打开`http://127.0.0.1:8765/evaluation`并选已有run；不会为恢复而开始新实验：
+The existing venv/model does not need to be reinstalled. In a normal PowerShell at the project root, run the following key-free method, then open `http://127.0.0.1:8765/evaluation` and select an existing run; this will not start a new experiment for restoration:
 
 ```powershell
 $env:DERAG_CONFIG='config/experiment.formal-a.json'
@@ -25,52 +25,52 @@ $env:LLM_API_KEY=''
 & '.venv/Scripts/python.exe' -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
 
-新生成问答需按本地API对接文档配置私密Key，Key不在交付包；查看/评分/导出现有结果不需要模型调用。Codex默认受限执行环境若卡在Python本机socketpair，使用已允许本机通信的执行上下文，见[启动排查](docs/M6评分服务启动排查与正常读取验证.md)。
+Newly generated Q&A requires a private key configured per the local API integration documentation; the key is not in the delivery package. Viewing/scoring/exporting existing results does not require model calls. If Codex's default restricted execution environment gets stuck on Python's local socketpair, use an execution context that already permits local communication; see [startup troubleshooting](docs/M6评分服务启动排查与正常读取验证.md).
 
 <details>
-<summary>较早C开发阶段记录（当前状态以上方为准）</summary>
+<summary>Earlier C development stage records (current status is governed by the above)</summary>
 
-## C 阶段开发入口
+## C stage development entry point
 
-C 的 M0–M4已落地：契约配置、引用问答、服务端保存/任务、四组评估/评分/导出、四页真实API接入。M5已接入B生产检索入口、统一依赖、A冻结数据校验、配置生成和预检；当前验收状态见[阶段交接](docs/handoffs)，日期操作见docs/worklogs。2026-11-20已合入A正式5法规/121主条文和24+6题，新配置为config/experiment.formal-a.json；A丰富字段和附件证据已适配，完整401项检查通过。正式建库/问答进度见最新交接，合成联调不代表课程成绩。按[三方对接与正式资料接入](docs/三方对接与正式资料接入.md)继续。
+C's M0–M4 are in place: contract configuration, citation Q&A, server-side saving/tasks, four-group evaluation/scoring/export, and real API integration on four pages. M5 has integrated B's production retrieval entry point, unified dependencies, A's frozen data validation, configuration generation, and preflight; for current acceptance status, see [stage handover](docs/handoffs); for dated operations, see docs/worklogs. 2026-11-20 has been merged into A's formal 5 regulations/121 main articles and 24+6 questions; the new configuration is config/experiment.formal-a.json; A's enriched fields and attachment evidence have been adapted, and the full 401-item check passes. For formal index building/Q&A progress, see the latest handover; synthetic integration testing does not represent a course grade. Continue per [three-party integration and formal material onboarding](docs/三方对接与正式资料接入.md).
 
-使用Python3.13.11和项目`.venv`。完整运行安装 `requirements.txt`（103个固定运行包）；开发/全部自动检查安装 `requirements-dev.txt`。原 `requirements-b*.txt`、`requirements-c*.txt`仍保留用于独立模块开发；C轻量入口不包含真实Chroma/embedding。已有环境和模型不必重建或重新下载。
+Use Python 3.13.11 and the project `.venv`. For a full run, install `requirements.txt` (103 pinned runtime packages); for development/all automated checks, install `requirements-dev.txt`. The original `requirements-b*.txt` and `requirements-c*.txt` are still retained for independent module development; the C lightweight entry point does not include real Chroma/embedding. Existing environments and models do not need to be rebuilt or re-downloaded.
 
-Linux另安装`requirements-linux.txt`中的固定平台补充；CPU构建使用同版`torch2.15.0+cpu`。新版容器、源码/冻结数据交付包与SHA校验步骤见[Docker与交付包复现](docs/Docker与交付包复现.md)。当前是否已实际构建和验证，以最新M7阶段交接与证据为准；最新A适配的镜像重验与120项正式评分仍待后续阶段，不能因容器能启动就称最终交付完成。
+On Linux, additionally install the pinned platform supplements in `requirements-linux.txt`; the CPU build uses the same version of `torch2.15.0+cpu`. For the new container, source/frozen data delivery package, and SHA verification steps, see [Docker and delivery package reproduction](docs/Docker与交付包复现.md). Whether it has actually been built and verified so far is governed by the latest M7 stage handover and evidence; the image re-verification for the latest A adaptation and the 120-item formal scoring are still pending in later stages, and final delivery cannot be called complete just because the container starts.
 
-`config/experiment.json`当前明确是development样例、语料fixture-en-v2、gold_version为空；正式运行需显式选config/experiment.formal-a.json。`DERAG_CONFIG`选择实验JSON，`DERAG_ENV_FILE`选择本地私密env，`DERAG_DATA_DIR`和`DERAG_MODEL_DIR`选择路径，`LLM_TRANSPORT`明确选择curl/httpx。路径从项目根解析，配置不污染全局环境；真实Key不在仓库中。`scripts.prepare_config`只在A输入全部校验后生成新的formal配置；`scripts.validate_data --config config/experiment.formal-a.json`只读C集成校验，A的`--scope corpus/eval`保留；`scripts.preflight`不下载、建库或发模型请求。
+`config/experiment.json` is currently explicitly a development sample, corpus fixture-en-v2, with gold_version empty; formal runs require explicitly selecting config/experiment.formal-a.json. `DERAG_CONFIG` selects the experiment JSON, `DERAG_ENV_FILE` selects the local private env, `DERAG_DATA_DIR` and `DERAG_MODEL_DIR` select paths, and `LLM_TRANSPORT` explicitly selects curl/httpx. Paths are resolved from the project root, and the configuration does not pollute the global environment; real keys are not in the repository. `scripts.prepare_config` generates a new formal configuration only after all A inputs are validated; `scripts.validate_data --config config/experiment.formal-a.json` is a read-only C integration check, and A's `--scope corpus/eval` is retained; `scripts.preflight` does not download, build an index, or send model requests.
 
-无网络问答核心检查：`.venv/Scripts/python.exe -m scripts.ask --fixtures --mock-llm --question "What does Article 2 state?"`。M1另有真实生成与拒答记录；这些使用固定合成证据，不是官方法规或正式检索评估。运行C检查可指定 `tests/test_contracts.py tests/test_config.py tests/test_answer.py tests/test_llm_client.py tests/test_ask_cli.py`，无须先装B的模型。
+Offline Q&A core check: `.venv/Scripts/python.exe -m scripts.ask --fixtures --mock-llm --question "What does Article 2 state?"`. M1 also has real generation and refusal records; these use fixed synthetic evidence and are not official regulations or a formal retrieval evaluation. Running the C check can specify `tests/test_contracts.py tests/test_config.py tests/test_answer.py tests/test_llm_client.py tests/test_ask_cli.py`, without first installing B's model.
 
-M2启动仍为 `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`。只使用一个worker，不加自动reload；数据库在data/sqlite。健康检查区分存活与数据/索引/模型就绪：缺正式资料时API明确返回409，页面能打开不表示知识库已完成。默认读取项目.env，可用DERAG_ENV_FILE显式选择本地环境文件；不自动寻找其他课程的密钥。M2新增检查为 `tests/test_persistence.py tests/test_tasks.py tests/test_qa_api.py`。
+M2 startup remains `python -m uvicorn app.main:app --host 127.0.0.1 --port 8765`. Only one worker is used, with no automatic reload; the database is in data/sqlite. The health check distinguishes liveness from data/index/model readiness: when formal materials are missing, the API explicitly returns 409; the page opening does not mean the knowledge base is complete. By default it reads the project .env, and DERAG_ENV_FILE can be used to explicitly select a local environment file; it does not automatically look for keys from other courses. The new M2 check is `tests/test_persistence.py tests/test_tasks.py tests/test_qa_api.py`.
 
-M3用法见 [评估使用说明](docs/评估使用说明.md)。生成并启用正式配置、资料和索引后，在另一个终端执行 `python -m scripts.run_eval --config config/experiment.formal-a.json --base-url http://127.0.0.1:8765`；必须与服务端使用同一正式配置，默认导出到新的data/runs/client-随机目录。`--run-id`读取已有实验，不重新生成。M3检查为 `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`；M0–M3组合227项通过，实际合成HTTP流程120项通过，均不代表正式成绩。
+For M3 usage, see [evaluation usage instructions](docs/评估使用说明.md). After generating and enabling the formal configuration, materials, and index, run `python -m scripts.run_eval --config config/experiment.formal-a.json --base-url http://127.0.0.1:8765` in another terminal; it must use the same formal configuration as the server, and by default it exports to a new data/runs/client-random directory. `--run-id` reads an existing experiment and does not regenerate it. The M3 check is `tests/test_evaluation.py tests/test_evaluation_api.py tests/test_eval_cli.py`; the combined M0–M3 227 items pass, and the actual synthetic HTTP flow 120 items pass; neither represents a formal grade.
 
-当前源码启动（已有.venv不必重建）：
+Start from the current source (an existing .venv does not need to be rebuilt):
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
 
-页面分别为/、/documents、/compare、/evaluation；会话、引用、实验与评分以后台SQLite为准。无正式资料显示未就绪、禁用生成，不回退演示。Windows原生索引目录超过200字符时会报INDEX_PATH_TOO_LONG，请选择短数据目录；全套测试的临时目录也应保持短。新版Docker已完成Linux工程检查：368通过/1Windows专用跳过、正常HTTP及12次真实CPU检索通过；该旧镜像不包含11月20日新A适配，当前源码的完整M7验收仍待后续阶段，见[M7最新交接](docs/handoffs/M7_02_Linux容器验收与续做.md)。
+The pages are /, /documents, /compare, and /evaluation respectively; sessions, citations, experiments, and scoring are governed by the backend SQLite. Without formal materials, it shows not ready and disables generation, without falling back to a demo. On Windows, a native index directory exceeding 200 characters reports INDEX_PATH_TOO_LONG; choose a short data directory, and keep the temporary directories for the full test suite short as well. The new Docker has completed the Linux engineering check: 368 passed/1 Windows-specific skip, normal HTTP and 12 real CPU retrievals passed; that old image does not include the new A adaptation from 11 month 20 day, and the full M7 acceptance of the current source is still pending in later stages; see [latest M7 handover](docs/handoffs/M7_02_Linux容器验收与续做.md).
 
-页面操作与证据见 [M4交接](docs/handoffs/M4_页面接入与真实问答.md)。Windows学校API验收显式使用generation.transport=curl；默认配置仍为httpx，不能把curl结果等同HTTPX/Linux已验证。正式部署先选定适用传输、配置本地env与冻结数据；参数改变会改变实验指纹，旧run保留。
+For page operations and evidence, see [M4 handover](docs/handoffs/M4_页面接入与真实问答.md). The Windows school API acceptance explicitly uses generation.transport=curl; the default configuration remains httpx, and curl results cannot be equated with HTTPX/Linux verification. For formal deployment, first select the applicable transport and configure the local env and frozen data; changing parameters changes the experiment fingerprint, and old runs are retained.
 
 </details>
 
 ---
 
-下方“运行方式/当前可操作内容”保留原预览版历史；其中对requirements.txt的描述属于当时状态，当前以顶部统一依赖说明为准。DE.tar仍为旧预览镜像；新的Docker工程验证另见M7交接，正式镜像归档未导出。官方数据已交付并适配，正式30×4实验另见最新M5/M6交接。
+The "How to run / currently operable content" below retains the original preview version history; its description of requirements.txt reflects the state at that time, and the unified dependency notes at the top now govern. DE.tar is still the old preview image; for the new Docker engineering verification, see the M7 handover separately; the formal image archive has not been exported. The official data has been delivered and adapted; for the formal 30×4 experiment, see the latest M5/M6 handover separately.
 
 <details>
-<summary>旧预览运行及镜像说明（不适用于当前C后台安装）</summary>
+<summary>Old preview run and image notes (not applicable to the current C backend installation)</summary>
 
-## 运行方式
+## How to run
 
-项目要求 Python 3.13（`.python-version` 指定 3.13.11）。只使用项目自己的 `.venv`，不依赖开发者电脑上的 Python 安装路径。`requirements.txt` 固定了当前前端预览服务的全部直接和间接 Python 依赖。
+The project requires Python 3.13 (`.python-version` specifies 3.13.11). Use only the project's own `.venv`, and do not depend on the Python installation path on the developer's computer. `requirements.txt` pins all direct and indirect Python dependencies of the current frontend preview service.
 
-Windows PowerShell（先安装 Python 3.13；`py -3.13` 应能找到解释器）：
+Windows PowerShell (install Python 3.13 first; `py -3.13` should be able to find the interpreter):
 
 ```powershell
 py -3.13 -m venv .venv
@@ -86,49 +86,49 @@ python3.13 -m venv .venv
 ./.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8765
 ```
 
-也可以使用 Docker，无需在宿主机安装 Python。需提前安装 Docker，并在项目目录执行：
+You can also use Docker, without installing Python on the host. Install Docker in advance, and run in the project directory:
 
 ```bash
 docker build -t de .
 docker run -d --name DE -p 127.0.0.1:8766:8000 de
 ```
 
-Docker 镜像名必须小写，所以镜像标签是 `de:latest`，容器名是 `DE`。打开 http://127.0.0.1:8766 。如端口被占用，请同时更改启动命令与访问地址。首次安装依赖或构建镜像需要联网；原预览镜像不调用外部模型。当前C后台真实问答需要配置API Key，密钥仅放在本地env；旧镜像不包含这些新功能。
+Docker image names must be lowercase, so the image tag is `de:latest` and the container name is `DE`. Open http://127.0.0.1:8766. If the port is in use, change both the startup command and the access address. The first dependency installation or image build requires network access; the original preview image does not call external models. The current C backend real Q&A requires an API key configured, with the key kept only in the local env; the old image does not include these new features.
 
-需要在另一台已安装 Docker Desktop 的电脑上离线运行时，传送项目目录里的 `DE.tar`，然后执行：
+To run offline on another computer with Docker Desktop installed, transfer `DE.tar` from the project directory, then run:
 
 ```powershell
 docker load -i DE.tar
 docker run -d --name DE -p 127.0.0.1:8766:8000 de:latest
 ```
 
-`DE.tar` 是当前前端预览版的完整镜像，不包含以后新增的真实 RAG 后端。代码更新后需要重新构建并导出镜像。
-容器创建后，在 Docker Desktop 的 Containers 页面可对 `DE` 点击 Start/Stop；命令行对应 `docker start DE` 和 `docker stop DE`。
+`DE.tar` is the complete image of the current frontend preview version and does not include the real RAG backend to be added later. After code updates, the image must be rebuilt and re-exported.
+After the container is created, you can click Start/Stop for `DE` on the Containers page of Docker Desktop; the command-line equivalents are `docker start DE` and `docker stop DE`.
 
-后续接入向量库、embedding 和模型 API 时，必须同步更新依赖文件、容器和复现说明，并重新在干净环境中安装验证。
+When subsequently integrating a vector store, embeddings, and model APIs, the dependency files, containers, and reproduction instructions must be updated in sync, and installation must be re-verified in a clean environment.
 
-## 当前可操作内容
+## Currently Available Actions
 
-- 切换四个视图、创建和切换本地会话、查看带来源的演示回答。
-- 导入本地 `.md`/`.txt` 文件，查看文档详情并预览固定窗口与法条结构感知的切块结果。
-- 在分块对照页选择文档、方法和块大小，比较块数、长度与边界。
-- 查看与导出明确标记为演示数据的评估报告；真实实验运行要等待后端接入。
+- Switch between the four views, create and switch local sessions, and view demo answers with sources.
+- Import local `.md`/`.txt` files, view document details, and preview chunking results for fixed windows and article-structure-aware chunking.
+- On the Chunk comparison page, select a document, method, and chunk size to compare chunk counts, lengths, and boundaries.
+- View and export evaluation reports explicitly marked as demo data; real experiment runs must wait for backend integration.
 
-浏览器本地存储仅用于前端预览，不是课程项目的最终数据存储。实际数据采集、两组以上独立向量索引和人工评估的要求见 [项目设计.md](./项目设计.md)。
+Browser local storage is used only for the frontend preview and is not the final data storage for the course project. For the requirements on actual data collection, two or more independent vector indexes, and human evaluation, see [项目设计.md](./项目设计.md).
 
 
 </details>
 
-## B 独立检索模块（已实现）
+## Module B Independent Retrieval (Implemented)
 
-组员从 GitHub 获取代码后，请先阅读 [B测试.md](./B测试.md)：包含依赖安装、自动测试、模型准备、浏览器验收及常见问题。
+After team members get the code from GitHub, please first read [B测试.md](./B测试.md): includes dependency installation, automated tests, model preparation, browser acceptance, and FAQ.
 
-详细接口、目录和集成约定见 [B开发文档.md](./B开发文档.md) 第 12 节。
-Python 3.13.11 / Windows CPU 在空虚拟环境中已验证安装、测试和真实模型运行。
-B独立开发可安装 `requirements-b.txt`；当前统一 `requirements.txt` 已包含B，完整环境无需再重复安装。`DE.tar`仍是前端预览镜像。
+For detailed interfaces, directories, and integration conventions, see [B开发文档.md](./B开发文档.md), Section 12.
+Python 3.13.11 / Windows CPU has been verified for installation, testing, and real model runs in an empty virtual environment.
+B can be installed independently for independent development with `requirements-b.txt`; the current unified `requirements.txt` already includes B, so the full environment does not need to install it again. `DE.tar` is still the frontend preview image.
 
 ```powershell
-# 在 DERag 项目根目录；若尚未建环境先执行 py -3.13 -m venv .venv
+# In the DERag project root; if the environment has not been created yet, first run py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-b.txt -r requirements-b-dev.txt
 .\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -m pytest tests/test_chunking.py tests/test_retrieval.py tests/test_retrieval_api.py -q
@@ -136,33 +136,33 @@ $env:DERAG_B_DEBUG_MODE = 'mock'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-打开 <http://127.0.0.1:8767/b-debug>，点击“建立四组测试索引”，然后预览分块、检索和左右对照。
-默认 mock 使用固定测试向量和真实 Chroma，不代表语义检索效果。正式语义模型的首次下载约 2.3 GB：
+Open <http://127.0.0.1:8767/b-debug>, click "Build four test indexes", then preview chunking, retrieval, and side-by-side comparison.
+The default mock uses fixed test vectors and real Chroma and does not represent semantic retrieval performance. The first download of the formal semantic model is about 2.3 GB:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.fetch_embedding --config config/retrieval.example.json
 .\.venv\Scripts\python.exe -m scripts.smoke_embedding --config config/retrieval.example.json
-# 停止原验证服务后切换模式，再启动
+# Stop the original verification service, switch modes, then start
 $env:DERAG_B_DEBUG_MODE = 'real'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-下载后的权重在 `models/embedding/`，模型文件哈希在 `derag-model-manifest.json`；权重和索引不上传普通 Git。
-依赖安装和首次模型下载需要网络，模型准备完成后编码和检索仅使用项目内文件。
-测试索引在 `data/b-fixtures/mock/` 与 `data/b-fixtures/real/` 分别保存，不与 A 的正式数据混用。
-`artifacts/b/` 保存真实模型、自动测试和网页操作的验证记录。
+The downloaded weights are in `models/embedding/`, and the model file hashes are in `derag-model-manifest.json`; weights and indexes are not uploaded to regular Git.
+Dependency installation and the first model download require network access; after model preparation is complete, encoding and retrieval use only files within the project.
+Test indexes are stored separately in `data/b-fixtures/mock/` and `data/b-fixtures/real/` and are not mixed with A's formal data.
+`artifacts/b/` stores verification records for real models, automated tests, and web operations.
 
 
-## 英文测试语料（2026-11-18）
+## English Test Corpus (2026-11-18)
 
-B 验证页的默认问题、三道问题建议、入库正文、文档标题和条文标签已切换为英文。活动版本为 `fixture-en-v2`，分块规则为 `structure-offset-v2`；支持英文 Chapter/Section 和句末标点，并保留中文回归测试。四组仍按 Python 字符数 400/800 切分，不能把上限理解为英文单词数。
+The default questions, three suggested questions, indexed body text, document titles, and article labels on the B verification page have been switched to English. The active version is `fixture-en-v2`, and the chunking rule is `structure-offset-v2`; English Chapter/Section and sentence-ending punctuation are supported, and Chinese regression tests are retained. The four groups are still split by Python character count 400/800; the limit must not be understood as English word count.
 
-当前验证：78 项自动测试通过；项目环境和独立 `.venv-b-verify` 环境各通过 12 次真实模型检索，以及超限保护、HTTP API 和原文切片核验。四组块数为 F400=34、S400=47、F800=18、S800=31。
+Current verification: 78 automated tests passed; the project environment and the independent `.venv-b-verify` environment each passed 12 real-model retrievals, as well as over-limit protection, HTTP API, and source-slice verification. The four group chunk counts are F400=34, S400=47, F800=18, S800=31.
 
-可输入：
+You can enter:
 
 - `How can an individual request deletion of personal information?`
 - `Can a reader renew a library book when the loan period expires?`
 - `What should a bus driver do after noticing an abnormal road condition?`
 
-这些英文正文仍是合成测试规则，不能视为官方法规或正式 30 题评估。完整样例与测试解释见 [英文语料说明](tests/fixtures/b/README.md)。旧中文结果已保留在 `artifacts/b/archive/zh-v1/`；更新后请重启原来的 B 服务并刷新浏览器。使用上方 `real` 模式启动命令可查看真实语义检索。
+This English body text is still a synthetic test rule and must not be regarded as official regulations or a formal 30 question evaluation. For the complete examples and test explanations, see [English corpus notes](tests/fixtures/b/README.md). The old Chinese results are retained in `artifacts/b/archive/zh-v1/`; after updating, restart the original B service and refresh the browser. Use the `real` mode startup command above to view real semantic retrieval.

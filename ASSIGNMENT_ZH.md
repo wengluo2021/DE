@@ -1,23 +1,23 @@
-# 基于自定义知识库与 RAG 的问答系统
+# Question-answering system based on a custom knowledge base and RAG
 
-大型语言模型（LLM）功能强大，但缺乏关于特定、私有或最新文档的知识，并且可能生成存在幻觉的答案。本项目要求你基于自定义知识库，采用检索增强生成（Retrieval-Augmented Generation，RAG）模式构建一个问答系统，其中每个答案都必须以检索到的来源为依据，并明确引用这些来源。
+Large language models (LLMs) are powerful, but they lack knowledge about specific, private, or up-to-date documents, and may generate hallucinated answers. This project requires you to build a question-answering system based on a custom knowledge base using the Retrieval-Augmented Generation (RAG) paradigm, in which every answer must be grounded in retrieved sources and must explicitly cite those sources.
 
-系统应能够根据你提供的一组特定文档回答问题。项目的主要挑战不在于聊天机器人界面，而在于用于准备知识并支持检索的后端数据流水线，以及确保答案忠实于来源的机制。
+The system should be able to answer questions based on a specific set of documents that you provide. The main challenge of the project is not the chatbot interface, but the backend data pipeline used to prepare the knowledge and support retrieval, as well as the mechanisms that ensure answers are faithful to the sources.
 
-## 作业要求
+## Assignment requirements
 
-1. **数据准备：** 收集一组文档，例如课程笔记、产品手册或政府政策文件。编写脚本，使用开源嵌入模型或 API 对这些文档进行加载、切块并生成向量嵌入。比较至少两种切块策略，例如不同的切块大小，或有重叠与无重叠的切块，并报告这些策略对检索质量的影响。
+1. **Data preparation:** Collect a set of documents, such as course notes, product manuals, or government policy documents. Write a script to load, chunk, and generate vector embeddings for these documents using an open-source embedding model or API. Compare at least two chunking strategies, such as different chunk sizes, or chunking with and without overlap, and report the impact of these strategies on retrieval quality.
 
-2. **知识库存储：** 将文档片段及其对应的向量嵌入存储到向量数据库中。
+2. **Knowledge base storage:** Store the document chunks and their corresponding vector embeddings in a vector database.
 
-3. **检索机制：** 对于用户提出的问题，先将问题转换为向量嵌入，再基于语义相似度，从向量数据库中检索最相关的文档片段。
+3. **Retrieval mechanism:** For a user's question, first convert the question into a vector embedding, then retrieve the most relevant document chunks from the vector database based on semantic similarity.
 
-4. **基于证据的答案生成：** 将原始问题和检索到的文档片段传递给 LLM API。通过提示词要求 LLM 仅依据所提供的上下文生成答案，并为每项主张引用来源文档及具体片段。如果知识库中不包含答案，系统应明确说明，而不是猜测。
+4. **Evidence-based answer generation:** Pass the original question and the retrieved document chunks to an LLM API. Use prompts to require the LLM to generate answers based only on the provided context, and to cite the source document and specific chunk for each claim. If the knowledge base does not contain the answer, the system should state this explicitly rather than guess.
 
-5. **评估：** 构建一个至少包含 20 组问答对的小型测试集，并报告系统的检索命中率和答案正确率。
+5. **Evaluation:** Build a small test set containing at least 20 question-answer pairs, and report the system's retrieval hit rate and answer accuracy.
 
-## 参考文献
+## References
 
-1. Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33.（面向知识密集型自然语言处理任务的检索增强生成。）
-2. Gao, Y., et al. (2023). Retrieval-augmented generation for large language models: A survey. arXiv:2312.10997.（大型语言模型的检索增强生成：综述。）
-3. LangChain Documentation. (2025). Question Answering over Documents.（LangChain 文档：基于文档的问答。）
+1. Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33. (Retrieval-augmented generation for knowledge-intensive natural language processing tasks.)
+2. Gao, Y., et al. (2023). Retrieval-augmented generation for large language models: A survey. arXiv:2312.10997. (Retrieval-augmented generation for large language models: A survey.)
+3. LangChain Documentation. (2025). Question Answering over Documents. (LangChain documentation: question answering over documents.)

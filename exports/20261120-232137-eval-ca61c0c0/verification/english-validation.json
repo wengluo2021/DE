@@ -1,0 +1,14 @@
+{
+  "state": "passed",
+  "markdown_documents_checked": 239,
+  "unchanged_chinese_documents": [
+    "开发文档.md",
+    "项目设计.md"
+  ],
+  "links_checked": 158,
+  "json_examples_checked": 12,
+  "prose_lines_checked": 27980,
+  "interface_files_checked": 3,
+  "saved_experiment_cases_preserved": 120,
+  "issues": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "mode": "formal",
+  "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+  "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+  "conditions": [
+    "f400",
+    "s400",
+    "f800",
+    "s800"
+  ],
+  "top_k": 5,
+  "data_dir": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\data\\formal_corpus",
+  "gold_dir": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\data\\eval",
+  "structure_dir": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\data\\processed",
+  "input_adapter": "eurlex-a-v1",
+  "embedding": {
+    "model_id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "model_dir": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\models\\embedding",
+    "device": "cpu",
+    "dimension": 1024,
+    "normalize": true,
+    "query_prefix": "",
+    "document_prefix": "",
+    "max_input_tokens": 8192,
+    "pooling": "cls",
+    "batch_size": 4,
+    "cpu_threads": 4
+  },
+  "retrieval": {
+    "metric": "cosine",
+    "chunker_version": "structure-offset-v2"
+  },
+  "generation": {
+    "provider": "openai-compatible",
+    "base_url": "https://llm.cs.cityu.edu.hk/v1",
+    "model": "CS5351/DeepSeek-V4-Flash",
+    "temperature": 0,
+    "max_tokens": 1024,
+    "timeout_seconds": 60,
+    "max_attempts": 2,
+    "prompt_path": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\app\\qa\\prompts\\answer.txt",
+    "json_mode": true,
+    "transport": "curl",
+    "seed": null,
+    "prompt_sha256": "f96cdeea20d6b8c1054ef1797529730520cc21e853efa59736d3fd030b6a4d02",
+    "api_key_configured": true
+  },
+  "experiment_fingerprint": "b04f513bd7ca5e4179f8b23786d87adc9a6b22d3e4df4f8d51175fdeffaab0a8"
+}

@@ -1,36 +1,36 @@
-# Docker 与交付包复现
+# Docker and delivery package reproduction
 
-这是 C 的交付准备说明。A 的正式五法规与冻结 24+6 题已于 2026-11-20 接入校验，正式 M5/M6 进度见最新交接；本说明、合成演练或一个能打开的页面均不代表正式成绩。最新实测状态与限制见 `docs/handoffs/`，不要把准备完成写成整个 M7 完成。
+This is C's delivery preparation note. A's formal five regulations and frozen 24+6 questions were integrated and validated on 2026-11-20; for formal M5/M6 progress see the latest handover. This note, a synthetic drill, or a page that opens does not represent a formal result. For the latest measured status and limitations see `docs/handoffs/`; do not write preparation completion as completion of all of M7.
 
-## 1. 先准备可校验的源码与数据包
+## 1. First prepare verifiable source and data packages
 
-在已有依赖的 DERag 环境中，先按《三方对接与正式资料接入》生成新的正式配置并验证 A 数据，然后执行：
+In a DERag environment with existing dependencies, first generate a new formal configuration per "Third-Party Integration and Formal Data Access" and validate A data, then run:
 
 ```powershell
 .venv/Scripts/python.exe -m scripts.prepare_delivery --config config/experiment.formal-a.json --output ../delivery-NEW
 ```
 
-输出目录必须不存在。工具只读取选定 JSON，忽略进程凭据和本地 dotenv；校验语料与题集后复制原始字节，不重新清洗、不改题。它生成 `config/experiment.delivery.json`、提示词快照及 `DELIVERY-MANIFEST.json`，把数据/模型/提示词改成包内可移植路径，确认实验指纹没有改变。A 布局下保留 data/formal_corpus、data/eval、data/processed 及来源清单；附件完整结构也按原字节打包。模型权重、已有 Chroma、SQLite、历史实验与私密 env 不装入此源码包。正式保存的逐题结果与模型权重作为另行校验的交付材料保留，不能在打包时混用不同版本。
+The output directory must not exist. The tool reads only the selected JSON and ignores process credentials and local dotenv; after validating the corpus and question set it copies the original bytes without re-cleaning or modifying questions. It generates `config/experiment.delivery.json`, a prompt snapshot, and `DELIVERY-MANIFEST.json`, changes data/model/prompt to portable paths within the package, and confirms the experiment fingerprint is unchanged. Under the A layout it retains data/formal_corpus, data/eval, data/processed, and the source manifest; the attachment's complete structure is also packaged as original bytes. Model weights, existing Chroma, SQLite, historical experiments, and private env are not included in this source package. Formally saved per-question results and model weights are retained as separately verified delivery materials and must not mix different versions during packaging.
 
-原始快照、处理文档、两个 manifest 与 gold.jsonl 都逐文件记录 SHA-256；缺资料、哈希不符、输出已存在时明确失败。失败后已经产生的不完整目录会保留，先检查并使用新目标目录，不覆盖或自动递归删除。
+The raw snapshot, processed documents, both manifests, and gold.jsonl are each recorded file by file with SHA-256; missing materials, hash mismatches, or an existing output cause an explicit failure. Incomplete directories already produced after a failure are retained; inspect them and use a new target directory, without overwriting or automatic recursive deletion.
 
-`--synthetic` 只用于明确的 development 合成演练，输出标记 `synthetic_rehearsal`；默认正式模式拒绝 development 配置和明显标注 SYNTHETIC 的输入。正式候选包也不会自动认证来源：A 仍负责官方资料与标准题核验，C 负责正式生成答案的评分。
+`--synthetic` is only for explicit development synthetic drills, and its output is marked `synthetic_rehearsal`; the default formal mode rejects development configurations and inputs clearly marked SYNTHETIC. A formal candidate package also does not automatically certify sources: A remains responsible for official materials and standard question verification, and C is responsible for scoring formally generated answers.
 
-## 2. 收到包后先核验，再运行
+## 2. After receiving the package, verify first, then run
 
-在新解包目录，使用 Python 标准库校验；`-B` 避免生成额外字节码：
+In the newly unpacked directory, verify using the Python standard library; `-B` avoids generating extra bytecode:
 
 ```bash
 python -B -S scripts/verify_delivery.py .
 ```
 
-此命令无需先装 Pydantic 或模型库。它检查清单格式、相对路径、文件齐全和 SHA；修改、漏文件、额外文件或路径逃逸都会失败。请对未运行的新解包目录做此检查；运行后新增的数据库/缓存属于工作目录，不能把它当成原始交付目录继续声称字节未变。校验清单保证与保存的清单一致，来源真实性仍需团队的交付记录与版本核验。
+This command does not require Pydantic or model libraries to be installed first. It checks manifest format, relative paths, file completeness, and SHA; modifications, missing files, extra files, or path escapes all fail. Run this check on a newly unpacked directory that has not been run; databases/caches added after running belong to the working directory, and it cannot be treated as the original delivery directory to continue claiming bytes are unchanged. The verification manifest guarantees consistency with the saved manifest; source authenticity still requires the team's delivery records and version verification.
 
-2026-11-19 的旧候选镜像已通过当时的 Linux 工程测试；2026-11-20 新 A 依赖/适配已重建并通过Windows401项、Linux400项/1专用跳过、正式Linux问答/重启和120项历史结果迁移，见M7_04，不把旧镜像当当前最终产物。Docker 不再强设 DERAG_DATA_DIR，采用选定配置的数据路径；A 正式运行目录为 /app/data/formal_corpus，相应 SQLite/Chroma/chunks/indexes/runs 卷也应挂载到该目录下，不能以 /app/data 覆盖它。
+The old candidate image 2026-11-19 passed the Linux engineering tests at the time; 2026-11-20 was rebuilt with the new A dependencies/adaptation and passed 401 Windows items, 400 Linux items/1 dedicated skips, formal Linux Q&A/restart, and migration of 120 historical results, see M7_04; the old image is not treated as the current final artifact. Docker no longer forces DERAG_DATA_DIR and uses the data path of the selected configuration; A's formal run directory is /app/data/formal_corpus, and the corresponding SQLite/Chroma/chunks/indexes/runs volumes should also be mounted under that directory, not overriding it with /app/data.
 
-## 3. 构建 Linux CPU 镜像
+## 3. Build the Linux CPU image
 
-使用 Docker Engine，目标为 `linux/amd64`。以下命令在包目录运行，首次构建需要依赖网络；不会下载 embedding 权重或发送模型请求。
+Use Docker Engine, targeting `linux/amd64`. The following commands run in the package directory; the first build requires network access for dependencies and will not download embedding weights or send model requests.
 
 ```bash
 docker build --platform linux/amd64 --target test -t derag-check .
@@ -38,25 +38,25 @@ docker run --rm --network none derag-check
 docker build --platform linux/amd64 --target final -t de .
 ```
 
-`test` 镜像包含固定测试依赖、测试源码和必要文档；默认 `final` 镜像只保留运行依赖与代码。正式运行选 `de`，不要把测试镜像称为正式交付镜像。实际验收时记录两镜像 ID、Python 基础镜像 digest、测试 JUnit 和构建日志；日志里缺少成功结果不能当作构建通过。
+The `test` image includes fixed test dependencies, test source, and necessary documentation; the default `final` image keeps only runtime dependencies and code. Choose `de` for formal runs; do not call the test image the formal delivery image. During actual acceptance, record both image IDs, the Python base image digest, the test JUnit, and build logs; missing successful results in the logs cannot be treated as a passing build.
 
-Dockerfile 固定 Python3.13.11，先从 PyTorch 官方 CPU 索引安装 `torch==2.15.0+cpu`，再安装统一锁；构建检查 `torch.version.cuda is None`。预检只允许该固定 torch 版本的 `+cpu` 构建后缀，仍拒绝其他发布版本或 CUDA 后缀；其他包继续严格比对固定版本。参考[官方 CPU 安装说明](https://pytorch.org/get-started/locally/)，实际 CPU 索引版本另有只读核验证据。
+The Dockerfile pins Python 3.13.11, first installs `torch==2.15.0+cpu` from the official PyTorch CPU index, then installs the unified lock; the build checks `torch.version.cuda is None`. The precheck allows only the `+cpu` build suffix for that pinned torch version and still rejects other release versions or CUDA suffixes; other packages continue to be strictly compared against pinned versions. See [official CPU installation instructions ](https://pytorch.org/get-started/locally/); the actual CPU index version has separate read-only verification evidence.
 
-实际Linux解析还发现uvicorn[standard]需要Linux专用uvloop，因此补充 `requirements-linux.txt` 锁定uvloop0.23.0。Docker先安装统一锁、再安装该补充锁；预检在Linux同时核对两份锁，Windows不安装uvloop。最终软件版本以实际安装记录和镜像ID为准，不能把Windows的依赖数量直接视作Linux全部依赖。
+Actual Linux resolution also found that uvicorn[standard] requires the Linux-only uvloop, so `requirements-linux.txt` was added to lock uvloop 0.23.0. Docker installs the unified lock first, then this supplementary lock; the precheck checks both locks on Linux, and Windows does not install uvloop. Final software versions are based on actual installation records and image IDs; the Windows dependency count cannot be directly treated as all Linux dependencies.
 
-`.dockerignore` 在目录例外后显式排除 root/formal_corpus 的运行目录与所有 *.lock，防止读取正在使用的锁、数据库或原生索引。它使用白名单，允许程序/配置、测试及冻结的 raw/processed/eval/manifest；继续排除模型、凭据文件、数据库、索引、结果和缓存。`data/.gitkeep` 只让没有正式输入时目录存在，不是法规或题集。Docker 的上下文规则见[官方说明](https://docs.docker.com/build/concepts/context/)。
+`.dockerignore` explicitly excludes the root/formal_corpus runtime directory and all *.lock after directory exceptions, preventing reads of in-use locks, databases, or native indexes. It uses an allowlist permitting program/config, tests, and frozen raw/processed/eval/manifest; it continues to exclude models, credential files, databases, indexes, results, and caches. `data/.gitkeep` only makes the directory exist when there is no formal input; it is not a regulation or question set. For Docker context rules see [official documentation ](https://docs.docker.com/build/concepts/context/).
 
-当前电脑 Windows PATH 没有 Docker，已发现并启动现有 WSL `ubuntu20` 的 Docker24.0.6 引擎。本机可用 `wsl.exe -d ubuntu20 -u root -- docker ...`，挂载的 Windows 路径先通过同一 WSL 的 `wslpath -a` 转换。不要因为 Windows 命令未找到就重复安装 Docker。独立验收镜像使用随机后缀，不覆盖旧 `de`；不要停止不属于本任务的容器。
+The current computer's Windows PATH has no Docker; the existing WSL `ubuntu20` Docker 24.0.6 engine was found and started. `wsl.exe -d ubuntu20 -u root -- docker ...` is available on this machine, and mounted Windows paths are first converted via the same WSL's `wslpath -a`. Do not reinstall Docker just because the Windows command is not found. Independent acceptance images use random suffixes and do not overwrite the old `de`; do not stop containers that do not belong to this task.
 
-## 4. 配置、只读模型与持久化输出
+## 4. Configuration, read-only model, and persistent output
 
-在 Docker 主机上准备完整 `models/embedding` 及其 `derag-model-manifest.json`，按固定 revision/文件 SHA 验证。把模型目录以只读方式挂入 `/app/models/embedding`。正式候选包的冻结 data 已复制入镜像；不要用空宿主机目录挂载整个 `/app/data`，否则会遮住镜像里的输入，见[Docker 挂载说明](https://docs.docker.com/engine/storage/bind-mounts/)。
+On the Docker host, prepare the complete `models/embedding` and its `derag-model-manifest.json`, verified by fixed revision/file SHA. Mount the model directory read-only into `/app/models/embedding`. The formal candidate package's frozen data is already copied into the image; do not mount the entire `/app/data` with an empty host directory, or it will hide the inputs in the image, see [Docker mount documentation ](https://docs.docker.com/engine/storage/bind-mounts/).
 
-私密连接文件可只读挂载到 `/run/secrets/llm.env` 并设置 `DERAG_ENV_FILE`，适用于本机已有的带引号 dotenv 文件。Docker 自身的 `--env-file` 与 python-dotenv 对引号的解释不同；若选择 `--env-file`，应使用 `.env.example` 那样的无引号 KEY=value 格式，不能直接假设已有私密文件格式完全等价。原 Key 文件不必重写，密钥不进入镜像。
+The private connection file can be mounted read-only at `/run/secrets/llm.env` with `DERAG_ENV_FILE` set, suitable for an existing quoted dotenv file on this machine. Docker's own `--env-file` and python-dotenv interpret quotes differently; if choosing `--env-file`, use an unquoted KEY=value format like `.env.example`, and do not directly assume the existing private file format is fully equivalent. The original Key file need not be rewritten, and the key does not enter the image.
 
-私密env中的endpoint/model/transport应与选定实验JSON一致；覆盖这些字段会改变实际实验指纹，Key本身不进入实验指纹。
+The endpoint/model/transport in the private env should match the selected experiment JSON; overriding these fields changes the actual experiment fingerprint, while the Key itself does not enter the experiment fingerprint.
 
-下列示例在 Linux/WSL shell 中运行，将两个路径替换为实际绝对路径：
+The following examples run in a Linux/WSL shell; replace the two paths with actual absolute paths:
 
 ```bash
 docker run --name DE -d -p 127.0.0.1:8766:8000 \
@@ -72,9 +72,9 @@ docker run --name DE -d -p 127.0.0.1:8766:8000 \
   de
 ```
 
-仅一个 worker；不加 reload。Dockerfile 不强制覆盖生成 transport，正式配置应显式选择已验证的 curl/httpx；镜像已安装 curl 与 CA。默认编码离线，只读本地模型；首次模型下载使用显式下载脚本在可联网环境准备，不能把启动时自动拉取当复现步骤。
+Only one worker; no reload. The Dockerfile does not force-override the generated transport; the formal configuration should explicitly select the verified curl/httpx; the image has curl and CA installed. Encoding is offline by default, using only the local model; the first model download uses an explicit download script in a networked environment, and automatic pulling at startup cannot be treated as a reproduction step.
 
-## 5. 正式容器验收顺序
+## 5. Formal container acceptance order
 
 ```bash
 docker exec DE python -m scripts.validate_data --config config/experiment.delivery.json
@@ -82,6 +82,6 @@ docker exec DE python -m scripts.build_indexes
 docker exec DE python -m scripts.preflight
 ```
 
-健康检查只判断 HTTP 服务存活；`/api/health` 的 `ready` 和 preflight 的 `formal_ready` 才表示所需组件是否匹配。没数据/没Key的容器可以打开页面，但明确未就绪。确认官方来源、正式单题、完整引用与重启保存后，再按《评估使用说明》做 M6 的 120 条和实际人工评分；不能拿合成离线评分替代。
+The health check only determines whether the HTTP service is alive; `/api/health`'s `ready` and preflight's `formal_ready` indicate whether the required components match. A container without data/Key can open the page but is explicitly not ready. After confirming official sources, formal single questions, complete citations, and restart persistence, follow the "Evaluation Usage Instructions" to do M6's 120 items and actual human scoring; synthetic offline scoring cannot substitute.
 
-最终 M7 要从新环境安装、校验输入与模型、重建四组、真实问答、核对正式实验和导出，再记录镜像/数据/模型/结果 SHA 并打包。旧 DE.tar 属于前端预览，不能覆盖它后就称新版完成。只有最终验收通过后才导出新的镜像包，并保留文件名、镜像 ID/digest 和包 SHA；对外发布/推送仍按用户授权进行。
+Final M7 must install from a new environment, verify inputs and model, rebuild the four groups, do real Q&A, check the formal experiment and export, then record image/data/model/result SHA and package. The old DE.tar is a frontend preview; overwriting it does not mean the new version is complete. Export a new image package only after final acceptance passes, and retain the filename, image ID/digest, and package SHA; external release/push still follows user authorization.

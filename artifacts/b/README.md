@@ -1,12 +1,12 @@
-# B 验证记录
+# B Verification Record
 
-此目录保存可复核的测试与模型运行记录。`.pytest/` 是独立测试的临时索引目录，不提交。
-模型权重在 `models/embedding/`，合成语料的四组索引在 `data/b-fixtures/mock|real/`，均由脚本重建。
-这些记录使用合成文本，不能充当 30 道正式题的评估结果。
+This directory holds reviewable test and model run records. `.pytest/` is a temporary index directory for independent testing and is not committed.
+Model weights are in `models/embedding/`; the four index sets for the synthetic corpus are in `data/b-fixtures/mock|real/`, all rebuilt by script.
+These records use synthetic text and cannot serve as evaluation results for the 30 formal questions.
 
 
-## 当前英文版本
+## Current English Version
 
-活动语料 `fixture-en-v2`，规则 `structure-offset-v2`。`tests.xml` 为独立验证环境的 78 项通过记录；`real-smoke.json` 和 `clean-real-smoke.json` 分别为项目环境与独立环境的英文真实模型验证，均为 12 次检索通过，并逐一检查返回片段的原文坐标。两者索引版本相同。
+Active corpus `fixture-en-v2`, rules `structure-offset-v2`. `tests.xml` is the 78-item pass record for the independent verification environment; `real-smoke.json` and `clean-real-smoke.json` are the English real-model verifications for the project environment and the independent environment respectively, each passing 12 retrievals, with the source coordinates of each returned segment checked individually. Both use the same index version.
 
-`frontend-smoke.json` 为浏览器验证记录，`debug-real-english.png` 与 `debug-mobile-english.png` 为英文正文的桌面/手机截图。`archive/zh-v1/` 保存替换前的中文语料和旧结果；这些历史记录中的版本与块数不代表当前活动语料。
+`frontend-smoke.json` is the browser verification record; `debug-real-english.png` and `debug-mobile-english.png` are desktop/mobile screenshots of the English body text. `archive/zh-v1/` preserves the Chinese corpus and old results from before replacement; the versions and chunk counts in these historical records do not represent the current active corpus.

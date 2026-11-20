@@ -1,65 +1,65 @@
-# C部分实验结果与实现报告
+# C Section Experiment Results and Implementation Report
 
-2026-11-20。真实30题×4组共120项已完成，评分字段全部齐备，技术错误0。**评分方法为混合来源：21份回答经具体人工确认，99份按C明确授权由Codex AI辅助评分；不称全部纯人工核验，也不作为独立人工金标准。**最新评分库已通过禁网Linux恢复、重启和导出一致性验证；交付包及SHA见独立最终清单，原未评分基线保留。
+2026-11-20. Real 30 questions × 4 groups, 120 items in total, completed, with all scoring fields complete and 0 technical errors. **The scoring method uses mixed sources: 21 answers were specifically human-confirmed, and 99 were scored with Codex AI assistance under explicit C authorization; this is not described as all purely human verification, nor as an independent human gold standard.** The latest scoring database has passed network-disabled Linux recovery, restart, and export-consistency verification; the delivery package and SHA are in the separate final manifest, and the original unscored baseline is retained.
 
-## 项目与C负责什么
+## Project and what C is responsible for
 
-本项目比较两种法规分块方式和两种大小。系统先检索给定法规片段，再让大模型据片段回答，并保留逐句引用供核对。它没有重新训练一个大模型，也没有把标准答案发送给生成模型。
+This project compares two regulation chunking methods and two sizes. The system first retrieves given regulation snippets, then has the LLM answer based on the snippets, and retains sentence-level citations for checking. It did not retrain an LLM, nor send standard answers to the generation model.
 
-A负责冻结五份官方法规、条文结构和30道标准题；B负责分块、BGE-M3及Chroma检索；C负责LLM客户端、带引用问答、原文/位置校验、会话和证据保存、后台任务、四页接入、评估/评分/导出及集成交付。普通问答与实验共用后端链路。
+A is responsible for freezing the five official regulations, article structure, and 30 standard questions; B is responsible for chunking, BGE-M3, and Chroma retrieval; C is responsible for the LLM client, cited Q&A, source/location verification, session and evidence persistence, background tasks, four-page integration, evaluation/scoring/export, and integrated delivery. Ordinary Q&A and experiments share the backend pipeline.
 
-## 冻结设置与可比性
+## Frozen settings and comparability
 
-五份EUR-Lex英文原始公布版，121主条文、391777字符；24可答题、6拒答题、42段标准证据。四组为F400/S400/F800/S800，400/800按字符计；结构法优先章条、超长按句段，仍可能硬切。Top5、余弦度量、提示词和生成参数四组一致。
+Five EUR-Lex English original published versions, 121 main articles, 391777 characters; 24 answerable questions, 6 refusal questions, 42 standard evidence passages. The four groups are F400/S400/F800/S800, with 400/800 counted by characters; the structural method prioritizes chapters/articles and splits overlong text by sentence segments, but may still hard-cut. Top5, cosine metric, prompts, and generation parameters are identical across the four groups.
 
-BGE-M3 revision `5617a9f61b028005a4858fdac845db406aefb181`，1024维、CPU；生成模型`CS5351/DeepSeek-V4-Flash`、temperature=0。原run_id=`eval-20ac108503c44829a96ecca386d4b9de`，实验指纹`cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a`。只做这一次正式120项，没有为改善分数重跑或改题/参数。
+BGE-M3 revision `5617a9f61b028005a4858fdac845db406aefb181`, 1024 dimensions, CPU; generation model `CS5351/DeepSeek-V4-Flash`, temperature=0. Original run_id=`eval-20ac108503c44829a96ecca386d4b9de`, experiment fingerprint `cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a`. Only this one formal 120-item run was done; no reruns or changes to questions/parameters were made to improve scores.
 
-## 结果：按本次混合来源评分口径
+## Results: under this mixed-source scoring basis
 
-| 条件 | correct/24 | partial | wrong | 其中误拒答 | 拒答正确/6 | 引用支持/主张 |
+| Condition | correct/24 | partial | wrong | of which incorrect refusals | refusal correct/6 | citation support/claims |
 | --- | --- | --- | --- | --- | --- | --- |
 | F400 | 6/24（25.00%） | 11 | 7 | 5 | 6/6（100.00%） | 27/36（75.00%） |
 | S400 | 9/24（37.50%） | 9 | 6 | 6 | 6/6（100.00%） | 33/35（94.29%） |
 | F800 | 10/24（41.67%） | 7 | 7 | 6 | 6/6（100.00%） | 42/45（93.33%） |
 | S800 | 13/24（54.17%） | 8 | 3 | 3 | 6/6（100.00%） | 50/50（100.00%） |
 
-可答题共38 correct、35 partial、23 wrong；20次wrong是对可答题错误拒答。6道应拒答题四组均正确拒答，但这不能抵消可答题误拒答。全部166条主张中152支持、14不支持；无待评、无无引用主张。引用分母按实际输出主张数，各组不同，不包含无主张的拒答输出。
+Answerable questions total 38 correct, 35 partial, 23 wrong; 20 wrong cases are incorrect refusals of answerable questions. 6 should-refuse questions were correctly refused in all four groups, but this does not offset incorrect refusals of answerable questions. Of all 166 claims, 152 supported, 14 unsupported; none pending, no claims without citations. The citation denominator is the actual number of output claims, which differs by group and excludes refusal outputs with no claims.
 
-| 条件 | 块数 | Hit@1 any | Hit@1 all | Hit@5 any | Hit@5 all |
+| Condition | Chunks | Hit@1 any | Hit@1 all | Hit@5 any | Hit@5 all |
 | --- | --- | --- | --- | --- | --- |
 | F400 | 982 | 5/24 | 1/24 | 9/24 | 4/24 |
 | S400 | 1415 | 7/24 | 4/24 | 14/24 | 6/24 |
 | F800 | 493 | 10/24 | 4/24 | 17/24 | 10/24 |
 | S800 | 625 | 14/24 | 8/24 | 21/24 | 13/24 |
 
-Hit严格按同文档字符区间并集完整覆盖标准证据，any至少一段、all全部，分母固定24，包含编号等冻结字符。它与主张语义是否被支持是不同指标；没有为高分删除编号或重标证据。
+Hit strictly requires the union of character intervals in the same document to fully cover the standard evidence; any means at least one passage, all means all, with a fixed denominator of 24, including frozen characters such as numbering. It is a different metric from whether the claim semantics are supported; numbering was not removed or evidence relabeled to boost scores.
 
-## 能得出什么
+## What can be concluded
 
-在这批冻结题和这一次生成中，S800有最高的完整答案数13/24和Hit@5-all 13/24。S400相对F400多3题达到correct、反向0题；S800相对F800多4题达到correct、反向1题。这里只描述同题配对结果，不声称具有统计显著性或对所有法律问答都成立。
+On this batch of frozen questions and this one generation run, S800 has the highest number of complete answers 13/24 and Hit@5-all 13/24. S400 has 3 more questions reaching correct than F400, and 0 in the reverse direction; S800 has 4 more questions reaching correct than F800, and 1 in the reverse direction. This only describes paired results on the same questions and does not claim statistical significance or that it holds for all legal Q&A.
 
-S800引用支持50/50，同时整答只有13/24：引用句句有依据仍可能漏必答规则，错误拒答也不产生可评分的事实主张。F400引用27/36反映部分关键条件在固定窗口边界被截断。块更大/结构更完整改善了本批覆盖，但没有消除生成遗漏或制度混用。
+S800 citation support is 50/50, while overall answers are only 13/24: sentences can each be grounded yet still miss required rules, and incorrect refusals produce no scorable factual claims. F400 citation 27/36 reflects some key conditions being truncated at fixed-window boundaries. Larger/more structurally complete chunks improved coverage in this batch but did not eliminate generation omissions or institutional mixing.
 
-## 失败与争议案例
+## Failure and disputed cases
 
-- 第2题：四组漏退款暂缓条件，F800虽多答配送差价例外也仍partial；所有实际写出主张的引用均有支持。体现答案完整性与引用支持分开。
-- 第6题：F800把撤回合同的14日退款规则错用于迟延交货解除，判wrong；F400的This rule指代经实际人选择严格读法，wrong，来源和原AI不同意见保留。
-- 第11题：前三组拒答，S800找到完整降价规则并回答。第12/13/19题四组均误拒答，显示证据供给与生成链路仍有不足，不能只报告拒答题的100%。
-- 第20题：F400将can写成cannot，核心方向反转；来源区间有效不能保证语义正确。
-- 第4题F400/F800的补充主张漏引用前置条件，判引用不支持；第16题F800末尾只缺modification词尾，实际主张的替代权利已显示，按已采用口径支持。完整原文、实际绑定片段与理由均保留。
+- Question 2: all four groups missed the refund deferral condition; although F800 additionally answered the delivery price-difference exception, it is still partial; all citations for claims actually written are supported. This shows answer completeness and citation support are separate.
+- Question 6: F800 wrongly applied the 14-day refund rule for withdrawn contracts to termination for late delivery, judged wrong; F400's "This rule" reference was read strictly by actual human choice, wrong, and the source and original AI's differing opinion are retained.
+- Question 11: the first three groups refused, while S800 found the complete price-reduction rule and answered. Question 12/13/19: all four groups incorrectly refused, showing the evidence supply and generation pipeline still have shortcomings; the 100% on refusal questions cannot be reported alone.
+- Question 20: F400 writes can as cannot, reversing the core direction; a valid source span does not guarantee semantic correctness.
+- In question 4, the supplementary claim for F400/F800 omits the citation's precondition, so the citation is judged unsupported; in question 16, the end of F800 lacks only the modification word ending, and the actual claimed alternative right is already shown, so it is supported under the adopted standard. The full original text, the actually bound span, and the reasoning are all retained.
 
-## 评分来源与局限
+## Scoring sources and limitations
 
-用户先逐项确认前5题及第6题F400，之后明确授权常规题免再确认、特殊争议单独询问。人工确认覆盖21个答案等级及45条主张；授权AI覆盖75个答案等级、24个拒答判断及121条主张。数据库reviewer分别标识C与Codex AI，124条修改历史保留。方法授权不是其余题已被人类逐题阅读的证明。
+The user first confirmed the first 5 questions and question 6 F400 item by item, then explicitly authorized routine questions to skip further confirmation and special disputes to be asked separately. Human confirmation covers 21 answer grades and 45 claims; the AI authorization covers 75 answer grades, 24 refusal judgments, and 121 claims. The database reviewer identifies C and Codex AI respectively, and 124 modification history entries are retained. Method authorization is not proof that the remaining questions were read by a human one by one.
 
-答案按A必要事实完整性评，部分参考包含题干未单独追问的附带条件，采用同一严格尺度会增加partial。允许题目明确事实作上下文，不借未引用法律规则补证；可识别词尾与缺少完整法律条件/对象分开处理。没有第二位独立评审人，AI与人类辅助判断均可能有误，因此不把这些数值称为纯人工独立质量率。
+Answers are graded on A's necessary-fact completeness; some references include incidental conditions not separately asked in the question, and applying the same strict standard would increase partial grades. Explicit facts in the question are allowed as context, without supplementing evidence from uncited legal rules; identifiable word endings are handled separately from missing full legal conditions/objects. There is no second independent reviewer, and both AI and human-assisted judgments may be wrong, so these figures are not called a purely human independent quality rate.
 
-后端`review_complete=true`与`formal_results=true`表示评分字段、正式配置和运行条件齐备，不是“全部人工已复核”的证明。方法与授权原话见[M6评分方式与授权记录](M6评分方式与授权记录.md)，逐题来源在`artifacts/c/m6-final-scored/review-provenance.json`。
+Backend `review_complete=true` and `formal_results=true` indicate that scoring fields, formal configuration, and run conditions are complete; they are not proof that "everything has been manually reviewed." For the method and the exact authorization wording, see [M6 scoring method and authorization record ](M6评分方式与授权记录.md); per-question sources are in `artifacts/c/m6-final-scored/review-provenance.json`.
 
-## 工程验证与费用
+## Engineering verification and cost
 
-已完成Windows401项、Linux400项通过/1Windows专用跳过、正式四索引、真实学校问答/保存重启和未评分实验跨平台恢复。业务代码、依赖、prompt和冻结输入没有因评分改变，不重复这些工程检查。此次另验证正常进程空Key只读HTTP；最新评分库的一致性备份已在禁网/无Key的新Linux卷恢复，重启前后JSON/CSV逐字节一致，124条历史及人类/AI来源标签保留。镜像内68个运行源码/配置文件与当前源码相同，不需重复构建未变的业务代码。
+Completed: 401 Windows items, 400 Linux items passed / 1 Windows-only skip, the four formal indexes, real school Q&A/save-restart, and cross-platform recovery of unscored experiments. Business code, dependencies, prompts, and frozen inputs were not changed by scoring, so these engineering checks were not repeated. This time, additionally verified read-only HTTP with an empty Key in a normal process; the latest scoring database's consistency backup was restored on a new Linux volume with network disabled/no Key, and JSON/CSV were byte-identical before and after restart, with 124 history entries and human/AI source labels retained. The 68 runtime source/config files in the image are identical to the current source, so unchanged business code does not need to be rebuilt.
 
-正式120项实际121次模型尝试，已知186241 token，1次失败无usage后有界重试成功，实际模型一致。含先前冒烟累计已知191672 token，金额未知。所有评分、导出、备份和本阶段汇总新增学校API调用0；没有新生成、模型下载或索引重建。
+The formal 120 items involved 121 actual model attempts, 186241 known tokens, and 1 failures with no usage followed by successful bounded retries, with the actual model consistent. Including earlier smoke tests, the cumulative known total is 191672 tokens, with the amount unknown. All scoring, exports, backups, and this stage's summary added 0 school API calls; there was no new generation, model download, or index rebuild.
 
-最终JSON/CSV、逐题来源、所有阶段检查与SQLite备份哈希在`artifacts/c/m6-final-scored/`。原始未评分JSON/CSV/阅读材料未覆盖；源码只在answer-eval本地保存，未push、未写main、未发团队消息。
+The final JSON/CSV, per-question sources, all stage checks, and the SQLite backup hash are in `artifacts/c/m6-final-scored/`. The original unscored JSON/CSV/reading materials were not overwritten; the source code is saved only locally in answer-eval, not pushed, not written to main, and no team message was sent.

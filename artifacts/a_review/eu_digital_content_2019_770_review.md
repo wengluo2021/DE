@@ -1,55 +1,55 @@
-# Digital Content and Services 原文对照复核
+# Digital Content and Services Source-Text Cross-Check Review
 
-复核方式：AI 辅助原文复核。日期：2026-11-19。
+Review method: AI-assisted source-text review. Date: 2026-11-19.
 
-本复核直接读取原始 HTML，用 `html.parser` 清点 `#document1` 中的主条文和序言节点，再按清洗 JSON 的 Python 区间 `[start, end)` 回切正文。没有打开浏览器做页面视觉检查。
+This review reads the original HTML directly, uses `html.parser` to count the main articles and recital nodes in `#document1`, then slices the body back using the Python ranges `[start, end)` from the cleaned JSON. No browser was opened for a visual page check.
 
-## 输入与产物
+## Inputs and Artifacts
 
-| 文件 | SHA-256 | 字节数 |
+| File | SHA-256 | Bytes |
 | --- | --- | --- |
 | `data/raw/Digital Content and Services.html` | `83b8ec2ad8d5a293c278fcffc5add389425bd7c688f92bf110d4ce2b929826f2` | 520093 |
 | `data/processed/eu_digital_content_2019_770.txt` | `6e251e53b94cb4e793d9cd32889a0f70b7e62d7399eacc15197f37bb132ac3bf` | 118158 |
 | `data/processed/eu_digital_content_2019_770.json` | `3d7b88ac3b35365986c18970dfc24cdf6b1574f701c13c350efe7466e5e366ab` | 409690 |
 | `data/sources.json` | `d9edf17d3bf6748b66cdfa20a8ae9f6b2e45091d6fa88e826d28f5c5ff890aac` | 21962 |
 
-正文 118079 个 Python 字符，只含 LF，文件以一个换行结束。
+The body is 118079 Python characters, contains only LF, and the file ends with a single newline.
 
-## 主条文与 DOM
+## Main Articles and DOM
 
-`#document1` 内的 `div.eli-subdivision` 主条文为 `art_1` 至 `art_27`，共 27 个。没有 `cpt_` 章节，也没有 `anx_` 附件。序言节点为 `rct_1` 至 `rct_87`，共 87 个。正文脚注 23 条。清洗结果的条文编号、`chapter_id=null`、空章节、空附件、87 项序言和 23 条脚注与这次清点一致。
+The `div.eli-subdivision` main articles in `#document1` are `art_1` through `art_27`, 27 in total. There are no `cpt_` chapter sections and no `anx_` annexes. The recital nodes are `rct_1` through `rct_87`, 87 in total. The body has 23 footnotes. The cleaned result's article numbering, `chapter_id=null`, empty chapters, empty annexes, 87 recital items, and 23 footnotes match this count.
 
-## 抽查
+## Spot Checks
 
-| 位置 | 区间 | 回切结果 |
+| Location | Range | Sliced Result |
 | --- | --- | --- |
-| 第 1 条 | `[78438, 79082)` | `Article 1` / `Subject matter and purpose` |
-| 第 14 条 | `[99518, 102616)` | `Article 14` / `Remedies for lack of conformity` |
-| 第 27 条 | `[113198, 113269)` | `Article 27` / `Addressees` |
-| 列表 | `[100102, 100206)` | `(a) the value the digital content or digital service would have if there were no lack of conformity; and` |
-| 脚注 | `[113395, 113426)` | `(1) OJ C 264, 20.7.2016, p. 57.` |
-| 脚注引用 | `[516, 595)` | `Having regard to the opinion of the European Economic and Social Committee (1),` |
+| Article 1 | `[78438, 79082)` | `Article 1` / `Subject matter and purpose` |
+| Article 14 | `[99518, 102616)` | `Article 14` / `Remedies for lack of conformity` |
+| Article 27 | `[113198, 113269)` | `Article 27` / `Addressees` |
+| List | `[100102, 100206)` | `(a) the value the digital content or digital service would have if there were no lack of conformity; and` |
+| Footnote | `[113395, 113426)` | `(1) OJ C 264, 20.7.2016, p. 57.` |
+| Footnote reference | `[516, 595)` | `Having regard to the opinion of the European Economic and Social Committee (1),` |
 
-第 14 条保留 7 个列表项。脚注 `act:1` 的 `referenced_by` 指向上述序言块。
+Article 14 retains 7 list items. The `referenced_by` of footnote `act:1` points to the recital block above.
 
-## 期限、例外与限制
+## Deadlines, Exceptions, and Limitations
 
-- 第 11 条 `[94633, 96386)` 规定，如果成员国只让交易者对供给后一段时间内显现的不符承担责任，该期间不得短于供给后两年。短语从字符 95202 开始。
-- 第 14 条允许消费者要求恢复符合性，除非恢复符合性不可能或费用不成比例。该限制从字符 99949 开始，位于第 14 条内。
-- 第 24 条第 1 款规定 2021 年 7 月 1 日前完成转化，措施自 2022 年 1 月 1 日起适用。
-- 第 24 条第 2 款规定指令适用于 2022 年 1 月 1 日起发生的供给，但第 19 条和第 20 条只适用于该日起订立的合同。该句从字符 112467 开始，位于第 24 条 `[111670, 112565)` 内。
-- 第 26 条 `[113029, 113196)` 只规定公布后第 20 日生效，没有把 2022 年 1 月 1 日写成第二次生效。
+- Article 11 `[94633, 96386)` provides that if a Member State makes only the trader liable for a lack of conformity that appears within a period after delivery, that period may not be shorter than two years after delivery. The phrase starts at character 95202.
+- Article 14 allows the consumer to require restoration of conformity unless this is impossible or disproportionate. This limitation starts at character 99949 and is located within Article 14.
+- Article 24(1) requires transposition by 2021 7 1, with the measures applying from 2022 1 1.
+- Article 24(2) provides that the Directive applies to supplies occurring from 2022 1 1, but Articles 19 and 20 apply only to contracts concluded from that date. This sentence starts at character 112467 and is located within Article 24 `[111670, 112565)`.
+- Article 26 `[113029, 113196)` provides only that it enters into force on the 20 day after publication; it does not state 2022 1 1 as a second entry into force.
 
-## 全文覆盖
+## Full-Text Coverage
 
-27 条主条文中，24 条在折叠空白后与 DOM 文本一致。第 3、23、26 条的差异来自比较器在标签两侧插入空格：脚注 `(21)`、公报链接 `(OJ L 136, 22.5.2019, p. 1)`，以及 `Union</span>.`。去掉这些标签边界空格后，三条文本一致。本文件没有附件，正文在最后一条脚注结束。
+Of the 27 main articles, 24 match the DOM text after whitespace folding. The differences in Articles 3, 23, and 26 come from the comparator inserting spaces on both sides of tags: footnote `(21)`, the Official Journal link `(OJ L 136, 22.5.2019, p. 1)`, and `Union</span>.`. After removing these tag-boundary spaces, the three texts match. This file has no annexes, and the body ends at the last footnote.
 
-## 重复处理与异常检测
+## Duplicate Handling and Anomaly Detection
 
-最终来源记录写入后连续两次清洗，txt 与 JSON 字节哈希都是上表中的值。
+After the final source record was written, cleaning was run twice consecutively; the txt and JSON byte hashes are both the values in the table above.
 
-在临时副本中删除第 27 条后，校验退出码为 1，原因是主条文变为 1–26。删除全部主条文后，校验退出码为 1，原因是主条文列表为空。正式产物没有被这两次失败检查改写。
+After deleting Article 27 in a temporary copy, validation exited with code 1, because the main articles became 1–26. After deleting all main articles, validation exited with code 1, because the main article list was empty. The formal artifacts were not modified by these two failed checks.
 
-## 未纳入本文件的问题
+## Issues Not Covered in This File
 
-本复核没有做浏览器视觉检查。页面链接的合并文本 `02019L0770-20190522` 不是本快照正文。
+This review did not perform a browser visual check. The merged text `02019L0770-20190522` of the page links is not the body of this snapshot.

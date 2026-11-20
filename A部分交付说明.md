@@ -1,68 +1,68 @@
-# A 部分交付说明
+# Part A delivery notes
 
-记录日期：2026-11-19。项目目录：`D:\gitcode\Edit\DE`。解释器：`D:\gitcode\Edit\DE\.venv\Scripts\python.exe`，Python 3.13.11，与 `.python-version` 一致。
+Record date: 2026-11-19. Project directory: `D:\gitcode\Edit\DE`. Interpreter: `D:\gitcode\Edit\DE\.venv\Scripts\python.exe`, Python 3.13.11, consistent with `.python-version`.
 
-## 1. 交付范围和当前状态
+## 1. Delivery scope and current status
 
-A 交付五份 EUR-Lex 英文消费者权益法规的原始公布版快照、清洗全文、章条位置、正式语料包和 30 道英文标准题。B 用正式语料包建库，C 用正式题集做评分对照。
+A delivers the original published-version snapshots, cleaned full text, chapter and article locations, formal corpus package, and 30 English standard questions for five EUR-Lex English consumer rights regulations. B builds the index using the formal corpus package, and C uses the formal question set for scoring comparison.
 
-程序校验、重复生成、加载核对、人工复核和浏览器视觉检查已经完成。A 负责人于 2026-11-19 确认通过，未发现问题。详细命令和哈希见 `artifacts/a_review/a_final_validation.md`。正式语料的向量索引、语义检索、LLM 回答和四组评分由 B、C 后续验证。
+Programmatic validation, repeated generation, load verification, manual review, and browser visual inspection have been completed. The A lead confirmed acceptance on 2026-11-19, with no issues found. Detailed commands and hashes are in `artifacts/a_review/a_final_validation.md`. The formal corpus's vector index, semantic retrieval, LLM answers, and four-condition scoring will be subsequently verified by B and C.
 
-## 2. 五份文档和版本范围
+## 2. Five documents and version scope
 
-五份都登记为 `original_publication`。保存的是官方公报原始文本，页面上另外链接的合并修订版没有进入清洗正文。
+All five are registered as `original_publication`. What is saved is the original text of the Official Journal; the consolidated amended versions linked separately on the pages did not enter the cleaned body text.
 
-| document_id | CELEX | 法规 |
+| document_id | CELEX | Regulation |
 | --- | --- | --- |
-| eu_consumer_rights_2011_83 | 32011L0083 | Directive 2011/83/EU，消费者权利 |
-| eu_sale_of_goods_2019_771 | 32019L0771 | Directive (EU) 2019/771，货物销售 |
-| eu_digital_content_2019_770 | 32019L0770 | Directive (EU) 2019/770，数字内容与数字服务 |
-| eu_unfair_practices_2005_29 | 32005L0029 | Directive 2005/29/EC，不公平商业行为 |
-| eu_unfair_terms_93_13 | 31993L0013 | Council Directive 93/13/EEC，不公平条款 |
+| eu_consumer_rights_2011_83 | 32011L0083 | Directive 2011/83/EU, consumer rights |
+| eu_sale_of_goods_2019_771 | 32019L0771 | Directive (EU) 2019/771, sale of goods |
+| eu_digital_content_2019_770 | 32019L0770 | Directive (EU) 2019/770, digital content and digital services |
+| eu_unfair_practices_2005_29 | 32005L0029 | Directive 2005/29/EC, unfair business practices |
+| eu_unfair_terms_93_13 | 31993L0013 | Council Directive 93/13/EEC, unfair terms |
 
-快照由浏览器保存。保存时间、HTTP 状态和响应时间在来源清单中为 null，并写明无法从快照核实。
+The snapshot is saved by the browser. The save time, HTTP status, and response time are null in the source manifest, and it is stated that they cannot be verified from the snapshot.
 
-## 3. 目录和文件用途
+## 3. Directory and file purposes
 
-| 路径 | 用途 |
+| Path | Purpose |
 | --- | --- |
-| `data/sources.json` | 五份来源、版本、日期、快照路径和 SHA-256 |
-| `data/raw/` | 五份官方 HTML 快照。带空格的文件名按清单读取 |
-| `data/processed/*.txt` | 已验收清洗全文，UTF-8、LF、末尾一个换行 |
-| `data/processed/*.json` | 已验收结构。区间是 Python `[start, end)`，对应同名 txt |
-| `data/corpus_manifest.json` | A 的项目级冻结清单，路径相对于项目根目录 |
-| `data/formal_corpus/` | B 的正式语料包。内有 `manifest.json`、`raw/`、`processed/` |
-| `data/eval/gold.jsonl` | 30 道正式题，一行一题 |
-| `data/eval/manifest.json` | 题集版本、语料版本、题数和覆盖 |
-| `data/sample_corpus/` | 只含第一份文档的联调样本，使用自己的语料版本 |
-| `data/eval/sample.jsonl` | 三道样题，不是正式 30 题 |
-| `scripts/process_documents.py` | 从来源清单清洗 HTML |
-| `scripts/export_corpus.py` | 生成正式包。命令行会先核对五份官方文档是否齐全 |
-| `scripts/build_gold.py` | 从冻结正文截取证据并生成正式题集 |
-| `scripts/validate_data.py` | 只做语料或题集校验 |
-| `artifacts/a_review/` | 逐文档复核、冻结、题集和最终校验记录 |
+| `data/sources.json` | Five sources, versions, dates, snapshot paths, and SHA-256 |
+| `data/raw/` | Five official HTML snapshots. Filenames containing spaces are read according to the manifest |
+| `data/processed/*.txt` | Accepted cleaned full text, UTF-8, LF, one trailing newline |
+| `data/processed/*.json` | Accepted structure. Intervals are Python `[start, end)`, corresponding to the txt of the same name |
+| `data/corpus_manifest.json` | A's project-level freeze manifest, with paths relative to the project root |
+| `data/formal_corpus/` | B's official corpus package. Contains `manifest.json`, `raw/`, `processed/` |
+| `data/eval/gold.jsonl` | 30 official questions, one per line |
+| `data/eval/manifest.json` | Question set version, corpus version, question count, and coverage |
+| `data/sample_corpus/` | Integration sample containing only the first document, using its own corpus version |
+| `data/eval/sample.jsonl` | Three sample questions, not the official 30 questions |
+| `scripts/process_documents.py` | Clean HTML from the source manifest |
+| `scripts/export_corpus.py` | Generate the official package. The command line first checks whether all five official documents are present |
+| `scripts/build_gold.py` | Extract evidence from the frozen body text and generate the official question set |
+| `scripts/validate_data.py` | Perform corpus or question set validation only |
+| `artifacts/a_review/` | Per-document review, freeze, question set, and final validation records |
 
-## 4. 版本
+## 4. Versions
 
-| 名称 | 值 | 读取位置 |
+| Name | Value | Read location |
 | --- | --- | --- |
-| corpus_version | `794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` | `data/formal_corpus/manifest.json` 和 `data/corpus_manifest.json` |
-| gold_version | `9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d` | `data/eval/manifest.json`。它等于 `gold.jsonl` 的文件 SHA-256，不写进 jsonl |
-| 样本 corpus_version | `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50` | `data/sample_corpus/manifest.json` |
+| corpus_version | `794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` | `data/formal_corpus/manifest.json` and `data/corpus_manifest.json` |
+| gold_version | `9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d` | `data/eval/manifest.json`. It equals the file SHA-256 of `gold.jsonl` and is not written into the jsonl |
+| Sample corpus_version | `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50` | `data/sample_corpus/manifest.json` |
 
-正式包和样本包版本不同。正式问答和正式评分使用第一行的统一语料版本。
+The official package and the sample package have different versions. Official Q&A and official scoring use the unified corpus version in the first row.
 
-## 5. 环境和依赖
+## 5. Environment and dependencies
 
-在项目根目录运行，使用上面的 `.venv` 解释器。
+Run in the project root directory, using the `.venv` interpreter above.
 
-- 清洗 HTML 使用 `requirements.txt` 中的 `beautifulsoup4==4.15.0` 和 `soupsieve==4.1.2`。
-- `formal_loader` 位于 `app.retrieval.types`。导入 `app.retrieval` 会加载检索服务，当前环境还使用 `requirements-b.txt` 里已经安装的 `filelock==4.2.10`。
-- 本轮没有新增依赖，也没有执行 `pip install`。
+- Cleaning HTML uses `beautifulsoup4==4.15.0` and `soupsieve==4.1.2` in `requirements.txt`.
+- `formal_loader` is located in `app.retrieval.types`. Importing `app.retrieval` loads the retrieval service; the current environment also uses `filelock==4.2.10` already installed in `requirements-b.txt`.
+- No new dependencies were added this round, and `pip install` was not executed.
 
-## 6. 从已有快照复现
+## 6. Reproducing from existing snapshots
 
-下面三条命令会重新写文件。本轮实际复跑后，产物字节哈希与运行前一致。
+The three commands below rewrite files. After actually rerunning them this round, the artifact byte hashes were identical to those before the run.
 
 ```powershell
 Set-Location 'D:\gitcode\Edit\DE'
@@ -71,13 +71,13 @@ Set-Location 'D:\gitcode\Edit\DE'
 & 'D:\gitcode\Edit\DE\.venv\Scripts\python.exe' 'D:\gitcode\Edit\DE\scripts\build_gold.py'
 ```
 
-顺序是清洗、正式导出、题集生成。导出读取已验收 txt 和 JSON；题集读取正式包。`export_corpus.py` 在写入 `data/formal_corpus` 和 `data/corpus_manifest.json` 之前，要求来源清单正好包含第 2 节的五个 `document_id`。缺少或多出文档时退出码为 1，不打印 `result=ok`。
+The order is cleaning, official export, question set generation. Export reads the accepted txt and JSON; question set generation reads the official package. Before writing `data/formal_corpus` and `data/corpus_manifest.json`, `export_corpus.py` requires the source manifest to contain exactly the five `document_id` from section 2. If documents are missing or extra, the exit code is 1 and `result=ok` is not printed.
 
-`scripts/export_sample.py` 会重写单文档样本包和样题 manifest。本轮没有运行它。正式交付不使用样本版本。
+`scripts/export_sample.py` rewrites the single-document sample package and the sample question manifest. It was not run this round. The official delivery does not use the sample version.
 
-## 7. 日常校验和加载
+## 7. Routine validation and loading
 
-下面的命令只检查，不生成语料或题集。
+The commands below only check; they do not generate corpus or question sets.
 
 ```powershell
 Set-Location 'D:\gitcode\Edit\DE'
@@ -86,9 +86,9 @@ Set-Location 'D:\gitcode\Edit\DE'
 & 'D:\gitcode\Edit\DE\.venv\Scripts\python.exe' -m unittest tests.test_corpus_batch tests.test_corpus_freeze tests.test_gold_eval
 ```
 
-成功时语料校验打印 `documents=5`、`main_articles=121`、`result=ok`。题集校验打印 `questions=30 answerable=24 refusal=6`、`result=ok`。
+On success, corpus validation prints `documents=5`, `main_articles=121`, `result=ok`. Question set validation prints `questions=30 answerable=24 refusal=6`, `result=ok`.
 
-B 的加载方式：
+B's loading method:
 
 ```python
 from pathlib import Path
@@ -99,53 +99,53 @@ corpus_version = "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b297
 documents = formal_loader(data_dir)(corpus_version)
 ```
 
-`formal_loader` 读取 `data_dir/manifest.json`。清单里以 `data/` 开头的路径会去掉第一段，再拼到 `data_dir` 里面。
+`formal_loader` reads `data_dir/manifest.json`. Paths in the manifest that start with `data/` have the first segment removed and are then joined under `data_dir`.
 
-## 8. 最终验证和复核状态
+## 8. Final verification and review status
 
-本轮结果：
+Results for this round:
 
-- 语料校验和题集校验退出码都是 0。
-- 三个 A 部分测试模块合计 19 项，结果 `OK`。异常用例打印的失败文本是被断言的预期输出。
-- 清洗、正式导出和题集生成复跑后，44 个受保护文件哈希不变。
-- 正式包和样本包都能按各自版本加载。加载出的全文、条文 ID、区间、`label`、`chapter`、`section` 与已验收数据一致。
-- 42 段证据长度为 68–393。退款题保留第 13 条第 2、3 款，两年责任期题保留第 10 条第 6 款的二手商品例外。
+- The exit codes for corpus validation and question set validation are both 0.
+- The three A-part test modules total 19 items, with result `OK`. The failure text printed by exception cases is the expected output being asserted.
+- After rerunning cleaning, official export, and question set generation, the hashes of 44 protected files were unchanged.
+- Both the official package and the sample package can be loaded according to their respective versions. The loaded full text, article IDs, intervals, `label`, `chapter`, and `section` are consistent with the accepted data.
+- 42 segment evidence length is 68–393. The refund question retains Article 13, paragraphs 2 and 3; the two-year liability period question retains the second-hand goods exception in Article 10, paragraph 6.
 
-复核分层：
+Review layering:
 
-- 程序完成来源对应、文件哈希、结构 ID、引用、字符区间、题数、证据切片和版本绑定。
-- AI 对照 HTML DOM 和冻结正文写了五份文档复核，并对照切片写了题集复核。证据由程序截取。
-- 人工复核和浏览器视觉检查已完成。A 负责人于 2026-11-19 确认通过，未发现问题。
-- 逐文档 AI 报告仍保留“当时未做浏览器视觉检查”。那是那些轮次的记录，当前结论以上述人工确认为准。
-- 切片一致只说明摘录回到了冻结正文，不能当成答案正确率。
+- The program completes source correspondence, file hashes, structure IDs, citations, character ranges, question counts, evidence slices, and version binding.
+- AI wrote five document reviews against the HTML DOM and frozen body text, and a question-set review against the slices. Evidence was captured by the program.
+- Human review and browser visual inspection are complete. Lead A confirmed and approved on 2026-11-19, with no issues found.
+- The per-document AI reports still retain "no browser visual inspection was performed at the time." Those are records of those rounds; the current conclusion is based on the human confirmation above.
+- Slice consistency only shows that the excerpt maps back to the frozen body text; it cannot be treated as answer accuracy.
 
-## 9. 已知限制和未完成事项
+## 9. Known limitations and unfinished items
 
-- 语料是原始公布版，不是后来的合并修订版。
-- 快照的保存时间、HTTP 状态和响应时间仍为 null。
-- 浏览器视觉检查已由 A 负责人于 2026-11-19 确认通过。
-- 没有向量索引、embedding 下载、真实语义检索、LLM 回答或四组评分。
-- C 的问答接口还没有用这 30 道正式题做过端到端实测。本文只交付题集字段，不把该接口记为已通过。
-- 本轮没有执行 `git add`、`commit` 或 `push`。
+- The corpus is the original published version, not a later consolidated revision.
+- The snapshot's save time, HTTP status, and response time remain null.
+- Browser visual inspection was confirmed and approved by Lead A on 2026-11-19.
+- There is no vector index, embedding download, real semantic retrieval, LLM answer, or four-group scoring.
+- C's Q&A interface has not yet been tested end-to-end with these 30 formal questions. This document only delivers the question-set fields and does not record that interface as passed.
+- This round did not execute `git add`, `commit`, or `push`.
 
-## 交给 B
+## Handoff to B
 
-- 把 `data_dir` 设为 `data/formal_corpus`。
-- 用 `formal_loader` 读取包内 `manifest.json`，请求版本使用上面的统一 `corpus_version`。
-- 每份文档的 `text` 是完整清洗正文。主条文在 `articles` 中。
-- `article_id` 是稳定 ID。`label` 为 `Article {条号}`。
-- `chapter` 对应已验收 `chapter_id`，`section` 对应 `section_id`。没有章或节时为 null。
-- 字符区间是 Python `[start, end)`，满足 `text[start:end]` 等于该条文或证据文本。
-- 第四份有两个节。第 5 条直接属于第 2 章，`section` 为 null。第 6、7 条属于 Section 1，第 8、9 条属于 Section 2。
-- 样本包 `data/sample_corpus` 只用于早先联调，版本是 `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50`。正式索引使用五份文档的统一版本。
+- Set `data_dir` to `data/formal_corpus`.
+- Use `formal_loader` to read `manifest.json` in the package; use the unified `corpus_version` above as the request version.
+- Each document's `text` is the full cleaned body text. The main provisions are in `articles`.
+- `article_id` is a stable ID. `label` is `Article {article_number}`.
+- `chapter` corresponds to accepted `chapter_id`, and `section` corresponds to `section_id`. It is null when there is no chapter or section.
+- Character ranges are Python `[start, end)`, satisfying `text[start:end]` equal to that provision or evidence text.
+- The fourth document has two sections. Article 5 belongs directly to Chapter 2, and `section` is null. Articles 6 and 7 belong to Section 1, and Articles 8 and 9 belong to Section 2.
+- Sample package `data/sample_corpus` is only for earlier integration testing; its version is `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50`. The formal index uses the unified version of the five documents.
 
-## 交给 C
+## Handoff to C
 
-- 正式题集是 `data/eval/gold.jsonl`，清单是 `data/eval/manifest.json`。
-- 固定使用 `corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` 和 `gold_version=9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d`。
-- 向系统提交的是 `question`。`reference_answer`、`key_facts` 和 `evidence` 用于评分对照，不作为系统输入。
-- `should_refuse` 为 false 的有 24 题，为 true 的有 6 题。拒答题的 `evidence` 和 `key_facts` 为空，原因在 `refusal_reason`。
-- 可答题的 `key_facts` 等于对应 `evidence.quote`。证据含 `document_id`、`start`、`end`、`quote`，以及 `article_id` 或 `structure_id`。
-- 题型是 `single_article` 13 题、`multi_evidence` 11 题、`unanswerable` 6 题。
-- `data/eval/sample.jsonl` 是三道联调样题，绑定样本语料版本，不代替正式题集。
-- 目前没有用 C 的实际接口跑过这 30 题。字段说明不能视为接口兼容性已经通过。
+- The formal question set is `data/eval/gold.jsonl`, and the manifest is `data/eval/manifest.json`.
+- Always use `corpus_version=794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` and `gold_version=9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d`.
+- What is submitted to the system is `question`. `reference_answer`, `key_facts`, and `evidence` are used for scoring comparison, not as system input.
+- There are 24 questions with `should_refuse` set to false, and 6 questions with it set to true. For refusal questions, `evidence` and `key_facts` are empty, and the reason is in `refusal_reason`.
+- For answerable questions, `key_facts` equals the corresponding `evidence.quote`. The evidence includes `document_id`, `start`, `end`, `quote`, and `article_id` or `structure_id`.
+- Question types are `single_article` 13 questions, `multi_evidence` 11 questions, and `unanswerable` 6 questions.
+- `data/eval/sample.jsonl` are three integration-test sample questions bound to the sample corpus version; they do not replace the formal question set.
+- These 30 questions have not yet been run against C's actual interface. The field descriptions must not be taken as proof that interface compatibility has passed.

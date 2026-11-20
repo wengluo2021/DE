@@ -1,0 +1,444 @@
+{
+  "exported_at": "2026-11-20T23:21:37.102611+08:00",
+  "run_id": "eval-ca61c0c0f4bc40339a321e93d80d0e45",
+  "directory": "E:\\2027CityU\\CS5481 Data Engineering\\GroupProject\\DERag\\exports\\20261120-232137-eval-ca61c0c0",
+  "relative_directory": "exports/20261120-232137-eval-ca61c0c0",
+  "run_state": "completed",
+  "review_complete": true,
+  "records": 120,
+  "review_history_entries": 120,
+  "review_method": "User-authorized AI-assisted grading, not individual human verification.",
+  "git_base_commit": "298b2e35592aa77877d4d9836006ccf8b56a2b20",
+  "working_tree_has_local_changes": true,
+  "new_evaluation_runs": 0,
+  "new_generation_calls": 0,
+  "summary": {
+    "f400": {
+      "expected_cases": 30,
+      "processing": 0,
+      "errors": 0,
+      "answer_accuracy": {
+        "numerator": 6,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.25
+      },
+      "refusal_accuracy": {
+        "numerator": 6,
+        "denominator": 6,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 1.0
+      },
+      "citation_accuracy": {
+        "numerator": 28,
+        "denominator": 35,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.8,
+        "pending_cases": 0
+      },
+      "partial_answers": 10,
+      "wrong_answers": 8,
+      "misrefusals": 5,
+      "uncited_claims": 0,
+      "successful_latency": {
+        "retrieve_ms_median": 190.2575,
+        "generate_ms_median": 3392.7278999981354
+      },
+      "tokens": {
+        "prompt_tokens": {
+          "known_total": 40956,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "completion_tokens": {
+          "known_total": 1814,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "total_tokens": {
+          "known_total": 42770,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        }
+      },
+      "context_chars": {
+        "count": 30,
+        "min": 2000,
+        "median": 2000.0,
+        "max": 2000
+      },
+      "hit_at_1_any": {
+        "numerator": 5,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.20833333333333334
+      },
+      "hit_at_1_all": {
+        "numerator": 1,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.041666666666666664
+      },
+      "hit_at_5_any": {
+        "numerator": 9,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.375
+      },
+      "hit_at_5_all": {
+        "numerator": 4,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.16666666666666666
+      }
+    },
+    "s400": {
+      "expected_cases": 30,
+      "processing": 0,
+      "errors": 0,
+      "answer_accuracy": {
+        "numerator": 9,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.375
+      },
+      "refusal_accuracy": {
+        "numerator": 6,
+        "denominator": 6,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 1.0
+      },
+      "citation_accuracy": {
+        "numerator": 33,
+        "denominator": 35,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.9428571428571428,
+        "pending_cases": 0
+      },
+      "partial_answers": 9,
+      "wrong_answers": 6,
+      "misrefusals": 6,
+      "uncited_claims": 0,
+      "successful_latency": {
+        "retrieve_ms_median": 179.086,
+        "generate_ms_median": 2953.861650003091
+      },
+      "tokens": {
+        "prompt_tokens": {
+          "known_total": 38103,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "completion_tokens": {
+          "known_total": 1858,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "total_tokens": {
+          "known_total": 39961,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        }
+      },
+      "context_chars": {
+        "count": 30,
+        "min": 972,
+        "median": 1568.5,
+        "max": 1918
+      },
+      "hit_at_1_any": {
+        "numerator": 7,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.2916666666666667
+      },
+      "hit_at_1_all": {
+        "numerator": 4,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.16666666666666666
+      },
+      "hit_at_5_any": {
+        "numerator": 14,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.5833333333333334
+      },
+      "hit_at_5_all": {
+        "numerator": 6,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.25
+      }
+    },
+    "f800": {
+      "expected_cases": 30,
+      "processing": 0,
+      "errors": 0,
+      "answer_accuracy": {
+        "numerator": 10,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.4166666666666667
+      },
+      "refusal_accuracy": {
+        "numerator": 6,
+        "denominator": 6,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 1.0
+      },
+      "citation_accuracy": {
+        "numerator": 43,
+        "denominator": 46,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.9347826086956522,
+        "pending_cases": 0
+      },
+      "partial_answers": 7,
+      "wrong_answers": 7,
+      "misrefusals": 6,
+      "uncited_claims": 0,
+      "successful_latency": {
+        "retrieve_ms_median": 184.12,
+        "generate_ms_median": 3088.4502500011877
+      },
+      "tokens": {
+        "prompt_tokens": {
+          "known_total": 53094,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "completion_tokens": {
+          "known_total": 2388,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        },
+        "total_tokens": {
+          "known_total": 55482,
+          "known_attempts": 30,
+          "unknown_attempts": 0
+        }
+      },
+      "context_chars": {
+        "count": 30,
+        "min": 4000,
+        "median": 4000.0,
+        "max": 4000
+      },
+      "hit_at_1_any": {
+        "numerator": 10,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.4166666666666667
+      },
+      "hit_at_1_all": {
+        "numerator": 4,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.16666666666666666
+      },
+      "hit_at_5_any": {
+        "numerator": 17,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.7083333333333334
+      },
+      "hit_at_5_all": {
+        "numerator": 10,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.4166666666666667
+      }
+    },
+    "s800": {
+      "expected_cases": 30,
+      "processing": 0,
+      "errors": 0,
+      "answer_accuracy": {
+        "numerator": 14,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.5833333333333334
+      },
+      "refusal_accuracy": {
+        "numerator": 6,
+        "denominator": 6,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 1.0
+      },
+      "citation_accuracy": {
+        "numerator": 50,
+        "denominator": 50,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 1.0,
+        "pending_cases": 0
+      },
+      "partial_answers": 7,
+      "wrong_answers": 3,
+      "misrefusals": 3,
+      "uncited_claims": 0,
+      "successful_latency": {
+        "retrieve_ms_median": 187.3565,
+        "generate_ms_median": 3675.83944999933
+      },
+      "tokens": {
+        "prompt_tokens": {
+          "known_total": 47940,
+          "known_attempts": 30,
+          "unknown_attempts": 1
+        },
+        "completion_tokens": {
+          "known_total": 2525,
+          "known_attempts": 30,
+          "unknown_attempts": 1
+        },
+        "total_tokens": {
+          "known_total": 50465,
+          "known_attempts": 30,
+          "unknown_attempts": 1
+        }
+      },
+      "context_chars": {
+        "count": 30,
+        "min": 2620,
+        "median": 3391.0,
+        "max": 3700
+      },
+      "hit_at_1_any": {
+        "numerator": 14,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.5833333333333334
+      },
+      "hit_at_1_all": {
+        "numerator": 8,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.3333333333333333
+      },
+      "hit_at_5_any": {
+        "numerator": 21,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.875
+      },
+      "hit_at_5_all": {
+        "numerator": 13,
+        "denominator": 24,
+        "pending": 0,
+        "failed_cases": 0,
+        "value": 0.5416666666666666
+      }
+    }
+  },
+  "b_analysis": {
+    "f400": {
+      "coverage_and_answer_grade": {
+        "incomplete_evidence / correct": 2,
+        "incomplete_evidence / partial": 10,
+        "full_evidence / correct": 4,
+        "incomplete_evidence / wrong": 8
+      },
+      "chunk_count": 982,
+      "chunk_mean_chars": 398.9582484725051,
+      "index_build_ms": 443999.619
+    },
+    "s400": {
+      "coverage_and_answer_grade": {
+        "full_evidence / correct": 6,
+        "incomplete_evidence / partial": 9,
+        "incomplete_evidence / correct": 3,
+        "incomplete_evidence / wrong": 6
+      },
+      "chunk_count": 1415,
+      "chunk_mean_chars": 276.8742049469965,
+      "index_build_ms": 421250.674
+    },
+    "f800": {
+      "coverage_and_answer_grade": {
+        "full_evidence / correct": 9,
+        "full_evidence / partial": 1,
+        "incomplete_evidence / partial": 6,
+        "incomplete_evidence / wrong": 7,
+        "incomplete_evidence / correct": 1
+      },
+      "chunk_count": 493,
+      "chunk_mean_chars": 794.6795131845842,
+      "index_build_ms": 343025.018
+    },
+    "s800": {
+      "coverage_and_answer_grade": {
+        "full_evidence / correct": 12,
+        "incomplete_evidence / partial": 6,
+        "incomplete_evidence / correct": 2,
+        "full_evidence / partial": 1,
+        "incomplete_evidence / wrong": 3
+      },
+      "chunk_count": 625,
+      "chunk_mean_chars": 626.8432,
+      "index_build_ms": 351910.414
+    }
+  },
+  "guide_file": "工作文档.md",
+  "files": {
+    "工作文档.md": "c2880ac132019fa8764fa691d54520ddf8259fd690a23d88d155672f45d8cebe",
+    "exports/20261120-232137-eval-ca61c0c0/b-analysis.json": "7e684e04268c40b070de79053d7d2d844354a8ba5f967b1cb7db02f738ef10ca",
+    "exports/20261120-232137-eval-ca61c0c0/evaluation.csv": "1ad14e89f87cec76fbfef7459036a8ea00a683efd1fb4c0a201d5e2d533e449d",
+    "exports/20261120-232137-eval-ca61c0c0/evaluation.json": "db6fd673d01fa0f4f0185ac0904f2d6dab172fb918e98f61f2197de281a363aa",
+    "exports/20261120-232137-eval-ca61c0c0/export-validation.json": "84dc147545b9ce8cacd6a1f642b5983fde37624b5fdf354c8e87df1cdc82a6d7",
+    "exports/20261120-232137-eval-ca61c0c0/index-manifest.json": "b382e5318cb74a60ffcbcee151d41a14a191efacfa46ec01df73a7515f138b16",
+    "exports/20261120-232137-eval-ca61c0c0/paired-comparison.json": "b0d1a88502e5a9685b94b49031337c6737115d3d4550a50c6f0cfe4be23fa2dd",
+    "exports/20261120-232137-eval-ca61c0c0/README.txt": "8b12f4a6339766c6957c90778b1e1e1831bf3669749379d070b56b4b24454c4f",
+    "exports/20261120-232137-eval-ca61c0c0/results-overview.html": "f31551c8f4a80d9ccae7c2b412aaf8ec2cb17ab1ab04ff158046859869d75491",
+    "exports/20261120-232137-eval-ca61c0c0/review-provenance.json": "c0c0c639bfd08f185c88c3c1c114ffdd2627fd350a558ff5a8bf5b34ceff26bb",
+    "exports/20261120-232137-eval-ca61c0c0/runtime-config.json": "250302e75a4388eff5d80a8e59a6d0a9a1ca646269a1f530c25889bba6828698",
+    "exports/20261120-232137-eval-ca61c0c0/sqlite-backup/derag.sqlite3": "778ae0aaff4fa041de34546aae80fba0679f54126838b30cda07ad463f86e581",
+    "exports/20261120-232137-eval-ca61c0c0/summary.json": "3dfdb4f80047e026e5162e3a2718185d96377e5b30aa9222990ba96f66758998",
+    "exports/20261120-232137-eval-ca61c0c0/verification/english-api-tests.xml": "f6c4919daf05ed47b76de403d5eecb8c08db646ac4ba1a4e221064821d66c173",
+    "exports/20261120-232137-eval-ca61c0c0/verification/english-validation.json": "411fdd9d84f85e376a92e793386c4e8f779d54edbe01a6b1781fe72324bdae2c",
+    "exports/20261120-232137-eval-ca61c0c0/verification/main-tests-verified.xml": "2f5c8e2b42162555ff43e623a8b5875d87deacd9e5729e266e0fb9cc9636dd76"
+  },
+  "files_relative_to": "project_or_extracted_package_root",
+  "validation": {
+    "state": "passed",
+    "run_id": "eval-ca61c0c0f4bc40339a321e93d80d0e45",
+    "json_records": 120,
+    "csv_records": 120,
+    "offline_html_records": 120,
+    "offline_html_external_assets": 0,
+    "guide_links_checked": 11,
+    "database_quick_check": "ok",
+    "database_cases": 120,
+    "database_review_history": 120,
+    "source_evaluation_bytes_preserved": true,
+    "new_generation_calls": 0,
+    "review_method": "User-authorized AI-assisted grading, not individual human verification."
+  }
+}

@@ -13,3 +13,6 @@ docs/provenance/** -text
 
 # Keep diagnostic logs byte-exact, including native Windows CRLF endings.
 artifacts/c/m6-review-http-readonly*/server.log -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Saved evaluation exports and backup packages keep their checksummed bytes.
+exports/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

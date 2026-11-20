@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#193b32">
-  <title>DERag · 法规知识库</title>
+  <title>DERag · Regulatory knowledge base</title>
   <link rel="stylesheet" href="/static/styles.css">
   <script src="/static/app.js" defer></script>
 </head>
@@ -37,91 +37,91 @@
     <aside class="sidebar" id="sidebar">
       <div class="brand">
         <div class="brand-mark" aria-hidden="true">DE</div>
-        <div><strong>DERag</strong><span>法规知识库</span></div>
+        <div><strong>DERag</strong><span>Regulatory knowledge base</span></div>
       </div>
-      <div class="nav-caption">工作区</div>
-      <nav class="nav" aria-label="主导航">
-        <button class="nav-item active" type="button" data-route="chat"><svg class="icon"><use href="#i-message"/></svg><span>问答</span></button>
-        <button class="nav-item" type="button" data-route="documents"><svg class="icon"><use href="#i-files"/></svg><span>文档库</span></button>
-        <button class="nav-item" type="button" data-route="compare"><svg class="icon"><use href="#i-split"/></svg><span>分块对照</span></button>
-        <button class="nav-item" type="button" data-route="evaluation"><svg class="icon"><use href="#i-chart"/></svg><span>评估</span></button>
+      <div class="nav-caption">Workspace</div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-item active" type="button" data-route="chat"><svg class="icon"><use href="#i-message"/></svg><span>Chat</span></button>
+        <button class="nav-item" type="button" data-route="documents"><svg class="icon"><use href="#i-files"/></svg><span>Documents</span></button>
+        <button class="nav-item" type="button" data-route="compare"><svg class="icon"><use href="#i-split"/></svg><span>Chunk comparison</span></button>
+        <button class="nav-item" type="button" data-route="evaluation"><svg class="icon"><use href="#i-chart"/></svg><span>Evaluation</span></button>
       </nav>
       <div class="sidebar-bottom">
-        <div class="system-line"><span class="live-dot"></span><span id="systemStatus">正在连接后台</span><span class="system-version">v0.4</span></div>
-        <div class="sidebar-meta" id="systemMeta">读取当前知识库状态</div>
+        <div class="system-line"><span class="live-dot"></span><span id="systemStatus">Connecting to backend</span><span class="system-version">v0.4</span></div>
+        <div class="sidebar-meta" id="systemMeta">Read current knowledge base status</div>
       </div>
     </aside>
 
     <div class="workspace">
       <header class="topbar">
-        <button class="icon-button mobile-menu" id="menuButton" type="button" aria-label="打开导航" title="打开导航"><svg class="icon"><use href="#i-menu"/></svg></button>
-        <div class="page-context"><span class="context-parent">DERag</span><svg class="icon small"><use href="#i-chevron"/></svg><strong id="pageTitle">问答</strong></div>
+        <button class="icon-button mobile-menu" id="menuButton" type="button" aria-label="Open navigation" title="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
+        <div class="page-context"><span class="context-parent">DERag</span><svg class="icon small"><use href="#i-chevron"/></svg><strong id="pageTitle">Chat</strong></div>
         <span class="topbar-spacer"></span>
-        <span class="preview-pill" id="serviceBadge">连接中</span>
-        <button class="icon-button" id="refreshButton" type="button" aria-label="刷新后台状态" title="刷新后台状态"><svg class="icon"><use href="#i-refresh"/></svg></button>
-        <button class="icon-button" id="aboutButton" type="button" aria-label="查看当前状态" title="查看当前状态"><svg class="icon"><use href="#i-info"/></svg></button>
+        <span class="preview-pill" id="serviceBadge">Connecting</span>
+        <button class="icon-button" id="refreshButton" type="button" aria-label="Refresh backend status" title="Refresh backend status"><svg class="icon"><use href="#i-refresh"/></svg></button>
+        <button class="icon-button" id="aboutButton" type="button" aria-label="View current status" title="View current status"><svg class="icon"><use href="#i-info"/></svg></button>
       </header>
 
-      <div class="service-banner" id="serviceNotice" role="status" aria-live="polite">正在读取后台状态…</div>
+      <div class="service-banner" id="serviceNotice" role="status" aria-live="polite">Reading backend status…</div>
       <main class="main">
-        <section class="view chat-view active" id="view-chat" aria-label="问答">
+        <section class="view chat-view active" id="view-chat" aria-label="Chat">
           <div class="chat-layout" id="chatLayout">
             <aside class="conversation-rail" id="conversationRail">
-              <div class="rail-header"><strong>会话记录</strong><button class="icon-button subtle" id="newSessionButton" type="button" aria-label="新建会话" title="新建会话"><svg class="icon"><use href="#i-plus"/></svg></button></div>
+              <div class="rail-header"><strong>Session records</strong><button class="icon-button subtle" id="newSessionButton" type="button" aria-label="New session" title="New session"><svg class="icon"><use href="#i-plus"/></svg></button></div>
               <div class="session-list" id="sessionList"></div>
-              <div class="rail-footer"><svg class="icon small"><use href="#i-info"/></svg>会话与引用保存在服务端</div>
+              <div class="rail-footer"><svg class="icon small"><use href="#i-info"/></svg>Sessions and citations are saved on the server</div>
             </aside>
             <div class="chat-panel">
               <div class="chat-heading">
-                <button class="icon-button session-toggle" id="sessionToggle" type="button" aria-label="打开会话列表" title="打开会话列表"><svg class="icon"><use href="#i-message"/></svg></button>
-                <div class="heading-copy"><h1>法规问答</h1><p>依据本轮检索证据回答，引用可回溯</p></div>
-                <div class="heading-controls"><label for="chatCondition">分块方案</label><select id="chatCondition" class="select compact"><option value="f400">固定窗口 · 400</option><option value="s400" selected>法条结构 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div>
+                <button class="icon-button session-toggle" id="sessionToggle" type="button" aria-label="Open session list" title="Open session list"><svg class="icon"><use href="#i-message"/></svg></button>
+                <div class="heading-copy"><h1>Legal Q&amp;A</h1><p>Answer based on this round's retrieval evidence; citations are traceable</p></div>
+                <div class="heading-controls"><label for="chatCondition">Chunking method</label><select id="chatCondition" class="select compact"><option value="f400">Fixed window · 400</option><option value="s400" selected>Article structure · 400</option><option value="f800">Fixed window · 800</option><option value="s800">Article structure · 800</option></select></div>
               </div>
               <div class="messages" id="messages" aria-live="polite"></div>
-              <div class="suggestions" id="suggestions">请针对当前知识库中的法规提问。前面的问题不会作为下一题的模型上下文。</div>
+              <div class="suggestions" id="suggestions">Please ask about regulations in the current knowledge base. Previous questions are not used as model context for the next question.</div>
               <form class="composer" id="askForm">
-                <label class="sr-only" for="questionInput">输入问题</label>
-                <textarea id="questionInput" rows="2" placeholder="输入问题" maxlength="1000"></textarea>
-                <div class="composer-bottom"><button class="send-button" type="submit"><svg class="icon"><use href="#i-send"/></svg><span>发送</span></button></div>
+                <label class="sr-only" for="questionInput">Enter question</label>
+                <textarea id="questionInput" rows="2" placeholder="Enter question" maxlength="1000"></textarea>
+                <div class="composer-bottom"><button class="send-button" type="submit"><svg class="icon"><use href="#i-send"/></svg><span>Send</span></button></div>
               </form>
             </div>
           </div>
         </section>
 
-        <section class="view page-view" id="view-documents" aria-label="文档库" hidden>
+        <section class="view page-view" id="view-documents" aria-label="Documents" hidden>
           <div class="page-wrap">
-            <div class="page-heading"><div><div class="eyebrow">SOURCE LIBRARY</div><h1>文档库</h1></div><div class="heading-actions"><button class="button primary" id="buildIndexesButton" type="button"><svg class="icon"><use href="#i-database"/></svg>建立四组索引</button></div></div>
-            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span id="documentNotice">读取A已冻结的资料；正文和条文位置来自后台，不在浏览器修改。</span></div>
+            <div class="page-heading"><div><div class="eyebrow">SOURCE LIBRARY</div><h1>Documents</h1></div><div class="heading-actions"><button class="button primary" id="buildIndexesButton" type="button"><svg class="icon"><use href="#i-database"/></svg>Build indexes</button></div></div>
+            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span id="documentNotice">Browse frozen source documents and inspect their text and article boundaries.</span></div>
             <div class="task-status" id="indexTaskStatus" role="status" hidden></div>
             <div class="stat-strip" id="documentStats"></div>
-            <div class="section-heading"><h2>文档清单</h2><div class="search-field"><svg class="icon"><use href="#i-search"/></svg><input id="docSearch" type="search" placeholder="搜索标题或来源" aria-label="搜索文档"></div></div>
-            <div class="table-wrap"><table class="data-table document-table"><thead><tr><th>文档</th><th>来源</th><th>字符</th><th>条文</th><th>语料版本</th><th class="action-col">操作</th></tr></thead><tbody id="documentRows"></tbody></table></div>
-            <div class="empty-table" id="documentEmpty" hidden>没有匹配的文档</div>
+            <div class="section-heading"><h2>Document list</h2><div class="search-field"><svg class="icon"><use href="#i-search"/></svg><input id="docSearch" type="search" placeholder="Search title or source" aria-label="Search documents"></div></div>
+            <div class="table-wrap"><table class="data-table document-table"><thead><tr><th>Document</th><th>Source</th><th>Characters</th><th>Articles</th><th>Corpus version</th><th class="action-col">Actions</th></tr></thead><tbody id="documentRows"></tbody></table></div>
+            <div class="empty-table" id="documentEmpty" hidden>No matching documents</div>
           </div>
         </section>
 
-        <section class="view page-view" id="view-compare" aria-label="分块对照" hidden>
+        <section class="view page-view" id="view-compare" aria-label="Chunk comparison" hidden>
           <div class="page-wrap">
-            <div class="page-heading"><div><div class="eyebrow">CHUNK STUDY</div><h1>分块对照</h1></div><span class="tag">后台分块与检索</span></div>
-            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span id="compareNotice">选择文档查看实际入库的块，或输入同一问题对比两侧top-5检索证据。</span></div>
-            <div class="compare-controls"><div class="field grow"><label for="compareDocument">文档</label><select id="compareDocument" class="select"></select></div><div class="field"><label for="leftCondition">左侧方案</label><select id="leftCondition" class="select"><option value="f400">固定窗口 · 400</option><option value="s400">法条结构 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div><div class="field"><label for="rightCondition">右侧方案</label><select id="rightCondition" class="select"><option value="s400">法条结构 · 400</option><option value="f400">固定窗口 · 400</option><option value="f800">固定窗口 · 800</option><option value="s800">法条结构 · 800</option></select></div></div>
-            <form class="compare-question" id="compareForm"><label for="compareQuestion">同题检索</label><input id="compareQuestion" maxlength="1000" required placeholder="输入一个问题，两侧使用相同语料与索引"><button class="button primary" type="submit">比较检索</button><button class="button" type="button" id="showChunksButton">查看文档分块</button></form>
+            <div class="page-heading"><div><div class="eyebrow">CHUNK STUDY</div><h1>Chunk comparison</h1></div><span class="tag">Backend chunking and retrieval</span></div>
+            <div class="notice"><svg class="icon"><use href="#i-info"/></svg><span id="compareNotice">Select a document to view the chunks actually ingested, or enter the same question to compare top-5 retrieval evidence on both sides.</span></div>
+            <div class="compare-controls"><div class="field grow"><label for="compareDocument">Documents</label><select id="compareDocument" class="select"></select></div><div class="field"><label for="leftCondition">Left method</label><select id="leftCondition" class="select"><option value="f400">Fixed window · 400</option><option value="s400">Article structure · 400</option><option value="f800">Fixed window · 800</option><option value="s800">Article structure · 800</option></select></div><div class="field"><label for="rightCondition">Right method</label><select id="rightCondition" class="select"><option value="s400">Article structure · 400</option><option value="f400">Fixed window · 400</option><option value="f800">Fixed window · 800</option><option value="s800">Article structure · 800</option></select></div></div>
+            <form class="compare-question" id="compareForm"><label for="compareQuestion">Compare a question</label><input id="compareQuestion" maxlength="1000" required placeholder="Enter a question; both sides use the same corpus and index"><button class="button primary" type="submit">Compare retrieval</button><button class="button" type="button" id="showChunksButton">View document chunks</button></form>
             <div class="compare-summary" id="compareSummary"></div>
-            <div class="compare-grid"><div class="compare-column"><div class="column-heading"><div><span class="column-letter">A</span><h2 id="leftLabel">固定窗口 · 400</h2></div><span id="leftCount" class="count-label"></span></div><div class="chunk-list" id="leftChunks"></div></div><div class="compare-column"><div class="column-heading"><div><span class="column-letter alt">B</span><h2 id="rightLabel">法条结构 · 400</h2></div><span id="rightCount" class="count-label"></span></div><div class="chunk-list" id="rightChunks"></div></div></div>
+            <div class="compare-grid"><div class="compare-column"><div class="column-heading"><div><span class="column-letter">A</span><h2 id="leftLabel">Fixed window · 400</h2></div><span id="leftCount" class="count-label"></span></div><div class="chunk-list" id="leftChunks"></div></div><div class="compare-column"><div class="column-heading"><div><span class="column-letter alt">B</span><h2 id="rightLabel">Article structure · 400</h2></div><span id="rightCount" class="count-label"></span></div><div class="chunk-list" id="rightChunks"></div></div></div>
           </div>
         </section>
 
-        <section class="view page-view" id="view-evaluation" aria-label="评估" hidden>
+        <section class="view page-view" id="view-evaluation" aria-label="Evaluation" hidden>
           <div class="page-wrap">
-            <div class="page-heading"><div><div class="eyebrow">EVALUATION</div><h1>评估</h1></div><div class="heading-actions"><button class="button primary" id="runEvaluationButton" type="button">运行四组评估</button><button class="button" id="exportReportButton" type="button">导出 JSON</button><button class="button" id="exportCsvButton" type="button">导出 CSV</button></div></div>
-            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span id="evaluationNotice">30道冻结标准题 × 4个条件。运行完成后仍需人工核验答案与引用。</span></div>
-            <div class="evaluation-controls"><label for="runSelector">已保存的实验</label><select class="select" id="runSelector"><option value="">暂无实验</option></select><button class="button" id="refreshEvaluationButton" type="button">刷新实验</button></div>
+            <div class="page-heading"><div><div class="eyebrow">EVALUATION</div><h1>Evaluation</h1></div><div class="heading-actions"><button class="button primary" id="runEvaluationButton" type="button">Run evaluation</button><button class="button" id="exportReportButton" type="button">Export JSON</button><button class="button" id="exportCsvButton" type="button">Export CSV</button></div></div>
+            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span id="evaluationNotice">30 frozen questions × 4 conditions. Review answers and citations after the run completes.</span></div>
+            <div class="evaluation-controls"><label for="runSelector">Saved experiments</label><select class="select" id="runSelector"><option value="">No experiments yet</option></select><button class="button" id="refreshEvaluationButton" type="button">Refresh experiments</button></div>
             <div class="task-status" id="evaluationTaskStatus" role="status" hidden></div>
-            <div class="report-meta" id="reportMeta"><div><strong>尚未选择实验</strong><span>已有结果会从服务端读取</span></div></div>
+            <div class="report-meta" id="reportMeta"><div><strong>No experiment selected yet</strong><span>Existing results will be read from the server</span></div></div>
             <div class="metric-grid" id="metricGrid"></div>
-            <div class="section-heading evaluation-heading"><h2>逐题记录</h2><div class="segmented" role="group" aria-label="筛选评估题"><button type="button" class="active" data-eval-filter="all">全部</button><button type="button" data-eval-filter="pending">待评分</button><button type="button" data-eval-filter="error">失败</button><button type="button" data-eval-filter="refuse">拒答</button></div></div>
-            <div class="table-wrap"><table class="data-table"><thead><tr><th>编号 / 条件</th><th>问题</th><th>类型</th><th>Hit@1 / @5 全部证据</th><th>运行 / 评分</th><th class="action-col">详情</th></tr></thead><tbody id="evaluationRows"></tbody></table></div>
-            <div class="report-footer"><span>失败保留，答案与拒答分母固定24/6。未评分不显示最终正确率；导出不重新生成。</span><button type="button" class="text-button" id="openDesignButton">查看项目设计<svg class="icon small"><use href="#i-external"/></svg></button></div>
+            <div class="section-heading evaluation-heading"><h2>Per-question records</h2><div class="segmented" role="group" aria-label="Filter evaluation questions"><button type="button" class="active" data-eval-filter="all">All</button><button type="button" data-eval-filter="pending">Pending review</button><button type="button" data-eval-filter="error">Failed</button><button type="button" data-eval-filter="refuse">Refusal</button></div></div>
+            <div class="table-wrap"><table class="data-table"><thead><tr><th>ID / Condition</th><th>Question</th><th>Type</th><th>Hit@1 / @5 all evidence</th><th>Run / Score</th><th class="action-col">Details</th></tr></thead><tbody id="evaluationRows"></tbody></table></div>
+            <div class="report-footer"><span>Failures are retained; the answer and refusal denominators are fixed at 24/6. Final accuracy is not shown for unscored items; export does not regenerate.</span><button type="button" class="text-button" id="openDesignButton">View project design<svg class="icon small"><use href="#i-external"/></svg></button></div>
           </div>
         </section>
       </main>
@@ -129,7 +129,7 @@
   </div>
 
   <div class="scrim" id="scrim" hidden></div>
-  <aside class="detail-drawer" id="detailDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert><div class="drawer-header"><div><span class="drawer-kicker" id="drawerKicker"></span><h2 id="drawerTitle"></h2></div><button class="icon-button" id="drawerClose" type="button" aria-label="关闭详情" title="关闭详情"><svg class="icon"><use href="#i-x"/></svg></button></div><div class="drawer-body" id="drawerBody"></div></aside>
+  <aside class="detail-drawer" id="detailDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert><div class="drawer-header"><div><span class="drawer-kicker" id="drawerKicker"></span><h2 id="drawerTitle"></h2></div><button class="icon-button" id="drawerClose" type="button" aria-label="Close details" title="Close details"><svg class="icon"><use href="#i-x"/></svg></button></div><div class="drawer-body" id="drawerBody"></div></aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

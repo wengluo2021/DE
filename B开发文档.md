@@ -1,110 +1,110 @@
-# DERag：B 开发文档（已实现独立检索模块）
+# DERag: B Development Document (Standalone Retrieval Module Implemented)
 
-## 1. B 要完成什么
+## 1. What B must accomplish
 
-B 负责“清洗后的文档 → 两种分块 → embedding → 四组 Chroma 索引 → 语义检索与对照 API”这条链路。输入输出遵循 [开发文档.md](./开发文档.md)，本文件细化 B 的代码目录、算法、函数、接口、测试和交付方式。
+B is responsible for the chain "cleaned documents → two chunking methods → embedding → four Chroma indexes → semantic retrieval and comparison API". Inputs and outputs follow [开发文档.md](./开发文档.md); this document details B's code directories, algorithms, functions, interfaces, tests, and delivery method.
 
-B 可以先用固定测试文档独立开发并完成测试，不需要等待 A 的正式数据和 C 的问答代码。三人完成后，由 C 将 B 的实现接入正式程序；B 负责处理集成中出现的分块、模型、索引和检索问题。
+B may first develop and complete testing independently using fixed test documents, without waiting for A's formal data or C's Q&A code. After all three finish, C will integrate B's implementation into the formal program; B is responsible for handling chunking, model, index, and retrieval issues that arise during integration.
 
-A 一人负责全部官方文档核验和 30 道标准题，C 负责 LLM 回答、引用校验、正式评估、人工评分和页面接入。B 不编写法规题集、不生成法律答案；B 必须给出原文位置准确的检索证据，供 C 引用和评估。
+A alone is responsible for verifying all official documents and the 30 standard questions; C is responsible for LLM answers, citation validation, formal evaluation, human scoring, and page integration. B does not write regulatory question sets or generate legal answers; B must provide retrieval evidence with accurate source locations for C to cite and evaluate.
 
-**当前状态：B 独立模块已实现。**分块、四组 Chroma 索引、真实 embedding、检索 API、模型准备脚本和独立验证页已经落地；78 项独立自动测试通过。真实模型与干净虚拟环境验证记录见第 12 节和 `artifacts/b/`。正式入口 `app.main:app` 仍是 C 待集成的前端预览，不能将本次 B 模块测试等同于完整项目或正式 30 题评估。
+**Current status: B's standalone module is implemented.** Chunking, four Chroma indexes, real embeddings, the retrieval API, model preparation scripts, and a standalone verification page are in place; 78 standalone automated tests pass. Records of real-model and clean virtual-environment verification are in Section 12 and `artifacts/b/`. The formal entry point `app.main:app` is still a frontend preview pending integration by C; this B module test must not be equated with the complete project or the formal 30-question evaluation.
 
-## 2. B 的代码文件夹和文件职责
+## 2. B's code folders and file responsibilities
 
-项目根目录为 `DERag/`。本机当前位置是 `E:/2027CityU/CS5481 Data Engineering/GroupProject/DERag/`，该绝对路径仅用于找到项目，不能写进代码或交付配置。
+The project root is `DERag/`. The current local location is `E:/2027CityU/CS5481 Data Engineering/GroupProject/DERag/`; that absolute path is only for locating the project and must not be written into code or delivery configuration.
 
-**B 的核心代码文件夹固定为 `DERag/app/retrieval/`。**HTTP 路由放 `app/api/`，命令行入口放 `scripts/`，自动测试放 `tests/`。不另建 `B项目/` 或第二套正式应用，不把所有业务塞进 `app/main.py`。
+**B's core code folder is fixed as `DERag/app/retrieval/`.** HTTP routes go in `app/api/`, the command-line entry point goes in `scripts/`, and automated tests go in `tests/`. Do not create a separate `B项目/` or a second formal application, and do not put all business logic into `app/main.py`.
 
 ```text
 DERag/
-  开发文档.md                       # 三人的总契约，已有
-  B开发文档.md                      # 本文
+  开发文档.md                       # The three-person overall contract, already exists
+  B开发文档.md                      # This document
   app/
     __init__.py
-    main.py                         # C 负责正式装配，B 不覆盖
-    contracts.py                    # C 负责统一边界模型，B 独立开发不等待此文件
-    config.py                       # C 负责统一配置加载
-    retrieval/                      # B 核心代码目录
-      __init__.py                   # 对外导出 build_indexes、search 等入口
-      types.py                      # B 内部类型与协议；字段遵守总文档
-      chunking.py                   # 固定窗口、结构感知、区间覆盖检查
-      embedding.py                  # 本地模型加载、token 长度检查、批量编码
-      vector_store.py               # Chroma 持久化适配、写入、读取、查询
-      indexes.py                    # 四组构建、版本、manifest 和完成标记
-      service.py                    # 文档读取、检索与同题对照服务
-      errors.py                     # 模块错误，供路由转成统一状态码
+    main.py                         # C is responsible for formal assembly; B does not overwrite
+    contracts.py                    # C is responsible for the unified boundary model; B develops independently without waiting for this file
+    config.py                       # C is responsible for unified configuration loading
+    retrieval/                      # B core code directory
+      __init__.py                   # Exports entry points such as build_indexes and search
+      types.py                      # B internal types and protocols; fields follow the master document
+      chunking.py                   # Fixed window, structure-aware, interval coverage checks
+      embedding.py                  # Local model loading, token length checks, batch encoding
+      vector_store.py               # Chroma persistence adapter, write, read, query
+      indexes.py                    # Four-group build, version, manifest and completion marker
+      service.py                    # Document reading, retrieval and same-question comparison service
+      errors.py                     # Module errors, for routes to convert into unified status codes
     api/
       __init__.py
-      documents.py                  # 文档摘要、正文与块预览路由
-      indexes.py                    # 建库任务路由，任务管理器通过参数注入
-      search.py                     # search 和 compare 路由
-    static/                         # C 负责正式页面接入，B 不修改
+      documents.py                  # Document summary, body and chunk preview routes
+      indexes.py                    # Index build task routes, task manager injected via parameters
+      search.py                     # search and compare routes
+    static/                         # C is responsible for production page integration, B does not modify
   scripts/
     __init__.py
-    fetch_embedding.py              # 下载固定 revision，校验模型文件
-    build_indexes.py                # 读取配置，调用四组建库
+    fetch_embedding.py              # Download fixed revision, verify model files
+    build_indexes.py                # Read configuration, invoke the four-group index build
   config/
-    retrieval.example.json          # B 的独立配置样例，C 最终并入 experiment.json
-  requirements-b.txt                # B 验证过的模块运行依赖，最终由 C 合并
-  requirements-b-dev.txt            # B 的测试依赖，固定版本
+    retrieval.example.json          # B's standalone configuration sample, C ultimately merges into experiment.json
+  requirements-b.txt                # Module runtime dependencies verified by B, ultimately merged by C
+  requirements-b-dev.txt            # B's test dependencies, pinned versions
   tests/
     fixtures/b/
-      document.json                 # 合成文档，符合 A 的 Document 字段
-      long_documents.json           # 长条文、多章节、Unicode 测试样本
-      expected_hits.json            # 给 C 的合成 SearchHit 样例
+      document.json                 # Synthetic document, conforms to A's Document fields
+      long_documents.json           # Long articles, multi-section, Unicode test samples
+      expected_hits.json            # Synthetic SearchHit samples for C
     support/
-      b_app.py                      # 仅用于 B 测试的 FastAPI 装配入口
+      b_app.py                      # FastAPI assembly entry point used only for B tests
       static/
-        b_debug.html                # B 独立检索验证页，普通 HTML/CSS/JS
+        b_debug.html                # B standalone retrieval verification page, plain HTML/CSS/JS
     test_chunking.py
     test_retrieval.py
     test_retrieval_api.py
   data/
-    processed/                      # A 正式文档，B 只读
-    chunks/{index_version}/         # B 导出的四组 JSONL
-    chroma/{index_version}/          # B 生成的持久化索引
-    indexes/{index_version}.json    # 配置、哈希、块统计和建库结果
-  models/embedding/                 # 下载的模型文件，支持配置覆盖
-  artifacts/b/                     # B 的测试与真实模型冒烟记录
+    processed/                      # A production documents, B read-only
+    chunks/{index_version}/         # Four groups of JSONL exported by B
+    chroma/{index_version}/          # Persistent index generated by B
+    indexes/{index_version}.json    # Configuration, hashes, chunk statistics and index build results
+  models/embedding/                 # Downloaded model files, configuration override supported
+  artifacts/b/                     # B's test and real-model smoke records
 ```
 
-上图是职责结构；B 的实现已创建其中自己负责的目录。正式法规原文、`gold.jsonl`、问答和评估模块不由 B 创建。`data/chroma/`、模型权重和临时产物不作为普通源码提交；样例配置、测试数据和重建脚本要提交。
+The figure above is the responsibility structure; B's implementation has created the directories it is responsible for. The production regulation text, `gold.jsonl`, Q&A and evaluation modules are not created by B. `data/chroma/`, model weights and temporary artifacts are not committed as ordinary source code; sample configurations, test data and rebuild scripts must be committed.
 
-### 2.1 各文件应做到什么
+### 2.1 What each file should do
 
-| 文件 | 输入 | 输出与职责 |
+| File | Input | Output and responsibilities |
 | --- | --- | --- |
-| `chunking.py` | Document 和字符上限 | Chunk 列表；纯函数，不联网、不调用数据库。 |
-| `embedding.py` | 文本列表、模型配置 | 与输入顺序一致的向量；加载一次模型，统一编码规则。 |
-| `vector_store.py` | 向量、块 ID、少量标量元数据 | Chroma 存取；不负责切块和构造网页字段。 |
-| `indexes.py` | 文档读取函数、四组条件、embedding 配置 | 四组构建、版本 manifest、可校验的 Chunk JSONL。 |
-| `service.py` | 问题、条件、语料版本 | SearchHit 列表或两侧同题结果；从权威文档补齐来源字段。 |
-| `app/api/*.py` | HTTP 请求、注入的服务 | 验证参数、调用业务函数、返回 JSON；不重复实现检索算法。 |
-| `scripts/*.py` | 参数或配置文件 | 调用同一业务函数，打印可读结果和错误，失败返回非零退出码。 |
+| `chunking.py` | Document and character limit | Chunk list; pure function, no network, no database calls. |
+| `embedding.py` | Text list, model configuration | Vectors in the same order as input; load the model once, unified encoding rules. |
+| `vector_store.py` | Vectors, chunk IDs, a small amount of scalar metadata | Chroma storage and retrieval; not responsible for chunking or constructing web page fields. |
+| `indexes.py` | Document reading function, four-group conditions, embedding configuration | Four-group build, version manifest, verifiable Chunk JSONL. |
+| `service.py` | Question, conditions, corpus version | SearchHit list or same-question results for both sides; fill in source fields from authoritative documents. |
+| `app/api/*.py` | HTTP request, injected service | Validate parameters, call business functions, return JSON; do not reimplement retrieval algorithms. |
+| `scripts/*.py` | Parameters or configuration file | Call the same business functions, print readable results and errors, return non-zero exit code on failure. |
 
-B 独立测试时使用 `tests/support/b_app.py` 装配 router、样本文档读取器和内存任务管理器，并提供 `/b-debug` 页面。验证页代码放在 `tests/support/static/b_debug.html`，与 C 的 `app/static/` 正式前端分开。最终 C 在 `app/main.py` 中注入真实依赖并注册同一组业务 router，正式页面调用相同 API。
+For B standalone testing, `tests/support/b_app.py` is used to assemble the router, sample document reader and in-memory task manager, and provide the `/b-debug` page. Verification page code is placed in `tests/support/static/b_debug.html`, separate from C's `app/static/` production frontend. Ultimately C injects real dependencies in `app/main.py` and registers the same set of business routers, and the production page calls the same API.
 
-## 3. 固定实验条件
+## 3. Fixed experimental conditions
 
-| 条件 | 分块方法 | 最大字符数 |
+| Condition | Chunking method | Maximum characters |
 | --- | --- | ---: |
-| `f400` | 固定窗口 `fixed` | 400 |
-| `s400` | 法条结构感知 `structured` | 400 |
-| `f800` | 固定窗口 `fixed` | 800 |
-| `s800` | 法条结构感知 `structured` | 800 |
+| `f400` | Fixed window `fixed` | 400 |
+| `s400` | Article structure-aware `structured` | 400 |
+| `f800` | Fixed window `fixed` | 800 |
+| `s800` | Article structure-aware `structured` | 800 |
 
-主比较为 F400/S400 和 F800/S800。四组使用相同冻结正文、embedding 模型及 revision、归一化、向量库引擎与参数、cosine 距离和 top-5 检索。所有条件无重叠、不跨文档；不能为了某个条件命中更高而加 rerank、换提示前缀或调整模型。
+The main comparisons are F400/S400 and F800/S800. All four groups use the same frozen body text, embedding model and revision, normalization, vector store engine and parameters, cosine distance and top-5 retrieval. All conditions are non-overlapping and do not cross documents; rerank, prompt prefix changes or model adjustments must not be added to make a particular condition hit more.
 
-字符数使用 Python `len(text)`，含条号、标点和换行。B 收到 A 的正文后不做 `strip()`、换行替换或二次清洗，避免原文坐标失效。
+Character counts use Python `len(text)`, including article numbers, punctuation, and line breaks. After receiving A's body text, B does not perform `strip()`, line-break replacement, or secondary cleaning, to avoid invalidating the original text coordinates.
 
-## 4. 统一输入与输出
+## 4. Unified input and output
 
-当前活动语料为英文 `fixture-en-v2`，分块规则为 `structure-offset-v2`。旧中文短样例单独保存为 `legacy_zh_document.json`，仅用于 Unicode/旧 ID 回归，不能向当前服务请求旧版本。
+The current active corpus is English `fixture-en-v2`, and the chunking rule is `structure-offset-v2`. The old Chinese short samples are stored separately as `legacy_zh_document.json` and are used only for Unicode/legacy ID regression; do not request the old version from the current service.
 
-### 4.1 输入 Document
+### 4.1 Input Document
 
-B 使用 A 输出的 `data/manifest.json` 和处理后 Document。独立开发期间直接使用以下合成样例，不冒充正式法规：
+B uses the `data/manifest.json` output by A and the processed Document. During independent development, use the following synthetic samples directly; do not present them as official regulations:
 
 ```json
 {
@@ -126,11 +126,11 @@ B 使用 A 输出的 `data/manifest.json` 和处理后 Document。独立开发�
 }
 ```
 
-正文 25 字符；Article 2 是 `[13,25)`，其中 `B.` 是 `[23,25)`。上面的原始哈希仅对应正文 UTF-8、LF、无 BOM 字节。
+Body text is 25 characters; Article 2 is `[13,25)`, of which `B.` is `[23,25)`. The raw hash above corresponds only to the body text as UTF-8, LF, no BOM bytes.
 
-正式读取时校验：语料版本一致、文档 ID 唯一、哈希正确、条文区间在正文范围内、同一文档条文有序且不重叠。解析不合法则报错，不能自己修正文档后继续实验。测试样例使用 `fixture-en-v2`，正式语料使用总文档规定的真实版本哈希。
+Validate on formal read: corpus version matches, document ID is unique, hash is correct, article ranges fall within the body text, and articles within the same document are ordered and non-overlapping. If parsing is invalid, report an error; do not correct the document yourself and continue the experiment. Test samples use `fixture-en-v2`; the formal corpus uses the real version hash specified in the master document.
 
-### 4.2 输出 Chunk
+### 4.2 Output Chunk
 
 ```json
 {
@@ -147,17 +147,17 @@ B 使用 A 输出的 `data/manifest.json` 和处理后 Document。独立开发�
 }
 ```
 
-`chunk_id` 的原始字符串为：
+The raw string of `chunk_id` is:
 
 ```text
 corpus_version|boundary_method|target_chars|document_id|start|end
 ```
 
-对这个字符串做 UTF-8 SHA-256，返回完整小写十六进制。例：`fixture-en-v2|structured|400|fixture|0|25` 对应上面的 ID。不使用 Python 内置 `hash()`、随机 UUID 或顺序编号。
+Compute UTF-8 SHA-256 on this string and return the full lowercase hexadecimal. Example: `fixture-en-v2|structured|400|fixture|0|25` corresponds to the ID above. Do not use Python's built-in `hash()`, random UUIDs, or sequential numbering.
 
-`article_ids` 按原文顺序记录与块实际相交的条文，判定为 `max(chunk.start, article.start) < min(chunk.end, article.end)`。只含标题或空白的块允许此数组为空，不能捏造条号。
+`article_ids` records, in original text order, the articles that actually intersect the chunk, determined as `max(chunk.start, article.start) < min(chunk.end, article.end)`. Chunks containing only headings or whitespace may have an empty array; do not fabricate article numbers.
 
-### 4.3 输出 SearchHit
+### 4.3 Output SearchHit
 
 ```json
 {
@@ -177,121 +177,121 @@ corpus_version|boundary_method|target_chars|document_id|start|end
 }
 ```
 
-`rank` 从 1 开始。Chroma cosine 距离按升序排列，统一 `score=1-distance`；分数越大越相关，但不是概率。样例分数是测试值。相同距离的已返回候选按 `chunk_id` 排序，查询的并列边界可能受近似索引影响，必须在运行说明中记录。
+`rank` starts from 1. Chroma cosine distances are sorted in ascending order, uniformly `score=1-distance`; a larger score means more relevant, but it is not a probability. Sample scores are test values. Returned candidates with the same distance are sorted by `chunk_id`; tie boundaries for a query may be affected by the approximate index and must be recorded in the run notes.
 
-C 使用此对象加上本轮 `n` 构造引用；B 不自行生成回答或会话引用号。`article_labels` 从 A 的条文表取，不凭块正文猜测。
+C uses this object plus this round's `n` to construct citations; B does not generate answers or conversation citation numbers itself. `article_labels` is taken from A's article table, not guessed from chunk body text.
 
-## 5. 两种分块方法如何实现
+## 5. How the two chunking methods are implemented
 
-### 5.1 固定窗口
+### 5.1 Fixed window
 
-1. 校验上限为正整数；空正文返回空列表并记录空文档状态。
-2. 从 `start=0` 开始，每次取 `end=min(start+max_chars, len(text))`。
-3. 块文本必须直接用 `text[start:end]`，计算 ID 与覆盖条文后保存。
-4. 下一块从前一块的 `end` 开始，不重叠、不去空白。最后一块允许小于上限。
+1. Validate that the limit is a positive integer; empty body text returns an empty list and records the empty-document status.
+2. Starting from `start=0`, take `end=min(start+max_chars, len(text))` each time.
+3. Chunk text must directly use `text[start:end]`; compute the ID and covered articles, then save.
+4. The next chunk starts from the previous chunk's `end`, with no overlap and no whitespace stripping. The last chunk may be smaller than the limit.
 
-英文样例用 16 字符上限测试时必须得到 `[0,16)`、`[16,25)`，再拼接得到原文。正式实验仍只用 400/800。
+When testing the English sample with a 16 character limit, it must produce `[0,16)`, `[16,25)`, and concatenating them must reconstruct the original text. Formal experiments still use only 400/800.
 
-### 5.2 法条结构感知
+### 5.2 Article-structure-aware
 
-优先使用 A 提供的条文位置。章节识别只在标题行或条文间隙中进行，不能把正文里的“依照第十条”误认为新条文边界。
+Prefer the article positions provided by A. Chapter detection is performed only on heading lines or in gaps between articles; do not mistake "in accordance with Article 10" in the body text for a new article boundary.
 
-1. 在原文上建立结构单元，不复制清洗过的句子。单元保留 `start/end`、章/节身份和条文 ID。
-2. 章/节标题归入其后内容；普通条间空白归入前一单元。遇新章/节前结束上一单元，不能让前一条吞掉下一章标题。
-3. 在同章同节内按原文顺序贪心合并：加入下一完整单元后不超上限就合并，超上限则先输出当前块。无章/节信息按同一组处理。
-4. 单条本身超上限时，优先在 `。！？；` 和明确段落边界处按原文坐标拆分；保留标点和换行，不做 `join()` 重建文本。
-5. 单句超过上限则硬切，并记录 `long_sentence_fallback` 次数。标题加首条超长时允许标题单独成块，但仍不得超上限或漏字。
-6. 无条文标注时按段落/句子边界构造单元再打包，记录 `no_article_fallback`，不能静默转用另一份正文。
+1. Build structural units on the original text; do not copy cleaned sentences. Units retain `start/end`, chapter/section identity, and article ID.
+2. Chapter/section headings belong to the content that follows; ordinary whitespace between articles belongs to the preceding unit. End the previous unit before a new chapter/section; the previous article must not swallow the next chapter heading.
+3. Within the same chapter and section, greedily merge in original text order: if adding the next complete unit does not exceed the limit, merge; if it exceeds the limit, output the current chunk first. When there is no chapter/section information, treat as one group.
+4. When a single article itself exceeds the limit, prefer splitting at `。！？；` and explicit paragraph boundaries using original text coordinates; preserve punctuation and line breaks, and do not do `join()` to rebuild text.
+5. If a single sentence exceeds the limit, hard-split it and record the number of `long_sentence_fallback`. If a heading plus the first article is too long, the heading may be a separate chunk, but it still must not exceed the limit or drop characters.
+6. When there are no article annotations, build units by paragraph/sentence boundaries and then pack, record `no_article_fallback`, and do not silently switch to another body text.
 
-为避免不同实现产生不一致结果，先把“正文完整覆盖、块长上限、章/节边界”写成测试断言，再写打包循环。英文样例在 16 字符测试上限下应为 `[0,13)`、`[13,25)`；400 上限下两条能装进一个 `[0,25)` 块。
+To avoid inconsistent results across implementations, first write test assertions for "complete body coverage, chunk length limit, chapter/section boundaries", then write the packing loop. The English sample under a 16 character test limit should be `[0,13)`, `[13,25)`; under a 400 limit, the two articles can fit into one `[0,25)` chunk.
 
-### 5.3 两种方法都必须满足的断言
+### 5.3 Assertions that both methods must satisfy
 
-- 每个块 `0 <= start < end <= len(text)`，`end-start <= max_chars`，`chunk.text == text[start:end]`。
-- 同条件、同文档按位置排序后，第一块从 0 开始，后一块从前一块 `end` 开始，最后到正文末尾。
-- 所有块文本拼接必须等于原文；空文本单独处理，不制造空块。
-- 输入相同，块列表、位置和 ID 稳定；换语料版本后 ID 跟着变化。
-- 结构法尽量保留完整条文，但不预设检索一定优于固定窗口。实际优势由最终评估验证。
+- Each chunk `0 <= start < end <= len(text)`, `end-start <= max_chars`, `chunk.text == text[start:end]`.
+- Under the same conditions and the same document sorted by position, the first chunk starts at 0, each subsequent chunk starts at the previous chunk's `end`, and the last reaches the end of the body text.
+- Concatenating all chunk texts must equal the original text; empty text is handled separately and no empty chunks are created.
+- Given the same input, the chunk list, positions, and IDs are stable; after changing the corpus version, IDs change accordingly.
+- The structural method preserves complete articles as much as possible, but does not assume retrieval is necessarily better than fixed windows. The actual advantage is verified by the final evaluation.
 
-## 6. embedding 模型与可复现环境
+## 6. embedding model and reproducible environment
 
-### 6.1 模型选择原则
+### 6.1 Model selection principles
 
-本次采用并实测 `BAAI/bge-m3`：支持中英文、可使用稠密向量，其公开规格为 1024 维、较长输入窗口，适合避免 800 字文本块被短窗口模型截断。它在 CPU 上的下载和编码成本高于小模型，本次已在 Windows / Python 3.13.11 / CPU 上完成真实安装、加载、四组建库与检索验证；模型 revision 固定为 `5617a9f61b028005a4858fdac845db406aefb181`，权重约 2.27 GB。
+This time `BAAI/bge-m3` was adopted and actually tested: it supports Chinese and English and can use dense vectors; its public specifications are 1024 dimensions and a longer input window, suitable for preventing 800-character text chunks from being truncated by short-window models. Its download and encoding cost on CPU is higher than small models; this time real installation, loading, four-group indexing, and retrieval validation have been completed on Windows / Python 3.13.11 / CPU; the model revision is fixed at `5617a9f61b028005a4858fdac845db406aefb181`, and the weights are about 2.27 GB.
 
-可通过 `sentence-transformers` 加载候选模型，Chroma 使用本地持久化客户端。B 必须确认 Python 3.13/Linux CPU 的依赖可以安装，再填写具体锁定版本。本次安装版本已锁在 `requirements-b.txt` 与 `requirements-b-dev.txt`；原 `requirements.txt` 仍是预览入口依赖。Linux CPU / Docker 尚未实测，不将 Windows 验证写成跨平台验证。
+Candidate models can be loaded via `sentence-transformers`, and Chroma uses a local persistent client. B must confirm that dependencies for Python 3.13/Linux CPU can be installed before filling in specific locked versions. The installed versions this time are locked in `requirements-b.txt` and `requirements-b-dev.txt`; the original `requirements.txt` remains a preview entry dependency. Linux CPU / Docker has not yet been tested; do not describe Windows validation as cross-platform validation.
 
-最终模型 ID、不可变 revision、模型文件哈希、维度、最大输入 token 数、归一化、查询/文档前缀和池化策略全部写进配置和索引 manifest。仅使用稠密向量，不额外引入模型的稀疏检索或多向量能力。
+The final model ID, immutable revision, model file hash, dimensions, maximum input tokens, normalization, query/document prefixes, and pooling strategy are all written into the configuration and index manifest. Only dense vectors are used; no additional model sparse retrieval or multi-vector capabilities are introduced.
 
-### 6.2 不能忽略的输入截断
+### 6.2 Input truncation that cannot be ignored
 
-400/800 的单位是 Python 字符，模型输入上限的单位是 tokenizer token，两者不同。下载模型后，对所有块加实际前缀进行分词，检查特殊 token 加上正文是否超过模型有效上限。
+400/800 is measured in Python characters, while the model input limit is measured in tokenizer tokens; the two are different. After downloading the model, tokenize all chunks with the actual prefix and check whether special tokens plus the body text exceed the model's effective limit.
 
-**禁止静默 truncation。**超限时直接报告文档 ID、块 ID、token 数和模型上限，要求在正式实验前修正统一模型配置；不能只给某组截掉后半段，也不能悄悄改变那组块长。问题本身也要检查长度并给出可读错误。若最终换模型，四组全部重建并使用同一新配置。
+**Silent truncation is prohibited.** When over the limit, directly report the document ID, chunk ID, token count, and model limit, and require fixing the unified model configuration before formal experiments; do not truncate only the latter half of one group, and do not quietly change that group's chunk length. The question itself must also be length-checked with a readable error. If the model is ultimately changed, rebuild all four groups and use the same new configuration.
 
-### 6.3 下载、缓存与依赖
+### 6.3 Download, cache, and dependencies
 
-- `scripts/fetch_embedding.py` 显式下载固定 revision 到配置路径，完成后生成文件清单及哈希；正式加载优先读取这个路径。
-- 支持 `DERAG_MODEL_DIR` 覆盖目录；源码和容器使用同一规则，不依赖 `C:/Users/某人/.cache/` 已有权重。
-- 独立模块依赖写入 `requirements-b.txt`，包括经过测试的直接与间接运行版本；测试依赖写入 `requirements-b-dev.txt`，与运行依赖一起验证。C 最终解决三个模块依赖冲突并合并到项目锁定清单。
-- 模型首次下载通常需要联网。离线复现要提供权重或可访问的固定模型包及其校验信息，并遵守模型许可；只有源码和空模型目录不能离线运行 embedding。
-- 测试不要求 GPU。编码批次可配置以适应内存，不能因换批次顺序弄乱文本与向量对应关系。
+- `scripts/fetch_embedding.py` explicitly downloads a fixed revision to the configured path and, when done, generates a file list and hashes; formal loading reads from this path first.
+- Supports a `DERAG_MODEL_DIR` override directory; source code and containers use the same rule and do not rely on existing weights in `C:/Users/某人/.cache/`.
+- Write independent module dependencies to `requirements-b.txt`, including tested direct and indirect runtime versions; write test dependencies to `requirements-b-dev.txt` and verify them together with runtime dependencies. C ultimately resolves the dependency conflicts among the three modules and merges them into the project lock file.
+- The first model download usually requires network access. Offline reproduction must provide the weights or an accessible fixed model package with its checksum information, and comply with the model license; source code and an empty model directory alone cannot run embedding offline.
+- Tests do not require a GPU. Encoding batch size can be configured to fit memory, but changing batch order must not scramble the correspondence between texts and vectors.
 
-## 7. 四组索引如何构建与检索
+## 7. How the four index groups are built and queried
 
-### 7.1 build_indexes 构建流程
+### 7.1 build_indexes build flow
 
-1. 读取传入的文档加载函数，校验 A 的数据版本和 manifest。独立测试中注入 fixture 加载函数。
-2. 读取有效 embedding/检索配置，构造索引版本材料，使用规范 JSON 的 SHA-256 得到 `index_version`。
-3. 为四个条件各生成完整 Chunk 列表，验证覆盖断言，保存 JSONL 与统计。
-4. 使用同一 embedding 实例编码四组块；若文本相同可在同版本、同模型内复用编码缓存，但各自保留条件与块 ID。
-5. 在 `data/chroma/{index_version}/` 建立四个 collection：`kb_f400`、`kb_s400`、`kb_f800`、`kb_s800`，明确配置 cosine 度量。
-6. 以 `chunk_id` 写入向量和最小元数据；使用该版本 Chroma 支持的 create/upsert/query API，并写测试验证。不要假设 Python 列表能直接作为 collection metadata，`article_ids` 等权威内容保留在 Chunk JSONL 中。
-7. 四组全部写入并核对数量后，索引 manifest 标为 `completed`。中途失败记录 `failed`，服务不得把半成品索引用于正式查询。
+1. Read the passed-in document loader function and validate A's data version and manifest. Inject a fixture loader function in independent tests.
+2. Read the effective embedding/retrieval configuration, construct the index version material, and use the SHA-256 of canonical JSON to obtain `index_version`.
+3. Generate a complete Chunk list for each of the four conditions, verify the coverage assertions, and save JSONL and statistics.
+4. Encode the four groups of chunks using the same embedding instance; if texts are identical, the encoding cache may be reused within the same version and same model, but each retains its own condition and chunk ID.
+5. Create four collections in `data/chroma/{index_version}/`: `kb_f400`, `kb_s400`, `kb_f800`, `kb_s800`, explicitly configuring the cosine metric.
+6. Write vectors and minimal metadata with `chunk_id`; use the create/upsert/query API supported by that version of Chroma, and write tests to verify it. Do not assume a Python list can be used directly as collection metadata; authoritative content such as `article_ids` is kept in the Chunk JSONL.
+7. After all four groups are written and counts are verified, mark the index manifest as `completed`. Record `failed` on mid-way failure; the service must not use a half-finished index for formal queries.
 
-`index_version` 至少覆盖 `corpus_version`、分块实现版本、条件列表、模型 ID/revision/文件哈希、维度、归一化、前缀、截断策略和向量库有效配置。规范 JSON 用 `ensure_ascii=False, sort_keys=True, separators=(',', ':')` 编码。与运行机器相关的缓存绝对路径、创建时间和耗时不进入版本哈希，但保留在诊断记录中。
+`index_version` covers at least `corpus_version`, chunking implementation version, condition list, model ID/revision/file hash, dimension, normalization, prefix, truncation policy, and effective vector store configuration. Canonical JSON is encoded with `ensure_ascii=False, sort_keys=True, separators=(',', ':')`. Cache absolute paths, creation time, and elapsed time tied to the runtime machine do not enter the version hash but are retained in diagnostic records.
 
-相同版本重复构建时，已完成且校验正常可直接复用；失败版本重试必须清理本次未完成状态或幂等覆盖，不能重复插入。新版本写到新目录，旧索引不被静默覆盖。查询与建库加适当锁，避免同一索引在写入中被读取。
+When rebuilding the same version, a completed and correctly verified build can be reused directly; retrying a failed version must clean up this attempt's incomplete state or overwrite idempotently, and must not insert duplicates. New versions are written to a new directory, and old indexes are not silently overwritten. Add appropriate locks to query and index building to prevent the same index from being read while it is being written.
 
-### 7.2 search 检索流程
+### 7.2 search retrieval flow
 
-1. 校验问题非空、条件合法、`top_k` 为 1–5；核对请求语料与激活索引版本。
-2. 对问题按固定 query 前缀编码，使用与文档相同模型、revision 和归一化规则。
-3. 查询对应 collection，结果不足 5 个时原样返回实际数量，不补样例块。
-4. 从 Chunk 和 Document 中补齐权威文本、区间、标题、官方来源及条号，检查块与冻结原文切片一致。
-5. 转成第 4.3 节 SearchHit，记录实际查询耗时。索引未准备好和检索无命中必须区分。
+1. Validate that the question is non-empty, the condition is valid, and `top_k` is 1–5; check the request corpus against the active index version.
+2. Encode the question with the fixed query prefix, using the same model, revision, and normalization rules as for documents.
+3. Query the corresponding collection; when results are fewer than 5, return the actual count as-is without padding with sample chunks.
+4. Fill in authoritative text, spans, titles, official sources, and article numbers from Chunk and Document, and check that chunks match the frozen source slices.
+5. Convert to the SearchHit from Section 4.3 and record the actual query elapsed time. Index not ready and retrieval with no hits must be distinguished.
 
-只有已完成索引可被激活。检索不能调用 LLM、使用标准答案筛选结果或读取 `gold.jsonl` 帮助排名。30 题的正式 hit@k 和答案指标由 C 计算，B 只提供可验证证据与运行统计。
+Only completed indexes can be activated. Retrieval must not call an LLM, use standard answers to filter results, or read `gold.jsonl` to help ranking. Formal hit@k and answer metrics for the 30 questions are computed by C; B only provides verifiable evidence and runtime statistics.
 
-### 7.3 compare 对照流程
+### 7.3 compare flow
 
-同一问题、同一 `corpus_version`、同一 `index_version` 下依次查询两侧条件，各返回最多 5 个块。左侧或右侧出错时返回明确错误，不用另一侧结果补齐。每侧同时返回 `context_chars=sum(len(hit.text))` 和检索耗时，便于解释块数相同但实际上下文长度不同。
+For the same question, same `corpus_version`, and same `index_version`, query the conditions on both sides in sequence, each returning at most 5 chunks. If the left or right side errors, return an explicit error and do not pad with the other side's results. Return `context_chars=sum(len(hit.text))` and retrieval elapsed time for each side, to explain cases where chunk counts are equal but actual context lengths differ.
 
-## 8. 对外函数与 API 样例
+## 8. Public functions and API examples
 
-### 8.1 C 调用 B 的函数
+### 8.1 Functions C calls on B
 
 ```python
 build_indexes(corpus_version) -> IndexManifest
 search(question, condition, corpus_version, top_k=5) -> list[SearchHit]
 ```
 
-服务初始化时注入 `document_loader`、`embedder`、`vector_store_factory` 和配置。B 独立测试提供假实现，C 集成时替换成 A 的加载器与真实组件，不要求 C 改动检索内部代码。
+Inject `document_loader`, `embedder`, `vector_store_factory`, and configuration at service initialization. B's independent tests provide fake implementations; C's integration replaces them with A's loader and real components, without requiring C to modify retrieval internals.
 
-路由通过工厂接收服务与任务管理器，例如 `create_retrieval_routers(service, task_manager)`；返回的 router 由 C 注册。不要在导入 Python 模块时直接下载模型或建索引。
+Routes receive the service and task manager through a factory, e.g. `create_retrieval_routers(service, task_manager)`; the returned router is registered by C. Do not download models or build indexes directly at Python module import time.
 
-### 8.2 B 负责的 HTTP 接口
+### 8.2 HTTP endpoints owned by B
 
-| 路径 | 行为 |
+| Path | Behavior |
 | --- | --- |
-| `GET /api/documents?corpus_version=...` | 返回 `{"items":[...]}`，摘要字段固定为 `document_id`、`title`、`source_url`、`corpus_version`、`article_count`、`char_count`。 |
-| `GET /api/documents/{id}?corpus_version=...` | 返回完整 Document。 |
-| `GET /api/documents/{id}/chunks?condition=s400&corpus_version=...` | 返回 `{"items":[Chunk...]}`，不得重新运行另一套浏览器切分逻辑。 |
-| `POST /api/indexes/build` | 输入语料版本，提交四组建库任务，返回 202 和任务 ID。 |
-| `POST /api/search` | 返回一个条件的语义检索结果。 |
-| `POST /api/compare` | 返回两个条件的同题 top-5 对照。 |
+| `GET /api/documents?corpus_version=...` | Returns `{"items":[...]}`; summary fields are fixed as `document_id`, `title`, `source_url`, `corpus_version`, `article_count`, `char_count`. |
+| `GET /api/documents/{id}?corpus_version=...` | Returns the full Document. |
+| `GET /api/documents/{id}/chunks?condition=s400&corpus_version=...` | Returns `{"items":[Chunk...]}`; must not re-run another browser chunking logic. |
+| `POST /api/indexes/build` | Takes a corpus version, submits the four-group index build task, and returns 202 and the task ID. |
+| `POST /api/search` | Returns semantic retrieval results for one condition. |
+| `POST /api/compare` | Returns a same-question top-5 comparison of two conditions. |
 
-建库请求与响应：
+Index build request and response:
 
 ```json
 {"corpus_version":"fixture-en-v2"}
@@ -301,15 +301,15 @@ search(question, condition, corpus_version, top_k=5) -> list[SearchHit]
 {"task_id":"index-task-1","state":"queued"}
 ```
 
-C 提供正式的 `GET /api/tasks/{id}`。B 在独立 API 测试中提供内存任务适配器，状态采用 `queued|running|completed|failed`，不为了等待 C 而放弃接口测试。正式 `build_indexes()` 本身可同步返回 manifest，HTTP 层负责把它提交为后台任务。
+C provides the formal `GET /api/tasks/{id}`. B provides an in-memory task adapter in independent API tests, with status `queued|running|completed|failed`, rather than giving up API tests while waiting for C. The formal `build_indexes()` itself can return the manifest synchronously; the HTTP layer is responsible for submitting it as a background task.
 
-检索请求：
+Retrieval request:
 
 ```json
 {"question":"What does Article 2 say?","corpus_version":"fixture-en-v2","condition":"s400","top_k":5}
 ```
 
-完整合成响应，分数与耗时只用于接口测试：
+Full synthetic response; scores and elapsed time are for API tests only:
 
 ```json
 {
@@ -335,46 +335,46 @@ C 提供正式的 `GET /api/tasks/{id}`。B 在独立 API 测试中提供内存�
 }
 ```
 
-对照请求：
+Comparison request:
 
 ```json
 {"question":"What does Article 2 say?","corpus_version":"fixture-en-v2","left_condition":"f400","right_condition":"s400"}
 ```
 
-对照响应顶层为 `question`、`corpus_version`、`index_version`、`left`、`right`。左右各含 `condition`、完整 `hits` 数组、`timing_ms` 和 `context_chars`；样例正文很短，F400/S400 都能返回全文，文本相同是正常结果。用长条文样例才能观察切分差异。
+The comparison response top level is `question`, `corpus_version`, `index_version`, `left`, `right`. Left and right each contain `condition`, the full `hits` array, `timing_ms`, and `context_chars`; the sample text is very short, so both F400/S400 return the full text, and identical text is a normal result. Only long article samples reveal chunking differences.
 
-### 8.3 错误规范
+### 8.3 Error specification
 
-| 场景 | HTTP | `code` 示例 |
+| Scenario | HTTP | `code` example |
 | --- | ---: | --- |
-| 问题为空、非法 condition 或 top_k | 422 | `INVALID_REQUEST` |
-| 文档或任务不存在 | 404 | `NOT_FOUND` |
-| 未建库、构建未完成、请求版本不一致 | 409 | `INDEX_NOT_READY` / `VERSION_MISMATCH` |
-| 模型文件未准备好或外部下载失败 | 503 | `EMBEDDING_UNAVAILABLE` |
-| 正文位置损坏、输入超模型上限 | 409 | `SOURCE_MISMATCH` / `MODEL_INPUT_TOO_LONG` |
+| Empty question, invalid condition, or top_k | 422 | `INVALID_REQUEST` |
+| Document or task not found | 404 | `NOT_FOUND` |
+| Database not built, build not completed, requested version mismatch | 409 | `INDEX_NOT_READY` / `VERSION_MISMATCH` |
+| Model files not ready or external download failed | 503 | `EMBEDDING_UNAVAILABLE` |
+| Body text position corrupted, input exceeds model limit | 409 | `SOURCE_MISMATCH` / `MODEL_INPUT_TOO_LONG` |
 
-错误体统一为 `{"code":"...","message":"可读说明"}`。未预期的程序错误返回 500 并写服务器日志，不伪装成“没有找到证据”。API 参数校验错误需要显式转换为总文档的统一错误格式，不能一部分返回 `detail`、另一部分返回 `message`。
+Error bodies are unified as `{"code":"...","message":"Human-readable description"}`. Unexpected program errors return 500 and write to the server log; they are not disguised as "no evidence found". API parameter validation errors must be explicitly converted to the overall document's unified error format; it cannot be that some return `detail` while others return `message`.
 
-## 9. B 如何独立测试
+## 9. How B is tested independently
 
-| 测试 | 样例与预期 | 是否需要下载模型 |
+| Test | Sample and expectation | Requires model download |
 | --- | --- | --- |
-| 原文覆盖与 ID | 25 字英文样例，以及保留的 13 字中文回归样例；验证完整覆盖与固定哈希。 | 否。 |
-| 固定窗口边界 | 刚好 400、401、800、801 字符，含空格、换行、emoji。 | 否。 |
-| 结构边界 | 相邻短条、超长条、跨章/节、条文内引用其他条号、无条号文本。 | 否。 |
-| 长句回退 | 单句超上限，确保硬切但不漏字符，回退次数被记录。 | 否。 |
-| 向量适配 | 注入固定向量，核对写入数量、文本/向量顺序和 cosine 换算。 | 否，可用临时真实 Chroma。 |
-| 幂等与版本 | 连续建两次同版本不重复；旧索引拒绝新语料；失败索引不能查询。 | 否。 |
-| API | 参数错误、任务状态、文档读取、单侧对照失败、返回字段与区间一致。 | 否。 |
-| 真实模型冒烟 | 干净环境下载固定 revision，CPU 编码、四组建库、运行搜索；验证 token 检查和实际维度。 | 是，首次联网或提供固定权重包。 |
+| Source coverage and IDs | A 25-character English sample, plus the retained 13-character Chinese regression sample; verify complete coverage and fixed hashes. | No. |
+| Fixed window boundaries | Exactly 400, 401, 800, 801 characters, including spaces, newlines, and emoji. | No. |
+| Structure boundaries | Adjacent short articles, overlong articles, cross-chapter/section, references to other article numbers within an article, text without article numbers. | No. |
+| Long-sentence fallback | A single sentence exceeds the limit; ensure hard splitting does not drop characters and fallback counts are recorded. | No. |
+| Vector adaptation | Inject fixed vectors; verify write counts, text/vector ordering, and cosine conversion. | No; a temporary real Chroma can be used. |
+| Idempotency and versioning | Building the same version twice consecutively does not duplicate; old indexes reject new corpora; failed indexes cannot be queried. | No. |
+| API | Parameter errors, task status, document reading, one-sided comparison failure, returned fields consistent with ranges. | No. |
+| Real-model smoke test | In a clean environment, download a fixed revision, encode on CPU, build the four groups, and run searches; verify token checks and actual dimensions. | Yes; first-time network access or provide a fixed weights package. |
 
-真实模型检索测试要验证语义相关内容可返回、向量有效、结构字段正确；不要把某个语义问题的精确浮点数写成跨平台必须相等的断言。模拟测试输出不能作为正式四组实验结果。
+Real-model retrieval tests must verify that semantically relevant content can be returned, vectors are valid, and structure fields are correct; do not write the exact floating-point values of a particular semantic question as assertions that must be equal across platforms. Mock test output cannot be used as formal four-group experiment results.
 
-为了让 C 能直接验证契约，B 将上面样例存入 `tests/fixtures/b/`，同时附一份 `expected_hits.json`。测试块 ID、文档位置和官方来源字段必须与输入一致；不能只交一张“能检索”的截图。
+So that C can directly verify the contract, B stores the above samples in `tests/fixtures/b/`, along with a copy of `expected_hits.json`. Test block IDs, document positions, and official source fields must match the input; submitting only a "search works" screenshot is not acceptable.
 
-### 9.1 独立开发命令约定
+### 9.1 Independent development command conventions
 
-以下入口已实现。创建自己的项目 `.venv` 后在项目根目录使用该虚拟环境的 Python：
+The following entry points are implemented. After creating your own project `.venv`, use that virtual environment's Python from the project root:
 
 ```bash
 python -m pip install -r requirements-b.txt -r requirements-b-dev.txt
@@ -382,120 +382,120 @@ python -m pip check
 python -m pytest tests/test_chunking.py tests/test_retrieval.py tests/test_retrieval_api.py
 ```
 
-模型准备与四组建库脚本约定支持 `--config` 和测试 fixture 模式：
+The model preparation and four-group build scripts are agreed to support `--config` and a test fixture mode:
 
 ```bash
 python -m scripts.fetch_embedding --config config/retrieval.example.json
 python -m scripts.build_indexes --config config/retrieval.example.json --fixtures
 ```
 
-`--fixtures` 明确选择 `tests/fixtures/b/`，不能写入正式数据目录；不带该参数读取 A 的正式 manifest，找不到时应报错。测试索引与真实索引物理隔离，不能只靠页面标签区分。
+`--fixtures` explicitly selects `tests/fixtures/b/` and must not write to the formal data directory; without this parameter it reads A's formal manifest and should error if not found. Test indexes and real indexes are physically isolated and cannot be distinguished only by page labels.
 
-独立 API 和检索验证页预览入口：
+Independent API and retrieval verification page preview entry point:
 
 ```bash
 python -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-如采用这个模块路径，需要在 `tests/` 和 `tests/support/` 加包标识，保证命令能导入。启动后打开 `http://127.0.0.1:8767/b-debug` 查看 B 的检索验证页，`/docs` 用于 API 自测。该入口已实现并完成网页操作验证；C 最终注册同一组业务 router 到正式 `app.main:app`。
+If this module path is used, package markers must be added to `tests/` and `tests/support/` so the command can import them. After startup, open `http://127.0.0.1:8767/b-debug` to view B's retrieval verification page; `/docs` is for API self-testing. This entry point is implemented and has been verified through web operations; C ultimately registers the same set of business routers into the formal `app.main:app`.
 
-### 9.2 独立测试如何体现在前端
+### 9.2 How independent testing is reflected in the frontend
 
-B 实现一个简单的独立验证页即可，无需等待 C 完成完整问答页面。该页用普通 HTML/CSS/JavaScript，由测试服务同源提供，使用 `fetch()` 调用 B 的真实 API；不新增 Node 构建环境，不依赖 CDN。样本输入和结果通过 `textContent` 安全展示。
+B only needs to implement a simple independent verification page; there is no need to wait for C to complete the full Q&A page. The page uses plain HTML/CSS/JavaScript, is served same-origin by the test service, and uses `fetch()` to call B's real API; no new Node build environment is added and no CDN is depended on. Sample inputs and results are safely displayed via `textContent`.
 
-| 页面区域 | 用户可以操作什么 | 展示哪些验证结果 |
+| Page area | What the user can do | Which verification results are displayed |
 | --- | --- | --- |
-| 运行状态 | 查看启动模式、语料和模型状态 | `mock`/`real`、测试语料标识、模型 ID/revision、索引版本、四组就绪状态。 |
-| 文档与分块 | 选择测试文档及 F400/S400/F800/S800 | 原文、各块文本、块 ID、覆盖条号、`start/end`、长度和块数。 |
-| 建库 | 点击“建立四组测试索引” | 任务进度、各组块数和失败原因；完成前禁止搜索。 |
-| 单组搜索 | 输入问题并选择一个条件 | top-5 原文块、相关分数、条号、来源、字符位置和检索耗时。 |
-| 同题对照 | 选择左右条件后提交同一个问题 | 两侧检索块并排展示，各自块长、返回字符总数、分数和耗时。 |
-| 原文核对 | 点击某个结果的“查看来源片段” | API 返回的原文片段、文档 ID、条号和区间；不在浏览器重新计算 Python 字符位置。 |
+| Run status | View startup mode, corpus, and model status | `mock`/`real`, test corpus identifier, model ID/revision, index version, four-group readiness status. |
+| Documents and chunks | Select a test document and F400/S400/F800/S800 | Source text, each chunk's text, chunk ID, covered article numbers, `start/end`, length, and chunk count. |
+| Build index | Click "Build four test indexes" | Task progress, chunk counts per group, and failure reasons; searching is disabled until completion. |
+| Single-group search | Enter a question and select one condition | top-5 source chunks, relevance scores, article numbers, sources, character positions, and retrieval time. |
+| Same-question comparison | Select left and right conditions, then submit the same question | Retrieval chunks from both sides displayed side by side, with each side's chunk length, total returned characters, scores, and time. |
+| Source verification | Click "View source snippet" on a result | The source snippet, document ID, article number, and range returned by the API; Python character positions are not recomputed in the browser. |
 
-**完整演示步骤：**启动 B 测试服务 → 打开 `/b-debug` → 选择合成长文档 → 建立四组索引 → 预览两种切分 → 输入问题 → 查看单组命中 → 查看同题对照 → 打开片段核对位置。使用长条文样本展示边界差异；25 字英文样例主要验证字段和位置，不应强行做出不同效果。
+**Full demo steps:** Start B's test service → open `/b-debug` → select the synthetic long document → build the four indexes → preview the two chunking methods → enter a question → view single-group hits → view same-question comparison → open a snippet to verify positions. Use long-article samples to demonstrate boundary differences; the 25-character English sample mainly verifies fields and positions and should not be forced to produce different effects.
 
-#### 两种启动模式
+#### Two startup modes
 
-- `mock`：默认模式。使用 B 自带合成文档和固定测试向量，实际运行切分、索引适配与 API；无需下载 embedding，也不调用 LLM。页面明显标记“模拟 embedding，仅供接口与流程验证”，不能把排序展示成真实语义检索效果。
-- `real`：仍使用 B 自带测试文档，但通过固定 revision 的真实 embedding 编码并写入隔离的测试索引。页面明确标记“真实 embedding + 合成测试语料”；不需要 A 的正式文档或 C 的问答服务。这一模式用于证明模型、向量库和检索链路确实运行。
+- `mock`: default mode. Uses B's built-in synthetic documents and fixed test vectors, and actually runs chunking, index adaptation, and the API; no embedding download is required and no LLM is called. The page clearly marks "simulated embedding, for interface and flow verification only"; ranking must not be presented as real semantic retrieval results.
+- `real`: still uses B's built-in test documents, but encodes via real embedding at a fixed revision and writes to an isolated test index. The page clearly marks "real embedding + synthetic test corpus"; A's formal documents or C's Q&A service are not required. This mode is used to prove that the model, vector store, and retrieval chain actually run.
 
-模式通过测试服务专用环境变量 `DERAG_B_DEBUG_MODE=mock|real` 在启动时设置。进入 `real` 前按第 9.1 节准备模型；权重缺失、输入超限或建库失败应显示具体错误，不自动回退到 `mock`。模式切换后清空页面旧结果，索引目录按模式与版本隔离，避免误用另一模式的缓存。
+The mode is set at startup via the test-service-specific environment variable `DERAG_B_DEBUG_MODE=mock|real`. Before entering `real`, prepare the model as described in section 9.1; missing weights, input over limit, or index build failure should display a specific error and must not automatically fall back to `mock`. After a mode switch, clear old page results; index directories are isolated by mode and version to avoid mistakenly using another mode's cache.
 
-PowerShell 中选择真实模型验证模式的启动约定：
+Startup convention for selecting real-model verification mode in PowerShell:
 
 ```powershell
 $env:DERAG_B_DEBUG_MODE = 'real'
 python -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-上述命令已可使用；模型配置读取 `config/retrieval.example.json`，路径仍支持项目环境变量覆盖。测试服务导入时不自动下载权重或开始建库。
+The above command is usable; model configuration reads `config/retrieval.example.json`, and paths still support project environment variable overrides. Importing the test service does not automatically download weights or start index building.
 
-#### 页面与 API 的对应关系
+#### Correspondence between page and API
 
-页面文档与分块区域调用 `/api/documents` 及 `/api/documents/{id}/chunks`；建库调用 `/api/indexes/build`，用测试任务管理器提供的 `/api/tasks/{id}` 查询状态；单组搜索调用 `/api/search`；左右对照调用 `/api/compare`。所有业务均使用 B 的同一套服务函数，不为展示另写一套切分或排序逻辑。
+The page's documents and chunks area calls `/api/documents` and `/api/documents/{id}/chunks`; index building calls `/api/indexes/build`, with status queried via `/api/tasks/{id}` provided by the test task manager; single-group search calls `/api/search`; left-right comparison calls `/api/compare`. All business logic uses B's same set of service functions; no separate chunking or ranking logic is written for display.
 
-测试服务可增加只读 `/b-debug/status`，返回模式、合成语料版本、模型配置和索引状态，仅用于验证页引导，不属于生产 API 契约。完整原文片段来自已有文档/检索响应；页面没有独立的生成答案或正式指标入口。
+The test service may add a read-only `/b-debug/status` that returns mode, synthetic corpus version, model configuration, and index status, used only for verification page guidance and not part of the production API contract. Full source snippets come from existing document/retrieval responses; the page has no independent generated-answer or formal metrics entry point.
 
-#### 页面验收
+#### Page acceptance
 
-1. `mock` 模式在空模型缓存环境可启动，能实际切块、建测试索引并展示结果。
-2. `real` 模式使用真实模型完成同一流程，明确保留模型版本和运行记录；API 测试仍是自动化验收依据，页面补充可视化验证。
-3. 建库状态、无结果、加载中和错误均可见；切换文档/条件或提交新问题时不继续展示旧结果冒充新结果。
-4. 截图或录屏标明模式、测试语料与条件；合成文档和模拟向量产生的结果不进入最终法规实验报告。
-5. C 集成时复用 B 的 API 和服务，将交互接到正式文档库/对照页面；独立验证页保留在测试目录，B 的正式交付不要求 C 复制这张页面。
+1. `mock` mode can start in an empty model cache environment and can actually chunk, build test indexes, and display results.
+2. `real` mode completes the same flow using the real model, explicitly retaining the model version and run records; API tests remain the automated acceptance basis, and the page supplements with visual verification.
+3. Index build status, no results, loading, and errors are all visible; when switching documents/conditions or submitting a new question, old results are not continuously displayed as if they were new results.
+4. Screenshots or screen recordings must indicate the mode, test corpus, and conditions; results produced from synthetic documents and simulated vectors do not enter the final regulatory experiment report.
+5. During C integration, reuse B's API and services and connect the interaction to the formal document library/comparison page; the standalone verification page remains in the test directory, and B's formal delivery does not require C to replicate this page.
 
-## 10. 配置与给老师复现
+## 10. Configuration and reproduction for the teacher
 
-B 使用 `config/retrieval.example.json` 独立开发，集成后由 C 将同名配置键合入 `config/experiment.json`。
+B is developed independently using `config/retrieval.example.json`; after integration, C merges the identically named configuration keys into `config/experiment.json`.
 
-| 配置键 | 要求 |
+| Configuration key | Requirement |
 | --- | --- |
-| `corpus_version`、`conditions`、`top_k` | 正式为 A 冻结版本、四组条件和 5。 |
-| `embedding.model_id`、`embedding.revision` | 实际模型 ID 和不可变 revision；不使用 `main/latest` 作为最终版本。 |
-| `embedding.model_dir`、`embedding.device` | 项目相对路径或容器挂载路径，基线 CPU；支持 `DERAG_MODEL_DIR`。 |
-| `embedding.dimension`、`embedding.normalize` | 与真实输出一致；索引和查询保持相同。 |
-| `embedding.query_prefix`、`embedding.document_prefix` | 按模型要求固定，空前缀也显式记录。 |
-| `embedding.max_input_tokens` | 实际验证的有效输入上限，tokenizer 检查包括特殊 token。 |
-| `retrieval.metric`、`retrieval.chunker_version` | `cosine` 和分块实现版本，不能凭时间自动生成算法版本。 |
+| `corpus_version`, `conditions`, `top_k` | Formally the A frozen version, four groups of conditions, and 5. |
+| `embedding.model_id`, `embedding.revision` | Actual model ID and immutable revision; do not use `main/latest` as the final version. |
+| `embedding.model_dir`, `embedding.device` | Project-relative path or container mount path, baseline CPU; supports `DERAG_MODEL_DIR`. |
+| `embedding.dimension`, `embedding.normalize` | Consistent with real output; indexing and querying remain the same. |
+| `embedding.query_prefix`, `embedding.document_prefix` | Fixed per model requirements; an empty prefix is also explicitly recorded. |
+| `embedding.max_input_tokens` | The actually verified effective input limit; tokenizer checks include special tokens. |
+| `retrieval.metric`, `retrieval.chunker_version` | `cosine` and the chunking implementation version; the algorithm version must not be generated automatically from time. |
 
-不得依赖个人全局 Python 包、私人在线 embedding 服务或个人下载缓存。数据根目录支持 `DERAG_DATA_DIR`；配置优先级与总文档一致：显式参数 → 环境变量 → 配置文件，实际生效值写入记录。
+Must not depend on personal global Python packages, private online embedding services, or personal download caches. The data root directory supports `DERAG_DATA_DIR`; configuration precedence is consistent with the master document: explicit parameters → environment variables → configuration file, and the actually effective values are written to the record.
 
-B 完成前至少在空虚拟环境或干净 Linux CPU 容器中验证一次安装、模型加载、四组建库和检索。最终 C 负责完整 Docker 镜像，但 B 需提供准确依赖和模型准备脚本，保证容器不需要访问 B 的本机服务。当前预览版 `DE.tar` 不包含这些能力。
+Before B is complete, verify installation, model loading, index building for the four groups, and retrieval at least once in an empty virtual environment or a clean Linux CPU container. Final C is responsible for the complete Docker image, but B must provide accurate dependencies and a model preparation script to ensure the container does not need to access B's local services. The current preview version `DE.tar` does not include these capabilities.
 
-## 11. 交给 C 的内容与验收
+## 11. Content handed to C and acceptance
 
-B 独立完成后提交一个可审阅 PR，至少包含：
+After B is completed independently, submit a reviewable PR containing at least:
 
-1. `app/retrieval/` 全部核心代码、三个 API 模块、模型下载和建库脚本，以及 `tests/support/b_app.py` 和 `tests/support/static/b_debug.html` 独立验证页。
-2. 锁定依赖、配置样例、模型 ID/revision/文件清单及 CPU 运行说明。
-3. 通过总文档字段校验的 Document/Chunk/SearchHit 样例。
-4. 自动测试结果，以及真实 embedding + Chroma 冒烟命令与输出。
-5. 四组索引 manifest 示例：版本材料、块数、最小/平均/最大块长、回退次数、建库耗时、模型和向量库配置、完成状态。
-6. 已知限制，例如模型体积、CPU 内存占用、下载是否联网和近似检索排序差异；不能把未验证环境写成已支持。
+1. All core code of `app/retrieval/`, the three API modules, model download and index building scripts, and the standalone verification pages for `tests/support/b_app.py` and `tests/support/static/b_debug.html`.
+2. Locked dependencies, configuration samples, model ID/revision/file list, and CPU run instructions.
+3. Document/Chunk/SearchHit samples that pass the master document field validation.
+4. Automated test results, plus real embedding + Chroma smoke commands and output.
+5. Example index manifests for the four groups: version materials, chunk count, minimum/average/maximum chunk length, fallback count, index build time, model and vector store configuration, completion status.
+6. Known limitations, such as model size, CPU memory usage, whether downloads require network access, and approximate retrieval ranking differences; unverified environments must not be written as supported.
 
-C 合并后只需注入 A 的真实文档加载器、项目配置和任务管理器，注册 B 的 router，再用真实语料重建索引；问答与评估统一调用 B 的 `search()`。C 不重写 B 的算法，B 不为了集成改动 A 的标准答案。
+After merging, C only needs to inject A's real document loader, project configuration, and task manager, register B's router, and rebuild the index with the real corpus; question answering and evaluation uniformly call B's `search()`. C does not rewrite B's algorithms, and B does not modify A's standard answers for integration.
 
-**B 的最终完成标准：在不使用 A/C 实现的情况下通过独立测试与真实模型冒烟；在集成时按同一契约读取 A 的正式文档，并为 C 返回原文可定位的四组检索证据。**
+**B's final completion criteria: pass standalone tests and real-model smoke tests without using A/C implementations; during integration, read A's formal documents under the same contract and return to C four groups of retrieval evidence that can be located in the original text.**
 
 
-## 12. 本次实现与可复制的验收步骤
+## 12. This implementation and reproducible acceptance steps
 
-### 12.1 已落地的文件
+### 12.1 Files already in place
 
-- 核心逻辑：`app/retrieval/` 的 `types.py`、`chunking.py`、`embedding.py`、`vector_store.py`、`indexes.py`、`service.py`、`errors.py`。
-- 路由工厂：`app/api/`，包含文档、建库、检索与对照。生产入口尚未注册，C 集成后复用。
-- 独立验证入口：`tests/support/b_app.py`，验证页 `tests/support/static/b_debug.html`。
-- 命令行：`scripts/fetch_embedding.py`、`scripts/build_indexes.py`、`scripts/smoke_embedding.py`。
-- 冻结样例：`tests/fixtures/b/`；合成文本明确标记为测试，未创建正式标准题。
-- 依赖锁：`requirements-b.txt` 与 `requirements-b-dev.txt`。原 `requirements.txt` 保留给现有预览应用，C 合并时再统一。
+- Core logic: `types.py`, `chunking.py`, `embedding.py`, `vector_store.py`, `indexes.py`, `service.py`, `errors.py` in `app/retrieval/`.
+- Router factory: `app/api/`, including documents, index building, retrieval, and comparison. The production entry point is not yet registered; it will be reused after C integration.
+- Standalone verification entry: `tests/support/b_app.py`, verification page `tests/support/static/b_debug.html`.
+- Command line: `scripts/fetch_embedding.py`, `scripts/build_indexes.py`, `scripts/smoke_embedding.py`.
+- Frozen samples: `tests/fixtures/b/`; synthetic text is explicitly marked as test, and no formal standard questions have been created.
+- Dependency locks: `requirements-b.txt` and `requirements-b-dev.txt`. The original `requirements.txt` is retained for the existing preview application and will be unified when C merges.
 
-没有在导入模块时下载模型或建库；没有依赖全局 Python 包、私人模型服务、LLM Key 或个人 Hugging Face 缓存。
-`DERAG_DATA_DIR`、`DERAG_MODEL_DIR`、`DERAG_RETRIEVAL_CONFIG` 支持覆盖；CLI 的 `--data-dir` / `--model-dir` / `--config` 优先。
-`.env` 不自动读取，PowerShell 请使用 `$env:变量名` 注入。
+No models are downloaded or indexes built at module import; there is no dependence on global Python packages, private model services, LLM keys, or personal Hugging Face caches.
+`DERAG_DATA_DIR`, `DERAG_MODEL_DIR`, `DERAG_RETRIEVAL_CONFIG` support overrides; the CLI's `--data-dir` / `--model-dir` / `--config` take precedence.
+`.env` is not read automatically; in PowerShell, use `$env:VARIABLE_NAME` to inject it.
 
-### 12.2 第一次安装（Windows PowerShell）
+### 12.2 First installation (Windows PowerShell)
 
-先安装 Python 3.13.11，在 `DERag` 项目根目录执行。已有项目 `.venv` 可跳过第一行。
+First install Python 3.13.11, then run in the `DERag` project root directory. If the project already has `.venv`, the first line can be skipped.
 
 ```powershell
 py -3.13 -m venv .venv
@@ -503,45 +503,45 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip check
 ```
 
-安装需要网络和磁盘空间；这些都是公开依赖，无需复制开发者的虚拟环境。
-已创建独立的 `.venv-b-verify` 并安装两份依赖锁；原安装曾通过 `pip check`，英文迁移后再次执行自动测试与真实模型脚本，结果见当前记录。
-已验证环境是 Windows / Python 3.13.11 / CPU。Linux 容器尚未实测；原 `DE.tar` 仍是前端预览包。
+Installation requires network access and disk space; these are all public dependencies, and there is no need to copy the developer's virtual environment.
+A separate `.venv-b-verify` has been created and both dependency locks installed; the original installation once passed through `pip check`, and after the English migration the automated tests and real-model scripts were run again, with results in the current record.
+The verified environment is Windows / Python 3.13.11 / CPU. The Linux container has not yet been tested; the original `DE.tar` is still the frontend preview package.
 
-### 12.3 自动测试（不下载 embedding）
+### 12.3 Automated tests (no embedding download)
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest tests/test_chunking.py tests/test_retrieval.py tests/test_retrieval_api.py -q
 ```
 
-预期 `78 passed`。测试使用真实临时 Chroma 和测试向量，覆盖分块区间、Unicode、章节、长句回退、幂等建库、失败重试、索引/原文损坏、模型缺失、token 超限、API 字段和错误格式。结果是模块正确性测试，不是法规问答准确率。
-`pytest.ini` 将测试临时目录放在项目内 `artifacts/b/.pytest/`，避免依赖个人临时目录权限；该目录会由 pytest 清理，勿放个人文件。
+Expected `78 passed`. The tests use a real temporary Chroma and test vectors, covering chunking intervals, Unicode, sections, long-sentence fallback, idempotent index building, failure retry, index/original text corruption, missing model, token over-limit, API fields, and error formats. The results are module correctness tests, not regulatory question-answering accuracy.
+`pytest.ini` places the test temporary directory in the project's `artifacts/b/.pytest/` to avoid depending on personal temporary directory permissions; this directory is cleaned up by pytest, so do not put personal files in it.
 
-### 12.4 先用网页验收（默认 mock，无需模型）
+### 12.4 First accept via the web page (default mock, no model required)
 
 ```powershell
 $env:DERAG_B_DEBUG_MODE = 'mock'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-打开 <http://127.0.0.1:8767/b-debug>，API 文档为 <http://127.0.0.1:8767/docs>。
-按以下顺序操作：选择“合成数据保护规则” → 点击“建立四组测试索引” → 选择 F400/S400 查看边界 → 检索默认问题 → 左右对照 → 点击“查看来源片段”。所有块来自服务端，不在浏览器重新切分或按 JavaScript 字符串下标截取原文。
+Open <http://127.0.0.1:8767/b-debug>; the API documentation is at <http://127.0.0.1:8767/docs>.
+Follow this order: select "Synthetic Data Protection Rules" → click "Build four test indexes" → select F400/S400 to view boundaries → search the default question → compare side by side → click "View source chunk". All chunks come from the server; the original text is not re-split in the browser or sliced by JavaScript string indices.
 
-API 也可以在另一个 PowerShell 窗口调用：
+The API can also be called from another PowerShell window:
 
 ```powershell
 $body = @{ question='How can an individual request deletion of personal information?'; corpus_version='fixture-en-v2'; condition='s400'; top_k=5 } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri 'http://127.0.0.1:8767/api/search' -ContentType 'application/json; charset=utf-8' -Body ([System.Text.Encoding]::UTF8.GetBytes($body))
 ```
 
-默认服务必须先从网页建库。也可提前执行：
+The default service must first build the database from the web page. You can also run in advance:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.build_indexes --config config/retrieval.example.json --fixtures --mock
 ```
 
-### 12.5 真实模型验收
+### 12.5 Real model acceptance
 
-先停止 mock 服务（Ctrl+C），首次执行模型准备。权重约 2.27 GB，连同分词器约 2.3 GB，首次需联网；文件哈希保存在模型目录的 `derag-model-manifest.json`，复核副本在 `artifacts/b/model-manifest.json`。
+First stop the mock service (Ctrl+C), then run model preparation for the first time. The weights are about 2.27 GB, about 2.3 GB including the tokenizer, and the first run requires internet access; file hashes are stored in the model directory's `derag-model-manifest.json`, with a verification copy in `artifacts/b/model-manifest.json`.
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.fetch_embedding --config config/retrieval.example.json
@@ -551,19 +551,19 @@ $env:DERAG_B_DEBUG_MODE = 'real'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-`smoke_embedding` 会复用校验通过的完整索引，并运行四条件 × 三问题共 12 次真实检索检查、实际 1024 维向量检查、真实 tokenizer 超限拒绝、HTTP 检索及对照检查。成功输出 `PASS`，详见 `artifacts/b/real-smoke.json`。
-合成文本有重复内容，精确浮点数不作为跨平台断言；只检查主题相关证据及字段契约，不将此处的成功比例写成正式评估指标。
-第一次 CPU 模型导入、加载和编码较慢，应等待命令返回；没有自动降级为 mock 的逻辑。
+`smoke_embedding` reuses a complete index that passed verification and runs a total of 12 real retrieval checks across four conditions × three questions, an actual 1024-dimensional vector check, real tokenizer over-limit rejection, HTTP retrieval, and comparison checks. On success it outputs `PASS`; see `artifacts/b/real-smoke.json` for details.
+The synthetic text contains duplicate content, so exact floating-point numbers are not used as cross-platform assertions; only topic-relevant evidence and field contracts are checked, and the success ratio here is not written up as a formal evaluation metric.
+The first CPU model import, load, and encoding are slow; wait for the command to return. There is no logic that automatically falls back to mock.
 
-若要让干净环境从空索引完整重建，可指定独立数据根目录：
+To have a clean environment fully rebuild from an empty index, specify a separate data root directory:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.smoke_embedding --config config/retrieval.example.json --data-dir data/b-clean-verification --output artifacts/b/clean-real-smoke.json
 ```
 
-本次实现使用相同固定 revision、CLS 池化、空前缀、1024 维、归一化、8192 token 上限、CPU、4 条批次与 4 CPU 线程。四条件一律相同。Chroma 1.5.9 使用 cosine、`ef_construction=100`、`ef_search=100`、`max_neighbors=16`、`num_threads=1`、`batch_size=2`、`sync_threshold=2`、`resize_factor=1.2`，有效设置写入索引版本材料。较低同步阈值确保小样本建库后的索引能被后续 HTTP 请求读取，代价是正式语料建库写盘较频繁；若统一改参数，四组必须重新构建。
+This implementation uses the same fixed revision, CLS pooling, empty prefix, 1024 dimensions, normalization, 8192 token limit, CPU, batch size of 4, and 4 CPU threads. All four conditions are identical. Chroma 1.5.9 uses cosine, `ef_construction=100`, `ef_search=100`, `max_neighbors=16`, `num_threads=1`, `batch_size=2`, `sync_threshold=2`, `resize_factor=1.2`, and the effective settings are written into the index version materials. The lower sync threshold ensures that an index built from a small sample can be read by subsequent HTTP requests, at the cost of more frequent disk writes when building the formal corpus; if parameters are changed uniformly, all four groups must be rebuilt.
 
-### 12.6 C 的最小接入方法
+### 12.6 Minimal integration method for C
 
 ```python
 from app.api import create_retrieval_routers, install_retrieval_error_handlers
@@ -571,31 +571,31 @@ from app.retrieval import RetrievalService
 from app.retrieval.embedding import LocalEmbedder
 from app.retrieval.types import load_config
 
-config = load_config()  # C 换为统一配置适配；传入相同字段即可
+config = load_config()  # C replaces this with a unified config adapter; pass in the same fields
 service = RetrievalService(
-    document_loader=A_load_documents,  # A 的函数，签名 (corpus_version) -> list[dict]
+    document_loader=A_load_documents,  # A's function, signature (corpus_version) -> list[dict]
     embedder=LocalEmbedder(config['embedding']),
     config=config,
 )
 install_retrieval_error_handlers(app)
 app.include_router(create_retrieval_routers(service, task_manager))
-# C 问答直接使用 service.search(question, condition, corpus_version, top_k=5)
+# C's Q&A directly uses service.search(question, condition, corpus_version, top_k=5)
 ```
 
-`A_load_documents`、`task_manager` 是 C 装配时注入的变量，不是 B 自行实现的正式模块。A 若返回 Pydantic Document，适配器用 `model_dump()` 转为字典。B 内置 `formal_loader(Path(config['data_dir']))` 也可读取按总文档生成的正式 manifest；会验证原始文件、处理文件、正文、条文和语料版本哈希。
+`A_load_documents` and `task_manager` are variables injected when C is assembled, not formal modules implemented by B itself. If A returns a Pydantic Document, the adapter uses `model_dump()` to convert it to a dictionary. B's built-in `formal_loader(Path(config['data_dir']))` can also read a formal manifest generated from the total documents; it verifies the original files, processed files, body text, articles, and corpus version hashes.
 
-任务管理器需实现 `submit(function, background_tasks) -> {'task_id': ..., 'state': 'queued'}`：接收无参数同步建库函数，把任务交给自己的后台执行器，记录结果/失败原因，立即返回 queued；C 提供生产版 `/api/tasks/{id}`。B 的 `MemoryTaskManager` 展示了完整适配器行为，但仅供单进程测试，重启会丢任务，不作为生产任务持久化。
+The task manager must implement `submit(function, background_tasks) -> {'task_id': ..., 'state': 'queued'}`: receive a no-argument synchronous index-building function, hand the task to its own background executor, record the result/failure reason, and immediately return queued; C provides the production version `/api/tasks/{id}`. B's `MemoryTaskManager` demonstrates the full adapter behavior, but it is for single-process testing only; tasks are lost on restart and it is not used as production task persistence.
 
-正式数据不能带 `--fixtures`；将配置 `corpus_version` 换为 A 的真实版本，再执行不带该标志的建库命令。缺少 A 的 manifest 会明确报错，禁止自动使用样例补齐。
-实际索引由当前 corpus + 配置的确定性版本定位，不自动选择“最近一次”索引；仅四组完成的同一版本可查询。B 当前采用数据根目录文件锁串行化建库与检索，适用于课程实验；高并发服务需另行设计。
+Formal data must not carry `--fixtures`; change the config `corpus_version` to A's real version, then run the index-building command without that flag. A missing A manifest will raise an explicit error; automatically filling in with samples is prohibited.
+The actual index is located by a deterministic version derived from the current corpus + config; it does not automatically select the "most recent" index; only the same version with all four groups completed can be queried. B currently uses a data-root file lock to serialize index building and retrieval, which is suitable for coursework experiments; high-concurrency services require a separate design.
 
-### 12.7 已保存证据与当前边界
+### 12.7 Saved evidence and current boundaries
 
-- `artifacts/b/tests.xml`：干净虚拟环境的 78 项 pytest 结果。
-- `artifacts/b/real-smoke.json`：真实 CPU 模型、四组 manifest、检索快照和 API 输出。
-- `artifacts/b/clean-real-smoke.json`：干净环境从隔离索引目录完整重建的记录。
-- `artifacts/b/model-manifest.json`：模型 commit 与逐文件 SHA-256。
-- `artifacts/b/frontend-smoke.json`、`debug-mock.png`、`debug-mobile.png`：浏览器完成建库、搜索、对照、原文弹窗与输入变更清空旧结果的记录。验证页在桌面与 390px 窄屏检查，无 JavaScript 错误、无横向溢出。
+- `artifacts/b/tests.xml`: 78 pytest results in a clean virtual environment.
+- `artifacts/b/real-smoke.json`: real CPU model, four-group manifests, retrieval snapshots, and API output.
+- `artifacts/b/clean-real-smoke.json`: record of a full rebuild from an isolated index directory in a clean environment.
+- `artifacts/b/model-manifest.json`: model commit and per-file SHA-256.
+- `artifacts/b/frontend-smoke.json`, `debug-mock.png`, `debug-mobile.png`: records of building the index, searching, comparing, the source-text popup, and clearing old results on input change in the browser. The verification page was checked on desktop and a 390px narrow screen, with no JavaScript errors and no horizontal overflow.
 
-当前未接入 A 的官方文档、C 的 LLM 回答和 30 道标准题正式评估。合成数据来源使用 `example.org`，只验证引用字段和原文区间，不能充当官方法条。Chroma 是近似检索，同距离已返回候选按 chunk_id 排序，top-k 并列边界可能随平台略有差异。
-模型权重与生成的索引已被 Git 忽略；上传 GitHub 后组员按本节依赖安装与模型准备命令复现。离线交付需另带固定权重目录及依赖包或最终镜像，C 负责最后 Docker 集成。
+Currently not integrated: A's official documents, C's LLM answers, and the formal evaluation of 30 standard questions. The synthetic data source uses `example.org`, which only verifies citation fields and source-text spans and cannot serve as official legal articles. Chroma is approximate retrieval; candidates returned at the same distance are sorted by chunk_id, and top-k tie boundaries may differ slightly across platforms.
+Model weights and generated indexes are ignored by Git; after uploading to GitHub, team members reproduce them using the dependency installation and model preparation commands in this section. Offline delivery requires a separate fixed weights directory plus dependency packages or a final image; C is responsible for the final Docker integration.

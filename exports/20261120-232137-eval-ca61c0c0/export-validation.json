@@ -1,0 +1,15 @@
+{
+  "state": "passed",
+  "run_id": "eval-ca61c0c0f4bc40339a321e93d80d0e45",
+  "json_records": 120,
+  "csv_records": 120,
+  "offline_html_records": 120,
+  "offline_html_external_assets": 0,
+  "guide_links_checked": 11,
+  "database_quick_check": "ok",
+  "database_cases": 120,
+  "database_review_history": 120,
+  "source_evaluation_bytes_preserved": true,
+  "new_generation_calls": 0,
+  "review_method": "User-authorized AI-assisted grading, not individual human verification."
+}

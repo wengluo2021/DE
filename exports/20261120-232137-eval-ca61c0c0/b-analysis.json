@@ -1,0 +1,48 @@
+{
+  "f400": {
+    "coverage_and_answer_grade": {
+      "incomplete_evidence / correct": 2,
+      "incomplete_evidence / partial": 10,
+      "full_evidence / correct": 4,
+      "incomplete_evidence / wrong": 8
+    },
+    "chunk_count": 982,
+    "chunk_mean_chars": 398.9582484725051,
+    "index_build_ms": 443999.619
+  },
+  "s400": {
+    "coverage_and_answer_grade": {
+      "full_evidence / correct": 6,
+      "incomplete_evidence / partial": 9,
+      "incomplete_evidence / correct": 3,
+      "incomplete_evidence / wrong": 6
+    },
+    "chunk_count": 1415,
+    "chunk_mean_chars": 276.8742049469965,
+    "index_build_ms": 421250.674
+  },
+  "f800": {
+    "coverage_and_answer_grade": {
+      "full_evidence / correct": 9,
+      "full_evidence / partial": 1,
+      "incomplete_evidence / partial": 6,
+      "incomplete_evidence / wrong": 7,
+      "incomplete_evidence / correct": 1
+    },
+    "chunk_count": 493,
+    "chunk_mean_chars": 794.6795131845842,
+    "index_build_ms": 343025.018
+  },
+  "s800": {
+    "coverage_and_answer_grade": {
+      "full_evidence / correct": 12,
+      "incomplete_evidence / partial": 6,
+      "incomplete_evidence / correct": 2,
+      "full_evidence / partial": 1,
+      "incomplete_evidence / wrong": 3
+    },
+    "chunk_count": 625,
+    "chunk_mean_chars": 626.8432,
+    "index_build_ms": 351910.414
+  }
+}

@@ -1,0 +1,2599 @@
+{
+  "run_id": "eval-ca61c0c0f4bc40339a321e93d80d0e45",
+  "method": "User-authorized AI-assisted grading, not individual human verification.",
+  "reviewers": {
+    "Codex AI（用户授权辅助评分）": 120
+  },
+  "review_history_entries": 120,
+  "reviewed_answers": 96,
+  "reviewed_refusals": 24,
+  "reviewed_claims": 166,
+  "review_history": [
+    {
+      "id": 1,
+      "condition": "f400",
+      "case_id": "gold-crd-delivery-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "AI复核采用题干事实可补当前适用前提的口径：题干明确未约定交期，引用保留交付方式、不得无故延迟和30天上限。开头的词句截断不据此补造新法律条件。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整回答交付方式、不得无故延迟及订约后30天上限。主张1原初审存在截断边界，本次已由AI按说明裁定，非人工确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.566570+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.566570+00:00"
+    },
+    {
+      "id": 2,
+      "condition": "s400",
+      "case_id": "gold-crd-delivery-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整回答交付方式、不得无故延迟及订约后30天上限。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.599857+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.599857+00:00"
+    },
+    {
+      "id": 3,
+      "condition": "f800",
+      "case_id": "gold-crd-delivery-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整回答交付方式、不得无故延迟及订约后30天上限。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.632992+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.632992+00:00"
+    },
+    {
+      "id": 4,
+      "condition": "s800",
+      "case_id": "gold-crd-delivery-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对交付方式、无故延迟限制和30天上限；题干提供未约定交期这一事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整回答交付方式、不得无故延迟及订约后30天上限。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.652486+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.652486+00:00"
+    },
+    {
+      "id": 5,
+      "condition": "f400",
+      "case_id": "gold-crd-withdrawal-refund",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。漏答额外配送费例外及退货/寄回证明前暂缓退款规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.667458+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.667458+00:00"
+    },
+    {
+      "id": 6,
+      "condition": "s400",
+      "case_id": "gold-crd-withdrawal-refund",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。漏答额外配送费例外及暂缓退款规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.685502+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.685502+00:00"
+    },
+    {
+      "id": 7,
+      "condition": "f800",
+      "case_id": "gold-crd-withdrawal-refund",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。已答额外配送费例外，但漏答暂缓退款条件。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.700602+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.700602+00:00"
+    },
+    {
+      "id": 8,
+      "condition": "s800",
+      "case_id": "gold-crd-withdrawal-refund",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。逐项核对第13条的退款范围、通知后14天、原支付方式和额外配送费规则；全题完整性另看暂缓退款条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。漏答额外配送费例外及暂缓退款规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.733891+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.733891+00:00"
+    },
+    {
+      "id": 9,
+      "condition": "f400",
+      "case_id": "gold-crd-payment-fee-cap",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "AI复核接受可识别的主语省略：题干明确询问商家支付手续费，绑定引用明确禁止收取超过商家支付成本的费用；未添加新的法律限制或例外。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答手续费不得超过商家成本。主张2原初审存在截断边界，本次已由AI按说明裁定，非人工确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.766626+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.766626+00:00"
+    },
+    {
+      "id": 10,
+      "condition": "s400",
+      "case_id": "gold-crd-payment-fee-cap",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答手续费不得超过商家成本。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.800642+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.800642+00:00"
+    },
+    {
+      "id": 11,
+      "condition": "f800",
+      "case_id": "gold-crd-payment-fee-cap",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答手续费不得超过商家成本。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.832920+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.832920+00:00"
+    },
+    {
+      "id": 12,
+      "condition": "s800",
+      "case_id": "gold-crd-payment-fee-cap",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。引用保留支付手续费不得超过商家接受该支付方式的成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答手续费不得超过商家成本。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.866555+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.866555+00:00"
+    },
+    {
+      "id": 13,
+      "condition": "f400",
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "仅引[72000,72400)的句尾，未包括“12个月内后补告知”的前提；完整合法规则不能从该片段独立得到。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答初始撤销期结束后12个月；额外介绍后补告知的14天规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.900097+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.900097+00:00"
+    },
+    {
+      "id": 14,
+      "condition": "s400",
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答初始撤销期结束后12个月；额外介绍后补告知的14天规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.933437+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.933437+00:00"
+    },
+    {
+      "id": 15,
+      "condition": "f800",
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "仅引[72000,72800)句尾，缺少后补告知及12个月前提，虽然整条法律结论正确，绑定证据不完整。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答初始撤销期结束后12个月；额外介绍后补告知的14天规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.942621+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.942621+00:00"
+    },
+    {
+      "id": 16,
+      "condition": "s800",
+      "case_id": "gold-crd-withdrawal-information-omission",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第10条区分未告知的12个月延长期和后补告知后的14天。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答初始撤销期结束后12个月；额外介绍后补告知的14天规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.952344+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.952344+00:00"
+    },
+    {
+      "id": 17,
+      "condition": "f400",
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分第9条14天一般撤销权、数字内容失权条件，以及第14条撤销后的费用负担。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只答14天一般规则与笼统例外，漏数字内容履行开始、事先明确同意和权利丧失确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.960867+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.960867+00:00"
+    },
+    {
+      "id": 18,
+      "condition": "s400",
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分第9条14天一般撤销权、数字内容失权条件，以及第14条撤销后的费用负担。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "绑定的第14条片段讨论数字内容费用负担，并非第16(m)条撤销权丧失例外；第9条亦未说明这项具体例外。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。提到数字内容例外但未说明具体条件，且相关引用实际是第14条成本规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.981757+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.981757+00:00"
+    },
+    {
+      "id": 19,
+      "condition": "f800",
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分第9条14天一般撤销权、数字内容失权条件，以及第14条撤销后的费用负担。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出数字内容例外，但未明确14天一般规则；按完整参考口径为部分正确，建议人工确认这一边界。原初审标注完整性边界；本次按同一严格参考口径保持部分正确，并保留该边界供后续人工复核。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:58.999863+00:00"
+      },
+      "created_at": "2026-11-20T14:31:58.999863+00:00"
+    },
+    {
+      "id": 20,
+      "condition": "s800",
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分第9条14天一般撤销权、数字内容失权条件，以及第14条撤销后的费用负担。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分第9条14天一般撤销权、数字内容失权条件，以及第14条撤销后的费用负担。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。同时说明14天一般规则与同意开始履行且确认失权的例外。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.033290+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.033290+00:00"
+    },
+    {
+      "id": 21,
+      "condition": "f400",
+      "case_id": "gold-crd-late-delivery-termination",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "AI复核采用整条主张须被绑定引用支持的严格口径：该主张包含“约定交期或第1款期限”两个一般前提，但绑定块从“out in paragraph 1”开始，未保留约定交期分支。题干能补当前案情，不能替代这个额外的一般法律分支。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出追加期限及解除，未回答解除后应及时退还全部款项。主张1原初审存在截断边界，本次已由AI按说明裁定，非人工确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.052274+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.052274+00:00"
+    },
+    {
+      "id": 22,
+      "condition": "s400",
+      "case_id": "gold-crd-late-delivery-termination",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出追加期限及解除，未回答解除后应及时退还全部款项。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.067469+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.067469+00:00"
+    },
+    {
+      "id": 23,
+      "condition": "f800",
+      "case_id": "gold-crd-late-delivery-termination",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出追加期限及解除，未回答解除后应及时退还全部款项。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.100898+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.100898+00:00"
+    },
+    {
+      "id": 24,
+      "condition": "s800",
+      "case_id": "gold-crd-late-delivery-termination",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。按题干的追加期限路径核对解除权；解除后退款为独立必要事实。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出追加期限及解除，未回答解除后应及时退还全部款项。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.133613+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.133613+00:00"
+    },
+    {
+      "id": 25,
+      "condition": "f400",
+      "case_id": "gold-sgd-two-year-liability",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "AI复核接受两份绑定引用共同支持：一份保留Member States may maintain or introduce longer的权限表述，另一份保留longer time limits for the liability of the seller than those laid down的内容；截断未改变延长期限这一主张的实质。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。有两年及可延长规则，但二手商品遗漏一年最低期限，也未明确数字元素商品。主张2原初审存在截断边界，本次已由AI按说明裁定，非人工确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.166228+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.166228+00:00"
+    },
+    {
+      "id": 26,
+      "condition": "s400",
+      "case_id": "gold-sgd-two-year-liability",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。有两年及二手商品一年下限，但未回答成员国可延长期限，亦未明确数字元素商品。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.175473+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.175473+00:00"
+    },
+    {
+      "id": 27,
+      "condition": "f800",
+      "case_id": "gold-sgd-two-year-liability",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。有两年及可延长/缩短规则，但遗漏二手商品一年下限，未明确数字元素适用。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.200109+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.200109+00:00"
+    },
+    {
+      "id": 28,
+      "condition": "s800",
+      "case_id": "gold-sgd-two-year-liability",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对两年基本期限、成员国延长权限和二手商品缩短规则；整答另查一年下限。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。有可延长及二手商品一年下限，但没有回答基本两年期限，也未明确数字元素适用。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.209116+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.209116+00:00"
+    },
+    {
+      "id": 29,
+      "condition": "f400",
+      "case_id": "gold-sgd-one-year-presumption",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "引用只到“nature of the”，没有“contract”；完整原文是“lack of conformity”，答案错误补成合同性质。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。把例外中的“瑕疵的性质”错写成“合同的性质”，属于实质错误。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.233369+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.233369+00:00"
+    },
+    {
+      "id": 30,
+      "condition": "s400",
+      "case_id": "gold-sgd-one-year-presumption",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。推定及例外基本正确，但遗漏明确适用于带数字元素商品；严格完整性口径待人工确认。原初审标注完整性边界；本次按同一严格参考口径保持部分正确，并保留该边界供后续人工复核。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.266204+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.266204+00:00"
+    },
+    {
+      "id": 31,
+      "condition": "f800",
+      "case_id": "gold-sgd-one-year-presumption",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。推定、反证/性质例外及数字元素适用均完整。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.300278+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.300278+00:00"
+    },
+    {
+      "id": 32,
+      "condition": "s800",
+      "case_id": "gold-sgd-one-year-presumption",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。核对一年推定、反证及商品/瑕疵性质例外，不能用合同性质代替。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。推定、例外及数字元素适用完整；额外说明可延长为两年。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.309496+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.309496+00:00"
+    },
+    {
+      "id": 33,
+      "condition": "f400",
+      "case_id": "gold-sgd-repair-or-replacement",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。分别核对选择权和免费、合理期限、无重大不便要求。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只答免费及一般救济，遗漏消费者选择权、不可行/成本不成比例例外及其他实施条件。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.332894+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.332894+00:00"
+    },
+    {
+      "id": 34,
+      "condition": "s400",
+      "case_id": "gold-sgd-repair-or-replacement",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只答免费，漏选择权与例外、合理期限和无重大不便。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.366671+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.366671+00:00"
+    },
+    {
+      "id": 35,
+      "condition": "f800",
+      "case_id": "gold-sgd-repair-or-replacement",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答免费、合理期限及无重大不便，但未答消费者选择权及限制。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.400166+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.400166+00:00"
+    },
+    {
+      "id": 36,
+      "condition": "s800",
+      "case_id": "gold-sgd-repair-or-replacement",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。分别核对选择权和免费、合理期限、无重大不便要求。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。分别核对选择权和免费、合理期限、无重大不便要求。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答选择权、不可行/不成比例成本例外和免费，但漏合理期限及无重大不便。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.433360+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.433360+00:00"
+    },
+    {
+      "id": 37,
+      "condition": "f400",
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。结论正确，但漏由卖方证明瑕疵轻微。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.466696+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.466696+00:00"
+    },
+    {
+      "id": 38,
+      "condition": "s400",
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。禁止轻微瑕疵解除及卖方举证责任均正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.499885+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.499885+00:00"
+    },
+    {
+      "id": 39,
+      "condition": "f800",
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。禁止轻微瑕疵解除及卖方举证责任均正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.533240+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.533240+00:00"
+    },
+    {
+      "id": 40,
+      "condition": "s800",
+      "case_id": "gold-sgd-minor-lack-no-termination",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第13(5)条规定轻微瑕疵不得解除，由卖方证明轻微。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。禁止轻微瑕疵解除及卖方举证责任均正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.566180+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.566180+00:00"
+    },
+    {
+      "id": 41,
+      "condition": "f400",
+      "case_id": "gold-sgd-price-reduction",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.574819+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.574819+00:00"
+    },
+    {
+      "id": 42,
+      "condition": "s400",
+      "case_id": "gold-sgd-price-reduction",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.584059+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.584059+00:00"
+    },
+    {
+      "id": 43,
+      "condition": "f800",
+      "case_id": "gold-sgd-price-reduction",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.593205+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.593205+00:00"
+    },
+    {
+      "id": 44,
+      "condition": "s800",
+      "case_id": "gold-sgd-price-reduction",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。核对实际商品与合格商品的价值差额比例。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确说明减价与实际价值相对合格商品价值的下降成比例。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.616280+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.616280+00:00"
+    },
+    {
+      "id": 45,
+      "condition": "f400",
+      "case_id": "gold-dcd-supply-without-delay",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答除另有约定外在订约后不得无故延迟供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.632694+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.632694+00:00"
+    },
+    {
+      "id": 46,
+      "condition": "s400",
+      "case_id": "gold-dcd-supply-without-delay",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答除另有约定外在订约后不得无故延迟供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.640990+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.640990+00:00"
+    },
+    {
+      "id": 47,
+      "condition": "f800",
+      "case_id": "gold-dcd-supply-without-delay",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答除另有约定外在订约后不得无故延迟供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.666319+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.666319+00:00"
+    },
+    {
+      "id": 48,
+      "condition": "s800",
+      "case_id": "gold-dcd-supply-without-delay",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答除另有约定外在订约后不得无故延迟供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.699645+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.699645+00:00"
+    },
+    {
+      "id": 49,
+      "condition": "f400",
+      "case_id": "gold-dcd-burden-of-supply",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应由经营者证明已供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.733340+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.733340+00:00"
+    },
+    {
+      "id": 50,
+      "condition": "s400",
+      "case_id": "gold-dcd-burden-of-supply",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应由经营者证明已供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.766331+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.766331+00:00"
+    },
+    {
+      "id": 51,
+      "condition": "f800",
+      "case_id": "gold-dcd-burden-of-supply",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应由经营者证明已供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.799525+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.799525+00:00"
+    },
+    {
+      "id": 52,
+      "condition": "s800",
+      "case_id": "gold-dcd-burden-of-supply",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应由经营者证明已供应。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.833373+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.833373+00:00"
+    },
+    {
+      "id": 53,
+      "condition": "f400",
+      "case_id": "gold-dcd-conformity-remedies",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.866545+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.866545+00:00"
+    },
+    {
+      "id": 54,
+      "condition": "s400",
+      "case_id": "gold-dcd-conformity-remedies",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。列出救济及非轻微限制，但漏经营者证明轻微瑕疵的责任。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.900753+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.900753+00:00"
+    },
+    {
+      "id": 55,
+      "condition": "f800",
+      "case_id": "gold-dcd-conformity-remedies",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "引文在“costs on the tr”处截断，答案把免责条件写成产生成本，遗漏关键的“不成比例”。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。把“成本不成比例”写成只要“产生成本”即可拒绝恢复合格，实质扩大商家免责范围；亦漏举证责任。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.933944+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.933944+00:00"
+    },
+    {
+      "id": 56,
+      "condition": "s800",
+      "case_id": "gold-dcd-conformity-remedies",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。区分恢复合格、减价、解除，恢复合格的例外是不可行或成本不成比例，非任何成本。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。救济及成本限制基本正确，但漏经营者证明瑕疵轻微的责任。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.966678+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.966678+00:00"
+    },
+    {
+      "id": 57,
+      "condition": "f400",
+      "case_id": "gold-dcd-reimbursement-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第18条明确退款不得无故延迟且通知后14天内。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答不得无故延迟、通知后14天内退款。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:31:59.999899+00:00"
+      },
+      "created_at": "2026-11-20T14:31:59.999899+00:00"
+    },
+    {
+      "id": 58,
+      "condition": "s400",
+      "case_id": "gold-dcd-reimbursement-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第18条明确退款不得无故延迟且通知后14天内。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答不得无故延迟、通知后14天内退款。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.033209+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.033209+00:00"
+    },
+    {
+      "id": 59,
+      "condition": "f800",
+      "case_id": "gold-dcd-reimbursement-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第18条明确退款不得无故延迟且通知后14天内。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答不得无故延迟、通知后14天内退款。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.066787+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.066787+00:00"
+    },
+    {
+      "id": 60,
+      "condition": "s800",
+      "case_id": "gold-dcd-reimbursement-time",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第18条明确退款不得无故延迟且通知后14天内。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答不得无故延迟、通知后14天内退款。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.099926+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.099926+00:00"
+    },
+    {
+      "id": 61,
+      "condition": "f400",
+      "case_id": "gold-dcd-modification-conditions",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。仅列合同允许且有正当理由、不得额外收费，遗漏清楚告知及特定情形提前耐久媒介告知。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.134368+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.134368+00:00"
+    },
+    {
+      "id": 62,
+      "condition": "s400",
+      "case_id": "gold-dcd-modification-conditions",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.166627+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.166627+00:00"
+    },
+    {
+      "id": 63,
+      "condition": "f800",
+      "case_id": "gold-dcd-modification-conditions",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 4,
+            "supported": true,
+            "reason": "AI复核接受可识别词尾截断：提前、耐久媒介、修改特征与时间、解除权或保留未修改内容等实质条件均在绑定块中，末尾mo可识别为本句反复使用的modification。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整列出第19(1)四类条件；末尾引用有词尾截断但不缺实质条件。主张5原初审存在截断边界，本次已由AI按说明裁定，非人工确认。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.200317+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.200317+00:00"
+    },
+    {
+      "id": 64,
+      "condition": "s800",
+      "case_id": "gold-dcd-modification-conditions",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第19(1)条规定合同理由、无额外费用、清楚告知及特定情形提前耐久媒介通知。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。遗漏第19(1)(d)特定情形下的提前、耐久媒介及解除/保留原服务告知。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.233228+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.233228+00:00"
+    },
+    {
+      "id": 65,
+      "condition": "f400",
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用只到“it materially distorts”，没有扭曲对象、可能性及平均消费者标准，不能支持完整主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出两部分基本规则，但漏特定群体标准；引用也未包含经济行为判断的完整内容。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.266189+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.266189+00:00"
+    },
+    {
+      "id": 66,
+      "condition": "s400",
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.299771+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.299771+00:00"
+    },
+    {
+      "id": 67,
+      "condition": "f800",
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用同样在“it materially distorts”处截断，所写经济行为和平均消费者标准不在该绑定块内。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答出两部分基本规则，但漏特定群体标准；引用也未包含经济行为判断的完整内容。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.334310+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.334310+00:00"
+    },
+    {
+      "id": 68,
+      "condition": "s800",
+      "case_id": "gold-ucpd-two-part-unfairness-test",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。必须连接专业勤勉及经济行为扭曲两部分，并区分平均消费者与特定群体。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。专业勤勉、经济行为重大扭曲及平均消费者/特定群体标准均完整。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.366498+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.366498+00:00"
+    },
+    {
+      "id": 69,
+      "condition": "f400",
+      "case_id": "gold-ucpd-aggressive-practice",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第8条连接骚扰/胁迫/不当影响、显著损害选择、导致本不会作出的交易决定。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只说满足第8条条件，没有说明骚扰/胁迫、不当影响、选择受损与交易决定等实质测试。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.399665+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.399665+00:00"
+    },
+    {
+      "id": 70,
+      "condition": "s400",
+      "case_id": "gold-ucpd-aggressive-practice",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "绑定块在“likely to ca”处截断，没有交易决定及“本不会作出”的结果要件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答案内容完整，但所绑定引用缺少“本不会作出的交易决定”结尾，引用支持不足。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.433485+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.433485+00:00"
+    },
+    {
+      "id": 71,
+      "condition": "f800",
+      "case_id": "gold-ucpd-aggressive-practice",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第8条连接骚扰/胁迫/不当影响、显著损害选择、导致本不会作出的交易决定。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整给出手段、选择/行为受损与交易决定因果要求。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.466269+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.466269+00:00"
+    },
+    {
+      "id": 72,
+      "condition": "s800",
+      "case_id": "gold-ucpd-aggressive-practice",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第8条连接骚扰/胁迫/不当影响、显著损害选择、导致本不会作出的交易决定。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第8条连接骚扰/胁迫/不当影响、显著损害选择、导致本不会作出的交易决定。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整给出手段、选择/行为受损与交易决定因果要求。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.499926+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.499926+00:00"
+    },
+    {
+      "id": 73,
+      "condition": "f400",
+      "case_id": "gold-ucpd-invitation-price-information",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答含税价格/计算方式及适用的运费、邮费等信息。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.533197+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.533197+00:00"
+    },
+    {
+      "id": 74,
+      "condition": "s400",
+      "case_id": "gold-ucpd-invitation-price-information",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答含税价格/计算方式及适用的运费、邮费等信息。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.566793+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.566793+00:00"
+    },
+    {
+      "id": 75,
+      "condition": "f800",
+      "case_id": "gold-ucpd-invitation-price-information",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答含税价格/计算方式及适用的运费、邮费等信息。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.599967+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.599967+00:00"
+    },
+    {
+      "id": 76,
+      "condition": "s800",
+      "case_id": "gold-ucpd-invitation-price-information",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答；应答含税价格/计算方式及适用的运费、邮费等信息。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.633363+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.633363+00:00"
+    },
+    {
+      "id": 77,
+      "condition": "f400",
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "把原文“can ... without a case-by-case assessment”反转成“cannot ... without”，与原文和同一答案其他主张矛盾。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。同一回答既说任何情况下不公平，又说不得未经逐案评估即认定，核心结论自相矛盾。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.650737+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.650737+00:00"
+    },
+    {
+      "id": 78,
+      "condition": "s400",
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。正确回答无需逐案判断，但未完整解释金字塔机制及统一清单规则。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.666706+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.666706+00:00"
+    },
+    {
+      "id": 79,
+      "condition": "f800",
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。正确解释金字塔机制和无须逐案评估，但漏所有成员国统一及仅修订指令可改清单；严格参考口径待确认。原初审标注完整性边界；本次按同一严格参考口径保持部分正确，并保留该边界供后续人工复核。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.700311+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.700311+00:00"
+    },
+    {
+      "id": 80,
+      "condition": "s800",
+      "case_id": "gold-ucpd-pyramid-scheme",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          },
+          {
+            "claim_index": 3,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。黑名单行为在任何情况下不公平，无需逐案评估；金字塔机制属于附件I第14项。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。正确解释机制及无须逐案评估，但漏清单统一适用和仅修订指令可变更；严格参考口径待确认。原初审标注完整性边界；本次按同一严格参考口径保持部分正确，并保留该边界供后续人工复核。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.733096+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.733096+00:00"
+    },
+    {
+      "id": 81,
+      "condition": "f400",
+      "case_id": "gold-utd-unfair-term-test",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "绑定块在“it cau”处截断，未出现显著失衡、损害消费者等核心结论。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只答不公平测试，未答何为未单独协商；绑定引用还在关键失衡规则之前截断。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.766324+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.766324+00:00"
+    },
+    {
+      "id": 82,
+      "condition": "s400",
+      "case_id": "gold-utd-unfair-term-test",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。只答不公平测试，未答预先拟定且消费者不能影响内容的未单独协商标准。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.799785+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.799785+00:00"
+    },
+    {
+      "id": 83,
+      "condition": "f800",
+      "case_id": "gold-utd-unfair-term-test",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整覆盖不公平测试与未单独协商定义，额外说明举证责任。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.834403+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.834403+00:00"
+    },
+    {
+      "id": 84,
+      "condition": "s800",
+      "case_id": "gold-utd-unfair-term-test",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第3条要求非单独协商、违反诚信、显著失衡且损害消费者；预拟且不可影响是独立定义。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。完整覆盖不公平测试与未单独协商定义，额外说明举证责任。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.866658+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.866658+00:00"
+    },
+    {
+      "id": 85,
+      "condition": "f400",
+      "case_id": "gold-utd-plain-language",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答清楚易懂及疑义有利消费者，但遗漏第7(2)程序例外。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.900922+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.900922+00:00"
+    },
+    {
+      "id": 86,
+      "condition": "s400",
+      "case_id": "gold-utd-plain-language",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。语言、疑义解释及程序例外均完整。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.933987+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.933987+00:00"
+    },
+    {
+      "id": 87,
+      "condition": "f800",
+      "case_id": "gold-utd-plain-language",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:00.966790+00:00"
+      },
+      "created_at": "2026-11-20T14:32:00.966790+00:00"
+    },
+    {
+      "id": 88,
+      "condition": "s800",
+      "case_id": "gold-utd-plain-language",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第5条要求清楚易懂，疑义有利消费者，并排除第7(2)程序。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。语言、疑义解释及程序例外均完整。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.000997+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.000997+00:00"
+    },
+    {
+      "id": 89,
+      "condition": "f400",
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。不公平条款不约束消费者，以及剩余合同可独立存在时继续有效，均回答正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.033953+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.033953+00:00"
+    },
+    {
+      "id": 90,
+      "condition": "s400",
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。不公平条款不约束消费者，以及剩余合同可独立存在时继续有效，均回答正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.067645+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.067645+00:00"
+    },
+    {
+      "id": 91,
+      "condition": "f800",
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。不公平条款不约束消费者，以及剩余合同可独立存在时继续有效，均回答正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.101574+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.101574+00:00"
+    },
+    {
+      "id": 92,
+      "condition": "s800",
+      "case_id": "gold-utd-unfair-term-not-binding",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "主张可在其绑定引用中直接定位。第6(1)条规定不公平条款不约束消费者，剩余合同如能独立存在则继续有效。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。不公平条款不约束消费者，以及剩余合同可独立存在时继续有效，均回答正确。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.133045+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.133045+00:00"
+    },
+    {
+      "id": 93,
+      "condition": "f400",
+      "case_id": "gold-utd-negotiation-burden",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": false,
+            "reason": "引用终止于“the burden ... shall b”，没有实际写出承担人，不能用未绑定的后文补证。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。答案给出的举证主体正确，但绑定引用在“shall b”处截断，未实际写出由谁承担。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.166264+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.166264+00:00"
+    },
+    {
+      "id": 94,
+      "condition": "s400",
+      "case_id": "gold-utd-negotiation-burden",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第3(2)条明确由主张标准条款已单独协商的卖方/供应方承担举证责任。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答由主张已协商的卖方/供应方举证。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.183697+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.183697+00:00"
+    },
+    {
+      "id": 95,
+      "condition": "f800",
+      "case_id": "gold-utd-negotiation-burden",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。资料内有答案却拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.199219+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.199219+00:00"
+    },
+    {
+      "id": 96,
+      "condition": "s800",
+      "case_id": "gold-utd-negotiation-burden",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "已对照其绑定引用核查语义与条件。第3(2)条明确由主张标准条款已单独协商的卖方/供应方承担举证责任。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。准确回答由主张已协商的卖方/供应方举证。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.233232+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.233232+00:00"
+    },
+    {
+      "id": 97,
+      "condition": "f400",
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.266212+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.266212+00:00"
+    },
+    {
+      "id": 98,
+      "condition": "s400",
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.299343+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.299343+00:00"
+    },
+    {
+      "id": 99,
+      "condition": "f800",
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.332772+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.332772+00:00"
+    },
+    {
+      "id": 100,
+      "condition": "s800",
+      "case_id": "gold-refuse-air-cancellation-amount",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.367234+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.367234+00:00"
+    },
+    {
+      "id": 101,
+      "condition": "f400",
+      "case_id": "gold-refuse-standard-vat-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.399754+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.399754+00:00"
+    },
+    {
+      "id": 102,
+      "condition": "s400",
+      "case_id": "gold-refuse-standard-vat-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.432876+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.432876+00:00"
+    },
+    {
+      "id": 103,
+      "condition": "f800",
+      "case_id": "gold-refuse-standard-vat-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.466274+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.466274+00:00"
+    },
+    {
+      "id": 104,
+      "condition": "s800",
+      "case_id": "gold-refuse-standard-vat-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.500020+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.500020+00:00"
+    },
+    {
+      "id": 105,
+      "condition": "f400",
+      "case_id": "gold-refuse-refund-interest-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.533325+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.533325+00:00"
+    },
+    {
+      "id": 106,
+      "condition": "s400",
+      "case_id": "gold-refuse-refund-interest-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.566708+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.566708+00:00"
+    },
+    {
+      "id": 107,
+      "condition": "f800",
+      "case_id": "gold-refuse-refund-interest-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.599790+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.599790+00:00"
+    },
+    {
+      "id": 108,
+      "condition": "s800",
+      "case_id": "gold-refuse-refund-interest-rate",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.633030+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.633030+00:00"
+    },
+    {
+      "id": 109,
+      "condition": "f400",
+      "case_id": "gold-refuse-german-fine",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.666527+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.666527+00:00"
+    },
+    {
+      "id": 110,
+      "condition": "s400",
+      "case_id": "gold-refuse-german-fine",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.690006+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.690006+00:00"
+    },
+    {
+      "id": 111,
+      "condition": "f800",
+      "case_id": "gold-refuse-german-fine",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.701584+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.701584+00:00"
+    },
+    {
+      "id": 112,
+      "condition": "s800",
+      "case_id": "gold-refuse-german-fine",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.717652+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.717652+00:00"
+    },
+    {
+      "id": 113,
+      "condition": "f400",
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.734219+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.734219+00:00"
+    },
+    {
+      "id": 114,
+      "condition": "s400",
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.749921+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.749921+00:00"
+    },
+    {
+      "id": 115,
+      "condition": "f800",
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.766275+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.766275+00:00"
+    },
+    {
+      "id": 116,
+      "condition": "s800",
+      "case_id": "gold-refuse-lawsuit-deadline",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.782877+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.782877+00:00"
+    },
+    {
+      "id": 117,
+      "condition": "f400",
+      "case_id": "gold-refuse-package-insurance",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.799331+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.799331+00:00"
+    },
+    {
+      "id": 118,
+      "condition": "s400",
+      "case_id": "gold-refuse-package-insurance",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.816145+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.816145+00:00"
+    },
+    {
+      "id": 119,
+      "condition": "f800",
+      "case_id": "gold-refuse-package-insurance",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.832821+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.832821+00:00"
+    },
+    {
+      "id": 120,
+      "condition": "s800",
+      "case_id": "gold-refuse-package-insurance",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [],
+        "refusal_correct": true,
+        "notes": "用户明确授权填写；本条为Codex AI辅助评分，未经逐题人工确认。按冻结参考答案及必要事实的严格完整性口径评定。本题所求具体金额、税率、期限或保险保障不在冻结五法规中；系统没有编造数值，正确拒答。",
+        "reviewer": "Codex AI（用户授权辅助评分）",
+        "reviewed_at": "2026-11-20T14:32:01.849393+00:00"
+      },
+      "created_at": "2026-11-20T14:32:01.849393+00:00"
+    }
+  ]
+}

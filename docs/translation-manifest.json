@@ -1,0 +1,1218 @@
+{
+  "date": "2026-11-20",
+  "language": "en",
+  "original_archive": "docs/provenance/original-markdown-20261120.zip",
+  "archive_sha256": "76cd6bdbeefd6681cab64925fabe2760bf47dee1f45ee10a3a8c47c409da11d6",
+  "excluded_files": [
+    "开发文档.md",
+    "项目设计.md"
+  ],
+  "translated_files": [
+    {
+      "path": "ASSIGNMENT_ZH.md",
+      "original_sha256": "ad6c31ffaca41e6f16578fedaeac8bd060852b1526130884522774bb24bc03ca",
+      "english_sha256": "1e08d9ec05979dac7e48aec3d5fe2c58f4c98d5cd517792ae983f9f0abcb5e95"
+    },
+    {
+      "path": "A开发文档.md",
+      "original_sha256": "762535bdd317eb83fac274143d6ee72c53670e208ea017fc340154f94e009104",
+      "english_sha256": "b599180a68908d71dd995aa7093cb3a46a5c57432e9b84e5c1a889e21ac18b04"
+    },
+    {
+      "path": "A测试.md",
+      "original_sha256": "a89af244d909f42f5a3fda95a5b6492f27cfac7ef6cf5de010d5bdb387cc703d",
+      "english_sha256": "7ef7e7ebcf94b758ee13d982232bf3f57f78172b30abd5a1e899bff0dc34138d"
+    },
+    {
+      "path": "A部分AGENTS.md",
+      "original_sha256": "170c3a284f0cba6f88d19b86990b02dc761d0465327d2a976148c4ee2ae3e080",
+      "english_sha256": "26b373de2ce1011084c379fdadc1c30a155aea48e5334d24af06ac3cdaf52bef"
+    },
+    {
+      "path": "A部分交付说明.md",
+      "original_sha256": "12138cf168e8215e3b6dd78a612c83058d791d7bb10fa87f0beec4bfeb9d26f5",
+      "english_sha256": "261e0dddb0c473ef688d9b2c0b88cda809395933af9e9f16ba718b67c63371a8"
+    },
+    {
+      "path": "B开发文档.md",
+      "original_sha256": "b8a5b58492360313fbac5849635d5d3f3a431348b8c663de084221301dcf1498",
+      "english_sha256": "75615a968e2b6b50ca4a69aa992fd2e9ac8e8415831586548bf979b37a7eda4a"
+    },
+    {
+      "path": "B测试.md",
+      "original_sha256": "842b7ed504c8a31edf00b7b1d17cc341a96a87e051c75c4fe5e55693a853592f",
+      "english_sha256": "cdf3791afdf2cd9dcb565329ee099eee3bc9c5372041bbd176b950a4f00e8977"
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "fda7dd04b656abf17ce1c2b570698fb3f13d3a0a744e2a4d00f7d4ccaabb2221",
+      "english_sha256": "5e28726cd7e01a70f5b222e93b3d9f1a966e8e8005b9c64cacfb54eb8ab699c2"
+    },
+    {
+      "path": "artifacts/a_review/a_final_validation.md",
+      "original_sha256": "63e6c7932d732db58b2feda64afe2e1b25b336a30e071cd2b40dcf53ddfa2c13",
+      "english_sha256": "6c8cea69ec54b70511f416295d899534f6d8a4bab094cb749b9ce3a42deb462d"
+    },
+    {
+      "path": "artifacts/a_review/corpus_batch_review.md",
+      "original_sha256": "ef76a2ca40e444beeec0c1bc7c3a42ed3763408d0d24cafddf0f458d20c6b571",
+      "english_sha256": "801661a9ae729da88516ce0771a9482da32f18c9333fd796ae0588aa597216f5"
+    },
+    {
+      "path": "artifacts/a_review/corpus_freeze_review.md",
+      "original_sha256": "24b1adf12a48423a6ff04e83544fb2856d12ad7ef60399b3ea599e98b71b16af",
+      "english_sha256": "98fb82c3f0b950ad36c67b5a6eea8dcb7aba724b0b327a853207f818ba77f0f5"
+    },
+    {
+      "path": "artifacts/a_review/eu_consumer_rights_2011_83_review.md",
+      "original_sha256": "0af5fe7c011fb7ddffe21f910cd702c362c4497a890f7a759c70b3604544391f",
+      "english_sha256": "1b01df97b76acf5e4dfa50c3f286d513a2007ed492b5f080acb79223c133364c"
+    },
+    {
+      "path": "artifacts/a_review/eu_digital_content_2019_770_review.md",
+      "original_sha256": "c89ce047f2e62c5ca9dcef46380536c049b4dad9c647d7f510afa9812e8f23c4",
+      "english_sha256": "978105b7421ec242977fb1de003124ce8807cad4c2dc9d0b51cefb5e67389680"
+    },
+    {
+      "path": "artifacts/a_review/eu_sale_of_goods_2019_771_review.md",
+      "original_sha256": "a58c9974e3c205a3aa823a534f2b7e337299d045331b53c4632acd12a1e5c8f0",
+      "english_sha256": "9048a2fd02ea4815a5a702d99276b5ab645a35487a36a20c78b2a1a884f77d4d"
+    },
+    {
+      "path": "artifacts/a_review/eu_unfair_practices_2005_29_review.md",
+      "original_sha256": "f2fa06baa56e403c804188db38cc27cc9bea5bb6beb42d33492b2fa76f10f18e",
+      "english_sha256": "9df75ce2b42d5708340b5d09210641bd262093466b9bcbe96ce2cc9796ccb4c7"
+    },
+    {
+      "path": "artifacts/a_review/eu_unfair_terms_93_13_review.md",
+      "original_sha256": "b2e320339da6c28a4b3b2ca06ae4458a11a230f5e2c8e0d447a61dde29064e59",
+      "english_sha256": "ab0d26bc3dc78e982e28ab6f128e930e3bf4540a0e5545b4ec6df7b7e02f4f7d"
+    },
+    {
+      "path": "artifacts/a_review/gold_review.md",
+      "original_sha256": "d30d13fba966fcb3f6e429f251e0955e718bb947d634dfce701a5b36904ecab1",
+      "english_sha256": "dc0f461a66376838a0a4c6fb6c850a38829d386c581c8828362151a2687fafcd"
+    },
+    {
+      "path": "artifacts/a_review/sample_handoff.md",
+      "original_sha256": "b4adf827e6226e4ca480bfac3457b00ac9e3d95652e197467015b52532994684",
+      "english_sha256": "ba2cb69d40b4e36e2e68fa31065ea1f38564dfd88923a69b25c69f6804363659"
+    },
+    {
+      "path": "artifacts/b/README.md",
+      "original_sha256": "c61c4e80faaf43f3c71c181c06898a1e3399e724205ba27e7c237ac64893edc8",
+      "english_sha256": "4b055161f3b11503d5a213cc40547a02ba5f81d9224766d9a85c2a815ab7e3a6"
+    },
+    {
+      "path": "artifacts/c/README.md",
+      "original_sha256": "94af4fac49035b19f1f74f00d59f7a43d3de88e7924c1c69f04525cdcd4b038e",
+      "english_sha256": "4cf900010875fc2927036a4fcd6b6443af8498e7d4aa30bf3a7703fb4a850c51"
+    },
+    {
+      "path": "artifacts/c/m6-formal-01/逐题阅读与评分材料.md",
+      "original_sha256": "d35c656ae5824b93d67a9870d7e4fd1876586deed1e4f7d19eaea268ddbd528d",
+      "english_sha256": "836d4ef605a193a6cec7052d5032d2b17a2fb5f0c0cfebd8ca2206b9f2763194"
+    },
+    {
+      "path": "delivery/c-20261120/OFFLINE-README.md",
+      "original_sha256": "9d676715a2db1736fd664eea54ab7a725e6b018705c455eb94f2299ade77bce7",
+      "english_sha256": "8dc494211b339e1c1d2e94e2f15e352edc402b9d74971963d3107c62ee969a89"
+    },
+    {
+      "path": "delivery/c-20261120/README.md",
+      "original_sha256": "b92d27cea764eac089dc3f68446509fc0768ef25cc0de0031a6c983c1fb48f06",
+      "english_sha256": "02931a4427048808817a5bc05782bd42e9a531e3faf1dfd5baaad312276650df"
+    },
+    {
+      "path": "docs/C任务完成说明与阅读路线.md",
+      "original_sha256": "e5ab26ce6b59fb1eba02a07d83e3ed9c9251116ea3c14988a4d3cfb0a8341007",
+      "english_sha256": "cea3ccc49f8a12be6ad352de2c818162c8ba6aca6457731e57d1a4c7c6d6a786"
+    },
+    {
+      "path": "docs/C部分报告草稿.md",
+      "original_sha256": "d092bf762d877915b2c512fa955e12d9fa884efe197e6247aeb8a1dc4be01afb",
+      "english_sha256": "0587d7334f803bc491e17ec38c7f9dc74676fefa7c707de759037b09f290845c"
+    },
+    {
+      "path": "docs/Docker与交付包复现.md",
+      "original_sha256": "065f98b769410f1577c037b29198f431d091fb0335ef66c2bc9f00acdb75cbdb",
+      "english_sha256": "c3e8f3a33d6f9b034f70a65ec0169e60b8d2e19f5a28e3e4aceda23b3a654aed"
+    },
+    {
+      "path": "docs/M6人工确认示例01_交货期限F400.md",
+      "original_sha256": "6ffcebe22e5a1eca01b4d68a8690b486c415139057818dc4e020bc59097fe5e9",
+      "english_sha256": "6441dcb3dd8cb132004d70cc94dd9e1e30547c65a3c99a33c2be1b8c7f5f47d3"
+    },
+    {
+      "path": "docs/M6人工确认第一步_20条逐字对照.md",
+      "original_sha256": "9a9f79ed4b0080b3aa451b7c9e8103c0cfdc25b6d9954454376f0f3e8133c287",
+      "english_sha256": "bee8995a4b9223bdf38250ff39a4f1cad4ffbae2962f157e86fbe84bd44f44cf"
+    },
+    {
+      "path": "docs/M6全部辅助预审完成与人工确认清单.md",
+      "original_sha256": "89fec5cccfa2174a240de002062cba714701a0eb616973e53bfe633a7427d9d4",
+      "english_sha256": "5012b1c381142e47313857e7c99182de4c0de3b46aad2e5ad04a6d10002aa1a9"
+    },
+    {
+      "path": "docs/M6完整评分结果与对照.md",
+      "original_sha256": "dc6ccf738c1f83c0fefafd62525f95ec9106d781f101224abb04a7712a95237d",
+      "english_sha256": "85cd83225c22c4b1a995e53f3ab531d94b67d7e9c53b1cc44e82ec0fc0b372ff"
+    },
+    {
+      "path": "docs/M6正式实验进度与阅读指南.md",
+      "original_sha256": "7f2df53c2c1801fcf8e208f95784944e759e18fcdd44a973f041ffc36e9999cc",
+      "english_sha256": "b9f29fa627ee183dd341095606533bce0e1f0b936f848e60357d15d3ea862edb"
+    },
+    {
+      "path": "docs/M6第10题_轻微瑕疵不能解除及其证明责任_评分记录.md",
+      "original_sha256": "1424707875ea8f4d8d87d250a4d18b60fbed195c33a8089818e64c9dc42b7702",
+      "english_sha256": "a2be2a10e69ed030b26f54a324753619f27e1e87c1082ead76230e8d7e4a2822"
+    },
+    {
+      "path": "docs/M6第11题_按价值减损比例降价_评分记录.md",
+      "original_sha256": "99ddc449ecc560e2c97750bdecb69bae430a29223ecdbfcf6289df9033ed5fa9",
+      "english_sha256": "2a5bc349fa672fc68191d19fb7c81da193ca06cd4c6fa1bc3a68f18349a56ac0"
+    },
+    {
+      "path": "docs/M6第12题_未约定数字服务供给时间_评分记录.md",
+      "original_sha256": "53a45ac5f3ef77f870cab688582d12396766167af687ee7c8184b5cbf5aa8783",
+      "english_sha256": "bde013d33c7fc8b0d4d924729e14b97feecb9b2cad89c6eeb5d5fccf4c18ca66"
+    },
+    {
+      "path": "docs/M6第13题_谁证明已供给数字服务_评分记录.md",
+      "original_sha256": "67934170ca2046a6eeb9696cc14369821579b9345469298b8afdce630b419df8",
+      "english_sha256": "ee0cb840c309829106543c4e06ec10d16f9876e5bd044d8e1c6f0db6a44318ba"
+    },
+    {
+      "path": "docs/M6第14题_数字内容瑕疵救济与轻微缺陷_评分记录.md",
+      "original_sha256": "2b3b2880c1cb281255525567a908e1b0a307c06887d4a18a91a4966d252b1014",
+      "english_sha256": "6dba2d2a8a0bf67e2dadf0666fc8c9fbeb968bd15ddb2ea9f05378221a4efeb8"
+    },
+    {
+      "path": "docs/M6第15题_数字服务退款的十四日期限_评分记录.md",
+      "original_sha256": "5dc2d4c0c5c08db3ff78a2b0e58e7f7d93957da3858349e6a53ff7fb8d65cd8b",
+      "english_sha256": "ede8db8f055681a67d5ed78aebb4bd48613b5a62417395fe4ab11caec19af24c"
+    },
+    {
+      "path": "docs/M6第16题_持续数字服务修改条件_评分记录.md",
+      "original_sha256": "f0c208d46434f4b8c35d360f01f0cb080e9773204248fe852936f752f1a5f0bf",
+      "english_sha256": "371ad5ebde8f4308fe4a1e1a47e959017941709ba75592604dd063f69d3b272b"
+    },
+    {
+      "path": "docs/M6第17题_不公平商业行为的两部分测试_评分记录.md",
+      "original_sha256": "c96e74489b004910238f33db45002e34684deae8495db0c611e47e21c4b2a482",
+      "english_sha256": "172d19d64014ea7d0a12096930bbb1649b0cc2acfc8cb03d97d1aa3e17b7b467"
+    },
+    {
+      "path": "docs/M6第18题_侵略性商业行为的选择自由与交易因果_评分记录.md",
+      "original_sha256": "59294e6f094135384653f65c217d062b6e6bb347097fe823d381ba9d668cc4d7",
+      "english_sha256": "ce53f425a5bf6a6b136465cb4036b85c934ce686b9bd44152e4761f3440dadbe"
+    },
+    {
+      "path": "docs/M6第19题_购买邀请的含税价格与附加费用_评分记录.md",
+      "original_sha256": "d08277eec2eb6d2bdf2242617b5df8882b593eaf4f4d961b213b414fd7c9f14f",
+      "english_sha256": "749944f32f0691d167429a259cfeea4b0d2ff9db8c4df90de423446e2df3dd41"
+    },
+    {
+      "path": "docs/M6第1题四组逐句解释与已确认引用.md",
+      "original_sha256": "478a15d69c63659c43e3c73eff49cea5a22af6237de06bdb2b9e7b0892e39536",
+      "english_sha256": "4fe2fc4d86ce31b6887ec5e760e761396d3cb3e10fcb50db7096a1d558fb4e6a"
+    },
+    {
+      "path": "docs/M6第20题_金字塔促销是否须逐案认定_评分记录.md",
+      "original_sha256": "188bdf0d87cd149cf6528ed0a9743a02635658e281a9743aa65a7d900678105a",
+      "english_sha256": "7a8c3fbcd8b7116706d879c9a062cda18ca32f47a4d2b6a0b7463db146f93d21"
+    },
+    {
+      "path": "docs/M6第21题_不公平条款与未个别协商_评分记录.md",
+      "original_sha256": "d3d9b3fb81a65095b6f6a58e6c37e26e84ce354cf352eaa211f1dd2b2e809faf",
+      "english_sha256": "3743d93ae6d3d5d126d9e5b6f05580f9331271024d64b90ff26c47ac269c5a9d"
+    },
+    {
+      "path": "docs/M6第22题_清晰语言与有利消费者解释_评分记录.md",
+      "original_sha256": "051a1b18cecd767d61789faaa5536a9e813f20514a65031ed53bd36e48edcddc",
+      "english_sha256": "9d698dcbf6d9d4111c07495b922e6b6f2430a6feda047281aa25d40945df44e5"
+    },
+    {
+      "path": "docs/M6第23题_不公平条款及其余合同的效力_评分记录.md",
+      "original_sha256": "5e5e28fcc777f141312f558ddec14cffc6da50636ce9ee673010890bb85b9216",
+      "english_sha256": "97caac3194fdcc7d27d977023132ace01c330471a283b7577bd062a17556113c"
+    },
+    {
+      "path": "docs/M6第24题_谁证明条款已经个别协商_评分记录.md",
+      "original_sha256": "e568b67b1d61ae01f19d84a022a44ac0bcbb4bfd0852ec16ac8f6923ee715c56",
+      "english_sha256": "bd5508ca286774f9d37f073e2d39ef00ee29791bac9698d11573b91d7ad8770d"
+    },
+    {
+      "path": "docs/M6第25题_航班取消固定赔偿超出冻结范围_评分记录.md",
+      "original_sha256": "d3aa3e55c129010fcfb88bc130602082849d75cd9a9a904b0f461426bee996f2",
+      "english_sha256": "f2b0130959f8fa8ef1769d84145cfb39531fb54d41f961485e7b584b321b6da2"
+    },
+    {
+      "path": "docs/M6第26题_增值税税率未载于冻结范围_评分记录.md",
+      "original_sha256": "6b695fc7e9d8bde0b62106bd3eff0d73553d0d02bf1a9da0e141933641622329",
+      "english_sha256": "fa3a71da63c1f71b9b66efbef6bdf7b940ae69c91f19b6e03b7e3bcc5a25a68c"
+    },
+    {
+      "path": "docs/M6第27题_退款法定年利率未载明_评分记录.md",
+      "original_sha256": "b5b0f9ea9b5a075fa6cac4e8aebcd5f1bcc92dd0bd189b20ae035fe81667603a",
+      "english_sha256": "65e2f372d4921127ed22272acab6eb670070d7a853d217ffe1a10fa4216cdb95"
+    },
+    {
+      "path": "docs/M6第28题_德国具体最高罚额未载明_评分记录.md",
+      "original_sha256": "b0ee439df430020493378c14d3871797a119d30bb92d03cec567cd3b20d99f6f",
+      "english_sha256": "24f3f014da7e29d9570473054980688e5cc47871653d1a4549f378c0fffc234c"
+    },
+    {
+      "path": "docs/M6第29题_拒绝修理后起诉天数未载明_评分记录.md",
+      "original_sha256": "0775f3cb0498939eab35d30b4cb24e3b5b22f70e4b45981d681594bfafb9b15a",
+      "english_sha256": "9923cd7a37bed20d4bf43c01ab71941399c93dcfe5a2ba8bd4f5a8c0f187fbb2"
+    },
+    {
+      "path": "docs/M6第2题退款义务_中英逐句与待确认.md",
+      "original_sha256": "567f8cd5430ca01f2b78e9f9e1b7b4bc4d03dd247285579a71e76a3911c6ae22",
+      "english_sha256": "47858b782abbc218aa84319882dee6e0e1056998d0f28de192fe03805f509480"
+    },
+    {
+      "path": "docs/M6第30题_包价旅游最低保险额未载明_评分记录.md",
+      "original_sha256": "129c040205d49c3b11b506f73790b28e0c762902eafd900c1660abcfe4f1b089",
+      "english_sha256": "9a0db5b24e2eac2a894eb07f9e8c975ad311d82c788c20a81c0785043b9ba6b0"
+    },
+    {
+      "path": "docs/M6第3题支付手续费_中英逐句与评分记录.md",
+      "original_sha256": "8d4e6ce169e87747e6b77f45683c426f3e665a1576f2ecdd2c92cc0af9890d57",
+      "english_sha256": "bcb86cfaaff6ca98160038583de1c20a8e02b027ab9120f8a552fb602b2e545e"
+    },
+    {
+      "path": "docs/M6第4题撤回信息遗漏_中英逐句与评分记录.md",
+      "original_sha256": "a7377add87cc8860197f744d7e91b3165fc6e6f6b70321563732d5a1ccef1b31",
+      "english_sha256": "ea4ed267bcc72befcee710cb073266d8fbf8f6adcdf403433887fde38e499f9b"
+    },
+    {
+      "path": "docs/M6第5题数字内容撤回权_中英逐句与评分记录.md",
+      "original_sha256": "86779405824b31f11662ed607110b9dba9d2f6a6bac345e4a37a1f19e7337e8a",
+      "english_sha256": "c150913e5aaa4e8f4cd9428de7a45f762213b08584cc5e1ea35a22d09147a709"
+    },
+    {
+      "path": "docs/M6第6题迟延交货解除_中英逐句与评分记录.md",
+      "original_sha256": "420f1d2b1fbe8832b653f55abad5f4291498b4d5a81cac0dd2b447ac90930ae6",
+      "english_sha256": "94138b318fdf77e0e8c5858f02f7fdc9319a8d15b32b1f85aef56465cdb4de6f"
+    },
+    {
+      "path": "docs/M6第7题_商品瑕疵责任期间与二手商品下限_评分记录.md",
+      "original_sha256": "84fe839eae44670fb25c6c52a5203720a49aa2dd38a8c4ab66ce60144b5c9506",
+      "english_sha256": "bddd5ce3be1caedbeae81497e5f3d9475bf5f6504b19ae6bf4872402f3c33268"
+    },
+    {
+      "path": "docs/M6第8题_一年内瑕疵的交付时存在推定_评分记录.md",
+      "original_sha256": "355b12b8876d1f0e135fe7b37c5a1ee4a93bb595050117c9b5948016f38f41f8",
+      "english_sha256": "bb5a483f0a2585fcefb934e3b0965897beddbece7866681603b7f03e56cb9e97"
+    },
+    {
+      "path": "docs/M6第9题_维修更换选择与免费救济条件_评分记录.md",
+      "original_sha256": "496816505cbaf216fc85cf8145dbc73308b42c0e68ccebfbd4756e53a36446e6",
+      "english_sha256": "a6be68fa1e1a0b9c6189588b497002482f6cdd3fb8cb94f69c1238c8c6283fe8"
+    },
+    {
+      "path": "docs/M6评分方式与授权记录.md",
+      "original_sha256": "79d0326fe0f8da51db16b358dd39669b84247ca50fef1a66805627723262b226",
+      "english_sha256": "4f01fed7392e7ad4eb696e590cd0ffc5d40b6c9406898e44d4d18729374f8586"
+    },
+    {
+      "path": "docs/M6评分服务启动排查与正常读取验证.md",
+      "original_sha256": "ac9e87a4d8e90311ebffa3c662ff284e3cca7649a9593e3656aa351984ce3b18",
+      "english_sha256": "c1992abf048f7c8cf0c1c0e69ea2d54448b7eeea979a851d38ef959006483252"
+    },
+    {
+      "path": "docs/M6辅助预审01_前两题.md",
+      "original_sha256": "817996e5d46fb4b0ace185109fd7f44d68e92a4b285f98b576e5bff07b8dab2f",
+      "english_sha256": "0b540f2401c91d6da50397f97f22c208faa1e399ea5bd751998bbd12a8cc1d26"
+    },
+    {
+      "path": "docs/M6辅助预审02_第3至4题.md",
+      "original_sha256": "602b16b30bc2328db54f8d7ae9706d65cb5a704fd442f3e3a537642198fac083",
+      "english_sha256": "72e5b2ff0fd537665f081c51547e4407707aee41a340d04be5d86de8d8717575"
+    },
+    {
+      "path": "docs/M6辅助预审03_第5至6题.md",
+      "original_sha256": "655567b3be28faa8f0963d177fa11e10ce7d592984dbb9f3ef9367ee209197dc",
+      "english_sha256": "5a3a72c4cca858bb7be782076c8da27d6be47a76e1538d3db03906ecf548e12a"
+    },
+    {
+      "path": "docs/M6辅助预审04_第7至8题.md",
+      "original_sha256": "a9880b869758d02ec89a3429c41b4a1eb426bbc7ea3b5c3f59ed89fa21277f0e",
+      "english_sha256": "e56a84f1a0bc5cba6fdce0a355429bd1c7bac4de51dc76b34f3a2b23bdb80342"
+    },
+    {
+      "path": "docs/M6辅助预审05_第9至10题.md",
+      "original_sha256": "e3d21d973e01465d307d09542d50f17568b3dd3c92e0e38f4371c22e83050d98",
+      "english_sha256": "a94ea4c6ce0a05592c03583a2f3955cf52027654179774480c1ec38666a05f48"
+    },
+    {
+      "path": "docs/M6辅助预审06_第11至12题.md",
+      "original_sha256": "759f84c099d953559cd2cc05124c344f1cb0f9d952f057c386759b6a1847ff84",
+      "english_sha256": "4f6fd3f65542025bcc964021a8ec3f2c124d3a7b717021adb5730e8f4690813f"
+    },
+    {
+      "path": "docs/M6辅助预审07_第13至14题.md",
+      "original_sha256": "3280fa6352bd07f6a10aa26656ee63826969775f47eb0006241abbc727cf6e17",
+      "english_sha256": "e8103236a9b8ab11ea547ba2f2842085de90a588fdaf77f13e0bc74e7e849c99"
+    },
+    {
+      "path": "docs/M6辅助预审08_第15至16题.md",
+      "original_sha256": "ebacee639191ab76d18386647cfd1c80790a8b7cb4b11fad481c0a9f63ed644f",
+      "english_sha256": "2b950cf09fd2919bcbcff28ecd8000dc2823913711c5fb5c0320b0c7fd8c218f"
+    },
+    {
+      "path": "docs/M6辅助预审09_第17至18题.md",
+      "original_sha256": "f4d466c2f3625a8e8974f1a9cf0193639d06fa8dcaf3968771ce56d2482de291",
+      "english_sha256": "c88af56232ac9b7487f1bf24258533671918c6674162a8f7698f25cff6c670ae"
+    },
+    {
+      "path": "docs/M6辅助预审10_第19至20题.md",
+      "original_sha256": "21417b920328d79375a18ff0bdb38359769c99bdb3b3e5424a192b0affde4e44",
+      "english_sha256": "3fb6b97d181aba90761e7ab1e9d3caeed1598b57f91585ed78e3bce28a8aed02"
+    },
+    {
+      "path": "docs/M6辅助预审11_第21至22题.md",
+      "original_sha256": "97e49d3b3d4e94d41198a685d68a8ed035d0f5115d662cf8c6853809b3e5d8ae",
+      "english_sha256": "2ae9fcc1ada351f9915eb765215f34c6da91b682808f3c75c86efa8e18ea9e87"
+    },
+    {
+      "path": "docs/M6辅助预审12_第23至24题.md",
+      "original_sha256": "d876fdceb06821b1c227e9728455fa8e8783f23c10ac7a45abf5cbf1a04ada72",
+      "english_sha256": "d9fddef9e4ff5bb8292ff8129cd3b1bd1c01adc1152fdce3e7122040224c31ef"
+    },
+    {
+      "path": "docs/M6辅助预审13_第25至26题.md",
+      "original_sha256": "38e63fd784b2bd2d6d33c7c53bd931cbe70ace26a4ca4bcb31e0de201a568683",
+      "english_sha256": "d26a93a2bca9618431f7651c35d744b0853cf79d54a53f08a4184bcf5e88dcd1"
+    },
+    {
+      "path": "docs/M6辅助预审14_第27至28题.md",
+      "original_sha256": "99543fb8e01b659cda5a42e23ee97bab1fc6e628df03fb382e30d8454992385a",
+      "english_sha256": "8f955aefde66e6e48033538b36adcd69236090a8b249190c13112411c2a70d97"
+    },
+    {
+      "path": "docs/M6辅助预审15_第29至30题.md",
+      "original_sha256": "37eedbf04a81002167d137b8c5724360c8a7d9661b0b01992d37843b8179673b",
+      "english_sha256": "731c0cb31f75d5c285750dce3a072f0e434d2724a6267ab09f6695be2bde4ebc"
+    },
+    {
+      "path": "docs/M6辅助预审进度.md",
+      "original_sha256": "3c5523ea7cb250e6817353b8a0e2be6dcf0a6b9f01f60c6208acfe9e05be4cee",
+      "english_sha256": "b003ecbe1d24aa59d2a27712d3255d9a7d0cfab6a7e5e1a0aa3a410158063d26"
+    },
+    {
+      "path": "docs/M6首题整答已入库与后续评分说明.md",
+      "original_sha256": "5ba90ce854ee1682194121e481f60d00b4ff64bf7a956f66b170dcb2bcd0222f",
+      "english_sha256": "9b998c819d062ec8185a670ec71f2f012789b881bc8f61c08366b41a98dca4bc"
+    },
+    {
+      "path": "docs/M6首题确认记录与引用解释.md",
+      "original_sha256": "077aabe1db9edac890e346eef20d8be68590d26441a5322e8e6905df7c2a402c",
+      "english_sha256": "64c4ffba91f4430ced96aed861cd5068f9b772ce972088d5f1c9dcbaccc48056"
+    },
+    {
+      "path": "docs/handoffs/M0_准备与契约.md",
+      "original_sha256": "6a571544d888a3a9f50ea2ed70fc9a2dcd7c5eb0a0331b7b21004690fef53d68",
+      "english_sha256": "474b336cc56582e7ff69794a672d2432cc9ff6db45b78be9e59762b6110d9c16"
+    },
+    {
+      "path": "docs/handoffs/M1_证据问答与引用校验.md",
+      "original_sha256": "53f2da857d7e23ba3adf406fe7c09553b3023b199bd2859610215444c3418431",
+      "english_sha256": "c14944da83c191a1751efde4245af9d7af153b6477f8abcb381f70b81629ee9f"
+    },
+    {
+      "path": "docs/handoffs/M2_持久化与接口.md",
+      "original_sha256": "5ee2f737257cb2966261288786cc017006f140eefdfcd6e1260ac9dfe788291f",
+      "english_sha256": "5dd9d12d173d527ee335d46f09ed58c20d687db60a3b8cfb0920fb7519f92825"
+    },
+    {
+      "path": "docs/handoffs/M3_评估与人工评分.md",
+      "original_sha256": "b7e681bcd0a640f087434547cd88de4db02cba915301f3c24b8298e964a3bc78",
+      "english_sha256": "c13d35423a27e7aae4f4a6a2f013001325a48dc1a675948663f2c69a9bb39e80"
+    },
+    {
+      "path": "docs/handoffs/M4_页面接入与真实问答.md",
+      "original_sha256": "84f505ddc8ccfe5595bf0ca81665d518aed07e3ab0c75bce6c75392e520ce14d",
+      "english_sha256": "312c24eb52e19b344f32b855309f1a337c190f0972f48eadff6ec7d090089498"
+    },
+    {
+      "path": "docs/handoffs/M5_01_依赖与数据入口.md",
+      "original_sha256": "c3c71cbd16f17489ac7adbb25aeee0f368db0e6334c8694fa9a8b4c1feb2c2e9",
+      "english_sha256": "6e9951be68c850887e89d67e7dcc4f44f5f9441a2d2d4c782bd65dd47eb82b11"
+    },
+    {
+      "path": "docs/handoffs/M5_02_休息前交接与待修问题.md",
+      "original_sha256": "8f26c974d494f947ae4826747ce8b392055e3f6c01345aeb1a267e9c66af0535",
+      "english_sha256": "ea55a81fb665e81ee580f68210c65c0d783ae9b072a936ea48cf53447fd5f440"
+    },
+    {
+      "path": "docs/handoffs/M5_03_原生持久化与配置修复.md",
+      "original_sha256": "a4917269a7b99d0d281d05b3dee91314e6472b0cd9a612c784fe509f7064bb7e",
+      "english_sha256": "0b1892e396001e36771376851119393870d3cdc4f890bdf426dcdccec5bbbc75"
+    },
+    {
+      "path": "docs/handoffs/M5_04_工程联调通过与正式交付待办.md",
+      "original_sha256": "cea1925dac0914ed3d75c4b11d0542019f8993166bb39a5763df12b78b5765a7",
+      "english_sha256": "aca56e1fc1177e1acc7458a3c84f287a8d495c2e00690bfac6d3fa7034f96e73"
+    },
+    {
+      "path": "docs/handoffs/M5_05_A新交付合并与接入起点.md",
+      "original_sha256": "2c3d85b21510a48ffb0d8053271b0dd77be3b8d41236f882288dd6622663d1aa",
+      "english_sha256": "c6b850d503d53e2e8c5f9f3ef70576baa3f911eaf01210bd117643955ba8cc17"
+    },
+    {
+      "path": "docs/handoffs/M5_06_正式数据适配与全套回归.md",
+      "original_sha256": "c864893800023bc7d1b34578a635e4267ea86b2a95bef4e94e66377b869f7c7b",
+      "english_sha256": "daf30417a0c60a9dd9c500d9ddd6f6c77f208d7e6dc37e5fa0fe8303951f15c7"
+    },
+    {
+      "path": "docs/handoffs/M5_07_正式端到端验收通过.md",
+      "original_sha256": "360a8f9641d15a7f8b0011e15a49c10f8c69c017bf62f2021f61ff82c58e77f8",
+      "english_sha256": "330162670e356edaa81ed3089e3fd7e4cf6cc17342fdde806607a509409a2d47"
+    },
+    {
+      "path": "docs/handoffs/M6_01_正式实验起跑与恢复.md",
+      "original_sha256": "ee45a01e56209b8b09af75c813f20a0ffc7bb2697d81ea41ccb8262cb0c6a5fc",
+      "english_sha256": "5340eb054eb8b49769f06c5744ad57f2142f05eed125c67d7d61b4200c68ca8f"
+    },
+    {
+      "path": "docs/handoffs/M6_02_120项完成与人工评分待办.md",
+      "original_sha256": "6a66ba2e271aa7bc4cda26d7d8a2d091b55314aeb6e7afe2eac234aed0bb57a5",
+      "english_sha256": "403b0c09a8f8b59811b711331d17976ae1e660796fe3facabfb9b0161c09f4b0"
+    },
+    {
+      "path": "docs/handoffs/M6_03_辅助预审第一批与休息交接.md",
+      "original_sha256": "7aa52c2a1e3edf066e0d5e4830f0ae422ce104192b610f58eb479aee2c164d08",
+      "english_sha256": "5d62e13f8f9b38a8b9bcc720e0977d9c75b744d27a40d4990c4a2b956c387170"
+    },
+    {
+      "path": "docs/handoffs/M6_04_辅助预审02与续做.md",
+      "original_sha256": "8bb5bf31582a5dbe73efbeec6c992008adac5c706f013ab16ea3272ef053ea0c",
+      "english_sha256": "e105505e1f24d8f01c7086e37c378ce265ae63eba741a100c50c2d973c07520b"
+    },
+    {
+      "path": "docs/handoffs/M6_05_辅助预审03与续做.md",
+      "original_sha256": "f6227b301e624fa97559cac6f7dc07a0384bd960097453e30be9c614d9600c78",
+      "english_sha256": "e203872d1ee4d99d7c2b6a20f49bbae721fe1ee3cd98c766697b7c9256272142"
+    },
+    {
+      "path": "docs/handoffs/M6_06_辅助预审04与续做.md",
+      "original_sha256": "cae723728e7e0bc6d25c1423403e51f317b05f9e12ec9f8e8c787ee411000cbb",
+      "english_sha256": "9647aea7d86e62c064116482aa669b60a6103c486dee63a59d81ff2c26224b89"
+    },
+    {
+      "path": "docs/handoffs/M6_07_辅助预审05与续做.md",
+      "original_sha256": "e820b346fc482c8c306456ebfd45cb7f2a7fa443129d4167821e0d2f6204a274",
+      "english_sha256": "36d5336f79d09f829de2c50eb5033c2cef003f68082132a577a65c2db15641e5"
+    },
+    {
+      "path": "docs/handoffs/M6_08_辅助预审06与续做.md",
+      "original_sha256": "15f9efaebe6bb173ebb05b06506b21bf787378b999c8f02e018a116d2fd27799",
+      "english_sha256": "cab08f45dbfa9015784bccd1efb4f8c5d428b2dc996c14a1876360e60f1cd155"
+    },
+    {
+      "path": "docs/handoffs/M6_09_辅助预审07与续做.md",
+      "original_sha256": "779fb5630cadee016f7a9bb1ff465d0bdb8e78bfd403cdaef9661c0941de9e86",
+      "english_sha256": "d252613f82222c86b8826e4f6b0adac5ff9f5f1c0832604ecf65f8ebca99d233"
+    },
+    {
+      "path": "docs/handoffs/M6_10_辅助预审08与续做.md",
+      "original_sha256": "f19dfbaca0473f0f86580d147ecb728bb76d4be2ffd2c205285f0228843bf550",
+      "english_sha256": "0465ac473ec05054a1a7ff2ccee5aa20568bc673ed41db06e5abdcbedfb8bfe4"
+    },
+    {
+      "path": "docs/handoffs/M6_11_辅助预审09与续做.md",
+      "original_sha256": "ddf31e048e30b368d66fa7c691f12f3491ec136fe482edd62f2ea6451e6e3d3d",
+      "english_sha256": "fd65768f0a099941d59a364c38fcdf168235d835b93373d6394c30c4ca339e1f"
+    },
+    {
+      "path": "docs/handoffs/M6_12_辅助预审10与续做.md",
+      "original_sha256": "0edc99c4a8d4be6c226c2e63358d680058d53344648015d5fcffff5510ad9522",
+      "english_sha256": "726bbe6ac67e12ead2c00c67564f73e8c697e7ee330f30413e1c6cbce4259ce4"
+    },
+    {
+      "path": "docs/handoffs/M6_13_辅助预审11与续做.md",
+      "original_sha256": "b6cc608038cc96216244cc3ddddd82da7e0ac33d414aa77af6d5fedad15ffe7d",
+      "english_sha256": "a875a94ad8533b5368c5113daee6bcf5cddff517fba5a2fe69cd8d96f23db63f"
+    },
+    {
+      "path": "docs/handoffs/M6_14_辅助预审12与续做.md",
+      "original_sha256": "25ec85174f33dd21e2e494ca251d80f885e973c04a156b09929b6d1adc97b5c5",
+      "english_sha256": "248d5dbcfd1113a7451444ba1aee59732eca48c142aff1a02e3c59fdf01c5242"
+    },
+    {
+      "path": "docs/handoffs/M6_15_辅助预审13与续做.md",
+      "original_sha256": "9a6eaee471f4cce67c119ac9e0c59d1bd535bb8c07b0cde937d9f913e7b7d67c",
+      "english_sha256": "816086cfcdcaafe5eeba7a22fa24292f521a6fcd3ed9019e115149c4fd4d2df7"
+    },
+    {
+      "path": "docs/handoffs/M6_16_辅助预审14与续做.md",
+      "original_sha256": "59071be92771fd5c1c3c127cc3e1991d7c496f9bc4db15fbe50bd9f8bc62b97c",
+      "english_sha256": "08db500c29a6388ac5efa7292c0f3d56da5448d331bce778c97fabb071e99fe6"
+    },
+    {
+      "path": "docs/handoffs/M6_17_辅助预审15与续做.md",
+      "original_sha256": "91335a9142306e5f26d43946ea63244049f5046d81a08e37c37725a24475b957",
+      "english_sha256": "554d0706776fc0bccf95910ebaff5a9b747491da452da5b962e4e67039c28577"
+    },
+    {
+      "path": "docs/handoffs/M6_18_全部辅助预审完成与人工确认交接.md",
+      "original_sha256": "88c910a368bde0a9e88e7647377f54121ceb541b4334d5b1c2b4f0989120d156",
+      "english_sha256": "6ae51861baa920609e5848cd4cf13c02f6f67c2400f8731a8802dbdf026e22f5"
+    },
+    {
+      "path": "docs/handoffs/M6_19_人工确认材料与首题待办交接.md",
+      "original_sha256": "9a5c0faf221da9c530f662c70f0a06b7cb254c938b89a25580272d8ffd6ebd86",
+      "english_sha256": "358038435a00e4e4507b2cd41e9cfc7619ebe584cae1c4e2785c235d3ba5e704"
+    },
+    {
+      "path": "docs/handoffs/M6_20_首题整答入库与继续评分.md",
+      "original_sha256": "31af769f0a48a3f0f7867264b1dd0ee34dcba2c8b32326a1b3f08e2fde669a0d",
+      "english_sha256": "f13ef78b5f97f474e63b1b879d74393b102a0323ae2103718bddff5d0621886b"
+    },
+    {
+      "path": "docs/handoffs/M6_21_第1题四组评分完成与续做.md",
+      "original_sha256": "58f12849dad0ab2c85d386c4002fd05edca081b79a870fe0147ef86371f3e2b4",
+      "english_sha256": "bcd68c8f57db6f624d92fb0caf6978d01105a4c0774bdf69d2444d8c445073bd"
+    },
+    {
+      "path": "docs/handoffs/M6_22_评分服务启动定位与只读HTTP恢复.md",
+      "original_sha256": "850bb3061a660a921b8805dfa83c9898e6487e2520bd21c3b38482cb7a32b631",
+      "english_sha256": "09a6a52893c284196c01c969669db4f5228ae06f145df8e22bb840f8a035119e"
+    },
+    {
+      "path": "docs/handoffs/M6_23_第2题退款评分完成与续做.md",
+      "original_sha256": "260f1bf99206a93f00f6cd25e5dea84cada24ea4dbfd3bc9fd694fbd8a687d4c",
+      "english_sha256": "25263a611aabddcbf01dc63ad9791b77db9c6394de49238f04aec41f54b37241"
+    },
+    {
+      "path": "docs/handoffs/M6_24_第3题评分与续做.md",
+      "original_sha256": "e73e89a9716daff8c15fc9ee1cc739d0fc6404ff59f7b2ed9f45384e93a19641",
+      "english_sha256": "aca305041b977f418629ae6bbf355363e795a74bf794df1a325759d413faed24"
+    },
+    {
+      "path": "docs/handoffs/M6_25_第4题评分与续做.md",
+      "original_sha256": "4ae08e12f5aef0004dd4f0cdaea83d9d3ca492eac1980f8e5899946250d87a4f",
+      "english_sha256": "ee0e7b4e99cea53e350dcb0b48dd0cf325a4243ade2b6299123776fb9b18f6ec"
+    },
+    {
+      "path": "docs/handoffs/M6_26_第5题评分与续做.md",
+      "original_sha256": "b308f0df951c5aee8d2f8de7b8ce5f347c38078e4d20d233f509761fa01b2c70",
+      "english_sha256": "0f2c9c91a18e2f460dc451e8e28ae3cc6819db8ce7821d00a42c31fec61e9a7b"
+    },
+    {
+      "path": "docs/handoffs/M6_27_第6题评分与续做.md",
+      "original_sha256": "b7076e39984e8ac9d1317df373008fa88a48649367d825c4a3f0b9aaed6f960d",
+      "english_sha256": "86e4a3bccdabf1fdb5f87c151f5c513c3b29a40ed1fa7375073d6084c28d484e"
+    },
+    {
+      "path": "docs/handoffs/M6_28_第7题评分与续做.md",
+      "original_sha256": "e34e5336bc61615b3b59ba373cc5fb14062540513eaf5ca2f4b4a99f24ebae64",
+      "english_sha256": "78b8604608cb708592008e48caf8db828ffe34265151e7bbf952806dce86b1c9"
+    },
+    {
+      "path": "docs/handoffs/M6_29_第8题评分与续做.md",
+      "original_sha256": "a7e8beecba5dfe08e0b11194baf17da1347f89fbfb0f62ca3660cbe6e5d8db70",
+      "english_sha256": "cf05c47e84d43f9c49550da961ad62e08ccf57c7741bc6a3d52cf47d97814333"
+    },
+    {
+      "path": "docs/handoffs/M6_30_第9题评分与续做.md",
+      "original_sha256": "6ba69f8399e1d14fc4d78d0492dbfc78c4ea42424590b35b5e56d76aad7a95ba",
+      "english_sha256": "29043f2b947492a30fff34551a621ec9b622200243e8a515bc194d78dbed094e"
+    },
+    {
+      "path": "docs/handoffs/M6_31_第10题评分与续做.md",
+      "original_sha256": "609d5e34698da0fe38788db7bcefb54e9bfe3ebec441421faa5371696bf53b47",
+      "english_sha256": "fdf0327f187ffb0885686d1c7215bad3320adc7d14e40561dd81ad03d407e784"
+    },
+    {
+      "path": "docs/handoffs/M6_32_第11题评分与续做.md",
+      "original_sha256": "a3529a71d842c27c6333511c565fe7d08e7fc66d95b0869d9fd8808ff04f5fc7",
+      "english_sha256": "7d8bfea384085e69c4c659addd9e023425a7cde930c90eca1f6e3432c23e90ba"
+    },
+    {
+      "path": "docs/handoffs/M6_33_第12题评分与续做.md",
+      "original_sha256": "17cd9338399f3c451fc3c8431dd62d1935944a12ca7e8203903b7208754c3b70",
+      "english_sha256": "ed30cdc39be0df0fc51d06bd991374a163818e809496f42c78dca522e8c25a5b"
+    },
+    {
+      "path": "docs/handoffs/M6_34_第13题评分与续做.md",
+      "original_sha256": "d74d737b2b25dac54048bc703d2f26fc89d55872d4504ce6aeda868983e87349",
+      "english_sha256": "504f86298c774dee2106714dcd6b856c0c6da1517b69d2d6862350cd1673f0a7"
+    },
+    {
+      "path": "docs/handoffs/M6_35_第14题评分与续做.md",
+      "original_sha256": "c6b917cc86f553c07346163073c3dbe72bb2814a45e8b8fbc2f8cc37695a1a15",
+      "english_sha256": "83b451fc39788e9ab9c57d35d72c8e3ec784225d2f8748fa1626dbbabf068c12"
+    },
+    {
+      "path": "docs/handoffs/M6_36_第15题评分与续做.md",
+      "original_sha256": "dc8a2fa432c36a40239da8faed156f8f7ec4b131c8eaaf593783eb3343d1caa1",
+      "english_sha256": "78d5b328385ab964b30c212835f53e97ab4f2de825d1f9746f5506293bead056"
+    },
+    {
+      "path": "docs/handoffs/M6_37_第16题评分与续做.md",
+      "original_sha256": "e3d5fdf6a8eaa07d6eab4019fdb9149b4c61ffe0ae9121f5689d18fcc72ac0ad",
+      "english_sha256": "9977c5e07ebe641782d35d18aa908457b96bef2596cd3c1777884b9126868352"
+    },
+    {
+      "path": "docs/handoffs/M6_38_第17题评分与续做.md",
+      "original_sha256": "8d5c302550401bb7b89ddd884a024604cae1c190746a3eb631be42c4293c20f2",
+      "english_sha256": "d15465b56928a040151a0e421679e4a9e815e3b47669f8ce383c89793d3f1c0c"
+    },
+    {
+      "path": "docs/handoffs/M6_39_第18题评分与续做.md",
+      "original_sha256": "c51ea8cd00a6202a4701bb92f00e7580428e857afc9c7c746bf3438a0e4aa904",
+      "english_sha256": "7c4807d83f761ec24cc6b8114cdedcee1fef37e17a706f678795f6b096399f19"
+    },
+    {
+      "path": "docs/handoffs/M6_40_第19题评分与续做.md",
+      "original_sha256": "a5fc8ab9ad45d1cd27b7a71f85ecbc1d850991653f0fdc91c3429536bb6b828a",
+      "english_sha256": "abdf43b76b6ae2382feb26f5ef3c518799ced4ae4f3bf135588c9f0045776c1c"
+    },
+    {
+      "path": "docs/handoffs/M6_41_第20题评分与续做.md",
+      "original_sha256": "5900541ce7ff0d8f7974d19511bd6159c2dc6cd01b4aa1e911cb5f2a93d3cc99",
+      "english_sha256": "5d6859ed4ef156081f5e1fb12353dd3923b9b4f5e8a66c4951a4c2b1269db641"
+    },
+    {
+      "path": "docs/handoffs/M6_42_第21题评分与续做.md",
+      "original_sha256": "bf68e359caf54c54797740ad23abee1a46c1e6f65d8207cfc147a93188fec38d",
+      "english_sha256": "fe358105b826d61db7857b2d7480cfb60ac6c3d7f86e17bf26fa4a3eb729f120"
+    },
+    {
+      "path": "docs/handoffs/M6_43_第22题评分与续做.md",
+      "original_sha256": "2c88eeda687c9eae420dcc1f26bd1e0b36d957d80695010c8e38e642b89a8e84",
+      "english_sha256": "01d21855fbffd8dd1f7d1cedc9e88b94ad6bb3d3e3507dc76f1967f2ffab3cd2"
+    },
+    {
+      "path": "docs/handoffs/M6_44_第23题评分与续做.md",
+      "original_sha256": "ac36ccded808a6f50cf8b0362ab04ded11ac6d12d9cb91728d67579688e7890c",
+      "english_sha256": "9ee41ddd662f2abc07f66158e4ae56a8b90234aba61c18f9f91330b0a03974ff"
+    },
+    {
+      "path": "docs/handoffs/M6_45_第24题评分与续做.md",
+      "original_sha256": "62bda6af933403785d9b9d938fc5d00c56369fb2239f2208ad593e2f6b5abd17",
+      "english_sha256": "bcaa237b7e8c7726a285e77b27934e9a91096c69882ee7291f39c29234b3d3bf"
+    },
+    {
+      "path": "docs/handoffs/M6_46_第25题评分与续做.md",
+      "original_sha256": "745697bec924775d5718950a96c935429ff08c80a28adb6fcea780c30dad2276",
+      "english_sha256": "8e0c9c89c3a768952acbc94f78b45f8e3a1a007162bcaad5a6021d7b00b351ee"
+    },
+    {
+      "path": "docs/handoffs/M6_47_第26题评分与续做.md",
+      "original_sha256": "be02b0d3d23f89ecb468415222eb09ca006709aeb1d6049d61cfb5e47824fd9f",
+      "english_sha256": "42ffb1204bac50143017549bb63859640ba2776e4c316e9fdfa6cef6214c9671"
+    },
+    {
+      "path": "docs/handoffs/M6_48_第27题评分与续做.md",
+      "original_sha256": "c37be298f1c53df0c85277c56f4cf9cbc625ab14dba83a0128863131c1d546a6",
+      "english_sha256": "f1573445fda49a6dff12d343c5df0bafeb8c74530da83a0103c77840c050dc2c"
+    },
+    {
+      "path": "docs/handoffs/M6_49_第28题评分与续做.md",
+      "original_sha256": "73a26da24cbac1e4e74db9fca0f3fad8734a49def7edf5ebdea8b23afb071a39",
+      "english_sha256": "15f0dd3449399f7263ec81abf761f19056a5f9ae4ea1e651aa82ce386fae9bca"
+    },
+    {
+      "path": "docs/handoffs/M6_50_第29题评分与续做.md",
+      "original_sha256": "12b3fa1e16e94c231ce440abe1292f25b7d613a6be6c69c85287c5aee3eaf527",
+      "english_sha256": "c8eba4d045b2a470ee8e9566b6108dad3a382a1941e0f5b10a0fad1ae049d5d6"
+    },
+    {
+      "path": "docs/handoffs/M6_51_第30题评分与续做.md",
+      "original_sha256": "6a8ba9e80d6daf173cf753fc2d3103fd2779235c13a209a4f4e1e775e592c8e3",
+      "english_sha256": "7d38c8a4e06e4bd1c229554c9c637762e66a4a3709329167d9d850b572cffa38"
+    },
+    {
+      "path": "docs/handoffs/M6_52_完整评分汇总与转入最终交付.md",
+      "original_sha256": "88a79e89c2a67bee17b2515ca330cd99b771a72100f603f53f6b2fcddf454f28",
+      "english_sha256": "84be0629607afdad91b82aa2edee8d28fc1fc76d6534cbe636a3b2dd6e0aa9df"
+    },
+    {
+      "path": "docs/handoffs/M7_01_交付工具与容器准备.md",
+      "original_sha256": "738fb740ae2d219acbc92b6c8d15e727fc73a5e5ddeabc7707564a3a503dc2c1",
+      "english_sha256": "aa7ba3e63da8396a6c77a9b4aa99bcbaa8aa47ec1f801c2c34458f7b4ee6690b"
+    },
+    {
+      "path": "docs/handoffs/M7_02_Linux容器验收与续做.md",
+      "original_sha256": "35a3f042b7a0af7f3eb7bd6af2608edf6befef6959c838f2c51dc7fa57666428",
+      "english_sha256": "f62b499d5cb088782fdab8e761f4f348ecf5b0941f25ff61547e34a75f2665c1"
+    },
+    {
+      "path": "docs/handoffs/M7_03_A适配Linux回归与候选包.md",
+      "original_sha256": "2181323506458ca61d9d10747b822ce44e8cf50c51fbf8d0dd3adced43d6b4ea",
+      "english_sha256": "445811e576cdeff8379887a8267cceac169c0ee87b1bf3c1aa0a94a3384531da"
+    },
+    {
+      "path": "docs/handoffs/M7_04_正式Linux复现与历史恢复.md",
+      "original_sha256": "9e8aa8caf25709ac91e47043e2832b61e9f2b7809f8e95923b1709f97f14ba3d",
+      "english_sha256": "2cd4123ec40a7ead63fdec3fe1ea9566ca63d4514775a8e75f5a7c5940916891"
+    },
+    {
+      "path": "docs/handoffs/M7_05_本轮自检与休息入口.md",
+      "original_sha256": "4590f5edf1918474c03cd43215fc2b4dbb77ec6cf9ce061ad7bbe17c87672b09",
+      "english_sha256": "e2172674a472a6d59fc442b744b5e98fbc56fed468325ff5870394f856edc465"
+    },
+    {
+      "path": "docs/handoffs/M7_06_带评分Linux恢复与最终打包入口.md",
+      "original_sha256": "f2436440c1f4520c1ffa1b4876262a08e77f98a86793bc937a552138a5a33f0f",
+      "english_sha256": "b4be1c40e44803ec3b9664dc2b49b608247d05bebdd221a4c0968563e7f34811"
+    },
+    {
+      "path": "docs/handoffs/M7_07_最终离线交付完成与恢复入口.md",
+      "original_sha256": "3165fe03789997255237d80ef48c940766ff56ccaff13576c203abdc371bdedb",
+      "english_sha256": "0951048ec692d1051e3db579b759430a526d3d4d840858d02f1f4bb551a960f8"
+    },
+    {
+      "path": "docs/handoffs/M7_08_GitHub交付整理与提交.md",
+      "original_sha256": "eb962377d47b315c9a73c4d7ca514d442c464b3e48cb9f222d0ac9705160cc1b",
+      "english_sha256": "76579134b5295a66c18eff729cb4d8e606ed4d752d8d9717bb7c5ba9c844bced"
+    },
+    {
+      "path": "docs/handoffs/M7_09_GitHub分支提交成功与附件上传.md",
+      "original_sha256": "5fc006e537e8416ec76d91a72864f249fb836812e798bf1e31adff24bb41f9c6",
+      "english_sha256": "6bc96a496f961ce52d2f466d80bee63161e8f3780a43918bbc528a560751c979"
+    },
+    {
+      "path": "docs/handoffs/M7_10_GitHub交付完成与组长阅读入口.md",
+      "original_sha256": "2a553fdb8347a975206d8d24c7760e43bd0deff4fb8eae06a0290a755fa83fb8",
+      "english_sha256": "5d4911b26affac81f6c9d17d007fbb066302f7210676769bb32f7695dcc922fb"
+    },
+    {
+      "path": "docs/provenance/ASSIGNMENT_ZH.md",
+      "original_sha256": "ad6c31ffaca41e6f16578fedaeac8bd060852b1526130884522774bb24bc03ca",
+      "english_sha256": "1e08d9ec05979dac7e48aec3d5fe2c58f4c98d5cd517792ae983f9f0abcb5e95"
+    },
+    {
+      "path": "docs/provenance/A开发文档.md",
+      "original_sha256": "762535bdd317eb83fac274143d6ee72c53670e208ea017fc340154f94e009104",
+      "english_sha256": "b599180a68908d71dd995aa7093cb3a46a5c57432e9b84e5c1a889e21ac18b04"
+    },
+    {
+      "path": "docs/provenance/A部分交付说明.md",
+      "original_sha256": "12138cf168e8215e3b6dd78a612c83058d791d7bb10fa87f0beec4bfeb9d26f5",
+      "english_sha256": "261e0dddb0c473ef688d9b2c0b88cda809395933af9e9f16ba718b67c63371a8"
+    },
+    {
+      "path": "docs/provenance/README.md",
+      "original_sha256": "8d6f2ec3699e67113587dc6805a6f03538db3ac93f5bd690cb7b45d438a8680f",
+      "english_sha256": "03d5cb2eeb04c686211ecd81d0130f09f5cab0da27ec5d89cd6941f58ba2d6cb"
+    },
+    {
+      "path": "docs/provenance/a_review/a_final_validation.md",
+      "original_sha256": "63e6c7932d732db58b2feda64afe2e1b25b336a30e071cd2b40dcf53ddfa2c13",
+      "english_sha256": "6c8cea69ec54b70511f416295d899534f6d8a4bab094cb749b9ce3a42deb462d"
+    },
+    {
+      "path": "docs/provenance/a_review/corpus_batch_review.md",
+      "original_sha256": "ef76a2ca40e444beeec0c1bc7c3a42ed3763408d0d24cafddf0f458d20c6b571",
+      "english_sha256": "801661a9ae729da88516ce0771a9482da32f18c9333fd796ae0588aa597216f5"
+    },
+    {
+      "path": "docs/provenance/a_review/corpus_freeze_review.md",
+      "original_sha256": "24b1adf12a48423a6ff04e83544fb2856d12ad7ef60399b3ea599e98b71b16af",
+      "english_sha256": "98fb82c3f0b950ad36c67b5a6eea8dcb7aba724b0b327a853207f818ba77f0f5"
+    },
+    {
+      "path": "docs/provenance/a_review/eu_consumer_rights_2011_83_review.md",
+      "original_sha256": "0af5fe7c011fb7ddffe21f910cd702c362c4497a890f7a759c70b3604544391f",
+      "english_sha256": "1b01df97b76acf5e4dfa50c3f286d513a2007ed492b5f080acb79223c133364c"
+    },
+    {
+      "path": "docs/provenance/a_review/eu_digital_content_2019_770_review.md",
+      "original_sha256": "c89ce047f2e62c5ca9dcef46380536c049b4dad9c647d7f510afa9812e8f23c4",
+      "english_sha256": "978105b7421ec242977fb1de003124ce8807cad4c2dc9d0b51cefb5e67389680"
+    },
+    {
+      "path": "docs/provenance/a_review/eu_sale_of_goods_2019_771_review.md",
+      "original_sha256": "a58c9974e3c205a3aa823a534f2b7e337299d045331b53c4632acd12a1e5c8f0",
+      "english_sha256": "9048a2fd02ea4815a5a702d99276b5ab645a35487a36a20c78b2a1a884f77d4d"
+    },
+    {
+      "path": "docs/provenance/a_review/eu_unfair_practices_2005_29_review.md",
+      "original_sha256": "f2fa06baa56e403c804188db38cc27cc9bea5bb6beb42d33492b2fa76f10f18e",
+      "english_sha256": "9df75ce2b42d5708340b5d09210641bd262093466b9bcbe96ce2cc9796ccb4c7"
+    },
+    {
+      "path": "docs/provenance/a_review/eu_unfair_terms_93_13_review.md",
+      "original_sha256": "b2e320339da6c28a4b3b2ca06ae4458a11a230f5e2c8e0d447a61dde29064e59",
+      "english_sha256": "ab0d26bc3dc78e982e28ab6f128e930e3bf4540a0e5545b4ec6df7b7e02f4f7d"
+    },
+    {
+      "path": "docs/provenance/a_review/gold_review.md",
+      "original_sha256": "d30d13fba966fcb3f6e429f251e0955e718bb947d634dfce701a5b36904ecab1",
+      "english_sha256": "dc0f461a66376838a0a4c6fb6c850a38829d386c581c8828362151a2687fafcd"
+    },
+    {
+      "path": "docs/provenance/a_review/sample_handoff.md",
+      "original_sha256": "b4adf827e6226e4ca480bfac3457b00ac9e3d95652e197467015b52532994684",
+      "english_sha256": "ba2cb69d40b4e36e2e68fa31065ea1f38564dfd88923a69b25c69f6804363659"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M1.md",
+      "original_sha256": "80e48d3c08aab07f504d160b57f7055ab249937ec25f7bbd4aca045a2d9a5e2f",
+      "english_sha256": "ef458254cf7770732592df0571030d13edb01a4dc7ba67619e6677fc8dc75016"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M2.md",
+      "original_sha256": "92aebbeeab550f5c799b23c23520f42b087a15bbb2ecd435661692973706f15c",
+      "english_sha256": "2bf107a0c6f4dd75ee8c105bc2bfafaa6671c6242b3502332a6afbee789efae4"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M3.md",
+      "original_sha256": "bac1d0882e2260d38cd1d8732dd521c1899444024b5586cc12f22dda6351322c",
+      "english_sha256": "ccef3744b26e80b5c00741940322d4efa7c7ff249c445fb570a9938aab41b51a"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M4.md",
+      "original_sha256": "d9033ef1047b1a0f0a8ad6c162408e8879f015aac537a302ead98536c211910b",
+      "english_sha256": "7a0c8ac0db7c7f39b4d5313197d01b4c4c2c1a27d945d221fc6f1db0c12f10b5"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M5.md",
+      "original_sha256": "6855905bf698862a77d11e5bc5e5fb01c787ac9d76780d85060b5876af265cbf",
+      "english_sha256": "7127512939d631433a33c2e4307afd23a65852cf3f1e64facdf2ce4116df04e1"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M5_续做.md",
+      "original_sha256": "f0f9ecdf16f59ad07c8bbc2b2680e42ace5d0304e61d34b67052b03d0e47f96a",
+      "english_sha256": "91a5aa618b37f1f9f6ebd33a296e030a874618f6476c673d2007fd7e8f5a7a45"
+    },
+    {
+      "path": "docs/worklogs/2026-11-19_M7_准备.md",
+      "original_sha256": "68edcb4fd8030cd09feddf6a71b9c9232e68712dbe4d10c3734b736a01262175",
+      "english_sha256": "c3d3c5991a00236725e8cc0d4bc4ca7afa14b5262e50341c46445fa1c86ab64f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M5_A正式接入.md",
+      "original_sha256": "00f41c2d3f34652c2db2a7f6747508affcabcababbb408d97732e83571e0808f",
+      "english_sha256": "7deae9f9da720b8a8e952b660e60b5418099c383712f2b93fd4a78211ede75c3"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6.md",
+      "original_sha256": "b2bb789ebb83ebc571c5ca99ac78abddc64ea5498c96271ab7f56b1e134c9872",
+      "english_sha256": "e4fb8affa4d8a141ff97f3f099c6e079ed1bbce32672bff0726d59e8c8e03e65"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_人工确认准备.md",
+      "original_sha256": "417b88f4cf2e40ffb1082584ac31e05766c3ed1684cc6d4c0439167a2fb40822",
+      "english_sha256": "34510a9c4fff70971acd9b8c8b5675d94bc89601957d0cd9a2ce5eb2807e444f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_全部辅助预审收尾.md",
+      "original_sha256": "e3f8d2829934cae736de4f03e5d1dcee8a566a7c4e76a42caf4c906d5ae82cfc",
+      "english_sha256": "56736c5bddb35640fa29148b4eec2a8f8291c0c24c705fa4f77b651e08669d30"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_完整评分汇总.md",
+      "original_sha256": "73a619e35ed703b7bc2b927c3354f56292d6651987855385e834b089d7d97a33",
+      "english_sha256": "bd51d5145ad3c01fa20d9864c5171ab36207396254669975053e200c64fc10cb"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第10题实际评分.md",
+      "original_sha256": "5fde43bd142f3440b253cb01f481b5f2a6dae1b84ac3b0e2b1b6a6c13ff920a5",
+      "english_sha256": "e33afa668c888a0e9f801ee7f22014f82b70f28f472a064ab0e328c150325091"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第11题实际评分.md",
+      "original_sha256": "e2842f57b19f69e0d54d1f8b551885a8747bfc10cd652ee98021ee2eedb67139",
+      "english_sha256": "9f9897127cb7d22793ac850c366a46ba4db473b07b5e889d259cffaaccd1c000"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第12题实际评分.md",
+      "original_sha256": "b3f28d76660b57d177a81715e496b53bac3c10d78820ce3ce86c478c0f86107d",
+      "english_sha256": "c087deee0c4f62d2f67b9e58ea2b897ec215e1420bff679df2feb108176af6b9"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第13题实际评分.md",
+      "original_sha256": "77cff1ebf5f04e62b455f06b9e4fa729f6a68fd7172fa28b95c57a0805a88b33",
+      "english_sha256": "23d91ff9b28a213650916867a777e00509fc15695ad727e6049d577d7a40983a"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第14题实际评分.md",
+      "original_sha256": "4f22360df1c0985e3ef7a9ae3be798a69cf1382c8fb584878fcdbf6dd82ca74d",
+      "english_sha256": "2b3180c7bb52709dec5590428aced7356c2e2349b27d302e396755e5e650f7fb"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第15题实际评分.md",
+      "original_sha256": "a627892150288c0edf087d392d1af204b444365774d684ad397a578393949d86",
+      "english_sha256": "f52ed109a2d15b2004adf396e09520a3301217c2de6c7906b6272c84989cee36"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第16题实际评分.md",
+      "original_sha256": "48dc3c1c5c123ccb3e03a11bafa176706ec892a7222ac806761f50b744c77ecf",
+      "english_sha256": "ba2179d127f66b35cc8f12882826ea4c9810ace7d343b1ae26c13138735ad8f9"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第17题实际评分.md",
+      "original_sha256": "799317f775b57adee81b1960d082703a9941a85b3bf69550f966e85018788cb1",
+      "english_sha256": "bbbd8b48e8735fc975846fc3c079517ea6223e6e29b1cc26b75ff5228b455ecc"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第18题实际评分.md",
+      "original_sha256": "1fb6fbfabea5916cbb556f845ea065072b7f509df29008d56ac24d4c5ff253a7",
+      "english_sha256": "56d26d0a16280f3a024f0b016a19b3d4927639fbaa4d4f6dce320964ab9870e8"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第19题实际评分.md",
+      "original_sha256": "8ff5ea1d2df5e8986b810694e8d7a59df27d559806acaa10b269016f20e9140e",
+      "english_sha256": "371f8eee2eadc9154f6184e8fc7e08a2130b91a6a4c8f344dad14b5f4b46029f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第1题完整评分.md",
+      "original_sha256": "acb81f3e5a36e4a2d72b5bf0b6b3b5a26defbdc9a83126926207ce7746b0b0f0",
+      "english_sha256": "7356427bd3f89c9a56ccd2817825e4fc2b5e8dc106543280aebd959fddc321f9"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第20题实际评分.md",
+      "original_sha256": "f2568f8a95eb1f6ee6b82784d1032b6c3ecb40557d34c1e37cad003b7ef2f915",
+      "english_sha256": "892d2b70fb6bcdce3b7a6d17d0cc08c3a456bc8ca77d4b6f53a424f447634543"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第21题实际评分.md",
+      "original_sha256": "f1e0f34897f9463d9a9303cdf6f584566bd85155af8dca5731d702cd26f0971f",
+      "english_sha256": "98b20ea487523b09f2f8fde16ecb53d2ffd78e516eaece4eef53a8954927046f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第22题实际评分.md",
+      "original_sha256": "0cddb3436c4da9d24659c21733230432442f96dfeedbb9f4128c7434557ecef6",
+      "english_sha256": "a1f35734eeb414d3be0218b44c2e1743271a157677359700e7a87861a276e12d"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第23题实际评分.md",
+      "original_sha256": "8567b923a09f55a75392de5bac842a39e40ed9c522a5d0c3d23bc8f93be319e7",
+      "english_sha256": "43c79c6b99d195bc3decda1ca60694268bde3a1c2b75040bfbef4b27abadefed"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第24题实际评分.md",
+      "original_sha256": "59d4f78046afb39aa91a72884e25b51583d1eaafc28c0b10ed66d7130467546a",
+      "english_sha256": "720fba1ce04516bd6bac4c983a8d6e6086e2c842ed949895f2d7fcca03fa9fca"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第25题实际评分.md",
+      "original_sha256": "74c4de7ded0bc9e83f450896add8c094e26429b61430cb7fed954ce26c44c0de",
+      "english_sha256": "a15040e25e59a3fb8044b6bf6c3bddf0da8fda47af32aa0241b7776d1f0d6aaf"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第26题实际评分.md",
+      "original_sha256": "15c09b449241050ba6bf56d697bbd0f585ba03cb9415d6944b13ae0b8e890acd",
+      "english_sha256": "82bef5ecc285f592a56e2e4ac092131e5f5036315a6eae0f2ea41442f3379fe2"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第27题实际评分.md",
+      "original_sha256": "a6f0c225284a157aa552a2f908c832626209252a6c1a73cfc46703ca4d989858",
+      "english_sha256": "afe182af752422daf486f53e7b81ecc24ffd3c0f5d3f2b6a2f84734948641528"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第28题实际评分.md",
+      "original_sha256": "5807c3743eb7f2685c10ac164a1f398c19b48ee4533a6bd4ef6535957193befd",
+      "english_sha256": "03f620823058308628e03408a583364131174e2830b3a9bf45bab10e13d29fec"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第29题实际评分.md",
+      "original_sha256": "9b4525c4e01744aeb74c548c8a87dd709dbccd43f66933a3f09c113368350bb1",
+      "english_sha256": "cf08c58b0468453fcae4260c385872227e4a95062ad6f7b47bce585c7fd02853"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第2题完整评分.md",
+      "original_sha256": "22e00010f6302c48aa5960b2ee65378c5d98883a2986373c5346b0b95c32ee7a",
+      "english_sha256": "e93e4737b287527ab574dfb593973211e5a7edcef29c6da6fd6e54b65253dce5"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第30题实际评分.md",
+      "original_sha256": "48a9634f8d2f871e6c903661f91364aa02382e11d221048e14e8b38038c2d9cf",
+      "english_sha256": "84794cd7226f17e0ba80bc0421e9c935df64c3a625c7273c9219f33c161b35b0"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第3题实际评分.md",
+      "original_sha256": "a2b05df9fba79b6449564a97124a9e11a464835e5d0320d70cf560481c238b67",
+      "english_sha256": "c1b24187e6d3cdd2c24cb52b122ec988c8b41e25f6163852a2511e1aa67f7d9d"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第4题实际评分.md",
+      "original_sha256": "190e42f758aa465fa7065683310088105891cca28313dbc4b6a27aabfd2f2f5e",
+      "english_sha256": "e2c81c0ca7c7d50d5f7e9ab34192bd6d9b381e4bc15859ed883f597d30e34124"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第5题实际评分.md",
+      "original_sha256": "3333d4ad837eed397cd9f70f7129ffb9fef79345b413ca7584f988d31a1c8a9c",
+      "english_sha256": "97eb217439643eacca9f3cbc5c137f0533f20fdc2efc3bac3a6df352681e387f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第6题实际评分.md",
+      "original_sha256": "fc02fb2067348b256a1ce389801b75fec9a738c1063c5010384c9e9af18f47a6",
+      "english_sha256": "cd14b032a83adb3cd155f99a4a29179f06879b847db9906943f2818c73a0129d"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第7题实际评分.md",
+      "original_sha256": "c08e452154a42ef4922ee99cb7436efee7eec06b2cbbdd8ef8214624ddb2f4ad",
+      "english_sha256": "d3736e5a4969d4074d3f247a16da82c0ad24d9b790b43f81fed1654070914f03"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第8题实际评分.md",
+      "original_sha256": "5c664d2f548506a2669b06792835291ff47753bc6335815d409bfdb4c0b108f6",
+      "english_sha256": "9002e88a521e0e839cfd2f26803ae88fca00f3c99c6f3981770363e1c3aab388"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_第9题实际评分.md",
+      "original_sha256": "75b87ba6125f9354da7f759100aa06f81d00b374d78141744795dc497d36b168",
+      "english_sha256": "0c2c2828b1b5c44ed206157e752199a1a93c3c9a17a4e57c6f640354f77bfae1"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_评分服务启动排查.md",
+      "original_sha256": "1492a8cc521169e286db8619438f7acc44090c626616d2481ec142dd003705ac",
+      "english_sha256": "cca092709d9465f46d959147ee1ea1b775462e582ffaaf8d2131d9a89bc9a8fa"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审01.md",
+      "original_sha256": "98e728c29c5684c12323bcb3ac4d2e7e4432aac5d6581fff8dc16e1940042b4f",
+      "english_sha256": "7e51376dcee402fdbf32a10352554d3bff6086d3b7622359bfda55249c3b1e67"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审02.md",
+      "original_sha256": "4bb31a5fe351c1eab60428254c378d54522214370b1175f8de088bc33b656a33",
+      "english_sha256": "85ad5457421a70aa339dc8692613b917475b54641f8a76717d98c848be748192"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审03.md",
+      "original_sha256": "3937419be9e9b1810d7ee090107420d9270280ce53788fcaf1e13c6d58be1a32",
+      "english_sha256": "d296b548fa51e809ffd3be3c6a2e9e34fe6b68017f66a37a22f53e105db48ed9"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审04.md",
+      "original_sha256": "f05ce3c2f8c375ac159ec4a8d862bd66dc616729ec70000387869a6a91f3a5ce",
+      "english_sha256": "051d865495ae8442ed121fdb996d31e7f6bf6bfc6cbe0628a73f87c41759e117"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审05.md",
+      "original_sha256": "31235209ab6127d7660cc8dce5313e863d69c3ffdd995019e7a134c5b70e3ba9",
+      "english_sha256": "669eb35e6ec498708c9fe4c04675d3f6f41463ab36f176554d958801903cdccb"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审06.md",
+      "original_sha256": "88a5957f5070994d838e285d6da0d3c88423cf915f1d114d5b4170f2cfc204bb",
+      "english_sha256": "c0dd63e37599e6d953f539f30e55c7be6b3e2a827928974e1498f44ff0b72ce2"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审07.md",
+      "original_sha256": "c32245771973732d410af0a0d5b0845348619adfe04b0b3104438e940fb5d3b2",
+      "english_sha256": "9e12a841603abf465ad767c23df8385e1d6533b9c04683b35881e37a51fe535f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审08.md",
+      "original_sha256": "3d8211418c20c1fda07ec4aefb502358c21d7748e5c0d66028f908f46df4ef81",
+      "english_sha256": "f4fb2d5773b47539d02b9eb66d9239bfedb551f2aaef682304477b5416611765"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审09.md",
+      "original_sha256": "237dbf75b594504c82a9413d24267feeaf6efd3a0d8bbe45b805c05972c54af8",
+      "english_sha256": "4e1c6f3367a9b60d155f1e7c4aa25bc57495b3b3f3364e8c4007f1adfb03b693"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审10.md",
+      "original_sha256": "1dc2663ba7456d6c67f67796c313f019518f36eb7b5121415666fa9426010cac",
+      "english_sha256": "0b43b2e66595aa50d46a0b98b4c15ede57374901b95c6d7d76f3e3e0825d6542"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审11.md",
+      "original_sha256": "f2acafbb13a7e98cf0e683d3c6b595451242ed23506c8de5f527e27eb1ef40c9",
+      "english_sha256": "504eae87423d2c40b50b097eb347503741bd5af5979a3d24e9bab0b15a415f6e"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审12.md",
+      "original_sha256": "787efd9ed2cf75fdb70fb00074e694c49fba2666b34bf6464ce419c17790952d",
+      "english_sha256": "e332c20e581df2feb8e4fefc33e65e7e564702257a3150f309acd7969f00bc3f"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审13.md",
+      "original_sha256": "f993b654cf46fb27e3608930b97028a3ea4d57ca3c994547b46bbe8139c87b37",
+      "english_sha256": "120344b81ee75ac155ba01dcd3320dfcce71bf921c9ecfc1f00fe0641efc36a7"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审14.md",
+      "original_sha256": "0f5bd9e9e1ac65fa65103f84de50fed572cc5f08ebac563222934271ab901f0b",
+      "english_sha256": "725a68346878f18daf5875181ebfff3246c3f1f17861137faa255cc9899b1877"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_辅助预审15.md",
+      "original_sha256": "b3ad0feea2b5423f86fa2c5d647bce3a68189f85f846982a71c2bf78d37cbda5",
+      "english_sha256": "c228b2fdac39aa8b80543001cd414bf8bd9eacbdd1b6b906d81c8e24956a0606"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M6_首题整答入库.md",
+      "original_sha256": "b43c14a31a0b5bb75f94587ed2f7d715048e8b719a3cc66503fed17d314e42ec",
+      "english_sha256": "b480ee8137cdc677002641d29bba028ed20ff37c692356edb80a06be9297f1f2"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_GitHub交付整理与提交.md",
+      "original_sha256": "1f09e46701ffeebda221794a3dc726513fcefed9cd428f4215bf497e59b0c672",
+      "english_sha256": "be89d4adb35bbfa4d45756c05b03d6996e40eb260e1e32bcd57c6e2692f88d98"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_GitHub全部附件发布与收尾.md",
+      "original_sha256": "41ccb418f3a9c22d9c6cd892ed056d65cd652a4cd711ceed6267b59b9a55541d",
+      "english_sha256": "2f1eec78336f7cb39373f640c8b37cdc515d871b37033357e33056ae93863dd1"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_GitHub登录成功与分支提交.md",
+      "original_sha256": "2655a79d6634b7127e5c14c5ee25037a0a8bea6e8b2d5041d790c85966845c2b",
+      "english_sha256": "95daa8c1401be983bf547281631b7d92686fe5306f4d16dd30dffbf00f98c6ed"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_最新评分库Linux恢复.md",
+      "original_sha256": "a6865f019aa4bb02db8395b2135dd8dcfe43d3db05cd788cf1c7120055dec547",
+      "english_sha256": "dc396b213df093fa43440a9fc1b9890a54f5a9a9d58e922075bbf52b5fe31d5c"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_最终离线打包与收尾.md",
+      "original_sha256": "a8adcbb0cabffa6ed194d6441545b466074fec9d3897421bf569b54a716a4982",
+      "english_sha256": "b07089236045d7ba1f0c2ecbb32a8e3ae209af13344071eade97b8a07383a777"
+    },
+    {
+      "path": "docs/worklogs/2026-11-20_M7_正式复现.md",
+      "original_sha256": "0173fc809a2768f4ee361cd062190f14e5374626c71e4f842c7d04ab2bda47c6",
+      "english_sha256": "ab9113a9619b08420edf59a27b543ec4b9615377604c1049cd586c659817c6f3"
+    },
+    {
+      "path": "docs/三方对接与正式资料接入.md",
+      "original_sha256": "4c744cb0bfebf8b93065f136a7b3610eb5c8c75cc702cc1e496b9ac64b86a3cf",
+      "english_sha256": "50a0891a136ccac9c91446d04bb1eb673429ae8bfa63c32b8340004f71b213f1"
+    },
+    {
+      "path": "docs/本轮交付清单与恢复.md",
+      "original_sha256": "bbadc49f19678d0a769937a26ef0dc19ca3b611bc17ec2881ab794f499d1bf64",
+      "english_sha256": "af82ad3bf99b18870997997ebe1d745caa2ab4e01785fe48b8a1ac5164a7cc36"
+    },
+    {
+      "path": "docs/评估使用说明.md",
+      "original_sha256": "0825797aa07063f63c30bf5498e81967d4a591573252c8f0a0b1761610e81172",
+      "english_sha256": "3a90baed3574d4764c628f8a349cffa8b09d0569f10b11b054f4f1029bf7fdfd"
+    },
+    {
+      "path": "介绍.md",
+      "original_sha256": "bddfab9e55c747aa6fa045010c7984bb0845b84832b21002269985525eb157be",
+      "english_sha256": "82cc73872a7e1efa00280c9d9e4f59caffb47620d37ed10cb1e7c51be6ffa313"
+    },
+    {
+      "path": "app/static/index.html",
+      "original_sha256": "1abc9d3d6ecd82b7879449d85a08342f894bf345a5ef17d7cfcc42df4c0c4a2f",
+      "english_sha256": "61beba70deb71b341f896c928eebbbe764ecc06b1a8e38de43e263cc1c00dfd4"
+    },
+    {
+      "path": "app/static/app.js",
+      "original_sha256": "2fd2dd13b1ef2820ccadfe6d87d20108cf3b639fffe745e78a347f0e120c1c41",
+      "english_sha256": "05d40fe53cab65913c43ff913904d70d175a22d495dbd544b667465a72518c94"
+    },
+    {
+      "path": "tests/support/static/b_debug.html",
+      "original_sha256": "f435f67a46eb4839eb5cdf221fef1635ad2f73d353cf5932b735f350bcf4e4a9",
+      "english_sha256": "38c36d025a67db3656982b33a9c1ea0bccc1478b5e0fd491ff2ae2e38e680ced"
+    }
+  ],
+  "preservation": "Historical numbers, dates, hashes and paths refer to their original snapshots. Source bytes are retained in the archive."
+}

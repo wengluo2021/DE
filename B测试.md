@@ -1,33 +1,33 @@
-# B 模块测试指南（组员使用）
+# B Module Testing Guide (for team members)
 
-本指南用于从 GitHub 获取项目后，独立测试 B 的分块、向量索引、检索 API 和浏览器验证页面。主要命令适用于 **Windows PowerShell + Python 3.13.11 + CPU**，这是目前实际验证通过的环境。
+This guide is for independently testing B's chunking, vector index, retrieval API, and browser verification page after obtaining the project from GitHub. The main commands apply to **Windows PowerShell + Python 3.13.11 + CPU**, which is the environment actually verified so far.
 
-**建议顺序：获取代码 → 安装依赖 → 自动测试 → mock 页面 → 准备模型 → 真实模型测试 → real 页面。**
+**Suggested order: get the code → install dependencies → automated tests → mock page → prepare model → real model tests → real page.**
 
-不需要复制开发者的虚拟环境、不需要开发者电脑的 Python 路径，也不需要 API Key。组员在自己的电脑建立环境，由依赖锁文件安装相同版本的软件；模型由脚本准备到项目目录。
+You do not need to copy the developer's virtual environment, the developer's computer's Python path, or an API Key. Team members set up the environment on their own computers, installing the same software versions from the dependency lock file; the model is prepared into the project directory by a script.
 
-## 1. 这份指南可以测什么
+## 1. What this guide can test
 
-| 测试内容 | 具体检查 |
+| Test content | Specific checks |
 | --- | --- |
-| 两种分块 | 固定窗口、法条结构感知；字符完整覆盖、不超长、位置准确 |
-| 四组条件 | F400、S400、F800、S800；同一正文、同一模型及检索设置 |
-| 向量入库 | 真实 Chroma 持久化、重复建库、失败重试、版本及文件完整性 |
-| 单组检索 | 英文问题编码、top-5 命中、文档与条文信息 |
-| 同题对照 | 同一个问题分别在两组索引中检索，左右展示结果 |
-| 来源追溯 | 返回的片段与冻结正文的 `[start,end)` 切片一致 |
-| 模型保护 | 模型缺失明确报错；输入 token 超限时拒绝推理 |
-| HTTP 接口 | 请求字段、错误格式、建库任务、文档及检索接口 |
+| Two chunking methods | Fixed window, article-structure-aware; complete character coverage, no over-length, accurate positions |
+| Four conditions | F400, S400, F800, S800; same body text, same model and retrieval settings |
+| Vector ingestion | Real Chroma persistence, repeated index building, failure retry, version and file integrity |
+| Single-group retrieval | English question encoding, top-5 hits, document and article information |
+| Same-question comparison | The same question retrieved separately in two group indexes, results shown side by side |
+| Source tracing | Returned chunks match the `[start,end)` slice of the frozen body text |
+| Model protection | Explicit error when the model is missing; reject inference when input tokens exceed the limit |
+| HTTP interface | Request fields, error format, index-building tasks, document and retrieval endpoints |
 
-当前入库的是 **英文合成测试规则**，版本为 `fixture-en-v2`，不是官方法规。它们用于验证 B 模块；A 的官方文档和 30 道标准题、C 的答案生成及引用支持性评估尚未在这里完成。
+What is currently ingested is the **English synthetic test rules**, version `fixture-en-v2`, not official regulations. They are used to verify module B; A's official documents and 30 standard questions, C's answer generation, and citation support evaluation have not yet been completed here.
 
-页面能返回证据，不代表已经调用大模型生成法律答案。当前 `DE.tar` 和原 Dockerfile 对应前端预览，测试 B 请按本指南使用 Python 入口。
+The page returning evidence does not mean an LLM has been called to generate a legal answer. The current `DE.tar` and the original Dockerfile correspond to the frontend preview; to test B, use the Python entry point as described in this guide.
 
-## 2. 获取代码，确认所在目录
+## 2. Get the code and confirm your directory
 
-先安装 Git 和 Python 3.13，推荐与验证环境一致的 **Python 3.13.11**。不需要安装 CUDA 或准备 GPU。
+First install Git and Python 3.13; **Python 3.13.11** is recommended to match the verified environment. No CUDA installation or GPU is needed.
 
-第一次获取仓库，在自己选定的父文件夹执行：
+To get the repository for the first time, run this in a parent folder of your choice:
 
 ```powershell
 git -c core.autocrlf=false clone https://github.com/wengluo2021/DE.git DE
@@ -36,11 +36,11 @@ git config core.autocrlf false
 git rev-parse --short HEAD
 ```
 
-`DE` 是克隆后的文件夹名；本机开发时叫 `DERag`，两者不影响运行。**后续所有命令都在含有 `app`、`tests`、`config` 和 `requirements-b.txt` 的项目根目录执行。** 不要进入 `app` 后再运行。
+`DE` is the folder name after cloning; during local development it was called `DERag`, and the name does not affect operation. **All subsequent commands must be run in the project root directory containing `app`, `tests`, `config`, and `requirements-b.txt`.** Do not enter `app` before running them.
 
-关闭这个仓库的自动换行转换，是为了保持冻结正文的 LF 换行及字节哈希。不要用编辑器批量转换测试语料的换行，也不要仅修改正文而保留旧坐标和哈希。
+Disabling automatic line-ending conversion for this repository is to preserve the LF line endings and byte hashes of the frozen body text. Do not use an editor to batch-convert the line endings of the test corpus, and do not modify only the body text while keeping the old coordinates and hashes.
 
-已有仓库时，先处理或保存自己的修改，再获取团队约定的分支更新：
+If you already have the repository, first handle or save your own changes, then fetch the branch update agreed by the team:
 
 ```powershell
 git status
@@ -48,9 +48,9 @@ git pull --ff-only
 git rev-parse --short HEAD
 ```
 
-测试反馈时记录最后输出的 commit，方便确认大家测试的是同一份代码。首次复现如果旧工作区曾被转换换行，优先使用一个按上述方式新克隆的目录测试。
+When reporting test feedback, record the commit of the last output so everyone can confirm they are testing the same code. For the first reproduction, if the old workspace has had its line endings converted, prefer testing in a directory freshly cloned as described above.
 
-根目录应至少包含：
+The root directory should contain at least:
 
 ```text
 DE/
@@ -75,11 +75,11 @@ DE/
 └─ B测试.md
 ```
 
-如果这些文件缺失，先确认维护者已提交 B 模块、自己已拉取正确版本，不要用其他项目的同名文件凑齐。
+If these files are missing, first confirm that the maintainer has committed module B and that you have pulled the correct version; do not fill the gap with same-named files from other projects.
 
-## 3. 建立自己的环境，安装依赖
+## 3. Set up your own environment and install dependencies
 
-在 PowerShell 中执行：
+Run in PowerShell:
 
 ```powershell
 py -3.13 --version
@@ -89,212 +89,212 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip check
 ```
 
-若 `.venv` 已存在且版本正确，可跳过创建环境这一行。`pip check` 正常应输出：
+If `.venv` already exists and is the correct version, you can skip the environment creation line. `pip check` should normally output:
 
 ```text
 No broken requirements found.
 ```
 
-说明：
+Notes:
 
-- `requirements-b.txt` 是 B 的运行依赖，包括 embedding、Chroma、FastAPI 等。
-- `requirements-b-dev.txt` 是 pytest 等测试依赖，必须与运行依赖一起安装。
-- 仅安装原 `requirements.txt` 不足以测试 B，它主要服务于前端预览。
-- 第一次安装需要联网，包含 PyTorch 等较大的软件包，请等命令结束。
-- 本指南始终显式调用 `.venv` 中的 Python，无需执行激活命令，也不受 PowerShell 激活脚本限制影响。
-- 即使终端前面显示 `(base)`，上面的命令也使用项目自己的 `.venv`。
+- `requirements-b.txt` contains B's runtime dependencies, including embedding, Chroma, FastAPI, etc.
+- `requirements-b-dev.txt` contains test dependencies such as pytest and must be installed together with the runtime dependencies.
+- Installing only the original `requirements.txt` is not enough to test B; it mainly serves frontend preview.
+- The first installation requires internet access and includes large packages such as PyTorch; please wait for the command to finish.
+- This guide always explicitly invokes the Python in `.venv`, so no activation command is needed and it is not affected by PowerShell activation script restrictions.
+- Even if the terminal prompt shows `(base)`, the commands above use the project's own `.venv`.
 
-## 4. 先运行自动测试：不需要下载模型权重
+## 4. First run the automated tests: no model weights need to be downloaded
 
-执行：
+Run:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest tests/test_chunking.py tests/test_retrieval.py tests/test_retrieval_api.py -q --tb=short --basetemp=.pytest_cache/b-member-tests --junitxml=artifacts/b/local-tests.xml
 ```
 
-本指南对应版本的预期结果为：
+The expected result for the version this guide corresponds to is:
 
 ```text
 78 passed in ...s
 ```
 
-运行时间由电脑决定。**通过标准是所有测试通过、进程正常结束**；未来团队增加测试后数量可以变化，不应为了凑成 78 去删用例。
+Runtime depends on the computer. **The pass criterion is that all tests pass and the process exits normally**; the count may change as the team adds tests in the future, and test cases should not be deleted just to make the count 78.
 
-这一步不读取真实模型权重，大部分编码使用测试向量，但真的执行分块、临时 Chroma 入库、API 调用及异常检查。它不是“78 道法规题全部答对”。
+This step does not read real model weights; most encoding uses test vectors, but it does actually execute chunking, temporary Chroma ingestion, API calls, and exception checks. It is not "all 78 regulation questions answered correctly".
 
-测试报告在 `artifacts/b/local-tests.xml`。`--basetemp` 指定测试用的临时目录，该目录会由 pytest 管理；不要把业务数据放进去。如果旧临时目录因其他账户创建而无权清理，改用一个新的目录，例如 `.pytest_cache/b-member-tests-2`。
+The test report is in `artifacts/b/local-tests.xml`. `--basetemp` specifies the temporary directory for tests, which is managed by pytest; do not put business data in it. If the old temporary directory was created by another account and cannot be cleaned up, use a new directory, for example `.pytest_cache/b-member-tests-2`.
 
-## 5. 先看 mock 页面：检查流程和分块
+## 5. First look at the mock page: check the flow and chunking
 
-执行：
+Run:
 
 ```powershell
 $env:DERAG_B_DEBUG_MODE = 'mock'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-终端出现 `Uvicorn running on http://127.0.0.1:8767` 后，保持它运行，在浏览器打开：
+After `Uvicorn running on http://127.0.0.1:8767` appears in the terminal, keep it running and open in a browser:
 
-- 验证页面：[http://127.0.0.1:8767/b-debug](http://127.0.0.1:8767/b-debug)
-- 接口文档：[http://127.0.0.1:8767/docs](http://127.0.0.1:8767/docs)
+- Verification page: [http://127.0.0.1:8767/b-debug](http://127.0.0.1:8767/b-debug)
+- API docs: [http://127.0.0.1:8767/docs](http://127.0.0.1:8767/docs)
 
-页面应显示 **MOCK** 和 `fixture-en-v2`。点击“建立四组测试索引”，等待任务状态变成 `completed`。
+The page should show **MOCK** and `fixture-en-v2`. Click "Build four test index groups" and wait for the task status to become `completed`.
 
-mock 使用测试向量，适合先确认程序、按钮、索引和接口能工作；**mock 排名不用于判断语义检索是否正确**。判断“问题是否找对文档”，需要继续完成下面的真实模型测试。
+The mock uses test vectors and is suitable for first confirming that the program, buttons, indexes, and APIs work; **mock rankings are not used to judge whether semantic retrieval is correct**. To judge "whether the question finds the right document", continue with the real model tests below.
 
-也可以不打开页面，单独执行 mock 建库命令；首次测试时二选一即可：
+You can also skip the page and run the mock index-building command separately; for the first test, either one is fine:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.build_indexes --config config/retrieval.example.json --fixtures --mock
 ```
 
-这个命令应该输出 `state` 为 `completed`、含四组条件的 JSON。
+This command should output JSON with `state` as `completed` and containing four condition groups.
 
-## 6. 准备真实模型，再做检索测试
+## 6. Prepare the real model, then run retrieval tests
 
-### 6.1 准备固定版本权重
+### 6.1 Prepare fixed-version weights
 
-如果 mock 服务正在运行，先在它的终端按 **Ctrl+C** 停止，然后执行：
+If the mock service is running, first stop it in its terminal with **Ctrl+C**, then run:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.fetch_embedding --config config/retrieval.example.json
 ```
 
-当前统一模型为：
+The current unified model is:
 
-| 配置 | 值 |
+| Configuration | Value |
 | --- | --- |
-| 模型 | `BAAI/bge-m3` |
-| 固定 revision | `5617a9f61b028005a4858fdac845db406aefb181` |
-| 输出维度 | 1024 |
-| 推理设备 | CPU |
-| 模型目录 | `models/embedding/` |
-| 文件校验清单 | `models/embedding/derag-model-manifest.json` |
+| Model | `BAAI/bge-m3` |
+| Fixed revision | `5617a9f61b028005a4858fdac845db406aefb181` |
+| Output dimension | 1024 |
+| Inference device | CPU |
+| Model directory | `models/embedding/` |
+| File checksum manifest | `models/embedding/derag-model-manifest.json` |
 
-首次模型文件下载约 2.3 GB，需要能访问 Hugging Face。**组员使用同一套权重，不是每个人换一个模型。** 脚本将文件下载到当前项目，并记录、校验文件哈希。
+The first model file download is about 2.3 GB and requires access to Hugging Face. **Team members use the same set of weights; each person does not switch to a different model.** The script downloads the files into the current project and records and verifies file hashes.
 
-如果开发者已经把完整的 `models/embedding/` 文件夹通过其他方式交给你，可复制到相同位置，务必包含校验清单及所有子目录。文件完整且版本一致时可跳过下载，直接执行真实测试。不要只复制某一个权重文件或个人虚拟环境。
+If a developer has already given you the complete `models/embedding/` folder by other means, you can copy it to the same location; be sure to include the checksum manifest and all subdirectories. If the files are complete and the version matches, you can skip the download and run the real tests directly. Do not copy only a single weight file or a personal virtual environment.
 
-GitHub 普通代码仓库不包含这些权重，因此刚 clone 的项目还不能立即进行 real 检索。模型准备完成后，当前 B 模块的编码和检索不需要网络或外部模型 API。
+Ordinary GitHub code repositories do not contain these weights, so a freshly cloned project cannot immediately perform real retrieval. Once the model is prepared, the current module B encoding and retrieval do not require the network or an external model API.
 
-### 6.2 运行真实模型测试
+### 6.2 Run the real model tests
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.smoke_embedding --config config/retrieval.example.json --output artifacts/b/local-real-smoke.json
 ```
 
-脚本会自动构建或复用当前版本的四组 real 索引，不需要提前启动 uvicorn。第一次导入、加载权重和建库需要等待，耗时取决于 CPU 和磁盘。
+The script automatically builds or reuses the four real index groups for the current version; there is no need to start uvicorn in advance. The first import, weight loading, and index building require waiting, and the time depends on the CPU and disk.
 
-预期最终输出：
+Expected final output:
 
 ```text
 PASS: 12 real retrieval checks, tokenizer overflow and HTTP APIs; record: ...
 ```
 
-它实际检查：
+What it actually checks:
 
-1. 真实模型成功加载，并输出 1024 维向量。
-2. 三个英文问题分别在四组条件下检索，共 12 次；每次第一名的文档主题正确。
-3. 每个返回片段与冻结正文的 `[start,end)` 完全一致，条文 ID 和来源 URL 对应正确。
-4. 故意超长的输入被拦截，返回 `MODEL_INPUT_TOO_LONG`。
-5. 真实服务的状态、搜索和对照 HTTP 接口能正常工作。
+1. The real model loads successfully and outputs a 1024-dimensional vector.
+2. Three English questions are retrieved under four condition sets, 12 retrievals in total; each time the top-ranked document has the correct topic.
+3. Every returned chunk exactly matches the frozen text's `[start,end)`, and the article ID and source URL correspond correctly.
+4. Deliberately oversized input is blocked and returns `MODEL_INPUT_TOO_LONG`.
+5. The real service's status, search, and comparison HTTP endpoints work correctly.
 
-测试中可能出现：
+The test may show:
 
 ```text
 Token indices sequence length is longer ... (9002 > 8192)
 ```
 
-这是脚本故意用 `"law " * 9000` 测试超限保护。**仅在这项故意超限测试中，且最后出现 PASS 时，属于预期结果。** 正常问题或建库意外超限、最后显示 FAILED，都需要排查。
+This is the script deliberately using `"law " * 9000` to test the over-limit protection. **Only in this deliberate over-limit test, and only when PASS appears at the end, is this an expected result.** If a normal question or index build unexpectedly exceeds the limit and FAILED is shown at the end, it needs investigation.
 
-本次运行记录在 `artifacts/b/local-real-smoke.json`；仓库内的 `real-smoke.json` 和 `clean-real-smoke.json` 是开发者已有的验证记录。看到别人的报告不等于自己这台电脑已通过测试，应以刚执行的命令结果为准。
+This run is recorded in `artifacts/b/local-real-smoke.json`; the repository's `real-smoke.json` and `clean-real-smoke.json` are the developer's existing verification records. Seeing someone else's report does not mean your own computer has passed the test; rely on the results of the command you just ran.
 
-## 7. 在 real 页面逐项验收
+## 7. Item-by-item acceptance on the real page
 
-启动：
+Start:
 
 ```powershell
 $env:DERAG_B_DEBUG_MODE = 'real'
 .\.venv\Scripts\python.exe -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-重新打开或刷新 [B 验证页](http://127.0.0.1:8767/b-debug)。页面必须显示 **REAL**。修改环境变量不会改变已经启动的旧进程，mock 切 real 时一定要停止旧服务，再执行启动命令。
+Reopen or refresh [B verification page ](http://127.0.0.1:8767/b-debug). The page must show **REAL**. Changing environment variables does not affect an already-started old process; when switching from mock to real, be sure to stop the old service before running the start command.
 
-### 7.1 检查运行状态和索引
+### 7.1 Check run status and index
 
-语料应为 `fixture-en-v2`。真实测试已经建库成功时，页面应直接显示四组索引就绪；首次未建库时点击“建立四组测试索引”，等待 `completed`。
+The corpus should be `fixture-en-v2`. If the real test has already built the index successfully, the page should directly show all four index sets ready; if no index has been built yet, click "Build four test index sets" and wait `completed`.
 
-同一份当前合成语料的预期总块数如下，**是四份文档合计，不是当前选中文档的块数**：
+The expected total chunk counts for the same current synthetic corpus are as follows, **these are totals across all four documents, not the chunk count of the currently selected document**:
 
-| 条件 | 方法 | 每块字符上限 | 总块数 | 实际最长块 |
+| Condition | Method | Max characters per chunk | Total chunks | Actual longest chunk |
 | --- | --- | ---: | ---: | ---: |
-| F400 | 固定窗口 | 400 | 34 | 400 |
-| S400 | 结构感知 | 400 | 47 | 394 |
-| F800 | 固定窗口 | 800 | 18 | 800 |
-| S800 | 结构感知 | 800 | 31 | 799 |
+| F400 | Fixed window | 400 | 34 | 400 |
+| S400 | Structure-aware | 400 | 47 | 394 |
+| F800 | Fixed window | 800 | 18 | 800 |
+| S800 | Structure-aware | 800 | 31 | 799 |
 
-这里按 Python 字符计数，包括空格、换行和标点，400/800 不是英文单词数，也不是 token 数。算法仍然只有两种，四组是“两种方法 × 两个长度”。
+Counting here is by Python characters, including spaces, newlines, and punctuation; 400/800 is not an English word count, nor a token count. There are still only two algorithms; the four sets are "two methods × two lengths".
 
-同一版本重复点击建库应复用已校验的索引，块数不应翻倍。四组共享同一实验版本，但 mock 和 real 的模型不同，因此二者索引版本不同是正常的。
+Clicking build again for the same version should reuse the already-validated index, and chunk counts should not double. The four sets share the same experiment version, but mock and real use different models, so it is normal for their index versions to differ.
 
-### 7.2 “01 / 文档与分块”怎么测
+### 7.2 How to test "01 / Documents and chunks"
 
-选择 `Synthetic Personal Information Rules (not official legislation)`，分别切换 F400、S400、F800、S800。
+Select `Synthetic Personal Information Rules (not official legislation)`, and switch between F400, S400, F800, and S800.
 
-正确现象：
+Correct behavior:
 
-- 左侧是英文冻结原文，包含 `Chapter`、`Article`；切换分块条件不会改写左侧正文。
-- 右侧切块来自服务器，条件变化时块数、边界可能变化。
-- 相邻块的前一个 `end` 等于后一个 `start`，第一块从 0 开始，最后覆盖到全文末尾。
-- 点击“查看来源片段”，看到的片段、位置及完整正文应相互对应。
-- 结构法可以产生不足上限的块；超长条文会继续按句子/段落拆分，并非永远“一条一块”。
+- The left side is the frozen English source text, containing `Chapter` and `Article`; switching chunking conditions does not rewrite the left-side text.
+- The right-side chunks come from the server; when the condition changes, chunk counts and boundaries may change.
+- The previous chunk's `end` equals the next chunk's `start`, the first chunk starts at 0, and the last covers through the end of the full text.
+- Clicking "View source chunk" should show a chunk, position, and full text that correspond to each other.
+- The structure-aware method can produce chunks below the limit; overlong articles continue to be split by sentence/paragraph, rather than always being "one article, one chunk".
 
-短文档 `Synthetic API Contract Fixture (not official legislation)` 只有 25 个字符，四组都只切出一块是正确的。它适合核对字段，不适合展示长文档切分差异。
+The short document `Synthetic API Contract Fixture (not official legislation)` has only 25 characters, so it is correct that all four sets produce only one chunk. It is suitable for checking fields, not for showing chunking differences on long documents.
 
-### 7.3 “02 / 单组检索”怎么测
+### 7.3 How to test "02 / Single-set retrieval"
 
-依次输入以下问题，选择条件后点击“检索 top-5”：
+Enter the following questions in order, select a condition, and click "Retrieve top-5":
 
-| 英文问题 | real 模式下预期第一名 `document_id` |
+| English question | Expected top result in real mode `document_id` |
 | --- | --- |
 | `How can an individual request deletion of personal information?` | `privacy` |
 | `Can a reader renew a library book when the loan period expires?` | `library` |
 | `What should a bus driver do after noticing an abnormal road condition?` | `travel` |
 
-可以逐一切换四个条件进行检查，自动真实测试已经覆盖这 12 种组合。结果中的正文、文档标题、Article 标签应为英文。
+You can switch through the four conditions one by one to check; the automated real test already covers these 12 combinations. The text, document titles, and Article labels in the results should be in English.
 
-正确结果不是“分数必须等于某个小数”，而是主题、来源和原文切片对应正确。`score` 越高表示该度量下越相关，不是概率，也不是法律正确率。不同机器可能出现并列片段顺序差异，不应要求截图中的每一个排名与耗时完全一致。
+The correct result is not "the score must equal some decimal", but that the topic, source, and source-text slice correspond correctly. A higher `score` means more relevant under that metric; it is not a probability, nor a legal accuracy rate. Different machines may show differences in the order of tied chunks, so you should not require every ranking and timing in a screenshot to match exactly.
 
-### 7.4 “03 / 同题对照”怎么测
+### 7.4 How to test "03 / Same-question comparison"
 
-输入同一个英文问题，先比较左侧 F400 与右侧 S400，再比较 F800 与 S800，点击“使用上方问题对照”。
+Enter the same English question, first compare F400 on the left with S400 on the right, then compare F800 with S800, and click "Compare using the question above".
 
-正确现象：
+Correct behavior:
 
-- 两侧分别返回各自条件的 top-5 证据。
-- 两侧共用同一个问题、语料版本和索引版本，不是把左侧结果复制给右侧。
-- 两侧片段边界和返回字符总数可以不同，也可能部分相同；不要求结构法分数必然更高。
-- 修改问题后，旧结果会清空，避免把上一道题的答案误当作新题结果。
+- Each side returns the top-5 evidence for its own condition.
+- Both sides share the same question, corpus version, and index version; the left-side results are not copied to the right side.
+- The chunk boundaries and total returned characters on the two sides may differ, and may also be partly the same; the structure-aware method is not required to score higher.
+- After the question is modified, old results are cleared, to avoid mistaking the previous question's answer for the new question's result.
 
-此页用于观察检索证据差异。不能仅凭三道合成问题宣布哪种方法在真实法规上更准确。
+This page is for observing differences in retrieval evidence. You cannot declare which method is more accurate on real regulations based on just three synthetic questions.
 
-### 7.5 原文引用怎么核验
+### 7.5 How to verify source citations
 
-对任意命中点击“查看来源片段”，检查文档 ID、条文 ID、`chunk_id`、`start/end`、来源 URL 和全文。
+For any hit, click "View source chunk" and check the document ID, article ID, `chunk_id`, `start/end`, source URL, and full text.
 
-例如 `[100,180)` 的意思是从第 100 个 Python 字符开始，到第 180 个之前结束，长度为 80。后端必须满足：
+For example, `[100,180)` means starting from the 100-th Python character and ending before the 180-th, with a length of 80. The backend must satisfy:
 
 ```python
 hit["text"] == document["text"][hit["start"]:hit["end"]]
 ```
 
-不要把这个下标直接当成字节位置；浏览器 JavaScript 对部分 Unicode 字符的计数也与 Python 不同，应以后端校验为准。当前英文样例为 ASCII，但保留了中文和 emoji 的自动回归测试。
+Do not treat this index directly as a byte position; browser JavaScript counts some Unicode characters differently from Python, so the backend validation is authoritative. The current English samples are ASCII, but automated regression tests for Chinese and emoji are retained.
 
-“能定位到原文”是 B 的验收目标；“这段证据是否足以支持大模型回答中的每个主张”是后续 C 的评估目标。`example.org` 是样例来源占位链接，不要求打开真实法规网页。
+"Can locate the original text" is B's acceptance goal; "whether this evidence is sufficient to support every claim in the large model's answer" is the subsequent evaluation goal for C. `example.org` is a placeholder link for the sample source; opening a real regulation webpage is not required.
 
-## 8. 不用页面也能检查 API
+## 8. Check the API without the page
 
-保持 real 服务运行，另开一个 PowerShell 窗口。下面的请求使用已经启动的服务：
+Keep the real service running and open another PowerShell window. The requests below use the service that is already started:
 
 ```powershell
 Invoke-RestMethod 'http://127.0.0.1:8767/b-debug/status' | ConvertTo-Json -Depth 20
@@ -309,9 +309,9 @@ $body = @{
 Invoke-RestMethod -Uri 'http://127.0.0.1:8767/api/search' -Method Post -ContentType 'application/json' -Body $body | ConvertTo-Json -Depth 20
 ```
 
-状态应包含 `mode: real`、`ready: true` 和当前语料版本；搜索响应包含 `corpus_version`、`index_version`、`condition`、`hits`、`timing_ms`，第一名文档应为 `library`。
+The status should include `mode: real`, `ready: true`, and the current corpus version; the search response includes `corpus_version`, `index_version`, `condition`, `hits`, `timing_ms`, and the top document should be `library`.
 
-也可以在 `/docs` 中展开接口，点击 `Try it out`。同题对照请求示例：
+You can also expand the endpoints in `/docs` and click `Try it out`. Example same-question comparison request:
 
 ```json
 {
@@ -322,50 +322,50 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8767/api/search' -Method Post -ContentT
 }
 ```
 
-发送到 `POST /api/compare`。注意 compare 不接收 `top_k`，两侧固定 top-5。
+Send to `POST /api/compare`. Note that compare does not accept `top_k`; both sides are fixed at top-5.
 
-## 9. 文件保存在哪里，哪些需要从 GitHub 获取
+## 9. Where files are saved and which ones need to be obtained from GitHub
 
-| 路径 | 用途 | 获取方式 |
+| Path | Purpose | How to obtain |
 | --- | --- | --- |
-| `app/retrieval/`、`app/api/` | B 的实现 | GitHub 源码 |
-| `scripts/`、`tests/`、`config/` | 模型/建库脚本、测试、配置与冻结语料 | GitHub 源码 |
-| `requirements-b*.txt`、`pytest.ini` | 依赖锁及测试配置 | GitHub 源码 |
-| `.venv/` | 当前电脑的解释器环境 | 组员自行创建，不上传 |
-| `models/embedding/` | 固定版本模型与校验清单 | 脚本下载或复制完整文件夹，不上传普通 Git |
-| `data/b-fixtures/mock/` | mock 四组索引 | 在组员电脑自动生成 |
-| `data/b-fixtures/real/` | real 四组索引 | 在组员电脑自动生成 |
-| `artifacts/b/local-tests.xml` | 组员本次自动测试报告 | 本机测试生成 |
-| `artifacts/b/local-real-smoke.json` | 组员本次真实模型报告 | 本机测试生成 |
-| `.pytest_cache/` | 临时测试目录 | 本机自动生成 |
+| `app/retrieval/`, `app/api/` | B implementation | GitHub source |
+| `scripts/`, `tests/`, `config/` | Model/index-building scripts, tests, configuration, and frozen corpus | GitHub source |
+| `requirements-b*.txt`, `pytest.ini` | Dependency lock and test configuration | GitHub source |
+| `.venv/` | Interpreter environment on the current computer | Created by each member; not uploaded |
+| `models/embedding/` | Fixed-version model and verification manifest | Download via script or copy the complete folder; not uploaded to regular Git |
+| `data/b-fixtures/mock/` | mock four index sets | Generated automatically on the member's computer |
+| `data/b-fixtures/real/` | real four index sets | Generated automatically on the member's computer |
+| `artifacts/b/local-tests.xml` | This run's automated test report from the member | Generated by local testing |
+| `artifacts/b/local-real-smoke.json` | This run's real-model report from the member | Generated by local testing |
+| `.pytest_cache/` | Temporary test directory | Generated automatically on the local machine |
 
-不需要从开发者电脑复制 Chroma 索引。**由相同源码、语料、配置和模型在自己的目录重新建库，才是在检验复现。** 个人报告可以发给组员对照，不必随业务代码反复提交。已有报告与历史中文报告在 `artifacts/b/`，不要把历史结果当作当前英文版本的结果。
+There is no need to copy the Chroma index from the developer's computer. **Rebuilding the index in your own directory from the same source code, corpus, configuration, and model is what tests reproduction.** Personal reports can be sent to other members for comparison and do not need to be repeatedly committed with the business code. Existing reports and historical Chinese reports are in `artifacts/b/`; do not treat historical results as results for the current English version.
 
-## 10. 常见问题
+## 10. FAQ
 
-| 问题 | 处理方式 |
+| Problem | How to handle |
 | --- | --- |
-| `py` 找不到或没有 Python 3.13 | 安装 Python 3.13；若使用安装路径，路径由自己电脑决定，不要填写开发者的磁盘路径 |
-| `No module named chromadb`、`sentence_transformers` 或 `pytest` | 使用 `.venv` 中的 Python 重新安装两份 B 依赖；检查是否只装了原 `requirements.txt` |
-| `No module named scripts` 或 `tests.support.b_app` | 切回项目根目录执行，确认 `scripts/`、`tests/` 已从仓库拉取 |
-| real 模式提示模型缺失 | 先运行 `scripts.fetch_embedding`，或复制完整模型目录和清单 |
-| 模型下载失败 | 检查本机网络能否访问 Hugging Face；也可由能下载的组员提供同一固定 revision 的完整目录 |
-| 模型或语料校验失败 | 核对版本、文件完整性、LF 换行及是否手工编辑过；恢复同版本完整文件，不要绕过哈希校验 |
-| `INDEX_NOT_READY` 或按钮不可用 | 先建立四组索引，等待 `completed`；若任务失败，查看页面错误和服务终端日志 |
-| `VERSION_MISMATCH` | 使用 `fixture-en-v2`，更新代码及配置并重启服务；旧中文 `fixture-v1` 不能用于当前活动语料 |
-| 页面还是中文正文、旧问题或旧版本 | 确认进入 `/b-debug`，停止旧服务后在更新目录重新启动，再强制刷新浏览器 |
-| 页面显示 MOCK，但已经改了环境变量 | 环境变量只影响新进程；Ctrl+C 停止旧进程，再设置 real 并启动 |
-| 端口 8767 被占用 | 使用原服务，或停止自己启动的旧服务；也可改为 `--port 8768` 并同步更改浏览器与 API 地址 |
-| `127.0.0.1` 在别的电脑打不开 | 每位组员在自己的电脑运行，访问自己的 localhost；这里的命令没有开放局域网服务 |
-| 测试临时目录无权清理 | 更换 `--basetemp` 为新的专用目录，不要用管理员命令删除其他人的工作目录 |
-| 自动测试全通过，但 mock 第一名主题不对 | mock 不用于语义排序判断，完成 real 测试再检查三道英文题 |
-| 页面没有完整大模型回答 | 正常；B 当前只提供检索证据，完整回答由 C 后续接入 |
+| `py` not found or no Python 3.13 | Install Python 3.13; if using an installation path, the path is determined by your own computer—do not enter the developer's disk path |
+| `No module named chromadb`, `sentence_transformers`, or `pytest` | Reinstall both B dependencies using the Python in `.venv`; check whether only the original `requirements.txt` is installed |
+| `No module named scripts` or `tests.support.b_app` | Switch back to the project root directory and run; confirm that `scripts/` and `tests/` have been pulled from the repository |
+| real mode reports the model is missing | First run `scripts.fetch_embedding`, or copy the complete model directory and manifest |
+| Model download fails | Check whether the local network can access Hugging Face; alternatively, a member who can download it can provide the complete directory for the same fixed revision |
+| Model or corpus verification fails | Check the version, file integrity, LF line endings, and whether files were manually edited; restore the complete files of the same version and do not bypass hash verification |
+| `INDEX_NOT_READY` or the button is unavailable | First build the four index sets and wait for `completed`; if the task fails, check the page error and the service terminal logs |
+| `VERSION_MISMATCH` | Use `fixture-en-v2`, update the code and configuration, and restart the service; the old Chinese `fixture-v1` cannot be used for the current active corpus |
+| The page still shows Chinese text, old questions, or an old version | Confirm you are in `/b-debug`, stop the old service, restart in the updated directory, and then force-refresh the browser |
+| The page shows MOCK, but the environment variable has already been changed | Environment variables only affect new processes; press Ctrl+C to stop the old process, then set real and start again |
+| Port 8767 is in use | Use the original service, or stop the old service you started; you can also change to `--port 8768` and update the browser and API addresses accordingly |
+| `127.0.0.1` cannot be opened on another computer | Each member runs it on their own computer and accesses their own localhost; the commands here do not expose a LAN service |
+| No permission to clean up the test temporary directory | Change `--basetemp` to a new dedicated directory; do not use administrator commands to delete other people's working directories |
+| All automated tests pass, but the mock top result has the wrong topic | mock is not used for semantic ranking judgments; complete the real test before checking the three English questions |
+| The page has no complete large-model answer | This is normal; B currently only provides retrieval evidence, and the complete answer will be integrated later by C |
 
-## 11. macOS / Linux 组员怎么运行
+## 11. How macOS / Linux members run it
 
-源码不包含 Windows 的个人路径。macOS / Linux 可以按相同原理创建环境，命令形式如下；**当前 B 依赖锁和执行流程只完成了 Windows CPU 实测，以下是其他系统的运行方式，尚未跨平台验收。**
+The source code does not contain personal Windows paths. macOS / Linux can create the environment on the same principle, with commands in the following form; **the current B dependency lock and execution flow have only been tested on Windows CPU, and the following are ways to run on other systems that have not yet been accepted across platforms.**
 
-先按第 2 节克隆仓库并进入项目根目录，安装 Python 3.13，然后执行：
+First clone the repository as described in section 2 and enter the project root directory, install Python 3.13, and then run:
 
 ```bash
 python3.13 -m venv .venv
@@ -377,41 +377,41 @@ python3.13 -m venv .venv
 DERAG_B_DEBUG_MODE=real ./.venv/bin/python -m uvicorn tests.support.b_app:app --host 127.0.0.1 --port 8767
 ```
 
-同样打开 `/b-debug`。不使用 Docker 时需要在本机安装 Python 和依赖；不是双击即可免安装运行。如果某个锁定包没有对应系统或芯片架构的安装包，记录包名、Python 版本和完整错误，由团队统一验证兼容方案，不要各自随意更换版本后混用实验结果。
+Likewise, open `/b-debug`. When not using Docker, Python and dependencies must be installed locally; this is not a double-click, installation-free run. If a locked package has no installation package for the corresponding system or chip architecture, record the package name, Python version, and full error, and let the team uniformly verify a compatible solution; do not each arbitrarily change versions and then mix experimental results.
 
-## 12. 测试完成后怎样反馈
+## 12. How to report back after testing
 
-组员可以按下面格式反馈，便于定位问题：
+Members can provide feedback in the following format to help locate problems:
 
 ```text
 Git commit：
-操作系统 / CPU 架构：
-Python 版本：
-pip check：通过 / 失败
-自动测试：例如 78 passed
-真实测试：PASS / FAILED / 尚未准备模型
-页面模式：REAL / MOCK
-语料版本：fixture-en-v2
-四组总块数：F400=34，S400=47，F800=18，S800=31
-三道英文问题第一名：privacy / library / travel
-来源片段核验：通过 / 失败
-如果失败：执行的完整命令、完整错误、服务终端日志
-附件：local-tests.xml、local-real-smoke.json 或页面截图
+Operating system / CPU architecture:
+Python version:
+pip check: pass / fail
+Automated tests: e.g. 78 passed
+Real test: PASS / FAILED / model not yet prepared
+Page mode: REAL / MOCK
+Corpus version: fixture-en-v2
+Total chunks for the four groups: F400=34, S400=47, F800=18, S800=31
+Top result for the three English questions: privacy / library / travel
+Source snippet verification: passed / failed
+If failed: the full command executed, the full error, and the service terminal logs
+Attachments: local-tests.xml, local-real-smoke.json, or page screenshots
 ```
 
-不要只发“打不开”或最后一行报错；要区分依赖安装、模型下载、建库、检索和页面阶段。Windows 与其他系统的耗时不要求相同，同主题内并列片段的顺序也不要求逐条一致。
+Do not just send "it won't open" or the last line of an error; distinguish between the dependency installation, model download, index building, retrieval, and page stages. Windows and other systems are not required to have the same timings, and tied snippets within the same topic are not required to be in identical order.
 
-## 13. 维护者提交前检查
+## 13. Maintainer pre-commit checklist
 
-提交文档时，要同步提交当前 B 实现、依赖和英文测试语料。**仅提交本文件，组员无法运行尚未上传的 B 模块。** 尤其确认以下新增文件已进入本次提交，而不是仍停留在本机 untracked 状态：
+When committing the documentation, also commit the current B implementation, dependencies, and English test corpus. **Committing only this file means team members cannot run the B module that has not yet been uploaded.** In particular, confirm that the following new files are included in this commit rather than still sitting untracked on the local machine:
 
 - `app/api/`、`app/retrieval/`。
 - `scripts/`、`config/retrieval.example.json`。
-- `tests/`，包含英文原文 `.txt`、JSON 元数据、问题文件、旧中文回归样例及验证页面。
+- `tests/`, containing the English source text `.txt`, JSON metadata, question files, legacy Chinese regression samples, and the verification page.
 - `requirements-b.txt`、`requirements-b-dev.txt`、`pytest.ini`。
-- `.gitignore`、`README.md`、`B开发文档.md`、`B测试.md`；`.python-version` 保持正确版本。
+- `.gitignore`, `README.md`, `B开发文档.md`, `B测试.md`; keep `.python-version` at the correct version.
 
-推送前可只读检查：
+Before pushing, you can do a read-only check:
 
 ```powershell
 git status --short
@@ -419,6 +419,6 @@ git diff --cached --stat
 git ls-files app/api app/retrieval scripts config tests requirements-b.txt requirements-b-dev.txt pytest.ini B测试.md
 ```
 
-第一条查看还有什么没有提交；第二条检查已经暂存的内容；第三条确认文件是否已经被 Git 跟踪。空输出或缺少目录时应检查是否漏加文件。不要上传 `.venv/`、模型权重、索引、测试临时目录或个人 IDE 配置。
+The first command shows what is still uncommitted; the second checks what has been staged; the third confirms whether the files are already tracked by Git. If the output is empty or a directory is missing, check whether files were left out. Do not upload `.venv/`, model weights, indexes, test temporary directories, or personal IDE configurations.
 
-推送后最好让组员在一个新目录 clone，按本指南从头执行一次。这样能检查是否遗漏文件，而不是依赖维护者电脑上早已存在的环境和数据。
+After pushing, it is best to have a team member clone into a new directory and follow this guide from the beginning. This checks for missing files rather than relying on the environment and data that already exist on the maintainer's computer.

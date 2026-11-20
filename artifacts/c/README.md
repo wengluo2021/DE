@@ -1,3 +1,3 @@
-C阶段验证记录只保存脱敏配置、测试结果与人工可核验的阶段证据。
+The Phase C verification record stores only sanitized configuration, test results, and stage evidence that can be manually verified.
 
-`.pytest/` 与 `.pytest_cache/` 为可重建测试临时目录，已忽略；不要存放个人文件或凭据。阶段交接放在 `docs/handoffs/`，不得把模拟结果当正式课程实验数字。
+`.pytest/` and `.pytest_cache/` are rebuildable temporary test directories and are ignored; do not store personal files or credentials there. Stage handoffs go in `docs/handoffs/`; simulated results must not be treated as formal course experiment figures.

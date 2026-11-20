@@ -1,144 +1,144 @@
-# eu_consumer_rights_2011_83 原文对照复核
+# eu_consumer_rights_2011_83 source text comparison review
 
-AI 辅助原文复核。复核日期：2026-11-19。
+AI-assisted source text review. Review date: 2026-11-19.
 
-本报告直接阅读原始 HTML 的 DOM，再与清洗全文的 Python 字符切片对照。未做浏览器视觉检查。没有把清洗脚本或校验器的成功输出当作结论依据；下列区间均用本次 txt 重新截取，并与 HTML 节点文字核对。正式快照和清洗产物未改。
+This report reads the DOM of the original HTML directly, then compares it with Python character slices of the cleaned full text. No browser visual inspection was performed. The successful output of the cleaning script or validator was not used as the basis for conclusions; all intervals below were re-extracted from this round's txt and checked against the HTML node text. The official snapshot and cleaned artifacts were not modified.
 
-## 绑定的文件版本
+## Bound file versions
 
-| 文件 | SHA-256 |
+| File | SHA-256 |
 | --- | --- |
 | `data/raw/eu_consumer_rights_2011_83.html` | `7812747113a74ef3a2b2e8d2d3fb067ed416280f415aed76dc255083b54e892e` |
 | `data/processed/eu_consumer_rights_2011_83.txt` | `75acf22af53bf1878fe2750757b5ecd5c1230236aaab4fc543c1d029b3bf5689` |
 | `data/processed/eu_consumer_rights_2011_83.json` | `f7ed11c4e7817cc58c23498ef1b87b87e885996f8a075a02365782e44b84829a` |
 
-HTML 哈希与 `data/sources.json` 中该文档的快照哈希一致。txt 为 103514 个 Python 字符、103799 个 UTF-8 字节，换行是 LF。JSON 的 `cleaning_rule_version` 为 `eurlex_html_v1`。`character_offsets` 标明单位是 Python 字符，区间是 `[start, end)`，基准是完整清洗 txt。
+The HTML hash matches the snapshot hash of this document in `data/sources.json`. The txt is 103514 Python characters and 103799 UTF-8 bytes, with LF line endings. The JSON's `cleaning_rule_version` is `eurlex_html_v1`. `character_offsets` states that the unit is Python characters, the interval is `[start, end)`, and the basis is the complete cleaned txt.
 
-另外对条文、章节、recital、附件、表格、脚注及其正文块做了 547 次独立切片核对，`clean_text[start:end]` 与保存文本全部一致。
+In addition, 547 independent slice checks were performed on provisions, chapters, sections, recitals, annexes, tables, footnotes, and their body blocks; `clean_text[start:end]` all match the saved text.
 
 ## 1. Article 1
 
-- HTML：`div#art_1`，标题 `p#d1e663-64-1`，副标题 `div#art_1.tit_1`。父章节是 `div#cpt_I`（`p#d1e655-64-1` 为 CHAPTER I，`div#cpt_I.tit_1` 为 SUBJECT MATTER, DEFINITIONS AND SCOPE）。
-- JSON：`eu_consumer_rights_2011_83:article:1`，`chapter_id` 为 `eu_consumer_rights_2011_83:chapter:I`。章节区间 `[44937, 53591)`，条文区间 `[44986, 45342)`，落在章节内。
-- 条文切片以 `Article 1 / Subject matter / The purpose of this Directive is...` 开头。
-- 正文块 `eu_consumer_rights_2011_83:article:1:block:1`，`[45011, 45342)`。切片与 HTML 正文一致：
+- HTML: `div#art_1`, title `p#d1e663-64-1`, subtitle `div#art_1.tit_1`. The parent chapter is `div#cpt_I` (`p#d1e655-64-1` is CHAPTER I, `div#cpt_I.tit_1` is SUBJECT MATTER, DEFINITIONS AND SCOPE).
+- JSON: `eu_consumer_rights_2011_83:article:1`, `chapter_id` is `eu_consumer_rights_2011_83:chapter:I`. Chapter interval `[44937, 53591)`, provision interval `[44986, 45342)`, which falls within the chapter.
+- The provision slice begins with `Article 1 / Subject matter / The purpose of this Directive is...`.
+- Body block `eu_consumer_rights_2011_83:article:1:block:1`, `[45011, 45342)`. The slice matches the HTML body text:
 
 > The purpose of this Directive is, through the achievement of a high level of consumer protection, to contribute to the proper functioning of the internal market by approximating certain aspects of the laws, regulations and administrative provisions of the Member States concerning contracts concluded between consumers and traders.
 
-- 对照结果：标题、副标题、唯一一段正文和第一章归属一致。
-- 差异：无内容差异。不阻碍验收。
+- Comparison result: title, subtitle, the single body paragraph, and chapter I attribution are consistent.
+- Differences: no content differences. Does not block acceptance.
 
 ## 2. Article 18
 
-- HTML：`div#art_18`，标题 `p#d1e1764-64-1`，副标题 `div#art_18.tit_1`（Delivery）。父章节是 `div#cpt_IV`（CHAPTER IV, OTHER CONSUMER RIGHTS）。四组正文在 `div#018.001` 至 `div#018.004`。第 2 款有两个 `p.oj-normal`。
-- JSON：`eu_consumer_rights_2011_83:article:18`，章节 `eu_consumer_rights_2011_83:chapter:IV`，章节区间 `[81433, 85295)`。条文区间 `[81963, 83581)`，五个正文块都在条文内。
-- 块与 HTML 段落一一对应：
+- HTML: `div#art_18`, title `p#d1e1764-64-1`, subtitle `div#art_18.tit_1` (Delivery). The parent chapter is `div#cpt_IV` (CHAPTER IV, OTHER CONSUMER RIGHTS). The four groups of body text are in `div#018.001` to `div#018.004`. Paragraph 2 has two `p.oj-normal`.
+- JSON: `eu_consumer_rights_2011_83:article:18`, chapter `eu_consumer_rights_2011_83:chapter:IV`, chapter interval `[81433, 85295)`. Provision interval `[81963, 83581)`; all five body blocks are within the provision.
+- Blocks correspond one-to-one with HTML paragraphs:
 
-| 块 | 区间 | 核对要点 |
+| Block | Interval | Key points checked |
 | --- | --- | --- |
-| `article:18:block:1` | `[81983, 82251)` | 第 1 款：当事人另有约定的除外；转移占有或控制；without undue delay；not later than 30 days from the conclusion of the contract |
-| `article:18:block:2` | `[82252, 82681)` | 第 2 款第一段：未按约定或第 1 款期限交付时，消费者指定 additional period of time appropriate to the circumstances；仍未交付则可 terminate the contract |
-| `article:18:block:3` | `[82682, 83300)` | 第一子款的例外：shall not be applicable；商人拒绝交付，或约定期限属于 essential，或消费者在缔约前告知 delivery by or on a specified date is essential；这些情况下可 terminate the contract immediately |
-| `article:18:block:4` | `[83301, 83420)` | 第 3 款：解除后 without undue delay，reimburse all sums paid under the contract |
-| `article:18:block:5` | `[83421, 83581)` | 第 4 款：除第 2 款解除权外，还可使用 national law 规定的 other remedies |
+| `article:18:block:1` | `[81983, 82251)` | Paragraph 1: unless otherwise agreed by the parties; transfer of possession or control; without undue delay; not later than 30 days from the conclusion of the contract |
+| `article:18:block:2` | `[82252, 82681)` | Paragraph 2, first subparagraph: where delivery has not been made as agreed or within the period in paragraph 1, the consumer specifies an additional period of time appropriate to the circumstances; if delivery is still not made, the consumer may terminate the contract |
+| `article:18:block:3` | `[82682, 83300)` | Exception to the first subparagraph: shall not be applicable; the trader refuses to deliver, or the agreed period is essential, or the consumer informed the trader before conclusion of the contract that delivery by or on a specified date is essential; in these cases the consumer may terminate the contract immediately |
+| `article:18:block:4` | `[83301, 83420)` | Paragraph 3: after termination, without undue delay, reimburse all sums paid under the contract |
+| `article:18:block:5` | `[83421, 83581)` | Paragraph 4: in addition to the right of termination under paragraph 2, the consumer may also use other remedies provided by national law |
 
-- 对照结果：空白折叠后，五个段落与 HTML 逐字一致。30 日上限、额外期限、三类立即解除情形、退款和国内法其他救济都保留。HTML 中款号后的连续不换行空格收成一个普通空格。
-- 差异：只有空白格式变化，原意未改。不阻碍验收。
+- Comparison result: after whitespace folding, the five paragraphs match the HTML verbatim. The 30-day limit, the additional period, the three cases of immediate termination, reimbursement, and other remedies under national law are all preserved. Consecutive non-breaking spaces after paragraph numbers in the HTML are collapsed into a single ordinary space.
+- Differences: only whitespace formatting changes; the original meaning is unchanged. Does not block acceptance.
 
 ## 3. Article 35
 
-- HTML：`div#art_35`，标题 `p#d1e2075-64-1`，副标题 `div#art_35.tit_1`（Addressees）。父章节是 `div#cpt_VI`。它是 `art_1` 至 `art_35` 中的最后一个 `div.eli-subdivision`。
-- JSON：`eu_consumer_rights_2011_83:article:35`，章节 `eu_consumer_rights_2011_83:chapter:VI`，章节区间 `[89541, 91903)`。条文区间 `[91832, 91903)`。主条文编号仍是 1 至 35，共 35 条。
-- 切片：
+- HTML: `div#art_35`, title `p#d1e2075-64-1`, subtitle `div#art_35.tit_1` (Addressees). The parent chapter is `div#cpt_VI`. It is the last `div.eli-subdivision` in `art_1` to `art_35`.
+- JSON: `eu_consumer_rights_2011_83:article:35`, chapter `eu_consumer_rights_2011_83:chapter:VI`, chapter interval `[89541, 91903)`. Provision interval `[91832, 91903)`. The main provision numbers remain 1 to 35, 35 provisions in total.
+- Slices:
 
 > Article 35
 > Addressees
 > This Directive is addressed to the Member States.
 
-- 正文块 `eu_consumer_rights_2011_83:article:35:block:1`，`[91854, 91903)`，文本就是最后一句。
-- 对照结果：标题、正文和区间一致。不阻碍验收。
+- Body block `eu_consumer_rights_2011_83:article:35:block:1`, `[91854, 91903)`; the text is the final sentence.
+- Comparison result: title, body text, and interval are consistent. Does not block acceptance.
 
 ## 4. Article 16
 
-- HTML：`div#art_16`，标题 `p#d1e1652-64-1`，副标题 `div#art_16.tit_1`。父章节是 `div#cpt_III`。导语是一个 `p.oj-normal`，(a) 至 (m) 各是一张两列布局表，左列标记、右列条件。
-- JSON：`eu_consumer_rights_2011_83:article:16`，章节 `eu_consumer_rights_2011_83:chapter:III`，条文区间 `[78815, 81431)`。导语块是 `article:16:block:1`，`[78866, 79029)`；(a) 至 (m) 是 `block:2` 至 `block:14`，区间从 `[79030, 79295)` 连续到 `[81214, 81431)`。
-- 把 HTML 两列拼接成 `"(标记) 条件"` 后，14 个块与 HTML 顺序和文字一致。否定和限制都在：
-  - 导语：Member States shall not provide for the right of withdrawal set out in Articles 9 to 15。
+- HTML: `div#art_16`, title `p#d1e1652-64-1`, subtitle `div#art_16.tit_1`. The parent chapter is `div#cpt_III`. The lead-in is one `p.oj-normal`; (a) to (m) are each a two-column layout table, with the marker in the left column and the condition in the right column.
+- JSON: `eu_consumer_rights_2011_83:article:16`, chapter `eu_consumer_rights_2011_83:chapter:III`, provision range `[78815, 81431)`. The introductory block is `article:16:block:1`, `[78866, 79029)`; (a) through (m) are `block:2` through `block:14`, with the range running continuously from `[79030, 79295)` to `[81214, 81431)`.
+- After concatenating the two HTML columns into `"(marker) condition"`, the 14 blocks match the HTML in order and text. Negations and limitations are all present:
+  - Introductory paragraph: Member States shall not provide for the right of withdrawal set out in Articles 9 to 15.
   - (e)：not suitable for return due to health protection or hygiene reasons and were unsealed after delivery。
-  - (h) 后句保留反向条件：额外服务或更换零件以外的货物，the right of withdrawal shall apply。
+  - The sentence after (h) retains the reverse condition: for goods other than additional services or replacement parts, the right of withdrawal shall apply.
   - (j)：with the exception of subscription contracts。
-  - (l)：accommodation other than for residential purpose，且 if the contract provides for a specific date or period of performance。
-  - (m)：digital content which is not supplied on a tangible medium，并保留 prior express consent 和 thereby loses his right of withdrawal。
-- 差异：布局表被收成一行一条，标记和条件都在。不阻碍验收。
+  - (l): accommodation other than for residential purpose, and if the contract provides for a specific date or period of performance.
+  - (m): digital content which is not supplied on a tangible medium, retaining prior express consent and thereby loses his right of withdrawal.
+- Difference: the layout table is condensed to one entry per line; markers and conditions are all present. Does not block acceptance.
 
-## 5. 附件 II
+## 5. Annex II
 
-- HTML：`div#anx_II`。第一张 `table.oj-table` 的表头三列是 Directive 85/577/EEC、Directive 97/7/EC、This Directive。第一条数据行的三个 `td` 依次是 `Article 1`、只含 `&nbsp;` 的空单元格、`Article 3 read in conjunction with Article 2, points 8 and 9, and Article 16, point (h)`。
-- JSON：`eu_consumer_rights_2011_83:annex:II`。表 `eu_consumer_rights_2011_83:annex:II:table:1`，区间 `[99214, 103146)`，78 行，其中 77 个单元格为空。空单元格保留在列位上，写成连续的 ` | `。
-- 抽查行：`eu_consumer_rights_2011_83:annex:II:block:4`，`[99272, 99374)`。切片为：
+- HTML: `div#anx_II`. The header of the first `table.oj-table` table has three columns: Directive 85/577/EEC, Directive 97/7/EC, This Directive. The three `td` of the first data row are, in order, `Article 1`, an empty cell containing only `&nbsp;`, and `Article 3 read in conjunction with Article 2, points 8 and 9, and Article 16, point (h)`.
+- JSON: `eu_consumer_rights_2011_83:annex:II`. Table `eu_consumer_rights_2011_83:annex:II:table:1`, range `[99214, 103146)`, 78 rows, of which 77 cells are empty. Empty cells are kept in their column positions, written as consecutive ` | `.
+- Spot-checked rows: `eu_consumer_rights_2011_83:annex:II:block:4`, `[99272, 99374)`. The slices are:
 
 > Article 1 |  | Article 3 read in conjunction with Article 2, points 8 and 9, and Article 16, point (h)
 
-- 整张表按 HTML 的行顺序逐格比对，78 行全部一致。下一行是空单元格、Article 1、Article 1 read in conjunction with Article 2, point 7，列关系没有左右对调。
-- 表内 Article 编号没有进入主条文。主条文仍是 `art_1` 至 `art_35`，没有 `art_8a`。这一行的结构类型是表格行，不是 `article`。真正的 Article 1 在 `[44986, 45342)`，与本行不是同一位置。
-- 差异：空单元格的 `&nbsp;` 收成空列。列顺序和原文顺序保留。不阻碍验收。
+- The entire table was compared cell by cell in HTML row order; all 78 rows match. The next row is an empty cell, Article 1, Article 1 read in conjunction with Article 2, point 7; the column relationships are not swapped left-to-right.
+- The Article numbers inside the table did not enter the main provisions. The main provisions remain `art_1` through `art_35`, with no `art_8a`. The structure type of this row is a table row, not `article`. The actual Article 1 is in `[44986, 45342)`, which is not the same location as this row.
+- Difference: the `&nbsp;` of empty cells is condensed into an empty column. Column order and source order are preserved. Does not block acceptance.
 
-## 6. 重复内容与脚注
+## 6. Duplicate content and footnotes
 
 ### ‘Article 8a
 
-快照里有两个 `div id="008A"`，ID 重复，不能靠这个 ID 区分归属。
+The snapshot contains two `div id="008A"` with duplicate IDs; ownership cannot be distinguished by this ID alone.
 
-- 第 32 条：父节点 `div#art_32`，标题节点 `p#d1e2006-64-1`。JSON 块 `eu_consumer_rights_2011_83:article:32:block` 中的 `quoted_heading` 区间 `[90156, 90167)`，切片是 `‘Article 8a`。其后的第 1 至 3 款及两个破折号条件留在第 32 条内。没有单独的副标题，与 HTML 一致。
-- 第 33 条：父节点 `div#art_33`，标题节点 `p#d1e2043-64-1`，副标题是 Reporting requirements。JSON 中 `quoted_heading` 为 `[91026, 91037)`，副标题块为 `[91038, 91060)`，第 1 至 3 款继续到 `[91480, 91674)`。文字与 HTML 一致，包括 Article 8(2)、Article 5(1) to (3) 和 Article 7(1)。
-- 两处都不是主条文。主条文列表没有 8a。
+- Article 32: parent node `div#art_32`, heading node `p#d1e2006-64-1`. In JSON block `eu_consumer_rights_2011_83:article:32:block`, `quoted_heading` range `[90156, 90167)`, slice is `‘Article 8a`. The following paragraphs 1 through 3 and the two dash conditions remain within Article 32. There is no separate subtitle, consistent with the HTML.
+- Article 33: parent node `div#art_33`, heading node `p#d1e2043-64-1`, subtitle is Reporting requirements. In JSON, `quoted_heading` is `[91026, 91037)`, the subtitle block is `[91038, 91060)`, and paragraphs 1 through 3 continue to `[91480, 91674)`. The text matches the HTML, including Article 8(2), Article 5(1) to (3) and Article 7(1).
+- Neither is a main provision. The main provision list has no 8a.
 
-### 同号脚注
+### Footnotes with the same number
 
-正文脚注 (1) 与附件 II 脚注 (1) 使用不同节点、不同区间和不同引文。
+The body footnote (1) and the Annex II footnote (1) use different nodes, different ranges and different quotations.
 
-| 位置 | HTML 定义节点 | HTML 引用锚点 | JSON | 区间 | 切片 | 引用它的块 |
+| Location | HTML definition node | HTML reference anchor | JSON | Range | Slice | Blocks referencing it |
 | --- | --- | --- | --- | --- | --- | --- |
-| 正文 | `a#ntr1-L_2011304EN.01006401-E0001` | `a#ntc1-L_2011304EN.01006401-E0001`，href 指向该定义 | `eu_consumer_rights_2011_83:footnote:act:1` | `[92040, 92072)` | `(1) OJ C 317, 23.12.2009, p. 54.` | `preamble:block:4`，`[584, 663)`，文本含 Committee (1) |
-| 附件 II | `a#ntr1-L_2011304EN.01008601-E0001` | `a#ntc1-L_2011304EN.01008601-E0001` | `eu_consumer_rights_2011_83:footnote:annex-II:1` | `[103483, 103513)` | `(1) OJ L 364, 9.12.2004, p. 1.` | `annex:II:block:81`，表头含 cooperation) (1) |
+| Body | `a#ntr1-L_2011304EN.01006401-E0001` | `a#ntc1-L_2011304EN.01006401-E0001`, href points to that definition | `eu_consumer_rights_2011_83:footnote:act:1` | `[92040, 92072)` | `(1) OJ C 317, 23.12.2009, p. 54.` | `preamble:block:4`, `[584, 663)`, text contains Committee (1) |
+| Annex II | `a#ntr1-L_2011304EN.01008601-E0001` | `a#ntc1-L_2011304EN.01008601-E0001` | `eu_consumer_rights_2011_83:footnote:annex-II:1` | `[103483, 103513)` | `(1) OJ L 364, 9.12.2004, p. 1.` | `annex:II:block:81`, header contains cooperation) (1) |
 
-两个锚点的 href 片段分别指向自己的定义 ID。正文 `(1)` 第一次出现在序言，不是脚注正文的位置。
+The href fragments of the two anchors point to their own definition IDs. The body `(1)` first appears in the preamble, not at the location of the footnote text.
 
-另核了正文脚注 (21)：定义 `ntr21-L_2011304EN.01006401-E0021`，由第 31 条 `article:31:block:1` 引用，引文是 OJ L 271, 9.10.2002, p. 16，与两处 (1) 都不同。
+Also checked the body footnote (21): definition `ntr21-L_2011304EN.01006401-E0021`, referenced by Article 31 `article:31:block:1`, quotation is OJ L 271, 9.10.2002, p. 16, which differs from both (1) instances.
 
-- 差异：HTML 把数字放在 `span` 里，直接取文本会得到 `( 1 )`；页面上仍是 `(1)`。清洗结果与可见文字一致。不阻碍验收。
+- Difference: HTML places the number inside `span`, so taking the text directly yields `( 1 )`; on the page it is still `(1)`. The cleaned result matches the visible text. Does not block acceptance.
 
-## 7. 附件 I 方框数字
+## 7. Box numbers in Annex I
 
-- HTML：`div#anx_I`。示范文句中的占位是 `div.oj-box`，填写说明左列也是 `div.oj-box`，内容为 `1.` 至 `6.`。
+- HTML: `div#anx_I`. The placeholder in the model sentence is `div.oj-box`, and the left column of the completion instructions is also `div.oj-box`, with content `1.` through `6.`.
 - JSON：`eu_consumer_rights_2011_83:annex:I`。
 
-占位与说明的对应关系：
+Correspondence between placeholders and instructions:
 
-| HTML 方框 | 清洗后的位置 | 对应说明 |
+| HTML box | Cleaned position | Corresponding instruction |
 | --- | --- | --- |
-| 文句中的方框 1，紧挨 `.To` | `annex:I:block:6`，`[93050, 93370)`，作 `day 1. To exercise` | 说明 1，`[94283, 94344)`，含 (a) 至 (e) 五段引文 |
-| 圆括号中的方框 2 | 同一块中的 `us (2)` | 说明 2，插入姓名、地址和联系方式 |
-| 句末方框 3 | 同一块末尾的 `obligatory. 3` | 说明 3，网站电子提交的可选语句 |
-| 退款段落后连续的方框 4、5、6 | `annex:I:block:9`，`[93572, 94253)`，句末为 `reimbursement. 4 5 6` | 说明 4、5、6 按原顺序保留，说明 5 仍包含 (a)(b)(c) |
+| Box in the sentence 1, immediately next to `.To` | `annex:I:block:6`, `[93050, 93370)`, as `day 1. To exercise` | Instruction 1, `[94283, 94344)`, containing five quotations (a) through (e) |
+| Box in parentheses 2 | `us (2)` in the same block | Instruction 2, insert name, address and contact details |
+| Box at end of sentence 3 | `obligatory. 3` at the end of the same block | Instruction 3, optional statement for electronic submission via website |
+| Consecutive boxes after the refund paragraph 4, 5, 6 | `annex:I:block:9`, `[93572, 94253)`, ending with `reimbursement. 4 5 6` | Instructions 4, 5, 6 kept in original order; instruction 5 still contains (a)(b)(c) |
 
-纯格式变化：
+Pure formatting changes:
 
-- 方框边框消失，数字留在原来的插入点。
-- HTML 源码在方框 1 后是 `.To`，中间没有空格。清洗时补成 `1. To`。单词没有增删，句子更容易读。
-- 说明 1 至 6 的条件、引号内示范文句、`not put up for sale`、`whichever is the earliest` 和费用承担语句都还在。
+- The box borders disappear; the numbers remain at their original insertion points.
+- In the HTML source, after box 1 comes `.To` with no space in between. Cleaning adds `1. To`. No words are added or removed, and the sentence is easier to read.
+- The conditions in instructions 1 through 6, the model sentences in quotation marks, `not put up for sale`, `whichever is the earliest` and the cost-bearing statements are all still present.
 
-可能影响理解、但不改变法律措辞的地方：
+Places that may affect understanding but do not change the legal wording:
 
-- 方框 3 现在是句末的一个数字 `3`。
-- 方框 4、5、6 现在连成 `4 5 6`，不再是三个分开的空框。读者仍能靠后面的 `4.`、`5.`、`6.` 说明对回去，但视觉上不如原方框清楚。
+- Box 3 is now a single number `3` at the end of the sentence.
+- Boxes 4, 5, 6 are now joined as `4 5 6`, no longer three separate empty boxes. Readers can still map back via the following instructions `4.`, `5.`, `6.`, but it is visually less clear than the original boxes.
 
-这不构成漏句或改写。当前已验收的 `eurlex_html_v1` 不需要为此改写正文。若以后有题目专门问某个占位框，证据应同时引用占位数字所在句和对应的编号说明。
+This does not constitute an omitted sentence or a rewrite. The currently accepted `eurlex_html_v1` does not need its body text rewritten for this. If a question later specifically asks about a particular placeholder box, the evidence should cite both the sentence containing the placeholder number and the corresponding numbered instruction.
 
-## 验收判断
+## Acceptance judgment
 
-七项都能从 HTML 节点追到稳定结构 ID，并用 `[start, end)` 切回同一段文字。第 16 条的例外列表、第 18 条的期限和例外、附件表的空列，以及同号脚注的不同归属都保持原意。
+All seven items can be traced from HTML nodes to stable structure IDs and sliced back to the same text using `[start, end)`. The exception list in Article 16, the time limits and exceptions in Article 18, the empty columns in the annex table, and the different ownership of footnotes with the same number all preserve the original meaning.
 
-附件 I 的方框变成普通数字，属于已记录的格式限制，不阻碍本样本验收。
+The boxes in Annex I become plain numbers; this is a documented formatting limitation and does not block acceptance of this sample.
 
-本样本具备进入第 3 步编写样题的条件。第 3 步再处理其他四份文档和正式题集。
+This sample meets the conditions to proceed to step 3 and write the sample questions. Step 3 will handle the other four documents and the formal question set.

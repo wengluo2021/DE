@@ -1,99 +1,99 @@
-# DERag：A 开发文档（官方语料与标准测试题集）
+# DERag: Part A development documentation (official corpus and standard test question set)
 
-记录日期：2026-11-19。本文说明 A 部分已经实现的数据管线、代码职责、数据契约、版本算法和交接方式。组员实际运行请按 [A测试.md](./A测试.md)；简要交付清单见 [A部分交付说明.md](./A部分交付说明.md)。
+Record date: 2026-11-19. This document describes the data pipeline already implemented for Part A, code responsibilities, data contracts, version algorithms, and handover methods. For team members running it in practice, follow [A测试.md](./A测试.md); for a brief delivery checklist, see [A部分交付说明.md](./A部分交付说明.md).
 
-## 1. A 要完成什么
+## 1. What Part A must accomplish
 
-A 负责“官方英文 HTML → 来源登记 → 清洗全文 → 章条与字符位置 → 冻结语料包 → 标准测试题集”这条链路。B 接收同一份冻结正文进行分块、embedding、向量入库和语义检索；C 使用对应版本的标准题运行问答、引用校验和正式评估。
+Part A is responsible for the chain "official English HTML → source registration → cleaned full text → chapter/article and character positions → frozen corpus package → standard test question set". Part B receives the same frozen body text for chunking, embedding, vector database ingestion, and semantic retrieval; Part C uses the corresponding version of the standard questions to run question answering, citation validation, and formal evaluation.
 
-**当前状态：五份官方文档、正式语料包、30 道英文标准题及相应脚本已经完成程序校验、AI 辅助原文复核、人工复核和浏览器视觉检查，未发现问题。**A 的三个自动测试模块共 19 项通过；正式包和单文档样本均能通过正常包导入的 `formal_loader` 加载。
+**Current status: The five official documents, the formal corpus package, the 30 English standard questions, and the corresponding scripts have completed programmatic validation, AI-assisted source-text review, human review, and browser visual inspection, with no issues found.** Part A's three automated test modules have 19 items passing; both the formal package and the single-document sample can be loaded through the normal package import's `formal_loader`.
 
-人工复核和浏览器视觉检查按 A 负责人 2026-11-19 的确认更新，结论为通过，未发现问题。既有阶段报告保留当时的检查记录。
+Human review and browser visual inspection were updated according to the confirmation of Part A lead 2026-11-19, with the conclusion being pass and no issues found. Existing stage reports retain the inspection records from that time.
 
-| 负责人 | 交付范围 | 与其他成员的边界 |
+| Lead | Delivery scope | Boundaries with other members |
 | --- | --- | --- |
-| A | 来源、HTML 快照、清洗全文、结构与位置、版本清单、标准题及证据、数据校验与复核记录 | 负责数据问题修订与版本发布 |
-| B | 固定窗口与结构感知分块、embedding、四组 Chroma 索引、语义检索及相关 API | 读取 A 的正式包，不改写冻结正文 |
-| C | LLM 回答、引用校验、问答页面、四组正式评估、运行答案的人工评分和系统集成 | 使用 A 的题集评分，并调用 B 的检索模块 |
+| A | Sources, HTML snapshots, cleaned full text, structure and positions, version manifest, standard questions and evidence, data validation and review records | Responsible for data issue revisions and version releases |
+| B | Fixed-window and structure-aware chunking, embedding, four Chroma indexes, semantic retrieval, and related APIs | Reads Part A's formal package, does not rewrite the frozen body text |
+| C | LLM answers, citation validation, question-answering page, four formal evaluations, human scoring of run answers, and system integration | Uses Part A's question set for scoring and calls Part B's retrieval module |
 
-19 项自动测试验证数据管线及异常处理；30 道标准题是评估 RAG 的输入和评分对照。A 的测试通过不能替代 B 的真实检索验证，也不能写成 30 道题的系统回答全部正确。B 独立模块的开发与测试见 [B开发文档.md](./B开发文档.md) 和 [B测试.md](./B测试.md)。
+19 automated tests validate the data pipeline and exception handling; the 30 standard questions are the input and scoring reference for evaluating RAG. Part A's tests passing cannot replace Part B's real retrieval validation, nor can it be written as all system answers to the 30 questions being correct. Development and testing of Part B's independent module are described in [B开发文档.md](./B开发文档.md) and [B测试.md](./B测试.md).
 
-## 2. 代码目录和文件职责
+## 2. Code directory and file responsibilities
 
-本机项目根目录为 `D:\gitcode\Edit\DE`。下面的目录均相对于项目根目录；组员可以把整个项目放在其他路径。
+The local project root directory is `D:\gitcode\Edit\DE`. The directories below are all relative to the project root directory; team members can place the entire project at another path.
 
 ```text
 DE/
-  AGENTS.md                          # 当前开发约定
-  A部分需求与开发顺序.md              # 需求与第 1–6 步验收要求
-  A开发文档.md                       # 本文：实现与数据契约
-  A测试.md                           # 组员运行与验收指南
-  A部分交付说明.md                   # 当前交付入口与版本
-  A部分阶段开发记录.md               # 历史开发与复核记录
+  AGENTS.md                          # Current development conventions
+  A部分需求与开发顺序.md              # Requirements and acceptance criteria for steps 1–6
+  A开发文档.md                       # This document: implementation and data contracts
+  A测试.md                           # Team member running and acceptance guide
+  A部分交付说明.md                   # Current delivery entry point and version
+  A部分阶段开发记录.md               # Historical development and review records
   scripts/
-    process_documents.py             # 单文档、批量清洗和字符定位
-    validate_data.py                 # corpus / eval 校验
-    export_sample.py                 # 第一份文档的联调样本导出
-    export_corpus.py                 # 正式五文档交付包导出与核对
-    build_gold.py                    # 固定题目定义、截取证据、生成题集
+    process_documents.py             # Single-document and batch cleaning and character positioning
+    validate_data.py                 # corpus / eval validation
+    export_sample.py                 # Joint debugging sample export for the first document
+    export_corpus.py                 # Formal five-document delivery package export and verification
+    build_gold.py                    # Fixed question definitions, evidence extraction, question set generation
   tests/
-    test_corpus_batch.py             # 8 项：批处理和全语料校验
-    test_corpus_freeze.py            # 6 项：冻结、加载和正式入口完整性
-    test_gold_eval.py                # 5 项：题集与证据异常校验
+    test_corpus_batch.py             # 8 items: batch processing and full corpus validation
+    test_corpus_freeze.py            # 6 items: freezing, loading, and formal entry point integrity
+    test_gold_eval.py                # 5 items: question set and evidence exception validation
   data/
-    sources.json                     # 官方来源与快照登记
-    raw/                             # 五份浏览器保存的官方 HTML
-    processed/                       # 五对已验收 txt / 结构 JSON
-    corpus_manifest.json             # A 的项目级语料冻结清单
+    sources.json                     # Official source and snapshot registration
+    raw/                             # Five official HTML files saved from the browser
+    processed/                       # Five accepted pairs of txt / structure JSON
+    corpus_manifest.json             # Part A's project-level corpus freeze manifest
     formal_corpus/
-      manifest.json                  # B 的正式加载清单
-      raw/                           # 官方 HTML 的字节副本
-      processed/                     # 补齐 B 字段的适配 JSON，内含完整 text
-    sample_corpus/                   # 第一份文档的独立联调包
+      manifest.json                  # Part B's formal loading manifest
+      raw/                           # Byte copy of the official HTML
+      processed/                     # Adapted JSON with B fields filled in, containing the full text
+    sample_corpus/                   # Standalone integration-test package for the first document
     eval/
-      sample.jsonl                   # 3 道联调样题
-      sample_manifest.json           # 样题清单
-      gold.jsonl                     # 30 道正式标准题
-      manifest.json                  # 正式题集版本和覆盖
-  artifacts/a_review/                # 逐文档、批量、冻结、题集与最终复核
+      sample.jsonl                   # 3 integration-test sample questions
+      sample_manifest.json           # Sample question manifest
+      gold.jsonl                     # 30 formal gold questions
+      manifest.json                  # Formal question set version and coverage
+  artifacts/a_review/                # Per-document, batch, freeze, question set and final review
 ```
 
-### 2.1 脚本职责
+### 2.1 Script responsibilities
 
-| 文件 | 输入 | 输出与职责 |
+| File | Input | Output and responsibilities |
 | --- | --- | --- |
-| `process_documents.py` | `sources.json` 和其中登记的本地 HTML | 生成规范化 txt、结构 JSON、稳定 ID、字符区间和统计 |
-| `validate_data.py` | 来源、快照、处理产物、正式包或题集 | 只读校验；成功返回 0，校验失败返回非零并报告原因 |
-| `export_sample.py` | 已验收的第一份文档和原样题 | 生成单文档样本适配包并同步样题版本；会重写样本文件 |
-| `export_corpus.py` | 五份已验收 txt / JSON 和官方 HTML | 生成正式包、两份 manifest，计算统一版本并验证加载 |
-| `build_gold.py` | 正式包、结构位置和代码中固定的题目定义 | 截取证据，生成 `gold.jsonl` 和题集 manifest |
+| `process_documents.py` | `sources.json` and the local HTML registered therein | Generate normalized txt, structure JSON, stable IDs, character ranges and statistics |
+| `validate_data.py` | Source, snapshot, processed artifacts, formal package or question set | Read-only validation; returns 0 on success, non-zero on validation failure with the reason reported |
+| `export_sample.py` | The accepted first document and the as-is questions | Generate the single-document sample adaptation package and sync the sample question version; rewrites sample files |
+| `export_corpus.py` | The five accepted txt / JSON files and the official HTML | Generate the formal package and two manifests, compute the unified version and verify loading |
+| `build_gold.py` | Formal package, structural positions and question definitions fixed in code | Extract evidence, generate `gold.jsonl` and the question set manifest |
 
-`build_gold.py` 是固定题集的可复现生成器，运行时不调用 LLM 随机出题。题目和参考答案已写入定义，证据由程序从冻结全文截取。
+`build_gold.py` is a reproducible generator for a fixed question set; it does not call an LLM to generate random questions at runtime. Questions and reference answers are written into the definitions, and evidence is extracted by the program from the frozen full text.
 
-### 2.2 主要函数
+### 2.2 Main functions
 
-| 模块与函数 | 作用 |
+| Module and function | Purpose |
 | --- | --- |
-| `process_documents.load_catalog` / `run_all` | 清单预检、稳定排序、逐文档处理及成功失败汇总 |
-| `process_documents.build_document` | 从一份 HTML 构建清洗全文与结构载荷 |
-| `process_documents.parse_chapter` / `parse_section` / `parse_article` | 解析现代 EUR-Lex 章、节、主条文 |
-| `process_documents.parse_legacy` | 处理第五份旧式 HTML 的相邻段落、落款、脚注和附件 |
-| `process_documents.TextCursor` / `assemble` / `assemble_legacy` | 拼接正文时记录当前位置，绑定各结构区间 |
-| `validate_data.validate_corpus` / `validate_all` | 单份及整套语料的区间、结构、哈希与清单校验 |
-| `validate_data.check_cases` / `validate_eval` | 题目字段、版本、证据归属、切片、数量及题集哈希检查 |
-| `export_corpus.adapt_article` / `prepare_documents` | 保留已验收条文，补齐 B 字段并计算版本材料 |
-| `export_corpus.export_official` / `require_official_catalog` | 正式入口在写文件前强制核对五份官方 ID |
-| `export_corpus.export_corpus` / `verify_corpus` | 通用导出，以及正常加载后与已验收数据核对 |
-| `build_gold.clip` | 在指定结构内用唯一锚点定位并截取证据 |
-| `app.retrieval.types.formal_loader` | B 提供的正常加载器，核对包内文件、正文、条文结构和版本 |
+| `process_documents.load_catalog` / `run_all` | Manifest pre-check, stable sorting, per-document processing and success/failure summary |
+| `process_documents.build_document` | Build the cleaned full text and structure payload from one HTML file |
+| `process_documents.parse_chapter` / `parse_section` / `parse_article` | Parse chapters, sections and main articles of modern EUR-Lex |
+| `process_documents.parse_legacy` | Handle adjacent paragraphs, sign-off, footnotes and annexes of the fifth legacy HTML |
+| `process_documents.TextCursor` / `assemble` / `assemble_legacy` | Record the current position when concatenating body text and bind each structural range |
+| `validate_data.validate_corpus` / `validate_all` | Validate ranges, structure, hashes and manifests for a single document and the whole corpus |
+| `validate_data.check_cases` / `validate_eval` | Check question fields, version, evidence attribution, slices, counts and question set hash |
+| `export_corpus.adapt_article` / `prepare_documents` | Preserve accepted articles, fill in B fields and compute version material |
+| `export_corpus.export_official` / `require_official_catalog` | The formal entry point enforces verification of the five official IDs before writing files |
+| `export_corpus.export_corpus` / `verify_corpus` | General export, and cross-check against accepted data after normal loading |
+| `build_gold.clip` | Locate and extract evidence within a specified structure using a unique anchor |
+| `app.retrieval.types.formal_loader` | The normal loader provided by B, verifying package files, body text, article structure and version |
 
-正式 CLI 使用 `export_official`。通用 `export_corpus(root)` 仍支持单元测试的小语料；不能因为通用函数可导出一份测试文档，就绕过正式五份文档的完整性检查。
+The formal CLI uses `export_official`. The general `export_corpus(root)` still supports small corpora for unit tests; the fact that a general function can export one test document must not be used to bypass the integrity check for the five formal documents.
 
-## 3. 固定语料范围
+## 3. Fixed corpus scope
 
-主题为英文欧盟网络购物消费者权益，五份文档均采用 **原始公布版 `original_publication`**。保存网页中链接的合并修订版没有替换本地快照正文。
+The topic is EU online shopping consumer rights in English, and all five documents use the **original published version `original_publication`**. The consolidated revised versions linked from the web pages did not replace the body text of the local snapshots.
 
-| 原始文件 | document_id | 主条文 | 章 / 节 | 序言项 | 附件 |
+| Original file | document_id | Main articles | Chapters / sections | Recitals | Annexes |
 | --- | --- | ---: | --- | ---: | ---: |
 | `eu_consumer_rights_2011_83.html` | `eu_consumer_rights_2011_83` | 35 | 6 / 0 | 67 | 2 |
 | `Sale of Goods.html` | `eu_sale_of_goods_2019_771` | 27 | 0 / 0 | 72 | 1 |
@@ -101,11 +101,11 @@ DE/
 | `Unfair Commercial Practices.html` | `eu_unfair_practices_2005_29` | 21 | 4 / 2 | 25 | 2 |
 | `Unfair Terms.html` | `eu_unfair_terms_93_13` | 11 | 0 / 0 | 24 | 1 |
 
-主条文合计 **121**。第五份的 24 项序言没有官方编号，只保存内部顺序 `ordinal`；不能给它们补造官方 recital 编号。
+Main articles total **121**. The 24 recitals of the fifth document have no official numbering, so only the internal order `ordinal` is stored; official recital numbers must not be fabricated for them.
 
-来源核验依据、官方 URL、CELEX、机构、日期和公报信息保存在 `sources.json` 及逐文档复核报告。浏览器快照无法证实的保存时间、下载 HTTP 状态和响应时间使用 `null`，并说明原因。来源核验时访问 Cellar 的 HTTP 200 是另一次请求的结果，不能当作浏览器保存这份 HTML 时的状态。
+The basis for source verification, official URLs, CELEX, institutions, dates and gazette information are stored in `sources.json` and the per-document review reports. For save time, download HTTP status and response time that browser snapshots cannot substantiate, `null` is used, with the reason stated. The HTTP 200 from accessing Cellar during source verification is the result of a separate request and must not be treated as the status when the browser saved this HTML.
 
-## 4. 数据处理流程
+## 4. Data processing flow
 
 ```text
 sources.json + raw HTML
@@ -113,83 +113,83 @@ sources.json + raw HTML
            v
 process_documents.py
            |
-           +--> processed/*.txt：唯一的规范化全文
-           +--> processed/*.json：元数据、结构、ID、区间和哈希
+           +--> processed/*.txt: the single normalized full text
+           +--> processed/*.json: metadata, structure, IDs, ranges and hashes
            |
            v
 validate_data.py --scope corpus
            |
            v
-export_corpus.py --> formal_corpus + corpus_manifest.json --> B 分块与建库
+export_corpus.py --> formal_corpus + corpus_manifest.json --> B chunking and indexing
            |
            v
-build_gold.py --> gold.jsonl + eval/manifest.json --> C 问答评估
+build_gold.py --> gold.jsonl + eval/manifest.json --> C question answering evaluation
            |
            v
 validate_data.py --scope eval
 ```
 
-### 4.1 读取和清洗
+### 4.1 Reading and cleaning
 
-清洗脚本从来源清单读取路径，不扫描整棵浏览器资源目录。带空格的 HTML 文件名按清单原样处理；同名 `_files` 文件夹不作为另一份法规。
+The cleaning script reads paths from the source manifest and does not scan the entire browser resource directory. HTML file names containing spaces are handled as-is from the manifest; a `_files` folder with the same name is not treated as another regulation.
 
-正文保留法规标题、序言、章、节、主条文、段落、列表、实质表格、落款、附件及脚注。导航、语言菜单、页面按钮和重复的公报页眉等附属内容被排除。表格按行及单元格顺序转为文本，空单元格仍保留列关系，例如 `Article 1 | | Article 3 ...`。
+The body text retains the regulation title, recitals, chapters, sections, main articles, paragraphs, lists, substantive tables, sign-off, annexes and footnotes. Ancillary content such as navigation, language menus, page buttons and repeated gazette headers is excluded. Tables are converted to text in row and cell order, and empty cells still preserve column relationships, for example `Article 1 | | Article 3 ...`.
 
-清洗规则版本为 `eurlex_html_v1`。先规范化空白和 LF 换行，再生成全部字符位置。原文中的用词、否定、例外、数字和交叉引用不由清洗器改写。
+The cleaning rule version is `eurlex_html_v1`. Whitespace and LF line breaks are normalized first, then all character positions are generated. Wording, negations, exceptions, numbers and cross-references in the original text are not rewritten by the cleaner.
 
-### 4.2 现代结构和旧式 HTML
+### 4.2 Modern structure and legacy HTML
 
-现代页面按 `#document1` 下的实际结构容器识别章、节和主条文。正文交叉引用、修订引文和附件表格中的 `Article` 字样保留在原所属结构内，不作为新的主条文。
+Modern pages identify chapters, sections, and main articles by the actual structural containers under `#document1`. The `Article` occurrences in in-text cross-references, amending quotations, and annex tables remain within their original parent structure and are not treated as new main articles.
 
-只有存在 `p.ti-art` 且没有 `div.eli-subdivision` 时，才进入旧式解析分支。第五份文档按 11 个主条文标题切分；第 11 条在落款前结束，后续脚注和附件独立归属。无锚点的脚注续段并入前一脚注。
+The legacy parsing branch is entered only when `p.ti-art` exists and `div.eli-subdivision` does not. The fifth document is split by 11 main article headings; Article 11 ends before the signature block, and subsequent footnotes and annexes are assigned independently. Footnote continuation paragraphs without anchors are merged into the preceding footnote.
 
-两种解析分支最终都输出同一种全文与结构契约；B 接收的是处理后的数据，无需分别解析原始 HTML。
+Both parsing branches ultimately output the same full-text and structure contract; B receives the processed data and does not need to parse the raw HTML separately.
 
-### 4.3 字符区间和重复文本
+### 4.3 Character ranges and duplicate text
 
-位置由正文组装游标记录，不依靠全文第一次 `find()` 的位置回填。相同的条号、相同段落和同号脚注各自保留自己的区间。
+Positions are recorded by the body-assembly cursor and are not backfilled from the position of the first `find()` occurrence in the full text. Identical article numbers, identical paragraphs, and footnotes with the same number each retain their own ranges.
 
-区间统一为 Python 字符索引 `[start, end)`：
+Ranges are uniformly Python character indices `[start, end)`:
 
 ```python
 assert clean_text[item["start"]:item["end"]] == item["text"]
 ```
 
-索引对应完整清洗全文，包含空格、标点和换行；不是 UTF-8 字节、英文单词数或 token。B、C 读取后不得再次 `strip()`、替换换行或重排段落。
+Indices refer to the complete cleaned full text, including spaces, punctuation, and line breaks; they are not UTF-8 bytes, English word counts, or tokens. After reading, B and C must not `strip()` again, replace line breaks, or reorder paragraphs.
 
-第四份的节既在章内保存，也有顶层镜像。校验器区分“结构定义”和“结构引用”，镜像只计一次定义。第 5 条直接属于第二章，第 6、7 条属于其第一节，第 8、9 条属于其第二节。
+The sections of the fourth document are both stored within chapters and mirrored at the top level. The validator distinguishes "structure definitions" from "structure references," and mirrors count as a definition only once. Article 5 belongs directly to Chapter 2; Articles 6 and 7 belong to its Section 1; Articles 8 and 9 belong to its Section 2.
 
-## 5. 三种数据格式
+## 5. Three data formats
 
-### 5.1 来源记录
+### 5.1 Source records
 
-`data/sources.json` 的顶层 `sources` 数组登记五份文档。每条记录包含 `document_id`、`title`、`institution`、`language`、`official_url`、`eli`、`celex`、`version_type`、`source_format`、日期、公报信息、`snapshot`、空值原因与核验依据。
+The top-level `sources` array of `data/sources.json` registers five documents. Each record contains `document_id`, `title`, `institution`, `language`, `official_url`, `eli`, `celex`, `version_type`, `source_format`, dates, gazette information, `snapshot`, null-value reasons, and verification basis.
 
-`snapshot.path` 和 `snapshot.sha256` 对应保存的 HTML。日期字段区分文件日期、公布、生效、转化和适用等含义；不能用文件修改时间替代官方日期，也不能把后来的合并点当作当前原始公布版的修订日。
+`snapshot.path` and `snapshot.sha256` correspond to the stored HTML. Date fields distinguish meanings such as file date, publication, entry into force, transposition, and application; file modification times must not be used in place of official dates, and later consolidation points must not be treated as the revision date of the current original published version.
 
-### 5.2 已验收全文和结构 JSON
+### 5.2 Accepted full text and structure JSON
 
-`data/processed/<document_id>.txt` 保存完整正文。配对 JSON 保存 `clean_text_path`、`clean_text_sha256`、`character_offsets`、来源、清洗规则、统计以及各类结构。这里的 `title` 是结构对象，全文在独立 txt 中。
+`data/processed/<document_id>.txt` stores the complete body text. The paired JSON stores `clean_text_path`, `clean_text_sha256`, `character_offsets`, sources, cleaning rules, statistics, and the various structures. Here `title` is the structure object, while the full text is in a separate txt file.
 
-主条文保留 `article_id`、`number`、`chapter_id`、`section_id`、`start`、`end`、`text` 和 `blocks` 等字段。无章、无节时对应字段为 `null`。
+Main articles retain fields such as `article_id`, `number`, `chapter_id`, `section_id`, `start`, `end`, `text`, and `blocks`. When there are no chapters or sections, the corresponding field is `null`.
 
-### 5.3 B 的适配 Document
+### 5.3 B's adapted Document
 
-正式交付 JSON 位于 `data/formal_corpus/processed/`，把已验收全文嵌入顶层 `text`，并补齐 B 所需字段。
+The formal delivery JSON is located at `data/formal_corpus/processed/`, embeds the accepted full text in the top-level `text`, and fills in the fields required by B.
 
-| 字段 | 来源和用途 |
+| Field | Source and purpose |
 | --- | --- |
-| `document_id` | 原有稳定文档 ID |
-| `corpus_version` | 五份文档共用的内容版本 |
-| `title`、`issuer`、`source_url` | 已核对的标题字符串、机构和官方 URL |
-| `published_at`、`effective_at` | 来源中的公布日和生效日，不重新推断日期 |
-| `raw_path`、`raw_sha256` | 包内快照路径和文件字节哈希 |
-| `text` | 与已验收 txt 完全相同的全文 |
-| `articles` | 保留原有条文，增加 `label`、`chapter`、`section` |
-| `chapters`、`sections` | 分块使用的章、节边界与成员信息 |
-| `source_fields` | 语言、CELEX、版本类型、日期和已验收结构文件哈希等追溯信息 |
+| `document_id` | Existing stable document ID |
+| `corpus_version` | Content version shared by the five documents |
+| `title`, `issuer`, `source_url` | Verified title string, institution, and official URL |
+| `published_at`, `effective_at` | Publication date and entry-into-force date from the source; dates are not re-inferred |
+| `raw_path`, `raw_sha256` | In-package snapshot path and file byte hash |
+| `text` | Full text identical to the accepted txt |
+| `articles` | Retains the original articles and adds `label`, `chapter`, `section` |
+| `chapters`, `sections` | Chapter and section boundaries and membership information used for chunking |
+| `source_fields` | Traceability information such as language, CELEX, version type, dates, and the hash of the accepted structure file |
 
-例如第一份适配文档中 Article 18 的部分字段如下；这是条文对象摘录，不是完整 Document：
+For example, some fields of Article 18 in the first adapted document are as follows; this is an excerpt of the article object, not a complete Document:
 
 ```json
 {
@@ -205,49 +205,49 @@ assert clean_text[item["start"]:item["end"]] == item["text"]
 }
 ```
 
-适配只补接口字段，不改条文 ID、正文、块或区间。已验收 JSON 不直接交给 B 的加载器；使用适配包及其 manifest。
+Adaptation only adds interface fields and does not change article IDs, body text, chunks, or ranges. The accepted JSON is not passed directly to B's loader; use the adaptation package and its manifest.
 
-## 6. 正式导出和两份 manifest
+## 6. Formal export and the two manifests
 
-### 6.1 正式入口的完整性检查
+### 6.1 Integrity check of the formal entry point
 
-命令 `scripts/export_corpus.py` 在创建或写入交付包之前要求来源清单恰好包含五份官方文档 ID。缺少、多出或重复文档都失败，不能把四份文档导出成功当作正式五文档交付。
+Before creating or writing the delivery package, the command `scripts/export_corpus.py` requires the source manifest to contain exactly five official document IDs. Missing, extra, or duplicate documents all cause failure; a successful export of four documents must not be treated as a formal five-document delivery.
 
-通用导出函数会先准备全部待导出文档，再写 HTML 字节副本及适配 JSON。适配 JSON 写入语料版本后，才计算其最终文件哈希。
+The generic export function first prepares all documents to be exported, then writes the HTML byte copies and adaptation JSON. Only after the corpus version is written into the adaptation JSON is its final file hash computed.
 
-### 6.2 两份清单的职责与路径
+### 6.2 Responsibilities and paths of the two manifests
 
-| 文件 | 使用者 | 路径基准 |
+| File | User | Path basis |
 | --- | --- | --- |
-| `data/corpus_manifest.json` | A 的项目级冻结和追溯记录 | 相对于项目根目录，同时登记原产物与包内副本 |
-| `data/formal_corpus/manifest.json` | B 的 `formal_loader` | 相对于加载目录；兼容去掉首段 `data/` 的路径写法 |
+| `data/corpus_manifest.json` | A's project-level freeze and traceability record | Relative to the project root; registers both the original artifacts and the in-package copies |
+| `data/formal_corpus/manifest.json` | B's `formal_loader` | Relative to the loading directory; supports path forms with the first `data/` segment removed |
 
-B 把 `data_dir` 设置为 `data/formal_corpus`。包内清单的 `data/raw/Sale of Goods.html` 会解析为 `data/formal_corpus/raw/Sale of Goods.html`，不会读取项目根目录原始快照。
+B sets `data_dir` to `data/formal_corpus`. The in-package manifest's `data/raw/Sale of Goods.html` resolves to `data/formal_corpus/raw/Sale of Goods.html` and does not read the original snapshot in the project root.
 
-两份 manifest 的 `corpus_version` 相同，但文件结构和用途不同。`formal_loader` 不直接读取项目级 `corpus_manifest.json`。
+The two manifests have the same `corpus_version`, but their file structures and purposes differ. `formal_loader` does not directly read the project-level `corpus_manifest.json`.
 
-## 7. 版本和哈希算法
+## 7. Versions and hash algorithm
 
-### 7.1 当前三个版本
+### 7.1 The current three versions
 
-| 名称 | 值 |
+| Name | Value |
 | --- | --- |
-| 正式 `corpus_version` | `794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` |
-| 正式 `gold_version` | `9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d` |
-| 单文档样本 `corpus_version` | `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50` |
+| Formal `corpus_version` | `794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795` |
+| Formal `gold_version` | `9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d` |
+| Single-document sample `corpus_version` | `41404e6e3bd67f2313a8d2bcc4b151d5273f7bd5807a98f5018c0dd98e6c5a50` |
 
-旧题集版本 `444afb6d...` 是退款和二手商品例外修正前的历史版本，当前正式评估使用上表的新题集版本。
+The old question set version `444afb6d...` is a historical version from before the corrections to the refund and second-hand goods exceptions; the current formal evaluation uses the new question set version in the table above.
 
-### 7.2 语料版本
+### 7.2 corpus version
 
-复用 `app.retrieval.types.canonical` 和 `digest`：
+Reuse `app.retrieval.types.canonical` and `digest`:
 
 ```python
 canonical = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 digest = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 ```
 
-版本材料为 `parser_version` 和按 `document_id` 排序的文档列表。每份文档只包含：
+The version materials are `parser_version` and the document list sorted by `document_id`. Each document contains only:
 
 ```text
 document_id, title, issuer, source_url,
@@ -255,98 +255,98 @@ published_at, effective_at, raw_sha256,
 text_sha256, structure_sha256
 ```
 
-| 哈希 | 计算对象 |
+| Hash | Object computed |
 | --- | --- |
-| `raw_sha256` | 原始 HTML 文件字节 |
-| `text_sha256` | 完整 `text` 的 UTF-8 字节，等于已验收 txt 的字节哈希 |
-| `structure_sha256` | 适配后 `articles` 数组的规范化 JSON，包含补齐的 label、chapter、section |
-| `processed_sha256` | 写入版本之后的整个适配 JSON 文件字节 |
-| `accepted.structure_json_sha256` | 已验收结构 JSON 文件字节，单独记录 |
+| `raw_sha256` | Raw HTML file bytes |
+| `text_sha256` | UTF-8 bytes of the complete `text`, equal to the byte hash of the accepted txt |
+| `structure_sha256` | Canonical JSON of the adapted `articles` array, including the filled-in label, chapter, and section |
+| `processed_sha256` | Bytes of the entire adapted JSON file after the version is written |
+| `accepted.structure_json_sha256` | Bytes of the accepted structure JSON file, recorded separately |
 
-`structure_sha256` 不是完整结构 JSON 的文件哈希。加载器同时核对整个适配文件的哈希，覆盖其中其余元数据。
+`structure_sha256` is not the file hash of the complete structure JSON. The loader also verifies the hash of the entire adapted file, covering the remaining metadata within it.
 
-语料指纹不包含版本号自身、适配文件最终哈希、登记时间或导出时间，避免自引用和运行时间造成版本漂移。
+The corpus fingerprint does not include the version number itself, the final hash of the adapted file, the registration time, or the export time, to avoid self-reference and version drift caused by runtime.
 
-### 7.3 题集版本
+### 7.3 question set version
 
-`gold_version` 等于 `gold.jsonl` 的文件字节 SHA-256，包括末尾 LF；manifest 的 `gold_sha256` 与它相同。每道题已含正式 `corpus_version`，但不含 `gold_version`，因此不存在文件把自身哈希写入自身的问题。
+`gold_version` equals the SHA-256 of the file bytes of `gold.jsonl`, including the trailing LF; the manifest's `gold_sha256` is identical to it. Each question already contains the formal `corpus_version` but does not contain `gold_version`, so there is no problem of a file writing its own hash into itself.
 
-修改问题、参考答案、关键事实、证据、字段序列化或换行，都会改变题集版本。修订后必须重新生成题集 manifest 和复核记录，并通知使用该题集的成员。
+Modifying a question, reference answer, key fact, evidence, field serialization, or line breaks will change the question set version. After revision, the question set manifest and review record must be regenerated, and members using that question set must be notified.
 
-## 8. 标准测试题集
+## 8. Standard test question set
 
-### 8.1 分布和字段
+### 8.1 distribution and fields
 
-正式题集共 **30 题：24 可答、6 拒答**。当前类型为单段证据 `single_article` 13 题、多段证据 `multi_evidence` 11 题、`unanswerable` 6 题。多证据可以来自同一条文，不表示一定跨文档。
+The formal question set has **30 questions in total: 24 answerable, 6 refusal**. The current types are single-segment evidence `single_article` 13 questions, multi-segment evidence `multi_evidence` 11 questions, and `unanswerable` 6 questions. Multiple pieces of evidence may come from the same provision and do not necessarily span documents.
 
-| 文档 | 可答题 | 证据段 |
+| Document | Answerable questions | Evidence segments |
 | --- | ---: | ---: |
-| 消费者权利 2011/83 | 6 | 11 |
-| 货物销售 2019/771 | 5 | 9 |
-| 数字内容 2019/770 | 5 | 10 |
-| 不公平商业行为 2005/29 | 4 | 7 |
-| 不公平条款 93/13 | 4 | 5 |
-| 合计 | 24 | 42 |
+| Consumer rights 2011/83 | 6 | 11 |
+| Sale of goods 2019/771 | 5 | 9 |
+| Digital content 2019/770 | 5 | 10 |
+| Unfair commercial practices 2005/29 | 4 | 7 |
+| Unfair terms 93/13 | 4 | 5 |
+| Total | 24 | 42 |
 
-每行 JSON 的字段沿用现有样题：
+The fields of each JSON line follow the existing sample questions:
 
-| 字段 | 用途 |
+| Field | Purpose |
 | --- | --- |
-| `case_id` | 唯一且稳定的题号 |
-| `corpus_version` | 本题使用的正式语料版本 |
-| `question`、`question_type` | 英文问题和题型 |
-| `should_refuse` | 预期是否拒答 |
-| `reference_answer` | 英文评分参考答案 |
-| `key_facts` | 关键事实；当前实现逐项取对应 quote |
-| `evidence` | 标准证据列表 |
-| `refusal_reason` | 拒答题缺少什么信息；可答题为 null |
+| `case_id` | Unique and stable question number |
+| `corpus_version` | Formal corpus version used by this question |
+| `question`, `question_type` | English question and question type |
+| `should_refuse` | Whether a refusal is expected |
+| `reference_answer` | English scoring reference answer |
+| `key_facts` | Key facts; the current implementation takes the corresponding quote item by item |
+| `evidence` | Standard evidence list |
+| `refusal_reason` | What information the refusal question lacks; null for answerable questions |
 
-每段证据包含 `document_id`、`article_id` 或 `structure_id`、`start`、`end` 和 `quote`。当前 42 段摘录长度为 68–393 个 Python 字符，全部满足 `0 < len(quote) < 400`，并从全文连续切出。
+Each evidence segment contains `document_id`, `article_id` or `structure_id`, `start`, `end`, and `quote`. The current 42 segment excerpts are 68–393 Python characters long, all satisfy `0 < len(quote) < 400`, and are cut contiguously from the full text.
 
-### 8.2 编题与语义复核
+### 8.2 question authoring and semantic review
 
-`clip` 先取得指定条文或附件的区间，再检查起止锚点在该范围内唯一。不能用全文第一个相同词句替代正确位置，也不能把不连续句子拼成一段 quote。
+`clip` first obtains the range of the specified provision or annex, then checks that the start and end anchors are unique within that range. The first identical phrase in the full text cannot be used in place of the correct position, nor can non-contiguous sentences be joined into a single quote.
 
-关键事实等于 quote 可由程序验证，但不能证明答案已经保留所有必要条件。语义复核仍需阅读同条其他款及相关条文，检查限定、例外、否定、日期和范围。
+That key facts equal the quote can be verified programmatically, but this cannot prove that the answer has retained all necessary conditions. Semantic review still requires reading the other paragraphs of the same article and related provisions to check qualifications, exceptions, negations, dates, and scope.
 
-已有两项实际修正：
+There have been two actual corrections:
 
-- `gold-crd-withdrawal-refund` 补齐第 13 条第 2、3 款，保留额外配送费用与暂缓退款条件，以及经营者提出自行取货的例外。
-- `gold-sgd-two-year-liability` 补齐第 10 条第 6 款，说明二手商品较短期间需由成员国允许并由双方约定，且不能少于一年。
+- `gold-crd-withdrawal-refund` added paragraphs 2 and 3 of Article 13, retaining the conditions on additional delivery costs and deferred refunds, as well as the exception where the trader offers to collect the goods itself.
+- `gold-sgd-two-year-liability` added paragraph 6 of Article 10, stating that the shorter period for second-hand goods must be permitted by Member States and agreed by both parties, and must not be less than one year.
 
-### 8.3 拒答与评估边界
+### 8.3 refusal and evaluation boundaries
 
-六道拒答题涉及航班固定赔偿额、增值税税率、退款法定年利率、德国罚款上限、拒绝修理后的起诉天数和一揽子旅游最低保险。判断范围是完整五份冻结正文，包括序言、附件和脚注，不只检查某一份文档。
+The six refusal questions concern the fixed compensation amount for flights, the VAT rate, the statutory annual interest rate for refunds, the upper limit of fines in Germany, the number of days to bring a lawsuit after refusing repair, and the minimum insurance for package travel. The scope of judgment is the complete five frozen texts, including preambles, annexes, and footnotes, not just one document.
 
-拒答题的 `evidence`、`key_facts` 均为空，原因写入英文 `refusal_reason`。出现相关关键词不等于具备答案，未找到某个词也不能单独证明应拒答。
+For refusal questions, `evidence` and `key_facts` are both empty, and the reason is written in the English `refusal_reason`. The presence of related keywords does not mean the answer is available, nor does the failure to find a certain word alone prove that a refusal is warranted.
 
-题集在查阅四组正式检索结果之前冻结。C 向系统提交 `question`，让系统自行检索和回答；标准答案、关键事实和标准证据保留用于评分对照。四组运行时得到 120 条逐题记录，尚需 C 实际执行。
+The question set was frozen before consulting the four sets of formal retrieval results. C submits `question` to the system, letting the system retrieve and answer on its own; the reference answers, key facts, and reference evidence are retained for scoring comparison. The four runs produced 120 per-question records, which C still needs to actually execute.
 
-## 9. 命令行入口与错误行为
+## 9. Command-line entry points and error behavior
 
-以下命令均在项目根目录用 `.venv` 的 Python 执行。
+The following commands are all run from the project root using the Python at `.venv`.
 
-| 命令参数 | 行为 | 是否写入产物 |
+| Command argument | Behavior | Writes artifacts |
 | --- | --- | --- |
-| `scripts/process_documents.py --document-id <id>` | 处理一份登记文档 | 是 |
-| `scripts/process_documents.py --all` | 按 ID 稳定排序处理清单中的所有文档 | 是 |
-| `scripts/validate_data.py --scope corpus` | 核对整套来源、处理产物、结构与区间 | 否 |
-| `scripts/validate_data.py --scope corpus --document-id <id>` | 核对一份文档 | 否 |
-| `scripts/export_corpus.py` | 核对五份官方 ID 后导出正式包并验证 | 是 |
-| `scripts/build_gold.py` | 按固定题目定义重新生成题集及 manifest | 是 |
-| `scripts/validate_data.py --scope eval` | 题集、正式版本、证据及题集 manifest 校验 | 否 |
+| `scripts/process_documents.py --document-id <id>` | Process one registered document | Yes |
+| `scripts/process_documents.py --all` | Process all documents in the manifest in stable ID order | Yes |
+| `scripts/validate_data.py --scope corpus` | Verify the full source set, processed artifacts, structure, and spans | No |
+| `scripts/validate_data.py --scope corpus --document-id <id>` | Verify one document | No |
+| `scripts/export_corpus.py` | Verify the five official IDs, then export the official package and validate it | Yes |
+| `scripts/build_gold.py` | Regenerate the question set and manifest from the fixed question definitions | Yes |
+| `scripts/validate_data.py --scope eval` | Validate the question set, official version, evidence, and question set manifest | No |
 
-清洗的 `--all` 与 `--document-id` 必选其一、互斥。全语料校验按来源登记处理，额外的未登记 txt / JSON 会报告；样本包里的副本不算重复正式文档。
+For cleaning, `--all` and `--document-id` are mutually exclusive and one is required. Full-corpus validation processes by source registration; extra unregistered txt / JSON files are reported; copies in the sample package do not count as duplicate official documents.
 
-`--data-root` 由清洗和校验脚本提供，用于指定另一套项目数据根目录，异常测试据此使用临时副本。正式导出 CLI 没有这个命令行选项；测试通过函数参数注入临时根目录。题集校验不接受 `--document-id`。
+`--data-root` is provided by the cleaning and validation scripts to specify an alternative project data root directory; exception tests use temporary copies accordingly. The official export CLI does not have this command-line option; tests inject a temporary root directory via a function parameter. Question set validation does not accept `--document-id`.
 
-批处理清单结构错误时在处理前失败；单份快照哈希不符或预期解析失败计入失败数，继续处理其余文档。只要存在失败，最终退出非零并报告 `result=failed`。调用方应检查最终退出码和汇总，不能只看到某一份文档已输出就判断整批成功。
+If the batch manifest structure is invalid, it fails before processing; a single snapshot hash mismatch or expected parse failure counts toward the failure count, and processing continues for the remaining documents. If any failures exist, it ultimately exits non-zero and reports `result=failed`. Callers should check the final exit code and summary; seeing that one document has been output is not sufficient to conclude the whole batch succeeded.
 
-## 10. 正常加载与交接
+## 10. Normal loading and handoff
 
-### 10.1 B：加载正式语料
+### 10.1 B: Load the official corpus
 
-下面代码在项目根目录运行，不绕过 `app.retrieval` 的包初始化：
+The code below runs from the project root and does not bypass the package initialization of `app.retrieval`:
 
 ```python
 from pathlib import Path
@@ -359,9 +359,9 @@ assert len(documents) == 5
 assert sum(len(doc["articles"]) for doc in documents) == 121
 ```
 
-B 按同一版本建立 F400、S400、F800、S800 四组索引。400/800 是 Python 字符数。A 提供冻结输入和可回查的位置；正式索引、模型和检索质量由 B 的实现及验证负责。
+B builds four index groups—F400, S400, F800, S800—from the same version. 400/800 is the Python character count. A provides the frozen input and traceable positions; the official index, model, and retrieval quality are the responsibility of B's implementation and validation.
 
-### 10.2 C：加载评分对照
+### 10.2 C: Load the scoring comparison
 
 ```python
 import hashlib
@@ -375,38 +375,38 @@ cases = [json.loads(line) for line in raw.decode("utf-8").splitlines()]
 assert len(cases) == 30
 ```
 
-C 同时固定语料和题集版本。可答题命中与答案指标按 24 题统计，6 道拒答题单独统计；具体逐题评分和正式结果由 C 实际运行后记录。字段已交付不等于 C 的端到端接口已经验收。
+C fixes both the corpus and the question set version. Answerable hits and answer metrics are counted over 24 questions, and the 6 refusal questions are counted separately; the specific per-question scoring and official results will be recorded after C actually runs. Delivering the fields does not mean C's end-to-end interface has been accepted.
 
-### 10.3 联调样本
+### 10.3 Integration sample
 
-`data/sample_corpus` 只含第一份文档，`data/eval/sample.jsonl` 有三道联调题，绑定样本版本。它们保留用于早期联调和回归，不改成正式五文档版本。正式评估使用 `gold.jsonl`。
+`data/sample_corpus` contains only the first document, and `data/eval/sample.jsonl` has three integration questions bound to the sample version. They are retained for early integration and regression and are not changed to the official five-document version. Formal evaluation uses `gold.jsonl`.
 
-## 11. 环境、测试和已有证据
+## 11. Environment, tests, and existing evidence
 
-本机验证环境为 Windows PowerShell、Python 3.13.11，显式调用 `.venv/Scripts/python.exe`。A 命令行使用 Beautiful Soup；正常包导入的检索服务还会导入 `filelock`。版本分别登记在 `requirements.txt` 与 `requirements-b.txt`，安装步骤见 [A测试.md](./A测试.md)。
+The local verification environment is Windows PowerShell, Python 3.13.11, with `.venv/Scripts/python.exe` invoked explicitly. A's command line uses Beautiful Soup; the retrieval service imported by the normal package also imports `filelock`. Versions are registered in `requirements.txt` and `requirements-b.txt` respectively; installation steps are in [A测试.md](./A测试.md).
 
-| 测试模块 | 当前项数 | 主要覆盖 |
+| Test module | Current item count | Main coverage |
 | --- | ---: | --- |
-| `tests.test_corpus_batch` | 8 | 参数、空清单、重复 ID、缺快照、哈希失配、部分失败、产物清点、节镜像 |
-| `tests.test_corpus_freeze` | 6 | 缺处理产物、正式快照被改、版本失配、重复导出、小语料兼容、正式缺项 / 多项拒绝 |
-| `tests.test_gold_eval` | 5 | 证据归属、附件重复条号、摘录失配、拒答证据、重复题号、版本 / 哈希、CRLF、参数 |
-| 合计 | 19 | 测试在临时副本或内存对象中制造异常 |
+| `tests.test_corpus_batch` | 8 | Arguments, empty manifest, duplicate IDs, missing snapshots, hash mismatch, partial failure, artifact inventory, section mirroring |
+| `tests.test_corpus_freeze` | 6 | Missing processed artifacts, modified official snapshots, version mismatch, duplicate export, small-corpus compatibility, missing / extra official items rejection |
+| `tests.test_gold_eval` | 5 | Evidence attribution, duplicate attachment clause numbers, excerpt mismatch, refusal evidence, duplicate question numbers, version / hash, CRLF, arguments |
+| Total | 19 | Tests create exceptions in temporary copies or in-memory objects |
 
-本机已实际复跑清洗、正式导出、题集生成、两类校验及上述 19 项测试。最终记录的 44 个受保护文件哈希保持一致，正式包和样本包加载均通过。详细字节哈希与命令见 [最终校验记录](./artifacts/a_review/a_final_validation.md)。
+Locally, cleaning, official export, question set generation, both types of validation, and the above 19 tests have actually been rerun. The final recorded hashes of the 44 protected files remain consistent, and both the official package and the sample package load successfully. Detailed byte hashes and commands are in [Final validation record](./artifacts/a_review/a_final_validation.md).
 
-组员应以自己执行的退出码和输出为准；查看本机已有报告不能代替在另一台电脑运行测试。
+Team members should rely on the exit codes and output from their own runs; viewing existing local reports is not a substitute for running the tests on another computer.
 
-## 12. 复核状态和维护规则
+## 12. Review status and maintenance rules
 
-| 范围 | 当前状态 | 后续负责人 |
+| Scope | Current status | Follow-up owner |
 | --- | --- | --- |
-| 来源、全文、结构、版本与证据位置 | 程序检查通过，有 AI 辅助原文复核 | A 维护与修订 |
-| 官方原文、标准答案和浏览器视觉检查 | 2026-11-19 由 A 负责人确认通过，未发现问题 | A 维护复核结论，修订后重新核对 |
-| 正式语料的 embedding、索引及语义检索 | 不属于 A 数据校验的通过结论 | B 正式联调 |
-| 生成答案、引用支持性、四组评分和页面集成 | 不属于本次 A 的测试结果 | C 正式联调与评分 |
+| Source, full text, structure, version, and evidence positions | Program checks passed, with AI-assisted source review | A maintains and revises |
+| Official source text, reference answers, and browser visual inspection | 2026-11-19 confirmed passed by the A lead, no issues found | A maintains the review conclusion and rechecks after revisions |
+| Embedding, indexing, and semantic retrieval of the official corpus | Not part of A's data validation pass conclusion | B formal integration |
+| Generated answers, citation support, four-group scoring, and page integration | Not part of this A test result | C formal integration and scoring |
 
-既有 AI 辅助复核采用 HTML DOM、冻结正文和切片对照。人工复核和五份本地 HTML 的浏览器视觉检查已由 A 负责人于 2026-11-19 确认通过，未发现问题。各份 AI 报告中“当时未做浏览器视觉检查”保留为历史记录。附件 I 的方框样式在清洗后是普通数字，相关填写说明仍保留；引用占位信息时需同时查看说明。语料是保存的原始公布版，不能按后续合并文本补写规则。
+The existing AI-assisted review used HTML DOM, frozen body text, and chunk comparison. Manual review and browser visual inspection of the five local HTML files were confirmed passed by the A lead on 2026-11-19, with no issues found. The statement in each AI report that "no browser visual inspection was performed at the time" is retained as a historical record. The box style in Attachment I becomes plain numbers after cleaning, and the related filling instructions are still retained; when citing placeholder information, the instructions must be consulted as well. The corpus is the saved original published version and must not be supplemented according to later merged-text rules.
 
-维护数据时遵循以下顺序：定位问题并记录文档 ID / 条文或题号 → 修改相应来源或固定定义 → 重新生成受影响数据 → 校验 → 更新内容版本与复核记录 → 向 B、C 提供明确的新旧版本关系。不能只改题集 JSONL 而保留旧生成脚本，也不能只更新 manifest 哈希来掩盖正文、区间或证据错误。
+Follow this order when maintaining data: locate the issue and record the document ID / clause or question number → modify the corresponding source or fixed definition → regenerate the affected data → validate → update the content version and review record → provide B and C with a clear old/new version relationship. Do not change only the question set JSONL while keeping the old generation script, and do not update only the manifest hashes to mask errors in body text, spans, or evidence.
 
-本文和 `A测试.md` 是实现及组员操作入口；[需求文档](./A部分需求与开发顺序.md)保留验收要求，[阶段记录](./A部分阶段开发记录.md)保留历史过程，[交付说明](./A部分交付说明.md)汇总当前交付物。各文档中的当前版本以正式 manifest 与实际文件为准。
+This document and `A测试.md` are the entry points for implementation and team member operations; [Requirements document](./A部分需求与开发顺序.md) retains the acceptance requirements, [Phase record](./A部分阶段开发记录.md) retains the historical process, and [Delivery notes](./A部分交付说明.md) summarizes the current deliverables. The current version in each document is subject to the official manifest and the actual files.
