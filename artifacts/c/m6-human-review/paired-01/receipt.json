@@ -1,0 +1,127 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "source_question_call_id": "call_4d3d03db42e4475caefbc71895fee043",
+  "answer_grades_written": 0,
+  "confirmed_claim_supports_to_save": 8,
+  "applied": [
+    {
+      "condition": "f400",
+      "review": {
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用2虽截断条件句开头，题目已明确双方未约定交期；交付占有或控制、不得无故拖延、合同成立后30日的结论完整。实际评审人明确接受使用题目给定事实前提的口径。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3完整写出未约定具体交付日时应尽快交付，且最迟合同成立后30日，直接覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本聊天C任务负责人明确选择“correct：必要事实完整正确”。仅保存该整答确认；评审人采用团队示例允许的角色标识，未提供实名。两条引用支持性由用户委托Codex AI分析，尚无实际人逐项确认，故本次不写claim_reviews，也不替其他题评分。确认来源：call_1ed2eaad6f7f4f559e751f1aea6afeb7，第0项回复。\n本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:33:30.678692+00:00"
+      }
+    },
+    {
+      "condition": "s400",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用4完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:33:30.692849+00:00"
+      }
+    },
+    {
+      "condition": "f800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留序言(52)的未约定交付日、尽快交付和最迟30日句子，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:33:30.706444+00:00"
+      }
+    },
+    {
+      "condition": "s800",
+      "review": {
+        "answer_grade": null,
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3完整保留Article18(1)的条件、交付方式、不得无故拖延、合同成立后最迟30日，覆盖主张。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1以未约定具体交付日的完整规则开头，包含尽快交付、合同成立后最迟30日，覆盖主张。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T05:33:30.720463+00:00"
+      }
+    }
+  ],
+  "school_generation_api_calls": 0,
+  "own_database_lease_released": true,
+  "official_review_history_rows": 5,
+  "official_cases_with_any_review": 4,
+  "answer_grades_saved": 1,
+  "answer_grades_pending": 95,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_saved": 8,
+  "claim_support_decisions_pending": 158,
+  "original_other_116_records_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "sqlite_reopened_and_reviews_preserved": true,
+  "original_45_A_files_unchanged": true,
+  "original_M6_materials_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "60b810389535afc5758e1672082b611b0db8212e7510fdd99ebe48e2eae02fe9",
+    "evaluation.partial-review.json": "3c0006e3609b09240ce6d20cc4db2c464374aa08bfeb20859d9a8cb10ef7f442",
+    "reading-packet.json": "9f0520976f4de3a8e9af4309773fa728269fdd6d59b06d24bb0f382994711c99",
+    "requests.json": "030fe0fdb5bd778ef31fcb533a00914b44bed3713c268d93e27a7e9fd12e2a93",
+    "user-feedback.json": "7e0bae6a80b6c4f2b2c3cce06ead0cdc397e016a71a33bc7371f0944490118e5"
+  },
+  "reading_md": {
+    "path": "docs/M6第1题四组逐句解释与已确认引用.md",
+    "sha256": "478a15d69c63659c43e3c73eff49cea5a22af6237de06bdb2b9e7b0892e39536"
+  },
+  "reading_md_sha256_before_followup": "e7ba5a534a14c0aace0b49e02dbf6a4939c6b53341b9aaca54f340fa2838fe82",
+  "reading_materials_refreshed_after_followup_grade_confirmation": true
+}

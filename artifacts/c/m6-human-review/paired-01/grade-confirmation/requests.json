@@ -1,0 +1,26 @@
+[
+  {
+    "condition": "s400",
+    "patch": {
+      "answer_grade": "correct",
+      "reviewer": "C（本聊天用户）",
+      "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。"
+    }
+  },
+  {
+    "condition": "f800",
+    "patch": {
+      "answer_grade": "correct",
+      "reviewer": "C（本聊天用户）",
+      "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。"
+    }
+  },
+  {
+    "condition": "s800",
+    "patch": {
+      "answer_grade": "correct",
+      "reviewer": "C（本聊天用户）",
+      "notes": "本次实际评审人明确选择“认可：8条均支持，接受上述题目前提口径”。来源call_4d3d03db42e4475caefbc71895fee043第1项。S400/F800/S800整答等级选择暂不确认；本次不写任何answer_grade。\n后续逐句解释后，实际评审人明确选择“已理解，确认这三组均为correct”。来源call_5810cea64a594432bfd92b79916aaebf第0项。本次仅补整答correct，先前引用判断保持。"
+    }
+  }
+]
