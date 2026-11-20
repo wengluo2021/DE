@@ -1,0 +1,114 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-08/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f400",
+      "ask_id": "ask-ca088805de274b788fe27051fceec7de",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：只明确回答免费，另说一般救济；没有明确维修/更换之间的选择权及不可能/不成比例成本例外，也漏合理时间和无重大不便，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1完整包含Article14(1)(a)免费维修或更换。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用2的序言句直接支持不符时可要求符合、比例减价或解除的一般说明；它没有回答选择维修或更换及其例外。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s400",
+      "ask_id": "ask-a58febdba6904c1caa7e39982fae947e",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：仅回答免费，没有回答选择权及例外，也未给合理时间和无重大不便条件，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用2直接包含Article14免费维修/更换；其他取回的文字没有由本主张转成完整回答。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "f800",
+      "ask_id": "ask-ac13afe75f844a07b6d9538974968aba",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：免费、合理时间与无重大不便说明完整，但没有回答消费者能否选择维修/更换以及不可能或不成比例成本例外，建议partial。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用1直接包含第14(1)(a)免费要求。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整包含从卖方获知不符起的合理时间要求。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1完整包含不造成重大不便及商品性质/消费者目的的限定。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-repair-or-replacement",
+      "condition": "s800",
+      "ask_id": "ask-7e375c5e5c20444b865a05b29c974ff2",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：明确选择权/例外与免费，覆盖题干主要问点，但按A完整必要事实口径仍漏合理时间和不得重大不便，建议partial。实际评审人应确认是否要求题干未单独追问的这两个条件，并对所有组统一。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3完整包含Article13(2)选择维修或更换及不可能/相较另一救济成本不成比例的限制。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用2序言(48)直接支持消费者应享有维修或更换的选择这一概括。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1直接包含免费维修/更换。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 40,
+    "official_cases_with_review": 36,
+    "answer_grades_pending": 60,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 81
+  }
+}
