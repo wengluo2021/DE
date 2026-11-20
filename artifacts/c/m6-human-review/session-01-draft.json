@@ -1,0 +1,27 @@
+{
+  "kind": "human_confirmation_session_draft",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "actual_reviewer_name": null,
+  "case_id": "gold-crd-delivery-time",
+  "condition": "f400",
+  "ask_id": "ask-a2578badf16844d9a4a75df7d42987a1",
+  "answer_grade": null,
+  "claim_decisions": [
+    {
+      "claim_index": 0,
+      "supported": null,
+      "reason": "",
+      "human_confirmed": false
+    },
+    {
+      "claim_index": 1,
+      "supported": null,
+      "reason": "",
+      "human_confirmed": false
+    }
+  ],
+  "human_confirmed": false,
+  "official_review_written": false,
+  "awaiting": "actual_reviewer_and_item_decisions"
+}

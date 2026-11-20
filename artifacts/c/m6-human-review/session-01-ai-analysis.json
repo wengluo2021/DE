@@ -1,0 +1,32 @@
+{
+  "kind": "ai_support_adjudication_draft",
+  "prepared_by": "Codex AI",
+  "human_review": false,
+  "official_review_written": false,
+  "can_import_as_human_review": false,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-delivery-time",
+  "condition": "f400",
+  "ask_id": "ask-a2578badf16844d9a4a75df7d42987a1",
+  "trigger": "User explicitly delegated claim-support analysis after confirming the overall answer grade.",
+  "proposed_context_policy": "Explicit facts supplied by the question may establish this question's factual premise. Missing legal rules or facts not given by the question cannot be supplied from uncited text. Apply the same policy across all four conditions; this is an AI proposal pending real reviewer confirmation.",
+  "claim_checks": [
+    {
+      "claim_index": 0,
+      "citation_numbers": [2],
+      "suggested_supported": true,
+      "human_confirmed": false,
+      "reason": "题目明确给出双方未约定交期这一事实。实际引用2虽截断了条件句开头，仍完整保留交付商品占有或控制、不得无故拖延、合同成立后最迟30日。允许使用题目给定事实前提时，本题情境下该片段可支持此主张；未借用引用以外的法规句补充结论。",
+      "caveat": "Conditional on consistently accepting explicit question premises as context. The earlier AI draft's pending judgment is preserved; no human support decision has been supplied."
+    },
+    {
+      "claim_index": 1,
+      "citation_numbers": [3],
+      "suggested_supported": true,
+      "human_confirmed": false,
+      "reason": "实际引用3完整保留未约定具体交付日时应尽快交付、合同成立后最迟30日的句子，直接覆盖本条主张。"
+    }
+  ],
+  "school_generation_api_calls": 0
+}

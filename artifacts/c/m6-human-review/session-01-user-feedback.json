@@ -1,0 +1,27 @@
+{
+  "kind": "explicit_user_feedback_pending_reviewer_identity",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-delivery-time",
+  "condition": "f400",
+  "ask_id": "ask-a2578badf16844d9a4a75df7d42987a1",
+  "source_question_call_id": "call_1ed2eaad6f7f4f559e751f1aea6afeb7",
+  "actual_reviewer_name": null,
+  "answer_grade": {
+    "value": "correct",
+    "explicitly_user_confirmed": true,
+    "user_response": "correct：必要事实完整正确"
+  },
+  "claim_review_delegation": {
+    "user_response": "你根据情况判断，我也不是很明白",
+    "ai_analysis_authorized": true,
+    "explicit_human_support_decisions_provided": false,
+    "ai_analysis_file": "artifacts/c/m6-human-review/session-01-ai-analysis.json"
+  },
+  "official_review_written": false,
+  "awaiting": [
+    "actual_reviewer_identity_before_saving_confirmed_answer_grade",
+    "actual_human_confirmation_before_recording_claim_support_as_human_review"
+  ],
+  "school_generation_api_calls": 0
+}
