@@ -8,6 +8,8 @@ Windows401项、Linux400项通过/1平台专用跳过，真实CPU检索/学校�
 
 正式配置`config/experiment.formal-a.json`；默认配置仍是development样例。最新导出在`artifacts/c/m6-final-scored/`。当前电脑继续使用已有正常数据库，不从旧备份覆盖。交付和恢复见[本轮交付清单](docs/本轮交付清单与恢复.md)，所有阶段报告与日期日志保留。源码仅answer-eval本地保存，没有push或改main。
 
+最终离线包已完成：[C任务完成说明与阅读路线](docs/C任务完成说明与阅读路线.md)。最终目录为工作区deliveries/20261120-C-final-mixed-review，先读其中README_先读我.md。
+
 ## 当前电脑查看已有结果
 
 已有venv/模型无需重装。普通PowerShell在项目根运行以下无Key方式，随后打开`http://127.0.0.1:8765/evaluation`并选已有run；不会为恢复而开始新实验：

@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-20",
+  "state": "passed",
+  "kind": "C_final_mixed_provenance_delivery",
+  "source_snapshot_commit": "16a8e82b62cbe5a76e48bb5715fb7a15a2338a07",
+  "output_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-C-final-mixed-review",
+  "human_confirmed_cases": 21,
+  "authorized_AI_cases": 99,
+  "all_items_individually_human_verified": false,
+  "external_model_calls": 0,
+  "old_archives_and_old_DE_tar_preserved": true,
+  "source_preparation": {
+    "state": "verified",
+    "kind": "formal_candidate",
+    "file_count": 363,
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "official_provenance_verified": false,
+    "external_model_calls": 0,
+    "output": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\deliveries\\20261120-C-final-mixed-review\\source-data",
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "model_weights_included": false,
+    "container_built": false
+  },
+  "source_verification": {
+    "state": "verified",
+    "kind": "formal_candidate",
+    "file_count": 369,
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "official_provenance_verified": false,
+    "external_model_calls": 0
+  },
+  "fresh_stdlib": {
+    "state": "verified",
+    "kind": "formal_candidate",
+    "file_count": 369,
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "official_provenance_verified": false,
+    "external_model_calls": 0
+  },
+  "fresh_data_validation": {
+    "schema_version": "1.0",
+    "state": "validated",
+    "mode": "formal",
+    "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+    "gold_version": "9ecc1d148c00dacc354a401bdeae7dc019de871919d9ad673a53a9e491e9f07d",
+    "document_count": 5,
+    "article_count": 121,
+    "text_chars": 391777,
+    "answerable_count": 24,
+    "unanswerable_count": 6,
+    "corpus_only": false,
+    "experiment_fingerprint": "cf8e68e0c8a71de07c8917f96bb8304843f64bbfb8e4b4bbbbfb2b192698047a",
+    "external_model_calls": 0
+  },
+  "source_archive": {
+    "file": "C-source-data-scored-20261120.zip",
+    "bytes": 2073716,
+    "sha256": "105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7",
+    "members": 370,
+    "CRC_and_member_bytes_verified": true
+  },
+  "results_archive": {
+    "file": "C-scored-results-20261120.zip",
+    "bytes": 33513874,
+    "sha256": "e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9",
+    "members": 429,
+    "CRC_and_member_bytes_verified": true
+  },
+  "prior_de_latest_image_id": null,
+  "project_de_latest_tag_available": true,
+  "runtime_archive": {
+    "file": "DE.tar",
+    "bytes": 1870832128,
+    "sha256": "0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05",
+    "tag": "de:latest",
+    "image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+    "config_and_17_layers_verified": true
+  },
+  "weights_archive": {
+    "file": "BGE-M3-5617a9f6-weights.tar",
+    "bytes": 2293350400,
+    "sha256": "bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "individual_weight_validation_reused_from_verified_archive": 11
+  },
+  "archives": [
+    {
+      "file": "C-source-data-scored-20261120.zip",
+      "bytes": 2073716,
+      "sha256": "105fa047ed16e17a38edd92c12ed4cc49ab025c3286834d136a673ffeb6b81d7",
+      "members": 370,
+      "CRC_and_member_bytes_verified": true
+    },
+    {
+      "file": "C-scored-results-20261120.zip",
+      "bytes": 33513874,
+      "sha256": "e9b6726bebad5b4422a728d1514b350e708fc67494f0a2261d3c565661dad2d9",
+      "members": 429,
+      "CRC_and_member_bytes_verified": true
+    },
+    {
+      "file": "DE.tar",
+      "bytes": 1870832128,
+      "sha256": "0a42af6e5a64e55383b20970b98fff8262e2d746bea26b0f189951aeb79d1c05",
+      "tag": "de:latest",
+      "image_id": "sha256:c9fd36327ffa6d676a1fe45c4a6369cc91ad11d643168523448185b1ab1a89de",
+      "config_and_17_layers_verified": true
+    },
+    {
+      "file": "BGE-M3-5617a9f6-weights.tar",
+      "bytes": 2293350400,
+      "sha256": "bde9e27a9e758677f035097550944dab26b49fe99ba786dd4fd51b44dc08f958",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "individual_weight_validation_reused_from_verified_archive": 11
+    }
+  ],
+  "final_manifest_sha256": "f9875660fcb5657d76a28e66ff7bd490df954b25d1e7617e909be848d17fddb7",
+  "SHA256SUMS_sha256": "f7cc48fcec9e5e010e85a7d1f7586798802c06b604fa53361526e87226cbc2eb",
+  "all_package_checks_passed": true,
+  "credential_leaks": 0,
+  "cumulative_known_school_tokens": 191672,
+  "image_load_on_another_physical_machine_tested": false,
+  "restore_wording": "startup_and_one_restart_exports_byte_equal"
+}
