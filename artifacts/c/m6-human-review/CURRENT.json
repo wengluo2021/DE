@@ -2,8 +2,8 @@
   "kind": "mixed_provenance_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M6_51_第30题评分与续做.md",
-  "latest_reading_guide": "docs/M6第30题_包价旅游最低保险额未载明_评分记录.md",
+  "latest_handoff": "docs/handoffs/M6_52_完整评分汇总与转入最终交付.md",
+  "latest_reading_guide": "docs/M6完整评分结果与对照.md",
   "official_review_history_rows": 124,
   "official_cases_with_any_review": 120,
   "answer_grades_saved": 96,
@@ -30,7 +30,7 @@
   "own_service_processes_stopped": true,
   "school_generation_api_calls_this_continuation": 0,
   "cumulative_known_school_tokens": 191672,
-  "next_action": "final_scored_report_and_delivery",
+  "next_action": "scored_SQLite_Linux_restore_and_final_package",
   "do_not_repeat": [
     "the_saved_first_answer_grade_PATCH",
     "formal_120_generation",
@@ -41,7 +41,7 @@
   "paired_questions_total": 30,
   "next_question_number": null,
   "next_case_id": null,
-  "latest_partial_export": "artifacts/c/m6-human-review/paired-30/saved/evaluation.partial-review.json",
+  "latest_partial_export": "artifacts/c/m6-final-scored/evaluation.json",
   "context_policy": {
     "human_confirmed": true,
     "source_question_call_id": "call_4d3d03db42e4475caefbc71895fee043",
@@ -71,5 +71,7 @@
   "individually_human_confirmed_answer_grades": 21,
   "individually_human_confirmed_claim_decisions": 45,
   "all_items_individually_human_verified": false,
-  "standing_authorization_file": "artifacts/c/m6-human-review/standing-authorization.json"
+  "standing_authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "latest_scored_export": "artifacts/c/m6-final-scored/evaluation.json",
+  "C_local_delivery_complete": false
 }

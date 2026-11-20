@@ -1,0 +1,18 @@
+{
+  "state": "passed",
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "files": {
+    "all-stage-checks.json": "38d46335bdc146d5f0e51976d205036e95629c1d1305389d88440acabe08a66d",
+    "evaluation.csv": "023535dd447614600459d0dc2ca5b0f55c0840508b809bddcefbaa459590ddad",
+    "evaluation.json": "cd92fe5ae306639661f7b6b9d91d07a6f5bd637cec9d134dbe40c02763267498",
+    "review-provenance.json": "b0d032ae4091f2ccb12e857e8d882533392a0a5a9649642f92911be204e378bd",
+    "summary.json": "03933adbea7da121fa2a1eb378fccb29593afbdfb3d6611ebb10e7575626171f"
+  },
+  "SQLite_snapshot": {
+    "path": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m6-final-scored-snapshot\\derag.sqlite3",
+    "sha256": "bcc7905770b04fc02f2992619f6a623831837789cb41c52bdf2d190b6d6e0b0a",
+    "bytes": 3219456
+  },
+  "snapshot_directory": "C:\\Users\\Lenovo\\Desktop\\cityu study\\sem A\\5481 data engineering\\CS5481_teamwork\\.bootstrap\\m6-final-scored-snapshot",
+  "school_generation_api_calls": 0
+}
