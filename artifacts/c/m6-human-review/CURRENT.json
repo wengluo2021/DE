@@ -2,16 +2,16 @@
   "kind": "partial_actual_review_progress",
   "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
   "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
-  "latest_handoff": "docs/handoffs/M6_22_评分服务启动定位与只读HTTP恢复.md",
-  "latest_reading_guide": "docs/M6第1题四组逐句解释与已确认引用.md",
-  "official_review_history_rows": 8,
-  "official_cases_with_any_review": 4,
-  "answer_grades_saved": 4,
+  "latest_handoff": "docs/handoffs/M6_23_第2题退款评分完成与续做.md",
+  "latest_reading_guide": "docs/M6第2题退款义务_中英逐句与待确认.md",
+  "official_review_history_rows": 12,
+  "official_cases_with_any_review": 8,
+  "answer_grades_saved": 8,
   "answer_grades_total": 96,
-  "answer_grades_pending": 92,
+  "answer_grades_pending": 88,
   "refusal_grades_saved": 0,
   "refusal_grades_total": 24,
-  "claim_support_decisions_saved": 8,
+  "claim_support_decisions_saved": 20,
   "claim_support_decisions_total": 166,
   "first_saved_record": {
     "case_id": "gold-crd-delivery-time",
@@ -30,26 +30,25 @@
   "own_service_processes_stopped": true,
   "school_generation_api_calls_this_continuation": 0,
   "cumulative_known_school_tokens": 191672,
-  "next_action": "actual_review_of_question_2_in_four_conditions",
+  "next_action": "actual_review_of_question_3_in_four_conditions",
   "do_not_repeat": [
     "the_saved_first_answer_grade_PATCH",
     "formal_120_generation",
     "model_download_or_index_rebuild",
     "restore_unreviewed_SQLite_backup_over_current_database"
   ],
-  "complete_paired_questions": 1,
+  "complete_paired_questions": 2,
   "paired_questions_total": 30,
-  "next_question_number": 2,
-  "next_case_id": "gold-crd-withdrawal-refund",
-  "latest_partial_export": "artifacts/c/m6-human-review/paired-01/grade-confirmation/evaluation.partial-review.json",
+  "next_question_number": 3,
+  "next_case_id": "gold-crd-payment-fee-cap",
+  "latest_partial_export": "artifacts/c/m6-human-review/paired-02/saved/evaluation.partial-review.json",
   "context_policy": {
     "human_confirmed": true,
     "source_question_call_id": "call_4d3d03db42e4475caefbc71895fee043",
     "rule": "允许题目明确给定的事实前提作为上下文；不能用未引用的法律规则补证据。"
   },
   "latest_user_confirmations": [
-    "artifacts/c/m6-human-review/paired-01/user-feedback.json",
-    "artifacts/c/m6-human-review/paired-01/grade-confirmation/user-feedback.json"
+    "artifacts/c/m6-human-review/paired-02/confirmed-requests.json"
   ],
   "review_http_readonly_check": {
     "state": "passed",
@@ -60,5 +59,7 @@
     "review_PATCH_tested_in_this_check": false,
     "school_generation_api_calls": 0,
     "own_processes_stopped": true
-  }
+  },
+  "last_completed_case_id": "gold-crd-withdrawal-refund",
+  "last_completed_case_number": 2
 }
