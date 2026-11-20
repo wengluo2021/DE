@@ -1,0 +1,119 @@
+{
+  "kind": "standing_user_authorized_ai_review_requests",
+  "human_confirmed": false,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "authorization_file": "artifacts/c/m6-human-review/standing-authorization.json",
+  "authorization_sha256": "bd4abfde8e45671200360d6ceeec0a9230831de29f4e7d3d6690d41c74a10db0",
+  "adopted_prior_AI_source": "artifacts/c/m6-ai-pre-review/all-ai-suggestions.json",
+  "adopted_prior_AI_source_sha256": "44da5798b1f35e4a016629de5489981e2ebdd968d8c99e7fa629164f5845b037",
+  "previous_export": "artifacts/c/m6-human-review/paired-07/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f400",
+      "ask_id": "ask-514f306bb7514891b33c4efddcdd1a4e",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": false,
+            "reason": "实际引用在with the nature of the处结束，第二种性质例外的对象尚未出现。与只少同一词词尾不同，此处缺失有法律意义的例外对象，题目也未给该对象，不能补成lack of conformity。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s400",
+      "ask_id": "ask-d17314c9abae4cb8b08ff732563c44a6",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：核心一年推定和两类例外说明正确，但未写A参考答案明确包含的数字要素商品适用范围。按统一完整必要事实口径建议partial；因为题干未单独追问该范围，实际评审人应确认是否严格要求，并对四组统一口径，不能只为某组临时放宽。",
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "f800",
+      "ask_id": "ask-4ed7c26a195a4f99921370c24e55789b",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "gold-sgd-one-year-presumption",
+      "condition": "s800",
+      "ask_id": "ask-2ace4f79875941eb8f9dc57be43fa5e5",
+      "patch": {
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：回答包含一年内显现推定交付时已存在、反证及性质不相容的例外、数字要素商品同样适用；覆盖A完整必要事实，建议correct。",
+        "answer_grade": "correct",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际引用含Article11标题、第1款和一年内显现推定交付时已存在的完整主句。八个月落在一年内，不需要补充外部资料。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整保留反证、与商品性质或不符性质不相容的两类例外，支持该主张。"
+          },
+          {
+            "claim_index": 2,
+            "supported": true,
+            "reason": "引用1直接包含This paragraph shall also apply to goods with digital elements，支持数字要素商品的适用。"
+          }
+        ]
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 36,
+    "official_cases_with_review": 32,
+    "answer_grades_pending": 64,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 90
+  }
+}
