@@ -1,0 +1,80 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": null,
+  "source_authorization_id": "standing-instruction-20261120-after-question-05",
+  "per_item_human_confirmation": false,
+  "confirmation_file": "artifacts/c/m6-human-review/paired-13/confirmed-requests.json",
+  "confirmation_sha256": "39cc3d593a8e8da0f82fa239188aaa62753691878eaa01844224e9f068f5e29a",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "6aee73348a78492d87db0986c453b7cf9c85c3213964b9b89dfc10b2aeca1d60",
+  "applied": [
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:02.803973+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:02.817357+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:02.829855+00:00"
+      }
+    },
+    {
+      "case_id": "gold-dcd-burden-of-supply",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "wrong",
+        "claim_reviews": [],
+        "refusal_correct": null,
+        "notes": "C授权的AI辅助评分，未逐题人工确认。方法授权原话：“之后的题目都这样无特别的不需要确认”。本条按冻结A必要事实和实际绑定引用评分；采用既有AI辅助预审并按已解释口径处理，保留评审来源和局限。整答理由：A冻结2019/770第12(1)条已明确由trader承担依Article5完成供给的举证责任，本题可答。本组却返回insufficient，按端到端标准建议wrong；原记录是completed，不应当作技术失败或因历史重试而重发API。",
+        "reviewer": "Codex AI（C授权辅助评分）",
+        "reviewed_at": "2026-11-20T06:38:02.843067+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 56,
+  "official_cases_with_review": 52,
+  "answer_grades_pending": 44,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 72,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "4300bcdd65a42ddf359c15486a8319f22862d9b40cfd8b064609e35a1ac461ec",
+    "evaluation.partial-review.json": "531c11e586ef1d2f93e1f83824615f6674fe9497e93a5e9ee07eb6a36b55bc6a"
+  }
+}
