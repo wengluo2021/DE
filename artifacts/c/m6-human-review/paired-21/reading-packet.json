@@ -1,0 +1,402 @@
+{
+  "kind": "reading_materials_with_review_provenance",
+  "question_number": 21,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-utd-unfair-term-test",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-utd-unfair-term-test",
+    "question": "Under Council Directive 93/13/EEC, when is a contract term regarded as unfair, and when is a term treated as not individually negotiated?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "A term that has not been individually negotiated is unfair if, contrary to good faith, it causes a significant imbalance in the parties' rights and obligations under the contract, to the detriment of the consumer. A term is always regarded as not individually negotiated where it was drafted in advance and the consumer has not been able to influence its substance, particularly in a pre-formulated standard contract.",
+    "key_facts": [
+      "1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.",
+      "2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "article_id": "eu_unfair_terms_93_13:article:3",
+        "structure_id": null,
+        "start": 9854,
+        "end": 10128,
+        "text": "1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer."
+      },
+      {
+        "document_id": "eu_unfair_terms_93_13",
+        "article_id": "eu_unfair_terms_93_13:article:3",
+        "structure_id": null,
+        "start": 10129,
+        "end": 10383,
+        "text": "2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第21题_不公平条款与未个别协商_评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-d13aaf81ef1440b0b8ba10ac77a2871e",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "说明了不公平测试，但未回答题目第二问的未个别协商判断，建议partial；引用支持性另列。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.676499605178833,
+              "chunk_id": "3e18891aa4d8b1f8917665c42df5917008394527942e4f0e790622cc71400cb8",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:2",
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9600,
+              "end": 10000,
+              "text": ", business or profession;\n(c) ‘seller or supplier’ means any natural or legal person who, in contracts covered by this Directive, is acting for purposes relating to his trade, business or profession, whether publicly owned or privately owned.\n\nArticle 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it cau",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 2",
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": false,
+          "AI_reason": "引用1只到if ... it cau，缺少significant imbalance及消费者受损等关键定义，不能支持主张补出的整个测试。",
+          "Chinese_explanation": "引用1只到if ... it cau，缺少significant imbalance及消费者受损等关键定义，不能支持主张补出的整个测试。",
+          "actual_support_decision": false,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1只到if ... it cau，缺少significant imbalance及消费者受损等关键定义，不能支持主张补出的整个测试。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-40461232008b40bb96cf06ba3d2aa0d7",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "说明了不公平测试，但未回答题目第二问的未个别协商判断，建议partial；引用支持性另列。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7163691520690918,
+              "chunk_id": "bafb752da7ce0198c21195ef7d96b6651249b639d53965d0bc1ccb7e7a5bc179",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9844,
+              "end": 10132,
+              "text": "Article 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. ",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "Chinese_explanation": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        }
+      ],
+      "recorded_answer_grade": "partial",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-07cef5d4572f4a77acecf8131efb3e60",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "完整回答不公平测试与未个别协商的判断，额外举证说明也有支持，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7073877453804016,
+              "chunk_id": "4906c61ae21c95e71f31c774b491aefa8912a5e159b0ffd0ad63ce2ed772655d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:2",
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9600,
+              "end": 10400,
+              "text": ", business or profession;\n(c) ‘seller or supplier’ means any natural or legal person who, in contracts covered by this Directive, is acting for purposes relating to his trade, business or profession, whether publicly owned or privately owned.\n\nArticle 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.\nThe fact that ce",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 2",
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "Chinese_explanation": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7073877453804016,
+              "chunk_id": "4906c61ae21c95e71f31c774b491aefa8912a5e159b0ffd0ad63ce2ed772655d",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:2",
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9600,
+              "end": 10400,
+              "text": ", business or profession;\n(c) ‘seller or supplier’ means any natural or legal person who, in contracts covered by this Directive, is acting for purposes relating to his trade, business or profession, whether publicly owned or privately owned.\n\nArticle 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.\nThe fact that ce",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 2",
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。",
+          "Chinese_explanation": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6557183265686035,
+              "chunk_id": "f90da395bad794e7a03df7282dabf1ffa87ba8edd2b6b8825f97e716d8133611",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3",
+                "eu_unfair_terms_93_13:article:4"
+              ],
+              "start": 10400,
+              "end": 11200,
+              "text": "rtain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\nArticle 4\n1. Without prejudice to Article 7, the unfairness of a contractual term shall be assessed, taking into account the nature of the goods or services for which the contract was concluded and by referring, at the time of conclusion of the contract, to all the ci",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3",
+                "Article 4"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。",
+          "Chinese_explanation": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-55eb6a54acd64b8da5b79167c15bc730",
+      "AI_suggested_answer_grade": "correct",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "完整回答不公平测试与未个别协商的判断，额外举证说明也有支持，建议correct。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7121479511260986,
+              "chunk_id": "8f0879b0ad2c7c0e6d358b215e55a526fce0e559136a7b134a6948dfb01e8e85",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9844,
+              "end": 10384,
+              "text": "Article 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "Chinese_explanation": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1完整保存未经个别协商、违反诚信、合同权利义务显著失衡及消费者受损四部分，支持整个测试。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.7121479511260986,
+              "chunk_id": "8f0879b0ad2c7c0e6d358b215e55a526fce0e559136a7b134a6948dfb01e8e85",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 9844,
+              "end": 10384,
+              "text": "Article 3\n1. A contractual term which has not been individually negotiated shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant imbalance in the parties' rights and obligations arising under the contract, to the detriment of the consumer.\n2. A term shall always be regarded as not individually negotiated where it has been drafted in advance and the consumer has therefore not been able to influence the substance of the term, particularly in the context of a pre-formulated standard contract.\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。",
+          "Chinese_explanation": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "引用1还完整包含预先拟定且消费者不能影响实质内容、特别是预制标准合同的未个别协商判断。"
+        },
+        {
+          "claim_index": 2,
+          "claim": {
+            "text": "Where any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.",
+            "citation_numbers": [
+              4
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 4,
+              "score": 0.6138691902160645,
+              "chunk_id": "49c995bfc7233783a3626737b3e92e0dd01f066ec1e4a3c530a73e443b85bc2e",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_unfair_terms_93_13",
+              "article_ids": [
+                "eu_unfair_terms_93_13:article:3"
+              ],
+              "start": 10384,
+              "end": 10932,
+              "text": "The fact that certain aspects of a term or one specific term have been individually negotiated shall not exclude the application of this Article to the rest of a contract if an overall assessment of the contract indicates that it is nevertheless a pre-formulated standard contract.\nWhere any seller or supplier claims that a standard term has been individually negotiated, the burden of proof in this respect shall be incumbent on him.\n3. The Annex shall contain an indicative and non-exhaustive list of the terms which may be regarded as unfair.\n\n",
+              "title": "Council Directive 93/13/EEC of 5 April 1993 on unfair terms in consumer contracts",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31993L0013",
+              "article_labels": [
+                "Article 3"
+              ],
+              "n": 4
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。",
+          "Chinese_explanation": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": false,
+          "actual_human_reason": "实际另绑定的引用直接包含卖方/供应方主张已个别协商时由其承担举证责任，支持这一额外说明。"
+        }
+      ],
+      "recorded_answer_grade": "correct",
+      "reviewer": "Codex AI（C授权辅助评分）",
+      "human_confirmed_answer_grade": null,
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}
