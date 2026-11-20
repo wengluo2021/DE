@@ -1,0 +1,306 @@
+{
+  "kind": "reading_materials_with_actual_review_status",
+  "question_number": 5,
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_evaluation_sha256": "2a44a4d7d6110f9a395dfd6d7137ccc14dcb8cfb135728b6d1466c30ed9e9160",
+  "case_id": "gold-crd-withdrawal-digital-content",
+  "gold": {
+    "schema_version": "1.0",
+    "case_id": "gold-crd-withdrawal-digital-content",
+    "question": "Does Directive 2011/83/EU always give a consumer 14 days to withdraw from a distance contract for digital content that is not supplied on a tangible medium?",
+    "topic": "multi_evidence",
+    "answerable": true,
+    "reference_answer": "No. Article 9(1) gives 14 days to withdraw from a distance or off-premises contract without giving a reason, but only where an Article 16 exception does not apply. Article 16(m) excludes that right once performance of digital content not supplied on a tangible medium has begun with the consumer's prior express consent and acknowledgment that the right of withdrawal is lost.",
+    "key_facts": [
+      "1. Save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premises contract, without giving any reason, and without incurring any costs other than those provided for in Article 13(2) and Article 14.",
+      "(m) the supply of digital content which is not supplied on a tangible medium if the performance has begun with the consumer’s prior express consent and his acknowledgment that he thereby loses his right of withdrawal."
+    ],
+    "evidence": [
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:9",
+        "structure_id": null,
+        "start": 69452,
+        "end": 69734,
+        "text": "1. Save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premises contract, without giving any reason, and without incurring any costs other than those provided for in Article 13(2) and Article 14."
+      },
+      {
+        "document_id": "eu_consumer_rights_2011_83",
+        "article_id": "eu_consumer_rights_2011_83:article:16",
+        "structure_id": null,
+        "start": 81214,
+        "end": 81431,
+        "text": "(m) the supply of digital content which is not supplied on a tangible medium if the performance has begun with the consumer’s prior express consent and his acknowledgment that he thereby loses his right of withdrawal."
+      }
+    ],
+    "unanswerable_reason": null,
+    "refusal_reference": null
+  },
+  "human_confirmed": false,
+  "official_review_written": true,
+  "reading_md": "docs/M6第5题数字内容撤回权_中英逐句与评分记录.md",
+  "records": [
+    {
+      "condition": "f400",
+      "ask_id": "ask-f0e9d8ad1d8b44da9b4086eb9465e1da",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "本题问是否always有14日，不能只给一般规则或泛称有例外。本组未说明非有形载体数字内容的具体例外及同意/确认条件，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Directive 2011/83/EU provides that, save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premises contract.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6678879261016846,
+              "chunk_id": "e499205da9511604ce8ad5138b71d6931f06e18723b34790387124a926a87e33",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:8",
+                "eu_consumer_rights_2011_83:article:9"
+              ],
+              "start": 69200,
+              "end": 69600,
+              "text": " in Articles 9 and 11 of Directive 2000/31/EC.\n10. Member States shall not impose any further formal pre-contractual information requirements for the fulfilment of the information obligations laid down in this Directive.\n\nArticle 9\nRight of withdrawal\n1. Save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premis",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 8",
+                "Article 9"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": null,
+          "AI_reason": "引用3保留14日与Article16例外，但结尾停在off-premis，主张补全了未完整显示的非营业场所合同分支。本题已给distance前提，核心适用可理解，仍将截断范围的完整支持性留人工判断。",
+          "Chinese_explanation": "除第16条例外外，消费者可在14日内撤回远程或营业场所以外合同。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "实际评审人明确选择支持：题目已限定远程合同，所引片段保留14日与Article16例外，off-premis词尾截断不影响本题规则的支持。未借未绑定原文补证据。"
+        }
+      ],
+      "human_confirmed_answer_grade": "partial",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s400",
+      "ask_id": "ask-68e5a7bec19641b194ca319e610c6d48",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "本题问是否always有14日，不能只给一般规则或泛称有例外。本组未说明非有形载体数字内容的具体例外及同意/确认条件，建议partial。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "The consumer's 14-day withdrawal period applies save where the exceptions provided for in Article 16 apply.",
+            "citation_numbers": [
+              5
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 5,
+              "score": 0.6382415294647217,
+              "chunk_id": "511e313cb0621612c09834542777b15ba7c6a0546a38bc13ee315ffe22580075",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:9"
+              ],
+              "start": 69422,
+              "end": 69738,
+              "text": "Article 9\nRight of withdrawal\n1. Save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premises contract, without giving any reason, and without incurring any costs other than those provided for in Article 13(2) and Article 14.\n2. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 9"
+              ],
+              "n": 5
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用5完整包含Article9(1)的14日及Article16例外限定。",
+          "Chinese_explanation": "14日撤回期受第16条例外限制。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用5完整包含Article9(1)的14日及Article16例外限定。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "Article 14 addresses the supply, in full or in part, of digital content which is not supplied on a tangible medium.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6757990121841431,
+              "chunk_id": "1ebe4b1816b5572514ed4df96b92b537ddadbc3b64587ea0c31ccaeedab56be9",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s400",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:14"
+              ],
+              "start": 77372,
+              "end": 77626,
+              "text": "(ii) the consumer has not expressly requested performance to begin during the withdrawal period in accordance with Article 7(3) and Article 8(8); or\n(b) the supply, in full or in part, of digital content which is not supplied on a tangible medium where:\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 14"
+              ],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用3有非有形载体数字内容文字，原始citation元数据article_labels=Article14也能与冻结条文区间核对，支持“Article14涉及该主题”的有限主张。但这不是题目所需的Article16(m)例外条件。",
+          "Chinese_explanation": "第14条涉及全部或部分非实体介质数字内容的提供。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用3有非有形载体数字内容文字，原始citation元数据article_labels=Article14也能与冻结条文区间核对，支持“Article14涉及该主题”的有限主张。但这不是题目所需的Article16(m)例外条件。"
+        }
+      ],
+      "human_confirmed_answer_grade": "partial",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "f800",
+      "ask_id": "ask-ad0c4951bfbe4ab2b9a4fb6a4b97ef94",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "本题问是否always有14日，不能只给一般规则或泛称有例外。本组说明了例外的大意，但没有完整写出Article16(m)的履行已开始和事先明确同意等限定，相关要点记为部分覆盖，建议partial；严格性留实际评审人确认。 也未交代Article9(1)的一般14日期间。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "For contracts for digital content not supplied on a tangible medium, the consumer should have a right of withdrawal unless he has consented to the beginning of the performance of the contract during the withdrawal period and has acknowledged that he will consequently lose the right to withdraw from the contract.",
+            "citation_numbers": [
+              3
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 3,
+              "score": 0.6664723753929138,
+              "chunk_id": "8e4bfa41d3c4714cb3c4363ef11cb9311778ec0b7d40ab329db9cdcb2315a2ca",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "f800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 10400,
+              "end": 11200,
+              "text": "tent is supplied on a tangible medium, such as a CD or a DVD, it should be considered as goods within the meaning of this Directive. Similarly to contracts for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, or of district heating, contracts for digital content which is not supplied on a tangible medium should be classified, for the purpose of this Directive, neither as sales contracts nor as service contracts. For such contracts, the consumer should have a right of withdrawal unless he has consented to the beginning of the performance of the contract during the withdrawal period and has acknowledged that he will consequently lose the right to withdraw from the contract. In addition to the general information requirements, th",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 3
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用3的序言完整包含数字内容合同、同意开始履行并确认失去权利的这段重述，字面有支持。但该段与A要求的Article16(m)完整法定条件不能等同：生成未明确performance has begun及prior express consent，也没有14日一般规则。",
+          "Chinese_explanation": "非实体介质数字内容应有撤回权，除非消费者已同意在撤回期内开始履行，并知道因此失去撤回权。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用3的序言完整包含数字内容合同、同意开始履行并确认失去权利的这段重述，字面有支持。但该段与A要求的Article16(m)完整法定条件不能等同：生成未明确performance has begun及prior express consent，也没有14日一般规则。"
+        }
+      ],
+      "human_confirmed_answer_grade": "partial",
+      "human_confirmed_refusal_correct": null
+    },
+    {
+      "condition": "s800",
+      "ask_id": "ask-3bfcffd09491470ba1de9b7776d41951",
+      "AI_suggested_answer_grade": "partial",
+      "AI_suggested_refusal_correct": null,
+      "AI_reason": "本题问是否always有14日，不能只给一般规则或泛称有例外。本组说明了例外的大意，但没有完整写出Article16(m)的履行已开始和事先明确同意等限定，相关要点记为部分覆盖，建议partial；严格性留实际评审人确认。",
+      "claims": [
+        {
+          "claim_index": 0,
+          "claim": {
+            "text": "Article 9(1) of Directive 2011/83/EU provides that, save where the exceptions in Article 16 apply, the consumer has a period of 14 days to withdraw from a distance or off-premises contract.",
+            "citation_numbers": [
+              5
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 5,
+              "score": 0.6518481373786926,
+              "chunk_id": "ec2d672af7fe11b9aeacbfee3962571b680cd41ca8155d1b9b93fb2bb5e1a32b",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [
+                "eu_consumer_rights_2011_83:article:9"
+              ],
+              "start": 69422,
+              "end": 70132,
+              "text": "Article 9\nRight of withdrawal\n1. Save where the exceptions provided for in Article 16 apply, the consumer shall have a period of 14 days to withdraw from a distance or off-premises contract, without giving any reason, and without incurring any costs other than those provided for in Article 13(2) and Article 14.\n2. Without prejudice to Article 10, the withdrawal period referred to in paragraph 1 of this Article shall expire after 14 days from:\n(a) in the case of service contracts, the day of the conclusion of the contract;\n(b) in the case of sales contracts, the day on which the consumer or a third party other than the carrier and indicated by the consumer acquires physical possession of the goods or:\n",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [
+                "Article 9"
+              ],
+              "n": 5
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用5包含Article9标题与完整第1款，支持14日以及Article16例外。",
+          "Chinese_explanation": "除第16条例外外，有14日撤回远程或营业场所以外合同的期间。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用5包含Article9标题与完整第1款，支持14日以及Article16例外。"
+        },
+        {
+          "claim_index": 1,
+          "claim": {
+            "text": "For contracts for digital content not supplied on a tangible medium, the consumer should have a right of withdrawal unless he has consented to the beginning of the performance of the contract during the withdrawal period and has acknowledged that he will consequently lose the right to withdraw from the contract.",
+            "citation_numbers": [
+              1
+            ]
+          },
+          "actually_bound_citations": [
+            {
+              "rank": 1,
+              "score": 0.6923378705978394,
+              "chunk_id": "433fea172c62b23f7091ad1a52d6cc5a1b986089eeadf4eb7af6c4069a969f4c",
+              "corpus_version": "794e3d1956fc324659da149d5bfb0e083d257845895057b631d4578ec5b29795",
+              "condition": "s800",
+              "document_id": "eu_consumer_rights_2011_83",
+              "article_ids": [],
+              "start": 10386,
+              "end": 11145,
+              "text": "If digital content is supplied on a tangible medium, such as a CD or a DVD, it should be considered as goods within the meaning of this Directive. Similarly to contracts for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, or of district heating, contracts for digital content which is not supplied on a tangible medium should be classified, for the purpose of this Directive, neither as sales contracts nor as service contracts. For such contracts, the consumer should have a right of withdrawal unless he has consented to the beginning of the performance of the contract during the withdrawal period and has acknowledged that he will consequently lose the right to withdraw from the contract. ",
+              "title": "Directive 2011/83/EU of the European Parliament and of the Council of 25 October 2011 on consumer rights, amending Council Directive 93/13/EEC and Directive 1999/44/EC of the European Parliament and of the Council and repealing Council Directive 85/577/EEC and Directive 97/7/EC of the European Parliament and of the Council Text with EEA relevance",
+              "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083",
+              "article_labels": [],
+              "n": 1
+            }
+          ],
+          "AI_suggested_supported": true,
+          "AI_reason": "引用1完整序言段支持“已同意开始履行并确认失去撤回权”的重述；它仍没有把A必要事实中的“履行已经开始、事先明确同意”完整说出，故主张文字有来源不代表答案已完整。",
+          "Chinese_explanation": "非实体介质数字内容应有撤回权，除非消费者已同意在撤回期内开始履行，并知道因此失去撤回权。",
+          "actual_support_decision": true,
+          "support_review_human_confirmed": true,
+          "actual_human_reason": "引用1完整序言段支持“已同意开始履行并确认失去撤回权”的重述；它仍没有把A必要事实中的“履行已经开始、事先明确同意”完整说出，故主张文字有来源不代表答案已完整。"
+        }
+      ],
+      "human_confirmed_answer_grade": "partial",
+      "human_confirmed_refusal_correct": null
+    }
+  ],
+  "actual_confirmation": "confirmed-requests.json",
+  "current_question_complete": true
+}

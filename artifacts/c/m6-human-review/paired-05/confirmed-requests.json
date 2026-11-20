@@ -1,0 +1,108 @@
+{
+  "kind": "explicit_user_confirmed_review_requests",
+  "human_confirmed": true,
+  "run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_5ef96019960a440c932247a9d1f38bc3",
+  "user_responses": [
+    {
+      "question_index": 0,
+      "answer": "确认：第5题四组整体均partial"
+    },
+    {
+      "question_index": 1,
+      "answer": "认可：其余5条引用均支持"
+    },
+    {
+      "question_index": 2,
+      "answer": "支持：远程合同前提明确，尾词截断不影响本题规则支持"
+    }
+  ],
+  "previous_export": "artifacts/c/m6-human-review/paired-04/saved/evaluation.partial-review.json",
+  "requests": [
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f400",
+      "ask_id": "ask-f0e9d8ad1d8b44da9b4086eb9465e1da",
+      "patch": {
+        "answer_grade": "partial",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际评审人明确选择支持：题目已限定远程合同，所引片段保留14日与Article16例外，off-premis词尾截断不影响本题规则的支持。未借未绑定原文补证据。"
+          }
+        ],
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s400",
+      "ask_id": "ask-68e5a7bec19641b194ca319e610c6d48",
+      "patch": {
+        "answer_grade": "partial",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5完整包含Article9(1)的14日及Article16例外限定。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3有非有形载体数字内容文字，原始citation元数据article_labels=Article14也能与冻结条文区间核对，支持“Article14涉及该主题”的有限主张。但这不是题目所需的Article16(m)例外条件。"
+          }
+        ],
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f800",
+      "ask_id": "ask-ad0c4951bfbe4ab2b9a4fb6a4b97ef94",
+      "patch": {
+        "answer_grade": "partial",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3的序言完整包含数字内容合同、同意开始履行并确认失去权利的这段重述，字面有支持。但该段与A要求的Article16(m)完整法定条件不能等同：生成未明确performance has begun及prior express consent，也没有14日一般规则。"
+          }
+        ],
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s800",
+      "ask_id": "ask-3bfcffd09491470ba1de9b7776d41951",
+      "patch": {
+        "answer_grade": "partial",
+        "reviewer": "C（本聊天用户）",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5包含Article9标题与完整第1款，支持14日以及Article16例外。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整序言段支持“已同意开始履行并确认失去撤回权”的重述；它仍没有把A必要事实中的“履行已经开始、事先明确同意”完整说出，故主张文字有来源不代表答案已完整。"
+          }
+        ],
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。"
+      }
+    }
+  ],
+  "expected_after": {
+    "official_review_history_rows": 24,
+    "official_cases_with_review": 20,
+    "answer_grades_pending": 76,
+    "refusal_grades_pending": 24,
+    "claim_support_decisions_pending": 124
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "state": "passed",
+  "source_run_id": "eval-20ac108503c44829a96ecca386d4b9de",
+  "source_question_call_id": "call_5ef96019960a440c932247a9d1f38bc3",
+  "confirmation_file": "artifacts/c/m6-human-review/paired-05/confirmed-requests.json",
+  "confirmation_sha256": "610cedcd16e03b5bd72dfe0b1ec473236122a880c65e5f2ff90d554e8d403ada",
+  "transport": "direct_production_backend_call_not_HTTP",
+  "school_generation_api_calls": 0,
+  "previous_export_sha256": "584f94c57b97f8099550ef6309353581ad0268c36d37073500d3a5496ab21f25",
+  "applied": [
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "实际评审人明确选择支持：题目已限定远程合同，所引片段保留14日与Article16例外，off-premis词尾截断不影响本题规则的支持。未借未绑定原文补证据。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:21:36.941142+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s400",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5完整包含Article9(1)的14日及Article16例外限定。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用3有非有形载体数字内容文字，原始citation元数据article_labels=Article14也能与冻结条文区间核对，支持“Article14涉及该主题”的有限主张。但这不是题目所需的Article16(m)例外条件。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:21:36.954580+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "f800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用3的序言完整包含数字内容合同、同意开始履行并确认失去权利的这段重述，字面有支持。但该段与A要求的Article16(m)完整法定条件不能等同：生成未明确performance has begun及prior express consent，也没有14日一般规则。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:21:36.968290+00:00"
+      }
+    },
+    {
+      "case_id": "gold-crd-withdrawal-digital-content",
+      "condition": "s800",
+      "review": {
+        "answer_grade": "partial",
+        "claim_reviews": [
+          {
+            "claim_index": 0,
+            "supported": true,
+            "reason": "引用5包含Article9标题与完整第1款，支持14日以及Article16例外。"
+          },
+          {
+            "claim_index": 1,
+            "supported": true,
+            "reason": "引用1完整序言段支持“已同意开始履行并确认失去撤回权”的重述；它仍没有把A必要事实中的“履行已经开始、事先明确同意”完整说出，故主张文字有来源不代表答案已完整。"
+          }
+        ],
+        "refusal_correct": null,
+        "notes": "call_5ef96019960a440c932247a9d1f38bc3第0项明确确认四组partial，第1项确认其余5条支持，第2项单独确认F400词尾截断不影响本题支持。只记录本题实际确认。",
+        "reviewer": "C（本聊天用户）",
+        "reviewed_at": "2026-11-20T06:21:36.982068+00:00"
+      }
+    }
+  ],
+  "official_review_history_rows": 24,
+  "official_cases_with_review": 20,
+  "answer_grades_pending": 76,
+  "refusal_grades_pending": 24,
+  "claim_support_decisions_pending": 124,
+  "changed_case_count": 4,
+  "other_case_records_unchanged": 116,
+  "all_generation_trace_and_automatic_metrics_unchanged": true,
+  "review_complete": false,
+  "formal_results": false,
+  "own_database_lease_released": true,
+  "SQLite_reopened_and_confirmed": true,
+  "original_A_and_M6_baselines_unchanged": true,
+  "cumulative_known_school_tokens": 191672,
+  "files": {
+    "evaluation.partial-review.csv": "962c37d436e57569f49739d5c48479f9aa57979453daf749b0edcfbc4cc0f652",
+    "evaluation.partial-review.json": "b2d1b873ee0150bb6d12864e457f563e7059c882a6adf9defd940210f1f78bc5"
+  }
+}
