@@ -105,6 +105,17 @@ class P800Service:
             "counts": manifest.get("counts", {}),
         }
 
+    def chunks(self, document_id: str) -> list[dict]:
+        """Return the indexed child chunks for the compare page's chunk preview."""
+        if document_id not in self.documents:
+            raise RetrievalError("NOT_FOUND", f"Document not found: {document_id}", 404)
+        items = [
+            child for child in self.children.values()
+            if child["document_id"] == document_id and child.get("indexable", True)
+        ]
+        items.sort(key=lambda child: (child["start"], child["end"], child["chunk_id"]))
+        return items
+
     def search(self, question: str, *, candidate_k: int = 50, top_k: int = 5) -> dict:
         if not isinstance(question, str) or not question.strip():
             raise RetrievalError("INVALID_REQUEST", "Question is required", 422)

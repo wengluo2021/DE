@@ -2,7 +2,7 @@
   "use strict";
   const $ = id => document.getElementById(id);
   const esc = value => String(value == null ? "" : value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
-  const labels = {f400:"Fixed window · 400",s400:"Article structure · 400",f800:"Fixed window · 800",s800:"Article structure · 800"};
+  const labels = {f400:"Fixed window · 400",s400:"Article structure · 400",f800:"Fixed window · 800",s800:"Article structure · 800",p800:"P800 · parent–child"};
   const paths = {chat:"/",documents:"/documents",compare:"/compare",p800:"/p800",evaluation:"/evaluation"};
   const names = {chat:"Chat",documents:"Documents",compare:"Chunk comparison",p800:"P800 retrieval",evaluation:"Evaluation"};
   const statuses = {queued:"Queued",running:"Running",completed:"Completed",failed:"Failed",error:"Failed",answered:"Answered",insufficient:"Insufficient evidence"};
@@ -235,10 +235,27 @@
   }
   function renderPanel(side,items,search) {
     state.panels[side]=items;
-    $(side+"Label").textContent=labels[$(side+"Condition").value];
+    const condition=$(side+"Condition").value;
+    $(side+"Label").textContent=labels[condition] || condition;
     $(side+"Count").textContent=items.length+(search ? " hits" : " chunks");
-    $(side+"Chunks").innerHTML=items.map((item,index)=>'<article class="chunk-item"><div class="chunk-top"><span>#'+(item.rank || index+1)+'</span><span>'+esc(item.end-item.start)+" characters · ["+esc(item.start)+', '+esc(item.end)+')</span></div>'+
-      (search ? '<strong>'+esc(item.title)+"</strong><small>Similarity "+esc(item.score)+'</small>' : "")+'<p>'+esc(item.text)+'</p><button class="table-link" data-panel="'+side+'" data-index="'+index+"\">View source</button></article>").join("") || empty("No results");
+    $(side+"Chunks").innerHTML=items.map((item,index)=>{
+      if (search && condition==="p800") {
+        const parent=esc(item.text || "");
+        const child=esc(item.matched_child_text || "");
+        const marked=child ? parent.replace(child,"<mark>"+child+"</mark>") : parent;
+        return '<article class="chunk-item"><div class="chunk-top"><span>#'+esc(item.rank)+'</span><span>P800 parent · ['+esc(item.start)+', '+esc(item.end)+')</span></div>'+
+          '<strong>'+esc(item.title || item.document_id)+'</strong>'+
+          '<small>Parent score '+esc(item.score)+' · matched child '+esc((item.matched_child_id || "").slice(0,12))+'…</small>'+
+          '<p>'+marked+'</p><button class="table-link" data-panel="'+side+'" data-index="'+index+'">View source</button></article>';
+      }
+      if (!search && condition==="p800") {
+        return '<article class="chunk-item"><div class="chunk-top"><span>#'+(index+1)+'</span><span>child · ['+esc(item.start)+', '+esc(item.end)+')</span></div>'+
+          '<small>parent '+esc((item.parent_id || "").slice(0,10))+'… · '+esc(item.end-item.start)+' characters</small>'+
+          '<p>'+esc(item.text)+'</p><button class="table-link" data-panel="'+side+'" data-index="'+index+'">View source</button></article>';
+      }
+      return '<article class="chunk-item"><div class="chunk-top"><span>#'+(item.rank || index+1)+'</span><span>'+esc(item.end-item.start)+" characters · ["+esc(item.start)+', '+esc(item.end)+')</span></div>'+
+        (search ? '<strong>'+esc(item.title)+"</strong><small>Similarity "+esc(item.score)+'</small>' : "")+'<p>'+esc(item.text)+'</p><button class="table-link" data-panel="'+side+'" data-index="'+index+'">View source</button></article>';
+    }).join("") || empty("No results");
   }
   async function loadChunks() {
     const seq=++requests.compare;
@@ -249,10 +266,14 @@
     const id=$("compareDocument").value;
     if (!id) {$("leftChunks").innerHTML=$("rightChunks").innerHTML=empty("No frozen documents available to read");return;}
     try {
-      const sides=await Promise.all(["left","right"].map(side=>api("/api/documents/"+encodeURIComponent(id)+"/chunks"+query({corpus_version:corpus(),condition:$(side+"Condition").value}))));
+      const sides=await Promise.all(["left","right"].map(side=>{
+        const condition=$(side+"Condition").value;
+        if (condition==="p800") return api("/api/p800/documents/"+encodeURIComponent(id)+"/chunks"+query({corpus_version:corpus()}));
+        return api("/api/documents/"+encodeURIComponent(id)+"/chunks"+query({corpus_version:corpus(),condition}));
+      }));
       if (seq!==requests.compare) return;
       ["left","right"].forEach((side,i)=>renderPanel(side,sides[i].items,false));
-      $("compareNotice").textContent="Document chunks: shows the intervals actually indexed by the backend; no re-chunking in the browser.";
+      $("compareNotice").textContent="Document chunks: shows the intervals actually indexed by the backend; P800 shows its 250-character child chunks.";
       $("compareSummary").innerHTML=sides.map((s,i)=>stat(i ? "Right characters" : "Left characters",s.items.reduce((n,c)=>n+c.end-c.start,0))).join("");
     } catch (error) {if (seq===requests.compare) {$("compareNotice").textContent=errorText(error);$("leftChunks").innerHTML=$("rightChunks").innerHTML=empty(errorText(error));$("compareSummary").innerHTML="";}}
   }
@@ -260,13 +281,28 @@
     event.preventDefault();if (!state.health) return;
     const question=$("compareQuestion").value.trim();if (!question) return;
     const seq=++requests.compare;
+    const left=$("leftCondition").value,right=$("rightCondition").value;
     state.panels={left:[],right:[]};$("leftChunks").innerHTML=$("rightChunks").innerHTML=empty("Retrieving…");
     try {
-      const data=await post("/api/compare",{question,corpus_version:corpus(),left_condition:$("leftCondition").value,right_condition:$("rightCondition").value});
+      if (left!=="p800" && right!=="p800") {
+        const data=await post("/api/compare",{question,corpus_version:corpus(),left_condition:left,right_condition:right});
+        if (seq!==requests.compare) return;
+        ["left","right"].forEach(side=>renderPanel(side,data[side].hits,true));
+        $("compareNotice").textContent="Same-question retrieval · Index "+data.index_version+"; similarity is not a probability of correctness.";
+        $("compareSummary").innerHTML=["left","right"].map((side,i)=>stat(i ? "Right context" : "Left context",data[side].context_chars+" characters",data[side].timing_ms+" ms")).join("");
+        return;
+      }
+      const sides=await Promise.all(["left","right"].map(side=>{
+        const condition=$(side+"Condition").value;
+        const body={question,corpus_version:corpus()};
+        if (condition==="p800") return post("/api/p800/search",Object.assign({candidate_k:50},body));
+        return post("/api/search",Object.assign({condition,top_k:5},body));
+      }));
       if (seq!==requests.compare) return;
-      ["left","right"].forEach(side=>renderPanel(side,data[side].hits,true));
-      $("compareNotice").textContent="Same-question retrieval · Index "+data.index_version+"; similarity is not a probability of correctness.";
-      $("compareSummary").innerHTML=["left","right"].map((side,i)=>stat(i ? "Right context" : "Left context",data[side].context_chars+" characters",data[side].timing_ms+" ms")).join("");
+      sides.forEach(side=>{side.context_chars=side.hits.reduce((n,h)=>n+(h.end-h.start),0);});
+      ["left","right"].forEach((side,i)=>renderPanel(side,sides[i].hits,true));
+      $("compareNotice").textContent="Same-question retrieval · P800 uses the child index; the other side uses the official index; similarity is not a probability of correctness.";
+      $("compareSummary").innerHTML=sides.map((s,i)=>stat(i ? "Right context" : "Left context",s.context_chars+" characters",s.timing_ms+" ms")).join("");
     } catch (error) {if (seq===requests.compare) {$("compareNotice").textContent=errorText(error);$("leftChunks").innerHTML=$("rightChunks").innerHTML=empty(errorText(error));$("compareSummary").innerHTML="";}}
   }
   function p800StatusHtml(status) {
@@ -360,7 +396,7 @@
       (run.configuration_warning ? " Warning: the actual generation model has changed; keep the old results and rebuild a comparable experiment." : "");
     $("reportMeta").innerHTML='<div><strong>'+esc(statuses[run.state] || run.state)+' · '+esc(run.cases.length)+" items · "+esc(run.run_id)+"</strong><span>Corpus "+version(run.corpus_version)+" · Question set "+version(run.gold_version)+" · Index "+version(run.index_version)+'</span></div>'+
       "<details><summary>View frozen configuration</summary>"+block(JSON.stringify(run.config,null,2))+'</details>';
-    $("metricGrid").innerHTML=Object.keys(labels).map(condition=>{
+    $("metricGrid").innerHTML=["f400","s400","f800","s800"].map(condition=>{
       const s=run.summary[condition];
       return '<article class="metric"><h3>'+esc(labels[condition])+'</h3><div class="metric-value">'+ratio(s.answer_accuracy)+"</div><p>Answers "+s.answer_accuracy.numerator+'/'+s.answer_accuracy.denominator+" · Pending review "+s.answer_accuracy.pending+'</p>'+
         "<p>Refusals "+ratio(s.refusal_accuracy)+' ('+s.refusal_accuracy.numerator+'/'+s.refusal_accuracy.denominator+")</p><p>Citations "+ratio(s.citation_accuracy)+' ('+s.citation_accuracy.numerator+'/'+s.citation_accuracy.denominator+')</p>'+
