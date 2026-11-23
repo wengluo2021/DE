@@ -44,6 +44,7 @@
         <button class="nav-item active" type="button" data-route="chat"><svg class="icon"><use href="#i-message"/></svg><span>Chat</span></button>
         <button class="nav-item" type="button" data-route="documents"><svg class="icon"><use href="#i-files"/></svg><span>Documents</span></button>
         <button class="nav-item" type="button" data-route="compare"><svg class="icon"><use href="#i-split"/></svg><span>Chunk comparison</span></button>
+        <button class="nav-item" type="button" data-route="p800"><svg class="icon"><use href="#i-search"/></svg><span>P800 retrieval</span></button>
         <button class="nav-item" type="button" data-route="evaluation"><svg class="icon"><use href="#i-chart"/></svg><span>Evaluation</span></button>
       </nav>
       <div class="sidebar-bottom">
@@ -108,6 +109,21 @@
             <form class="compare-question" id="compareForm"><label for="compareQuestion">Compare a question</label><input id="compareQuestion" maxlength="1000" required placeholder="Enter a question; both sides use the same corpus and index"><button class="button primary" type="submit">Compare retrieval</button><button class="button" type="button" id="showChunksButton">View document chunks</button></form>
             <div class="compare-summary" id="compareSummary"></div>
             <div class="compare-grid"><div class="compare-column"><div class="column-heading"><div><span class="column-letter">A</span><h2 id="leftLabel">Fixed window · 400</h2></div><span id="leftCount" class="count-label"></span></div><div class="chunk-list" id="leftChunks"></div></div><div class="compare-column"><div class="column-heading"><div><span class="column-letter alt">B</span><h2 id="rightLabel">Article structure · 400</h2></div><span id="rightCount" class="count-label"></span></div><div class="chunk-list" id="rightChunks"></div></div></div>
+          </div>
+        </section>
+
+        <section class="view page-view" id="view-p800" aria-label="P800 parent-child retrieval" hidden>
+          <div class="page-wrap">
+            <div class="page-heading"><div><div class="eyebrow">EXPERIMENTAL EXTENSION</div><h1>P800 parent–child</h1></div><span class="tag">Retrieval only</span></div>
+            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span>Children find the parent; the parent supplies the evidence. This page does not generate an answer and does not change the four official conditions.</span></div>
+            <div class="p800-status" id="p800Status">Checking P800 index…</div>
+            <form class="compare-question" id="p800Form">
+              <label for="p800Question">Ask a question</label>
+              <input id="p800Question" maxlength="1000" required placeholder="Enter a question; P800 retrieves parent blocks via child chunks">
+              <button class="button primary" type="submit" id="p800SearchButton">Search P800</button>
+            </form>
+            <div class="compare-summary" id="p800Summary"></div>
+            <div class="chunk-list p800-list" id="p800Results"></div>
           </div>
         </section>
 

@@ -1,5 +1,7 @@
 """Explicit service composition; one database owner and one persistent task worker."""
 from threading import RLock
+from pathlib import Path
+import json
 from app.db.lease import ProcessLease
 from app.db.store import SQLiteStore
 from app.qa.client import ChatCompletionsClient
@@ -20,6 +22,7 @@ class Runtime:
         self.lease=ProcessLease(str(path)+".lock")
         self.injected_qa=qa_service
         self.retrieval=retrieval_service
+        self.p800=None
         self.owns_retrieval=retrieval_service is None
         self.test_mode=test_mode
         self.gold_loader=gold_loader
@@ -76,6 +79,47 @@ class Runtime:
             raise QAError("RETRIEVAL_NOT_CONFIGURED","Official data and retrieval dependencies must be configured",409)
         return self.retrieval
 
+    def p800_status(self):
+        """Cheap status for the optional extension; no retrieval/heavy import."""
+        directory=Path(self.settings.experiment.data_dir)/"extension"/"p800"
+        manifest_path=directory/"manifest.json"
+        if not manifest_path.is_file():
+            return {"ready":False,"reason":"P800_NOT_BUILT",
+                    "message":"P800 index is not built. Run scripts.build_p800 first.",
+                    "directory":str(directory)}
+        try:
+            manifest=json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError,ValueError):
+            return {"ready":False,"reason":"P800_MANIFEST_INVALID",
+                    "message":"P800 manifest is unreadable.","directory":str(directory)}
+        version=manifest.get("index_version")
+        chroma_dir=directory/"chroma"/version if version else None
+        ready=bool(manifest.get("state")=="completed" and version
+                   and chroma_dir is not None and chroma_dir.is_dir()
+                   and (directory/"parents.jsonl").is_file()
+                   and (directory/"children.jsonl").is_file())
+        return {"ready":ready,"reason":None if ready else "P800_NOT_READY",
+                "message":None if ready else "P800 index is incomplete; rebuild it with scripts.build_p800.",
+                "directory":str(directory),"state":manifest.get("state"),
+                "index_version":version,"corpus_version":manifest.get("corpus_version"),
+                "child_chars":manifest.get("material",{}).get("child_chars"),
+                "min_child_chars":manifest.get("material",{}).get("min_child_chars"),
+                "counts":manifest.get("counts",{})}
+
+    def get_p800_service(self):
+        """Lazy read-only P800 service; separate from the four-condition retrieval."""
+        if self.p800 is None:
+            from app.retrieval.p800_service import P800Service
+            cfg=self.settings.experiment
+            retrieval=self.get_retrieval()
+            self.p800=P800Service.from_data_dir(
+                cfg.data_dir,
+                embedder=retrieval.indexes.embedder,
+                documents=retrieval.documents(cfg.corpus_version),
+                corpus_version=cfg.corpus_version,
+            )
+        return self.p800
+
     def get_qa_service(self):
         if self.injected_qa is not None:
             return self.injected_qa
@@ -122,15 +166,22 @@ class Runtime:
                 self.tasks.close()
         finally:
             try:
-                if self.owns_retrieval and self.retrieval is not None:
+                if self.p800 is not None:
                     try:
-                        close=getattr(self.retrieval,"close",None)
-                        if close is not None:close()
+                        self.p800.close()
                     finally:
-                        self.retrieval=None
+                        self.p800=None
             finally:
-                self.started=False
-                self.lease.release()
+                try:
+                    if self.owns_retrieval and self.retrieval is not None:
+                        try:
+                            close=getattr(self.retrieval,"close",None)
+                            if close is not None:close()
+                        finally:
+                            self.retrieval=None
+                finally:
+                    self.started=False
+                    self.lease.release()
 
 
 class RetrievalProxy:
