@@ -24,6 +24,13 @@ def create_p800_router(runtime):
     def status():
         return runtime.p800_status()
 
+    @router.get("/documents/{document_id}/chunks")
+    def chunks(document_id: str, corpus_version: str):
+        cfg = runtime.settings.experiment
+        if corpus_version != cfg.corpus_version:
+            raise QAError("VERSION_MISMATCH", "Requested corpus does not match the active configuration", 409)
+        return {"items": runtime.get_p800_service().chunks(document_id)}
+
     @router.post("/search")
     def search(body: P800SearchRequest):
         cfg = runtime.settings.experiment
