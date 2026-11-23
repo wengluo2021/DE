@@ -25,7 +25,7 @@ from pydantic import (
 
 
 CONDITIONS = ("f400", "s400", "f800", "s800")
-Condition = Literal["f400", "s400", "f800", "s800"]
+Condition = Literal["f400", "s400", "f800", "s800", "p800"]
 AnswerStatus = Literal["answered", "insufficient"]
 INSUFFICIENT_ANSWER = "当前知识库没有足够证据回答这个问题。"
 

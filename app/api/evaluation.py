@@ -14,6 +14,10 @@ def create_evaluation_router(runtime):
     def run(body:EvaluationRunRequest,background_tasks:BackgroundTasks):
         return runtime.evaluation.submit(body,background_tasks)
 
+    @router.post("/p800/run",status_code=202)
+    def run_p800(body:EvaluationRunRequest,background_tasks:BackgroundTasks):
+        return runtime.evaluation.submit_p800(body,background_tasks)
+
     @router.get("")
     def runs():
         return {"items":runtime.evaluations.list_runs()}

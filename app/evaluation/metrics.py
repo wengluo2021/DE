@@ -44,10 +44,10 @@ def rate(numerator,denominator,pending=0,failed_cases=0):
             "value":None if not denominator or pending else numerator/denominator}
 
 
-def summarize(gold_cases,rows):
+def summarize(gold_cases,rows,conditions=CONDITIONS):
     lookup={(row["condition"],row["case_id"]):row for row in rows}
     result={}
-    for condition in CONDITIONS:
+    for condition in conditions:
         cases=[(gold,lookup.get((condition,gold["case_id"]),{"state":"queued"})) for gold in gold_cases]
         answered=sum(g["answerable"] for g in gold_cases)
         refusals=len(gold_cases)-answered
@@ -123,10 +123,10 @@ def summarize(gold_cases,rows):
     return result
 
 
-def paired_cases(gold_cases,rows):
+def paired_cases(gold_cases,rows,conditions=CONDITIONS):
     lookup={(r["condition"],r["case_id"]):r for r in rows}
     return [{"case_id":gold["case_id"],"question":gold["question"],"answerable":gold["answerable"],
              "conditions":{condition:{key:lookup.get((condition,gold["case_id"]),{}).get(key)
                                       for key in ("state","result","metrics","review","error")}
-                           for condition in CONDITIONS}}
+                           for condition in conditions}}
             for gold in gold_cases]

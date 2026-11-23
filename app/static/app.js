@@ -70,6 +70,7 @@
     $("newSessionButton").disabled=state.pending;
     $("chatCondition").disabled=state.pending;
     $("runEvaluationButton").disabled=!ready || !state.health.configuration.gold_version || busy || state.pending;
+    $("runP800EvaluationButton").disabled=!ready || !state.health.configuration.gold_version || busy || state.pending;
     $("buildIndexesButton").disabled=!state.health || !!state.health.components.retrieval.issue || busy || state.pending;
     $("exportReportButton").disabled=$("exportCsvButton").disabled=!state.run;
     const p800=$("p800SearchButton");
@@ -371,7 +372,7 @@
     try {
       state.runs=(await api("/api/evaluations")).items;
       const id=selected || (state.run && state.run.run_id) || (state.runs[0] && state.runs[0].run_id);
-      $("runSelector").innerHTML=state.runs.map(r=>'<option value="'+esc(r.run_id)+'">'+esc((r.synthetic ? "Synthetic test · " : "")+(statuses[r.state] || r.state)+" · "+r.run_id)+'</option>').join("") || "<option value=\"\">No experiments yet</option>";
+      $("runSelector").innerHTML=state.runs.map(r=>'<option value="'+esc(r.run_id)+'">'+esc((r.synthetic ? "Synthetic test · " : "")+(r.extension ? r.extension.toUpperCase()+" extension · " : "")+(r.conditions ? r.conditions.join("/")+" · " : "")+(statuses[r.state] || r.state)+" · "+r.run_id)+'</option>').join("") || "<option value=\"\">No experiments yet</option>";
       if (id && state.runs.some(r=>r.run_id===id)) {$("runSelector").value=id;await loadRun(id);}
       else {state.run=null;renderEvaluation();}
     } catch (error) {$("evaluationNotice").textContent=errorText(error);}
@@ -384,19 +385,21 @@
     try {
       const run=await api(runPath(id));if (seq!==requests.run) return;
       state.run=run;renderEvaluation();
-      if (["queued","running"].includes(run.state) && (!state.task || state.task.task_id!==run.task_id)) watchTask({task_id:run.task_id,run_id:run.run_id,kind:"evaluation"});
+      const kind=(run.config && Array.isArray(run.config.conditions) && run.config.conditions.length===1 && run.config.conditions[0]==="p800") ? "p800-evaluation" : "evaluation";
+      if (["queued","running"].includes(run.state) && (!state.task || state.task.task_id!==run.task_id)) watchTask({task_id:run.task_id,run_id:run.run_id,kind});
     } catch (error) {if (seq===requests.run) {state.run=null;renderEvaluation();$("evaluationNotice").textContent=errorText(error);}}
   }
   function renderEvaluation() {
     const run=state.run;
     configureButtons();
     if (!run) {$("metricGrid").innerHTML="";$("evaluationRows").innerHTML="";$("reportMeta").innerHTML=empty("No experiments yet. Configure the frozen question set and build all four indexes, then run an evaluation.");return;}
-    $("evaluationNotice").textContent=(run.synthetic ? "Synthetic test results; not part of the formal course experiment." : "")+
+    $("evaluationNotice").textContent=(run.config.extension ? "P800 extension run; the frozen four-condition 120-item experiment is unchanged. " : "")+
+      (run.synthetic ? "Synthetic test results; not part of the formal course experiment." : "")+
       (run.review_complete ? "Review complete. Check reviewer attribution, errors, and the actual configuration." : "Review is incomplete; accuracy remains pending review.")+
       (run.configuration_warning ? " Warning: the actual generation model has changed; keep the old results and rebuild a comparable experiment." : "");
     $("reportMeta").innerHTML='<div><strong>'+esc(statuses[run.state] || run.state)+' · '+esc(run.cases.length)+" items · "+esc(run.run_id)+"</strong><span>Corpus "+version(run.corpus_version)+" · Question set "+version(run.gold_version)+" · Index "+version(run.index_version)+'</span></div>'+
       "<details><summary>View frozen configuration</summary>"+block(JSON.stringify(run.config,null,2))+'</details>';
-    $("metricGrid").innerHTML=["f400","s400","f800","s800"].map(condition=>{
+    $("metricGrid").innerHTML=Object.keys(run.summary).map(condition=>{
       const s=run.summary[condition];
       return '<article class="metric"><h3>'+esc(labels[condition])+'</h3><div class="metric-value">'+ratio(s.answer_accuracy)+"</div><p>Answers "+s.answer_accuracy.numerator+'/'+s.answer_accuracy.denominator+" · Pending review "+s.answer_accuracy.pending+'</p>'+
         "<p>Refusals "+ratio(s.refusal_accuracy)+' ('+s.refusal_accuracy.numerator+'/'+s.refusal_accuracy.denominator+")</p><p>Citations "+ratio(s.citation_accuracy)+' ('+s.citation_accuracy.numerator+'/'+s.citation_accuracy.denominator+')</p>'+
@@ -470,7 +473,7 @@
     state.task=planned;stored.set("derag.active-task.v1",planned);renderHealth();
     const poll=async()=>{
       if (sequence!==taskSequence) return;
-      const id=planned.kind==="evaluation" ? "evaluationTaskStatus" : "indexTaskStatus";
+      const id=["evaluation","p800-evaluation"].includes(planned.kind) ? "evaluationTaskStatus" : "indexTaskStatus";
       $(id).hidden=false;
       try {
         const task=await api("/api/tasks/"+encodeURIComponent(planned.task_id));if (sequence!==taskSequence) return;
@@ -493,12 +496,13 @@
   }
   async function startTask(kind) {
     if (!state.health || state.task) return;
-    const button=kind==="evaluation" ? $("runEvaluationButton") : $("buildIndexesButton");
+    const button=kind==="evaluation" ? $("runEvaluationButton") : kind==="p800-evaluation" ? $("runP800EvaluationButton") : $("buildIndexesButton");
     button.disabled=true;
     try {
       const body={corpus_version:corpus()};
-      if (kind==="evaluation") body.gold_version=state.health.configuration.gold_version;
-      const planned=await post(kind==="evaluation" ? "/api/evaluations/run" : "/api/indexes/build",body);
+      if (kind==="evaluation" || kind==="p800-evaluation") body.gold_version=state.health.configuration.gold_version;
+      const endpoint=kind==="evaluation" ? "/api/evaluations/run" : kind==="p800-evaluation" ? "/api/evaluations/p800/run" : "/api/indexes/build";
+      const planned=await post(endpoint,body);
       planned.kind=kind;watchTask(planned);if (planned.run_id) await loadRuns(planned.run_id);
     } catch (error) {toast(errorText(error),true);configureButtons();}
   }
@@ -531,6 +535,7 @@
   $("showChunksButton").addEventListener("click",loadChunks);$("compareForm").addEventListener("submit",compare);
   $("p800Form").addEventListener("submit",searchP800);
   $("runEvaluationButton").addEventListener("click",()=>startTask("evaluation"));
+  $("runP800EvaluationButton").addEventListener("click",()=>startTask("p800-evaluation"));
   $("runSelector").addEventListener("change",()=>{closeDrawer();loadRun($("runSelector").value);});
   $("refreshEvaluationButton").addEventListener("click",()=>loadRuns());
   $("exportReportButton").addEventListener("click",()=>download("json"));$("exportCsvButton").addEventListener("click",()=>download("csv"));

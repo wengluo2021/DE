@@ -33,12 +33,16 @@ class EvaluationRepository:
                     FOREIGN KEY(run_id,condition,case_id) REFERENCES evaluation_cases(run_id,condition,case_id));
             """)
 
-    def create(self,settings,dataset,index_version):
+    def create(self,settings,dataset,index_version,conditions=None):
         run_id,task_id,stamp="eval-"+uuid4().hex,"task-"+uuid4().hex,now()
+        conditions=tuple(conditions or settings.experiment.conditions)
         config=settings.public_snapshot()
         config["experiment_fingerprint"]=settings.experiment_fingerprint()
-        key=hashlib.sha256((config["experiment_fingerprint"]+"|"+dataset.gold_version+"|"+index_version).encode()).hexdigest()
-        total=len(dataset.cases)*4
+        config["conditions"]=list(conditions)
+        if conditions != tuple(settings.experiment.conditions):
+            config["extension"]="p800" if conditions == ("p800",) else "custom"
+        key=hashlib.sha256((config["experiment_fingerprint"]+"|"+dataset.gold_version+"|"+index_version+"|"+",".join(conditions)).encode()).hexdigest()
+        total=len(dataset.cases)*len(conditions)
         encode=self.store._json
         try:
             with closing(self.store._connect()) as db,db:
@@ -47,7 +51,7 @@ class EvaluationRepository:
                 db.execute("INSERT INTO evaluations VALUES (?,?,?,?,?,?,'queued',?,?,?,NULL)",
                            (run_id,task_id,dataset.corpus_version,dataset.gold_version,index_version,
                             int(dataset.synthetic),encode(config),encode(dataset.snapshot()),stamp))
-                for condition in settings.experiment.conditions:
+                for condition in conditions:
                     for case in dataset.cases:
                         db.execute("INSERT INTO evaluation_cases VALUES (?,?,?,?,'queued',NULL,NULL,NULL,NULL,NULL,NULL,NULL,?)",
                                    (run_id,condition,case.case_id,encode(case.model_dump(mode="json")),stamp))
@@ -57,7 +61,12 @@ class EvaluationRepository:
 
     def list_runs(self):
         with closing(self.store._connect()) as db:
-            return [dict(row) for row in db.execute("SELECT id AS run_id,task_id,state,synthetic,corpus_version,gold_version,index_version,created_at,finished_at FROM evaluations ORDER BY created_at DESC,id")]
+            rows=[dict(row) for row in db.execute("SELECT id AS run_id,task_id,state,synthetic,corpus_version,gold_version,index_version,created_at,finished_at,config_json FROM evaluations ORDER BY created_at DESC,id")]
+        for row in rows:
+            config=json.loads(row.pop("config_json"))
+            row["conditions"]=config.get("conditions") or ["f400","s400","f800","s800"]
+            row["extension"]=config.get("extension")
+        return rows
 
     def _case(self,row):
         result=dict(row)
@@ -88,12 +97,15 @@ class EvaluationRepository:
             result["review_history"]=[dict(id=r["id"],condition=r["condition"],case_id=r["case_id"],
                                             review=json.loads(r["review_json"]),created_at=r["created_at"])
                                        for r in db.execute("SELECT * FROM evaluation_reviews WHERE run_id=? ORDER BY id",(run_id,))]
-        result["summary"]=summarize(result["gold_cases"],result["cases"])
-        result["paired_cases"]=paired_cases(result["gold_cases"],result["cases"])
+        conditions=tuple(result["config"].get("conditions") or ("f400","s400","f800","s800"))
+        result["summary"]=summarize(result["gold_cases"],result["cases"],conditions=conditions)
+        result["paired_cases"]=paired_cases(result["gold_cases"],result["cases"],conditions=conditions)
         result["review_complete"]=all(not s["processing"] and not s["answer_accuracy"]["pending"]
              and not s["refusal_accuracy"]["pending"] and not s["citation_accuracy"]["pending"] for s in result["summary"].values())
         result["finalizable"]=result["state"]=="completed" and result["review_complete"]
-        result["formal_results"]=result["finalizable"] and not result["synthetic"] and result["config"].get("mode")=="formal"
+        result["formal_results"]=(result["finalizable"] and not result["synthetic"]
+                                  and result["config"].get("mode")=="formal"
+                                  and not result["config"].get("extension"))
         result["actual_generation_models"]=sorted({a["model"] for r in result["cases"] for a in (r["trace"] or {}).get("attempts",[])
                                                     if isinstance(a.get("model"),str)})
         if len(result["actual_generation_models"])>1:
