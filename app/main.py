@@ -10,6 +10,7 @@ from app.api import create_retrieval_routers
 from app.api.qa import create_qa_router
 from app.api.system import create_system_router
 from app.api.evaluation import create_evaluation_router
+from app.api.p800 import create_p800_router
 from app.config import load_settings
 from app.qa.client import redact
 from app.qa.errors import QAError
@@ -35,6 +36,7 @@ def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_p
     app.include_router(create_system_router(runtime))
     app.include_router(create_evaluation_router(runtime))
     app.include_router(create_retrieval_routers(RetrievalProxy(runtime),TaskProxy(runtime)))
+    app.include_router(create_p800_router(runtime))
 
     @app.exception_handler(QAError)
     async def qa_error(request,exc):
@@ -53,6 +55,7 @@ def create_app(settings=None,*,qa_service=None,retrieval_service=None,database_p
     @app.get("/documents",include_in_schema=False)
     @app.get("/compare",include_in_schema=False)
     @app.get("/evaluation",include_in_schema=False)
+    @app.get("/p800",include_in_schema=False)
     def frontend():
         return FileResponse(STATIC_DIR/"index.html")
     @app.get("/project-design",include_in_schema=False)

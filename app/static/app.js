@@ -3,8 +3,8 @@
   const $ = id => document.getElementById(id);
   const esc = value => String(value == null ? "" : value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
   const labels = {f400:"Fixed window · 400",s400:"Article structure · 400",f800:"Fixed window · 800",s800:"Article structure · 800"};
-  const paths = {chat:"/",documents:"/documents",compare:"/compare",evaluation:"/evaluation"};
-  const names = {chat:"Chat",documents:"Documents",compare:"Chunk comparison",evaluation:"Evaluation"};
+  const paths = {chat:"/",documents:"/documents",compare:"/compare",p800:"/p800",evaluation:"/evaluation"};
+  const names = {chat:"Chat",documents:"Documents",compare:"Chunk comparison",p800:"P800 retrieval",evaluation:"Evaluation"};
   const statuses = {queued:"Queued",running:"Running",completed:"Completed",failed:"Failed",error:"Failed",answered:"Answered",insufficient:"Insufficient evidence"};
   const errors = {
     OFFICIAL_DATA_NOT_CONFIGURED:"The frozen corpus has not been configured yet.",RETRIEVAL_NOT_CONFIGURED:"The corpus or retrieval service has not been configured yet.",
@@ -16,10 +16,11 @@
     LLM_AUTH_ERROR:"The generation API failed authentication or model permission checks.",LLM_RATE_LIMITED:"The generation service is rate-limited. Please check the status later.",
     EVALUATION_ACTIVE:"An evaluation is running. Please wait for it to finish before using Chat or building the database.",TASK_ALREADY_RUNNING:"A background task already exists. Please wait for it to finish.",
     PROCESS_INTERRUPTED:"The previous run was interrupted. Saved results are still available.",NOT_FOUND:"This saved record was not found.",
-    INVALID_REVIEW:"The scoring fields do not match the question type or claim. Please check.",NETWORK_ERROR:"Connection interrupted. Submitted requests may still be processing. Please refresh history or experiments first to avoid duplicate submissions."
+    INVALID_REVIEW:"The scoring fields do not match the question type or claim. Please check.",NETWORK_ERROR:"Connection interrupted. Submitted requests may still be processing. Please refresh history or experiments first to avoid duplicate submissions.",
+    P800_NOT_BUILT:"The P800 index has not been built yet. Run scripts.build_p800 first.",P800_NOT_READY:"The P800 index is incomplete. Rebuild it with scripts.build_p800.",P800_MANIFEST_INVALID:"The P800 manifest is unreadable."
   };
   const state = {health:null,sessions:[],history:[],conversation:null,docs:[],runs:[],run:null,
-    filter:"all",pending:false,route:"chat",panels:{left:[],right:[]},task:null,reviewer:""};
+    filter:"all",pending:false,route:"chat",panels:{left:[],right:[]},task:null,reviewer:"",p800Status:null};
   const requests = {history:0,compare:0,run:0,document:0};
   const reviewDrafts=new Map();
   let taskSequence=0,toastTimer,returnFocus=null,reviewCase=null;
@@ -71,6 +72,8 @@
     $("runEvaluationButton").disabled=!ready || !state.health.configuration.gold_version || busy || state.pending;
     $("buildIndexesButton").disabled=!state.health || !!state.health.components.retrieval.issue || busy || state.pending;
     $("exportReportButton").disabled=$("exportCsvButton").disabled=!state.run;
+    const p800=$("p800SearchButton");
+    if (p800) p800.disabled=!state.p800Status || !state.p800Status.ready;
   }
   function renderHealth() {
     const h=state.health;
@@ -102,6 +105,7 @@
     syncPanels();
     if (route==="documents") loadDocuments();
     if (route==="compare") loadChunks();
+    if (route==="p800") loadP800Status();
     if (route==="evaluation") loadRuns();
   }
   async function loadSessions() {
@@ -264,6 +268,59 @@
       $("compareNotice").textContent="Same-question retrieval · Index "+data.index_version+"; similarity is not a probability of correctness.";
       $("compareSummary").innerHTML=["left","right"].map((side,i)=>stat(i ? "Right context" : "Left context",data[side].context_chars+" characters",data[side].timing_ms+" ms")).join("");
     } catch (error) {if (seq===requests.compare) {$("compareNotice").textContent=errorText(error);$("leftChunks").innerHTML=$("rightChunks").innerHTML=empty(errorText(error));$("compareSummary").innerHTML="";}}
+  }
+  function p800StatusHtml(status) {
+    if (!status) return "Checking P800 index…";
+    if (!status.ready) {
+      return '<strong>P800 index not built.</strong> '+(status.message ? esc(status.message)+" " : "")+
+        'Run <code>python -m scripts.build_p800 --config config/experiment.formal-a.json</code> first.';
+    }
+    const counts=status.counts || {};
+    return '<strong>P800 index ready.</strong> '+esc(counts.parents || "?")+" parents · "+
+      esc(counts.indexed_children || "?")+" indexed children · children "+esc(status.child_chars || "?")+" characters";
+  }
+  async function loadP800Status() {
+    try {state.p800Status=await api("/api/p800/status");}
+    catch (error) {state.p800Status={ready:false,message:errorText(error)};}
+    $("p800Status").innerHTML=p800StatusHtml(state.p800Status);
+    configureButtons();
+  }
+  function p800HitHtml(hit) {
+    const parent=esc(hit.text || "");
+    const child=esc(hit.matched_child_text || "");
+    const marked=child ? parent.replace(child,"<mark>"+child+"</mark>") : parent;
+    const labels=(hit.article_labels || []).filter(Boolean).join(", ") || hit.document_id;
+    const score=Number(hit.score);
+    return '<article class="chunk-item p800-card"><div class="chunk-top"><span>#'+esc(hit.rank)+'</span><span>'+
+      esc(labels)+' · ['+esc(hit.start)+', '+esc(hit.end)+')</span></div>'+
+      '<strong>'+esc(hit.title || hit.document_id)+'</strong>'+
+      '<small>Parent score '+(Number.isFinite(score) ? score.toFixed(3) : esc(hit.score))+
+      ' · matched child '+esc((hit.matched_child_id || "").slice(0,12))+'…</small>'+
+      '<p class="p800-parent">'+marked+'</p>'+
+      '<p class="p800-child"><strong>Matched child:</strong> '+esc(hit.matched_child_text || "")+'</p>'+
+      '<button class="table-link" type="button" data-source="'+esc(hit.document_id)+'" data-corpus="'+esc(hit.corpus_version)+
+      '" data-start="'+esc(hit.start)+'" data-end="'+esc(hit.end)+'">View frozen parent</button></article>';
+  }
+  async function searchP800(event) {
+    event.preventDefault();
+    const question=$("p800Question").value.trim();
+    if (!question || !state.p800Status || !state.p800Status.ready) return;
+    const button=$("p800SearchButton");
+    button.disabled=true;
+    $("p800Results").innerHTML=empty("Retrieving P800 parents…");
+    $("p800Summary").innerHTML="";
+    try {
+      const data=await post("/api/p800/search",{question,corpus_version:corpus(),candidate_k:50});
+      $("p800Summary").innerHTML=stat("Top-5 parents",data.hits.length)+
+        stat("Context characters",data.hits.reduce((n,h)=>n+(h.end-h.start),0))+
+        stat("Retrieval",data.timing_ms+" ms",data.child_count+" child hits");
+      $("p800Results").innerHTML=data.hits.map(p800HitHtml).join("") || empty("No parents retrieved");
+    } catch (error) {
+      $("p800Status").innerHTML=esc(errorText(error));
+      $("p800Results").innerHTML=empty(errorText(error));
+    } finally {
+      button.disabled=!state.p800Status || !state.p800Status.ready;
+    }
   }
   function needsReview(row) {
     if (row.state!=="completed" || !row.result) return false;
@@ -436,6 +493,7 @@
   $("buildIndexesButton").addEventListener("click",()=>startTask("indexes"));
   ["compareDocument","leftCondition","rightCondition"].forEach(id=>$(id).addEventListener("change",loadChunks));
   $("showChunksButton").addEventListener("click",loadChunks);$("compareForm").addEventListener("submit",compare);
+  $("p800Form").addEventListener("submit",searchP800);
   $("runEvaluationButton").addEventListener("click",()=>startTask("evaluation"));
   $("runSelector").addEventListener("change",()=>{closeDrawer();loadRun($("runSelector").value);});
   $("refreshEvaluationButton").addEventListener("click",()=>loadRuns());
@@ -459,6 +517,7 @@
     results.forEach(r=>{if (r.status==="rejected") toast(errorText(r.reason),true);});
     if (state.conversation) await loadHistory(state.conversation);else renderMessages();
     if (state.route==="compare") await loadChunks();
+    if (state.route==="p800") await loadP800Status();
   }
   window.addEventListener("resize",syncPanels);
   syncPanels();configureButtons();renderMessages();
