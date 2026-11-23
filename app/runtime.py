@@ -23,6 +23,7 @@ class Runtime:
         self.injected_qa=qa_service
         self.retrieval=retrieval_service
         self.p800=None
+        self.p800_qa=None
         self.owns_retrieval=retrieval_service is None
         self.test_mode=test_mode
         self.gold_loader=gold_loader
@@ -44,6 +45,7 @@ class Runtime:
             self.tasks=TaskManager(self.store)
             self.qa=PersistentQA(self.store,self.get_qa_service,settings=self.settings)
             self.evaluation=EvaluationService(self.settings,self.evaluations,self.tasks,self.get_qa_service,
+                                              p800_qa_provider=self.get_p800_qa_service,
                                               gold_loader=self.gold_loader,test_mode=self.test_mode,admission=self.admission)
             if self.retrieval is None and self.injected_qa is None:
                 self._assemble_retrieval()
@@ -119,6 +121,25 @@ class Runtime:
                 corpus_version=cfg.corpus_version,
             )
         return self.p800
+
+    def get_p800_qa_service(self):
+        """P800 retrieval through the same grounded QA/generation boundary."""
+        if self.p800_qa is not None:
+            return self.p800_qa
+        if self.injected_qa is not None:
+            return self.injected_qa
+        p800=self.get_p800_service()
+        retrieval=self.get_retrieval()
+        hit_fields={"rank","score","chunk_id","corpus_version","condition","document_id",
+                    "article_ids","start","end","text","title","source_url","article_labels"}
+        result_fields={"condition","hits","timing_ms","corpus_version","index_version"}
+        def retrieve(*,question,condition=None,corpus_version=None,top_k=5,**kwargs):
+            raw=p800.search(question,candidate_k=50,top_k=5)
+            return {key:value for key,value in raw.items() if key in result_fields} | {
+                "hits":[{key:value for key,value in hit.items() if key in hit_fields}
+                        for hit in raw["hits"]]}
+        return QAService(self.settings,retriever=retrieve,document_loader=retrieval.documents,
+                         generator=ChatCompletionsClient(self.settings),index_version=p800.index_version)
 
     def get_qa_service(self):
         if self.injected_qa is not None:

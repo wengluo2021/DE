@@ -129,8 +129,8 @@
 
         <section class="view page-view" id="view-evaluation" aria-label="Evaluation" hidden>
           <div class="page-wrap">
-            <div class="page-heading"><div><div class="eyebrow">EVALUATION</div><h1>Evaluation</h1></div><div class="heading-actions"><button class="button primary" id="runEvaluationButton" type="button">Run evaluation</button><button class="button" id="exportReportButton" type="button">Export JSON</button><button class="button" id="exportCsvButton" type="button">Export CSV</button></div></div>
-            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span id="evaluationNotice">30 frozen questions × 4 conditions. Review answers and citations after the run completes.</span></div>
+            <div class="page-heading"><div><div class="eyebrow">EVALUATION</div><h1>Evaluation</h1></div><div class="heading-actions"><button class="button primary" id="runEvaluationButton" type="button">Run evaluation</button><button class="button" id="runP800EvaluationButton" type="button">Run P800 evaluation</button><button class="button" id="exportReportButton" type="button">Export JSON</button><button class="button" id="exportCsvButton" type="button">Export CSV</button></div></div>
+            <div class="notice amber"><svg class="icon"><use href="#i-info"/></svg><span id="evaluationNotice">30 frozen questions × 4 conditions. The optional P800 extension runs separately as 30 items and never changes the frozen 120-row experiment.</span></div>
             <div class="evaluation-controls"><label for="runSelector">Saved experiments</label><select class="select" id="runSelector"><option value="">No experiments yet</option></select><button class="button" id="refreshEvaluationButton" type="button">Refresh experiments</button></div>
             <div class="task-status" id="evaluationTaskStatus" role="status" hidden></div>
             <div class="report-meta" id="reportMeta"><div><strong>No experiment selected yet</strong><span>Existing results will be read from the server</span></div></div>
